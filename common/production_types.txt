@@ -132,7 +132,6 @@ aeroplane_factory = {
 	input_goods = {
 		machine_parts = 1.11	#38.69
 		electric_gear = 2	#32
-		rubber = 1  		#7
 		lumber = 3.3 		#3.3	total input+maint = 90
 	}
 	output_goods = aeroplanes
@@ -153,7 +152,6 @@ barrel_factory = {
 		automobiles = 0.3	#21
 		machine_parts = 0.85	#29.2
 		electric_gear = 1	#16
-		rubber = 1		#7
 	}
 	output_goods = barrels 
 	value = 1.0			#98	total input+maint = 83
@@ -176,7 +174,6 @@ automobile_factory = {
 	input_goods = {     
 		machine_parts = 1.05	#36.5
 		electric_gear = 1.5	#24
-		rubber = 1		#7
 		steel = 2.25		#10.58	total input+maint = 89
 	}
 	
@@ -237,16 +234,11 @@ telephone_factory = {
 electric_gear_factory = {       
 	template = factory_template
 	input_goods = { 
-		rubber = 4		#28
 		coal = 5		#11.5
 		iron = 5		#17.5	total input+maint = 67
 	}
 	output_goods = electric_gear 
 	value = 5			#80
-	bonus = {
-		trigger = { trade_goods_in_state = rubber }
-		value = 0.15
-	}
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
 		value = 0.05
@@ -275,33 +267,20 @@ machine_parts_factory = {
 	}
 }
 
-synthetic_oil_factory = {       
-	template = factory_template
-	input_goods = { 
-		coal = 12		#27.6	total input+maint = 39
-	}
-	output_goods = oil 
-	value = 2.5			#30
-	bonus = {
-		trigger = { trade_goods_in_state = coal }
-		value = 0.25
-	}
-}
-
 ############# ADVANCED FACTORIES
 
 fuel_refinery = {       
 	template = factory_template
 	input_goods = { 
-		oil = 2.5			#30	total input+maint = 40
+		food = 2.5			#30	total input+maint = 40
 	}
 	output_goods = fuel
 	value = 2			#50
 	bonus = {
 		trigger = { 
 			OR = {
-				trade_goods_in_state = oil 
-				has_building = synthetic_oil_factory
+				trade_goods_in_state = food 
+				has_building = machine_parts_factory
 				}
 			}
 		value = 0.25
@@ -535,23 +514,12 @@ canned_food_factory = {
 	template = cheap_factory_template
 	input_goods = { 
 		iron = 0.5 		#1.75
-		cattle = 4 		#8
-		grain = 4 		#8.8
-		fish = 4 		#6	total input+maint = 28.some
+		food = 12
 	}
 	output_goods = canned_food 
 	value = 2			#32
 	bonus = {
-		trigger = { trade_goods_in_state = grain }
-		value = 0.1
-	}
-	bonus = {
-		trigger = { 
-			OR = {
-				trade_goods_in_state = fish
-				trade_goods_in_state = cattle
-				}
-			}
+		trigger = { trade_goods_in_state = food }
 		value = 0.1
 	}
 	bonus = {
@@ -577,7 +545,7 @@ dye_factory = {
 liquor_distillery = {       
 	template = cheap_factory_template
 	input_goods = {        
-		grain = 5		#11
+		food = 5		#11
 		glass = 4		#11.6	total input+maint = 26.6
 	}
 	output_goods = liquor 
@@ -587,7 +555,7 @@ liquor_distillery = {
 		value = 0.15
 	}
 	bonus = {
-		trigger = { trade_goods_in_state = grain }
+		trigger = { trade_goods_in_state = food }
 		value = 0.1
 	}
 }
@@ -595,7 +563,7 @@ liquor_distillery = {
 winery = {       
 	template = cheap_factory_template
 	input_goods = {  	
-		fruit = 5		#9
+		food = 5		#9
 		glass = 5		#14.5	total input+maint = 27.5
 	}
 	output_goods = wine 
@@ -605,7 +573,7 @@ winery = {
 		value = 0.15
 	}
 	bonus = {
-		trigger = { trade_goods_in_state = fruit }
+		trigger = { trade_goods_in_state = food }
 		value = 0.1
 	}
 }
@@ -746,10 +714,10 @@ rock_quarry = {
 	mine = yes
 }
 
-cattle_ranch = {
+food_fields = {
 	template = RGO_template_farmers
-	output_goods = cattle 
-	value = 1.8
+	output_goods = food
+	value = 2.3
 	farm = yes
 }
 
@@ -781,31 +749,10 @@ dye_plantation = {
 	farm = yes
 }
 
-fishing_wharf = {
-	template = RGO_template_farmers
-	output_goods = fish 
-	value = 2.2
-	farm = yes
-}
-
-grain_farm = {
-	template = RGO_template_farmers
-	output_goods = grain 
-	value = 1.8
-	farm = yes
-}
-
 iron_mine = {
 	template = RGO_template_labourers
 	output_goods = iron
 	value = 1.8
-	mine = yes
-}
-
-oil_rig = {
-	template = RGO_template_labourers
-	output_goods = oil 
-	value = 1
 	mine = yes
 }
 
@@ -816,25 +763,11 @@ opium_plantation = {
 	farm = yes
 }
 
-orchard = {
-	template = RGO_template_farmers
-	output_goods = fruit 
-	value = 2.8
-	farm = yes
-}
-
 precious_metal_mine = {
 	template = RGO_template_labourers
 	output_goods = precious_metal 
 	value = 2
 	mine = yes
-}
-
-rubber_lodge = {
-	template = RGO_template_labourers
-	output_goods = rubber 
-	value = 0.75
-	farm = yes
 }
 
 sheep_ranch = {
@@ -892,7 +825,6 @@ artisan_aeroplane = {
 	input_goods = {
 		machine_parts = 1.06	#38.69
 		electric_gear = 2	#32
-		rubber = 1  		#7
 		lumber = 3.3 		#3.3	total input+maint = 90
 	}
 	output_goods = aeroplanes
@@ -913,7 +845,6 @@ artisan_barrel = {
 		automobiles = 0.3	#21
 		machine_parts = 0.8	#29.2
 		electric_gear = 1	#16
-		rubber = 1		#7
 	}
 	output_goods = barrels 
 	value = 1.0			#98	total input+maint = 83
@@ -932,7 +863,6 @@ artisan_automobile = {
 	input_goods = {     
 		machine_parts = 1	#36.5
 		electric_gear = 1.5	#24
-		rubber = 1		#7
 		steel = 2.25		#10.58	total input+maint = 89
 	}
 	
@@ -989,7 +919,6 @@ artisan_telephone = {
 
 artisan_electric_gear = {       
 	input_goods = { 
-		rubber = 4		#28
 		coal = 5		#11.5
 		iron = 5		#17.5	total input+maint = 67
 	}
@@ -1028,7 +957,7 @@ artisan_machine_parts = {
 
 artisan_fuel = {       
 	input_goods = { 
-		oil = 2.5			#30	total input+maint = 40
+		food = 2.5			#30	total input+maint = 40
 	}
 	output_goods = fuel
 	value = 2			#50
@@ -1277,9 +1206,7 @@ artisan_ammunition = {
 artisan_canned_food = {       
 	input_goods = { 
 		iron = 2 		#7
-		cattle = 12 		#24
-		grain = 12 		#26.4
-		fish = 12 		#18	total input+maint = 85
+		food = 36
 	}
 	output_goods = canned_food 
 	value = 6			#96
@@ -1296,7 +1223,7 @@ artisan_canned_food = {
 
 artisan_liquor = {       
 	input_goods = {        
-		grain = 10		#22
+		food = 10		#22
 		glass = 8		#23.2	total input+maint = 55
 	}
 	output_goods = liquor 
@@ -1315,7 +1242,7 @@ artisan_liquor = {
 artisan_winery = {       
 
 	input_goods = {  	
-		fruit = 10		#18
+		food = 10		#18
 		glass = 10		#29	total input+maint = 57
 	}
 	output_goods = wine 
