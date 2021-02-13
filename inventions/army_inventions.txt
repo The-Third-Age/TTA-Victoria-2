@@ -484,7 +484,6 @@ tank_experiments = {
 	}
 	effect = {
 		activate_unit = tank
-		activate_building = barrel_factory 
 	}
 }
 tank_exploits = {
@@ -640,10 +639,6 @@ flintlock_rifle_armament = {
 	limit = { flintlock_rifles = 1 }
 	chance = {
 		base = 5
-		modifier = {
-			factor = 2
-			invention = small_arms_production
-		}
 		modifier = {
 			factor = 2
 			war = yes
@@ -1052,10 +1047,6 @@ anti_aircraft_artillery = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = wright_n_langleys_aeroplanes
-		}
-		modifier = {
-			factor = 2
 			aeronautics = 1
 		}
 	}
@@ -1450,10 +1441,6 @@ military_aviation = {
 			factor = 2
 			war = yes
 			war_countries = { invention = military_aviation }
-		}
-		modifier = {
-			factor = -5
-			not = { invention = wright_n_langleys_aeroplanes }
 		}
 	}
 	effect = {

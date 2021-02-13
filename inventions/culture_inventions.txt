@@ -1679,32 +1679,7 @@ mass_advertising = {
 	}
 	core_pop_consciousness_modifier = 0.01
 }
-national_radio_networks = {
-	limit = { behaviorism = 1 }
-	news = no
-	chance = {
-		base = 3
-		modifier = {
-			factor = 5
-			year = 1920
-		}
-		modifier = {
-			factor = 2
-			government = democracy
-		}
-		modifier = {
-			factor = -1
-			NOT = {
-				press_rights = free_press
-			}
-		}
-	}
-	effect = { 
-		activate_building = radio_factory 
-		suppression_points_modifier = -0.05
-	}
-	core_pop_consciousness_modifier = 0.01
-}
+#national_radio_networks
 the_talkies = {
 	limit = { behaviorism = 1 }
 	news = no

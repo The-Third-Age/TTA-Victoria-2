@@ -361,25 +361,7 @@ building_station_shipyards = {
 #}
 #steamers
 #mechanized_fishing_vessels
-steamer_automatic_construction_plants = {
-	limit = { steamers = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			steamers = 1
-		}
-		modifier = {
-			factor = 2
-			invention = building_station_shipyards
-		}
-	}
-	effect = {
-		factory_goods_throughput = {
-			steamer_convoy = 0.10
-		}
-	}
-}
+#steamer_automatic_construction_plants
 steamer_transports = {
 	limit = { steamers = 1 }
 	chance = {
@@ -1058,10 +1040,6 @@ on_board_recon_aircraft = {
 	chance = {
 		base = 2
 		modifier = {
-			factor = 2
-			invention = wright_n_langleys_aeroplanes
-		}
-		modifier = {
 			factor = 1
 			naval_risk_management = 1
 		}
@@ -1141,10 +1119,6 @@ wireless = {
 	limit = { modern_naval_design = 1 }
 	chance = {
 		base = 2
-		modifier = {
-			factor = 3
-			invention = national_radio_networks
-		}
 		modifier = {
 			factor = 2
 			invention = industrial_rnd_investments
@@ -1365,25 +1339,7 @@ ammunition_conservation_system = {
 	}
 }
 
-radio_telegraphy = {
-	limit = { naval_logistics = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			electricity = 1
-		}
-		modifier = {
-			factor = 4
-			invention = national_radio_networks
-		}
-	}
-	effect = {
-		navy_base = {
-			default_organisation = 1
-		}
-	}
-}
+#radio_telegraphy
 #naval_directionism
 political_lobbying = {
 	limit = { naval_directionism = 1 }
@@ -1572,10 +1528,6 @@ continuous_issuing_of_orders = {
 	limit = { naval_decision_making = 1 }
 	chance = {
 		base = 2
-		modifier = {
-			factor = 2
-			invention = radio_telegraphy
-		}
 		modifier = {
 			factor = 1
 			naval_logistics = 1
