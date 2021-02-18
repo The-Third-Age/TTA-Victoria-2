@@ -1,21 +1,22 @@
 # goods types, organized by category
 
 military_goods = {
-	#ammunition = { 
-	#	cost = 17.50
-	#}
-	#small_arms = { 
-	#	cost = 37.00 
-	#}
+	ranged_gear = { 
+		cost = 17.50
+		color = { 208 202 127 }
+	}
+	melee_gear = { 
+		cost = 37.00 
+		color = { 189 118 22 }
+	}
 	artillery = { 
 		cost = 60.00 
 		color = { 145 130 86 }
-		available_from_start = no
 	}
 	canned_food = { 
 		cost = 16.00 
 		color = { 255 39 12 }
-	}
+	} # Rations
 }
 
 raw_material_goods = {
@@ -59,7 +60,6 @@ industrial_goods = {
 	steel = { 
 		cost = 4.7
 		color = { 95 128 147 }
-		available_from_start = no
 	}
 	glass = { 
 		cost = 2.9
@@ -70,7 +70,7 @@ industrial_goods = {
 		overseas_penalty = yes
 		available_from_start = no
 		color = { 21 65 30 }
-	}
+	} # Ships
 	fabric = { 
 		cost = 1.8
 		color = { 186 50 40 }
@@ -78,6 +78,10 @@ industrial_goods = {
 	lumber = { 
 		cost = 1.0
 		color = { 180 94 26 }
+	}
+	cut_stone = {
+		cost = 3
+		color = { 5 90 100 }
 	}
 }
 
@@ -93,7 +97,7 @@ consumer_goods = {
 	tobacco = {	
 		cost = 1.1
 		color = { 100 69 30 }
-	}
+	} # Pipeweed
 	tea = {	
 		cost = 2.6
 		color = { 201 135 15 }
@@ -101,7 +105,7 @@ consumer_goods = {
 	liquor = { 
 		cost = 6.4
 		color = { 76 5 0 }
-	}
+	} # Alcohol
 	clothes = { 
 		cost = 5.8
 		color = { 217 17 19 }
@@ -109,5 +113,15 @@ consumer_goods = {
 	furniture = { 
 		cost = 4.9
 		color = { 173 129 40 }
+	}
+	horses = {
+		cost = 10
+		color = { 53 42 100 }
+	}
+	administrative_services = {
+		cost = 4
+		tradeable = no
+		money = yes	
+		color = { 2 199 110 }
 	}
 }
