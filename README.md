@@ -1,6 +1,13 @@
 # The Third Age
 A Lord of the Rings mod for Victoria 2
 
+## Installation Instructions
+1. Download the mod by clicking the green Code button, then Download ZIP.
+2. Extract the folder to your game directory. If you use Steam, the folder is mostly likely `C:\Program Files (x86)\Steam\steamapps\commmon\Victoria 2\mod`
+3. Go to that folder. You should see a folder named The-Third-Age-main. Rename that folder to "TTA", without the quotation marks.
+4. Go into the newly renamed TTA folder and move TTA.mod up one level to `C:\Program Files (x86)\Steam\steamapps\commmon\Victoria 2\mod`. This file will mostly likely be identified as a movie file by your computer.
+5. Launch the game. You should see Lord of the Rings as one of the options. Tick it and the mod should load.
+
 ## Development Team
  - SirRunner: Lead Modder
    - Maps (Provinces, Terrain, Rivers)
