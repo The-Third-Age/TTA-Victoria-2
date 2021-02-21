@@ -28,7 +28,6 @@ Some are obvious, others are not. Just a small list at the moment. It clearly sh
  - Update the new goods icons (horse and administrative services are probably ok)
  - Change the Vic2 interface to something more aesthetically pleasing
  - Search for pictures that can be used for events, decisions and terrain, generals, flags
- - Loadingscreen pictures
  - 3d models/skins, both buildings and soldiers/ships? (long shot)
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
