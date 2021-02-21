@@ -1,7 +1,4 @@
 #combustion_engine
-#daimlers_automobile
-#wright_n_langleys_aeroplanes
-
 tractors = {
 	limit = { combustion_engine = 1 }
 	chance = {
@@ -26,10 +23,6 @@ direct_current = {
 		base = 2
 		modifier = {
 			factor = 2
-			invention = edison_light_bulb
-		}
-		modifier = {
-			factor = 2
 			ruling_party_ideology = liberal
 		}
 	}
@@ -44,10 +37,6 @@ alternating_current = {
 	chance = {
 		base = 3
 		modifier = {
-			factor = 2
-			invention = edison_light_bulb
-		}
-		modifier = {
 			factor = 3
 			invention = direct_current
 		}
@@ -61,10 +50,6 @@ polyphase_system = {
 	limit = { electrical_power_generation = 1 }
 	chance = {
 		base = 2
-		modifier = {
-			factor = 2
-			invention = edison_light_bulb
-		}
 		modifier = {
 			factor = 2
 			average_consciousness = 3
@@ -236,7 +221,7 @@ mechanized_slaughtering_block = {
 	}
 	effect = {
 		rgo_goods_output = {
-			cattle = 0.2
+			food = 0.2
 		}
 		rgo_goods_output = {
 			wool = 0.2
@@ -281,7 +266,6 @@ machine_tools = {
 		mine_RGO_eff = 0.5
 	}
 }
-#whitney_n_colts_standardized_small_arms
 food_packing_system = {
 	limit = { interchangeable_parts = 1 }
 	chance = {
@@ -360,7 +344,6 @@ electric_machinery = {
 		}
 	}
 }
-#oil_pumping_machinery
 drying_techniques = {
 	limit = { semi_automatization = 1 }
 	chance = {
@@ -381,8 +364,6 @@ drying_techniques = {
 	}
 }
 #assembly_line
-#fordism
-#massproduced_rail
 industrialized_armament_industry = {
 	limit = { assembly_line = 1 }
 	chance = {
@@ -417,11 +398,6 @@ refrigerator_technology = {
 		}
 	}
 }
-#Metulurgy
-#ammunition_production
-#small_arms_production
-#explosives_production
-#artillery_production
 #clean_coal
 pit_coal = {
 	limit = { clean_coal = 1 }
@@ -739,7 +715,7 @@ clinical_thermometers_and_binaural_stethoscopes = {
 		}
 		modifier = {
 			factor = 2
-			organized_factories = 2
+			organized_factories = 1
 		}
 	}
 	effect = {
@@ -836,10 +812,7 @@ chemical_wood_pulp_process = {
 		} 
 	}
 }
-#rubber_vulcanization
-#catalytic_fermentative_process
 #organic_chemistry
-#synthetic_dye
 gaslights = {
 	limit = { organic_chemistry = 1 }
 	chance = {
@@ -870,7 +843,6 @@ carbon_soil_enrichment = {
 		farm_rgo_eff = 0.05
 	}
 }
-#cracking
 #electricity
 x_rays = {
 	limit = { electricity = 1 }
@@ -890,16 +862,11 @@ x_rays = {
 		land_attrition = -0.02 
 	}
 }
-#edison_light_bulb
 #bell_n_greys_telephones
 electrical_lighting = {
 	limit = { electricity = 1 }
 	chance = {
 		base = 2
-		modifier = {
-			factor = 2
-			invention = edison_light_bulb
-		}
 		modifier = {
 			factor = 2
 			invention = gaslights
@@ -949,11 +916,3 @@ bakelite = {
 		} 
 	}
 }
-
-#vacuum_tube
-
-#tulls_seed_drill
-
-#rotherham_plough
-
-#telephone_switchboard
