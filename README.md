@@ -1,4 +1,5 @@
-# LOTR-Victoria-2
+# The Third Age
+A Lord of the Rings mod for Victoria 2
 
 ## Development Team
  - SirRunner: Lead Modder
@@ -6,6 +7,9 @@
  - DerpAnarchist: Modder 
    - POPs
    - Map Verifier/Validator
+ - Cheese: Modder
+   - Loadings Screens
+   - Main Menu Background
  - Jorde: Loremaster
 
 ## Special Thanks
