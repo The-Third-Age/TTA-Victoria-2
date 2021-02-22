@@ -1,9 +1,9 @@
 # Basic TODOs
-Some are obvious, others are not. Just a small list at the moment. It clearly should be many times longer...
+Some are obvious, others are not. Just a smallish list at the moment. It clearly should be many times longer...
 
 ## Overall
  - Truly decide on a mod name and time period
- - Figure out the random crashes (probably related to the inventions that I removed but didnt remove references)
+ - Figure out the random crashes
  - Get in-game descriptions set for LOTR rather than Victorian Era
  
 ## Map
@@ -18,17 +18,17 @@ Some are obvious, others are not. Just a small list at the moment. It clearly sh
  - Actually balance out goods, in terms of price, needs, factory inputs/outputs (amounts), starting rgos 
  - Charcoal guild
  - Goods renaming
+ - Remove rations (canned_food). Can be replaced with just food
  - Finalize poptypes plan
  - Government types, Ideologies and Rebels
  - Tech and Inventions
- - Cultures and Pops
+ - Cultures and Pops (religion to race)
  - Reforms
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
  - Change the Vic2 interface to something more aesthetically pleasing
  - Search for pictures that can be used for events, decisions and terrain, generals, flags
- - Loadingscreen pictures
  - 3d models/skins, both buildings and soldiers/ships? (long shot)
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
