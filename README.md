@@ -14,7 +14,7 @@ A Lord of the Rings mod for Victoria 2
  - DerpAnarchist: Modder 
    - POPs
    - Map Verifier/Validator
- - Cheese: Modder
+ - Cheese/s-williams: Modder
    - Loadings Screens
    - Main Menu Background
  - Jorde: Loremaster
@@ -26,7 +26,7 @@ A Lord of the Rings mod for Victoria 2
  
 ## Assets
  - Terrain textures
-   - [HFME](https://github.com/JmanThunder/HFM-Expanded)
+	- [HFME](https://github.com/JmanThunder/HFM-Expanded)
  - Icons
 	- [Rock](http://14thwarriorcustomsettlers.blogspot.com/2008/02/rock-this-town.html)
 	- [Cut Stone](https://icon-library.com/icon/brick-icon-png-26.html)
@@ -41,5 +41,6 @@ A Lord of the Rings mod for Victoria 2
 	- [Philip Straub](https://www.deviantart.com/philipstraub/art/Rivendell-296293972)
 	- [Ralph Damiani](https://www.deviantart.com/ralphdamiani/art/Across-Middle-Earth-Hollin-Gate-635946811)
 	- [Maxime Minard](https://www.deviantart.com/istrandar/art/The-Nazgul-822732313)
+	- [Darek Zabrocki](https://www.deviantart.com/darekzabrocki/art/reaching-the-Victory-397615037)
 - Main Menu art
 	- [WallpaperAccess](https://wallpaperaccess.com/full/758025.jpg)
