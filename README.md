@@ -34,6 +34,8 @@ A Lord of the Rings mod for Victoria 2
 	- [Ranged Gear](https://www.pinterest.com/pin/814588651337049655/)
 	- [Horses (AOE Expanded)](https://github.com/AoE-guys/AOE-exp)
 	- [Administrative Services (EU4)](https://store.steampowered.com/app/236850/Europa_Universalis_IV/)
+- Leader portraits
+	- [Medieval 2 TW: Divide and Conquer](https://www.moddb.com/mods/divide-and-conquer)
 - Loading Screen Paintings
 	- [Noah Bradley](https://www.deviantart.com/noahbradley/art/The-Coming-Darkness-342482698)
 	- [Juan Carlos Barquet ](https://www.deviantart.com/jcbarquet/art/The-Argonath-Lord-of-the-Rings-TCG-491228684)
