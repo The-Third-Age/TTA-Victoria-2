@@ -90,19 +90,19 @@ steel_factory = {
 	}
 }
 
-# cut_stone_factory = {       
-	# template = factory_template
-	# input_goods = { 
-		# rock = 50
-	# }
+cut_stone_factory = {       
+	template = factory_template
+	input_goods = { 
+		rock = 50
+	}
 
-	# output_goods = cut_stone 		#94 
-	# value = 60
-	# bonus = {
-		# trigger = { trade_goods_in_state = rock }
-		# value = 0.125
-	# }
-# }
+	output_goods = cut_stone 		#94 
+	value = 60
+	bonus = {
+		trigger = { trade_goods_in_state = rock }
+		value = 0.125
+	}
+}
 
 artillery_factory = {       
 	template = factory_template
@@ -685,23 +685,23 @@ artisan_lumber = {
 	workforce = 10000
 }
 
-# artisan_cut_stone = {       
-	# template = factory_template
-	# input_goods = { 
-		# rock = 50
-	# }
+artisan_cut_stone = {       
+	template = factory_template
+	input_goods = { 
+		rock = 50
+	}
 
-	# output_goods = cut_stone 		#94 
-	# value = 60
-	# owner = {
-		# poptype = artisan 
-		# effect = output
-	# }
+	output_goods = cut_stone 		#94 
+	value = 60
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
 	
-	# type = artisan
+	type = artisan
 	
-	# workforce = 10000
-# }
+	workforce = 10000
+}
 
 artisan_fabric = {       
 	input_goods = {     

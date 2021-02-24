@@ -55,7 +55,6 @@ steel_factory = {
 	visibility = yes
 	onmap = no
 	
-	default_enabled = yes
 	production_type = steel_factory
 	pop_build_factory = yes
 }
@@ -74,7 +73,6 @@ artillery_factory = {
 	visibility = yes
 	onmap = no
 
-	default_enabled = yes
 	production_type = artillery_factory
 	pop_build_factory = yes
 }
@@ -93,7 +91,6 @@ melee_gear_factory = {
 	visibility = yes
 	onmap = no
 
-	default_enabled = yes
 	production_type = melee_gear_factory
 	pop_build_factory = yes
 }
@@ -112,30 +109,28 @@ ranged_gear_factory = {
 	visibility = yes
 	onmap = no
 
-	default_enabled = yes
 	production_type = ranged_gear_factory
 	pop_build_factory = yes
 }
 
 ############# COMMON FACTORIES
 
-# cut_stone_factory = {
-	# type = factory
-	# on_completion = factory
-	# completion_size = 0.2
-	# max_level = 99
-	# goods_cost =
-	# {
-		# iron = 200
-	# }
-	# time = 730
-	# visibility = yes
-	# onmap = no
+cut_stone_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		iron = 200
+	}
+	time = 730
+	visibility = yes
+	onmap = no
 
-	# default_enabled = yes
-	# production_type = cut_stone_factory
-	# pop_build_factory = yes
-# }
+	production_type = cut_stone_factory
+	pop_build_factory = yes
+}
 
 furniture_factory = {
 	type = factory
@@ -150,7 +145,6 @@ furniture_factory = {
 	visibility = yes
 	onmap = no
 
-	default_enabled = yes
 	production_type = furniture_factory
 	pop_build_factory = yes
 }
@@ -168,7 +162,6 @@ paper_mill = {
 	visibility = yes
 	onmap = no
 	
-	default_enabled = yes
 	production_type = paper_mill
 	pop_build_factory = yes
 }
@@ -186,7 +179,6 @@ clothes_factory = {
 	visibility = yes
 	onmap = no
 
-	default_enabled = yes
 	production_type = clothes_factory
 	pop_build_factory = yes
 }
@@ -207,7 +199,6 @@ canned_food_factory = {
 	visibility = yes
 	onmap = no
 
-	default_enabled = yes
 	production_type = canned_food_factory
 	pop_build_factory = yes
 }
@@ -225,8 +216,7 @@ liquor_distillery = {
 	time = 730
 	visibility = yes
 	onmap = no
-	
-	default_enabled = yes	
+		
 	production_type = liquor_distillery
 	pop_build_factory = yes
 }
@@ -246,7 +236,6 @@ lumber_mill = {
 	visibility = yes
 	onmap = no
 
-	default_enabled = yes
 	production_type = lumber_mill
 	pop_build_factory = yes
 }
@@ -264,7 +253,6 @@ fabric_factory = {
 	visibility = yes
 	onmap = no
 
-	default_enabled = yes
 	production_type = fabric_factory
 	pop_build_factory = yes
 }
@@ -282,7 +270,6 @@ fabric_factory_wool = {
 	visibility = yes
 	onmap = no
 
-	default_enabled = yes
 	production_type = fabric_factory_wool
 	pop_build_factory = yes
 }
@@ -299,8 +286,7 @@ glass_factory = {
 	time = 365
 	visibility = yes
 	onmap = no
-	
-	default_enabled = yes	
+		
 	production_type = glass_factory
 	pop_build_factory = yes
 }
