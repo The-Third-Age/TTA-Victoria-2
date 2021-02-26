@@ -241,23 +241,6 @@ clothes_factory = {
 
 ############# CHEAP FACTORIES
 
-canned_food_factory = {       
-	template = cheap_factory_template
-	input_goods = { 
-		food = 12
-	}
-	output_goods = canned_food 
-	value = 2			#32
-	bonus = {
-		trigger = { trade_goods_in_state = food }
-		value = 0.1
-	}
-	bonus = {
-		trigger = { trade_goods_in_state = iron }
-		value = 0.05
-	}
-}    
-
 liquor_distillery = {       
 	template = cheap_factory_template
 	input_goods = {        
@@ -661,23 +644,6 @@ artisan_clothes = {
 }
 
 ############# CHEAP FACTORIES
-
-artisan_canned_food = {       
-	input_goods = { 
-		food = 36
-	}
-	output_goods = canned_food 
-	value = 6			#96
-	
-	owner = {
-		poptype = artisan 
-		effect = output
-	}
-	
-	type = artisan
-	
-	workforce = 10000
-}
 
 artisan_liquor = {       
 	input_goods = {        

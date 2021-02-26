@@ -266,25 +266,6 @@ machine_tools = {
 		mine_RGO_eff = 0.5
 	}
 }
-food_packing_system = {
-	limit = { interchangeable_parts = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = distribution_channels
-		}
-		modifier = {
-			factor = 2
-			invention = limited_partnership_company
-		}
-	}
-	effect = {
-		factory_goods_output = {
-			canned_food = 0.02 
-		}
-	}
-}
 integral_distillery_process = {
 	limit = { interchangeable_parts = 1 }
 	chance = {
@@ -383,10 +364,6 @@ refrigerator_technology = {
 	limit = { assembly_line = 1 }
 	chance = {
 		base = 2
-		modifier = {
-			factor = 2
-			invention = food_packing_system
-		}
 		modifier = {
 			factor = 2
 			integral_rail_system = 1

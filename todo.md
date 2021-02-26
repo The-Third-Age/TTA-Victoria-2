@@ -15,7 +15,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  
 ## Gameplay
  - Actually balance out goods, in terms of price, needs, factory inputs/outputs (amounts), starting rgos 
- - Remove rations (canned_food). Can be replaced with just food
  - Finalize poptypes plan
  - Government types, Ideologies and Rebels
  - Tech and Inventions
