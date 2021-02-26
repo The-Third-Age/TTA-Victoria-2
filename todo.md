@@ -2,8 +2,7 @@
 Some are obvious, others are not. Just a smallish list at the moment. It clearly should be many times longer...
 
 ## Overall
- - Truly decide on a mod name and time period
- - Figure out the random crashes
+ - Truly decide on a time period
  - Get in-game descriptions set for LOTR rather than Victorian Era
  
 ## Map
@@ -16,8 +15,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  
 ## Gameplay
  - Actually balance out goods, in terms of price, needs, factory inputs/outputs (amounts), starting rgos 
- - Charcoal guild
- - Goods renaming
  - Remove rations (canned_food). Can be replaced with just food
  - Finalize poptypes plan
  - Government types, Ideologies and Rebels
@@ -34,4 +31,4 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Unit colors for each country (common/country_colors.txt)
 
 ## Others 
-- Music (BFME2 for example)
+ - Music (BFME2 for example)

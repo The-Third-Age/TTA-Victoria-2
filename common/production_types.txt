@@ -71,6 +71,20 @@ cheap_factory_template = {
 
 ############# MEDIUM FACTORIES
 
+charcoal_factory = {
+	template = cheap_factory_template
+	input_goods = {
+		timber = 50
+	}
+	
+	output_goods = coal
+	value = 5
+	bonus = {
+		trigger = { trade_goods_in_state = timber }
+		value = 0.125
+	}
+}
+
 steel_factory = {       
 	template = factory_template
 	input_goods = { 
@@ -477,6 +491,24 @@ tobacco_plantation = {
 ############# LUXURY GOODS FACTORIES
 
 ############# MEDIUM FACTORIES
+
+artisan_charcoal = {
+	input_goods = {
+		timber = 20
+	}
+	
+	output_goods = coal
+	value = 5
+	
+	owner = {
+		poptype = artisan
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 10000
+}
 
 artisan_steel = {       
 	input_goods = { 
