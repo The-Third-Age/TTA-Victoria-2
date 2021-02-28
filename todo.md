@@ -6,12 +6,11 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Get in-game descriptions set for LOTR rather than Victorian Era
  
 ## Map
- - Druwaith Iaur history and adjacency
  - Finish up the "new" terrain, river, provinces map
  - Coastlines, Anduin river oversights along the southern Gondor shore and Cair Andros
  - Play around with colormaps
  - Decide on ownership status of Gondorian fiefdoms
- - Add horses and administrative services to appropriate provinces that have already been done
+ - Add horses, tobacco, tea, dye and administrative services to appropriate provinces that have already been done
  - Set liferatings and climates
  
 ## Gameplay
