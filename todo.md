@@ -10,7 +10,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Coastlines, Anduin river oversights along the southern Gondor shore and Cair Andros
  - Play around with colormaps
  - Decide on ownership status of Gondorian fiefdoms
- - Add horses, tobacco, tea, dye and administrative services to appropriate provinces that have already been done
  - Set liferatings and climates
  
 ## Gameplay
