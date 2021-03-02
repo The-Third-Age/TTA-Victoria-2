@@ -23,6 +23,9 @@ A Lord of the Rings mod for Victoria 2
  - Jman
  - Radsterman
  - MoskauMaster
+
+## Credits to
+ - Bernd_das_BrotB7 (Population Estimates and Info)
  
 ## Assets
  - Terrain textures
