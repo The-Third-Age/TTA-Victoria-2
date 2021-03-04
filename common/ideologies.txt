@@ -51,7 +51,7 @@ fascist_group = {
 conservative_group = {
 	reactionary = {
 		date = 3200.1.1
-		color = { 30 30 100 }
+		color = { 31 31 101 }
 		
 		add_political_reform = {
 			base = 0
@@ -76,7 +76,7 @@ conservative_group = {
 	}
 	
 	conservative = {
-		color = { 10 10 250 }
+		color = { 11 10 250 }
 		
 		can_reduce_militancy = yes
 		
@@ -343,7 +343,7 @@ liberal_group = {
 	
 	liberal = {
 		date = 3200.1.1
-		color = { 255 255 0 }
+		color = { 255 255 1 }
 		
 		
 		add_political_reform = {
@@ -461,3 +461,422 @@ liberal_group = {
 	}
 }
 	
+prosauron_group = {
+	prostate = {
+		color = { 128 0 0 }
+		
+		add_political_reform = {
+			base = 1
+			modifier = {
+				factor = -1
+				NOT = {
+					ruling_party_ideology = prostate
+					ruling_party_ideology = servants
+				}
+			}
+		}
+		
+		remove_political_reform = {
+			base = 1
+			modifier = {
+				factor = -1
+				NOT = {
+					ruling_party_ideology = prostate
+					ruling_party_ideology = servants
+				}
+			}
+		}
+		
+		add_social_reform = {
+			base = 1
+			modifier = {
+				factor = -1
+				NOT = {
+					ruling_party_ideology = prostate
+					ruling_party_ideology = servants
+				}
+			}
+		}
+		
+		remove_social_reform = {
+			base = 1
+			modifier = {
+				factor = -1
+				NOT = {
+					ruling_party_ideology = prostate
+					ruling_party_ideology = servants
+				}
+			}
+		}
+	}
+	
+	servants = {
+		color = { 128 0 32 }
+		
+		add_political_reform = {
+			base = 1
+			modifier = {
+				factor = -1
+				NOT = {
+					ruling_party_ideology = prostate
+					ruling_party_ideology = servants
+				}
+			}
+		}
+		
+		remove_political_reform = {
+			base = 1
+			modifier = {
+				factor = -1
+				NOT = {
+					ruling_party_ideology = prostate
+					ruling_party_ideology = servants
+				}
+			}
+		}
+		
+		add_social_reform = {
+			base = 1
+			modifier = {
+				factor = -1
+				NOT = {
+					ruling_party_ideology = prostate
+					ruling_party_ideology = servants
+				}
+			}
+		}
+		
+		remove_social_reform = {
+			base = 1
+			modifier = {
+				factor = -1
+				NOT = {
+					ruling_party_ideology = prostate
+					ruling_party_ideology = servants
+				}
+			}
+		}
+	}
+}
+		
+nobility_group = {
+	high_nobility = {
+		color = { 0 0 100 }
+		
+		add_political_reform = {
+			base = 0
+		}
+		remove_political_reform = {
+			base = 1
+		}
+		add_social_reform = {
+			base = 0
+		}
+		remove_social_reform = {
+			base = 1
+		}
+		
+		add_military_reform = {
+			base = -1
+		}
+		
+		add_economic_reform = {
+			base = -1
+		}
+	}
+	
+	low_nobility = {
+		color = { 10 10 250 }
+		
+		can_reduce_militancy = yes
+		
+		add_political_reform = {
+			base = 0
+			group = {
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 1
+						political_movement_strength = 0.1
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 2
+						political_movement_strength = 0.2
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 3
+						political_movement_strength = 0.3
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 4
+						political_movement_strength = 0.4
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 5
+						political_movement_strength = 0.5
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 6
+						political_movement_strength = 0.6
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 7
+						political_movement_strength = 0.7
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 8
+						political_movement_strength = 0.8
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 9
+						political_movement_strength = 0.9
+					}
+				}
+			}
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 0
+			
+			group = {
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 1
+						social_movement_strength = 0.1
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 2
+						social_movement_strength = 0.2
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 3
+						social_movement_strength = 0.3
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 4
+						social_movement_strength = 0.4
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 5
+						social_movement_strength = 0.5
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 6
+						social_movement_strength = 0.6
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 7
+						social_movement_strength = 0.7
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 8
+						social_movement_strength = 0.8
+					}
+				}
+				modifier = {
+					factor = 0.1
+					OR = { 
+						militancy = 9
+						social_movement_strength = 0.9
+					}
+				}
+			}
+			
+		}
+		remove_social_reform = {
+			base = 0
+		}
+		
+		add_military_reform = {
+			base = 0.5
+		}
+		
+		add_economic_reform = {
+			base = -0.5
+		}
+	}
+}
+
+burgher_group = {
+	burgher = {
+		color = { 255 255 0 }
+		
+		add_political_reform = {
+			base = 1
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 1
+		}
+		remove_social_reform = {
+			base = 0
+		}
+		
+		add_military_reform = {
+			base = 0.5
+		}
+		
+		add_economic_reform = {
+			base = 1
+		}
+	}
+}
+
+loremaster_group = {
+	loremaster_ideology = {
+		color = { 30 30 30 }
+		add_political_reform = {
+			base = 0
+			modifier = {
+				factor = 0.1
+				OR = { 
+					militancy = 1
+					political_movement_strength = 0.1
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = { 
+					militancy = 2
+					political_movement_strength = 0.2
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = { 
+					militancy = 3
+					political_movement_strength = 0.3
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = { 
+					militancy = 4
+					political_movement_strength = 0.4
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = { 
+					militancy = 5
+					political_movement_strength = 0.5
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = { 
+					militancy = 6
+					political_movement_strength = 0.6
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = { 
+					militancy = 7
+					political_movement_strength = 0.7
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = { 
+					militancy = 8
+					political_movement_strength = 0.8
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = { 
+					militancy = 9
+					political_movement_strength = 0.9
+				}
+			}
+		}
+		remove_political_reform = {
+			base = 0
+		}
+		add_social_reform = {
+			base = 0
+		}
+		remove_social_reform = {
+			base = 1
+		}
+	}
+}
+
+# non-feudal only
+tribal_group = {
+	fundamentalist = {
+		color = { 0 0 0 }
+		
+		add_political_reform = {
+			base = 0
+		}
+		remove_political_reform = {
+			base = 1
+		}
+		add_social_reform = {
+			base = 0
+		}
+		remove_social_reform = {
+			base = 1
+		}
+		
+		add_military_reform = {
+			base = -1
+		}
+		
+		add_economic_reform = {
+			base = -1
+		}
+	}
+}
