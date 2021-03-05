@@ -49,3 +49,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Darek Zabrocki](https://www.deviantart.com/darekzabrocki/art/reaching-the-Victory-397615037)
 - Main Menu art
 	- [WallpaperAccess](https://wallpaperaccess.com/full/758025.jpg)
+	
+## References
+ - [Lindëfirion](http://lindefirion.net/)
+ - [The New Notions Fanclub Archive](https://notionclubarchives.fandom.com/wiki/Arda_Role_Playing_Wiki)
+ - [Tolkien Gateway](http://tolkiengateway.net/wiki/Main_Page)
+ - [One Wiki to Rule Them All](https://lotr.fandom.com/wiki/Main_Page)
