@@ -15,7 +15,8 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Gameplay
  - Actually balance out goods, in terms of price, needs, factory inputs/outputs (amounts), starting rgos 
  - Finalize poptypes plan
- - Government types, Ideologies and Rebels
+ - Government types and Rebels
+ - Remove vanilla ideologies
  - Tech and Inventions
  - Cultures and Pops (religion to race)
  - Reforms
