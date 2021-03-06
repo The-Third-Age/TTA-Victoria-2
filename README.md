@@ -11,9 +11,11 @@ A Lord of the Rings mod for Victoria 2
 ## Development Team
  - SirRunner: Lead Modder
    - Maps (Provinces, Terrain, Rivers)
- - DerpAnarchist: Modder 
+   - Reforms, Ideologies (implementation)
+ - DerpAnarchist/Glariamn: Modder 
    - POPs
    - Map Verifier/Validator
+   - Reforms, Ideologies (ideas)
  - Cheese/s-williams: Modder
    - Loadings Screens
    - Main Menu Background
