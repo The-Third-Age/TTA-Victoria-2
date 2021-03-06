@@ -136,7 +136,7 @@ party_issues = {
 			global_assimilation_rate = 0.25
 		}
 	}
-	war_policy = {
+	war_policy = { 
 		jingoism = {
 			max_military_spending = 1.0
 			supply_consumption = 0.1
@@ -180,24 +180,6 @@ party_issues = {
 # Political reforms.
 ##########################################
 political_reforms = {
-	slavery = {
-		yes_slavery = {
-			rules = { slavery_allowed = yes }
-		}
-		no_slavery = {
-			rules = { slavery_allowed = no }
-			allow = { 
-				OR = {
-					NOT = { 
-						has_country_flag = the_slavery_debate
-					}
-					year = 1875
-				}
-			}
-
-			global_immigrant_attract = 0.01
-		}
-	}
 
 	vote_franschise = {
 		next_step_only = yes
@@ -357,6 +339,101 @@ political_reforms = {
 			global_immigrant_attract = 0.05
 		}
 	}
+
+	nobility_autonomy = {
+		next_step_only = yes
+		
+		large_noble_autonomy = {
+		}
+		medium_noble_autonomy = {
+		}
+		small_noble_autonomy = {
+		}
+	}
+	
+	noble_levy_contribution = {
+		next_step_only = yes
+		
+		large_levy_contribution = {
+		}
+		medium_levy_contribution = {
+		}
+		small_levy_contribution = {
+		}
+	}
+	
+	noble_tax_contribution = {
+		next_step_only = yes
+		
+		large_tax_contribution = {
+		}
+		medium_tax_contribution = {
+		}
+		small_tax_contribution = {
+		}
+	}
+	
+	knighting_rights = {
+		next_step_only = yes
+		
+		allowed_knighting_rights = {
+		}
+		restricted_knighting_rights = {
+		}
+		royal_knighting_rights = {
+		}
+	}
+	
+	serfdom = {
+		next_step_only = yes
+		
+		enforced_serfdom = {
+		}
+		discouraged_serfdom = {
+		}
+		banned_serfdom = {
+		}
+	}
+	
+	crown_land_ownership = {
+		next_step_only = yes
+		administrative = yes
+		
+		five_land_ownership = {
+		}
+		ten_land_ownership = {
+		}
+		thirty_land_ownership = {
+		}
+		half_land_ownership = {
+		}
+		seventy_land_ownership = {
+		}
+		all_land_ownership = {
+		}
+	}
+	
+	slavery = {
+		yes_slavery = {
+			rules = { slavery_allowed = yes }
+		}
+		slavery_womb = {
+		}
+		no_slavery = {
+			rules = { slavery_allowed = no }
+			allow = { 
+				OR = {
+					NOT = { 
+						has_country_flag = the_slavery_debate
+					}
+					year = 1875
+				}
+			}
+
+			global_immigrant_attract = 0.01
+		}
+	}
+		
 }
 
 ##########################################
@@ -483,27 +560,7 @@ social_reforms = {
 			global_immigrant_attract = 0.04
 		}
 	}
-	pensions = {
-		next_step_only = yes
-		no_pensions = {
-		}
-		trinket_pensions = {
-			pension_level	= 0.05
-			global_immigrant_attract = 0.01
-		}
-		low_pensions = {
-			pension_level	= 0.10
-			global_immigrant_attract = 0.02
-		}
-		acceptable_pensions = {
-			pension_level	= 0.15
-			global_immigrant_attract = 0.03
-		}
-		good_pensions = {
-			pension_level	= 0.20
-			global_immigrant_attract = 0.04
-		}
-	}	
+
 	health_care = {
 		administrative = yes
 		next_step_only = yes
@@ -552,6 +609,67 @@ social_reforms = {
 			administrative_multiplier = 3
 		}
 	}	
+
+	exclusive_trading_rights = {
+		administrative = yes
+		next_step_only = yes
+		
+		granted_exclusive_tr = {
+		}
+		limited_exclusive_tr = {
+		}
+		abolished_exclusive_tr = {
+		}
+	}
+	
+	state_supplies_monopoly = {
+		administrative = yes
+		next_step_only = yes
+		
+		privileged_state_supplies = {
+		}
+		allowed_state_supplies = {
+		}
+		restricted_state_supplies = {
+		}
+	}
+	
+	city_jurisdiction = {
+		administrative = yes
+		next_step_only = yes
+		
+		independent_cities = {
+		}
+		chartered_cities = {
+		}
+		territorial_cities = {
+		}
+		royal_cities = {
+		}
+	}
+	
+	pensions = {
+		next_step_only = yes
+		
+		no_pensions = {
+		}
+		trinket_pensions = {
+			pension_level	= 0.05
+			global_immigrant_attract = 0.01
+		}
+		low_pensions = {
+			pension_level	= 0.10
+			global_immigrant_attract = 0.02
+		}
+		acceptable_pensions = {
+			pension_level	= 0.15
+			global_immigrant_attract = 0.03
+		}
+		good_pensions = {
+			pension_level	= 0.20
+			global_immigrant_attract = 0.04
+		}
+	}
 }
 
 economic_reforms = {

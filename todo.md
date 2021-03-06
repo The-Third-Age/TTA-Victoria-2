@@ -17,9 +17,10 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Finalize poptypes plan
  - Government types and Rebels
  - Remove vanilla ideologies
+ - Remove unused vanilla reforms
+ - Add reform effects
  - Tech and Inventions
  - Cultures and Pops (religion to race)
- - Reforms
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
