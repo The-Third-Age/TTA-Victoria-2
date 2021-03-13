@@ -274,6 +274,8 @@ political_reforms = {
 		no_meeting = {
 			#no immediate effect
 		}
+		meeting_curfew = {
+		}
 		yes_meeting = {
 			issue_change_speed = 1
 			global_immigrant_attract = 0.01
@@ -433,7 +435,25 @@ political_reforms = {
 			global_immigrant_attract = 0.01
 		}
 	}
-		
+	
+	penal_reform = {
+		capital_punishment = {
+		}
+		hard_labor = {
+		}
+		incarceration = {
+		}
+	}
+	
+	cultural_rights = {
+		primary_voting = {
+		}
+		accepted_voting = {
+		}
+		# Not all_voting due to the rule being called all_voting
+		all_vote = {
+		}
+	}
 }
 
 ##########################################
@@ -668,6 +688,15 @@ social_reforms = {
 		good_pensions = {
 			pension_level	= 0.20
 			global_immigrant_attract = 0.04
+		}
+	}
+
+	apprenticeship = {
+		hereditary = {
+		}
+		appointment = {
+		}
+		guild_school = {
 		}
 	}
 }
