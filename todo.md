@@ -12,6 +12,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Play around with colormaps
  - Decide on ownership status of Gondorian fiefdoms
  - Set liferatings and climates
+ - Add Lake Ata
  
 ## Gameplay
  - Actually balance out goods, in terms of price, needs, factory inputs/outputs (amounts), starting rgos 
