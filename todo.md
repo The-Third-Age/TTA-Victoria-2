@@ -12,7 +12,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Add terrains and textures for Mordor
  - Coastlines/small islands, Anduin river oversights along the southern Gondor shore and Cair Andros
  - Play around with colormaps
- - Decide on ownership status of Gondorian fiefdoms
  - Set liferatings and climates
  - Add Lake Ata
  
@@ -23,7 +22,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Remove vanilla ideologies
  - Remove unused vanilla reforms
  - Add reform effects
- - Tech and Inventions
+ - Tech and Inventions and tech schools
  - Cultures and Pops (religion to race)
 
 ## GFX and GUI
@@ -33,6 +32,12 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - 3d models/skins, both buildings and soldiers/ships? (long shot)
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
+
+## Flavor
+ - When a puppet is stronger than it's master, decision to declare war
+   - other puppets get an event allowing them to decide to go to war
+ - Framented Gondor: states out broken into multiple fiefdoms (puppets), annex through reforms/decisions
+ - Haradrim Tribes/Khand/Rhun formed as a cultural union
 
 ## Others 
  - Music (BFME2 for example)
