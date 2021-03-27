@@ -8,7 +8,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Map
  - Finish up the "new" terrain, river, provinces map
  - Fix the farm/grassland issue
- - Remove coastal desert, add desert hill terrain
+ - Remove coastal desert, add desert hill terrain, blackened textures/terrain for Mordor
  - Add terrains and textures for Mordor
  - Coastlines/small islands, Anduin river oversights along the southern Gondor shore and Cair Andros
  - Play around with colormaps
