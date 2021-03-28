@@ -125,14 +125,11 @@ party_issues = {
 	}
 	citizenship_policy = {
 		residency = {
-			rules = { primary_culture_voting = yes }
 		}
 		limited_citizenship = {
-			rules = { culture_voting = yes }
 			global_assimilation_rate = 0.10
 		}
 		full_citizenship = {
-			rules = { all_voting = yes }
 			global_assimilation_rate = 0.25
 		}
 	}
@@ -275,6 +272,8 @@ political_reforms = {
 			#no immediate effect
 		}
 		meeting_curfew = {
+			issue_change_speed = 0.5
+			suppression_points_modifier = -0.1
 		}
 		yes_meeting = {
 			issue_change_speed = 1
@@ -342,12 +341,19 @@ political_reforms = {
 		}
 	}
 
+	# Add in militancy for nobility
 	nobility_autonomy = {
 		next_step_only = yes
 		
 		large_noble_autonomy = {
+			suppression_points_modifier = -0.25
+			tax_efficiency = -0.05
+			rgo_output = -0.1
 		}
 		medium_noble_autonomy = {
+			suppression_points_modifier = -0.1
+			tax_efficiency = -0.025
+			rgo_output = -0.05
 		}
 		small_noble_autonomy = {
 		}
@@ -357,41 +363,56 @@ political_reforms = {
 		next_step_only = yes
 		
 		large_levy_contribution = {
+			mobilisation_size = 0.05
+			global_pop_militancy_modifier = 0.01
+			supply_consumption = 0.1
 		}
 		medium_levy_contribution = {
+			mobilisation_size = 0.02
+			supply_consumption = 0.05
 		}
 		small_levy_contribution = {
+			global_pop_militancy_modifier = -0.01
 		}
 	}
 	
+	# Add in militancy for nobility and the rest (they would be separate)
 	noble_tax_contribution = {
 		next_step_only = yes
 		
 		small_tax_contribution = {
+			tax_efficiency = -0.03
 		}
 		medium_tax_contribution = {
+			tax_efficiency = -0.01
 		}
 		large_tax_contribution = {
 		}
 	}
 	
+	# Add in militancy for nobility
 	knighting_rights = {
 		next_step_only = yes
 		
 		allowed_knighting_rights = {
+			prestige = -0.05
 		}
 		restricted_knighting_rights = {
 		}
 		royal_knighting_rights = {
+			prestige = 0.05
 		}
 	}
 	
+	# Add in militancy for non-nobility
 	serfdom = {
 		next_step_only = yes
 		
 		enforced_serfdom = {
+			rgo_output = 0.1
 		}
 		discouraged_serfdom = {
+			rgo_output = 0.05
 		}
 		banned_serfdom = {
 		}
@@ -402,19 +423,43 @@ political_reforms = {
 		administrative = yes
 		
 		five_land_ownership = {
+			rgo_throughput = -0.15
+			factory_throughput = -0.15
+			tax_efficiency = -0.03
+			administrative_efficiency_modifier = -0.03
 		}
 		ten_land_ownership = {
+			rgo_throughput = -0.10
+			factory_throughput = -0.10
+			tax_efficiency = -0.02
+			administrative_efficiency_modifier = -0.02
 		}
 		thirty_land_ownership = {
+			rgo_throughput = -0.05
+			factory_throughput = -0.05
+			tax_efficiency = -0.01
+			administrative_efficiency_modifier = -0.01
 		}
 		half_land_ownership = {
+			prestige = 0.01
 		}
 		seventy_land_ownership = {
+			prestige = 0.03
+			rgo_throughput = 0.05
+			factory_throughput = 0.05
+			tax_efficiency = 0.01
+			administrative_efficiency_modifier = 0.01
 		}
 		all_land_ownership = {
+			prestige = 0.05
+			rgo_throughput = 0.1
+			factory_throughput = 0.1
+			tax_efficiency = 0.02
+			administrative_efficiency_modifier = 0.02
 		}
 	}
 	
+	# Get slavery_womb working
 	slavery = {
 		yes_slavery = {
 			rules = { slavery_allowed = yes }
@@ -438,20 +483,28 @@ political_reforms = {
 	
 	penal_reform = {
 		capital_punishment = {
+			global_pop_militancy_modifier = -0.02
+			global_pop_consciousness_modifier = -0.02
 		}
 		hard_labor = {
+			global_pop_militancy_modifier = -0.01
+			rgo_output = 0.05
 		}
 		incarceration = {
+			global_pop_consciousness_modifier = 0.02
 		}
 	}
 	
 	cultural_rights = {
 		primary_voting = {
+			rules = { primary_culture_voting = yes }
 		}
 		accepted_voting = {
+			rules = { culture_voting = yes }
 		}
 		# Not all_voting due to the rule being called all_voting
 		all_vote = {
+			rules = { all_voting = yes }
 		}
 	}
 }
@@ -635,8 +688,12 @@ social_reforms = {
 		next_step_only = yes
 		
 		granted_exclusive_tr = {
+			import_cost = 0.2
+			tax_efficiency = 0.03
 		}
 		limited_exclusive_tr = {
+			import_cost = 0.1
+			tax_efficiency = 0.01
 		}
 		abolished_exclusive_tr = {
 		}
@@ -647,8 +704,10 @@ social_reforms = {
 		next_step_only = yes
 		
 		privileged_state_supplies = {
+			supply_consumption = 0.5
 		}
 		allowed_state_supplies = {
+			supply_consumption = 0.25
 		}
 		restricted_state_supplies = {
 		}
@@ -659,12 +718,30 @@ social_reforms = {
 		next_step_only = yes
 		
 		independent_cities = {
+			global_pop_militancy_modifier = 0.03
+			global_pop_consciousness_modifier = 0.03
+			administrative_efficiency_modifier = -0.03
+			tax_efficiency = -0.03
+			suppression_points_modifier = -0.2
+			leadership_modifier = -0.1
 		}
 		chartered_cities = {
+			global_pop_militancy_modifier = 0.02
+			global_pop_consciousness_modifier = 0.02
+			administrative_efficiency_modifier = -0.02
+			tax_efficiency = -0.02
+			suppression_points_modifier = -0.1
+			leadership_modifier = -0.05
 		}
 		territorial_cities = {
+			global_pop_militancy_modifier = 0.01
+			global_pop_consciousness_modifier = 0.01
+			administrative_efficiency_modifier = -0.01
+			tax_efficiency = -0.01
 		}
 		royal_cities = {
+			suppression_points_modifier = 0.1
+			leadership_modifier = 0.1
 		}
 	}
 	
@@ -693,10 +770,16 @@ social_reforms = {
 
 	apprenticeship = {
 		hereditary = {
+			factory_output = -0.05
 		}
 		appointment = {
+			social_reform_desire = 0.1
 		}
 		guild_school = {
+			social_reform_desire = 0.2
+			factory_output = 0.05
+			education_efficiency_modifier = 0.05
+			research_points_modifier = 0.01
 		}
 	}
 }
