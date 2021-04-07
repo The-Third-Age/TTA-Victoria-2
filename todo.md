@@ -18,7 +18,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  
 ## Gameplay
  - Actually balance out goods, in terms of price, needs, factory inputs/outputs (amounts), starting rgos 
- - Implement poptypes plan
+ - Pop promotion changes
  - Government types and Rebels
  - Remove vanilla ideologies
  - Remove unused vanilla reforms
@@ -28,6 +28,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
+ - Change modifier icons to LOTRy icons
  - Change the Vic2 interface to something more aesthetically pleasing
  - Search for pictures that can be used for events, decisions and terrain, generals, flags
  - 3d models/skins, both buildings and soldiers/ships? (long shot)
