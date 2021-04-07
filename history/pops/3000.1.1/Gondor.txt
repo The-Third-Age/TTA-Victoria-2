@@ -2,6 +2,12 @@
 
 ### - Population Research
 # - Based on medieval populations, especially from the late ERE
+# - Reference materiel: https://medium.com/migration-issues/notes-on-medieval-population-geography-fd062449364f
+
+### - Rough outline of population composition:
+# ~2-4% nobles ( aristocrats, officers, loremasters )
+# ~10-20% urban population ( partly artisans, craftsmen, clerks, soldiers )
+# ~90% rural population ( ~10-30% free peasants, ~30-50% serfs, possibly also slaves )
 
 # Notes:
 ### Anórien
@@ -21,21 +27,39 @@
 	}
 	
 	aristocrats = { 
+		culture = dunedain
+		religion = men
+		size = 12
+	}
+	
+	aristocrats = { 
 		culture = gondorian
 		religion = men
-		size = 24
+		size = 7
+	}
+	
+	officers = { 
+		culture = dunedain
+		religion = men
+		size = 6
 	}
 	
 	officers = { 
 		culture = gondorian
 		religion = men
-		size = 12
+		size = 5
+	}
+	
+	clergymen = { 
+		culture = dunedain
+		religion = men
+		size = 31
 	}
 	
 	clergymen = { 
 		culture = gondorian
 		religion = men
-		size = 42
+		size = 11
 	}
 	
 	soldiers = {  
@@ -63,15 +87,27 @@
 	}
 	
 	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 5
+	}
+	
+	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 41
+		size = 2
+	}
+	
+	officers = {
+		culture = dunedain
+		religion = men
+		size = 7
 	}
 	
 	officers = {
 		culture = gondorian
 		religion = men
-		size = 32
+		size = 4
 	}
 	
 	clergymen = {
@@ -105,21 +141,39 @@
 	}
 	
 	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 3
+	}
+	
+	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 12
+		size = 4
+	}
+	
+	clergymen = {
+		culture = dunedain
+		religion = men
+		size = 6
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 18
+		size = 3
+	}
+	
+	officers = {
+		culture = dunedain
+		religion = men
+		size = 7
 	}
 	
 	officers = {
 		culture = gondorian
 		religion = men
-		size = 28
+		size = 13
 	}
 	
 	soldiers = {
@@ -147,21 +201,39 @@
 	}
 	
 	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 41
+	}
+	
+	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 62
+		size = 12
+	}
+	
+	clergymen = {
+		culture = dunedain
+		religion = men
+		size = 7
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 12
+		size = 4
 	}
 	
 	soldiers = {
 		culture = gondorian
 		religion = men
 		size = 82
+	}
+	
+	artisans = {
+		culture = dunedain
+		religion = men
+		size = 12
 	}
 
 	artisans = {
@@ -179,37 +251,73 @@
 	labourers = {
 		culture = gondorian
 		religion = men
-		size = 432
+		size = 327
+	}
+	
+	labourers = {
+		culture = dunedain
+		religion = men
+		size = 54
+	}
+	
+	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 11
 	}
 	
 	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 31
+		size = 6
+	}
+	
+	bureaucrats = {
+		culture = dunedain
+		religion = men
+		size = 43
 	}
 	
 	bureaucrats = {
 		culture = gondorian
 		religion = men
-		size = 153
+		size = 61
+	}
+	
+	clergymen = {
+		culture = dunedain
+		religion = men
+		size = 12
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 23
+		size = 11
+	}
+	
+	soldiers = {
+		culture = dunedain
+		religion = men
+		size = 15
 	}
 	
 	soldiers = {
 		culture = gondorian
 		religion = men
-		size = 32
+		size = 21
+	}
+	
+	artisans = {
+		culture = dunedain
+		religion = men
+		size = 42
 	}
 
 	artisans = {
 		culture = gondorian
 		religion = men
-		size = 134
+		size = 75
 	}
 	
 }
@@ -225,15 +333,27 @@
 	}
 	
 	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 15
+	}
+	
+	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 23
+		size = 6
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 8
+		size = 5
+	}
+	
+	clergymen = {
+		culture = gondorian
+		religion = men
+		size = 3
 	}
 
 	artisans = {
@@ -257,13 +377,25 @@
 	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 43
+		size = 15
+	}
+	
+	aristocrats = {
+		culture = gondorian
+		religion = men
+		size = 11
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 51
+		size = 32
+	}
+	
+	clergymen = {
+		culture = gondorian
+		religion = men
+		size = 12
 	}
 	
 	soldiers = {
@@ -291,28 +423,58 @@
 		size = 432
 	}
 	
+	labourers = {
+		culture = dunedain
+		religion = men
+		size = 81
+	}
+	
+	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 21
+	}
+	
 	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 31
+		size = 10
+	}
+	
+	clergymen = {
+		culture = dunedain
+		religion = men
+		size = 21
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 23
+		size = 4
+	}
+	
+	soldiers = {
+		culture = dunedain
+		religion = men
+		size = 15
 	}
 	
 	soldiers = {
 		culture = gondorian
 		religion = men
-		size = 32
+		size = 43
+	}
+	
+	artisans = {
+		culture = dunedain
+		religion = men
+		size = 45
 	}
 
 	artisans = {
 		culture = gondorian
 		religion = men
-		size = 134
+		size = 113
 	}
 	
 }
@@ -325,31 +487,67 @@
 	farmers = {
 		culture = gondorian
 		religion = men
-		size = 1542
+		size = 1339
+	}
+	
+	farmers = {
+		culture = dunedain
+		religion = men
+		size = 143
+	}
+	
+	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 23
 	}
 	
 	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 62
+		size = 41
+	}
+	
+	bureaucrats = {
+		culture = dunedain
+		religion = men
+		size = 43
 	}
 	
 	bureaucrats = {
 		culture = gondorian
 		religion = men
-		size = 143
+		size = 67
+	}
+	
+	clergymen = {
+		culture = dunedain
+		religion = men
+		size = 83
 	}
 		
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 112
+		size = 36
+	}
+	
+	officers = {
+		culture = dunedain
+		religion = men
+		size = 31
 	}
 	
 	officers = {
 		culture = gondorian
 		religion = men
-		size = 54
+		size = 15
+	}
+	
+	soldiers = {
+		culture = dunedain
+		religion = men
+		size = 112
 	}
 	
 	soldiers = {
@@ -361,7 +559,13 @@
 	artisans = {
 		culture = gondorian
 		religion = men
-		size = 423
+		size = 315
+	}
+	
+	artisans = {
+		culture = dunedain
+		religion = men
+		size = 53
 	}
 	
 }
@@ -377,40 +581,82 @@
 		size = 541
 	}
 	
+	labourers = {
+		culture = dunedain
+		religion = men
+		size = 454
+	}
+	
+	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 64
+	}
+	
 	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 124
+		size = 37
+	}
+	
+	bureaucrats = {
+		culture = dunedain
+		religion = men
+		size = 137
 	}
 	
 	bureaucrats = {
 		culture = gondorian
 		religion = men
-		size = 421
+		size = 312
+	}
+	
+	clergymen = {
+		culture = dunedain
+		religion = men
+		size = 229
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 312
+		size = 58
+	}
+	
+	officers = {
+		culture = dunedain
+		religion = men
+		size = 316
 	}
 	
 	officers = {
 		culture = gondorian
 		religion = men
-		size = 538
+		size = 179
+	}
+	
+	soldiers = {
+		culture = dunedain
+		religion = men
+		size = 1166
 	}
 	
 	soldiers = {
 		culture = gondorian
 		religion = men
-		size = 3576
+		size = 2110
+	}
+	
+	artisans = {
+		culture = dunedain
+		religion = men
+		size = 226
 	}
 
 	artisans = {
 		culture = gondorian
 		religion = men
-		size = 659
+		size = 274
 	}
 	
 }
@@ -421,45 +667,45 @@
 11 = {
 	
 	farmers = {
-		culture = gondorian # - change to Druedain
+		culture = druedain 
 		religion = men
-		size = 7379
+		size = 2146
 	}
 
 	aristocrats = {
-		culture = gondorian
+		culture = druedain
 		religion = men
-		size = 275
+		size = 18
 	}
 
 	officers = {
-		culture = gondorian
+		culture = druedain
 		religion = men
-		size = 53
+		size = 4
 	}
 	
 	bureaucrats = {
-		culture = gondorian
+		culture = druedain
 		religion = men
-		size = 437
+		size = 15
 	}
 	
 	clergymen = {
-		culture = gondorian
+		culture = druedain
 		religion = men
-		size = 532
+		size = 42
 	}
 
 	soldiers = {
-		culture = gondorian
+		culture = druedain
 		religion = men
-		size = 741
+		size = 57
 	}
 
 	artisans = {
-		culture = gondorian
+		culture = druedain
 		religion = men
-		size = 1421
+		size = 211
 	}
 
 }
@@ -471,9 +717,21 @@
 	labourers = {
 		culture = gondorian
 		religion = men
-		size = 511
+		size = 437
 	}
-
+	
+	labourers = {
+		culture = dunedain
+		religion = men
+		size = 118
+	}
+	
+	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 25
+	}
+	
 	aristocrats = {
 		culture = gondorian
 		religion = men
@@ -513,19 +771,37 @@
 	farmers = {
 		culture = gondorian
 		religion = men
-		size = 1393
+		size = 756
+	}
+	
+	farmers = {
+		culture = dunedain
+		religion = men
+		size = 547
+	}
+	
+	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 36
 	}
 
 	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 152
+		size = 59
+	}
+	
+	officers = {
+		culture = dunedain
+		religion = men
+		size = 41
 	}
 
 	officers = {
 		culture = gondorian
 		religion = men
-		size = 71
+		size = 30
 	}
 	
 	clergymen = {
@@ -533,11 +809,23 @@
 		religion = men
 		size = 62
 	}
+	
+	soldiers = {
+		culture = dunedain
+		religion = men
+		size = 145
+	}
 
 	soldiers = {
 		culture = gondorian
 		religion = men
-		size = 527
+		size = 474
+	}
+	
+	artisans = {
+		culture = dunedain
+		religion = men
+		size = 117
 	}
 
 	artisans = {
@@ -553,15 +841,27 @@
 14 = {
 
 	officers = {
+		culture = dunedain
+		religion = men
+		size = 112
+	}
+
+	officers = {
 		culture = gondorian
 		religion = men
-		size = 160
+		size = 58
+	}
+	
+	soldiers = {
+		culture = dunedain
+		religion = men
+		size = 222
 	}
 	
 	soldiers = {
 		culture = gondorian
 		religion = men
-		size = 1200
+		size = 978
 	}
 
 }
@@ -569,35 +869,84 @@
 #West Osgiliath during peacetime
 
 #14 = {
+#
+#	labourers = {
+#		culture = dunedain
+#		religion = men
+#		size = 15477
+#	}
+#
 #	
 #	labourers = {
 #		culture = gondorian
 #		religion = men
-#		size = 85432
+#		size = 60836
+#	}
+#
+#	aristocrats = {
+#		culture = dunedain
+#		religion = men
+#		size = 564
+#	}
+#	
+#	officers = {
+#		culture = dunedain
+#		religion = men
+#		size = 315
 #	}
 #
 #	officers = {
 #		culture = gondorian
 #		religion = men
-#		size = 431
+#		size = 132
+#	}
+#
+#	clergymen = {
+#		culture = dunedain
+#		religion = men
+#		size = 5674
 #	}
 #	
 #	clergymen = {
 #		culture = gondorian
 #		religion = men
-#		size = 7582
+#		size = 1889
+#	}
+#	
+#	 soldiers = {
+#		culture = gondorian
+#		religion = men
+#		size = 3196
 #	}
 #
 #	soldiers = {
 #		culture = gondorian
 #		religion = men
-#		size = 12079
+#		size = 9760
+#	}
+#
+#	artisans = {
+#		culture = dunedain
+#		religion = men
+#		size = 35075
 #	}
 #
 #	artisans = {
 #		culture = gondorian
 #		religion = men
-#		size = 53873
+#		size = 23867
+#	}
+#
+#	craftsmen = {
+#		culture = dunedain
+#		religion = men
+#		size = 1574
+#	}
+#	
+#	craftsmen = {
+#		culture = gondorian
+#		religion = men
+#		size = 9757
 #	}
 #
 #}
@@ -608,52 +957,100 @@
 
 16 = {
 	
-	farmers = {
-		culture = gondorian
+	labourers = {
+		culture = dunedain
 		religion = men
 		size = 3621
+	}
+	
+	labourers = {
+		culture = gondorian
+		religion = men
+		size = 16753
+	}
+	
+	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 1526
 	}
 
 	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 1526
+		size = 185
+	}
+	
+	officers = {
+		culture = dunedain
+		religion = men
+		size = 659
 	}
 
 	officers = {
 		culture = gondorian
 		religion = men
-		size = 728
+		size = 270
+	}
+	
+	bureaucrats = {
+		culture = dunedain
+		religion = men
+		size = 2496
 	}
 	
 	bureaucrats = {
 		culture = gondorian
 		religion = men
-		size = 5213
+		size = 1754
+	}
+	
+	clergymen = {
+		culture = dunedain
+		religion = men
+		size = 3278
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 4237
+		size = 1486
+	}
+	
+	soldiers = {
+		culture = dunedain
+		religion = men
+		size = 2658
 	}
 
 	soldiers = {
 		culture = gondorian
 		religion = men
-		size = 6135
+		size = 4107
+	}
+	
+	artisans = {
+		culture = dunedain
+		religion = men
+		size = 10586
 	}
 
 	artisans = {
 		culture = gondorian
 		religion = men
-		size = 24923
+		size = 12807
 	}
-
-	labourers = {
+	
+	craftsmen = {
+		culture = dunedain
+		religion = men
+		size = 977
+	}
+	
+	craftsmen = {
 		culture = gondorian
 		religion = men
-		size = 43912
+		size = 12576
 	}
 	
 }
@@ -661,47 +1058,89 @@
 # - Pelennor Fields
 
 17 = {
+
+	farmers = {
+		culture = dunedain
+		religion = men
+		size = 2198
+	}
 	
 	farmers = {
 		culture = gondorian
 		religion = men
-		size = 19752
+		size = 17595
+	}
+	
+	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 457
 	}
 
 	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 558
+		size = 170
+	}
+	
+	clergymen = {
+		culture = dunedain
+		religion = men
+		size = 1768
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 5379
+		size = 157
+	}
+	
+	soldiers = {
+		culture = dunedain
+		religion = men
+		size = 1057
 	}
 
 	soldiers = {
 		culture = gondorian
 		religion = men
-		size = 5186
+		size = 4129
+	}
+	
+	artisans = {
+		culture = dunedain
+		religion = men
+		size = 573
 	}
 
 	artisans = {
 		culture = gondorian
 		religion = men
-		size = 3652
+		size = 3079
+	}
+	
+	officers = {
+		culture = dunedain
+		religion = men
+		size = 215
 	}
 
 	officers = {
 		culture = gondorian
 		religion = men
-		size = 310
+		size = 95
+	}
+	
+	bureaucrats = {
+		culture = dunedain
+		religion = men
+		size = 38
 	}
 	
 	bureaucrats = {
 		culture = gondorian
 		religion = men
-		size = 53
+		size = 15
 	}
 	
 }
@@ -720,33 +1159,75 @@
 19 = {
 	
 	farmers = {
+		culture = dunedain
+		religion = men
+		size = 114
+	}
+	
+	farmers = {
 		culture = gondorian
 		religion = men
 		size = 524
 	}
-
+	
+	aristocrats = {
+		culture = dunedain
+		religion = men
+		size = 17
+	}
+	
 	aristocrats = {
 		culture = gondorian
 		religion = men
-		size = 31
+		size = 3
+	}
+	
+	clergymen = {
+		culture = dunedain
+		religion = men
+		size = 36
 	}
 	
 	clergymen = {
 		culture = gondorian
 		religion = men
-		size = 43
+		size = 7
+	}
+	
+	soldiers = {
+		culture = dunedain
+		religion = men
+		size = 17
 	}
 
 	soldiers = {
 		culture = gondorian
 		religion = men
-		size = 157
+		size = 147
 	}
-
+	
+	artisans = {
+		culture = dunedain
+		religion = men
+		size = 54
+	}
+	
 	artisans = {
 		culture = gondorian
 		religion = men
-		size = 621
+		size = 174
+	}
+	
+	craftsmen = {
+		culture = dunedain
+		religion = men
+		size = 57
+	}
+	
+	craftsmen = {
+		culture = gondorian
+		religion = men
+		size = 315
 	}
 	
 }
@@ -3082,6 +3563,8 @@
 }
 
 # - Ost Lonntir
+
+
 
 # - Western Emyn Ernil
 
