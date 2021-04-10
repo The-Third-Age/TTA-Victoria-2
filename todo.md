@@ -7,7 +7,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  
 ## Map
  - Finish up the "new" terrain, river, provinces map
- - Fix the farm/grassland issue
+ - Fix the farm/grassland issue, "pathiness" of forests
  - Remove coastal desert, add desert hill terrain, blackened textures/terrain for Mordor
  - Add terrains and textures for Mordor
  - Coastlines/small islands, Anduin river oversights along the southern Gondor shore and Cair Andros
@@ -19,12 +19,15 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Gameplay
  - Actually balance out goods, in terms of price, needs, factory inputs/outputs (amounts), starting rgos 
  - Pop promotion changes
+ - Pop ideology/reform tendencies
  - Government types and Rebels
  - Remove vanilla ideologies
- - Remove unused vanilla reforms
- - Add reform effects
+ - Balance reform effects, figure out how to add `minimum_wage` effect to something
+ - Political Party policies
  - Tech and Inventions and tech schools
+ - "Unciv" reforms?
  - Cultures
+ - Go through vanilla events/decisions
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
@@ -34,6 +37,9 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - 3d models/skins, both buildings and soldiers/ships? (long shot)
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
+ - Politics page: flip (un)able to do x reform text, probably rename political/social reforms
+ - Productions page: see if clerks can be removed from guild employees
+ - Figure out where to put leader in politics page
 
 ## Flavor
  - When a puppet is stronger than it's master, decision to declare war
