@@ -38,6 +38,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
  - Politics page: flip (un)able to do x reform text, probably rename political/social reforms
+ - Productions page: see if clerks can be removed from guild employees
  - Figure out where to put leader in politics page
 
 ## Flavor
