@@ -2,7 +2,6 @@
 Some are obvious, others are not. Just a smallish list at the moment. It clearly should be many times longer...
 
 ## Overall
- - Truly decide on a time period
  - Get in-game descriptions set for LOTR rather than Victorian Era
  
 ## Map
@@ -37,6 +36,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - 3d models/skins, both buildings and soldiers/ships? (long shot)
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
+ - Serf POP icon
 
 ## Flavor
  - When a puppet is stronger than it's master, decision to declare war
