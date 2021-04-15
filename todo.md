@@ -39,9 +39,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Serf POP icon
 
 ## Flavor
- - When a puppet is stronger than it's master, decision to declare war
-   - other puppets get an event allowing them to decide to go to war
- - Framented Gondor: states out broken into multiple fiefdoms (puppets), annex through reforms/decisions
  - Haradrim Tribes/Khand/Rhun formed as a cultural union
 
 ## Others 
