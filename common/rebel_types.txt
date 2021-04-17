@@ -20,14 +20,13 @@ reactionary_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
-		proletarian_dictatorship = presidential_dictatorship
-		presidential_dictatorship = absolute_monarchy
-		bourgeois_dictatorship = presidential_dictatorship
-		fascist_dictatorship = presidential_dictatorship
-		absolute_monarchy = absolute_monarchy
-		prussian_constitutionalism = absolute_monarchy
-		hms_government = absolute_monarchy
-		democracy = presidential_dictatorship
+		proletarian_dictatorship = democracy
+		fascist_dictatorship = democracy
+		democracy = democracy
+		monarchy = democracy
+		stewardship = democracy
+		principality = democracy
+		sauron_dictatorship = democracy
 	}
 	
 	
@@ -132,14 +131,6 @@ reactionary_rebels = {
 			is_accepted_culture = yes
 		}
 		modifier = {
-			factor = 0.2
-			country = { government = absolute_monarchy}
-		}
-		modifier = {
-			factor = 0.2
-			country = { government = presidential_dictatorship }
-		}
-		modifier = {
 			factor = 1.015
 			country = { plurality = 10 }
 		}
@@ -209,13 +200,12 @@ fascist_rebels = {
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
 		proletarian_dictatorship = fascist_dictatorship
-		presidential_dictatorship = fascist_dictatorship
-		bourgeois_dictatorship = fascist_dictatorship
 		fascist_dictatorship = fascist_dictatorship
-		absolute_monarchy = fascist_dictatorship
-		prussian_constitutionalism = fascist_dictatorship
-		hms_government = fascist_dictatorship
 		democracy = fascist_dictatorship
+		monarchy = fascist_dictatorship
+		stewardship = fascist_dictatorship
+		principality = fascist_dictatorship
+		sauron_dictatorship = fascist_dictatorship
 	}
 	
 	
@@ -407,13 +397,12 @@ communist_rebels = {
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
 		proletarian_dictatorship = proletarian_dictatorship
-		presidential_dictatorship = proletarian_dictatorship
-		bourgeois_dictatorship = proletarian_dictatorship
 		fascist_dictatorship = proletarian_dictatorship
-		absolute_monarchy = proletarian_dictatorship
-		prussian_constitutionalism = proletarian_dictatorship
-		hms_government = proletarian_dictatorship
 		democracy = proletarian_dictatorship
+		monarchy = proletarian_dictatorship
+		stewardship = proletarian_dictatorship
+		principality = proletarian_dictatorship
+		sauron_dictatorship = proletarian_dictatorship
 	}
 	
 	
@@ -615,14 +604,13 @@ anarcho_liberal_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
-		proletarian_dictatorship = bourgeois_dictatorship
-		presidential_dictatorship = bourgeois_dictatorship
-		bourgeois_dictatorship = bourgeois_dictatorship
-		fascist_dictatorship = bourgeois_dictatorship
-		absolute_monarchy = bourgeois_dictatorship
-		prussian_constitutionalism = bourgeois_dictatorship
-		hms_government = bourgeois_dictatorship
-		democracy = bourgeois_dictatorship
+		proletarian_dictatorship = democracy
+		fascist_dictatorship = democracy
+		democracy = democracy
+		monarchy = democracy
+		stewardship = democracy
+		principality = democracy
+		sauron_dictatorship = democracy
 	}
 	
 	
@@ -727,10 +715,6 @@ anarcho_liberal_rebels = {
 			is_accepted_culture = no
 			is_primary_culture = no
 		}
-		modifier = {
-			factor = 0
-			country = { government = bourgeois_dictatorship }
-		}
 	}
  
  	#This is checked for EACH province in the Area of Operations
@@ -796,12 +780,7 @@ nationalist_rebels = {
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
 		proletarian_dictatorship = proletarian_dictatorship
-		presidential_dictatorship = presidential_dictatorship
-		bourgeois_dictatorship = bourgeois_dictatorship
 		fascist_dictatorship = fascist_dictatorship
-		absolute_monarchy = absolute_monarchy
-		prussian_constitutionalism = prussian_constitutionalism
-		hms_government = hms_government
 		democracy = democracy
 	}
 	

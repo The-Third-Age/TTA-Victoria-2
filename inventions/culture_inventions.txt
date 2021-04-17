@@ -864,10 +864,6 @@ constitutionalism = {
 	news = no
 	chance = {
 		base = 3
-		modifier = {
-			factor = 2
-			government = hms_government
-		}
 	}
 	effect = {
 		plurality = 0.05
@@ -949,10 +945,7 @@ authoritarianism = {
 			factor = 5
 			OR = {
 				ruling_party_ideology = reactionary
-				AND = {
-					government = absolute_monarchy
-					ruling_party_ideology = conservative
-					}
+				ruling_party_ideology = conservative
 				}
 		}
 	}
@@ -961,23 +954,10 @@ authoritarianism = {
 hierarchical_order = {
 	news = no
 	limit = { 
-			ideological_thought = 1 
-			OR = { 
-			government = hms_government
-			government = prussian_constitutionalism
-			government = absolute_monarchy
-			}			
+			ideological_thought = 1 	
 	}
 	chance = {
 		base = 1
-		modifier = {
-			factor = 3
-			government = absolute_monarchy
-		}
-		modifier = {
-			factor = 2
-			government = prussian_constitutionalism
-		}
 	}
 	core_pop_militancy_modifier = -0.01
 	core_pop_consciousness_modifier = 0.01
@@ -994,14 +974,6 @@ traditionalism = {
 		modifier = {
 			factor = 2
 			ruling_party_ideology = conservative
-		}
-		modifier = {
-			factor = 2
-			government = absolute_monarchy
-		}
-		modifier = {
-			factor = 1
-			government = prussian_constitutionalism
 		}
 	}
 	core_pop_consciousness_modifier = -0.01
@@ -1646,16 +1618,8 @@ mass_advertising = {
 	chance = {
 		base = 2
 		modifier = {
-			factor = 7
-			nationalvalue = nv_liberty
-		}
-		modifier = {
 			factor = 2
 			government = democracy
-		}
-		modifier = {
-			factor = 1
-			government = hms_government
 		}
 	}
 	effect = {

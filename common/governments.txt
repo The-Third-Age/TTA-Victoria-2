@@ -1,11 +1,67 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new forms of governemnts, make sure they are uniquely named.
 
+# Will probably be removed eventually
+democracy = {
+	prostate = yes
+	servants = yes
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	
+	election = yes
+	duration = 48
+	appoint_ruling_party = no
+}
 
+monarchy = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
 
+# Special monarchy for Gondor when a Steward is in power
+stewardship = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+
+# Special monarchy for Dol Amroth when a Prince is in power
+principality = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+
+sauron_dictatorship = {
+	prostate = yes
+	servants = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = republic
+}
+
+# Keep for now
 proletarian_dictatorship =
 {
-	#which ideology of parties.
 	communist = yes
 	
 	election = no
@@ -13,91 +69,12 @@ proletarian_dictatorship =
 	flagType = communist
 }
 
-
-
-presidential_dictatorship =
-{
-	#which ideology of parties.
-	reactionary = yes
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = republic
-}
- 
-bourgeois_dictatorship =
-{
-	#which ideology of parties.
-	anarcho_liberal = yes
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = republic
-}
-
+# Keep for now
 fascist_dictatorship =
 {
-	#which ideology of parties.
 	fascist = yes
 	
 	election = no
 	appoint_ruling_party = yes
 	flagType = fascist
 }
- 
-absolute_monarchy = {
-	liberal = yes
-	conservative = yes
-	reactionary = yes
-	
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
- 
-prussian_constitutionalism = {
-	liberal = yes
-	socialist = yes
-	conservative = yes
-	reactionary = yes
-	
-	
-	election = yes
-	duration = 48
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
-
-hms_government = {
-	liberal = yes
-	socialist = yes
-	conservative = yes
-	reactionary = yes
-	communist = yes
-	anarcho_liberal = yes
-	fascist = yes
-	
-	
-	election = yes
-	duration = 48
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
-
-democracy = {
-	liberal = yes
-	socialist = yes
-	conservative = yes
-	reactionary = yes
-	communist = yes
-	anarcho_liberal = yes
-	fascist = yes
-	
-	
-	election = yes
-	duration = 48
-	appoint_ruling_party = no
-}
- 
-
