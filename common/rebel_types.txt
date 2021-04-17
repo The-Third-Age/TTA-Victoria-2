@@ -120,15 +120,7 @@ reactionary_rebels = {
 		}
 		modifier = {
 			factor = 1.0105
-			AND = {
-				pop_majority_ideology = conservative
-				NOT = {
-					country = {
-						has_country_modifier = global_liberal_agitation
-						has_country_modifier = springtime_of_nations	
-					}
-				}
-			}
+			pop_majority_ideology = conservative
 		}
 		modifier = {
 			factor = 0
@@ -676,18 +668,6 @@ anarcho_liberal_rebels = {
 			war_exhaustion = 8
 			factor = 0.95
 		}
-		modifier = {
-			factor = 0.1
-			country = {
-				has_country_modifier = springtime_of_nations
-			}
-		}
-		modifier = {
-			factor = 3
-			country = {
-				has_country_modifier = global_liberal_agitation
-			}
-		}
 	}
 	
 	# The rebel type with the highest modifier for this pop gets picked
@@ -983,12 +963,6 @@ nationalist_rebels = {
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
-		modifier = {
-			factor = 0.4
-			country = {
-				has_country_modifier = springtime_of_nations
-			}
 		}
 	}
 	
