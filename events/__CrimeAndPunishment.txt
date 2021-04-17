@@ -1,0 +1,114 @@
+# Murder!
+country_event = {
+	id = 22030
+	title = "EVTNAME22030"
+	desc = "EVTDESC22030"
+	picture = "jacktheripper"
+	
+	trigger = {
+		NOT = {
+			poor_strata_life_needs = 0.9
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1500
+		modifier = {
+			factor = 0.9
+			NOT = {
+				poor_strata_everyday_needs = 0.9
+			}
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 1.5
+			NOT = {
+				average_militancy = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA22030"
+		random_state = {
+			rich_strata = {
+				militancy = 0.5
+			}
+			poor_strata = {
+				militancy = -0.5
+				consciousness = 0.5
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB22030"
+		random_state = {
+			poor_strata = {
+				militancy = 0.5
+			}
+			rich_strata = {
+				militancy = -0.5
+				consciousness = 0.5
+			}
+		}
+	}
+}
+
+#Outlaw on The Run
+country_event = {
+	id = 22050
+	title = "EVTNAME22050"
+	desc = "EVTDESC22050"
+	picture = "wanted"
+	
+	trigger = {
+		NOT = {
+			poor_strata_everyday_needs = 0.8
+		}
+		liberal = 0.2
+	}
+	
+	mean_time_to_happen = {
+		months = 1000
+		modifier = {
+			factor = 0.9
+			NOT = {
+				poor_strata_life_needs = 0.9
+			}
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.1
+			NOT = {
+				average_militancy = 4
+			}
+		}
+		modifier = {
+			factor = 1.1
+			NOT = {
+				average_consciousness = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA22050"
+		rich_strata = {
+			militancy = 2
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB22050"
+		poor_strata = {
+			militancy = 1
+		}
+	}
+}

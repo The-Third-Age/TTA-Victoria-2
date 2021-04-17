@@ -1,0 +1,86 @@
+country_event = {
+	title = "westernize_nation_title"
+	desc = "westernize_nation_desc"
+	news = yes
+	news_desc_long = "westernize_nation_desc_NEWS_LONG"
+	news_desc_medium = "westernize_nation_desc_NEWS_MEDIUM"
+	news_desc_short = "westernize_nation_desc_NEWS_SHORT"
+	picture = "Prosper"
+
+	id = 90910
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { tag = CHI }
+		NOT = { tag = GXI }
+		NOT = { tag = MCK }
+		NOT = { tag = XIN }
+		NOT = { tag = YNN }
+		NOT = { tag = XBI }
+		NOT = { tag = MGL }
+		}
+
+	option = {				
+		name = "EVTOPTA90910"
+
+		prestige = 10
+			remove_country_modifier = educational_reform
+			remove_country_modifier = military_reform
+			remove_country_modifier = western_influences
+			remove_country_modifier = uncivilized_isolationism
+			remove_country_modifier = trade_restrictions
+			remove_country_modifier = sayings_of_the_dutch
+			remove_country_modifier = extraterritoriality_granted
+			remove_country_modifier = meiji_restoration_boost
+			any_owned = {
+				remove_province_modifier = western_presence
+				remove_province_modifier = foreign_smugglers
+				remove_province_modifier = foreign_trading_post
+				remove_province_modifier = local_opium_habit
+				remove_province_modifier = european_military_mission
+				remove_province_modifier = legation_quarter
+				remove_province_modifier = kettler_denkmal
+			}
+	}
+}
+
+country_event = {
+	title = "EVTNAME90950"
+	desc = "EVTDESC90950"
+	picture = "Prosper"
+
+	id = 90950
+
+	is_triggered_only = yes
+	
+	trigger = {
+		#
+		}
+
+	option = {				
+		name = "EVTOPTA90950"
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 12
+		}
+		
+		relation = {
+			who = FROM
+			value = -100
+		}
+		
+	}
+	
+	option = {				
+		name = "EVTOPTB90950"
+
+		relation = {
+			who = FROM
+			value = 100
+		}
+		
+	}
+
+}

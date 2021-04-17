@@ -1,0 +1,38 @@
+#Famine!
+country_event = {
+	id = 21010
+	title = "EVTNAME21010"
+	desc = "EVTDESC21010"
+	picture = "starving"
+	
+	trigger = {
+		NOT = {
+			poor_strata_life_needs = 0.8
+			}
+	}
+		
+	mean_time_to_happen = {
+		months = 800
+	}
+	
+	option = {
+		name = "EVTOPTA21010"
+		random_state = {
+			poor_strata = {
+				reduce_pop = 0.96
+			}
+		}
+		add_tax_relative_income	= -5
+		#treasury = -1500
+	}
+	
+	option = {
+		name = "EVTOPTB21010"
+		random_state = {
+			poor_strata = {
+				reduce_pop = 0.9
+				militancy = 1
+			}
+		}
+	}
+}

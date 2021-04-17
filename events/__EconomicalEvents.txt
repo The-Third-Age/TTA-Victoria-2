@@ -1,0 +1,130 @@
+# Free Banking
+country_event = {
+	id = 22520
+	title = "EVTNAME22520"
+	desc = "EVTDESC22520"
+	picture = "private_banks"
+	
+	trigger = {
+		economic_policy = laissez_faire
+		private_bank_money_bill_printing = 1
+		NOT = {
+			has_country_modifier = central_bank_established
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_militancy = 4
+			}
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 1.5
+			government_interventionism = 1
+		}	
+	}
+	
+	option = {
+		name = "EVTOPTA22520"
+		random_list = {
+			10 = {
+				random_state = {
+					limit = {
+						is_colonial = no
+					}
+					any_pop = {
+						militancy = 1
+					}
+				}
+			}
+			
+			10 = {
+				random_state = {
+					limit = {
+						is_colonial = no
+					}
+					any_pop = {
+						militancy = -3
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB22520"
+		random_state = {
+			limit = {
+				is_colonial = no
+			}
+			any_pop = {
+				consciousness = -1
+			}
+		}
+	}
+}
+
+# Economic Boom
+country_event = {
+	id = 22560
+	title = "EVTNAME22560"
+	desc = "EVTDESC22560"
+	picture = "greatpowers"
+	
+	trigger = {
+		business_banks = 1
+		poor_strata_everyday_needs = 0.5
+		NOT = {
+			unemployment = 0.2
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.9
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				unemployment = 0.05
+			}
+		}
+		modifier = {
+			factor = 1.1
+			average_militancy = 3
+		}
+		modifier = {
+			factor = 1.2
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 2
+			unemployment = 0.1
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA22560"
+		add_country_modifier = {
+			name = economic_boom
+			duration = 365
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB22560"
+		any_pop = {
+			militancy = -1
+			consciousness = -1
+		}
+	}
+}

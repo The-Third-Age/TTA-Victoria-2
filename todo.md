@@ -26,7 +26,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Tech and Inventions and tech schools
  - "Unciv" reforms?
  - Cultures and Pops
- - Go through vanilla events
+ - Rework kept vanilla decisions/events
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
