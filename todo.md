@@ -19,14 +19,14 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Actually balance out goods, in terms of price, needs, factory inputs/outputs (amounts), starting rgos 
  - Pop promotion changes
  - Pop ideology/reform tendencies
- - Government types and Rebels
- - Remove vanilla ideologies
+ - Add ideology rebels
+ - Remove fascist/communist
  - Balance reform effects, figure out how to add `minimum_wage` effect to something
  - Political Party policies
  - Tech and Inventions and tech schools
  - "Unciv" reforms?
- - Cultures
- - Go through vanilla events/decisions
+ - Cultures and Pops
+ - Go through vanilla events
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
