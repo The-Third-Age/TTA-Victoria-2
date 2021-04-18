@@ -1,0 +1,91 @@
+# Settings decisions:
+#	View Settings
+#	Hide Settings
+#	Enable Railroading
+#	Enable Fluff
+#	Disable Fluff
+
+political_decisions = {
+	view_settings = {
+		potential = {
+			ai = no
+			NOT = { has_global_flag = viewing_settings }
+			NOT = { has_global_flag = no_settings }
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = viewing_settings
+		}
+	}
+	
+	hide_settings = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = viewing_settings
+		}
+	}
+	
+	disable_settings = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = viewing_settings
+			set_global_flag = no_settings
+		}
+	}
+	
+	enable_railroading = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = railroading_enabled }
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = railroading_enabled
+		}
+	}
+	
+	enable_fluff = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			has_global_flag = fluff_disabled
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = fluff_disabled
+		}
+	}
+	
+	disable_fluff = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = fluff_disabled }
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = fluff_disabled
+		}
+	}
+}
