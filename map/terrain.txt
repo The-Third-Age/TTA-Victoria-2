@@ -2,165 +2,183 @@ terrain = 64
 
 
 categories =  {
+
+	############################
+	##### VANILLA TERRAINS #####
+	############################
+
 	ocean = {
 		movement_cost = 1.0
 		is_water = yes
 		color = { 0 0 255 }
 	}
 
+	# Have not done yet
 	arctic = {
 		movement_cost = 1.0
+		
 		color = { 235 235 235 }
+		
 		farm_rgo_size = -0.5
 		farm_rgo_eff = -0.2
 		mine_rgo_size = -0.0
 		mine_rgo_eff = -0.2
+		
 		min_build_railroad = 1
 	}
 
 	farmlands = {
-		movement_cost = 1.2
-		color = { 137 104 165  }
+		movement_cost = 1.0
 		
-		farm_rgo_size = 0.2
-		farm_rgo_eff = 0.0
-		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
-		supply_limit = 10
+		attack = 1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.3
+		farm_rgo_eff = 0.2
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 6
 	}
 	
 	forest = {
 		movement_cost = 1.2
+		
 		defence = 1
-		color = { 91 123 45 }
-
-		farm_rgo_size = 0.0
-		farm_rgo_eff = 0.0
-		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
-		supply_limit = 6
 		combat_width = -0.20
-	}
-	
-	conifer_forest = {
-		movement_cost = 1.2
-		defence = 1
+		
 		color = { 91 123 10 }
 		
-		farm_rgo_size = 0.0
-		farm_rgo_eff = 0.0
-		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
-		supply_limit = 6
-		combat_width = -0.20
+		farm_rgo_size = -0.2
+		farm_rgo_eff = -0.2
+		mine_rgo_size = -0.2
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 3
 	}
 	
 	hills = {
 		movement_cost = 1.2
+		
 		defence = 1
+		combat_width = -0.25
+		
 		color = { 135 70 0 }
 
-		farm_rgo_size = 0.0
-		farm_rgo_eff = 0.0
-		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
-		supply_limit = 6
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
 		min_build_railroad = 1
-		combat_width = -0.33
 	}
 	
 	woods = {
-		movement_cost = 1.1
+		movement_cost = 1.2
+		
 		defence = 1
-		color = { 165 205 108 }
-		farm_rgo_size = 0.0
-		farm_rgo_eff = 0.0
-		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
-		supply_limit = 6
 		combat_width = -0.20
+		
+		color = { 91 123 10 }
+		
+		farm_rgo_size = -0.2
+		farm_rgo_eff = -0.2
+		mine_rgo_size = -0.2
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 3
 	}
 	
 	mountain = {
 		movement_cost = 1.4
-		defence = 2
-		color = { 117 108 119 }
-		farm_rgo_size = 0
-		farm_rgo_eff = -0.25
-		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
-		supply_limit = 2
 		
-		combat_width = -0.66
+		defence = 2
+		combat_width = -0.5
+		
+		color = { 117 108 119 }
+		
+		farm_rgo_size = -0.3
+		farm_rgo_eff = -0.3
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.2
+		
+		supply_limit = 1
 		
 		min_build_railroad = 3
 	}
 	
-	white_mountains = {
-		movement_cost = 1.4
-		defence = 2
-		color = { 117 108 119 }
-		farm_rgo_size = 0
-		farm_rgo_eff = -0.25
-		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
-		supply_limit = 2
-		
-		combat_width = -0.66
-		
-		min_build_railroad = 3
-	}
-
+	# Have not done yet
 	steppe = {
 		movement_cost = 1.0
+		
 		color = { 211 201 184 }
+		
 		farm_rgo_size = 0.0
 		farm_rgo_eff = 0.0
 		mine_rgo_size = 0.0
 		mine_rgo_eff = 0.0
-		supply_limit = 8
+		
+		supply_limit = 4
 
 	}
+	
 	plains = {
 		movement_cost = 1.0
+		
+		attack = 1
+		
 		color = { 241 221 184 }
-		farm_rgo_size = 0.0
-		farm_rgo_eff = 0.0
-		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
-		supply_limit = 10
-
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
 	}
-
+	
+	# Have not done yet
 	jungle = {
 		movement_cost = 1.3
+		
 		defence = 2
+		combat_width = -0.25
+		
 		color = { 32 151 0 }
+		
 		farm_rgo_size = 0.0
 		farm_rgo_eff = -0.2
 		mine_rgo_size = 0.0
 		mine_rgo_eff = -0.2
-		supply_limit = 2
+		
+		supply_limit = 1
+		
 		min_build_railroad = 2
-		combat_width = -0.25
 	}	
 	
+	# Have not done yet
 	marsh = {
 		movement_cost = 1.4
+		
 		defence = 1
+		combat_width = -0.25
+		
 		color = { 76 112 105 }
 
 		farm_rgo_size = 0.0
 		farm_rgo_eff = -0.2
 		mine_rgo_size = 0.0
 		mine_rgo_eff = -0.2
-		supply_limit = 2
+		
+		supply_limit = 1
+		
 		min_build_railroad = 2
-		combat_width = -0.25
 	}
 	
+	# Have not done yet
 	desert = {
 		movement_cost = 1.5
+		
 		color = { 218 195 0 }
 	
 		farm_rgo_size = -0.5
@@ -169,15 +187,181 @@ categories =  {
 		mine_rgo_eff = 0
 	}
 	
+	# Have not done yet
 	coastal_desert = {
 		movement_cost = 1.0
+		
 		color = { 208 155 0 }
+		
 		farm_rgo_size = -0.25
 		farm_rgo_eff = 0.0
 		mine_rgo_size = 0.0
 		mine_rgo_eff = 0.0
-		supply_limit = 2
+		
+		supply_limit = 1
 	}	
+	
+	#########################
+	##### AREA TERRAINS #####
+	#########################
+	
+	# mountains
+	white_mountains = {
+		movement_cost = 1.4
+		
+		defence = 2
+		combat_width = -0.5
+		
+		color = { 117 108 119 }
+		
+		farm_rgo_size = -0.3
+		farm_rgo_eff = -0.3
+		mine_rgo_size = 0.2
+		# bumped from mountains
+		mine_rgo_eff = 0.3
+		
+		supply_limit = 1
+		
+		min_build_railroad = 3
+	}
+	
+	# woods
+	conifer_forest = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.20
+		
+		color = { 91 123 10 }
+		
+		farm_rgo_size = -0.2
+		farm_rgo_eff = -0.2
+		mine_rgo_size = -0.2
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 3
+	}
+	
+	###########################
+	##### GONDOR TERRAINS #####
+	###########################
+	
+	# farmlands
+	anorien = {
+		movement_cost = 1.0
+		
+		attack = 1
+		
+		color = { 241 221 184 }
+		
+		# bumped from farmlands
+		farm_rgo_size = 0.4
+		# bumped from farmlands
+		farm_rgo_eff = 0.3
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 6
+	}
+	
+	# urban (not above)
+	osgiliath = {
+		movement_cost = 1.0
+		
+		defence = 2
+		combat_width = -0.20
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_eff = -0.2
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 6
+	}
+	
+	# woods
+	druadan_forest = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.20
+		
+		color = { 91 123 10 }
+		
+		farm_rgo_size = -0.2
+		farm_rgo_eff = -0.2
+		mine_rgo_size = -0.2
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 3
+	}
+	
+	# urban (not above)
+	cair_andros = {
+		# malus from urban
+		movement_cost = 1.2
+		
+		defence = 2
+		combat_width = -0.20
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.2
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 6
+		
+		# malus from urban
+		min_build_railroad = 1
+	}
+	
+	# farmland
+	pelennor_fields = {
+		movement_cost = 1.0
+		
+		attack = 1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.3
+		farm_rgo_eff = 0.2
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 6
+
+	}
+	
+	# urban (not above)
+	minas_tirith = {
+		movement_cost = 1.0
+		
+		defence = 2
+		combat_width = -0.20
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.2
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 6
+	}
+	
+	# plains
+	harlond_gondor = {
+		movement_cost = 1.0
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		# bumped from plains
+		supply_limit = 6
+
+	}
 }
 
 

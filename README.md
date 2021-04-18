@@ -32,6 +32,14 @@ A Lord of the Rings mod for Victoria 2
 ## Assets
  - Terrain textures
 	- [HFME](https://github.com/JmanThunder/HFM-Expanded)
+ - Terrains
+	- [Anórien](https://lotr.fandom.com/wiki/An%C3%B3rien?file=Anorienwide.jpg)
+	- [Drúadan Forest](http://tolkiengateway.net/wiki/File:Gail_McIntosh_-_Dr%C3%BAadan_Forest.jpg)
+	- [Cair Andros](https://lotro-wiki.com/index.php/File:Cair_Andros.jpg)
+	- [Osgiliath](https://lotr.fandom.com/wiki/Osgiliath?file=Boromir_in_Osgiliath.png)
+	- [Harlond (Gondor)](https://www.wikiwand.com/en/Gondor)
+	- [Pelennor Fields](https://www.pinterest.com/pin/470485492291623454/)
+	- [Minas Tirith](https://imgur.com/gallery/QR0zLrd)
  - Icons
 	- [Rock](http://14thwarriorcustomsettlers.blogspot.com/2008/02/rock-this-town.html)
 	- [Cut Stone](https://icon-library.com/icon/brick-icon-png-26.html)
@@ -52,7 +60,7 @@ A Lord of the Rings mod for Victoria 2
 - Main Menu art
 	- [WallpaperAccess](https://wallpaperaccess.com/full/758025.jpg)
 - National Leaders
-	- [maelstromarts - Deviant Art](https://www.deviantart.com/maelstromarts)
+	- [Ecthelion ii](https://www.deviantart.com/maelstromarts/art/The-White-Sanctuary-347365430)
 	
 ## References
  - [Lindëfirion](http://lindefirion.net/)

@@ -27,6 +27,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - "Unciv" reforms?
  - Cultures and Pops
  - Rework kept vanilla decisions/events
+ - Province terrains
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
