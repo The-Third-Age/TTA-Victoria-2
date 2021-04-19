@@ -61,6 +61,8 @@ A Lord of the Rings mod for Victoria 2
 	- [WallpaperAccess](https://wallpaperaccess.com/full/758025.jpg)
 - National Leaders
 	- [Ecthelion ii](https://www.deviantart.com/maelstromarts/art/The-White-Sanctuary-347365430)
+- Decisions
+	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
 	
 ## References
  - [Lindëfirion](http://lindefirion.net/)

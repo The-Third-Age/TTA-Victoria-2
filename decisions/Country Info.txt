@@ -1,0 +1,20 @@
+# Country Information decisions:
+#	The Kingdom of Gondor
+
+# Ought to have multiple for each nation depending on the government
+political_decisions = {
+	kingdom_of_gondor = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = GON
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			country_event = 35000
+		}
+}
