@@ -1,7 +1,8 @@
 # National Leader Events:
 #	30000 - 34999
+# 	Each leader has 8 events
 
-# Steward Ecthelion II
+# Steward Ecthelion II (30000 - 30007)
 country_event = {
 	id = 30000
 	picture = "steward_ecthelion_info"
@@ -13,7 +14,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA30000"
-		country_event = 30000
+		country_event = 30007
 	}
 	
 	option = {
@@ -23,12 +24,12 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC30000"
-		country_event = 30002
+		country_event = 30003
 	}
 	
 	option = {
 		name = "EVTOPTD30000"
-		country_event = 30003
+		country_event = 30005
 	}
 	
 	option = {
@@ -52,17 +53,17 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTF30000"
-		country_event = 30004
-	}
-	
-	option = {
-		name = "EVTOPTC30000"
 		country_event = 30002
 	}
 	
 	option = {
-		name = "EVTOPTD30000"
+		name = "EVTOPTC30000"
 		country_event = 30003
+	}
+	
+	option = {
+		name = "EVTOPTD30000"
+		country_event = 30005
 	}
 	
 	option = {
@@ -73,7 +74,7 @@ country_event = {
 country_event = {
 	id = 30002
 	picture = "steward_ecthelion_info"
-	title = "Steward Ecthelion II - Economy"
+	title = "Steward Ecthelion II - Military"
 	desc = "EVTDESC30002"
 	
 	is_triggered_only = yes
@@ -85,18 +86,18 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB30000"
+		name = "EVTOPTG30000"
 		country_event = 30001
 	}
 	
 	option = {
-		name = "EVTOPTF30000"
-		country_event = 30005
+		name = "EVTOPTC30000"
+		country_event = 30003
 	}
 	
 	option = {
 		name = "EVTOPTD30000"
-		country_event = 30003
+		country_event = 30005
 	}
 	
 	option = {
@@ -107,7 +108,7 @@ country_event = {
 country_event = {
 	id = 30003
 	picture = "steward_ecthelion_info"
-	title = "Steward Ecthelion II - Politics"
+	title = "Steward Ecthelion II - Economy"
 	desc = "EVTDESC30003"
 	
 	is_triggered_only = yes
@@ -124,13 +125,13 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTC30000"
-		country_event = 30002
+		name = "EVTOPTF30000"
+		country_event = 30004
 	}
 	
 	option = {
-		name = "EVTOPTF30000"
-		country_event = 30006
+		name = "EVTOPTD30000"
+		country_event = 30005
 	}
 	
 	option = {
@@ -141,42 +142,8 @@ country_event = {
 country_event = {
 	id = 30004
 	picture = "steward_ecthelion_info"
-	title = "Steward Ecthelion II - Military"
-	desc = "EVTDESC30004"
-	
-	is_triggered_only = yes
-	major = yes
-	
-	option = {
-		name = "EVTOPTA30000"
-		country_event = 30000
-	}
-	
-	option = {
-		name = "EVTOPTG30000"
-		country_event = 30001
-	}
-	
-	option = {
-		name = "EVTOPTC30000"
-		country_event = 30002
-	}
-	
-	option = {
-		name = "EVTOPTD30000"
-		country_event = 30003
-	}
-	
-	option = {
-		name = "EVTOPTE30000"
-	}
-}
-
-country_event = {
-	id = 30005
-	picture = "steward_ecthelion_info"
 	title = "Steward Ecthelion II - Economy"
-	desc = "EVTDESC30005"
+	desc = "EVTDESC30004"
 	
 	is_triggered_only = yes
 	major = yes
@@ -193,12 +160,46 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTG30000"
-		country_event = 30002
+		country_event = 30003
 	}
 	
 	option = {
 		name = "EVTOPTD30000"
+		country_event = 30005
+	}
+	
+	option = {
+		name = "EVTOPTE30000"
+	}
+}
+
+country_event = {
+	id = 30005
+	picture = "steward_ecthelion_info"
+	title = "Steward Ecthelion II - Politics"
+	desc = "EVTDESC30005"
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "EVTOPTA30000"
+		country_event = 30000
+	}
+	
+	option = {
+		name = "EVTOPTB30000"
+		country_event = 30001
+	}
+	
+	option = {
+		name = "EVTOPTC30000"
 		country_event = 30003
+	}
+	
+	option = {
+		name = "EVTOPTF30000"
+		country_event = 30006
 	}
 	
 	option = {
@@ -227,12 +228,46 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC30000"
-		country_event = 30002
+		country_event = 30003
 	}
 	
 	option = {
 		name = "EVTOPTG30000"
+		country_event = 30005
+	}
+	
+	option = {
+		name = "EVTOPTE30000"
+	}
+}
+
+country_event = {
+	id = 30007
+	picture = "steward_ecthelion_info"
+	title = "Steward Ecthelion II"
+	desc = "EVTDESC30000"
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "EVTOPTA30000"
+		country_event = 30000
+	}
+	
+	option = {
+		name = "EVTOPTB30000"
+		country_event = 30001
+	}
+	
+	option = {
+		name = "EVTOPTC30000"
 		country_event = 30003
+	}
+	
+	option = {
+		name = "EVTOPTD30000"
+		country_event = 30005
 	}
 	
 	option = {

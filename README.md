@@ -61,9 +61,11 @@ A Lord of the Rings mod for Victoria 2
 	- [WallpaperAccess](https://wallpaperaccess.com/full/758025.jpg)
 - National Leaders
 	- [Ecthelion ii](https://www.deviantart.com/maelstromarts/art/The-White-Sanctuary-347365430)
-	- [Ecthelion ii Fluff Event](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
+- Events
+	- [Ecthelion ii Fluff Event](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
+	- [Kingdom of Gondor](https://middle-earth-film-saga.fandom.com/wiki/Gondor?file=338c4d306b4577464bb410426afd247f_%25281%2529.jpg)
 	
 ## References
  - [Lindëfirion](http://lindefirion.net/)
