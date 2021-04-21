@@ -207,39 +207,62 @@ categories =  {
 	
 	# mountains
 	white_mountains = {
-		movement_cost = 1.4
+		movement_cost = 2.4
 		
-		defence = 2
-		combat_width = -0.5
+		defence = 3
+		combat_width = -0.8
 		
 		color = { 117 108 119 }
 		
-		farm_rgo_size = -0.3
-		farm_rgo_eff = -0.3
+		farm_rgo_size = -0.9
+		farm_rgo_eff = -0.4
 		mine_rgo_size = 0.2
 		# bumped from mountains
-		mine_rgo_eff = 0.3
+		mine_rgo_eff = 0.1
 		
-		supply_limit = 1
+		supply_limit = -2
 		
-		min_build_railroad = 3
+		immigrant_attract = -0.5
+		
+		min_build_railroad = 5
 	}
 	
 	# woods
 	conifer_forest = {
-		movement_cost = 1.2
+		movement_cost = 1.3
 		
 		defence = 1
-		combat_width = -0.20
+		combat_width = -0.5
 		
 		color = { 91 123 10 }
 		
-		farm_rgo_size = -0.2
+		farm_rgo_size = -0.3
 		farm_rgo_eff = -0.2
 		mine_rgo_size = -0.2
 		mine_rgo_eff = -0.2
 		
-		supply_limit = 3
+		supply_limit = -0.5
+	}
+	
+	# mountains
+	cliffside_mountains = {
+		movement_cost = 1.4
+		
+		defence = 2
+		combat_width = -0.4
+		
+		color = { 117 108 119 }
+		
+		farm_rgo_size = -0.6
+		farm_rgo_eff = -0.15
+		mine_rgo_size = 0.05
+		mine_rgo_eff = 0.1
+		
+		supply_limit = -1
+		
+		immigrant_attract = -0.2
+		
+		min_build_railroad = 5
 	}
 	
 	###########################
@@ -294,6 +317,8 @@ categories =  {
 		mine_rgo_eff = -0.2
 		
 		supply_limit = 3
+		
+		immigrant_attract = -1
 	}
 	
 	# urban (not above)
@@ -414,6 +439,26 @@ categories =  {
 		mine_rgo_eff = 0.1
 		
 		supply_limit = 5
+	}
+	
+	###################
+	##### MORDOR  #####
+	###################
+	
+	gorgoroth_ashlands = {
+		movement_cost = 1.1
+		
+		defence = 1
+		combat_width = -0.2
+		
+		color = { 135 70 0 }
+		
+		farm_rgo_size = -0.5
+		farm_rgo_eff = -0.9
+		mine_rgo_size = 5.0
+		mine_rgo_eff = 0.05
+		
+		supply_limit = 4
 	}
 }
 
