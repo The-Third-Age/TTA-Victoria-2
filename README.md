@@ -40,6 +40,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Harlond (Gondor)](https://www.wikiwand.com/en/Gondor)
 	- [Pelennor Fields](https://www.pinterest.com/pin/470485492291623454/)
 	- [Minas Tirith](https://imgur.com/gallery/QR0zLrd)
+	- [Imloth Melui](https://en.dcodumilieu.fr/large-imloth-melui-white-rose-bush/)
+	- [Tumladen](https://www.deviantart.com/samo-art/art/Fields-of-Gondolin-634594288)
+	- [Lossarnach](https://www.goodfon.com/wallpaper/gory-tsvety-oblaka-lug-dolina.html)
  - Icons
 	- [Rock](http://14thwarriorcustomsettlers.blogspot.com/2008/02/rock-this-town.html)
 	- [Cut Stone](https://icon-library.com/icon/brick-icon-png-26.html)
