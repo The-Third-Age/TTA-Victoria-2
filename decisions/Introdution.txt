@@ -1,0 +1,19 @@
+# Introduction decisions:
+#	An Introduction to The Third Age
+
+political_decisions = {
+	introduction_third_age = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			country_event = 29000
+		}
+	}
+}
