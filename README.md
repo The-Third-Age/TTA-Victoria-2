@@ -43,6 +43,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Imloth Melui](https://en.dcodumilieu.fr/large-imloth-melui-white-rose-bush/)
 	- [Tumladen](https://www.deviantart.com/samo-art/art/Fields-of-Gondolin-634594288)
 	- [Lossarnach](https://www.goodfon.com/wallpaper/gory-tsvety-oblaka-lug-dolina.html)
+	- [White Mountains](https://www.pexels.com/photo/two-man-hiking-on-snow-mountain-869258/)
+	- [Gobel Tolfalas/Cliffside Mountains](https://www.pexels.com/photo/person-in-yellow-jacket-standing-on-green-grass-field-near-mountain-4386973/)
+	- [Gorgoroth](https://www.deviantart.com/datem/art/Mordor-828480649)
  - Icons
 	- [Rock](http://14thwarriorcustomsettlers.blogspot.com/2008/02/rock-this-town.html)
 	- [Cut Stone](https://icon-library.com/icon/brick-icon-png-26.html)
@@ -69,6 +72,8 @@ A Lord of the Rings mod for Victoria 2
 - Events
 	- [Ecthelion ii Fluff Event](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
 	- [Kingdom of Gondor](https://middle-earth-film-saga.fandom.com/wiki/Gondor?file=338c4d306b4577464bb410426afd247f_%25281%2529.jpg)
+- Main Theme
+	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 	
 ## References
  - [Lindëfirion](http://lindefirion.net/)
