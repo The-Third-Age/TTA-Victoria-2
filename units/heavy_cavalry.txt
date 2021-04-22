@@ -1,44 +1,46 @@
-dragoon = {
-	icon = 14
+heavy_cavalry = {
+	icon = 6
 	
 	type = land
-	sprite = Dragoon
-	active = no
+	sprite = Cavalry
+	active = yes
 	unit_type = cavalry
+	floating_flag = yes
+	primary_culture = yes
 	
 	#Avatar
 	sprite_override = Cavalry
 	sprite_mount = GenericMount
 	sprite_mount_attach_node = Saddle_Node
 	floating_flag = yes
-	
+
 	#Core Abilities
-	priority = 35
+	priority = 25
 	max_strength = 1
-	default_organisation = 30
+	default_organisation = 40
 	maximum_speed = 5.00
-	weighted_value = 6.0
+	weighted_value = 4.0
 
 
 	#Building Costs
-	build_time = 150
+	build_time = 120
 	build_cost = {
-		food = 10
+		wool = 20
 		liquor = 10
 	}
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		food = 0.07 #0.08
+		wool = 0.2
 	}
 	
 
 	#Land Abilties
-	reconnaissance = 1
-	attack = 4
+	reconnaissance = 0
+	attack = 5
 	defence = 3
-	discipline = 1.0
+	discipline = 1.1
 	support = 0.0
-	maneuver = 3
+	maneuver = 2
 	
 }

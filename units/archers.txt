@@ -1,40 +1,42 @@
-guard = {
-	icon = 18
+archers = { 
+	icon = 7
 	
 	type = land
-	sprite = Guard
-	active = no
-	unit_type = infantry
-	primary_culture = yes
+	sprite = Infantry
+	active = yes
+	unit_type = support
 	floating_flag = no
+	primary_culture = yes
 
 	#Core Abilities
-	priority = 18
+	priority = 20
 	max_strength = 1
 	default_organisation = 30
 	maximum_speed = 4.00
-	weighted_value = 9.0
+	weighted_value = 5.0
 
 
 	#Building Costs
-	build_time = 90
+	build_time = 120
 	build_cost = {
+		artillery = 10
 		food = 10
 		liquor = 10
-		clothes = 5
 	}
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		food = 0.07 # 0.08
+		artillery = 0.1 #0.008
+		food = 0.06 #0.004
 	}
 	
 
 	#Land Abilties
 	reconnaissance = 0
-	attack = 8
-	defence = 2
+	attack = 1
+	defence = 1
 	discipline = 1.0
-	support = 0.0
-	maneuver = 2
+	support = 2
+	maneuver = 1
+
 }

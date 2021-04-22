@@ -1,17 +1,18 @@
-infantry = {
-	icon = 1
+pikemen = {
+	icon = 3
 	
 	type = land
 	sprite = Infantry
-	active = no
+	active = yes
 	unit_type = infantry
 	floating_flag = no
+	primary_culture = yes
 	
 	#Core Abilities
 	priority = 10
 	max_strength = 1
-	default_organisation = 30
-	maximum_speed = 4.00
+	default_organisation = 40
+	maximum_speed = 3.00
 	weighted_value = 2.0
 
 
@@ -29,9 +30,9 @@ infantry = {
 
 	#Land Abilties
 	reconnaissance = 0
-	attack = 4
-	defence = 4
-	discipline = 1.0
+	attack = 1
+	defence = 5
+	discipline = 1.1
 	support = 0.0
 	maneuver = 1
 }

@@ -1,21 +1,24 @@
-cavalry = {
-	icon = 2
+scouts = {
+	icon = 4
 	
 	type = land
 	sprite = Cavalry
 	active = yes
 	unit_type = cavalry
 	floating_flag = yes
+	primary_culture = yes
 	
 	#Avatar
+	sprite_override = Cavalry
 	sprite_mount = GenericMount
 	sprite_mount_attach_node = Saddle_Node
+	floating_flag = yes
 
 	#Core Abilities
 	priority = 25
 	max_strength = 1
 	default_organisation = 20
-	maximum_speed = 5.00
+	maximum_speed = 6.00
 	weighted_value = 4.0
 
 
@@ -33,11 +36,11 @@ cavalry = {
 	
 
 	#Land Abilties
-	reconnaissance = 1
-	attack = 3
+	reconnaissance = 2
+	attack = 2
 	defence = 1
-	discipline = 1.0
+	discipline = 0.9
 	support = 0.0
-	maneuver = 2
+	maneuver = 3
 	
 }

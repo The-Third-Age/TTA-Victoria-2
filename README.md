@@ -30,9 +30,9 @@ A Lord of the Rings mod for Victoria 2
  - Bernd_das_BrotB7 (Population Estimates and Info)
  
 ## Assets
- - Terrain textures
+- Terrain textures
 	- [HFME](https://github.com/JmanThunder/HFM-Expanded)
- - Terrains
+- Terrains
 	- [Anórien](https://lotr.fandom.com/wiki/An%C3%B3rien?file=Anorienwide.jpg)
 	- [Drúadan Forest](http://tolkiengateway.net/wiki/File:Gail_McIntosh_-_Dr%C3%BAadan_Forest.jpg)
 	- [Cair Andros](https://lotro-wiki.com/index.php/File:Cair_Andros.jpg)
@@ -46,7 +46,7 @@ A Lord of the Rings mod for Victoria 2
 	- [White Mountains](https://www.pexels.com/photo/two-man-hiking-on-snow-mountain-869258/)
 	- [Gobel Tolfalas/Cliffside Mountains](https://www.pexels.com/photo/person-in-yellow-jacket-standing-on-green-grass-field-near-mountain-4386973/)
 	- [Gorgoroth](https://www.deviantart.com/datem/art/Mordor-828480649)
- - Icons
+- Icons
 	- [Rock](http://14thwarriorcustomsettlers.blogspot.com/2008/02/rock-this-town.html)
 	- [Cut Stone](https://icon-library.com/icon/brick-icon-png-26.html)
 	- [Melee Gear](https://thenounproject.com/term/shield-and-sword/1477540/)
@@ -74,6 +74,15 @@ A Lord of the Rings mod for Victoria 2
 	- [Kingdom of Gondor](https://middle-earth-film-saga.fandom.com/wiki/Gondor?file=338c4d306b4577464bb410426afd247f_%25281%2529.jpg)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
+- Units
+	- [Levies](https://forums.ageofempires.com/t/nordic-swordsman-should-be-renamed-to-nordic-axeman/89246)
+	- [Swordsmen](https://www.deviantart.com/2zak/art/Swordsman-minimalist-sprite-542129859)
+	- [Pikemen](https://www.spriters-resource.com/fullview/42154/)
+	- [Horse Archers](https://pixabay.com/vectors/horse-archer-archery-arrow-5698294/)
+	- [Heavy Cavalry](https://opengameart.org/content/cavalry-sprite-for-freesiege)
+	- [Archers](https://www.deviantart.com/magecraft22/art/Archer-Pixel-Art-572073117)
+	- [Artillery](https://scribblenauts.fandom.com/wiki/Catapult)
+
 	
 ## References
  - [Lindëfirion](http://lindefirion.net/)
