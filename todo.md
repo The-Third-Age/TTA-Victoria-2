@@ -39,6 +39,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
  - Serf POP icon
+ - Land unit icons
 
 ## Flavor
  - Haradrim Tribes/Khand/Rhun formed as a cultural union
