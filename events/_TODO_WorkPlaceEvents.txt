@@ -1,0 +1,280 @@
+# Workplace Events:
+#	12000 - 12999
+
+# TODO: Add event about large production (1 for each good except administrative_services and precious_metals). Give pops money or put it in stockpile
+
+# Mine Disaster
+province_event = {
+	id = 12000
+	title = "Mining Disaster!"
+	desc = "EVTDESC12000"
+	
+	trigger = {
+		OR = {
+			trade_goods = coal
+			trade_goods = iron
+			trade_goods = rock
+			trade_goods = precious_metals
+		}
+		NOT = { has_province_modifier = repairing_mine }
+	}
+	
+	# TODO: MTTH modifiers
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = "Give the mine more money"
+		
+		add_province_modifier = {
+			name = repairing_mine
+			duration = 365
+		}
+		owner = { treasury = -1000 }
+		labourers = {
+			reduce_pop = 0.999
+			consciousness = 1
+		}
+	}
+	
+	option = {
+		name = "Do nothing"
+		
+		add_province_modifier = {
+			name = repairing_mine
+			duration = 730
+		}
+		labourers = {
+			reduce_pop = 0.999
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortfalls (12001 - 12024) 1 for each good except administrative_services and precious_metals
+country_event = {
+	id = 12001
+	title = "Guild Production Shortage"
+	desc = "EVTDESC12001"
+	# TODO: event image
+	
+	# TODO: MTTH and trigger modifiers: if the needs of that good are not being filled
+	trigger = {
+		produces = ranged_gear
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = ranged_gear
+		}
+	}
+	
+	# TODO: Figure out how much it costs
+	option = {
+		name = "Buy the goods"
+		ranged_gear = 10
+		treasury = -1000
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Excess Food
+province_event = {
+	id = 12025
+	title = "Excess Food"
+	desc = "EVTDESC12025"
+	
+	trigger = {
+		owner = {
+			war = yes
+		}
+		trade_goods = food
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 1.1
+			NOT = {
+				war_exhaustion = 1
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_militancy = 5
+			}
+		}
+	}
+		
+	option = {
+		name = "...to the storehouse!"
+		owner = {
+			food = 15
+		}	
+	}
+
+	option = {
+		name = "...to the people!"
+		owner = {
+			war_exhaustion = -1
+		}
+	}
+}
+
+# Bovine Fever
+province_event = {
+	id = 12026
+	title = "Bovine Fever"
+	desc = "EVTDESC12026"
+	
+	trigger = {
+		trade_goods = food
+		owner = {
+			food = 15
+		}
+	}
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 0.7
+			owner = {
+				food = 500
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = {
+				poor_strata_life_needs = 0.9
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_consciousness = 5
+		}
+	}
+
+	option = {
+		name = "Help them"
+		owner = {
+			food = -15
+		}
+	}
+	
+	option = {
+		name = "Do nothing"
+		farmers = {
+			militancy = 1
+		}
+	}
+}
+
+# High Quality Goods (12027 - 12050) 1 for each good except administrative_services and precious_metals
+country_event = {
+	id = 12027
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		produces = cotton
+	}
+		
+	# TODO: MAKE ONE FOR EACH EVENT
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 1.5
+			big_producer = cotton
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				NOT = {
+					cotton = 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			cotton = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = {
+						tag = THIS
+					}
+				}
+				cotton = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# A New Vein
+province_event = {
+	id = 12051
+	title = "A New Vein"
+	desc = "EVTDESC12051"
+		
+	trigger = {
+		OR = {
+			trade_goods = coal
+			trade_goods = iron
+			trade_goods = rock
+			trade_goods = precious_metals
+		}
+		NOT = { has_province_modifier = new_vein }
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+	}
+	
+	option = {
+		name = "Good"
+		add_province_modifier = {
+			name = new_vein
+			duration = -1
+		}
+	}
+}

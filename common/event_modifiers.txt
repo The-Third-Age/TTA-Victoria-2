@@ -1,6 +1,6 @@
-##################################################################################################
-# scriptable and usable for event-system below.
-##################################################################################################
+#############################
+##### VANILLA MODIFIERS #####
+#############################
 
 ##### TECH SCHOOLS ######
 academic_confusion = {
@@ -63,3 +63,35 @@ economic_boom = {
   CB_gen_minus = {
 	cb_generation_speed_modifier = -0.25
  }
+ 
+######################### 
+##### TTA MODIFIERS #####
+#########################
+
+##### RGO MODIFIERS #####
+repairing_mine = {
+	local_RGO_throughput = -0.5
+	icon = 2
+}
+
+new_vein = {
+	local_RGO_output = 0.5
+	icon = 3
+}
+
+##### NATIONAL LEADER MODIFIERS #####
+ecthelion_ii_modifier = {
+	# Intelligent
+	research_points = 0.01
+	# Defensive Focused
+	cb_generation_speed_modifier = -0.25
+	min_military_spending = 0.25
+	# Wise Ruler
+	global_pop_militancy_modifier = -0.01
+	political_reform_desire = -0.1
+	# Of the House of Hurin
+	global_pop_consciousness_modifier = -0.01
+	
+	icon = 5
+}
+	
