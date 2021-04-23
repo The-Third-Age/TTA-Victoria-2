@@ -1,80 +1,6 @@
-# Do not change tags in here without changing every other reference to them.
-# If adding new buildings, make sure they are uniquely named.
-#
-# Order in here matters for selection priority if icons are overlapping,
-# so leave bases on top
+### Factories #####################################################################################
 
-# 
-# cost = x #==> extra construction cost (added to goods cost estimations)
-# time = x #==> number of days to build.
-#
-
-
-############# LATE GAME FACTORIES
-
-############# STRATEGIC FACTORIES
-
-############# NAVAL FACTORIES
-
-clipper_shipyard = {
-	type = factory
-	
-	sail = yes
-
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost =
-	{
-		iron = 200
-	}
-	time = 730
-	visibility = yes
-	onmap = no
-
-	production_type = clipper_shipyard
-	pop_build_factory = yes
-}
-
-############# LUXURY GOODS FACTORIES
-
-############# MEDIUM FACTORIES
-
-charcoal_factory = {
-	type = factory
-	
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		iron = 200
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-	
-	production_type = charcoal_factory
-	pop_build_factory = yes
-}
-
-steel_factory = {
-	type = factory
-
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost =
-	{
-		iron = 200
-		coal = 200
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-	
-	production_type = steel_factory
-	pop_build_factory = yes
-}
+##### MILITARY FACTORIES #####
 
 artillery_factory = {
 	type = factory
@@ -84,9 +10,11 @@ artillery_factory = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
-	time = 730
+	time = 365
 	visibility = yes
 	onmap = no
 
@@ -102,9 +30,11 @@ melee_gear_factory = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
-	time = 730
+	time = 365
 	visibility = yes
 	onmap = no
 
@@ -120,9 +50,11 @@ ranged_gear_factory = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
-	time = 730
+	time = 365
 	visibility = yes
 	onmap = no
 
@@ -130,7 +62,29 @@ ranged_gear_factory = {
 	pop_build_factory = yes
 }
 
-############# COMMON FACTORIES
+clipper_shipyard = {
+	type = factory
+	
+	sail = yes
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = clipper_shipyard
+	pop_build_factory = yes
+}
+
+##### CONSTRUCTION GOODS FACTORIES #####
 
 cut_stone_factory = {
 	type = factory
@@ -139,15 +93,77 @@ cut_stone_factory = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		rock = 50
+		timber = 25
 	}
-	time = 730
+	time = 365
 	visibility = yes
 	onmap = no
 
 	production_type = cut_stone_factory
 	pop_build_factory = yes
 }
+
+lumber_mill = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		rock = 50
+		timber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+
+	production_type = lumber_mill
+	pop_build_factory = yes
+}
+
+steel_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+	
+	production_type = steel_factory
+	pop_build_factory = yes
+}
+
+##### BASE GOODS FACTORIES #####
+
+charcoal_factory = {
+	type = factory
+	
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+	
+	production_type = charcoal_factory
+	pop_build_factory = yes
+}
+
+##### CONSUMER GOODS FACTORIES #####
 
 furniture_factory = {
 	type = factory
@@ -156,9 +172,11 @@ furniture_factory = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
-	time = 730
+	time = 365
 	visibility = yes
 	onmap = no
 
@@ -173,9 +191,11 @@ paper_mill = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
-	time = 730
+	time = 365
 	visibility = yes
 	onmap = no
 	
@@ -190,17 +210,17 @@ clothes_factory = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
-	time = 730
+	time = 365
 	visibility = yes
 	onmap = no
 
 	production_type = clothes_factory
 	pop_build_factory = yes
 }
-
-############# CHEAP FACTORIES
 
 liquor_distillery = {
 	type = factory
@@ -210,32 +230,15 @@ liquor_distillery = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
-	}
-	time = 730
-	visibility = yes
-	onmap = no
-		
-	production_type = liquor_distillery
-	pop_build_factory = yes
-}
-
-############# BASIC FACTORIES
-
-lumber_mill = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost =
-	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
 	time = 365
 	visibility = yes
 	onmap = no
-
-	production_type = lumber_mill
+		
+	production_type = liquor_distillery
 	pop_build_factory = yes
 }
 
@@ -246,9 +249,11 @@ fabric_factory = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
-	time = 365
+	time = 180
 	visibility = yes
 	onmap = no
 
@@ -263,9 +268,11 @@ fabric_factory_wool = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
-	time = 365
+	time = 180
 	visibility = yes
 	onmap = no
 
@@ -280,9 +287,11 @@ glass_factory = {
 	max_level = 99
 	goods_cost =
 	{
-		iron = 200
+		cut_stone = 50
+		iron = 5
+		lumber = 25
 	}
-	time = 365
+	time = 180
 	visibility = yes
 	onmap = no
 		
@@ -290,12 +299,15 @@ glass_factory = {
 	pop_build_factory = yes
 }
 
+### OTHER BUILDINGS #####################################################################################
+
 fort = {      
 	type = fort
 	goods_cost =
 	{
 		lumber = 100
-		artillery = 40
+		cut_stone = 200
+		artillery = 20
 	}
 	time = 1080 
 	visibility = yes
@@ -312,7 +324,7 @@ naval_base = {
 	{
 		timber = 50
 		lumber = 50
-		steel = 100
+		cut_stone = 100
 	}
 	time = 1080
 	naval_capacity = 1
@@ -333,7 +345,7 @@ railroad = {
 	goods_cost =
 	{
 		timber = 100
-		steel = 100
+		cut_stone = 100
 	}
 	time = 720
 	visibility = yes
