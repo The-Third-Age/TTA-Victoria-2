@@ -1,0 +1,18 @@
+political_decisions = {
+	gondor_start_decision = {
+		potential = {
+			tag = GON
+			always = no
+		}
+		
+		allow = { }
+		
+		effect = {
+			add_country_modifier = {
+				name = ecthelion_ii_modifier
+				duration = -1
+			}
+			prestige = 100000
+		}
+	}
+}
