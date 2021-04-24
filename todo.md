@@ -16,7 +16,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Explore adding textures of notable places such as Minas Tirith
  
 ## Gameplay
- - Actually balance out goods, in terms of price, needs, factory inputs/outputs (amounts), starting rgos 
+ - Actually balance out goods, starting rgos 
  - Pop promotion changes
  - Pop ideology/reform tendencies
  - Add ideology rebels
