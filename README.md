@@ -72,6 +72,7 @@ A Lord of the Rings mod for Victoria 2
 - Events
 	- [Ecthelion ii Fluff Event](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
 	- [Kingdom of Gondor](https://middle-earth-film-saga.fandom.com/wiki/Gondor?file=338c4d306b4577464bb410426afd247f_%25281%2529.jpg)
+	- [Comet Sighted](https://www.newscientist.com/article/2245355-longest-known-comet-tail-stretched-for-over-a-billion-kilometres/)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units

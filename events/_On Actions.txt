@@ -1,0 +1,53 @@
+country_event = {
+	title = "westernize_nation_title"
+	desc = "westernize_nation_desc"
+	news = yes
+	news_desc_long = "westernize_nation_desc_NEWS_LONG"
+	news_desc_medium = "westernize_nation_desc_NEWS_MEDIUM"
+	news_desc_short = "westernize_nation_desc_NEWS_SHORT"
+	picture = "Prosper"
+
+	id = 90910
+
+	is_triggered_only = yes
+
+	option = {				
+		name = "Advancement!"
+	}
+}
+
+country_event = {
+	title = "Guilds Siezed!"
+	desc = "EVTDESC90950"
+	picture = "Prosper"
+
+	id = 90950
+
+	is_triggered_only = yes
+
+	option = {				
+		name = "They will pay!"
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 12
+		}
+		
+		relation = {
+			who = FROM
+			value = -100
+		}
+		
+	}
+	
+	option = {				
+		name = "Let them be"
+
+		relation = {
+			who = FROM
+			value = 100
+		}
+		
+	}
+
+}

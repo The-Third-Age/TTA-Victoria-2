@@ -1,0 +1,56 @@
+# Economic Boom
+country_event = {
+	id = 22560
+	title = "Economic Boom"
+	desc = "EVTDESC22560"
+	picture = "greatpowers"
+	
+	trigger = {
+		poor_strata_everyday_needs = 0.5
+		NOT = {
+			unemployment = 0.2
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.9
+			economic_policy = laissez_faire
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				unemployment = 0.05
+			}
+		}
+		modifier = {
+			factor = 1.1
+			average_militancy = 3
+		}
+		modifier = {
+			factor = 1.2
+			average_consciousness = 4
+		}
+		modifier = {
+			factor = 2
+			unemployment = 0.1
+		}
+	}
+	
+	option = {
+		name = "Excellent"
+		add_country_modifier = {
+			name = economic_boom
+			duration = 365
+		}
+	}
+	
+	option = {
+		name = "Spread the wealth"
+		any_pop = {
+			militancy = -1
+			consciousness = -1
+		}
+	}
+}
