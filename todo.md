@@ -18,11 +18,11 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Gameplay
  - Actually balance out goods, starting rgos 
  - Pop promotion changes
- - Pop ideology/reform tendencies
+ - Pop migration, assimilation, conversion
+ - Pop ideology/reform/party policy tendencies
  - Add ideology rebels
  - Remove fascist/communist
  - Balance reform effects, figure out how to add `minimum_wage` effect to something
- - Political Party policies
  - Tech and Inventions and tech schools
  - "Unciv" reforms?
  - Cultures and Pops
@@ -30,6 +30,10 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Province terrains
  - Figure out 6 regions to use a continents (to reskin the vanilla ones)
  - Leader traits (flags, plan them out)
+ - What to replace plurality with
+ - General/Admiral traits
+ - Naval units
+ - Revanchism?
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
