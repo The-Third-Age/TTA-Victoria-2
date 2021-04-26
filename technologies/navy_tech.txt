@@ -1,6 +1,6 @@
-#naval_doctrine
-post_nelsonian_thought = {
-	area = naval_doctrine
+#navy_1
+navy_1_1 = {
+	area = navy_1
 	year = 1836
 	cost = 3600
 	unciv_military = yes
@@ -75,8 +75,8 @@ post_nelsonian_thought = {
 		}
 	}
 }
-battleship_column_doctrine = {
-	area = naval_doctrine
+navy_1_2 = {
+	area = navy_1
 	year = 1836
 	cost = 7200
 	unciv_military = yes
@@ -151,8 +151,8 @@ battleship_column_doctrine = {
 		}
 	}
 }
-raider_group_doctrine = {
-	area = naval_doctrine
+navy_1_3 = {
+	area = navy_1
 	year = 1855
 	cost = 10800
 	unciv_military = yes
@@ -227,8 +227,8 @@ raider_group_doctrine = {
 		}
 	}
 }
-blue_and_brown_water_schools = {
-	area = naval_doctrine
+navy_1_4 = {
+	area = navy_1
 	year = 1875
 	cost = 14400
 	unciv_military = yes
@@ -304,8 +304,8 @@ blue_and_brown_water_schools = {
 	}
 }
 
-high_sea_battle_fleet = {
-	area = naval_doctrine
+navy_1_5 = {
+	area = navy_1
 	year = 1895
 	cost = 18000
 	unciv_military = yes
@@ -380,8 +380,8 @@ high_sea_battle_fleet = {
 		}
 	}
 }
-modern_naval_doctrine = {
-	area = naval_doctrine
+navy_1_6 = {
+	area = navy_1
 	year = 1914
 	cost = 21600
 	unciv_military = yes
@@ -458,9 +458,9 @@ modern_naval_doctrine = {
 }
 
 
-#ship_construction
-clipper_design = {
-	area = ship_construction
+#navy_2
+navy_2_1 = {
+	area = navy_2
 	year = 1836
 	cost = 3600
 	unciv_military = yes
@@ -489,14 +489,14 @@ clipper_design = {
 			factor = 1.5
 			total_num_of_ports = 9
 			is_greater_power = yes
-			post_nelsonian_thought = 1
+			navy_1_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.25
 			total_num_of_ports = 12
 			rank = 16
-			post_nelsonian_thought = 1
+			navy_1_1 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -537,8 +537,8 @@ clipper_design = {
 		}
 	}
 }
-steamers = {
-	area = ship_construction
+navy_2_2 = {
+	area = navy_2
 	year = 1836
 	cost = 7200
 	unciv_military = yes
@@ -567,14 +567,14 @@ steamers = {
 			factor = 1.5
 			total_num_of_ports = 9
 			is_greater_power = yes
-			battleship_column_doctrine = 1
+			navy_1_2 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.25
 			total_num_of_ports = 12
 			rank = 16
-			battleship_column_doctrine = 1
+			navy_1_2 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -615,8 +615,8 @@ steamers = {
 		}
 	}
 }
-iron_steamers = {
-	area = ship_construction
+navy_2_3 = {
+	area = navy_2
 	year = 1860
 	cost = 10800
 	unciv_military = yes
@@ -645,14 +645,14 @@ iron_steamers = {
 			factor = 1.5
 			total_num_of_ports = 9
 			is_greater_power = yes
-			raider_group_doctrine = 1
+			navy_1_3 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.25
 			total_num_of_ports = 12
 			rank = 16
-			raider_group_doctrine = 1
+			navy_1_3 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -693,8 +693,8 @@ iron_steamers = {
 		}
 	}
 }
-steel_steamers = {
-	area = ship_construction
+navy_2_4 = {
+	area = navy_2
 	year = 1880
 	cost = 14400
 	unciv_military = yes
@@ -723,14 +723,14 @@ steel_steamers = {
 			factor = 1.5
 			total_num_of_ports = 9
 			is_greater_power = yes
-			blue_and_brown_water_schools = 1
+			navy_1_4 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.25
 			total_num_of_ports = 12
 			rank = 16
-			blue_and_brown_water_schools = 1
+			navy_1_4 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -771,8 +771,8 @@ steel_steamers = {
 		}
 	}
 }
-steam_turbine_ships = {
-	area = ship_construction
+navy_2_5 = {
+	area = navy_2
 	year = 1900
 	cost = 18000
 	unciv_military = yes
@@ -801,14 +801,14 @@ steam_turbine_ships = {
 			factor = 1.5
 			total_num_of_ports = 9
 			is_greater_power = yes
-			high_sea_battle_fleet = 1
+			navy_1_5 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.25
 			total_num_of_ports = 12
 			rank = 16
-			high_sea_battle_fleet = 1
+			navy_1_5 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -849,8 +849,8 @@ steam_turbine_ships = {
 		}
 	}
 }
-oil_driven_ships = {
-	area = ship_construction
+navy_2_6 = {
+	area = navy_2
 	year = 1919
 	cost = 21600
 	unciv_military = yes
@@ -879,14 +879,14 @@ oil_driven_ships = {
 			factor = 1.25
 			total_num_of_ports = 9
 			is_greater_power = yes
-			modern_naval_doctrine = 1
+			navy_1_6 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.1
 			total_num_of_ports = 12
 			rank = 16
-			modern_naval_doctrine = 1
+			navy_1_6 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -928,9 +928,9 @@ oil_driven_ships = {
 	}
 }
 
-#naval_engineering
-naval_design_bureaus = {
-	area = naval_engineering
+#navy_3
+navy_3_1 = {
+	area = navy_3
 	year = 1836
 	cost = 3600
 	
@@ -964,14 +964,14 @@ naval_design_bureaus = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# We're late with this!
 		modifier = {
@@ -1017,8 +1017,8 @@ naval_design_bureaus = {
 		}
 	}
 }
-fire_control_systems = {
-	area = naval_engineering
+navy_3_2 = {
+	area = navy_3
 	year = 1836
 	cost = 7200
 	unciv_military = yes
@@ -1052,14 +1052,14 @@ fire_control_systems = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# We're late with this!
 		modifier = {
@@ -1106,8 +1106,8 @@ fire_control_systems = {
 	}
 }
 
-weapon_platforms = {
-	area = naval_engineering
+navy_3_3 = {
+	area = navy_3
 	year = 1850
 	cost = 10800
 	unciv_military = yes
@@ -1141,14 +1141,14 @@ weapon_platforms = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# We're late with this!
 		modifier = {
@@ -1194,8 +1194,8 @@ weapon_platforms = {
 		}
 	}
 }
-main_armament = {
-	area = naval_engineering
+navy_3_4 = {
+	area = navy_3
 	year = 1870
 	cost = 14400
 	unciv_military = yes
@@ -1229,24 +1229,19 @@ main_armament = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# We're late with this!
 		modifier = {
 			factor = 1.25
 			year = 1880
-		}
-		# Our cruisers need torpedoes!
-		modifier = {
-			factor = 1.25
-			invention = protected_cruisers
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -1287,8 +1282,8 @@ main_armament = {
 		}
 	}
 }
-advanced_naval_design = {
-	area = naval_engineering
+navy_3_5 = {
+	area = navy_3
 	year = 1900
 	cost = 18000
 	unciv_military = yes
@@ -1322,19 +1317,14 @@ advanced_naval_design = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
-		}
-		# Our Dreadnoughts need better guns
-		modifier = {
-			factor = 1.5
-			invention = dreadnoughts
+			navy_2_1 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -1375,8 +1365,8 @@ advanced_naval_design = {
 		}
 	}
 }
-modern_naval_design = {
-	area = naval_engineering
+navy_3_6 = {
+	area = navy_3
 	year = 1919
 	cost = 21600
 	unciv_military = yes
@@ -1410,14 +1400,14 @@ modern_naval_design = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -1459,9 +1449,9 @@ modern_naval_design = {
 	}
 }
 
-#naval_science
-alphabetic_flag_signaling = {
-	area = naval_science
+#navy_4
+navy_4_1 = {
+	area = navy_4
 	year = 1836
 	cost = 3600
 	unciv_military = yes
@@ -1504,8 +1494,8 @@ alphabetic_flag_signaling = {
 		}
 	}
 }
-naval_plans = {
-	area = naval_science
+navy_4_2 = {
+	area = navy_4
 	year = 1836
 	cost = 7200
 	unciv_military = yes
@@ -1548,8 +1538,8 @@ naval_plans = {
 		}
 	}
 }
-naval_statistics = {
-	area = naval_science
+navy_4_3 = {
+	area = navy_4
 	year = 1850
 	cost = 10800
 	unciv_military = yes
@@ -1592,8 +1582,8 @@ naval_statistics = {
 		}
 	}
 }
-naval_logistics = {
-	area = naval_science
+navy_4_4 = {
+	area = navy_4
 	year = 1870
 	cost = 14400
 	unciv_military = yes
@@ -1636,8 +1626,8 @@ naval_logistics = {
 		}
 	}
 }
-naval_directionism = {
-	area = naval_science
+navy_4_5 = {
+	area = navy_4
 	year = 1900
 	cost = 18000
 	unciv_military = yes
@@ -1680,8 +1670,8 @@ naval_directionism = {
 		}
 	}
 }
-naval_integration = {
-	area = naval_science
+navy_4_6 = {
+	area = navy_4
 	year = 1919
 	cost = 21600
 	unciv_military = yes
@@ -1734,9 +1724,9 @@ naval_integration = {
 }
 
 
-#naval_leadership
-the_command_principle = {
-	area = naval_leadership
+#navy_5
+navy_5_1 = {
+	area = navy_5
 	year = 1836
 	cost = 3600
 	unciv_military = yes
@@ -1770,14 +1760,14 @@ the_command_principle = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -1818,8 +1808,8 @@ the_command_principle = {
 		}
 	}
 }
-naval_professionalism = {
-	area = naval_leadership
+navy_5_2 = {
+	area = navy_5
 	year = 1836
 	cost = 7200
 	unciv_military = yes
@@ -1853,14 +1843,14 @@ naval_professionalism = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -1901,8 +1891,8 @@ naval_professionalism = {
 		}
 	}
 }
-naval_decision_making = {
-	area = naval_leadership
+navy_5_3 = {
+	area = navy_5
 	year = 1850
 	cost = 10800
 	unciv_military = yes
@@ -1936,14 +1926,14 @@ naval_decision_making = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -1984,8 +1974,8 @@ naval_decision_making = {
 		}
 	}
 }
-naval_risk_management = {
-	area = naval_leadership
+navy_5_4 = {
+	area = navy_5
 	year = 1870
 	cost = 14400
 	unciv_military = yes
@@ -2019,14 +2009,14 @@ naval_risk_management = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -2067,8 +2057,8 @@ naval_risk_management = {
 		}
 	}
 }
-naval_nco_training = {
-	area = naval_leadership
+navy_5_5 = {
+	area = navy_5
 	year = 1900
 	cost = 18000
 	unciv_military = yes
@@ -2102,14 +2092,14 @@ naval_nco_training = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -2150,8 +2140,8 @@ naval_nco_training = {
 		}
 	}
 }
-modern_naval_training = {
-	area = naval_leadership
+navy_5_6 = {
+	area = navy_5
 	year = 1919
 	cost = 21600
 	unciv_military = yes
@@ -2185,14 +2175,14 @@ modern_naval_training = {
 			factor = 1.05
 			total_num_of_ports = 9
 			is_greater_power = yes
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# GPs and SPs with more than 12 ports
 		modifier = {
 			factor = 1.05
 			total_num_of_ports = 12
 			rank = 16
-			clipper_design = 1
+			navy_2_1 = 1
 		}
 		# Bigger navy, more weight
 		modifier = {
