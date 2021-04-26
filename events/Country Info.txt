@@ -6,7 +6,7 @@
 country_event = {
 	id = 35000
 	picture = "kingdom_of_gondor"
-	title = "The Kingdom of Gondor"
+	title = "EVTNAME35000"
 	desc = "EVTDESC35000"
 	
 	is_triggered_only = yes
@@ -29,6 +29,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTD35000"
+		country_event = 35003
 	}
 	
 	option = {
@@ -39,7 +40,7 @@ country_event = {
 country_event = {
 	id = 35001
 	picture = "kingdom_of_gondor"
-	title = "The Kingdom of Gondor - Flavor"
+	title = "EVTNAME35001"
 	desc = "EVTDESC35001"
 	
 	is_triggered_only = yes
@@ -62,6 +63,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTD35000"
+		country_event = 35003
 	}
 	
 	option = {
@@ -72,7 +74,7 @@ country_event = {
 country_event = {
 	id = 35002
 	picture = "kingdom_of_gondor"
-	title = "The Kingdom of Gondor - Leaders"
+	title = "EVTNAME35002"
 	desc = "EVTDESC35002"
 	
 	is_triggered_only = yes
@@ -95,6 +97,41 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTD35000"
+		country_event = 35003
+	}
+	
+	option = {
+		name = "EVTOPTE35000"
+	}
+}
+
+country_event = {
+	id = 35002
+	picture = "kingdom_of_gondor"
+	title = "EVTNAME35003"
+	desc = "EVTDESC35003"
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "EVTOPTA35000"
+		country_event = 35000
+	}
+	
+	option = {
+		name = "EVTOPTB35000"
+		country_event = 35001
+	}
+	
+	option = {
+		name = "EVTOPTC35000"
+		country_event = 35002
+	}
+	
+	option = {
+		name = "EVTOPTD35000"
+		country_event = 35003
 	}
 	
 	option = {
