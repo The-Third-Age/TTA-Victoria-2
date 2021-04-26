@@ -5,12 +5,7 @@ post_napoleonic_thought = {
 	cost = 3600
 	unciv_military = yes
 
-	activate_building = fort	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.10
-	}
-	dig_in_cap = 1
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.01
@@ -52,11 +47,7 @@ strategic_mobility = {
 	cost = 7200
 	unciv_military = yes
 	
-	army_base = {
-		supply_consumption = 0.10
-	}
-	max_fort = 1
-	dig_in_cap = 1
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.01
@@ -105,14 +96,9 @@ point_defense_system = {
 	year = 1850
 	cost = 10800
 	unciv_military = yes
-	engineer = {
-		support = 0.25
-	} 
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	max_fort = 1
-	dig_in_cap = 1
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1.01
 		modifier = {
@@ -160,14 +146,8 @@ deep_defense_system = {
 	year = 1870
 	cost = 14400
 	unciv_military = yes
-	engineer = {
-		support = 0.25
-	} 
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	max_fort = 1
-	dig_in_cap = 1
+	
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.01
@@ -216,12 +196,7 @@ infiltration = {
 	cost = 18000
 	unciv_military = yes
 		
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	
-	max_fort = 1
-	dig_in_cap = 1
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.5
@@ -263,12 +238,7 @@ modern_army_doctrine = {
 	cost = 21600
 	unciv_military = yes
 	
-	army_base = {
-		supply_consumption = 0.20
-	} 
-	
-	max_fort = 1
-	dig_in_cap = 1
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -312,8 +282,7 @@ flintlock_rifles = {
 	cost = 3600
 	unciv_military = yes
 	
-	activate_unit = infantry
-	combat_width = -1
+	prestige = 1
 
 	ai_chance = {
 		factor = 1.1
@@ -354,7 +323,7 @@ muzzle_loaded_rifles = {
 	cost = 7200
 	unciv_military = yes
 	
-	combat_width = -2
+	prestige = 1
 
 	ai_chance = {
 		factor = 1.1
@@ -401,7 +370,7 @@ breech_loaded_rifles = {
 
 	unciv_military = yes
 
-	combat_width = -2
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -447,8 +416,8 @@ machine_guns = {
 	cost = 14400
 	unciv_military = yes
 	
-	combat_width = -5
-	#colonial_life_rating = -10 
+	prestige = 1
+	
 	ai_chance = {
 		factor = 6
 		modifier = {
@@ -494,7 +463,7 @@ bolt_action_rifles = {
 	unciv_military = yes
 	unit = 1
 	
-	combat_width = -5
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -536,7 +505,7 @@ modern_divisional_structure = {
 	unciv_military = yes
 
 	unit = 2
-	combat_width = -5
+	prestige = 1
 	
 		ai_chance = {
 		factor = 1.1
@@ -579,6 +548,7 @@ bronze_muzzle_loaded_artillery = {
 	year = 1836
 	cost = 3600
 	unciv_military = yes
+	
 	activate_unit = artillery
 	
 	ai_chance = {
@@ -619,11 +589,8 @@ iron_muzzle_loaded_artillery = {
 	year = 1836
 	cost = 7200
 	unciv_military = yes
-	artillery = {
-		attack = 0.25
-		support = 0.5
-		supply_consumption = 0.15
-	}
+	
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.05
@@ -663,11 +630,9 @@ iron_breech_loaded_artillery = {
 	year = 1850
 	cost = 10800
 	unciv_military = yes
-	artillery = {
-		attack = 0.25
-		support = 0.5
-		supply_consumption = 0.3
-	}
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1.05
 		modifier = {
@@ -706,11 +671,8 @@ steel_breech_loaded_artillery = {
 	year = 1870
 	cost = 14400
 	unciv_military = yes
-	artillery = {
-		attack = 0.5
-		support = 0.5
-		supply_consumption = 0.3
-	}
+	
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.05
@@ -750,12 +712,8 @@ indirect_artillery_fire = {
 	year = 1900
 	cost = 18000
 	unciv_military = yes
-	artillery = {
-		attack = 0.5
-		defence = 2
-		support = 1
-		supply_consumption = 0.3
-	}
+	
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.05
@@ -795,12 +753,8 @@ heavy_armament_dunno = {
 	year = 1919
 	cost = 21600
 	unciv_military = yes
-	artillery = {
-		attack = 0.5
-		defence = 2
-		support = 1
-		supply_consumption = 0.3
-	}
+	
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.05
@@ -844,10 +798,7 @@ military_staff_system = {
 	cost = 3600
 	unciv_military = yes
 	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.10
-	}
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -888,10 +839,7 @@ military_plans = {
 	cost = 7200
 	unciv_military = yes
 	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.10
-	}
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -932,10 +880,7 @@ military_statistics = {
 	cost = 10800
 	unciv_military = yes
 	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.20
-	}
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -976,11 +921,7 @@ military_logistics = {
 	cost = 14400
 	unciv_military = yes
 	
-	army_base = {
-		default_organisation = 5
-		supply_consumption = 0.20
-	}
-	mobilisation_size = 0.05
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -1021,10 +962,8 @@ military_directionism = {
 	cost = 18000
 	unciv_military = yes
 	
-	army_base = {
-		default_organisation = 10
-		supply_consumption = 0.20
-	}
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1.5
 		modifier = {
@@ -1066,10 +1005,8 @@ aeronautics = {
 	area = military_science
 	year = 1914
 	cost = 21600
-	army_base = {
-		default_organisation = 10
-		supply_consumption = 0.20
-	}
+	
+	prestige = 1
 	
 	unciv_military = yes
 	
@@ -1118,9 +1055,7 @@ army_command_principle = {
 	unciv_military = yes
 	military_tactics = 0.25
 
-	army_base = {
-		supply_consumption = 0.10
-	}
+	prestige = 1
 
 	ai_chance = {
 		factor = 1.5
@@ -1148,13 +1083,9 @@ army_professionalism = {
 	year = 1836
 	cost = 7200
 	unciv_military = yes
-	morale = 0.1
-
-	military_tactics = 0.25
 	
-	army_base = {
-		supply_consumption = 0.10
-	}
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1.1
 		modifier = {
@@ -1204,11 +1135,7 @@ army_decision_making = {
 	unciv_military = yes
 	morale = 0.2
 
-	military_tactics = 0.25
-
-	army_base = {
-	supply_consumption = 0.20
-	}
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -1259,11 +1186,7 @@ army_risk_management = {
 	unciv_military = yes
 	morale = 0.20
 
-	military_tactics = 0.25
-
-	army_base = {
-		supply_consumption = 0.20
-	}
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -1315,11 +1238,7 @@ army_nco_training = {
 	morale = 0.25
 	
 
-	military_tactics = 0.25
-
-	army_base = {
-		supply_consumption = 0.20
-	}
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1
@@ -1368,13 +1287,8 @@ great_war_experience = {
 	year = 1919
 	cost = 21600
 	unciv_military = yes
-	morale = 0.5
-
-	military_tactics = 0.25
-
-	army_base = {
-		supply_consumption = 0.20
-	}
+	
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.1

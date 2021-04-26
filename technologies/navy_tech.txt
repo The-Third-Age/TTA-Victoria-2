@@ -4,9 +4,8 @@ post_nelsonian_thought = {
 	year = 1836
 	cost = 3600
 	unciv_military = yes
-	activate_building = naval_base
-	colonial_points = 100
-
+	
+	prestige = 1
 
 	ai_chance = {
 		factor = 1
@@ -81,9 +80,8 @@ battleship_column_doctrine = {
 	year = 1836
 	cost = 7200
 	unciv_military = yes
-	max_naval_base = 1
-	#colonial_points = 200 #no free lunch!
-
+	
+	prestige = 1
 
 	ai_chance = {
 		factor = 1
@@ -158,7 +156,9 @@ raider_group_doctrine = {
 	year = 1855
 	cost = 10800
 	unciv_military = yes
-	max_naval_base = 1
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -232,7 +232,9 @@ blue_and_brown_water_schools = {
 	year = 1875
 	cost = 14400
 	unciv_military = yes
-	max_naval_base = 1
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -307,7 +309,8 @@ high_sea_battle_fleet = {
 	year = 1895
 	cost = 18000
 	unciv_military = yes
-	max_naval_base = 1
+	
+	prestige = 1
 
 	ai_chance = {
 		factor = 1
@@ -382,7 +385,9 @@ modern_naval_doctrine = {
 	year = 1914
 	cost = 21600
 	unciv_military = yes
-	max_naval_base = 1
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -459,6 +464,9 @@ clipper_design = {
 	year = 1836
 	cost = 3600
 	unciv_military = yes
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -534,6 +542,9 @@ steamers = {
 	year = 1836
 	cost = 7200
 	unciv_military = yes
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -609,7 +620,9 @@ iron_steamers = {
 	year = 1860
 	cost = 10800
 	unciv_military = yes
-	navy_base = { maximum_speed = 2 }
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -685,7 +698,9 @@ steel_steamers = {
 	year = 1880
 	cost = 14400
 	unciv_military = yes
-	navy_base = { maximum_speed = 2 } 
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -761,7 +776,9 @@ steam_turbine_ships = {
 	year = 1900
 	cost = 18000
 	unciv_military = yes
-	navy_base = { maximum_speed = 2 } 
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -837,7 +854,9 @@ oil_driven_ships = {
 	year = 1919
 	cost = 21600
 	unciv_military = yes
-	navy_base = { maximum_speed = 2 } 
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -914,7 +933,9 @@ naval_design_bureaus = {
 	area = naval_engineering
 	year = 1836
 	cost = 3600
-	navy_base = { build_time = -10 }
+	
+	prestige = 1
+	
 	unciv_military = yes
 	ai_chance = {
 		factor = 1
@@ -1001,7 +1022,9 @@ fire_control_systems = {
 	year = 1836
 	cost = 7200
 	unciv_military = yes
-	navy_base = { build_time = -10 }
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -1088,7 +1111,9 @@ weapon_platforms = {
 	year = 1850
 	cost = 10800
 	unciv_military = yes
-	navy_base = { build_time = -10 }
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -1174,7 +1199,9 @@ main_armament = {
 	year = 1870
 	cost = 14400
 	unciv_military = yes
-	navy_base = { build_time = -10 }
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -1265,7 +1292,9 @@ advanced_naval_design = {
 	year = 1900
 	cost = 18000
 	unciv_military = yes
-	navy_base = { build_time = -10 }
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -1351,7 +1380,9 @@ modern_naval_design = {
 	year = 1919
 	cost = 21600
 	unciv_military = yes
-	navy_base = { build_time = -10 }
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -1434,7 +1465,8 @@ alphabetic_flag_signaling = {
 	year = 1836
 	cost = 3600
 	unciv_military = yes
-	supply_range = 0.10
+	
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.01
@@ -1477,7 +1509,8 @@ naval_plans = {
 	year = 1836
 	cost = 7200
 	unciv_military = yes
-	supply_range = 0.10
+	
+	prestige = 1
 	
 	ai_chance = {
 		factor = 1.01
@@ -1520,8 +1553,10 @@ naval_statistics = {
 	year = 1850
 	cost = 10800
 	unciv_military = yes
-	supply_range = 0.10
-		ai_chance = {
+	
+	prestige = 1
+	
+	ai_chance = {
 		factor = 1.01
 		modifier = {
 			factor = 0
@@ -1562,8 +1597,10 @@ naval_logistics = {
 	year = 1870
 	cost = 14400
 	unciv_military = yes
-	supply_range = 0.10
-		ai_chance = {
+	
+	prestige = 1
+	
+	ai_chance = {
 		factor = 1.01
 		modifier = {
 			factor = 0
@@ -1604,8 +1641,10 @@ naval_directionism = {
 	year = 1900
 	cost = 18000
 	unciv_military = yes
-	supply_range = 0.10
-		ai_chance = {
+	
+	prestige = 1
+	
+	ai_chance = {
 		factor = 1.01
 		modifier = {
 			factor = 0
@@ -1646,8 +1685,10 @@ naval_integration = {
 	year = 1919
 	cost = 21600
 	unciv_military = yes
-	supply_range = 0.10
-		ai_chance = {
+	
+	prestige = 1
+	
+	ai_chance = {
 		factor = 1.01
 		modifier = {
 			factor = 0
@@ -1699,9 +1740,9 @@ the_command_principle = {
 	year = 1836
 	cost = 3600
 	unciv_military = yes
-	navy_base = {
-		default_organisation = 10
-	}
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -1782,9 +1823,9 @@ naval_professionalism = {
 	year = 1836
 	cost = 7200
 	unciv_military = yes
-	navy_base = {
-		default_organisation = 5
-	}
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -1865,9 +1906,9 @@ naval_decision_making = {
 	year = 1850
 	cost = 10800
 	unciv_military = yes
-	navy_base = {
-		default_organisation = 5
-	}
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -1948,9 +1989,9 @@ naval_risk_management = {
 	year = 1870
 	cost = 14400
 	unciv_military = yes
-	navy_base = {
-		default_organisation = 5
-	}
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -2031,9 +2072,9 @@ naval_nco_training = {
 	year = 1900
 	cost = 18000
 	unciv_military = yes
-	navy_base = {
-		default_organisation = 5
-	}
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
@@ -2114,9 +2155,9 @@ modern_naval_training = {
 	year = 1919
 	cost = 21600
 	unciv_military = yes
-	navy_base = {
-		default_organisation = 5
-	}
+	
+	prestige = 1
+	
 	ai_chance = {
 		factor = 1
 		# Land-locked countries don't research this
