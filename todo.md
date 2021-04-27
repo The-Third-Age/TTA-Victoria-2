@@ -16,10 +16,11 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Explore adding textures of notable places such as Minas Tirith
  
 ## Gameplay
- - Actually balance out goods, starting rgos 
+ - Actually balance out goods, starting rgos
+ - Balance out pop ideologies
  - Pop promotion changes
- - Pop migration, assimilation, conversion
- - Pop ideology/reform/party policy tendencies
+ - Pop migration, assimilation
+ - Pop reform/party policy tendencies
  - Add ideology rebels
  - Remove fascist/communist
  - Balance reform effects, figure out how to add `minimum_wage` effect to something
@@ -29,12 +30,10 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Rework kept vanilla decisions/events
  - Province terrains
  - Figure out 6 regions to use a continents (to reskin the vanilla ones)
- - Leader traits (flags, plan them out)
  - What to replace plurality with
  - General/Admiral traits
  - Naval units
- - Revanchism?
- - Figure out tech weirdness
+ - Revanchism
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)

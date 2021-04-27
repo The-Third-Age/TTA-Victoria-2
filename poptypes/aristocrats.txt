@@ -682,6 +682,222 @@ promote_to =
 
 
 ideologies = {
+	prostate = {
+		factor = 0.5
+	}
+	
+	servants = {
+		factor = 0.2
+		modifier = {
+			factor = 1.5
+			NOT = { militancy = 2 }
+		}
+		modifier = {
+			factor = 0.1
+			militancy = 6
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = servants
+		}
+		modifier = {
+			factor = 0.9
+			literacy = 0.5
+		}
+		modifier = {
+			factor = 0.8
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.1
+			life_needs = 0.5
+		}
+		modifier = {
+			factor = 1.3
+			everyday_needs = 0.5
+		}
+		modifier = {
+			factor = 1.5
+			luxury_needs = 1.1
+		}
+	}
+	
+	high_nobility = {
+		factor = 1.5
+		modifier = {
+			factor = 0.5
+			militancy = 6
+		}
+		modifier = {
+			factor = 1.2
+			social_reform_want = 0.75
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = high_nobility
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { literacy = 0.5 }
+		}
+		modifier = {
+			factor = 1.3
+			NOT = { consciousness = 4 }
+		}
+	}
+	
+	low_nobility = {
+		factor = 2
+		modifier = {
+			factor = 0.5
+			militancy = 6
+		}
+		modifier = {
+			factor = 1.2
+			political_reform_want = 0.75
+		}
+		modifier = {
+			factor = 1.2
+			social_reform_want = 0.75
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = low_nobility
+		}
+		modifier = {
+			factor = 1.3
+			NOT = { literacy = 0.5 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { consciousness = 6 }
+		}
+	}
+	
+	burgher = {
+		factor = 0.5
+		modifier = {
+			factor = 0.5
+			militancy = 6
+		}
+		modifier = {
+			factor = 1.2
+			political_reform_want = 0.75
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.25
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.35
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.50
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = burgher
+		}
+		modifier = {
+			factor = 0.9
+			literacy = 0.5
+		}
+	}
+	
+	loremaster = {
+		factor = 0.5
+		modifier = {
+			factor = 0.5
+			militancy = 6
+		}
+		modifier = {
+			factor = 1.1
+			political_reform_want = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			political_reform_want = 0.25
+		}
+		modifier = {
+			factor = 1.1
+			political_reform_want = 0.35
+		}
+		modifier = {
+			factor = 1.1
+			political_reform_want = 0.50
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.1
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.25
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.35
+		}
+		modifier = {
+			factor = 1.1
+			social_reform_want = 0.50
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = loremaster
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.5
+		}
+	}
+	
+	fundamentalist = {
+		factor = 0.7
+		modifier = {
+			factor = 2
+			militancy = 6
+		}
+		modifier = {
+			factor = 0.9
+			political_reform_want = 0.75
+		}
+		modifier = {
+			factor = 0.9
+			social_reform_want = 0.75
+		}
+		modifier = {
+			factor = 2
+			ruling_party_ideology = fundamentalist
+		}
+		modifier = {
+			factor = 0.2
+			NOT = { literacy = 0.5 }
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { consciousness = 5}
+		}
+		modifier = {
+			factor = 0.5
+			life_needs = 0.5
+		}
+		modifier = {
+			factor = 0.3
+			everyday_needs = 0.5
+		}
+		modifier = {
+			factor = 0.1
+			luxury_needs = 0.5
+		}
+	}
 }
+
 issues = {
 } 
