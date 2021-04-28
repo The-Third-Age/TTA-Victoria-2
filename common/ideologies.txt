@@ -70,107 +70,51 @@ communist_group = {
 }
 	
 prosauron_group = {
-	# always supports political reform. Always wants to remove them *
-	# always supports social reform. Always wants to remove them *
+	# always supports political reform. Always wants to remove them
+	# always supports social reform. Always wants to remove them
 	prostate = {
-		color = { 128 0 0 }
+		color = { 0 0 128 }
 		
 		can_reduce_militancy = yes
 		
 		add_political_reform = {
 			base = 1
-			modifier = {
-				factor = -1
-				NOT = {
-					ruling_party_ideology = prostate
-					ruling_party_ideology = servants
-				}
-			}
 		}
 		
 		remove_political_reform = {
 			base = 1
-			modifier = {
-				factor = -1
-				NOT = {
-					ruling_party_ideology = prostate
-					ruling_party_ideology = servants
-				}
-			}
 		}
 		
 		add_social_reform = {
 			base = 1
-			modifier = {
-				factor = -1
-				NOT = {
-					ruling_party_ideology = prostate
-					ruling_party_ideology = servants
-				}
-			}
 		}
 		
 		remove_social_reform = {
 			base = 1
-			modifier = {
-				factor = -1
-				NOT = {
-					ruling_party_ideology = prostate
-					ruling_party_ideology = servants
-				}
-			}
 		}
 	}
 	
-	# always supports political reform. Always wants to remove them *
-	# always supports social reform. Always wants to remove them *
+	# always supports political reform. Always wants to remove them
+	# always supports social reform. Always wants to remove them
 	servants = {
-		color = { 128 0 32 }
+		color = { 30 144 255  }
 		
 		can_reduce_militancy = yes
 		
 		add_political_reform = {
 			base = 1
-			modifier = {
-				factor = -1
-				NOT = {
-					ruling_party_ideology = prostate
-					ruling_party_ideology = servants
-				}
-			}
 		}
 		
 		remove_political_reform = {
 			base = 1
-			modifier = {
-				factor = -1
-				NOT = {
-					ruling_party_ideology = prostate
-					ruling_party_ideology = servants
-				}
-			}
 		}
 		
 		add_social_reform = {
 			base = 1
-			modifier = {
-				factor = -1
-				NOT = {
-					ruling_party_ideology = prostate
-					ruling_party_ideology = servants
-				}
-			}
 		}
 		
 		remove_social_reform = {
 			base = 1
-			modifier = {
-				factor = -1
-				NOT = {
-					ruling_party_ideology = prostate
-					ruling_party_ideology = servants
-				}
-			}
 		}
 	}
 }
@@ -179,7 +123,7 @@ nobility_group = {
 	# always opposes political reform. Always want to remove them
 	# normally opposes social reform, supports with high militancy. Always want to remove them
 	high_nobility = {
-		color = { 0 0 100 }
+		color = { 138 43 226 }
 		
 		add_political_reform = {
 			base = 0
@@ -270,9 +214,7 @@ nobility_group = {
 	# normally opposes political reform, supports with high militancy. Never want to remove them
 	# normally opposes social reform, supports with high militancy. Never want to remove them
 	low_nobility = {
-		color = { 10 10 250 }
-		
-		can_reduce_militancy = yes
+		color = { 147 112 219 }
 		
 		add_political_reform = {
 			base = 0
@@ -433,12 +375,12 @@ burgher_group = {
 	# normally opposes political reform, supports with high militancy. Never want to remove them
 	# always supports social reform. Never want to remove them.
 	burgher = {
-		color = { 18 129 10 }
+		color = { 255 127 80 }
 		
 		add_political_reform = {
 			base = 0
 			
-						group = {
+			group = {
 				modifier = {
 					factor = 0.1
 					OR = { 
@@ -581,5 +523,3 @@ fundamentalist_group = {
 		}
 	}
 }
-
-# * Statements only true if the political group is in power
