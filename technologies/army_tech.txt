@@ -1,1328 +1,315 @@
-#army_1
-army_1_1 = {
-	area = army_1
-	year = 1836
+#infantry_tech
+infantry_tech_1 = {
+	area = infantry_tech
+	year = 2954
 	cost = 3600
 	unciv_military = yes
 
 	prestige = 1
 	
 	ai_chance = {
-		factor = 1.01
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.4
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.1
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
+		factor = 1
 	}
 }
 
-army_1_2 = {
-	area = army_1
-	year = 1836
-	cost = 7200
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.01
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.4
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.1
-			year = 1840
-		}
-		modifier = {
-			factor = 2
-			year = 1850
-		}
-		modifier = {
-			factor = 1.1
-			is_greater_power = yes
-		}
-	}
-}
-
-army_1_3 = {
-	area = army_1
-	year = 1850
-	cost = 10800
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.01
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.1
-			year = 1860
-		}
-		modifier = {
-			factor = 2
-			year = 1870
-		}
-		modifier = {
-			factor = 1.4
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.1
-			is_greater_power = yes
-		}
-	}
-
-}
-army_1_4 = {
-	area = army_1
-	year = 1870
-	cost = 14400
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.01
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.1
-			year = 1875
-		}
-		modifier = {
-			factor = 2
-			year = 1880
-		}
-		modifier = {
-			factor = 1.4
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.1
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-	}
-}
-army_1_5 = {
-	area = army_1
-	year = 1900
-	cost = 18000
-	unciv_military = yes
-		
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.5
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.1
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-	}
-
-}
-army_1_6 = {
-	area = army_1
-	year = 1919
-	cost = 21600
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.1
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-	}
-}
-
-
-#army_2
-army_2_1 = {
-	area = army_2
-	year = 1836
+infantry_tech_2 = {
+	area = infantry_tech
+	year = 2954
 	cost = 3600
 	unciv_military = yes
-	
-	prestige = 1
-
-	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-	}
-}
-army_2_2 = {
-	area = army_2
-	year = 1836
-	cost = 7200
-	unciv_military = yes
-	
-	prestige = 1
-
-	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 6
-			rank = 16
-			year = 1850
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-	}
-}
-army_2_3 = {
-	area = army_2
-	year = 1850
-	cost = 10800
-
-	unciv_military = yes
 
 	prestige = 1
 	
 	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 6
-			rank = 16
-			year = 1860
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-	}
-}
-army_2_4 = {
-	area = army_2
-	year = 1870
-	cost = 14400
-	unciv_military = yes
-	
-	unit = 1
-	prestige = 1
-	
-	ai_chance = {
-		factor = 6
-		modifier = {
-			factor = 2
-			rank = 16
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.2
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-	
-}
-army_2_5 = {
-	area = army_2
-	year = 1900
-	cost = 18000
-	unciv_military = yes
-	unit = 1
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_2_6 = {
-	area = army_2
-	year = 1919
-	cost = 21600
-	unciv_military = yes
-
-	unit = 2
-	prestige = 1
-	
-		ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
+		factor = 1
 	}
 }
 
-
-#army_3
-army_3_1 = {
-	area = army_3
-	year = 1836
+infantry_tech_3 = {
+	area = infantry_tech
+	year = 2954
 	cost = 3600
 	unciv_military = yes
-	
-	activate_unit = artillery
-	
-	ai_chance = {
-		factor = 1.05
-		modifier = {
-			factor = 1.2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_3_2 = {
-	area = army_3
-	year = 1836
-	cost = 7200
-	unciv_military = yes
-	
+
 	prestige = 1
 	
 	ai_chance = {
-		factor = 1.05
-		modifier = {
-			factor = 1.2
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_3_3 = {
-	area = army_3
-	year = 1850
-	cost = 10800
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.05
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 2
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_3_4 = {
-	area = army_3
-	year = 1870
-	cost = 14400
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.05
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_3_5 = {
-	area = army_3
-	year = 1900
-	cost = 18000
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.05
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_3_6 = {
-	area = army_3
-	year = 1919
-	cost = 21600
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.05
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
+		factor = 1
 	}
 }
 
-
-#army_4
-army_4_1 = {
-	area = army_4
-	year = 1836
+infantry_tech_4 = {
+	area = infantry_tech
+	year = 2954
 	cost = 3600
 	unciv_military = yes
-	
+
 	prestige = 1
 	
 	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_4_2 = {
-	area = army_4
-	year = 1836
-	cost = 7200
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_4_3 = {
-	area = army_4
-	year = 1850
-	cost = 10800
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_4_4 = {
-	area = army_4
-	year = 1870
-	cost = 14400
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_4_5 = {
-	area = army_4
-	year = 1900
-	cost = 18000
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.5
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.5
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_4_6 = {
-	area = army_4
-	year = 1914
-	cost = 21600
-	
-	prestige = 1
-	
-	unciv_military = yes
-	
-	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
+		factor = 1
 	}
 }
 
-
-#army_5
-army_5_1 = {
-	area = army_5
-	year = 1836
+infantry_tech_5 = {
+	area = infantry_tech
+	year = 2954
 	cost = 3600
-
-	morale = 0.25
 	unciv_military = yes
-	military_tactics = 0.25
-
-	prestige = 1
-
-	ai_chance = {
-		factor = 1.5
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.5
-			war = yes
-		}
-		modifier = {
-			factor = 1.05
-			rank = 16
-			year = 1850
-		}
-		modifier = {
-			factor = 1.05
-			year = 1860
-		}
-	}
-}
-army_5_2 = {
-	area = army_5
-	year = 1836
-	cost = 7200
-	unciv_military = yes
-	
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.05
-			rank = 16
-			year = 1850
-		}
-		modifier = {
-			factor = 1.05
-			year = 1860
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
-	}
-}
-army_5_3 = {
-	area = army_5
-	year = 1850
-	cost = 10800
-	unciv_military = yes
-	morale = 0.2
 
 	prestige = 1
 	
 	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.05
-			rank = 16
-			year = 1860
-		}
-		modifier = {
-			factor = 1.05
-			year = 1870
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
+		factor = 1
 	}
 }
-army_5_4 = {
-	area = army_5
-	year = 1870
-	cost = 14400
+
+infantry_tech_6 = {
+	area = infantry_tech
+	year = 2954
+	cost = 3600
 	unciv_military = yes
-	morale = 0.20
 
 	prestige = 1
 	
 	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.05
-			rank = 16
-			year = 1880
-		}
-		modifier = {
-			factor = 1.05
-			year = 1890
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
+		factor = 1
 	}
 }
-army_5_5 = {
-	area = army_5
-	year = 1900
-	cost = 18000
+
+#archer_tech
+archer_tech_1 = {
+	area = archer_tech
+	year = 2954
+	cost = 3600
 	unciv_military = yes
-	morale = 0.25
-	
 
 	prestige = 1
 	
 	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.05
-			rank = 16
-			year = 1910
-		}
-		modifier = {
-			factor = 1.05
-			year = 1920
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
+		factor = 1
 	}
 }
-army_5_6 = {
-	area = army_5
-	year = 1919
-	cost = 21600
+
+archer_tech_2 = {
+	area = archer_tech
+	year = 2954
+	cost = 3600
 	unciv_military = yes
-	
+
 	prestige = 1
 	
 	ai_chance = {
-		factor = 1.1
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-		}
-		modifier = {
-			factor = 1.02
-			tech_school = army_tech_school
-		}
-		modifier = {
-			factor = 1.05
-			war = yes
-		}
-		modifier = {
-			factor = 1.02
-			civilized = yes
-			any_neighbor_country = {
-				civilized = yes
-				NOT = { is_greater_power = yes }
-				military_score = THIS
-			}
-		}
-		modifier = {
-			factor = 1.5
-			is_greater_power = yes
-			any_neighbor_country = {
-				is_greater_power = yes
-				military_score = THIS
-			}
-		}
+		factor = 1
 	}
 }
 
+archer_tech_3 = {
+	area = archer_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
 
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+archer_tech_4 = {
+	area = archer_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+archer_tech_5 = {
+	area = archer_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+archer_tech_6 = {
+	area = archer_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+#cavalry_tech
+cavalry_tech_1 = {
+	area = cavalry_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+cavalry_tech_2 = {
+	area = cavalry_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+cavalry_tech_3 = {
+	area = cavalry_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+cavalry_tech_4 = {
+	area = cavalry_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+cavalry_tech_5 = {
+	area = cavalry_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+cavalry_tech_6 = {
+	area = cavalry_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+#artillery_tech
+artillery_tech_1 = {
+	area = artillery_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+artillery_tech_2 = {
+	area = artillery_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+artillery_tech_3 = {
+	area = artillery_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+artillery_tech_4 = {
+	area = artillery_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+artillery_tech_5 = {
+	area = artillery_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
+
+artillery_tech_6 = {
+	area = artillery_tech
+	year = 2954
+	cost = 3600
+	unciv_military = yes
+
+	prestige = 1
+	
+	ai_chance = {
+		factor = 1
+	}
+}
