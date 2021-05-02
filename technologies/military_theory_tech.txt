@@ -5,7 +5,8 @@ fortifications_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	dig_in_cap = 1
+	activate_building = fort
 	
 	ai_chance = {
 		factor = 1
@@ -84,7 +85,21 @@ army_tactics_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	morale = 0.25
+	military_tactics = 0.25
+	combat_width = 1
+	
+	army_base = {
+		default_organisation = 5
+	}
+	
+	heavy_cavalry = {
+		default_organisation = 5
+	}
+	
+	pikemen = {
+		default_organisation = 5
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -163,7 +178,15 @@ training_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	regular_experience_level = 5
+	org_regain = 0.05
+	
+	army_base = {
+		build_time = 5
+		default_organisation = 5
+		supply_consumption = -0.05
+		discipline = 0.05
+	}
 	
 	ai_chance = {
 		factor = 1

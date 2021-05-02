@@ -5,7 +5,22 @@ infantry_tech_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	pikemen = {
+		attack = 1
+		defence = 3
+		supply_consumption = 0.1
+	}
+	swordsmen = {
+		attack = 2
+		defence = 2
+		supply_consumption = 0.1
+	}
+	
+	infantry = {
+		attack = 2
+		defence = 2
+		supply_consumption = 0.1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -84,7 +99,12 @@ archer_tech_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	archers = {
+		attack = 1
+		defence = 1
+		support = 0.25
+		supply_consumption = 0.1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -163,7 +183,23 @@ cavalry_tech_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	heavy_cavalry = {
+		attack = 4
+		defence = 2
+		supply_consumption = 0.1
+	}
+	
+	horse_archers = {
+		attack = 2
+		defence = 2
+		supply_consumption = 0.1
+	}
+	
+	scouts = {
+		attack = 3
+		defence = 2
+		supply_consumption = 0.1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -242,7 +278,10 @@ artillery_tech_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	artillery = {
+		supply_consumption = 0.1
+		siege = 1
+	}
 	
 	ai_chance = {
 		factor = 1
