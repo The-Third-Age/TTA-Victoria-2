@@ -1,23 +1,17 @@
 ### Factories #####################################################################################
 
-are_you_fucking_kidding_me = {
+will_never_be_unlocked = {
 	type = factory
-
+	
 	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost =
-	{
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 365
-	visibility = yes
+	conpletion_size = 0.2
+	max_level = 1
+	goods_cost = { }
+	time = 1
+	visibility = no
 	onmap = no
-
-	production_type = are_you_fucking_kidding_me
-	pop_build_factory = yes
+	production_type = will_never_be_unlocked
+	pop_build_factory = no
 }
 
 ##### MILITARY FACTORIES #####
@@ -41,6 +35,7 @@ artillery_factory = {
 	production_type = artillery_factory
 	pop_build_factory = yes
 	strategic_factory = yes
+	default_enabled = yes
 }
 
 melee_gear_factory = {
@@ -62,6 +57,7 @@ melee_gear_factory = {
 	production_type = melee_gear_factory
 	pop_build_factory = yes
 	strategic_factory = yes
+	default_enabled = yes
 }
 
 ranged_gear_factory = {
@@ -83,6 +79,7 @@ ranged_gear_factory = {
 	production_type = ranged_gear_factory
 	pop_build_factory = yes
 	strategic_factory = yes
+	default_enabled = yes
 }
 
 clipper_shipyard = {
@@ -106,6 +103,8 @@ clipper_shipyard = {
 	production_type = clipper_shipyard
 	pop_build_factory = yes
 	strategic_factory = yes
+	#default_enabled = yes
+	advanced_factory = yes
 }
 
 ##### CONSTRUCTION GOODS FACTORIES #####
@@ -126,6 +125,7 @@ cut_stone_factory = {
 
 	production_type = cut_stone_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 lumber_mill = {
@@ -144,6 +144,7 @@ lumber_mill = {
 
 	production_type = lumber_mill
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 steel_factory = {
@@ -164,6 +165,7 @@ steel_factory = {
 	
 	production_type = steel_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 ##### BASE GOODS FACTORIES #####
@@ -185,6 +187,7 @@ charcoal_factory = {
 	
 	production_type = charcoal_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 ##### CONSUMER GOODS FACTORIES #####
@@ -206,6 +209,7 @@ furniture_factory = {
 
 	production_type = furniture_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 paper_mill = {
@@ -225,6 +229,7 @@ paper_mill = {
 	
 	production_type = paper_mill
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 clothes_factory = {
@@ -244,6 +249,7 @@ clothes_factory = {
 
 	production_type = clothes_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 liquor_distillery = {
@@ -264,6 +270,7 @@ liquor_distillery = {
 		
 	production_type = liquor_distillery
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 fabric_factory = {
@@ -283,6 +290,7 @@ fabric_factory = {
 
 	production_type = fabric_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 fabric_factory_wool = {
@@ -302,6 +310,7 @@ fabric_factory_wool = {
 
 	production_type = fabric_factory_wool
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 glass_factory = {
@@ -321,6 +330,7 @@ glass_factory = {
 		
 	production_type = glass_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 ### OTHER BUILDINGS #####################################################################################
@@ -359,7 +369,6 @@ naval_base = {
 	max_level = 6
 	colonial_points = { 30 50 70 90 110 130 } #points at levels 1-6
 	province = yes
-	one_per_state = yes
 	colonial_range = 50
 	local_ship_build = -0.10
 }
