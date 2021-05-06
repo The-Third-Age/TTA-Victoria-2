@@ -53,9 +53,7 @@ party_issues = {
 			}
 		}
 		controlled_guilds = {
-			factory_throughput = 0.05
-			factory_owner_cost = -1	#negative costs, can't build.
-			
+			factory_owner_cost = 0.6
 			rules = {
 				build_factory = yes
 				expand_factory = yes
@@ -64,10 +62,10 @@ party_issues = {
 				build_railway = yes
 				factory_priority = yes
 				can_subsidise = yes
-				pop_build_factory = no
+				pop_build_factory = yes
 				pop_expand_factory = no
-				pop_open_factory = no				
-				delete_factory_if_no_input = no		
+				pop_open_factory = yes
+				delete_factory_if_no_input = no
 				build_factory_invest = yes
 				expand_factory_invest = yes
 				build_railway_invest = yes
