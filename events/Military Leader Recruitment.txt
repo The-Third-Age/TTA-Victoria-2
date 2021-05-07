@@ -1,0 +1,48 @@
+# Military Leader Events:
+#	40000 - 40099
+
+# Gondor Generals
+country_event = {
+	id = 40000
+	#picture = "NAME"
+	title = "Recruit Generals"
+	desc = "EVTDESC40000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Standard Generals"
+		add_country_modifier = { name = recruited_leaders duration = 730 }
+		
+		random_list = {
+			1 = { define_general = { name = "Adrahil Ithilbor" personality = brash background = nobleman_bad } }
+			1 = { define_general = { name = "Adrahil Ithilbor" personality = brash background = nobleman } }
+			1 = { define_general = { name = "Adrahil Ithilbor" personality = brash background = nobleman_good } }
+		}
+	}
+	
+	option = {
+		name = "Better Generals"
+		add_country_modifier = { name = recruited_leaders duration = 1825 }
+	}
+}
+
+# Gondor Admirals
+country_event = {
+	id = 40001
+	#picture = "NAME"
+	title = "Recruit Admirals"
+	desc = "EVTDESC40000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Standard Admirals"
+		add_country_modifier = { name = recruited_leaders duration = 730 }
+	}
+	
+	option = {
+		name = "Better Admirals"
+		add_country_modifier = { name = recruited_leaders duration = 1825 }
+	}
+}

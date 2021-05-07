@@ -1,0 +1,39 @@
+political_decisions = {
+	recruit_generals = {
+		potential = {
+			NOT = { has_country_modifier = recruited_leaders }
+		}
+		
+		allow = { }
+		
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						tag = GON
+					}
+				}
+				owner = { country_event = { id = 40000 } }
+			}
+		}
+	}
+	
+	recruit_admirals = {
+		potential = {
+			NOT = { has_country_modifier = recruited_leaders }
+		}
+		
+		allow = { }
+		
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						tag = GON
+					}
+				}
+				owner = { country_event = { id = 40001 } }
+			}
+		}
+	}
+}

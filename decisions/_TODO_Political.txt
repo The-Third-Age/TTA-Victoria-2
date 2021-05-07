@@ -1,0 +1,60 @@
+political_decisions = {
+	leave_soi = {
+		alert = no
+		potential = {
+			part_of_sphere = yes
+			
+		}
+		allow = {
+			is_secondary_power = yes
+			sphere_owner = {
+				NOT = { 
+					relation = {
+						who = THIS
+						value = 0
+					}
+				truce_with = THIS
+				}
+			}
+		}
+		effect = {
+			sphere_owner = {
+				diplomatic_influence = {
+					who = THIS
+					value = -200
+				}
+			# Need to fix this event call
+			country_event = { id=13201 days=0 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				sphere_owner = {
+					brigades_compare = 3
+				}
+			}
+		}
+	}
+	
+	nationalize = {
+		alert = no
+			
+		potential = {
+			can_nationalize = yes 
+		}
+		allow = {
+			NOT = { part_of_sphere = yes }
+		}
+		effect = {
+			nationalize = yes
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -16,7 +16,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Explore adding textures of notable places such as Minas Tirith
  
 ## Gameplay
- - Actually balance out goods, starting rgos
+ - Actually balance out goods, starting rgos, pops
  - Balance out pop ideologies
  - Pop promotion changes
  - Pop migration, assimilation
@@ -31,9 +31,10 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Province terrains
  - Figure out 6 regions to use a continents (to reskin the vanilla ones)
  - What to replace plurality with
- - General/Admiral traits
+ - General/Admiral spawn decisions/events
  - Naval units
  - Revanchism
+ - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/Education Spending/National Stockpile Spending
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)

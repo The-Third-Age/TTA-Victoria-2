@@ -1,159 +1,16 @@
-# fuckme = {
-	# limit = { industry_5_6 = 1 }
-	# chance = {
-		# base = 100
-	# }
-	# effect = {
-		# activate_building = are_you_fucking_kidding_me
-	# }
-# }
-
 test1 = {
-	limit = { industry_5_6 = 1 }
+	limit = { guilds_1 = 1 }
 	chance = {
-		base = 100
+		base = 0
+		
+		modifier = {
+			factor = 100
+			any_owned_province = {
+				is_coastal = yes
+			}
+		}
 	}
 	effect = {
 		activate_building = clipper_shipyard
-	}
-}
-
-test2 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = steel_factory
-	}
-}
-
-test3 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = artillery_factory
-	}
-}
-
-test4 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = melee_gear_factory
-	}
-}
-
-test5 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = ranged_gear_factory
-	}
-}
-
-test6 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = furniture_factory
-	}
-}
-
-test7 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = paper_mill
-	}
-}
-
-test8 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = clothes_factory
-	}
-}
-
-test10 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = lumber_mill
-	}
-}
-
-test11 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = fabric_factory
-	}
-}
-
-test12 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = fabric_factory_wool
-	}
-}
-
-test13 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = glass_factory
-	}
-}
-
-test14 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = liquor_distillery
-	}
-}
-
-test15 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = cut_stone_factory
-	}
-}
-
-test16 = {
-	limit = { industry_5_6 = 1 }
-	chance = {
-		base = 100
-	}
-	effect = {
-		activate_building = charcoal_factory
 	}
 }
