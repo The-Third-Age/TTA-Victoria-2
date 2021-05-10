@@ -1,0 +1,229 @@
+# Gondor Events:
+# 50000 - 50099
+
+# The Tolfalas Question
+country_event = {
+	id = 50000
+	picture = tolfalas_map
+	title = "The Tolfalas Question"
+	desc = "EVTDESC50000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "§BTo Dol Amroth§!"
+		AMR = {
+			inherit = TOL
+			any_owned = {
+				limit = {
+					is_core = TOL
+				}
+				remove_core = TOL
+				add_core = AMR
+			}
+			prestige = 5
+		}
+		relation = {
+			who = AMR
+			value = 50
+		}
+		
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		name = "For us"
+		inherit = TOL
+		any_owned = {
+			limit = {
+				is_core = TOL
+			}
+			remove_core = TOL
+			add_core = AMR
+		}
+		relation = {
+			who = AMR
+			value = -200
+		}
+		set_global_flag = no_tolfalas_for_da
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_global_flag = railroading_enabled
+			}
+		}
+	}
+}
+
+# Dol Amroth Independence War
+country_event = {
+	id = 50001
+	picture = dol_amroth
+	title = "Succession!"
+	desc = "EVTDESC50001"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = GON
+		has_global_flag = da_independence_war
+	}
+	
+	option = {
+		name = "They WHAT?"
+	
+		prestige = 5
+		release_vassal = AMR
+		war = {
+			target = AMR
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+	}
+}
+
+# Dol Amroth wins
+country_event = {
+	id = 50002
+	picture = dol_amroth
+	title = "We are Victorious!"
+	desc = "EVTDESC50002"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = da_independence_war
+		tag = AMR
+		NOT = { war_with = GON }
+		NOT = { vassal_of = GON }
+		truce_with = GON
+	}
+	
+	option = {
+		name = "Freedom!"
+		GON_56 = { secede_province = AMR }
+		prestige = 25
+		all_core = {
+			remove_core = GON
+		}
+		GON = { prestige = -50 }
+	}
+}
+
+# Gondor Wins
+country_event = {
+	id = 50003
+	picture = dol_amroth
+	title = "We are Victorious!"
+	desc = "EVTDESC50003"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = da_independence_war
+		tag = GON
+		NOT = { exists = AMR }
+	}
+	
+	option = {
+		name = "Fools"
+		GON_56 =  { remove_core = AMR }
+		prestige = 10
+		any_owned = {
+			limit = {
+				is_core = AMR
+			}
+			add_province_modifier = {
+				name = amrothian_resistance
+				duration = 3650
+			}
+		}
+	}
+}
+
+# Dol Amroth gets Annexed?
+country_event = {
+	id = 50004
+	picture = gondor_map
+	title = "Gondor is Annexing Us!"
+	desc = "EVTDESC50004"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Very well"
+		GON = { country_event = 50005 }
+		
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		name = "Over our dead bodies!"
+		prestige = 5
+		GON = { country_event = 50006 }
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 9
+				OR = {
+					GON = { NOT = { brigades_compare = 1 } }
+					military_score = GON
+				}
+			}
+		}
+	}
+}
+
+# Dol Amroth accepts annexation
+country_event = {
+	id = 50005
+	picture = gondor_map
+	title = "They Accept!"
+	desc = "EVTDESC50005"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		
+		inherit = AMR
+		any_owned = {
+			limit = { is_core = AMR }
+			remove_core = AMR
+			aristocrats = { militancy = 2 }
+		}
+		prestige = 15
+		# TODO: Add general (Gotta figure out which one it would be; Adrahil or his father. Potentially Imrahil
+	}
+}
+
+# Dol Amroth refuses annexation
+country_event = {
+	id = 50006
+	picture = dol_amroth
+	title = "They Refuse!"
+	desc = "EVTDESC50006"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They didn't have a choice"
+		
+		release_vassal = AMR
+		war = {
+			target = AMR
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		set_global_flag = da_independence_war
+	}
+}

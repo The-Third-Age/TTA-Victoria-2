@@ -16,10 +16,9 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Explore adding textures of notable places such as Minas Tirith
  
 ## Gameplay
- - Actually balance out goods, starting rgos, pops
- - Balance out pop ideologies
- - Pop promotion changes
- - Pop migration, assimilation
+ - Actually balance out goods, starting rgos, pops, ideology chances
+ - Pop promotion chances
+ - Pop migration, assimilation, conversion (none)
  - Pop reform/party policy tendencies
  - Add ideology rebels
  - Remove fascist/communist
@@ -49,6 +48,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## Flavor
  - Haradrim Tribes/Khand/Rhun formed as a cultural union
+ - Event 50005, get the syntax for getting the general correct
 
 ## Others 
  - Music (BFME2 for example)
