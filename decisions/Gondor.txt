@@ -1,3 +1,8 @@
+# Gondor decisions:
+#	Gondor Start Decision (Unseen)
+#	Substate Annexation
+
+# Gondor Start Decision
 political_decisions = {
 	gondor_start_decision = {
 		potential = {
@@ -13,6 +18,292 @@ political_decisions = {
 				duration = -1
 			}
 			prestige = 100000
+		}
+	}
+}
+
+# Substate Annexation
+political_decisions = {
+	annex_lossarnach = {
+		picture = "gondor_noimage"
+		potential = {
+			tag = GON
+			LOS = {
+				exists = yes
+				substate_of = GON
+			}
+		}
+		allow = {
+			OR = {
+				crown_land_ownership = ten_land_ownership
+				crown_land_ownership = thirty_land_ownership
+				crown_land_ownership = half_land_ownership
+				crown_land_ownership = seventy_land_ownership
+				crown_land_ownership = all_land_ownership
+			}
+			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			war = no
+		}
+		effect = {
+			inherit = LOS
+			GON_23 = {
+				aristocrats = { militancy = 2 }
+				remove_core = LOS
+			}
+			GON_27 = {
+				aristocrats = { militancy = 2 }
+				secede_province = LEB
+				add_core = LEB
+				remove_core = LOS
+			}
+			prestige = 5
+			define_general = {
+				name = "Forlong, Lord of Lossarnach"
+				background = lord_of_lossarnach
+				personality = stalwart
+			}
+		}
+	}
+	
+	annex_lebennin = {
+		picture = "gondor_noimage"
+		potential = {
+			tag = GON
+			LEB = {
+				exists = yes
+				substate_of = GON
+			}
+			owns = 23
+		}
+		allow = {
+			OR = {
+				crown_land_ownership = thirty_land_ownership
+				crown_land_ownership = half_land_ownership
+				crown_land_ownership = seventy_land_ownership
+				crown_land_ownership = all_land_ownership
+			}
+			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			war = no
+		}
+		effect = {
+			inherit = LEB
+			LAM = {
+				inherit = MRN
+				any_owned = {
+					limit = { is_core = MRN }
+					add_core = LAM
+					remove_core = MRN
+					aristocrats = { militancy = 2 }
+				}
+			}
+			any_owned = {
+				limit = { is_core = LEB }
+				remove_core = LEB
+				aristocrats = { militancy = 2 }
+			}
+			prestige = 7
+			define_admiral = {
+				name = "Orodreth, Lord of Lebennin"
+				background = lord_of_lebennin
+				personality = tactical
+			}
+		}
+	}
+	
+	tolfalas_question = {
+		picture = "gondor_noimage"
+		potential = {
+			tag = GON
+			TOL = {
+				exists = yes
+				substate_of = GON
+			}
+			owns = 23
+		}
+		
+		allow = {
+			OR = {
+				crown_land_ownership = thirty_land_ownership
+				crown_land_ownership = half_land_ownership
+				crown_land_ownership = seventy_land_ownership
+				crown_land_ownership = all_land_ownership
+			}
+			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			war = no
+		}
+		
+		effect = {
+			country_event = 50000
+		}
+	}
+	
+	da_independence_war = {
+		picture = "gondor_noimage"
+		potential = {
+			tag = AMR
+			has_global_flag = no_tolfalas_for_da
+			NOT = { has_global_flag = da_independence_war }
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			prestige = 10
+			set_global_flag = da_independence_war
+			any_country = {
+				limit = {
+					war_with = AMR
+				}
+				end_war = AMR
+			}
+			GON = { country_event = 50001 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				GON = { war = no }
+			}
+			modifier = {
+				factor = 0
+				has_global_flag = railroading_enabled
+			}
+		}
+	}
+	
+	annex_lamedon = {
+		picture = "gondor_noimage"
+		potential = {
+			tag = GON
+			LAM = {
+				exists = yes
+				substate_of = GON
+			}
+			owns = 44
+		}
+		
+		allow = {
+			OR = {
+				crown_land_ownership = half_land_ownership
+				crown_land_ownership = seventy_land_ownership
+				crown_land_ownership = all_land_ownership
+			}
+			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			war = no
+		}
+		
+		effect = {
+			inherit = LAM
+			any_owned = {
+				limit = { is_core = LAM }
+				remove_core = LAM
+				aristocrats = { militancy = 2 }
+			}
+			prestige = 10
+			define_general = {
+				name = "Angbor, Lord of Lamedon"
+				background = lord_of_lamedon
+				personality = fearless
+			}
+			define_general = {
+				name = "Duinhir, Lord of Blackroot Vale"
+				background = lord_of_blackroot_vale
+				personality = resolute
+			}
+			define_general = {
+				# Dervorin's Father
+				name = "Borhador, Lord of Ringló Vale"
+				background = lord_of_ringlo_vale
+				personality = stalwart
+			}
+		}
+	}
+	
+	annex_anfalas = {
+		picture = "gondor_noimage"
+		potential = {
+			tag = GON
+			ANF = {
+				exists = yes
+				substate_of = GON
+			}
+			owns = 89
+		}
+		
+		allow = {
+			OR = {
+				crown_land_ownership = seventy_land_ownership
+				crown_land_ownership = all_land_ownership
+			}
+			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			war = no
+		}
+		
+		effect = {
+			inherit = ANF
+			any_owned = {
+				limit = { is_core = ANF }
+				remove_core = ANF
+				aristocrats = { militancy = 2 }
+			}
+			prestige = 12
+			define_general = {
+				name = "Hirluin, Lord of Pinnath Gelin"
+				background = lord_of_pinnath_gelin
+				personality = persistent
+			}
+			define_general = {
+				name = "Golasgil, Lord of Anfalas"
+				background = lord_of_anfalas
+				personality = stout
+			}
+		}
+	}
+	
+	annex_dol_amroth = {
+		picture = "gondor_noimage"
+		potential = {
+			tag = GON
+			AMR = {
+				exists = yes
+				vassal_of = GON
+			}
+			owns = 133
+			NOT = { has_global_flag = da_independence_war }
+		}
+		
+		allow = { 
+			crown_land_ownership = all_land_ownership
+			city_jurisdiction = royal_cities
+		}
+		
+		effect = {
+			AMR = { country_event = 50004 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_global_flag = railroading_enabled
+			}
 		}
 	}
 }

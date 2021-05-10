@@ -69,11 +69,14 @@ A Lord of the Rings mod for Victoria 2
 	- [Ecthelion ii](https://www.deviantart.com/maelstromarts/art/The-White-Sanctuary-347365430)
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
+	- [Generic Gondor Image](https://fineartamerica.com/featured/white-tree-of-gondor-ellen-iati.html?product=tapestry)
 - Events
 	- [Introduction](https://www.theverge.com/2017/11/13/16644782/the-lord-of-the-rings-amazon-television-show)
 	- [Ecthelion II Fluff Event](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
 	- [Kingdom of Gondor](https://middle-earth-film-saga.fandom.com/wiki/Gondor?file=338c4d306b4577464bb410426afd247f_%25281%2529.jpg)
 	- [Comet Sighted](https://www.newscientist.com/article/2245355-longest-known-comet-tail-stretched-for-over-a-billion-kilometres/)
+	- [Dol Amroth](http://www.starsuncounted.com/2018/06/i-would-live-in-dol-amroth.html)
+	- [Gondor Map](https://static.wikia.nocookie.net/merp/images/c/c2/Gondor.jpg/revision/latest?cb=20121004101904)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units
