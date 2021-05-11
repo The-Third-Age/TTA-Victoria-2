@@ -6,13 +6,13 @@ infantry_tech_1 = {
 	unciv_military = yes
 
 	pikemen = {
-		attack = 1
-		defence = 3
+		attack = 2
+		defence = 4
 		supply_consumption = 0.1
 	}
 	swordsmen = {
-		attack = 2
-		defence = 2
+		attack = 3
+		defence = 3
 		supply_consumption = 0.1
 	}
 	
@@ -33,7 +33,22 @@ infantry_tech_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	pikemen = {
+		attack = 2
+		defence = 4
+		supply_consumption = 0.1
+	}
+	swordsmen = {
+		attack = 3
+		defence = 3
+		supply_consumption = 0.1
+	}
+	
+	infantry = {
+		attack = 2
+		defence = 2
+		supply_consumption = 0.1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -46,7 +61,22 @@ infantry_tech_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	pikemen = {
+		attack = 4
+		defence = 8
+		supply_consumption = 0.2
+	}
+	swordsmen = {
+		attack = 6
+		defence = 6
+		supply_consumption = 0.2
+	}
+	
+	infantry = {
+		attack = 4
+		defence = 4
+		supply_consumption = 0.2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -59,7 +89,22 @@ infantry_tech_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	pikemen = {
+		attack = 4
+		defence = 8
+		supply_consumption = 0.2
+	}
+	swordsmen = {
+		attack = 6
+		defence = 6
+		supply_consumption = 0.2
+	}
+	
+	infantry = {
+		attack = 4
+		defence = 4
+		supply_consumption = 0.2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -72,20 +117,22 @@ infantry_tech_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
+	pikemen = {
+		attack = 8
+		defence = 12
+		supply_consumption = 0.4
 	}
-}
-
-infantry_tech_6 = {
-	area = infantry_tech
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	swordsmen = {
+		attack = 12
+		defence = 12
+		supply_consumption = 0.4
+	}
+	
+	infantry = {
+		attack = 8
+		defence = 8
+		supply_consumption = 0.4
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -102,7 +149,7 @@ archer_tech_1 = {
 	archers = {
 		attack = 1
 		defence = 1
-		support = 0.25
+		support = 0.5
 		supply_consumption = 0.1
 	}
 	
@@ -117,7 +164,12 @@ archer_tech_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	archers = {
+		attack = 1
+		defence = 1
+		support = 0.5
+		supply_consumption = 0.1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -130,7 +182,12 @@ archer_tech_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	archers = {
+		attack = 1
+		defence = 1
+		support = 1
+		supply_consumption = 0.2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -143,7 +200,12 @@ archer_tech_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	archers = {
+		attack = 1
+		defence = 1
+		support = 1
+		supply_consumption = 0.2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -156,20 +218,12 @@ archer_tech_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
+	archers = {
+		attack = 2
+		defence = 2
+		support = 2
+		supply_consumption = 0.4
 	}
-}
-
-archer_tech_6 = {
-	area = archer_tech
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
 	
 	ai_chance = {
 		factor = 1
@@ -185,7 +239,7 @@ cavalry_tech_1 = {
 
 	heavy_cavalry = {
 		attack = 4
-		defence = 2
+		defence = 1
 		supply_consumption = 0.1
 	}
 	
@@ -197,7 +251,7 @@ cavalry_tech_1 = {
 	
 	scouts = {
 		attack = 3
-		defence = 2
+		defence = 1
 		supply_consumption = 0.1
 	}
 	
@@ -212,7 +266,23 @@ cavalry_tech_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	heavy_cavalry = {
+		attack = 4
+		defence = 1
+		supply_consumption = 0.1
+	}
+	
+	horse_archers = {
+		attack = 2
+		defence = 2
+		supply_consumption = 0.1
+	}
+	
+	scouts = {
+		attack = 3
+		defence = 1
+		supply_consumption = 0.1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -225,7 +295,24 @@ cavalry_tech_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	heavy_cavalry = {
+		attack = 8
+		defence = 4
+		supply_consumption = 0.2
+	}
+	
+	horse_archers = {
+		attack = 4
+		defence = 4
+		supply_consumption = 0.2
+	}
+	
+	scouts = {
+		attack = 6
+		defence = 2
+		supply_consumption = 0.2
+		reconnaissance = 1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -238,7 +325,23 @@ cavalry_tech_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	heavy_cavalry = {
+		attack = 8
+		defence = 4
+		supply_consumption = 0.2
+	}
+	
+	horse_archers = {
+		attack = 4
+		defence = 4
+		supply_consumption = 0.2
+	}
+	
+	scouts = {
+		attack = 6
+		defence = 2
+		supply_consumption = 0.2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -251,20 +354,23 @@ cavalry_tech_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
+	heavy_cavalry = {
+		attack = 16
+		defence = 8
+		supply_consumption = 0.2
 	}
-}
-
-cavalry_tech_6 = {
-	area = cavalry_tech
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	horse_archers = {
+		attack = 8
+		defence = 8
+		supply_consumption = 0.2
+	}
+	
+	scouts = {
+		attack = 12
+		defence = 4
+		supply_consumption = 0.2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -294,7 +400,11 @@ artillery_tech_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	artillery = {
+		attack = 1
+		defence = 1
+		supply_consumption = 0.1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -307,7 +417,11 @@ artillery_tech_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	artillery = {
+		attack = 1
+		defence = 1
+		supply_consumption = 0.2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -320,7 +434,11 @@ artillery_tech_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	artillery = {
+		attack = 1
+		defence = 1
+		supply_consumption = 0.2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -333,20 +451,12 @@ artillery_tech_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
+	artillery = {
+		attack = 2
+		defence = 2
+		siege = 1
+		supply_consumption = 0.4
 	}
-}
-
-artillery_tech_6 = {
-	area = artillery_tech
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
 	
 	ai_chance = {
 		factor = 1

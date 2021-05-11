@@ -19,7 +19,8 @@ fortifications_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	dig_in_cap = 1
+	max_fort = 1
 	
 	ai_chance = {
 		factor = 1
@@ -32,7 +33,8 @@ fortifications_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	dig_in_cap = 1
+	max_fort = 1
 	
 	ai_chance = {
 		factor = 1
@@ -45,7 +47,7 @@ fortifications_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	dig_in_cap = 1
 	
 	ai_chance = {
 		factor = 1
@@ -58,20 +60,7 @@ fortifications_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
-	}
-}
-
-fortifications_6 = {
-	area = fortifications
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	dig_in_cap = 1
 	
 	ai_chance = {
 		factor = 1
@@ -112,7 +101,21 @@ army_tactics_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	morale = 0.25
+	military_tactics = 0.25
+	combat_width = 2
+	
+	army_base = {
+		default_organisation = 5
+	}
+	
+	heavy_cavalry = {
+		default_organisation = 5
+	}
+	
+	pikemen = {
+		default_organisation = 5
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -125,7 +128,21 @@ army_tactics_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	morale = 0.25
+	military_tactics = 0.25
+	combat_width = 4
+	
+	army_base = {
+		default_organisation = 5
+	}
+	
+	heavy_cavalry = {
+		default_organisation = 5
+	}
+	
+	pikemen = {
+		default_organisation = 5
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -138,7 +155,21 @@ army_tactics_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	morale = 0.25
+	military_tactics = 0.25
+	combat_width = 6
+	
+	army_base = {
+		default_organisation = 5
+	}
+	
+	heavy_cavalry = {
+		default_organisation = 5
+	}
+	
+	pikemen = {
+		default_organisation = 5
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -151,20 +182,22 @@ army_tactics_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	morale = 0.5
+	military_tactics = 0.5
+	combat_width = 7
 	
-	ai_chance = {
-		factor = 1
+	army_base = {
+		maneuver = 1
+		default_organisation = 10
 	}
-}
-
-army_tactics_6 = {
-	area = army_tactics
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	heavy_cavalry = {
+		default_organisation = 10
+	}
+	
+	pikemen = {
+		default_organisation = 10
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -182,10 +215,10 @@ training_1 = {
 	org_regain = 0.05
 	
 	army_base = {
-		build_time = 5
+		build_time = 1
 		default_organisation = 5
 		supply_consumption = -0.05
-		discipline = 0.05
+		base_speed = 1
 	}
 	
 	ai_chance = {
@@ -199,7 +232,16 @@ training_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	unit = 1
+	regular_experience_level = 5
+	org_regain = 0.05
+	
+	army_base = {
+		build_time = 2
+		default_organisation = 5
+		supply_consumption = -0.05
+		discipline = 0.05
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -212,7 +254,14 @@ training_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	regular_experience_level = 5
+	org_regain = 0.05
+	
+	army_base = {
+		build_time = 3
+		default_organisation = 5
+		supply_consumption = -0.1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -225,7 +274,15 @@ training_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	regular_experience_level = 5
+	org_regain = 0.05
+	
+	army_base = {
+		build_time = 4
+		default_organisation = 5
+		supply_consumption = -0.1
+		discipline = 0.05
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -238,20 +295,17 @@ training_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	unit = 2
+	regular_experience_level = 5
+	org_regain = 0.05
 	
-	ai_chance = {
-		factor = 1
+	army_base = {
+		build_time = 5
+		default_organisation = 10
+		supply_consumption = -0.1
+		discipline = 0.1
+		maximum_speed = 1
 	}
-}
-
-training_6 = {
-	area = training
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
 	
 	ai_chance = {
 		factor = 1
@@ -312,19 +366,6 @@ naval_theory_4 = {
 }
 
 naval_theory_5 = {
-	area = naval_theory
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
-	}
-}
-
-naval_theory_6 = {
 	area = naval_theory
 	year = 2954
 	cost = 3600

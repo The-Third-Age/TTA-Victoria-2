@@ -16,7 +16,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Explore adding textures of notable places such as Minas Tirith
  
 ## Gameplay
- - Actually balance out goods, starting rgos, pops, ideology chances
+ - Actually balance out goods, starting rgos, pops, ideology chances, tech (especially military tech)
  - Pop promotion chances
  - Pop migration, assimilation, conversion (none)
  - Pop reform/party policy tendencies
