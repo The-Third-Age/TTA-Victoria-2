@@ -218,7 +218,7 @@ training_1 = {
 		build_time = 1
 		default_organisation = 5
 		supply_consumption = -0.05
-		base_speed = 1
+		maximum_speed = 1
 	}
 	
 	ai_chance = {
@@ -319,7 +319,13 @@ naval_theory_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	navy_base = {
+		default_organisation = 5
+		gun_power = 1
+	}
+	transport = {
+		gun_power = -1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -332,7 +338,13 @@ naval_theory_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	navy_base = {
+		default_organisation = 5
+		gun_power = 1
+	}
+	transport = {
+		gun_power = -1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -345,7 +357,13 @@ naval_theory_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	navy_base = {
+		default_organisation = 10
+		gun_power = 2
+	}
+	transport = {
+		gun_power = -2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -358,7 +376,13 @@ naval_theory_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	navy_base = {
+		default_organisation = 10
+		gun_power = 2
+	}
+	transport = {
+		gun_power = -2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -371,7 +395,13 @@ naval_theory_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	navy_base = {
+		default_organisation = 20
+		gun_power = 3
+	}
+	transport = {
+		gun_power = -3
+	}
 	
 	ai_chance = {
 		factor = 1
