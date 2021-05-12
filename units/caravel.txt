@@ -1,6 +1,6 @@
-manowar = {
-	icon = 9
-	naval_icon = 1
+caravel = {
+	icon = 14
+	naval_icon = 6
 	
 	sail = yes
 	
@@ -9,7 +9,7 @@ manowar = {
 	unit_type = big_ship
 	capital = yes
 	floating_flag = yes
-	colonial_points = 5
+	active = no
 
 	#Core Abilities
 	priority = 25
@@ -17,28 +17,26 @@ manowar = {
 	default_organisation = 30
 	maximum_speed = 5
 	weighted_value = 3.0
-	can_build_overseas = no
-
 
 	#Building Costs
 	build_time = 360
 	build_cost = {
-		clipper_convoy = 15
-		artillery = 10
+		clipper_convoy = 30
+		artillery = 15
 	}
-	min_port_level = 1
-	limit_per_port = -1
-	supply_consumption_score = 2
+	min_port_level = 2
+	limit_per_port = 2
+	supply_consumption_score = 5
 	
 	supply_consumption = 1.0
 	supply_cost = {
-		clipper_convoy = 0.24
-		artillery = 0.08 #0.16
+		clipper_convoy = 0.48
+		artillery = 0.12
 	}
 	
 	#Naval Abilties
-	hull = 4
-	gun_power = 8
+	hull = 8
+	gun_power = 14
 	fire_range = 0.58
 	evasion = 0
 }
