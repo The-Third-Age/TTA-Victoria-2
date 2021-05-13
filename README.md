@@ -87,6 +87,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Heavy Cavalry](https://opengameart.org/content/cavalry-sprite-for-freesiege)
 	- [Archers](https://www.deviantart.com/magecraft22/art/Archer-Pixel-Art-572073117)
 	- [Artillery](https://scribblenauts.fandom.com/wiki/Catapult)
+ - Flags
+	- [Rhun](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
+	- [Dorwinion](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 
 	
 ## References

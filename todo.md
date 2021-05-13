@@ -20,7 +20,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Pop promotion chances
  - Pop migration, assimilation, conversion (none)
  - Pop reform/party policy tendencies
- - Add ideology rebels
+ - Add rebels
  - Remove fascist/communist
  - Balance reform effects, figure out how to add `minimum_wage` effect to something
  - Inventions and tech schools
@@ -37,7 +37,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Update the new goods icons (horse and administrative services are probably ok)
  - Change modifier icons to LOTRy icons
  - Change the Vic2 interface to something more aesthetically pleasing
- - Search for pictures that can be used for events, decisions and terrain, generals, flags
+ - Images for events, decisions and terrain, generals, flags
  - 3d models/skins, both buildings and soldiers/ships? (long shot)
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
