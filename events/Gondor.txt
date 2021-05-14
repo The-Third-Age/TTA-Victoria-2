@@ -227,3 +227,149 @@ country_event = {
 		set_global_flag = da_independence_war
 	}
 }
+
+# Birth of Imrahil - Dol Amroth
+country_event = {
+	id = 50007
+	picture = birth
+	title = "An Heir Apparant"
+	desc = "EVTDESC50007"
+	
+	# Need to make sure the national leader is of Imrahil's house
+	trigger = {
+		year = 2955
+		tag = AMR
+		NOT = { has_global_flag = birth_of_imrahil }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "The line is secured"
+		
+		prestige = 5
+		# Launch event 16 years later getting Imharil as a general
+		set_global_flag = birth_of_imrahil
+	}
+}
+
+# Royal Wedding
+country_event = {
+	id = 50008
+	picture = wedding
+	title = "A Royal Wedding"
+	desc = "EVTDESC50008"
+	
+	# Need to make sure DA's national leader is of the line of Angelimir,
+	trigger = {
+		year = 2976
+		tag = GON
+		nationalvalue = ecthelion_ii
+		OR = {
+			owns = 71
+			AMR = {
+				exists = yes
+				owns = 71
+			}
+		}
+		NOT = { has_global_flag = wedding_denethor_finduilas }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "Now onto securing the line..."
+		
+		prestige = 5
+		random_country = {
+			limit = {
+				tag = AMR
+				exists = yes
+			}
+			country_event = 50009
+		}
+		set_global_flag = wedding_denethor_finduilas
+	}
+}
+
+# Royal Wedding - Dol Amroth
+country_event = {
+	id = 50009
+	picture = wedding
+	title = "A Royal Wedding"
+	desc = "EVTDESC50008"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good!"
+		
+		prestige = 5
+		relation = {
+			who = GON
+			value = 50
+		}
+	}
+}
+
+# Birth of Boromir 
+country_event = {
+	id = 50010
+	picture = birth
+	title = "An Heir to the Throne"
+	desc = "EVTDESC50010"
+	
+	trigger = {
+		year = 2978
+		tag = GON
+		# Or Denethor II
+		nationalvalue = ecthelion_ii
+		has_global_flag = wedding_denethor_finduilas
+		NOT = { has_global_flag = birth_of_boromir }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "The line is secured"
+		
+		prestige = 5
+		# Launch event 16 years later getting Boromir as a general
+		set_global_flag = birth_of_boromir
+	}
+}
+
+# Birth of Faramir
+country_event = {
+	id = 50011
+	picture = birth
+	title = "A Second Son!"
+	desc = "EVTDESC50011"
+	
+	trigger = {
+		year = 2983
+		tag = GON
+		# Or Denethor II
+		nationalvalue = ecthelion_ii
+		has_global_flag = birth_of_boromir
+		NOT = { has_global_flag = birth_of_faramir }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "He isn't Boromir"
+		
+		prestige = 5
+		# Launch event 16 years later getting Faramir as a general
+		set_global_flag = birth_of_faramir
+	}
+}

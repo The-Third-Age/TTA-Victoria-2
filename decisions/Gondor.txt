@@ -1,6 +1,7 @@
 # Gondor decisions:
 #	Gondor Start Decision (Unseen)
 #	Substate Annexation
+#	Province Flavor
 
 # Gondor Start Decision
 political_decisions = {
@@ -279,6 +280,7 @@ political_decisions = {
 	
 	annex_dol_amroth = {
 		picture = "gondor_noimage"
+		# Leader is Denethor II or Boromir or Faramir
 		potential = {
 			tag = GON
 			AMR = {
@@ -303,6 +305,30 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				has_global_flag = railroading_enabled
+			}
+		}
+	}
+}
+
+# Province Flavor
+political_decisions = {
+	houses_of_healing = {
+		potential = {
+			owns = 16
+			NOT = { 16 = { has_province_modifier = houses_of_healing } }
+			is_culture_group = dunedain
+		}
+		
+		allow = {
+			population_1 = 1
+		}
+		
+		effect = {
+			16 = { 
+				add_province_modifier = { 
+					name = houses_of_healing
+					duration = -1
+				}
 			}
 		}
 	}

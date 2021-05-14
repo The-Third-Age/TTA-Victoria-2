@@ -10,7 +10,13 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						tag = GON
+						OR = {
+							AND = {
+								primary_culture = dunedain
+								accepted_culture = gondorian
+							}
+							primary_culture = gondorian
+						}
 					}
 				}
 				owner = { country_event = { id = 40000 } }
@@ -29,7 +35,13 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						tag = GON
+						OR = {
+							AND = {
+								primary_culture = dunedain
+								accepted_culture = gondorian
+							}
+							primary_culture = gondorian
+						}
 					}
 				}
 				owner = { country_event = { id = 40001 } }
