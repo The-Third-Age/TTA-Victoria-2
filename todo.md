@@ -1,8 +1,5 @@
 # Basic TODOs
 Some are obvious, others are not. Just a smallish list at the moment. It clearly should be many times longer...
-
-## Overall
- - Get in-game descriptions set for LOTR rather than Victorian Era
  
 ## Map
  - Finish up the "new" terrain, river, provinces map
