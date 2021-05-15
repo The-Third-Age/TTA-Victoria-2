@@ -70,6 +70,9 @@ A Lord of the Rings mod for Victoria 2
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
 	- [Generic Gondor Image](https://fineartamerica.com/featured/white-tree-of-gondor-ellen-iati.html?product=tapestry)
+	- [Houses of Healing](http://tolkiengateway.net/wiki/File:Mat%C4%9Bj_%C4%8Cadil_-_The_Hands_of_the_King_are_the_Hands_of_the_Healer.jpeg)
+	- [Wedding](http://www.councilofelrond.com/imagegallery/eowyn-and-faramir-8/)
+	- [Birth](http://fantasiadomain.com/lotrcameo/extras.html)
 - Events
 	- [Introduction](https://www.theverge.com/2017/11/13/16644782/the-lord-of-the-rings-amazon-television-show)
 	- [Ecthelion II Fluff Event](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
@@ -87,6 +90,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Heavy Cavalry](https://opengameart.org/content/cavalry-sprite-for-freesiege)
 	- [Archers](https://www.deviantart.com/magecraft22/art/Archer-Pixel-Art-572073117)
 	- [Artillery](https://scribblenauts.fandom.com/wiki/Catapult)
+ - Flags
+	- [Rhun](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
+	- [Dorwinion](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 
 	
 ## References

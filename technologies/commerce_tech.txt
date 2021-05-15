@@ -3,9 +3,9 @@ farming_tech_1 = {
 	area = farming_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	farm_rgo_size = 0.1
+	farm_rgo_eff = 0.2
 	
 	ai_chance = {
 		factor = 1
@@ -16,9 +16,9 @@ farming_tech_2 = {
 	area = farming_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	farm_rgo_size = 0.1
+	farm_rgo_eff = 0.2
 	
 	ai_chance = {
 		factor = 1
@@ -29,9 +29,9 @@ farming_tech_3 = {
 	area = farming_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	farm_rgo_size = 0.2
+	farm_rgo_eff = 0.4
 	
 	ai_chance = {
 		factor = 1
@@ -42,9 +42,9 @@ farming_tech_4 = {
 	area = farming_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	farm_rgo_size = 0.2
+	farm_rgo_eff = 0.4
 	
 	ai_chance = {
 		factor = 1
@@ -55,22 +55,9 @@ farming_tech_5 = {
 	area = farming_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
 	
-	ai_chance = {
-		factor = 1
-	}
-}
-
-farming_tech_6 = {
-	area = farming_tech
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	farm_rgo_size = 0.4
+	farm_rgo_eff = 0.8
 	
 	ai_chance = {
 		factor = 1
@@ -82,9 +69,9 @@ mining_tech_1 = {
 	area = mining_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	mine_rgo_size = 0.1
+	mine_rgo_eff = 0.2
 	
 	ai_chance = {
 		factor = 1
@@ -95,9 +82,9 @@ mining_tech_2 = {
 	area = mining_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	mine_rgo_size = 0.1
+	mine_rgo_eff = 0.2
 	
 	ai_chance = {
 		factor = 1
@@ -108,9 +95,9 @@ mining_tech_3 = {
 	area = mining_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	mine_rgo_size = 0.2
+	mine_rgo_eff = 0.4
 	
 	ai_chance = {
 		factor = 1
@@ -121,9 +108,9 @@ mining_tech_4 = {
 	area = mining_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	mine_rgo_size = 0.2
+	mine_rgo_eff = 0.4
 	
 	ai_chance = {
 		factor = 1
@@ -134,22 +121,9 @@ mining_tech_5 = {
 	area = mining_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
 	
-	ai_chance = {
-		factor = 1
-	}
-}
-
-mining_tech_6 = {
-	area = mining_tech
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	mine_rgo_size = 0.4
+	mine_rgo_eff = 0.8
 	
 	ai_chance = {
 		factor = 1
@@ -161,9 +135,10 @@ guilds_1 = {
 	area = guilds
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	factory_output = 0.01
+	factory_input = -0.01
+	factory_throughput = 0.1
 	
 	ai_chance = {
 		factor = 1
@@ -174,9 +149,10 @@ guilds_2 = {
 	area = guilds
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	factory_output = 0.01
+	factory_input = -0.01
+	factory_throughput = 0.1
 	
 	ai_chance = {
 		factor = 1
@@ -187,9 +163,10 @@ guilds_3 = {
 	area = guilds
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	factory_output = 0.02
+	factory_input = -0.02
+	factory_throughput = 0.2
 	
 	ai_chance = {
 		factor = 1
@@ -200,9 +177,10 @@ guilds_4 = {
 	area = guilds
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	factory_output = 0.02
+	factory_input = -0.02
+	factory_throughput = 0.2
 	
 	ai_chance = {
 		factor = 1
@@ -213,22 +191,10 @@ guilds_5 = {
 	area = guilds
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
 	
-	ai_chance = {
-		factor = 1
-	}
-}
-
-guilds_6 = {
-	area = guilds
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	factory_output = 0.04
+	factory_input = -0.04
+	factory_throughput = 0.4
 	
 	ai_chance = {
 		factor = 1
@@ -240,9 +206,14 @@ infrastructure_tech_1 = {
 	area = infrastructure_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	activate_building = railroad
+	supply_limit = 0.1
+	mobilisation_size = 0.01
+	mobilisation_economy_impact = -0.01
+	land_attrition = -0.01
+	soldier_to_pop_loss = 0.01
+	reinforce_rate = 0.02
 	
 	ai_chance = {
 		factor = 1
@@ -253,9 +224,14 @@ infrastructure_tech_2 = {
 	area = infrastructure_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	max_railroad = 1
+	supply_limit = 0.1
+	mobilisation_size = 0.01
+	mobilisation_economy_impact = -0.01
+	land_attrition = -0.01
+	soldier_to_pop_loss = 0.01
+	reinforce_rate = 0.02
 	
 	ai_chance = {
 		factor = 1
@@ -266,9 +242,14 @@ infrastructure_tech_3 = {
 	area = infrastructure_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	max_railroad = 1
+	supply_limit = 0.2
+	mobilisation_size = 0.01
+	mobilisation_economy_impact = -0.01
+	land_attrition = -0.02
+	soldier_to_pop_loss = 0.01
+	reinforce_rate = 0.04
 	
 	ai_chance = {
 		factor = 1
@@ -279,9 +260,13 @@ infrastructure_tech_4 = {
 	area = infrastructure_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	
+	supply_limit = 0.2
+	mobilisation_size = 0.01
+	mobilisation_economy_impact = -0.01
+	land_attrition = -0.02
+	soldier_to_pop_loss = 0.01
+	reinforce_rate = 0.04
 	
 	ai_chance = {
 		factor = 1
@@ -292,22 +277,13 @@ infrastructure_tech_5 = {
 	area = infrastructure_tech
 	year = 2954
 	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
 	
-	ai_chance = {
-		factor = 1
-	}
-}
-
-infrastructure_tech_6 = {
-	area = infrastructure_tech
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	supply_limit = 0.4
+	mobilisation_size = 0.01
+	mobilisation_economy_impact = -0.01
+	land_attrition = -0.04
+	soldier_to_pop_loss = 0.01
+	reinforce_rate = 0.08
 	
 	ai_chance = {
 		factor = 1

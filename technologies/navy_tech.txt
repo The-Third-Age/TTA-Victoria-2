@@ -5,7 +5,12 @@ merchant_marine_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	transport = {
+		hull = 1
+	}
+	supply_range = 0.05
+	naval_attrition = -0.01
+	activate_building = naval_base
 	
 	ai_chance = {
 		factor = 1
@@ -18,7 +23,12 @@ merchant_marine_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	transport = {
+		hull = 1
+	}
+	supply_range = 0.05
+	naval_attrition = -0.01
+	max_naval_base = 1
 	
 	ai_chance = {
 		factor = 1
@@ -31,7 +41,12 @@ merchant_marine_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	transport = {
+		hull = 1
+	}
+	supply_range = 0.1
+	naval_attrition = -0.02
+	max_naval_base = 1
 	
 	ai_chance = {
 		factor = 1
@@ -44,7 +59,11 @@ merchant_marine_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	transport = {
+		hull = 1
+	}
+	supply_range = 0.1
+	naval_attrition = -0.02
 	
 	ai_chance = {
 		factor = 1
@@ -57,20 +76,11 @@ merchant_marine_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
+	transport = {
+		hull = 1
 	}
-}
-
-merchant_marine_6 = {
-	area = merchant_marine
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	supply_range = 0.2
+	naval_attrition = -0.04
 	
 	ai_chance = {
 		factor = 1
@@ -84,7 +94,18 @@ light_ships_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	galley = {
+		hull = 4
+		gun_power = 1
+	}
+	galleass = {
+		hull = 4
+		gun_power = 1
+	}
+	galiot = {
+		hull = 4
+		gun_power = 1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -97,7 +118,18 @@ light_ships_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	galley = {
+		hull = 4
+		gun_power = 1
+	}
+	galleass = {
+		hull = 4
+		gun_power = 1
+	}
+	galiot = {
+		hull = 4
+		gun_power = 1
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -110,7 +142,19 @@ light_ships_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	galley = {
+		hull = 8
+		gun_power = 2
+	}
+	galleass = {
+		hull = 8
+		gun_power = 2
+	}
+	galiot = {
+		hull = 8
+		gun_power = 2
+	}
+	activate_unit = galleass
 	
 	ai_chance = {
 		factor = 1
@@ -123,7 +167,20 @@ light_ships_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	galley = {
+		hull = 8
+		gun_power = 2
+	}
+	galleass = {
+		hull = 8
+		gun_power = 2
+		torpedo_attack = 2
+	}
+	galiot = {
+		hull = 8
+		gun_power = 2
+		torpedo_attack = 2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -136,20 +193,21 @@ light_ships_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
+	galley = {
+		hull = 16
+		gun_power = 4
 	}
-}
-
-light_ships_6 = {
-	area = light_ships
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	galleass = {
+		hull = 16
+		gun_power = 4
+		torpedo_attack = 2
+	}
+	galiot = {
+		hull = 16
+		gun_power = 4
+		torpedo_attack = 8
+	}
+	activate_unit = galiot
 	
 	ai_chance = {
 		factor = 1
@@ -163,7 +221,18 @@ heavy_ships_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	cog = {
+		hull = 6
+		gun_power = 2
+	}
+	caravel = {
+		hull = 6
+		gun_power = 2
+	}
+	brigantine = {
+		hull = 6
+		gun_power = 2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -176,7 +245,18 @@ heavy_ships_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	cog = {
+		hull = 6
+		gun_power = 2
+	}
+	caravel = {
+		hull = 6
+		gun_power = 2
+	}
+	brigantine = {
+		hull = 6
+		gun_power = 2
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -189,7 +269,19 @@ heavy_ships_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	cog = {
+		hull = 12
+		gun_power = 4
+	}
+	caravel = {
+		hull = 12
+		gun_power = 4
+	}
+	brigantine = {
+		hull = 12
+		gun_power = 4
+	}
+	activate_unit = caravel
 	
 	ai_chance = {
 		factor = 1
@@ -202,7 +294,18 @@ heavy_ships_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	cog = {
+		hull = 12
+		gun_power = 4
+	}
+	caravel = {
+		hull = 12
+		gun_power = 4
+	}
+	brigantine = {
+		hull = 12
+		gun_power = 4
+	}
 	
 	ai_chance = {
 		factor = 1
@@ -215,20 +318,19 @@ heavy_ships_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
+	cog = {
+		hull = 24
+		gun_power = 8
 	}
-}
-
-heavy_ships_6 = {
-	area = heavy_ships
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	caravel = {
+		hull = 24
+		gun_power = 8
+	}
+	brigantine = {
+		hull = 24
+		gun_power = 8
+	}
+	activate_unit = brigantine
 	
 	ai_chance = {
 		factor = 1
@@ -242,7 +344,13 @@ naval_construction_1 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	navy_base = {
+		hull = 1
+		maximum_speed = 1
+		build_time = -10
+	}
+	supply_range = 0.1
+	naval_attrition = -0.02
 	
 	ai_chance = {
 		factor = 1
@@ -255,7 +363,13 @@ naval_construction_2 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	navy_base = {
+		hull = 1
+		maximum_speed = 1
+		build_time = -10
+	}
+	supply_range = 0.1
+	naval_attrition = -0.02
 	
 	ai_chance = {
 		factor = 1
@@ -268,7 +382,13 @@ naval_construction_3 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	navy_base = {
+		hull = 2
+		maximum_speed = 2
+		build_time = -10
+	}
+	supply_range = 0.2
+	naval_attrition = -0.04
 	
 	ai_chance = {
 		factor = 1
@@ -281,7 +401,13 @@ naval_construction_4 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
+	navy_base = {
+		hull = 2
+		maximum_speed = 2
+		build_time = -10
+	}
+	supply_range = 0.2
+	naval_attrition = -0.04
 	
 	ai_chance = {
 		factor = 1
@@ -294,20 +420,13 @@ naval_construction_5 = {
 	cost = 3600
 	unciv_military = yes
 
-	prestige = 1
-	
-	ai_chance = {
-		factor = 1
+	navy_base = {
+		hull = 4
+		maximum_speed = 4
+		build_time = -10
 	}
-}
-
-naval_construction_6 = {
-	area = naval_construction
-	year = 2954
-	cost = 3600
-	unciv_military = yes
-
-	prestige = 1
+	supply_range = 0.4
+	naval_attrition = -0.08
 	
 	ai_chance = {
 		factor = 1

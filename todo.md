@@ -1,8 +1,5 @@
 # Basic TODOs
 Some are obvious, others are not. Just a smallish list at the moment. It clearly should be many times longer...
-
-## Overall
- - Get in-game descriptions set for LOTR rather than Victorian Era
  
 ## Map
  - Finish up the "new" terrain, river, provinces map
@@ -16,35 +13,34 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Explore adding textures of notable places such as Minas Tirith
  
 ## Gameplay
- - Actually balance out goods, starting rgos, pops, ideology chances
+ - Actually balance out goods, starting rgos, pops, ideology chances, tech
  - Pop promotion chances
  - Pop migration, assimilation, conversion (none)
  - Pop reform/party policy tendencies
- - Add ideology rebels
+ - Add rebels
  - Remove fascist/communist
  - Balance reform effects, figure out how to add `minimum_wage` effect to something
- - Tech and Inventions and tech schools
+ - Inventions and tech schools
  - "Unciv" reforms?
  - Cultures and Pops
  - Rework kept vanilla decisions/events
  - Province terrains
  - Figure out 6 regions to use a continents (to reskin the vanilla ones)
  - What to replace plurality with
- - General/Admiral spawn decisions/events
- - Naval units
  - Revanchism
  - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/Education Spending/National Stockpile Spending
+ - Gas Attack?
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
  - Change modifier icons to LOTRy icons
  - Change the Vic2 interface to something more aesthetically pleasing
- - Search for pictures that can be used for events, decisions and terrain, generals, flags
+ - Images for events, decisions and terrain, generals, flags
  - 3d models/skins, both buildings and soldiers/ships? (long shot)
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
  - Serf POP icon
- - Land unit icons
+ - Land and Naval unit icons
 
 ## Flavor
  - Haradrim Tribes/Khand/Rhun formed as a cultural union
