@@ -8,14 +8,35 @@ political_decisions = {
 		potential = {
 			NOT = { has_global_flag = fluff_disabled }
 			ai = no
-			tag = GON
+			OR = {
+				tag = GON
+				substate_of = GON
+			}
 		}
 		
 		allow = {
 		}
 		
 		effect = {
-			country_event = 35000
+			# Gondor
+			random_owned = {
+				limit = {
+					owner = {
+						tag = GON
+					}
+				}
+				owner = { country_event = 35000 }
+			}
+			
+			# Gondor Substates
+			random_owned = {
+				limit = {
+					owner = {
+						substate_of = GON
+					}
+				}
+				owner = { country_event = 35004 }
+			}
 		}
 	}
 }
