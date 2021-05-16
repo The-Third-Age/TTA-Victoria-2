@@ -70,6 +70,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Angelimir](https://ar.pinterest.com/pin/512636370079480435/)
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
+	- [Principality of Dol Amroth](https://en.everybodywiki.com/Dol_Amroth)
 	- [Generic Gondor Image](https://fineartamerica.com/featured/white-tree-of-gondor-ellen-iati.html?product=tapestry)
 	- [Houses of Healing](http://tolkiengateway.net/wiki/File:Mat%C4%9Bj_%C4%8Cadil_-_The_Hands_of_the_King_are_the_Hands_of_the_Healer.jpeg)
 	- [Wedding](http://www.councilofelrond.com/imagegallery/eowyn-and-faramir-8/)

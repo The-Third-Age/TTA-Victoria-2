@@ -14,8 +14,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = {
-		}
+		allow = { }
 		
 		effect = {
 			# Gondor
@@ -37,6 +36,21 @@ political_decisions = {
 				}
 				owner = { country_event = 35004 }
 			}
+		}
+	}
+	
+	principality_of_dol_amroth = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = AMR
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35005
 		}
 	}
 }
