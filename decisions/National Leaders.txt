@@ -10,11 +10,25 @@ political_decisions = {
 			nationalvalue = ecthelion_ii
 		}
 		
-		allow = {
-		}
+		allow = { }
 		
 		effect = {
 			country_event = 30000
+		}
+	}
+	
+	prince_angelimir = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = angelimir
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30008
 		}
 	}
 }

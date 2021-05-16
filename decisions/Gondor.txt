@@ -1,9 +1,9 @@
 # Gondor decisions:
-#	Gondor Start Decision (Unseen)
+#	Starting Decisions (Unseen)
 #	Substate Annexation
 #	Province Flavor
 
-# Gondor Start Decision
+# Starting Decisions
 political_decisions = {
 	gondor_start_decision = {
 		potential = {
@@ -19,6 +19,22 @@ political_decisions = {
 				duration = -1
 			}
 			prestige = 100000
+		}
+	}
+	
+	dol_amroth_start_decision = {
+		potential = {
+			tag = AMR
+			always = no
+		}
+		
+		allow = { }
+		
+		effect = {
+			add_country_modifier = {
+				name = angelimir_modifier
+				duration = -1
+			}
 		}
 	}
 }
