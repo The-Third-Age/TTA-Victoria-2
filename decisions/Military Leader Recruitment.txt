@@ -1,13 +1,13 @@
 political_decisions = {
 	recruit_generals = {
 		potential = {
-			NOT = { has_country_modifier = recruited_leaders }
+			NOT = { has_country_modifier = recruited_generals }
 		}
 		
 		allow = { }
 		
 		effect = {
-			add_country_modifier = { name = recruited_leaders duration = 1 }
+			add_country_modifier = { name = recruited_generals duration = 1 }
 			
 			# Southern Dúnedain and Gondorian
 			random_owned = {
@@ -29,13 +29,14 @@ political_decisions = {
 	
 	recruit_admirals = {
 		potential = {
-			NOT = { has_country_modifier = recruited_leaders }
+			NOT = { has_country_modifier = recruited_admirals }
+			any_owned_province = { port = yes }
 		}
 		
 		allow = { }
 		
 		effect = {
-			add_country_modifier = { name = recruited_leaders duration = 1 }
+			add_country_modifier = { name = recruited_admirals duration = 1 }
 			
 			# Southern Dúnedain and Gondorian
 			random_owned = {

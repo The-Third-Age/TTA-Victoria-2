@@ -12,8 +12,8 @@ country_event = {
 	
 	option = {
 		name = "Standard Generals"
-		remove_country_modifier = recruited_leaders
-		add_country_modifier = { name = recruited_leaders duration = 730 }
+		remove_country_modifier = recruited_generals
+		add_country_modifier = { name = recruited_generals duration = 730 }
 		
 		random_list = {
 			1 = { define_general = { name = "Amrod Udalraph" background = no_personality personality = harsh } }
@@ -529,12 +529,20 @@ country_event = {
 			1 = { define_general = { name = "Baragund Mallorion" background = nobleman_good personality = brash } }
 			1 = { define_general = { name = "Artamir of Lossarnach" background = officer personality = heroic } }
 		}
+	
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				unit_has_leader = yes
+			}
+		}
 	}
 	
 	option = {
 		name = "Better Generals"
-		remove_country_modifier = recruited_leaders
-		add_country_modifier = { name = recruited_leaders duration = 1825 }
+		remove_country_modifier = recruited_generals
+		add_country_modifier = { name = recruited_generals duration = 1825 }
 		
 		random_list = {
 			1 = { define_general = { name = "Adrahil of Ethring" background = officer personality = ballsy } }
@@ -844,6 +852,10 @@ country_event = {
 			1 = { define_general = { name = "Baramdir Duillion" background = nobleman_good personality = ballsy } }
 			1 = { define_general = { name = "Arciryas of Osgiliath" background = nobleman_good personality = inspiring } }
 		}
+	
+		ai_chance = {
+			factor = 50
+		}
 	}
 }
 
@@ -858,8 +870,8 @@ country_event = {
 	
 	option = {
 		name = "Standard Admirals"
-		remove_country_modifier = recruited_leaders
-		add_country_modifier = { name = recruited_leaders duration = 730 }
+		remove_country_modifier = recruited_admirals
+		add_country_modifier = { name = recruited_admirals duration = 730 }
 		
 		random_list = {
 			1 = { define_admiral = { name = "Dervorin of Cair Andros" background = officer personality = stout } }
@@ -1375,12 +1387,20 @@ country_event = {
 			1 = { define_admiral = { name = "Beren of the City" background = nobleman_good personality = persistent } }
 			1 = { define_admiral = { name = "Eärnil of the White Tower" background = no_personality personality = reserved } }
 		}
+	
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				unit_has_leader = yes
+			}
+		}
 	}
 	
 	option = {
 		name = "Better Admirals"
-		remove_country_modifier = recruited_leaders
-		add_country_modifier = { name = recruited_leaders duration = 1825 }
+		remove_country_modifier = recruited_admirals
+		add_country_modifier = { name = recruited_admirals duration = 1825 }
 		
 		random_list = {
 			1 = { define_admiral = { name = "Aldamir of the Tree" background = nobleman_good personality = reserved } }
@@ -1689,6 +1709,14 @@ country_event = {
 			1 = { define_admiral = { name = "Abonnen Iarwain" background = nobleman personality = heroic } }
 			1 = { define_admiral = { name = "Ídhron Inglorion" background = officer personality = resolute } }
 			1 = { define_admiral = { name = "Ioreth of the City" background = nobleman_good personality = defiant } }
+		}
+	
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				unit_has_leader = yes
+			}
 		}
 	}
 }
