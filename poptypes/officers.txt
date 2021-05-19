@@ -57,8 +57,7 @@ life_needs = {
 }
 
 
-country_migration_target =
-{
+country_migration_target = {
 	factor = 1
 
 	modifier = {
@@ -94,26 +93,10 @@ country_migration_target =
 		unemployment = 0.5
 	}
 	modifier = {
-		factor = 1.2
-		is_greater_power = yes
-	}
-	modifier = {
 		factor = 2.0
 		has_pop_culture = THIS
 	}
 	modifier = {
-		factor = 1.05
-		vote_franschise = wealth_voting
-	}
-	modifier = {
-		factor = 1.25
-		vote_franschise = universal_weighted_voting
-	}
-	modifier = {
-		factor = 1.5
-		vote_franschise = universal_voting
-	}
-		modifier = {
 		factor = 0.1
 		NOT = {
 			any_owned_province = {
@@ -128,8 +111,12 @@ country_migration_target =
 						NOT = { unemployment_by_type = { value = 0.1 type = farmers } }
 					}
 					AND = {
+						has_pop_type = clerks
+						NOT = { unemployment_by_type = { value = 0.1 type = clerks } }
+					}
+					AND = {
 						state_scope = { has_factories = yes }
-						NOT = { unemployment_by_type = { value = 0.1 type = farmers } }
+						NOT = { unemployment_by_type = { value = 0.1 type = craftsmen } }
 					}
 				}
 			}
@@ -137,8 +124,7 @@ country_migration_target =
 	}
 }
 
-migration_target =
-{
+migration_target = {
 	factor = 0.01
 	
 	modifier = {
@@ -146,12 +132,14 @@ migration_target =
 		unemployment = 0.1
 		state_scope = {
 			has_factories = no
-			}
+		}
 	}
+	
 	modifier = {
 		factor = 1.2
 		total_pops = 150000
-	}	
+	}
+
 	modifier = {
 		factor = 1.2
 		total_pops = 250000
@@ -163,18 +151,19 @@ migration_target =
 	modifier = {
 		factor = 1.2
 		total_pops = 750000
-	}	
+	}
 	modifier = {
 		factor = 0
-					AND = {
-				state_scope = {
-					has_factories = no
-				}
-				can_build_factory = no
+		AND = {
+			state_scope = {
+				has_factories = no
 			}
+			can_build_factory = no
+		}
 		OR = { 
-			unemployment_by_type = { type = farmers value = 0.1  }
-			unemployment_by_type = { type = labourers value = 0.1  }
+			unemployment_by_type = { type = farmers value = 0.1 }
+			unemployment_by_type = { type = labourers value = 0.1 }
+			unemployment_by_type = { type = clerks value = 0.1 }
 		}
 	}
 	modifier = {
@@ -184,8 +173,8 @@ migration_target =
 	modifier = {
 		factor = 2
 		state_scope = {
-					has_factories = yes
-				}
+			has_factories = yes
+		}
 	}
 	modifier = {
 		factor = 1.2
@@ -213,23 +202,6 @@ migration_target =
 		factor = 1.05
 		is_coastal = yes
 	}
-	
-	modifier = {
-		factor = 0.6
-		terrain = mountain
-	}
-	modifier = {
-		factor = 0.1
-		terrain = desert
-	}
-	modifier = {
-		factor = 0.6
-		terrain = marsh
-	}
-	modifier = {
-		factor = 0.1
-		terrain = arctic
-	}
 	modifier = {
 		factor = 2
 		life_rating = 40
@@ -240,10 +212,8 @@ migration_target =
 	}
 }
 
-promote_to =
-{
-soldiers =
-	{
+promote_to = {
+	soldiers = {
 		factor = 0.01
 		group = {
 			modifier = {
@@ -317,22 +287,6 @@ soldiers =
 		group = {
 			modifier = {
 				factor = -2
-				soldiers = 0.005
-			}
-			modifier = {
-				factor = -2
-				soldiers = 0.01
-			}
-			modifier = {
-				factor = -2
-				soldiers = 0.015
-			}
-			modifier = {
-				factor = -2
-				soldiers = 0.02
-			}
-			modifier = {
-				factor = -2
 				soldiers = 0.025
 			}
 			modifier = {
@@ -357,8 +311,7 @@ soldiers =
 			}
 		}
 	}
-	clergymen =
-	{
+	clergymen = {
 		factor = 0.01
 		group = {
 			modifier = {
@@ -470,35 +423,8 @@ soldiers =
 				clergymen = 0.04
 			}						
 		}
-		group = {
-			modifier = {
-				factor = -0.5
-				consciousness = 2
-			}
-			modifier = {
-				factor = -0.5
-				consciousness = 4
-			}
-			modifier = {
-				factor = -0.5
-				consciousness = 5
-			}
-			modifier = {
-				factor = -1
-				consciousness = 6
-			}
-			modifier = {
-				factor = -1.5
-				consciousness = 7
-			}
-			modifier = {
-				factor = -2
-				consciousness = 8
-			}
-		}
 	}
-	bureaucrats =
-	{
+	bureaucrats = {
 		factor = 0.01
 		modifier = {
 			factor = -100 
@@ -661,8 +587,7 @@ soldiers =
 			}
 		}
 	}
-	aristocrats = 
-	{
+	aristocrats = {
 		factor = 0.01
 		
 		modifier = {

@@ -1,6 +1,12 @@
 #general promote mtth, same for all pops
 promotion_chance = {
 	factor = 0.25
+	modifier = {
+		factor = 400
+		unemployment = 0.99
+		strata = poor
+		location = { produces = administrative_services }
+	}
 	group = {
 		modifier = {
 			factor = 0.02
@@ -109,6 +115,12 @@ promotion_chance = {
 
 demotion_chance = {
 	factor = 1
+	modifier = {
+		factor = 100
+		unemployment = 0.99
+		strata = middle
+		NOT = { location = { produces = administrative_services } }
+	}
 	modifier = {
 		factor = -0.1
 		not = { religion = this }

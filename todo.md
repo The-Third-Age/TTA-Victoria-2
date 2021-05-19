@@ -14,7 +14,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation
- - Individual pop promotion chances
  - Pop reform/party policy tendencies
  - Add rebels
  - Remove fascist/communist
