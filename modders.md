@@ -4,7 +4,7 @@
  - As with any project that multiple people are working on, it is likely that each person has their own beliefs for how things should be done. This document is meant to solve those disagreements.
  - This can cause many unindended issues (especially localization issues), which comes from duplicated event ids, decision names and localisations.
  - Additionally, many Vic II mods end up with file systems looking like the following image; hundreds of files, many with just a couple of lines of code. This is rather poor organization and can actually make modding harder!
-	![Poor File Structure](modders/bad_file_structure.png)
+	![Poor File Structure](modders/bad_file_structure.png)\
 	Not to pick on GFM, but the file structure is rather poorly organized. This is a combination of merging in many mods, many modders working on the mod and the lack of set rules to keep this from happening. This is just my estimation, but if one were to run the application that notifies the user of duplicated localisations, I would guess at least 10% of their localisation lines would be duplicates.
 	
 ## The Rules
