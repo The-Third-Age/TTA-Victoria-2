@@ -32,4 +32,19 @@ political_decisions = {
 			country_event = 30008
 		}
 	}
+	
+	dark_lord_sauron = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = sauron
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30016
+		}
+	}
 }

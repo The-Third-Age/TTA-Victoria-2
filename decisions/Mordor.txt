@@ -1,0 +1,20 @@
+# Mordor Decisions:
+#	Starting Decision (Unseen)
+
+# Starting Decision
+political_decisions = {
+	mordor_start_decision = {
+		potential = {
+			tag = MOR
+			always = no
+		}
+		
+		allow = { }
+		
+		effect = {
+			add_country_modifier = {
+				name = sauron_modifier
+				duration = -1
+			}
+		}
+	}

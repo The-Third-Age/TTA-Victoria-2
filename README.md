@@ -68,20 +68,24 @@ A Lord of the Rings mod for Victoria 2
 - National Leaders
 	- [Ecthelion ii](https://www.deviantart.com/maelstromarts/art/The-White-Sanctuary-347365430)
 	- [Angelimir](https://ar.pinterest.com/pin/512636370079480435/)
+	- [Sauron](https://www.reddit.com/r/lotr/comments/9vpfef/the_eye_of_sauron/)
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
 	- [Principality of Dol Amroth](https://en.everybodywiki.com/Dol_Amroth)
+	- [Shadow of Mordor](https://www.pngwing.com/en/free-png-nuvgy)
 	- [Generic Gondor Image](https://fineartamerica.com/featured/white-tree-of-gondor-ellen-iati.html?product=tapestry)
 	- [Houses of Healing](http://tolkiengateway.net/wiki/File:Mat%C4%9Bj_%C4%8Cadil_-_The_Hands_of_the_King_are_the_Hands_of_the_Healer.jpeg)
-	- [Wedding](http://www.councilofelrond.com/imagegallery/eowyn-and-faramir-8/)
-	- [Birth](http://fantasiadomain.com/lotrcameo/extras.html)
 - Events
 	- [Introduction](https://www.theverge.com/2017/11/13/16644782/the-lord-of-the-rings-amazon-television-show)
 	- [Ecthelion II Fluff Event](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
 	- [Kingdom of Gondor](https://middle-earth-film-saga.fandom.com/wiki/Gondor?file=338c4d306b4577464bb410426afd247f_%25281%2529.jpg)
+	- [Shadow of Mordor](https://www.pinterest.com/pin/379287599869351678/)
 	- [Comet Sighted](https://www.newscientist.com/article/2245355-longest-known-comet-tail-stretched-for-over-a-billion-kilometres/)
 	- [Dol Amroth](http://www.starsuncounted.com/2018/06/i-would-live-in-dol-amroth.html)
 	- [Gondor Map](https://static.wikia.nocookie.net/merp/images/c/c2/Gondor.jpg/revision/latest?cb=20121004101904)
+	- [Landscape around the Eye](https://wallpaperaccess.com/eye-of-sauron)
+	- [Wedding](http://www.councilofelrond.com/imagegallery/eowyn-and-faramir-8/)
+	- [Birth](http://fantasiadomain.com/lotrcameo/extras.html)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units
