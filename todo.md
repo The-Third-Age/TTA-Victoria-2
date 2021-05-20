@@ -21,7 +21,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Inventions and tech schools
  - "Unciv" reforms?
  - Cultures and Pops
- - Rework kept vanilla decisions/events
+ - Rework kept vanilla events
  - Province terrains
  - Figure out 6 regions to use a continents (to reskin the vanilla ones)
  - What to replace plurality with

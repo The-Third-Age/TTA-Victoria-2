@@ -1,3 +1,7 @@
+# Political Decisions
+# Political
+
+# Political
 political_decisions = {
 	leave_soi = {
 		alert = no
@@ -5,6 +9,7 @@ political_decisions = {
 			part_of_sphere = yes
 			
 		}
+		
 		allow = {
 			is_secondary_power = yes
 			sphere_owner = {
@@ -17,14 +22,14 @@ political_decisions = {
 				}
 			}
 		}
+		
 		effect = {
 			sphere_owner = {
 				diplomatic_influence = {
 					who = THIS
 					value = -200
 				}
-			# Need to fix this event call
-			country_event = { id=13201 days=0 }
+				country_event = 13201
 			}
 		}
 		
@@ -42,13 +47,14 @@ political_decisions = {
 	
 	nationalize = {
 		alert = no
-			
 		potential = {
 			can_nationalize = yes 
 		}
+		
 		allow = {
 			NOT = { part_of_sphere = yes }
 		}
+		
 		effect = {
 			nationalize = yes
 		}
