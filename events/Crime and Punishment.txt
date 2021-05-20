@@ -1,9 +1,12 @@
+# Crime and Punishment Events: {
+#	22000 - 22999 }
+
 # Murder!
 country_event = {
-	id = 22030
-	title = "EVTNAME22030"
-	desc = "EVTDESC22030"
-	picture = "jacktheripper"
+	id = 22000
+	title = "Foul Murder!"
+	desc = "EVTDESC22000"
+	picture = "murderer"
 	
 	trigger = {
 		NOT = {
@@ -32,7 +35,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA22030"
+		name = "Find a killer!"
 		random_state = {
 			rich_strata = {
 				militancy = 0.5
@@ -45,7 +48,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB22030"
+		name = "Find the right killer"
 		random_state = {
 			poor_strata = {
 				militancy = 0.5
@@ -60,25 +63,20 @@ country_event = {
 
 #Outlaw on The Run
 country_event = {
-	id = 22050
-	title = "EVTNAME22050"
-	desc = "EVTDESC22050"
-	picture = "wanted"
+	id = 22001
+	title = "Wanted!"
+	desc = "EVTDESC22001"
+	picture = "murderer"
 	
 	trigger = {
-		NOT = {
-			poor_strata_everyday_needs = 0.8
-		}
-		liberal = 0.2
+		NOT = { poor_strata_everyday_needs = 0.8 }
 	}
 	
 	mean_time_to_happen = {
 		months = 1000
 		modifier = {
 			factor = 0.9
-			NOT = {
-				poor_strata_life_needs = 0.9
-			}
+			NOT = { poor_strata_life_needs = 0.9 }
 		}
 		modifier = {
 			factor = 0.9
@@ -99,16 +97,12 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA22050"
-		rich_strata = {
-			militancy = 2
-		}
+		name = "Search high!"
+		rich_strata = { militancy = 2 }
 	}
 	
 	option = {
-		name = "EVTOPTB22050"
-		poor_strata = {
-			militancy = 1
-		}
+		name = "Search low!"
+		poor_strata = { militancy = 1 }
 	}
 }

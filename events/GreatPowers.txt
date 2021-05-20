@@ -1,7 +1,10 @@
+# Great Power Events: {
+#	19000 - 19999 }
+
 # Great Power Contention
 country_event = {
 	id = 19000
-	title = "EVTNAME19000"
+	title = "Great Power Contention"
 	desc = "EVTDESC19000"
 	picture = "greatpowers"
 
@@ -47,7 +50,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA19000"
+		name = "Good news!"
 		any_greater_power = {
 			limit = {
 				diplomatic_influence = {
@@ -61,22 +64,22 @@ country_event = {
  					}
  				}
 			}
-			country_event = { id=19005 days=0 }
+			country_event = 19001
 		}
 	}
 }
 
 # Reply to Above
 country_event = {
-	id = 19005
-	title = "EVTNAME19005"
-	desc = "EVTDESC19005"
+	id = 19001
+	title = "Tensions in $FROMCOUNTRY$"
+	desc = "EVTDESC19001"
 	picture = "greatpowers"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTA19005"
+		name = "Assert our position"
 		diplomatic_influence = {
 			who = FROM
 			value = 5
@@ -85,7 +88,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTB19005"
+		name = "Fall back"
 		diplomatic_influence = {
 			who = FROM
 			value = -5
@@ -96,12 +99,12 @@ country_event = {
 
 # Parade
 country_event = {
-	id = 19010
+	id = 19002
 	news = yes
-	news_desc_long = "EVTDESC19010_NEWS_LONG"
-	news_desc_medium = "EVTDESC19010_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC19010_NEWS_SHORT"
-	title = "EVTNAME19010"
+	news_desc_long = "EVTDESC19002_NEWS_LONG"
+	news_desc_medium = "EVTDESC19002_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19002_NEWS_SHORT"
+	title = "A Place in the Sun"
 	desc = "EVTDESC19010"
 	picture = "greatpowers"
 
@@ -133,7 +136,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA19010"
+		name = "For all"
 		prestige = 5
 		capital_scope = {
 			any_pop = {
@@ -144,7 +147,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTB19010"
+		name = "Just us"
 		any_greater_power = {
 			prestige = -1
 		}
@@ -158,65 +161,63 @@ country_event = {
 }
 
 # Great wars
-country_event = {
-	id = 19355
-	news = yes
-	news_desc_long = "EVTDESC19355_NEWS_LONG"
-	news_desc_medium = "EVTDESC19355_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC19355_NEWS_SHORT"
-	title = "EVTNAME19355"
-	desc = "EVTDESC19355"
-	major = yes
-	picture = "greatpowers"
+# country_event = {
+	# id = 19355
+	# news = yes
+	# news_desc_long = "EVTDESC19355_NEWS_LONG"
+	# news_desc_medium = "EVTDESC19355_NEWS_MEDIUM"
+	# news_desc_short = "EVTDESC19355_NEWS_SHORT"
+	# title = "EVTNAME19355"
+	# desc = "EVTDESC19355"
+	# major = yes
+	# picture = "greatpowers"
 
-	fire_only_once = yes
+	# fire_only_once = yes
 
-	trigger = {
-		great_wars_enabled = no
-		NOT = { has_global_flag = great_wars_enabled }
-		revolution_n_counterrevolution = 1
-		year = 1890
-	}
+	# trigger = {
+		# great_wars_enabled = no
+		# NOT = { has_global_flag = great_wars_enabled }
+		# year = 1890
+	# }
 
-	mean_time_to_happen = {
-		months = 8
-	}
+	# mean_time_to_happen = {
+		# months = 8
+	# }
 
-	option = {
-		name = "EVTOPTA19355"
-		great_wars_enabled = yes
-		set_global_flag = great_wars_enabled
-	}
-}
+	# option = {
+		# name = "EVTOPTA19355"
+		# great_wars_enabled = yes
+		# set_global_flag = great_wars_enabled
+	# }
+# }
 
 # Great wars
-country_event = {
-	id = 19356
-	news = yes
-	news_desc_long = "EVTDESC19356_NEWS_LONG"
-	news_desc_medium = "EVTDESC19356_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC19356_NEWS_SHORT"
-	title = "EVTNAME19356"
-	desc = "EVTDESC19356"
-	major = yes
-	picture = "greatpowers"
+# country_event = {
+	# id = 19356
+	# news = yes
+	# news_desc_long = "EVTDESC19356_NEWS_LONG"
+	# news_desc_medium = "EVTDESC19356_NEWS_MEDIUM"
+	# news_desc_short = "EVTDESC19356_NEWS_SHORT"
+	# title = "EVTNAME19356"
+	# desc = "EVTDESC19356"
+	# major = yes
+	# picture = "greatpowers"
 
-	fire_only_once = yes
+	# fire_only_once = yes
 
-	trigger = {
-		world_wars_enabled = no
-		NOT = { has_global_flag = world_wars_enabled }
-		year = 1905
-		mass_politics = 1		
-	}
+	# trigger = {
+		# world_wars_enabled = no
+		# NOT = { has_global_flag = world_wars_enabled }
+		# year = 1905		
+	# }
 
-	mean_time_to_happen = {
-		months = 8
-	}
+	# mean_time_to_happen = {
+		# months = 8
+	# }
 
-	option = {
-		name = "EVTOPTA19356"
-		world_wars_enabled = yes
-		set_global_flag = world_wars_enabled
-	}
-}
+	# option = {
+		# name = "EVTOPTA19356"
+		# world_wars_enabled = yes
+		# set_global_flag = world_wars_enabled
+	# }
+# }

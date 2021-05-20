@@ -28,6 +28,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Revanchism
  - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/Education Spending/National Stockpile Spending
  - Gas Attack?
+ - Great/World Wars?
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
