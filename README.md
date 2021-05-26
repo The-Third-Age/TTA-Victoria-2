@@ -99,6 +99,8 @@ A Lord of the Rings mod for Victoria 2
  - Flags
 	- [Rhun](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 	- [Dorwinion](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
+	- [Dale](https://middleearth-expanded.fandom.com/wiki/Kingdom_of_Dale)
+	- [Erebor](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 
 	
 ## References
