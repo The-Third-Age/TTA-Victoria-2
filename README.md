@@ -75,9 +75,10 @@ A Lord of the Rings mod for Victoria 2
 	- [Shadow of Mordor](https://www.pngwing.com/en/free-png-nuvgy)
 	- [Generic Gondor Image](https://fineartamerica.com/featured/white-tree-of-gondor-ellen-iati.html?product=tapestry)
 	- [Houses of Healing](http://tolkiengateway.net/wiki/File:Mat%C4%9Bj_%C4%8Cadil_-_The_Hands_of_the_King_are_the_Hands_of_the_Healer.jpeg)
+	- [Kingdom of Dorwinion](http://thefourthage.wikidot.com/kingdom-of-dorwinion)
 - Events
 	- [Introduction](https://www.theverge.com/2017/11/13/16644782/the-lord-of-the-rings-amazon-television-show)
-	- [Ecthelion II Fluff Event](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
+	- [Ecthelion II](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
 	- [Kingdom of Gondor](https://middle-earth-film-saga.fandom.com/wiki/Gondor?file=338c4d306b4577464bb410426afd247f_%25281%2529.jpg)
 	- [Shadow of Mordor](https://www.pinterest.com/pin/379287599869351678/)
 	- [Comet Sighted](https://www.newscientist.com/article/2245355-longest-known-comet-tail-stretched-for-over-a-billion-kilometres/)
@@ -86,6 +87,8 @@ A Lord of the Rings mod for Victoria 2
 	- [Landscape around the Eye](https://wallpaperaccess.com/eye-of-sauron)
 	- [Wedding](http://www.councilofelrond.com/imagegallery/eowyn-and-faramir-8/)
 	- [Birth](http://fantasiadomain.com/lotrcameo/extras.html)
+	- [Kingdom of Dorwinion](https://notionclubarchives.fandom.com/wiki/Dorwinion_(Rh%C3%BBn))
+	- [Hegon I](https://notionclubarchives.fandom.com/wiki/Dorwinion_(Rh%C3%BBn))
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units

@@ -47,4 +47,19 @@ political_decisions = {
 			country_event = 30016
 		}
 	}
+	
+	king_hegon_koldana = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = hegon_koldana
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30024
+		}
+	}
 }
