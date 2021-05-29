@@ -1,9 +1,11 @@
-#Boy shot by police!
+# Nationalist Movement Events
+#	15000 - 15999
+
+#Boy killed by the garrison!
 province_event = {
 	id = 15000
-	title = "EVTNAME15000"
+	title = "$PROVINCECULTURE$ Boy Kill by the Garrison!"
 	desc = "EVTDESC15000"
-	picture = "geronimo"
 	
 	trigger = {
 		is_primary_culture = no
@@ -32,14 +34,6 @@ province_event = {
 				AND = {
 					average_consciousness = 5
 					average_militancy = 5
-				}
-			}
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				owner = {
-					nationalism_n_imperialism = 1
 				}
 			}
 		}
@@ -86,7 +80,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA15000"		#Do Nothing
+		name = "$COUNTRY$ is occupied elsewhere at the moment"		#Do Nothing
 		state_scope = {
 			any_pop = {
 				militancy = 5
@@ -95,7 +89,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB15000"		# Investigate
+		name = "Conduct a thorough investigation of the matter"		# Investigate
 		state_scope = {
 			any_pop = {
 				militancy = 2
@@ -110,9 +104,9 @@ province_event = {
 
 #Directive on trade in the provinces
 province_event = {
-	id = 15010
-	title = "EVTNAME15010"
-	desc = "EVTDESC15010"
+	id = 15001
+	title = "Directive on Trade in The Provinces"
+	desc = "EVTDESC15001"
 	
 	trigger = {
 		is_primary_culture = no
@@ -120,7 +114,7 @@ province_event = {
 		average_militancy = 2
 		is_colonial = no
 		owner = {
-			citizenship_policy = residency
+			racial_policy = racial_unity
 		}
 		controlled_by = owner
 	}
@@ -184,18 +178,10 @@ province_event = {
 				}
 			}
 		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				owner = {
-					nationalism_n_imperialism = 1
-				}
-			}
-		}
 	}
 	
 	option = {
-		name = "EVTOPTA15010"
+		name = "The policy stands"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -208,7 +194,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB15010"
+		name = "Rescind the policy"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -225,9 +211,9 @@ province_event = {
 
 #Local Poet
 province_event = {
-	id = 15020
-	title = "EVTNAME15020"
-	desc = "EVTDESC15020"
+	id = 15002
+	title = "$PROVINCECULTURE$ Poet!"
+	desc = "EVTDESC15002"
 	
 	trigger = {
 		is_primary_culture = no
@@ -305,18 +291,10 @@ province_event = {
 			factor = 1.1
 			units_in_province = 1
 		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				owner = {
-					nationalism_n_imperialism = 1
-				}
-			}
-		}
 	}
 	
 	option = {
-		name = "EVTOPTA15020"
+		name = "Leave him be"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -329,7 +307,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB15020"
+		name = "Hang him"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -342,439 +320,11 @@ province_event = {
 	}
 }
 
-
-#Discrimination in the school system
-province_event = {
-	id = 15030
-	title = "EVTNAME15030"
-	desc = "EVTDESC15030"
-	
-	trigger = {
-		is_primary_culture = no
-		is_accepted_culture = no
-		is_colonial = no
-		owner = {
-			NOT = {
-				citizenship_policy = full_citizenship
-			}
-		}
-		controlled_by = owner
-	}
-	
-	mean_time_to_happen = {
-		months = 800
-		
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 50 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 45 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 40 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 35 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 30 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 25 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 20 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 15 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 10 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 5 }
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				owner = {
-					nationalism_n_imperialism = 1
-				}
-			}
-		}	
-	}
-	
-	option = {
-		name = "EVTOPTA15030"
-		state_scope = {
-			any_pop = {
-				limit = {
-					is_primary_culture = no
-					is_accepted_culture = no
-				}
-				consciousness = 3
-				militancy = 1
-			}
-		}
-		owner = {
-			years_of_research = 0.05
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB15030"
-		owner = {
-			years_of_research = -0.05
-		}
-	}
-}
-
-# Local Clergy preaches disobedience
-province_event = {
-	id = 15040
-	title = "EVTNAME15040"
-	desc = "EVTDESC15040"
-	
-	trigger = {
-		is_primary_culture = no
-		is_accepted_culture = no
-		is_colonial = no
-		has_pop_type = clergymen
-		controlled_by = owner
-	}
-	
-	mean_time_to_happen = {
-		months = 500
-		modifier = {
-			factor = 0.9
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 6
-		}
-		modifier = {
-			factor = 1.3
-			is_state_religion = yes
-		}
-		modifier = {
-			factor = 1.1
-			owner = {
-				religious_policy = moralism
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				num_of_cities = 10
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				num_of_cities = 15
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				num_of_cities = 20
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				num_of_cities = 25
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				num_of_cities = 30
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				num_of_cities = 35
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = {
-				num_of_cities = 40
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA15040"
-		state_scope = {
-			clergymen = {
-				consciousness = 3
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB15040"
-		clergymen = {
-			reduce_pop = 0.98
-		}
-	}
-}
-
-# Underground Newspaper
-province_event = {
-	id = 15050
-	title = "EVTNAME15050"
-	desc = "EVTDESC15050"
-	
-	trigger = {
-		is_primary_culture = no
-		is_accepted_culture = no
-		is_colonial = no
-		literacy = 0.3
-		owner = {
-			NOT = {
-				citizenship_policy = full_citizenship
-				press_rights = free_press
-			}
-		}
-		controlled_by = owner
-	}
-	
-	mean_time_to_happen = {
-		months = 800
-		modifier = {
-			factor = 0.9
-			average_consciousness = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 1.5
-			not = {
-				literacy = 0.4
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 50 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 45 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 40 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 35 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 30 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 25 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 20 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 15 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 10 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 5 }
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA15050"
-		state_scope = {
-			any_pop = {
-				consciousness = 4
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB15050"
-		state_scope = {
-			any_pop = {
-				militancy = 3
-			}
-		}
-	}
-}
-
-#Farmer's bank supports cause of independence 
-province_event = {
-	id = 15060
-	title = "EVTNAME15060"
-	desc = "EVTDESC15060"
-	
-	trigger = {
-		is_primary_culture = no
-		is_accepted_culture = no
-		is_colonial = no
-		has_pop_type = farmers
-		owner = {
-			NOT = {
-				citizenship_policy = full_citizenship
-			}
-		}
-		controlled_by = owner
-	}
-	
-	mean_time_to_happen = {
-		months = 800
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 0.9
-			average_militancy = 5
-		}
-		modifier = {
-			factor = 0.9
-			owner = {
-				plurality = 10
-			}
-		}
-		modifier = {
-			factor = 1.4
-			NOT = {
-				average_militancy = 3
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 50 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 45 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 40 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 35 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 30 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 25 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 20 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 15 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 10 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 5 }
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA15060"
-		state_scope = {
-			farmers = {
-				money = -10
-				militancy = 8
-			}
-		}
-		owner = {
-			treasury = 300
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB15060"
-		state_scope = {
-			farmers = {
-				militancy = 3
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTC15060"
-		state_scope = {
-			farmers = {
-				consciousness = 2
-			}
-		}
-	}
-}
-
 #Sons of $PROVINCECULTURE$ Labour
 province_event = {
-	id = 15070
-	title = "EVTNAME15070"
-	desc = "EVTDESC15070"
+	id = 15003
+	title = "Sons of $PROVINCECULTURE$ Labour"
+	desc = "EVTDESC15003"
 	
 	trigger = {
 		is_primary_culture = no
@@ -782,8 +332,8 @@ province_event = {
 		is_colonial = no
 		owner = {
 			OR = {
-				trade_unions = no_trade_unions
-				trade_unions = state_controlled
+				exclusive_trading_rights = granted_exclusive_tr
+				exclusive_trading_rights = limited_exclusive_tr
 			}
 		}
  		has_pop_type = craftsmen
@@ -860,7 +410,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA15070"
+		name = "Speak softly"
 		state_scope = {
 			labourers = {
 				consciousness = 2
@@ -873,7 +423,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB15070"
+		name = "Carry a big stick"
 		state_scope = {
 			labourers = {
 				militancy = 2
@@ -885,6 +435,8 @@ province_event = {
 		}
 	}
 }
+
+### START HERE
 
 # A coordinated affair
 province_event = {
