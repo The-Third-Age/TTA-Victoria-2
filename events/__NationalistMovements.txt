@@ -1,7 +1,7 @@
 # Nationalist Movement Events
 #	15000 - 15999
 
-#Boy killed by the garrison!
+# Boy killed by the garrison!
 province_event = {
 	id = 15000
 	title = "$PROVINCECULTURE$ Boy Kill by the Garrison!"
@@ -102,7 +102,7 @@ province_event = {
 	}
 }
 
-#Directive on trade in the provinces
+# Directive on trade in the provinces
 province_event = {
 	id = 15001
 	title = "Directive on Trade in The Provinces"
@@ -209,7 +209,7 @@ province_event = {
 	}
 }
 
-#Local Poet
+# Local Poet
 province_event = {
 	id = 15002
 	title = "$PROVINCECULTURE$ Poet!"
@@ -320,7 +320,7 @@ province_event = {
 	}
 }
 
-#Sons of $PROVINCECULTURE$ Labour
+# Sons of $PROVINCECULTURE$ Labour
 province_event = {
 	id = 15003
 	title = "Sons of $PROVINCECULTURE$ Labour"
@@ -436,13 +436,11 @@ province_event = {
 	}
 }
 
-### START HERE
-
 # A coordinated affair
 province_event = {
-	id = 15080
-	title = "EVTNAME15080"
-	desc = "EVTDESC15080"
+	id = 15004
+	title = "$PROVINCECULTURE$ Uprising!"
+	desc = "EVTDESC15004"
 	
 	trigger = {
 		is_primary_culture = no
@@ -507,7 +505,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA15080"
+		name = "We fight them here"
 		any_pop = {
 			reduce_pop = 0.99
 			militancy = 4
@@ -515,7 +513,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB15080"
+		name = "Disperse them"
 		state_scope = {
 			any_pop = {
 				militancy = 2
@@ -524,11 +522,11 @@ province_event = {
 	}
 }
 
-#The Battered boy
+# The Battered boy
 province_event = {
-	id = 15090
-	title = "EVTNAME15090"
-	desc = "EVTDESC15090"
+	id = 15005
+	title = "Officer Insulted"
+	desc = "EVTDESC15005"
 	
 	trigger = {
 		is_primary_culture = no
@@ -536,7 +534,7 @@ province_event = {
 		is_colonial = no
 		NOT = {
 			owner = {
-				citizenship_policy = full_citizenship
+				racial_policy = all_peoples
 			}
 		}
 		units_in_province = 1
@@ -589,7 +587,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA15090"
+		name = "The runt got what he deserved"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -602,7 +600,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB15090"
+		name = "Reprimand the officer"
 		owner = {
 			capital_scope = {
 				state_scope = {
@@ -617,9 +615,9 @@ province_event = {
 
 # Nobles Incite the peasantry
 province_event = {
-	id = 15100
-	title = "EVTNAME15100"
-	desc = "EVTDESC15100"
+	id = 15006
+	title = "Nobles Incite The Peasantry"
+	desc = "EVTDESC15006"
 	
 	trigger = {
 		is_primary_culture = no
@@ -629,7 +627,7 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = {
-				citizenship_policy = full_citizenship
+				racial_policy = all_peoples
 			}
 		}
 		controlled_by = owner
@@ -699,7 +697,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA15100"
+		name = "We are not provoked by this drivel"
 		state_scope = {
 			aristocrats = {
 				limit = {
@@ -715,9 +713,13 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB15100"
+		name = "Crush the revolters!"
 		state_scope = {
 			aristocrats = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
 				reduce_pop = 0.9
 				militancy = 8
 			}
@@ -725,11 +727,11 @@ province_event = {
 	}
 }
 
-#Annals of $PROVINCECULTURE$ History
+# Annals of $PROVINCECULTURE$ Lore
 province_event = {
-	id = 15110
-	title = "EVTNAME15110"
-	desc = "EVTDESC15110"
+	id = 15007
+	title = "Annals of $PROVINCECULTURE$ Lore"
+	desc = "EVTDESC15007"
 	
 	trigger = {
 		is_accepted_culture = no
@@ -739,7 +741,7 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = {
-				press_rights = free_press
+				cultural_rights = all_vote
 			}
 		}
 		controlled_by = owner
@@ -808,7 +810,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA15110"
+		name = "Curtail distribution"
 		state_scope = {
 			aristocrats = {
 				limit = {
@@ -828,7 +830,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB110"
+		name = "Do not curtain the distribution"
 		state_scope = {
 			craftsmen = {
 				limit = {
@@ -848,18 +850,15 @@ province_event = {
 	}
 }
 
-#$PROVINCECULTURE$ congress
+# $PROVINCECULTURE$ congress
 province_event = {
-	id = 15120
-	title = "EVTNAME15120"
-	desc = "EVTDESC15120"
+	id = 15008
+	title = "The $PROVINCECULTURE$ Congress"
+	desc = "EVTDESC15008"
 	
 	trigger = {
 		is_primary_culture = no
 		is_accepted_culture = no
-		NOT = {
-			culture = native_american_minor
-		}
 		average_militancy = 6
 		owner = {
 			civilized = yes
@@ -930,7 +929,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA15120"
+		name = "The die has been cast"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -946,9 +945,9 @@ province_event = {
 
 # All roads lead to $CAPITAL$
 province_event = {
-	id = 15130
-	title = "EVTNAME15130"
-	desc = "EVTDESC15130"
+	id = 15009
+	title = "All roads lead to $CAPITAL$"
+	desc = "EVTDESC15009"
 	
 	trigger = {
 		is_accepted_culture = no
@@ -959,6 +958,7 @@ province_event = {
 			is_colonial = no
 		}
 		controlled_by = owner
+		owner = { language_policy = official_only }
 	}
 	
 	mean_time_to_happen = {
@@ -1020,7 +1020,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA15130"
+		name = "Use $COUNTRYCULTURE$"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -1034,7 +1034,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB15130"
+		name = "Use $PROVINCECULTURE$"
 		add_province_modifier = {
 			name = local_economic_downturn
 			duration = 1825
@@ -1044,9 +1044,9 @@ province_event = {
 
 # Local Merchants Upset
 province_event = {
-	id = 15140
-	title = "EVTNAME15140"
-	desc = "EVTDESC15140"
+	id = 15010
+	title = "Local Merchants Upset"
+	desc = "EVTDESC15010"
 	
 	trigger = {
 		is_primary_culture = no
@@ -1054,7 +1054,7 @@ province_event = {
 		is_colonial = no
 		owner = {
 			NOT = {
-				citizenship_policy = full_citizenship
+				exclusive_trading_rights = abolished_exclusive_tr
 			}
 		}
 		state_scope = {
@@ -1119,7 +1119,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA15140"
+		name = "No time to see them"
 		state_scope = {
 			capitalists = {
 				limit = {
@@ -1141,7 +1141,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB15140"
+		name = "Favor the Artisans"
 		state_scope = {
 			artisans = {
 				limit = {
@@ -1155,7 +1155,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTC15140"
+		name = "Favor the Guild Masters"
 		state_scope = {
 			capitalists = {
 				limit = {
@@ -1169,105 +1169,7 @@ province_event = {
 	}
 }
 
-#Kulturkampf 
-province_event = {
-	id = 15150
-	title = "EVTNAME15150"
-	desc = "EVTDESC15150"
-	trigger = {
-		is_primary_culture = no
-		is_accepted_culture = no
-		is_colonial = no
-		owner = {
-			NOT = {
-				citizenship_policy = full_citizenship
-			}
-		}
-		average_militancy = 6
-		controlled_by = owner
-	}
-	
-	mean_time_to_happen = {
-		months = 200
-		modifier = {
-			factor = 0.9
-			average_consciousness = 5
-		}
-		modifier = {
-			factor = 1.5
-			NOT = {
-				average_consciousness = 5
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 50 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 45 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 40 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 35 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 30 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 25 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 20 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 15 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 10 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { num_of_cities = 5 }
-		}
-	}
-
-	option = {
-		name = "EVTOPTA15150"
-		state_scope = {
-			any_pop = {
-				limit = {
-					is_primary_culture = no
-					is_accepted_culture = no
-					militancy = 5
-				}
-				reduce_pop = 0.95
-				militancy = -2
-			}
-		}
-	}
-	
-	option = {
-		name = "EVTOPTB15150"
-		state_scope = {
-			any_pop = {
-				limit = {
-					is_primary_culture = yes
-				}
-				consciousness = 1
-			}
-		}
-	}
-}
+### START HERE
 
 #Partisans raid weapons-cache
 province_event = {
