@@ -1,28 +1,24 @@
 # Economic Boom
 country_event = {
-	id = 22560
+	id = 22000
 	title = "Economic Boom"
-	desc = "EVTDESC22560"
+	desc = "EVTDESC22000"
 	picture = "greatpowers"
 	
 	trigger = {
 		poor_strata_everyday_needs = 0.5
-		NOT = {
-			unemployment = 0.2
-		}
+		NOT = { unemployment = 0.2 }
 	}
 	
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
 			factor = 0.9
-			economic_policy = laissez_faire
+			guild_autonomy_policy = independent_guilds
 		}
 		modifier = {
 			factor = 0.9
-			NOT = {
-				unemployment = 0.05
-			}
+			NOT = { unemployment = 0.05 }
 		}
 		modifier = {
 			factor = 1.1

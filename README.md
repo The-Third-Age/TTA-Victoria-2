@@ -4,7 +4,7 @@ A Lord of the Rings mod for Victoria 2
 ## Installation Instructions
 1. Download the mod by clicking [here](https://github.com/SirRunner/The-Third-Age/archive/main.zip) or click the the green Code button, then Download ZIP.
 2. Extract the folder to your game directory. If you use Steam, the folder is mostly likely `C:\Program Files (x86)\Steam\steamapps\commmon\Victoria 2\mod`
-3. Go to that folder. You should see a folder named The-Third-Age-main. Rename that folder to "TTA", without the quotation marks.
+3. Go to that folder. You should see a folder named TTA-Victoria-2-main. Rename that folder to "TTA", without the quotation marks.
 4. Go into the newly renamed TTA folder and move TTA.mod up one level to `C:\Program Files (x86)\Steam\steamapps\commmon\Victoria 2\mod`. This file will mostly likely be identified as a movie file by your computer.
 5. Launch the game. You should see Lord of the Rings as one of the options. Tick it and the mod should load.
 
@@ -22,9 +22,9 @@ A Lord of the Rings mod for Victoria 2
  - Jorde: Loremaster
 
 ## Special Thanks
- - Jman
  - Radsterman
  - MoskauMaster
+ - Jman
 
 ## Credits to
  - Bernd_das_BrotB7 (Population Estimates and Info)
@@ -93,6 +93,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Hegon I](https://notionclubarchives.fandom.com/wiki/Dorwinion_(Rh%C3%BBn))
 	- [Bard I](https://id.pinterest.com/pin/320881542193467529/)
 	- [Kingdom of Dale](http://www.stephenwigmore.com/2013/02/populations-of-middle-earth-lands-of.html)
+	- [Starving](https://www.shutterstock.com/search/empty+farm+field?image_type=photo)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units

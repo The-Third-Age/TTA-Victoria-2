@@ -1,14 +1,15 @@
-#Famine!
+# Disease Events
+#	21000 - 21999
+
+# Famine Strikes State!
 country_event = {
-	id = 21010
-	title = "EVTNAME21010"
-	desc = "EVTDESC21010"
+	id = 21000
+	title = "Famine Strikes State!"
+	desc = "EVTDESC21000"
 	picture = "starving"
 	
 	trigger = {
-		NOT = {
-			poor_strata_life_needs = 0.8
-			}
+		NOT = { poor_strata_life_needs = 0.8 }
 	}
 		
 	mean_time_to_happen = {
@@ -16,18 +17,15 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA21010"
+		name = "Aid those starving!"
 		random_state = {
-			poor_strata = {
-				reduce_pop = 0.96
-			}
+			poor_strata = { reduce_pop = 0.96 }
 		}
 		add_tax_relative_income	= -5
-		#treasury = -1500
 	}
 	
 	option = {
-		name = "EVTOPTB21010"
+		name = "Not my issue."
 		random_state = {
 			poor_strata = {
 				reduce_pop = 0.9
