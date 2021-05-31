@@ -13,20 +13,19 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Explore adding textures of notable places such as Minas Tirith
  
 ## Gameplay
- - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation
+ - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
  - Pop reform/party policy tendencies
  - Add rebels
- - Remove fascist/communist
- - Balance reform effects, figure out how to add `minimum_wage` effect to something
  - Inventions and tech schools
- - "Unciv" reforms?
  - Cultures and Pops
  - Rework kept vanilla events
  - Province terrains
+ - Figure out how to add `minimum_wage` effect to something
+ - "Unciv" reforms?
  - Figure out 6 regions to use a continents (to reskin the vanilla ones)
  - What to replace plurality with
  - Revanchism
- - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/Education Spending/National Stockpile Spending
+ - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending
  - Gas Attack?
  - Great/World Wars?
 
@@ -42,7 +41,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Land and Naval unit icons
 
 ## Flavor
- - Haradrim Tribes/Khand/Rhun formed as a cultural union
  - Event 50005, get the syntax for getting the general correct
 
 ## Others 
