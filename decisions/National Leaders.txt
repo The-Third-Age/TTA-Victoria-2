@@ -62,4 +62,19 @@ political_decisions = {
 			country_event = 30024
 		}
 	}
+	
+	king_bard_i = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = bard_i
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30032
+		}
+	}
 }

@@ -69,6 +69,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Ecthelion ii](https://www.deviantart.com/maelstromarts/art/The-White-Sanctuary-347365430)
 	- [Angelimir](https://ar.pinterest.com/pin/512636370079480435/)
 	- [Sauron](https://www.reddit.com/r/lotr/comments/9vpfef/the_eye_of_sauron/)
+	- [Bard I](https://therealmcgee.tumblr.com/post/73778088091/bard-the-bowman)
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
 	- [Principality of Dol Amroth](https://en.everybodywiki.com/Dol_Amroth)
@@ -76,6 +77,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Generic Gondor Image](https://fineartamerica.com/featured/white-tree-of-gondor-ellen-iati.html?product=tapestry)
 	- [Houses of Healing](http://tolkiengateway.net/wiki/File:Mat%C4%9Bj_%C4%8Cadil_-_The_Hands_of_the_King_are_the_Hands_of_the_Healer.jpeg)
 	- [Kingdom of Dorwinion](http://thefourthage.wikidot.com/kingdom-of-dorwinion)
+	- [Kingdom of Dale](http://tolkiengateway.net/wiki/Kingdom_of_Dale)
 - Events
 	- [Introduction](https://www.theverge.com/2017/11/13/16644782/the-lord-of-the-rings-amazon-television-show)
 	- [Ecthelion II](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
@@ -89,6 +91,8 @@ A Lord of the Rings mod for Victoria 2
 	- [Birth](http://fantasiadomain.com/lotrcameo/extras.html)
 	- [Kingdom of Dorwinion](https://notionclubarchives.fandom.com/wiki/Dorwinion_(Rh%C3%BBn))
 	- [Hegon I](https://notionclubarchives.fandom.com/wiki/Dorwinion_(Rh%C3%BBn))
+	- [Bard I](https://id.pinterest.com/pin/320881542193467529/)
+	- [Kingdom of Dale](http://www.stephenwigmore.com/2013/02/populations-of-middle-earth-lands-of.html)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units
