@@ -3,6 +3,27 @@
 
 # Country Information
 political_decisions = {
+	### WILL BE REMOVED EVENTUALLY
+	# Harad, Khand, Rhun
+	union_country = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			OR = {
+				tag = HAR
+				tag = KHA
+				tag = RHU
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 39999
+		}
+	}
+	
 	kingdom_of_gondor = {
 		alert = no
 		potential = {
