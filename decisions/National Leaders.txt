@@ -77,4 +77,19 @@ political_decisions = {
 			country_event = 30032
 		}
 	}
+	
+	king_dain_ironfoot_ii = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = dain_ironfoot_ii
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30040
+		}
+	}
 }
