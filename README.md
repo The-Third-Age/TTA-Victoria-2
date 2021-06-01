@@ -70,6 +70,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Angelimir](https://ar.pinterest.com/pin/512636370079480435/)
 	- [Sauron](https://www.reddit.com/r/lotr/comments/9vpfef/the_eye_of_sauron/)
 	- [Bard I](https://therealmcgee.tumblr.com/post/73778088091/bard-the-bowman)
+	- [Dain Ironfoot II](https://www.reddit.com/r/lotr/comments/ey4crf/dain_ironfoot_concept_art_by_nickbkeller/)
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
 	- [Principality of Dol Amroth](https://en.everybodywiki.com/Dol_Amroth)
@@ -78,6 +79,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Houses of Healing](http://tolkiengateway.net/wiki/File:Mat%C4%9Bj_%C4%8Cadil_-_The_Hands_of_the_King_are_the_Hands_of_the_Healer.jpeg)
 	- [Kingdom of Dorwinion](http://thefourthage.wikidot.com/kingdom-of-dorwinion)
 	- [Kingdom of Dale](http://tolkiengateway.net/wiki/Kingdom_of_Dale)
+	- [Kingdom of Erebor](https://www.roblox.com/library/105494860/The-Dwarf-Kingdom-of-Erebor)
 - Events
 	- [Introduction](https://www.theverge.com/2017/11/13/16644782/the-lord-of-the-rings-amazon-television-show)
 	- [Ecthelion II](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
@@ -94,6 +96,8 @@ A Lord of the Rings mod for Victoria 2
 	- [Bard I](https://id.pinterest.com/pin/320881542193467529/)
 	- [Kingdom of Dale](http://www.stephenwigmore.com/2013/02/populations-of-middle-earth-lands-of.html)
 	- [Starving](https://www.shutterstock.com/search/empty+farm+field?image_type=photo)
+	- [Kingdom of Erebor](https://www.deviantart.com/paper-hacker/art/The-Hobbit-Map-to-Erebor-750919813)
+	- [Dain Ironfoot II](https://www.wallpaperflare.com/art-the-hobbit-erebor-middle-earth-lonely-mountain-wallpaper-grilz)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units
