@@ -98,6 +98,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Starving](https://www.shutterstock.com/search/empty+farm+field?image_type=photo)
 	- [Kingdom of Erebor](https://www.deviantart.com/paper-hacker/art/The-Hobbit-Map-to-Erebor-750919813)
 	- [Dain Ironfoot II](https://www.wallpaperflare.com/art-the-hobbit-erebor-middle-earth-lonely-mountain-wallpaper-grilz)
+	- [Crisis](https://medium.com/the-coffeelicious/life-lessons-from-the-fellowship-of-the-ring-70dbb65daaa5)
+	- [Administration](https://thefandomentals.com/last-debate-tolkien-lotr-reread/)
+	- [Support War](https://lotr.fandom.com/wiki/War_of_the_Last_Alliance)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units

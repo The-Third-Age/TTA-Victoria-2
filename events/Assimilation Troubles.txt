@@ -1,15 +1,10 @@
-###########################################################################
-#
-# Assimilation Troubles
-#
-# Event IDs 2000 - 2500 are reserved for this. DO NOT CHANGE.
-#
-###########################################################################
+# Assimilation Trouble Events {
+#	2000 - 2499 }
 
 #Ethnic Flavour
 province_event = {
 	id = 2000
-	title = "EVTNAME2000"
+	title = "Ethnic Flavor"
 	desc = "EVTDESC2000"
 	
 	is_triggered_only = yes
@@ -18,7 +13,7 @@ province_event = {
 		has_recent_imigration = 30
 		is_colonial = no
 		owner = {
-			citizenship_policy = full_citizenship
+			racial_policy = all_peoples
 			civilized = yes
 		}
 	}
@@ -58,14 +53,14 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA2000"
+		name = "A victory for our tolerant society!"
 		owner = {
 			prestige = 2
 		}
 	}
 	
 	option = {
-		name = "EVTOPTB2000"
+		name = "An excellent opportunity to promote local harmony!"
 		state_scope = {
 			any_pop = {
 				consciousness = 1
@@ -77,9 +72,9 @@ province_event = {
 
 #Employment for Immigrants
 province_event = {
-	id = 2010
-	title = "EVTNAME2010"
-	desc = "EVTDESC2010"
+	id = 2001
+	title = "Employment for Immigrants"
+	desc = "EVTDESC2001"
 	
 	is_triggered_only = yes
 	
@@ -114,15 +109,13 @@ province_event = {
 		modifier = {
 			factor = 1.5
 			owner = {
-				NOT = {
-					citizenship_policy = residency
-				}
+				NOT = { racial_policy = racial_unity }
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA2010"
+		name = "Ignore them."
 		any_pop = {
 			limit = {
 				is_primary_culture = no
@@ -133,7 +126,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB2010"
+		name = "Encourage local business to employ them"
 		state_scope = {
 			capitalists = {
 				consciousness = 1
@@ -145,9 +138,9 @@ province_event = {
 
 #Intermarriage
 province_event = {
-	id = 2020
-	title = "EVTNAME2020"
-	desc = "EVTDESC2020"
+	id = 2002
+	title = "Intermarriage"
+	desc = "EVTDESC2002"
 	
 	is_triggered_only = yes
 	
@@ -157,8 +150,8 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = {
-				religious_policy = moralism
-				citizenship_policy = residency
+				language_policy = official_only
+				racial_policy = racial_unity
 			}
 		}
 	}
@@ -168,7 +161,7 @@ province_event = {
 		modifier = {
 			factor = 0.9
 			owner = {
-				citizenship_policy = full_citizenship
+				racial_policy = all_peoples
 			}
 		}
 		modifier = {
@@ -200,7 +193,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA2020"
+		name = "We wish them all the best"
 		any_pop = {
 			militancy = -1
 		}
@@ -210,7 +203,7 @@ province_event = {
 	}
 
 	option = {
-		name = "EVTOPTB2020"
+		name = "A clear sign that immigration must be curtailed"
 		owner = {
 			plurality = -1
 		}
@@ -219,9 +212,9 @@ province_event = {
 
 #Change Your Name
 province_event = {
-	id = 2030
-	title = "EVTNAME2030"
-	desc = "EVTDESC2030"
+	id = 2003
+	title = "Change Your Name"
+	desc = "EVTDESC2003"
 	
 	is_triggered_only = yes
 	
@@ -230,9 +223,7 @@ province_event = {
 		is_colonial = no
 		owner = {
 			civilized = yes
-			NOT = {
-				citizenship_policy = residency
-			}
+			NOT = { racial_policy = all_peoples }
 		}
 	}
 	
@@ -263,7 +254,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA2030"
+		name = "Change to Anja Jessek'"
 		any_pop = {
 			militancy = -1
 		}
@@ -273,7 +264,7 @@ province_event = {
 	}
 
 	option = {
-		name = "EVTOPTB2030"
+		name = "I will keep Aniya Yezierska'"
 		any_pop = {
 			consciousness = 1
 		}
@@ -282,9 +273,9 @@ province_event = {
 	
 #Owning a Home
 province_event = {
-	id = 2040
-	title = "EVTNAME2040"
-	desc = "EVTDESC2040"
+	id = 2004
+	title = "Owning a Home?"
+	desc = "EVTDESC2004"
 	
 	is_triggered_only = yes
 	
@@ -299,7 +290,7 @@ province_event = {
 		owner = {
 			civilized = yes
 			NOT = {
-				economic_policy = laissez_faire
+				guild_autonomy_policy = independent_guilds
 			}
 		}
 	}
@@ -329,7 +320,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA2040"
+		name = "Let us speed this up"
 		state_scope = {
 			capitalists = {
 				militancy = 1
@@ -338,7 +329,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB2040"
+		name = "No need to hurry"
 		any_pop = {
 			limit = {
 				is_primary_culture = no
@@ -351,9 +342,9 @@ province_event = {
 
 #Citizenship Demonstration
 province_event = {
-	id = 2050
-	title = "EVTNAME2050"
-	desc = "EVTDESC2050"
+	id = 2005
+	title = "Citizenship Demonstration"
+	desc = "EVTDESC2005"
 	
 	is_triggered_only = yes
 	
@@ -363,12 +354,12 @@ province_event = {
 		is_colonial = no
 		owner = {
 			civilized = yes
-			citizenship_policy = residency
+			racial_policy = all_peoples
 			public_meetings = yes_meeting
 		}
-		or = {
-			full_citizenship = 10
-			limited_citizenship = 10
+		OR = {
+			all_peoples = 10
+			non_orc = 10
 		}
 	}
 	
@@ -377,8 +368,8 @@ province_event = {
 		modifier = {
 			factor = 0.9
 			OR = {
-				full_citizenship = 0.15
-				limited_citizenship = 0.15
+				all_peoples = 0.15
+				non_orc = 0.15
 			}
 		}
 		modifier = {
@@ -402,11 +393,11 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA2050"
+		name = "Interesting..."
 		state_scope = {
 			any_pop = {
 				dominant_issue = {
-					value = limited_citizenship
+					value = non_orc
 					factor = 0.2
 				}
 			}
@@ -417,7 +408,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB2050"
+		name = "Nonsense!"
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -432,9 +423,9 @@ province_event = {
 
 #Immigrant Riots
 province_event = {
-	id = 2060
-	title = "EVTNAME2060"
-	desc = "EVTDESC2060"
+	id = 2006
+	title = "Immigrant Riots"
+	desc = "EVTDESC2006"
 	
 	is_triggered_only = yes
 	
@@ -443,9 +434,7 @@ province_event = {
 		has_recent_imigration = 30
 		is_colonial = no
 		average_militancy = 3
-		owner = {
-			civilized = yes
-		}
+		owner = { civilized = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -468,14 +457,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = {
-				citizenship_policy = residency
-			}
+			owner = { racial_policy = racial_unity }
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA2060"
+		name = "A police matter at worst"
 		any_pop = {
 			limit = {
 				is_primary_culture = no
@@ -487,7 +474,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB2060"
+		name = "Let us listen to their grievances"
 		any_pop = {
 			limit = {
 				is_primary_culture = no
@@ -501,9 +488,9 @@ province_event = {
 
 #Swearing The Oath of Loyalty
 province_event = {
-	id = 2070
-	title = "EVTNAME2070"
-	desc = "EVTDESC2070"
+	id = 2007
+	title = "Swearing the Oath of Loyalty"
+	desc = "EVTDESC2007"
 	
 	is_triggered_only = yes
 
@@ -511,9 +498,7 @@ province_event = {
 		has_national_minority = yes
 		has_recent_imigration = 30
 		is_colonial = no
-		owner = {
-			citizenship_policy = full_citizenship
-		}
+		owner = { racial_policy = all_peoples }
 	}
 	
 	mean_time_to_happen = {
@@ -541,7 +526,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA2070"
+		name = "Welcome home, $COUNTRY_ADJ$."
 		state_scope = {
 			any_pop = {
 				limit = {
@@ -559,9 +544,9 @@ province_event = {
 
 #Ghetto
 province_event = {
-	id = 2080
-	title = "EVTNAME2080"
-	desc = "EVTDESC2080"
+	id = 2008
+	title = "Ghetto"
+	desc = "EVTDESC2008"
 	
 	is_triggered_only = yes
 	
@@ -575,8 +560,8 @@ province_event = {
 		owner = {
 			civilized = yes
 			OR = {
-				citizenship_policy = full_citizenship
-				citizenship_policy = limited_citizenship
+				racial_policy = all_peoples
+				racial_policy = non_orc
 			}
 		}
 	}
@@ -612,7 +597,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA2080"
+		name = "We can't be bothered"
 		state_scope = {
 			any_pop = {
 				militancy = 2
@@ -621,7 +606,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB2080"
+		name = "We shall investigate the situation"
 		state_scope = {
 			any_pop = {
 				consciousness = 1
@@ -635,9 +620,9 @@ province_event = {
 
 #Segregation
 province_event = {
-	id = 2090
-	title = "EVTNAME2090"
-	desc = "EVTDESC2090"
+	id = 2009
+	title = "Secregation"
+	desc = "EVTDESC2009"
 	
 	is_triggered_only = yes
 	
@@ -645,9 +630,7 @@ province_event = {
 		has_national_minority = yes
 		has_recent_imigration = 30
 		is_colonial = no
-		owner = {
-			civilized = yes
-		}
+		owner = { civilized = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -668,14 +651,12 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = {
-				citizenship_policy = full_citizenship
-			}
+			owner = { racial_policy = all_peoples }
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA2090"
+		name = "They must be integrated, by force if necessary"
 		any_pop = {
 			limit = {
 				OR = {
@@ -689,7 +670,7 @@ province_event = {
 	}
 
 	option = {
-		name = "EVTOPTB2090"
+		name = "Seems that the locals have the right ideas there!"
 		any_pop = {
 			limit = {
 				OR = {
@@ -705,9 +686,9 @@ province_event = {
 
 #Anti-Immigrant Riots
 province_event = {
-	id = 2100
-	title = "EVTNAME2100"
-	desc = "EVTDESC2100"
+	id = 2010
+	title = "Anti-Immigrant Riots"
+	desc = "EVTDESC2010"
 	
 	is_triggered_only = yes
 	
@@ -716,9 +697,7 @@ province_event = {
 		has_recent_imigration = 30
 		is_colonial = yes
 		unemployment = 0.05
-		owner = {
-			civilized = yes
-		}
+		owner = { civilized = yes }
 		average_militancy = 4
 	}
 	
@@ -746,7 +725,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA2100"
+		name = "Dire news!"
 		any_pop = {
 			limit = {
 				is_primary_culture = no
@@ -762,18 +741,16 @@ province_event = {
 
 #Cultural Enrichment
 province_event = {
-	id = 2110
-	title = "EVTNAME2110"
-	desc = "EVTDESC2110"
+	id = 2011
+	title = "Cultural Enrichment"
+	desc = "EVTDESC2011"
 	
 	is_triggered_only = yes
 	
 	trigger = {
 		has_national_minority = yes
 		has_recent_imigration = 30
-		owner = {
-			civilized = yes
-		}
+		owner = { civilized = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -793,15 +770,13 @@ province_event = {
 		modifier = {
 			factor = 1.5
 			owner = {
-				NOT = {
-					citizenship_policy = full_citizenship
-				}
+				NOT = { racial_policy = all_peoples }
 			}
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA2110"
+		name = "Bragging rights!"
 		owner = {
 			prestige = 5
 			plurality = 1
@@ -809,7 +784,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB2110"
+		name = "Why do people tell me these things?"
 		any_pop = {
 			consciousness = 1
 		}

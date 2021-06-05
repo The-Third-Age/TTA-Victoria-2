@@ -1,15 +1,18 @@
-# prompts you to declare interest for a starting crisis
+# Crisis Events: {
+#	18000 - 18999 }
+
+# A Crisis is Brewing
 country_event = {
-	id = 20000
-	title = "EVTNAME20000"
-	desc = "EVTDESC20000"
+	id = 18000
+	title = "A Crisis is Brewing!"
+	desc = "EVTDESC18000"
 	picture = "crisis"
 	trigger = {
 	}
 
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPTA20000" # declare interest
+		name = "We are interested"
 		ai_chance = {
 			factor = 100
 		}
@@ -17,17 +20,18 @@ country_event = {
 		add_crisis_interest = yes
 	}
 	option = {
-		name = "EVTOPTB20000" # decline
+		name = "Who cares?" # decline
 
 		prestige_factor = -0.2
 	}
 }
 
+# Flashpoint event for GPs
 province_event = {
-	id = 20100
-	title = "EVTNAME20100" #Flashpoint event for GPs
-	desc = "EVTDESC20100"
-	picture = "crisis"
+	id = 18001
+	title = "Tensions in $STATE$"
+	desc = "EVTDESC18001"
+	
 	trigger = {
 		owner = { is_greater_power = yes }
 		state_scope = {
@@ -59,7 +63,7 @@ province_event = {
 	}
 
 	option = {
-		name = "EVTOPTA20100" # 
+		name = "Of course not!" #
 		ai_chance = {
 			factor = 95
 		}
@@ -68,7 +72,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB20100" # 
+		name = "Talking is good..." 
 		ai_chance = {
 			factor = 5
 		}
@@ -77,11 +81,11 @@ province_event = {
 	}
 }
 
+# Flashpoint event for others
 province_event = {
-	id = 20101
-	title = "EVTNAME20101" #Flashpoint event for others
-	desc = "EVTDESC20101"
-	picture = "crisis"
+	id = 18002
+	title = "Tensions in $STATE$"
+	desc = "EVTDESC18001"
 	trigger = {
 		owner = { is_greater_power = no }
 		state_scope = {
@@ -113,7 +117,7 @@ province_event = {
 	}
 
 	option = {
-		name = "EVTOPTA20101" # 
+		name = "Insist $STATE$ is ours!"
 		ai_chance = {
 			factor = 70
 		}
@@ -122,7 +126,7 @@ province_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB20101" # decline
+		name = "Concede their point..."
 		ai_chance = {
 			factor = 30
 		}
@@ -131,10 +135,11 @@ province_event = {
 	}
 }
 
+#Claim Crisis GP
 country_event = {
-	id = 20102
-	title = "EVTNAME20102" #Claim Crisis GP
-	desc = "EVTDESC20102"
+	id = 18003
+	title = "The $CRISISAREA$ Crisis"
+	desc = "EVTDESC18003"
 	picture = "crisis"
 	trigger = {
 		crisis_exist = yes
@@ -165,14 +170,14 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA20102" # 
+		name = "Only war will solve this!" 
 		ai_chance = {
 			factor = 95
 		}
 			add_crisis_temperature = 10
 	}
 	option = {
-		name = "EVTOPTB20102" # 
+		name = "Don't listen to him!" 
 		ai_chance = {
 			factor = 5
 		}
@@ -181,10 +186,11 @@ country_event = {
 	}
 }
 
+#Liberation Crisis GP
 country_event = {
-	id = 20103
-	title = "EVTNAME20103" #Liberation Crisis GP
-	desc = "EVTDESC20103"
+	id = 18004
+	title = "The destiny of $CRISISTAKER$" 
+	desc = "EVTDESC18004"
 	picture = "crisis"
 	trigger = {
 		crisis_exist = yes
@@ -215,14 +221,14 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA20103" # 
+		name = "Rattle our sabre!"
 		ai_chance = {
 			factor = 95
 		}
 			add_crisis_temperature = 10
 	}
 	option = {
-		name = "EVTOPTB20103" # 
+		name = "Fire the fool!" 
 		ai_chance = {
 			factor = 5
 		}
@@ -231,9 +237,10 @@ country_event = {
 	}
 }
 
+# Claim Crisis non GP, e.g target
 country_event = {
 	id = 20104
-	title = "EVTNAME20104" #Claim Crisis non GP, e.g target
+	title = "The $CRISISAREA$ Crisis" 
 	desc = "EVTDESC20104" 
 	picture = "crisis"
 	trigger = {
@@ -265,26 +272,25 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA20104" # 
+		name = "It's our!" 
 		ai_chance = {
 			factor = 70
 		}
 			add_crisis_temperature = 5
 	}
 	option = {
-		name = "EVTOPTB20104" # decline
+		name = "Let's discuss this"
 		ai_chance = {
 			factor = 30
 		}
-
-		#
 	}
 }
 
+# Liberation Crisis non GP
 country_event = {
-	id = 20105
-	title = "EVTNAME20105" #Liberation Crisis non GP
-	desc = "EVTDESC20105"
+	id = 18006
+	title = "The $CRISISAREA$ Crisis" 
+	desc = "EVTDESC18006"
 	picture = "crisis"
 	trigger = {
 		crisis_exist = yes
@@ -315,14 +321,14 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA20105" # 
+		name = "Press our claim!" 
 		ai_chance = {
 			factor = 70
 		}
 			add_crisis_temperature = 5
 	}
 	option = {
-		name = "EVTOPTB20105" # decline
+		name = "Fighting is bad"
 		ai_chance = {
 			factor = 30
 		}

@@ -1,8 +1,11 @@
+# CB and Cores Events: {
+#	2500 - 2999 }
+
 # Ambassador Insulted
 country_event = {
-	id = 2520
-	title = "EVTNAME2520"
-	desc = "EVTDESC2520"
+	id = 2500
+	title = "Ambassador Insulted"
+	desc = "EVTDESC2500"
 	picture = "Administration"
 	
 	trigger = {
@@ -57,14 +60,10 @@ country_event = {
 			factor = 1.2
 			war_policy = pacifism
 		}
-		modifier = {
-			factor = 0.9
-			nationalism_n_imperialism = 1
-		}
 	}
 	
 	option = {
-		name = "EVTOPTA2520"
+		name = "Inform them of consequences"
 		random_country = {
 			limit = {
 				is_greater_power = yes
@@ -90,7 +89,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB2520"
+		name = "End the negotiations"
 		ai_chance = {
 			factor = 55
 		}
@@ -116,21 +115,21 @@ country_event = {
 
 # Merchant Conflict
 country_event = {
-	id = 2540
-	title = "EVTNAME2540"
-	desc = "EVTDESC2540"
-	picture = "Thermopylae"
+	id = 2501
+	title = "Merchants Harassed"
+	desc = "EVTDESC2501"
+	picture = "Administration"
 	
 	trigger = {
 		is_greater_power = yes
-		economic_policy = laissez_faire
+		guild_autonomy_policy = independent_guilds
 		OR = {
 			war_policy = jingoism
 			war_policy = pro_military
 		}
 		any_neighbor_country = {
 			NOT = {
-				economic_policy = laissez_faire
+				guild_autonomy_policy = independent_guilds
 			}
 		}
 	}
@@ -178,21 +177,17 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			nationalism_n_imperialism = 1
-		}
-		modifier = {
-			factor = 0.9
 			is_greater_power = yes
 		}
 	}
 	
 	option = {
-		name = "EVTOPTA2540"
+		name = "Intolerable!"
 		random_country = {
 			limit = {
 				NOT = {
 					tag = THIS
-					economic_policy = laissez_faire
+					guild_autonomy_policy = independent_guilds
 				}
 			}
 			add_casus_belli = {
@@ -206,9 +201,9 @@ country_event = {
 
 # Gain Core event
 province_event = {
-	id = 2560
-	title = "EVTNAME2560"
-	desc = "EVTDESC2560"
+	id = 2502
+	title = "The $PROVINCENAME$ Patrimony"
+	desc = "EVTDESC2502"
 	
 	trigger = {
 		NOT = { is_core = THIS }
@@ -227,7 +222,6 @@ province_event = {
 		owner = {
 			tag = THIS
 			is_greater_power = yes
-			nationalism_n_imperialism = 1
 		}
 	}
 	
@@ -268,7 +262,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA2560"
+		name = "Long live $COUNTRY$!"
 		add_core = THIS
 	}
 }

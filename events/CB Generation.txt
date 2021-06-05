@@ -1,0 +1,28 @@
+# CB Generation Events: {
+#	90000 - 90999 }
+
+# Conquest etc!
+country_event = {
+	id = 90000
+	title = "The $CB_TARGET_NAME_ADJ$ menace"
+	desc = "EVTDESC90000"
+	picture = "supportwar" 
+	
+	trigger = {
+		NOT = { involved_in_crisis = yes }
+		constructing_cb_progress = 10
+		NOT = {	has_country_modifier = CB_gen_plus }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "They're coming right for us!"
+		add_country_modifier = {
+			name = CB_gen_plus
+			duration = 50
+		}
+	}
+}
