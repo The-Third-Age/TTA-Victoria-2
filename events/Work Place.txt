@@ -1,0 +1,2811 @@
+# Workplace Events: {
+#	12000 - 12999 }
+
+# TODO: Add event about large production (1 for each good except administrative_services and precious_metals). Give pops money or put it in stockpile
+
+# Mine Disaster
+province_event = {
+	id = 12000
+	title = "Mining Disaster!"
+	desc = "EVTDESC12000"
+	
+	trigger = {
+		OR = {
+			trade_goods = coal
+			trade_goods = iron
+			trade_goods = rock
+			trade_goods = precious_metals
+		}
+		NOT = { has_province_modifier = repairing_mine }
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+	}
+	
+	option = {
+		name = "Give the mine more money"
+		
+		add_province_modifier = {
+			name = repairing_mine
+			duration = 365
+		}
+		owner = { treasury = -1000 }
+		labourers = {
+			reduce_pop = 0.999
+			consciousness = 1
+		}
+	}
+	
+	option = {
+		name = "Do nothing"
+		
+		add_province_modifier = {
+			name = repairing_mine
+			duration = 730
+		}
+		labourers = {
+			reduce_pop = 0.999
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Ranged Gear)
+country_event = {
+	id = 12001
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = ranged_gear
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = ranged_gear
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = ranged_gear_factory }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		ranged_gear = 10
+		treasury = -300
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Melee Gear)
+country_event = {
+	id = 12002
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = melee_gear
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = melee_gear
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = melee_gear_factory }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		melee_gear = 10
+		treasury = -400
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Artillery)
+country_event = {
+	id = 12003
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = artillery
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = artillery
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = artillery_factory }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		artillery = 10
+		treasury = -1200
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Ships)
+country_event = {
+	id = 12004
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = clipper_convoy
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = clipper_convoy
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = clipper_shipyard }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		clipper_convoy = 10
+		treasury = -840
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Cut Stone)
+country_event = {
+	id = 12005
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = cut_stone
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = cut_stone
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = cut_stone_factory }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		cut_stone = 50
+		treasury = -150
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Lumber)
+country_event = {
+	id = 12006
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = lumber
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = lumber
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = lumber_mill }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		lumber = 50
+		treasury = -100
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Steel)
+country_event = {
+	id = 12007
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = steel
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = steel
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = steel_factory }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		steel = 20
+		treasury = -188
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Coal)
+country_event = {
+	id = 12008
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = coal
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = coal
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				OR = {
+					AND = {
+						state_scope =  { has_building = charcoal_factory }
+						unemployment_by_type = {
+							type = craftsmen
+							value = 0.25
+						}
+					}
+					AND = {
+						trade_goods = coal
+						unemployment_by_type = {
+							type = labourers
+							value = 0.25
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		coal = 30
+		treasury = -138
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		labourers = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Furniture)
+country_event = {
+	id = 12009
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = furniture
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = furniture
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = furniture_factory }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		furniture = 20
+		treasury = -196
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Paper)
+country_event = {
+	id = 12010
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = paper
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = paper
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = paper_mill }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		paper = 20
+		treasury = -136
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Clothes)
+country_event = {
+	id = 12011
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = clothes
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = clothes
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = clothes_factory }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		clothes = 20
+		treasury = -232
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Liquor)
+country_event = {
+	id = 12012
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = liquor
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = liquor
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = liquor_distillery }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		liquor = 20
+		treasury = -232
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Fabric)
+country_event = {
+	id = 12013
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = fabric
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = fabric
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				OR = {
+					AND = {
+						state_scope =  { has_building = fabric_factory }
+						unemployment_by_type = {
+							type = craftsmen
+							value = 0.25
+						}
+					}
+					AND = {
+						state_scope =  { has_building = fabric_factory_wool }
+						unemployment_by_type = {
+							type = craftsmen
+							value = 0.25
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		fabric = 50
+		treasury = -360
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Glass)
+country_event = {
+	id = 12014
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = glass
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = glass
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				state_scope =  { has_building = glass_factory }
+				unemployment_by_type = {
+					type = craftsmen
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		glass = 20
+		treasury = -116
+	}
+	
+	option = {
+		name = "Produce more!"
+		craftsmen = {
+			militancy = 1
+		}
+		capitalists = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Rock)
+country_event = {
+	id = 12015
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = rock
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = rock
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = rock
+				unemployment_by_type = {
+					type = labourers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		rock = 50
+		treasury = -120
+	}
+	
+	option = {
+		name = "Produce more!"
+		labourers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Iron)
+country_event = {
+	id = 12016
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = iron
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = iron
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = iron
+				unemployment_by_type = {
+					type = labourers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		iron = 20
+		treasury = -140
+	}
+	
+	option = {
+		name = "Produce more!"
+		labourers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Timber)
+country_event = {
+	id = 12017
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = timber
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = timber
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = timber
+				unemployment_by_type = {
+					type = labourers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		timber = 50
+		treasury = -90
+	}
+	
+	option = {
+		name = "Produce more!"
+		labourers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Cotton)
+country_event = {
+	id = 12018
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = cotton
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = cotton
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = cotton
+				unemployment_by_type = {
+					type = farmers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		cotton = 25
+		treasury = -100
+	}
+	
+	option = {
+		name = "Produce more!"
+		farmers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Dye)
+country_event = {
+	id = 12019
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = dye
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = dye
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = dye
+				unemployment_by_type = {
+					type = farmers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		dye = 10
+		treasury = -240
+	}
+	
+	option = {
+		name = "Produce more!"
+		farmers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Wool)
+country_event = {
+	id = 12020
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = wool
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = wool
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = wool
+				unemployment_by_type = {
+					type = farmers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		wool = 50
+		treasury = -70
+	}
+	
+	option = {
+		name = "Produce more!"
+		farmers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Food)
+country_event = {
+	id = 12021
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = food
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = food
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = food
+				unemployment_by_type = {
+					type = farmers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		food = 25
+		treasury = -100
+	}
+	
+	option = {
+		name = "Produce more!"
+		farmers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Pipeweed)
+country_event = {
+	id = 12022
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = tobacco
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = tobacco
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = tobacco
+				unemployment_by_type = {
+					type = farmers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		tobacco = 50
+		treasury = -110
+	}
+	
+	option = {
+		name = "Produce more!"
+		farmers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Tea)
+country_event = {
+	id = 12023
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = tea
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = tea
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = tea
+				unemployment_by_type = {
+					type = farmers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		tea = 20
+		treasury = -104
+	}
+	
+	option = {
+		name = "Produce more!"
+		farmers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Production Shortage (Horses)
+country_event = {
+	id = 12024
+	title = "Production Shortage"
+	desc = "EVTDESC12001"
+	picture = "production"
+	
+	trigger = {
+		produces = horses
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.5
+			big_producer = horses
+		}
+		modifier = {
+			factor = 0.7
+			any_owned_province = {
+				trade_goods = horses
+				unemployment_by_type = {
+					type = farmers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Buy the goods"
+		horses = 10
+		treasury = -160
+	}
+	
+	option = {
+		name = "Produce more!"
+		farmers = {
+			militancy = 1
+		}
+		aristocrats = {
+			militancy = 1
+		}
+	}
+}
+
+# Excess Food
+province_event = {
+	id = 12025
+	title = "Excess Food"
+	desc = "EVTDESC12025"
+	
+	trigger = {
+		owner = {
+			war = yes
+		}
+		trade_goods = food
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 1.1
+			NOT = {
+				war_exhaustion = 1
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_militancy = 5
+			}
+		}
+	}
+		
+	option = {
+		name = "...to the storehouse!"
+		owner = {
+			food = 15
+		}	
+	}
+
+	option = {
+		name = "...to the people!"
+		owner = {
+			war_exhaustion = -1
+		}
+	}
+}
+
+# Bovine Fever
+province_event = {
+	id = 12026
+	title = "Bovine Fever"
+	desc = "EVTDESC12026"
+	
+	trigger = {
+		trade_goods = food
+		owner = {
+			food = 15
+		}
+	}
+	mean_time_to_happen = {
+		months = 800
+		modifier = {
+			factor = 1.3
+			owner = {
+				food = 500
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = {
+				poor_strata_life_needs = 0.9
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_consciousness = 5
+		}
+	}
+
+	option = {
+		name = "Help them"
+		owner = {
+			food = -15
+		}
+	}
+	
+	option = {
+		name = "Do nothing"
+		farmers = {
+			militancy = 1
+		}
+	}
+}
+
+# High Quality Goods (Cotton)
+province_event = {
+	id = 12027
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = cotton
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = cotton }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { cotton = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			cotton = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				cotton = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Ranged Gear)
+province_event = {
+	id = 12028
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = ranged_gear_factory }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = ranged_gear }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { ranged_gear = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			ranged_gear = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				ranged_gear = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Melee Gear)
+province_event = {
+	id = 12029
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = melee_gear_factory }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = melee_gear }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { melee_gear = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			melee_gear = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				melee_gear = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Artillery)
+province_event = {
+	id = 12030
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = artillery_factory }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = artillery }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { artillery = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			artillery = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				artillery = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Rock)
+province_event = {
+	id = 12031
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = rock
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = rock }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { rock = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			rock = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				rock = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Dye)
+province_event = {
+	id = 12032
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = dye
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = dye }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { dye = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			dye = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				dye = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Wool)
+province_event = {
+	id = 12033
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = wool
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = wool }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { wool = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			wool = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				wool = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Coal)
+province_event = {
+	id = 12034
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		OR = {
+			trade_goods = coal
+			state_scope = { has_building = charcoal_factory }
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = coal }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { coal = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			coal = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				coal = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Iron)
+province_event = {
+	id = 12035
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = iron
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = iron }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { iron = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			iron = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				iron = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Timber)
+province_event = {
+	id = 12036
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = timber
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = timber }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { timber = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			timber = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				timber = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Steel)
+province_event = {
+	id = 12037
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = steel_factory }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = steel }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { steel = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			steel = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				steel = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Glass)
+province_event = {
+	id = 12038
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = glass_factory }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = glass }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { glass = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			glass = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				glass = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Ships)
+province_event = {
+	id = 12039
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = clipper_shipyard }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = clipper_convoy }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { clipper_convoy = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			clipper_convoy = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				clipper_convoy = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Fabric)
+province_event = {
+	id = 12040
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		OR = {
+			state_scope = { has_building = fabric_factory }
+			state_scope = { has_building = fabric_factory_wool }
+		}
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = fabric }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { fabric = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			fabric = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				fabric = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Lumber)
+province_event = {
+	id = 12041
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = lumber_mill }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = lumber }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { lumber = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			lumber = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				lumber = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Cut Stone)
+province_event = {
+	id = 12042
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = cut_stone_factory }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = cut_stone }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { cut_stone = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			cut_stone = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				cut_stone = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Food)
+province_event = {
+	id = 12043
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = food
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = food }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { food = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			food = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				food = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Paper)
+province_event = {
+	id = 12044
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = paper_mill }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = paper }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { paper = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			paper = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				paper = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Pipeweed)
+province_event = {
+	id = 12045
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = tobacco
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = tobacco }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { tobacco = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			tobacco = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				tobacco = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Tea)
+province_event = {
+	id = 12046
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = tea
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = tea }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { tea = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			tea = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				tea = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Liquor)
+province_event = {
+	id = 12047
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = liquor_distillery }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = liquor }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { liquor = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			liquor = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				liquor = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Clothes)
+province_event = {
+	id = 12048
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = clothes_factory }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = clothes }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { clothes = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			clothes = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				clothes = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Furniture)
+province_event = {
+	id = 12049
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		state_scope = { has_building = furniture_factory }
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = furniture }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { furniture = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			furniture = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				furniture = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# High Quality Goods (Horses)
+province_event = {
+	id = 12049
+	title = "High Quality Goods"
+	desc = "EVTDESC12027"
+		
+	trigger = {
+		trade_goods = horses
+	}
+		
+	mean_time_to_happen = {
+		months = 1000
+		
+		modifier = {
+			factor = 0.6
+			owner = { big_producer = horses }
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				NOT = { horses = 100 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 5
+		}
+	}
+	
+	option = {
+		name = "...to the people!"
+		owner = {
+			prestige = 1
+		}
+		any_pop = {
+			consciousness = 0.5
+			militancy = -1
+		}
+	}
+	
+	option = {
+		name = "...to friends!"
+		owner = {
+			prestige = 2
+			horses = -10
+			random_country = {
+				limit = {
+					alliance_with = THIS
+					NOT = { tag = THIS }
+				}
+				horses = 10
+				relation = {
+					who = THIS
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# A New Vein
+province_event = {
+	id = 12051
+	title = "A New Vein"
+	desc = "EVTDESC12051"
+		
+	trigger = {
+		OR = {
+			trade_goods = coal
+			trade_goods = iron
+			trade_goods = rock
+			trade_goods = precious_metals
+		}
+		NOT = { has_province_modifier = new_vein }
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+	}
+	
+	option = {
+		name = "Good"
+		add_province_modifier = {
+			name = new_vein
+			duration = -1
+		}
+	}
+}
+
+# Large Production 
+province_event = {
+	id = 12052
+	title = "High Production!"
+	desc = "EVTDESC12052"
+	
+	trigger = {
+		NOT = { has_province_modifier = high_production }
+		NOT = { has_province_modifier = repairing_mine }
+		NOT = { has_province_modifier = local_economic_downturn }
+		NOT = { has_province_modifier = looted_light }
+		NOT = { has_province_modifier = looted_medium }
+		NOT = { has_province_modifier = looted_heavy }
+		NOT = {
+			unemployment_by_type = {
+				type = farmers
+				value = 0.05
+			}
+		}
+		NOT = {
+			unemployment_by_type = {
+				type = labourers
+				value = 0.05
+			}
+		}
+		NOT = {
+			unemployment_by_type = {
+				type = clerks
+				value = 0.05
+			}
+		}
+		NOT = {
+			unemployment_by_type = {
+				type = craftsmen
+				value = 0.05
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		
+		modifier = {
+			factor = 0.5
+			has_country_modifier = economic_boom
+		}
+	}
+	
+	option = {
+		name = "Good"
+		add_province_modifier = {
+			name = high_production
+			duration = 730
+		}
+	}
+}

@@ -19,7 +19,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Inventions and tech schools
  - Cultures and Pops
  - Reset OnAction event ids
- - Rework kept vanilla events
  - Province terrains
  - Figure out how to add `minimum_wage` effect to something
  - "Unciv" reforms?
