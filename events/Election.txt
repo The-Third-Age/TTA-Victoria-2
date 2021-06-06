@@ -1,0 +1,571 @@
+# Election Events {
+#	14000 - 14999
+
+# A Heated Debate: Guild Autonomy
+country_event = {
+	id = 14000
+	title = "EVTNAME14000"
+	desc = "EVTDESC14000"
+
+	election = yes
+	issue_group = guild_autonomy_policy
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "Guilds should be independent!"
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = independent_guilds
+			}
+			scaled_militancy = {
+				issue = controlled_guilds
+				factor = 4
+			}
+			scaled_militancy = {
+				issue = oversight_guilds
+				factor = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "Guilds need some guidance from the Realm."
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = oversight_guilds
+			}
+			scaled_militancy = {
+				issue = controlled_guilds
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = independent_guilds
+				factor = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "Guilds should be controlled by the Realm!"
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = controlled_guilds
+			}
+			scaled_militancy = {
+				issue = oversight_guilds
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = independent_guilds
+				factor = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "Let the debate take its course"
+		plurality = 1
+		random_list = {
+			1 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = controlled_guilds
+					}
+				}
+			}
+			3 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = oversight_guilds
+					}
+				}
+			}
+			5 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = independent_guilds
+					}
+				}
+			}
+		}
+	}
+}
+	
+# A Heated Debate: Racial Policy
+country_event = {
+	id = 14001
+	title = "EVTNAME14001"
+	desc = "EVTDESC14001"
+	
+	election = yes
+	issue_group = racial_policy
+	is_triggered_only = yes
+	
+	option = {
+		name = "Only our race!"
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = racial_unity
+			}
+			scaled_militancy = {
+				issue = non_orc
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = all_peoples
+				factor = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "Anything non-Orc should be fine."
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = non_orc
+			}
+			scaled_militancy = {
+				issue = racial_unity
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = all_peoples
+				factor = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "Everyone is welcome!"
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = all_peoples
+			}
+			scaled_militancy = {
+				issue = non_orc
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = racial_unity
+				factor = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "Let the debate take its course"
+		plurality = 1
+		random_list = {
+			1 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = racial_unity
+					}
+				}
+			}
+			3 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = non_orc
+					}
+				}
+			}
+			5 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = all_peoples
+					}
+				}
+			}
+		}
+	}
+}
+	
+# A Heated Debate: Language Policy
+country_event = {
+	id = 14002
+	title = "EVTNAME14002"
+	desc = "EVTDESC14002"
+	
+	election = yes
+	issue_group = language_policy
+	is_triggered_only = yes
+	
+	option = {
+		name = "Only our language!"
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = official_only
+			}
+			scaled_militancy = {
+				issue = minority_toleration
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = regional_autonomy
+				factor = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "Allow the languages of our accepted peoples."
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = minority_toleration
+			}
+			scaled_militancy = {
+				issue = regional_autonomy
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = all_peoples
+				factor = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "Let everyone speak their language."
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = all_peoples
+			}
+			scaled_militancy = {
+				issue = minority_toleration
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = regional_autonomy
+				factor = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "Let the debate take its course"
+		plurality = 1
+		random_list = {
+			1 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = official_only
+					}
+				}
+			}
+			3 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = minority_toleration
+					}
+				}
+			}
+			5 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = regional_autonomy
+					}
+				}
+			}
+		}
+	}
+}
+
+# A Heated Debate: Diplomatic Policy
+country_event = {
+	id = 14003
+	title = "EVTNAME14003"
+	desc = "EVTDESC14003"
+
+	election = yes
+	issue_group = diplomatic_policy
+	is_triggered_only = yes
+	
+	option = {
+		name = "We only care about our Realm!"
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = isolationist
+			}
+			scaled_militancy = {
+				issue = reactive
+				factor = 1
+			}
+			scaled_militancy = {
+				issue = proactive
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = interactive
+				factor = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "We will react as needed to the outside world."
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = reactive
+			}
+			scaled_militancy = {
+				issue = isolationist
+				factor = 1
+			}
+			scaled_militancy = {
+				issue = proactive
+				factor = 1
+			}
+			
+			scaled_militancy = {
+				issue = interactive
+				factor = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "We will take steps to reduce the threat to our Realm."
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = proactive
+			}
+			scaled_militancy = {
+				issue = interactive
+				factor = 1
+			}
+			scaled_militancy = {
+				issue = reactive
+				factor = 1
+			}
+			
+			scaled_militancy = {
+				issue = isolationist
+				factor = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "A major focus of our leadership is to interact with other Realms."
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = interactive
+			}
+			scaled_militancy = {
+				issue = proactive
+				factor = 1
+			}
+			scaled_militancy = {
+				issue = reactive
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = isolationist
+				factor = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "Let the debate take its course"
+		plurality = 1
+		random_list = {
+			1 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = isolationist
+					}
+				}
+			}
+			3 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = reactive
+					}
+				}
+			}
+			5 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = proactive
+					}
+				}
+			}
+			7 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = interactive
+					}
+				}
+			}
+		}
+	}
+}
+	
+# A Heated Debate: War Policy
+country_event = {
+	id = 14004
+	title = "EVTNAME14004"
+	desc = "EVTDESC14004"
+	
+	election = yes
+	issue_group = war_policy
+	is_triggered_only = yes
+	
+	option = {
+		name = "War is good for all!"
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = jingoism
+			}
+			scaled_militancy = {
+				issue = pro_military
+				factor = 1
+			}
+			scaled_militancy = {
+				issue = anti_military
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = pacifism
+				factor = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "Justifiable war is good for all!"
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = pro_military
+			}
+			scaled_militancy = {
+				issue = jingoism
+				factor = 1
+			}
+			scaled_militancy = {
+				issue = anti_military
+				factor = 1
+			}
+			
+			scaled_militancy = {
+				issue = pacifism
+				factor = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "We fight only when we have to!"
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = anti_military
+			}
+			scaled_militancy = {
+				issue = pacifism
+				factor = 1
+			}
+			scaled_militancy = {
+				issue = pro_military
+				factor = 1
+			}
+			
+			scaled_militancy = {
+				issue = jingoism
+				factor = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "We always want to avoid fights."
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = pacifism
+			}
+			scaled_militancy = {
+				issue = anti_military
+				factor = 1
+			}
+			scaled_militancy = {
+				issue = pro_military
+				factor = 2
+			}
+			scaled_militancy = {
+				issue = jingoism
+				factor = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "Let the debate take its course"
+		plurality = 1
+		random_list = {
+			1 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = jingoism
+					}
+				}
+			}
+			3 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = pro_military
+					}
+				}
+			}
+			5 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = anti_military
+					}
+				}
+			}
+			7 = {
+				any_pop = {
+					dominant_issue = {
+						factor = 0.2
+						value = pacifism
+					}
+				}
+			}
+		}
+	}
+}

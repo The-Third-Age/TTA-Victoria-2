@@ -101,6 +101,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Crisis](https://medium.com/the-coffeelicious/life-lessons-from-the-fellowship-of-the-ring-70dbb65daaa5)
 	- [Administration](https://thefandomentals.com/last-debate-tolkien-lotr-reread/)
 	- [Support War](https://lotr.fandom.com/wiki/War_of_the_Last_Alliance)
+	- [Slaves](https://talkinabouttolkien.wordpress.com/2015/01/10/the-scouring-of-the-shire/)
+	- [Bankruptcy](https://www.deviantart.com/vectorgeek/art/Lord-of-the-Rings-Currency-Front-297542456)
+	- [Prosper](https://www.cracked.com/article_30300_lord-of-the-rings-only-exists-because-tolkiens-son-was-annoying.html)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units

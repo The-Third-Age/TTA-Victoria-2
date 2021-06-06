@@ -1,7 +1,10 @@
+# On Action Events {
+#	70000 - 70999 }
+
 #$STATE$ Joins $COUNTRY$
 country_event = {
 	id = 70000
-	title = "EVTNAME70000"
+	title = "$STATE$ Granted Statehood!"
 	desc = "EVTDESC70000"
 	picture = "Slaves"
 	trigger = {
@@ -13,7 +16,7 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA70000"
+		name = "Extend slavery"
 		is_slave = yes
 		country = {
 			any_state = {
@@ -35,7 +38,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB70000"
+		name = "Do not extend slavery"
 		is_slave = no
 		country = {
 			any_state = {
@@ -60,7 +63,7 @@ country_event = {
 #$STATE$ Joins $COUNTRY$!
 country_event = {
 	id = 70001
-	title = "EVTNAME70001"
+	title = "$STATE$ Granted Statehood!"
 	desc = "EVTDESC70001"
 	picture = "Western"
 	trigger = {
@@ -75,7 +78,7 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	option = {
-		name = "EVTOPTA70001"
+		name = "Excellent!"
 		is_slave = no
 	}
 }
@@ -83,7 +86,7 @@ country_event = {
 # Nation that owns your debt goes bankrupt
 country_event = {
 	id = 70002
-	title = "EVTNAME70002"
+	title = "$FROMCOUNTRY$ goes bankrupt!"
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
 	trigger = {
@@ -92,7 +95,7 @@ country_event = {
 
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPTA70002"
+		name = "OK"
 		casus_belli = {
 			type = gunboat
 			target = FROM
@@ -103,7 +106,7 @@ country_event = {
 # Nation that owns your debt goes bankrupt in definace of our gunboats
 country_event = {
 	id = 70003
-	title = "EVTNAME70002"
+	title = "$FROMCOUNTRY$ goes bankrupt!"
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
 	trigger = {
@@ -112,7 +115,7 @@ country_event = {
 
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPTA70002"
+		name = "OK"
 		casus_belli = {
 			type = cut_down_to_size
 			target = FROM
@@ -124,7 +127,7 @@ country_event = {
 # Nation that owns your debt goes bankrupt, but the amount is small
 country_event = {
 	id = 70004
-	title = "EVTNAME70002"
+	title = "$FROMCOUNTRY$ goes bankrupt!"
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
 	trigger = {
@@ -133,10 +136,64 @@ country_event = {
 
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPTA70002"
+		name = "ok"
 		casus_belli = {
 			type = gunboat
 			target = FROM
 		}
 	}
+}
+
+country_event = {
+	title = "Embrace Advancement"
+	desc = "EVTDESC70005"
+	news = yes
+	news_desc_long = "EVTDESC70005_NEWS_LONG"
+	news_desc_medium = "EVTDESC70005_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC70005_NEWS_SHORT"
+	picture = "Prosper"
+
+	id = 70005
+
+	is_triggered_only = yes
+
+	option = {				
+		name = "Advancement!"
+	}
+}
+
+country_event = {
+	title = "Guilds Siezed!"
+	desc = "EVTDESC70006"
+	picture = "Prosper"
+
+	id = 70006
+
+	is_triggered_only = yes
+
+	option = {				
+		name = "They will pay!"
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 12
+		}
+		
+		relation = {
+			who = FROM
+			value = -100
+		}
+		
+	}
+	
+	option = {				
+		name = "Let them be"
+
+		relation = {
+			who = FROM
+			value = 100
+		}
+		
+	}
+
 }
