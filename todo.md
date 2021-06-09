@@ -2,15 +2,12 @@
 Some are obvious, others are not. Just a smallish list at the moment. It clearly should be many times longer...
  
 ## Map
- - Finish up the "new" terrain, river, provinces map
+ - Finish up the provinces map
  - Fix the farm/grassland issue, "pathiness" of forests
- - Remove coastal desert, add desert hill terrain, blackened textures/terrain for Mordor
- - Add terrains and textures for Mordor
- - Add terrains/textures for Lothlorien
+ - Remove coastal desert, add desert hill terrain, blackened textures/terrain for Mordor, golden trees for Lothlorien
  - Coastlines/small islands, Anduin river oversights along the southern Gondor shore and Cair Andros
  - Play around with colormaps
  - Set liferatings and climates
- - Add Lake Ata
  - Explore adding textures of notable places such as Minas Tirith
  
 ## Gameplay
