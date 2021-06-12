@@ -138,25 +138,6 @@ categories =  {
 	}
 	
 	# Have not done yet
-	jungle = {
-		movement_cost = 1.3
-		
-		defence = 2
-		combat_width = -0.25
-		
-		color = { 32 151 0 }
-		
-		farm_rgo_size = 0.0
-		farm_rgo_eff = -0.2
-		mine_rgo_size = 0.0
-		mine_rgo_eff = -0.2
-		
-		supply_limit = 1
-		
-		min_build_railroad = 2
-	}	
-	
-	# Have not done yet
 	marsh = {
 		movement_cost = 1.4
 		
@@ -188,17 +169,15 @@ categories =  {
 	}
 	
 	# Have not done yet
-	coastal_desert = {
-		movement_cost = 1.0
+	desert_hills = {
+		movement_cost = 1.7
 		
 		color = { 208 155 0 }
 		
-		farm_rgo_size = -0.25
-		farm_rgo_eff = 0.0
-		mine_rgo_size = 0.0
-		mine_rgo_eff = 0.0
-		
-		supply_limit = 1
+		farm_rgo_size = -0.75
+		farm_rgo_eff = -0.5
+		mine_rgo_size = 0.1
+		mine_rgo_eff = 0.1
 	}	
 	
 	#########################
@@ -468,6 +447,24 @@ categories =  {
 	##### MORDOR  #####
 	###################
 	
+	ash_mountain = {
+		movement_cost = 1.4
+		
+		defence = 2
+		combat_width = -0.5
+		
+		color = { 117 108 119 }
+		
+		farm_rgo_size = -0.3
+		farm_rgo_eff = -0.3
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.2
+		
+		supply_limit = 1
+		
+		min_build_railroad = 3
+	}
+	
 	gorgoroth_ashlands = {
 		movement_cost = 1.1
 		
@@ -482,6 +479,46 @@ categories =  {
 		mine_rgo_eff = 0.05
 		
 		supply_limit = 4
+	}
+	
+	nurn = {
+		movement_cost = 1.0
+		
+		defence = -1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.5
+		farm_rgo_eff = 0.6
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
+	}
+	
+	#######################
+	##### LOTHLORIEN  #####
+	#######################
+	
+	lothlorien = {
+		movement_cost = 1.2
+		
+		# bumped from woods
+		defence = 2
+		combat_width = -0.20
+		
+		color = { 91 123 10 }
+		
+		# bumped from woods
+		farm_rgo_size = 0
+		# bumped from woods
+		farm_rgo_eff = 0
+		# bumped from woods
+		mine_rgo_size = 0
+		# bumped from woods
+		mine_rgo_eff = 0
+		
+		supply_limit = 5
 	}
 }
 
@@ -499,16 +536,16 @@ ocean1 = {
 
 
 
-text_0	= { type = arctic color = { 	0	 } priority = 	0	 }
+text_0	= { type = ash_mountain color = { 	0	 } priority = 	0	 }
 text_1	= { type = arctic color = { 	1	 } priority = 	1	 }
 text_2	= { type = arctic color = { 	2	 } priority = 	2	 }
 text_3	= { type = arctic color = { 	3	 } priority = 	3	 }
 
 #unused, marked as arctic for now
 text_4	= { type = arctic color = { 	4	 } priority = 	4	 }
-text_5	= { type = plains color = { 	5	 } priority = 	5	 }
-text_6	= { type = plains color = { 	6	 } priority = 	6	 }
-text_7	= { type = plains color = { 	7	 } priority = 	7	 }
+text_5	= { type = ash_mountain color = { 	5	 } priority = 	5	 }
+text_6	= { type = ash_mountain color = { 	6	 } priority = 	6	 }
+text_7	= { type = ash_mountain color = { 	7	 } priority = 	7	 }
 
 text_8	= { type = farmlands color = { 	8	 } priority = 	8	 }
 text_9	= { type = farmlands color = { 	9	 } priority = 	9	 }
@@ -530,12 +567,12 @@ text_21	= { type = woods color = { 	21	 } priority = 	21	 }
 text_22	= { type = woods color = { 	22	 } priority = 	22	 }
 text_23	= { type = woods color = { 	23	 } priority = 	23	 }
 
-text_24	= { type = mountain color = { 	24	 } priority = 	24	 }
-text_25	= { type = mountain color = { 	25	 } priority = 	25	 }
+text_24	= { type = gorgoroth_ashlands color = { 	24	 } priority = 	24	 }
+text_25	= { type = gorgoroth_ashlands color = { 	25	 } priority = 	25	 }
 text_26	= { type = mountain color = { 	26	 } priority = 	26	 }
 text_27	= { type = mountain color = { 	27	 } priority = 	27	 }
-text_28	= { type = mountain color = { 	28	 } priority = 	28	 }
-text_29	= { type = mountain color = { 	29	 } priority = 	29	 }
+text_28	= { type = gorgoroth_ashlands color = { 	28	 } priority = 	28	 }
+text_29	= { type = gorgoroth_ashlands color = { 	29	 } priority = 	29	 }
 text_30	= { type = mountain color = { 	30	 } priority = 	30	 }
 text_31	= { type = mountain color = { 	31	 } priority = 	31	 }
 
@@ -549,10 +586,10 @@ text_37	= { type = steppe color = { 	37	 } priority = 	37	 }
 text_38	= { type = steppe color = { 	38	 } priority = 	38	 }
 text_39	= { type = steppe color = { 	39	 } priority = 	39	 }
 
-text_40	= { type = jungle color = { 	40	 } priority = 	40	 }
-text_41	= { type = jungle color = { 	41	 } priority = 	41	 }
-text_42	= { type = jungle color = { 	42	 } priority = 	42	 }
-text_43	= { type = jungle color = { 	43	 } priority = 	43	 }
+text_40	= { type = lothlorien color = { 	40	 } priority = 	40	 }
+text_41	= { type = lothlorien color = { 	41	 } priority = 	41	 }
+text_42	= { type = lothlorien color = { 	42	 } priority = 	42	 }
+text_43	= { type = lothlorien color = { 	43	 } priority = 	43	 }
 
 text_44	= { type = marsh color = { 	44	 } priority = 	44	 }
 text_45	= { type = marsh color = { 	45	 } priority = 	45	 }
@@ -564,17 +601,17 @@ text_49	= { type = desert color = { 	49	 } priority = 	49	 }
 text_50	= { type = desert color = { 	50	 } priority = 	50	 }
 text_51	= { type = desert color = { 	51	 } priority = 	51	 }
 
-text_52	= { type = coastal_desert color = { 	52	 } priority = 	52	 }
-text_53	= { type = coastal_desert color = { 	53	 } priority = 	53	 }
-text_54	= { type = coastal_desert color = { 	54	 } priority = 	54	 }
-text_55	= { type = coastal_desert color = { 	55	 } priority = 	55	 }
+text_52	= { type = desert_hills color = { 	52	 } priority = 	52	 }
+text_53	= { type = desert_hills color = { 	53	 } priority = 	53	 }
+text_54	= { type = desert_hills color = { 	54	 } priority = 	54	 }
+text_55	= { type = desert_hills color = { 	55	 } priority = 	55	 }
 
 
 #UNUSED for now...
-text_56	= { type = mountain color = { 	56	 } priority = 	56	 }
-text_57	= { type = mountain color = { 	57	 } priority = 	57	 }
-text_58	= { type = mountain color = { 	58	 } priority = 	58	 }
-text_59	= { type = mountain color = { 	59	 } priority = 	59	 }
+text_56	= { type = nurn color = { 	56	 } priority = 	56	 }
+text_57	= { type = nurn color = { 	57	 } priority = 	57	 }
+text_58	= { type = nurn color = { 	58	 } priority = 	58	 }
+text_59	= { type = nurn color = { 	59	 } priority = 	59	 }
 text_60	= { type = mountain color = { 	60	 } priority = 	60	 }
 text_61	= { type = mountain color = { 	61	 } priority = 	61	 }
 text_62	= { type = mountain color = { 	62	 } priority = 	62	 }

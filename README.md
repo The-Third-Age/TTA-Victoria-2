@@ -46,6 +46,9 @@ A Lord of the Rings mod for Victoria 2
 	- [White Mountains](https://www.pexels.com/photo/two-man-hiking-on-snow-mountain-869258/)
 	- [Gobel Tolfalas/Cliffside Mountains](https://www.pexels.com/photo/person-in-yellow-jacket-standing-on-green-grass-field-near-mountain-4386973/)
 	- [Gorgoroth](https://www.deviantart.com/datem/art/Mordor-828480649)
+	- [Lothlorien](https://aminoapps.com/c/lotr/page/item/lothlorien/VGfv_I54berqEeN5DYZzR5Wvd3pKZB)
+	- [Ash Mountains](https://armchaircorporal.wordpress.com/gandalfs-plan-to-enter-mordor/)
+	- [Núrn](https://lotr.fandom.com/wiki/N%C3%BArn)
 - Icons
 	- [Rock](http://14thwarriorcustomsettlers.blogspot.com/2008/02/rock-this-town.html)
 	- [Cut Stone](https://icon-library.com/icon/brick-icon-png-26.html)
