@@ -83,6 +83,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Kingdom of Dorwinion](http://thefourthage.wikidot.com/kingdom-of-dorwinion)
 	- [Kingdom of Dale](http://tolkiengateway.net/wiki/Kingdom_of_Dale)
 	- [Kingdom of Erebor](https://www.roblox.com/library/105494860/The-Dwarf-Kingdom-of-Erebor)
+	- [Grey Mountain Goblins](https://www.pinterest.com/pin/541698661430483809/)
 - Events
 	- [Introduction](https://www.theverge.com/2017/11/13/16644782/the-lord-of-the-rings-amazon-television-show)
 	- [Ecthelion II](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
@@ -108,6 +109,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Bankruptcy](https://www.deviantart.com/vectorgeek/art/Lord-of-the-Rings-Currency-Front-297542456)
 	- [Prosper](https://www.cracked.com/article_30300_lord-of-the-rings-only-exists-because-tolkiens-son-was-annoying.html)
 	- [Production](https://www.pinterest.com/pin/47780446016554389/)
+	- [Grey Mountain Goblins](http://www.stephenwigmore.com/2013/02/populations-of-middle-earth-lands-of.html)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units
@@ -123,6 +125,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Dorwinion](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 	- [Dale](https://middleearth-expanded.fandom.com/wiki/Kingdom_of_Dale)
 	- [Erebor](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
+	- [Grey Mountain Goblins](https://www.pinterest.com/pin/541698661430483809/)
 
 	
 ## References

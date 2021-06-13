@@ -134,4 +134,18 @@ political_decisions = {
 			country_event = 35021
 		}
 	}
+	
+	grey_mountain_goblins = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = GMG
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35025
+		}
 }
