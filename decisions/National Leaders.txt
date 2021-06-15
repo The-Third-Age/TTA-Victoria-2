@@ -108,4 +108,34 @@ political_decisions = {
 			country_event = 30040
 		}
 	}
+	
+	king_thranduil = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = thranduil
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30048
+		}
+	}
+	
+	lord_khamul_the_easterling = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = khamul
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30056
+		}
+	}
 }

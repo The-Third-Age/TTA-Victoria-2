@@ -148,4 +148,35 @@ political_decisions = {
 		effect = {
 			country_event = 35025
 		}
+	}
+	
+	woodland_realm = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = WRM
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35029
+		}
+	}
+	
+	shadow_of_dol_guldur = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = GUL
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35033
+		}
+	}
 }

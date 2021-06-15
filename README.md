@@ -74,6 +74,8 @@ A Lord of the Rings mod for Victoria 2
 	- [Sauron](https://www.reddit.com/r/lotr/comments/9vpfef/the_eye_of_sauron/)
 	- [Bard I](https://therealmcgee.tumblr.com/post/73778088091/bard-the-bowman)
 	- [Dain Ironfoot II](https://www.reddit.com/r/lotr/comments/ey4crf/dain_ironfoot_concept_art_by_nickbkeller/)
+	- [Thranduil](https://middle-earth.xenite.org/how-is-thranduil-different-from-the-book/)
+	- [Khamul](https://villains.fandom.com/wiki/Kham%C3%BBl)
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
 	- [Principality of Dol Amroth](https://en.everybodywiki.com/Dol_Amroth)
@@ -84,6 +86,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Kingdom of Dale](http://tolkiengateway.net/wiki/Kingdom_of_Dale)
 	- [Kingdom of Erebor](https://www.roblox.com/library/105494860/The-Dwarf-Kingdom-of-Erebor)
 	- [Grey Mountain Goblins](https://www.pinterest.com/pin/541698661430483809/)
+	- [Woodland Realm](https://www.pinterest.com/pin/60376451238056423/)
 - Events
 	- [Introduction](https://www.theverge.com/2017/11/13/16644782/the-lord-of-the-rings-amazon-television-show)
 	- [Ecthelion II](https://thefandomentals.com/minas-tirith-gondor-lotr-reread/)
@@ -110,6 +113,10 @@ A Lord of the Rings mod for Victoria 2
 	- [Prosper](https://www.cracked.com/article_30300_lord-of-the-rings-only-exists-because-tolkiens-son-was-annoying.html)
 	- [Production](https://www.pinterest.com/pin/47780446016554389/)
 	- [Grey Mountain Goblins](http://www.stephenwigmore.com/2013/02/populations-of-middle-earth-lands-of.html)
+	- [Woodland Realm](https://www.kronozio.com/card/fd628d6c-354c-47f0-8e74-b8ff97753f22/1995-Middle-Earth-The-Wizards-Unlimited-Woodland-Realm-NNO)
+	- [Shadow of Dol Guldur](https://www.pinterest.com/pin/496240452661364039/)
+	- [Thranduil](https://www.pinterest.com/pin/720364902878112869/)
+	- [Khamûl the Easterling](https://www.reddit.com/r/lotr/comments/hfj6vw/my_oil_painting_of_dol_guldur_on_canvas/)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units
@@ -126,6 +133,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Dale](https://middleearth-expanded.fandom.com/wiki/Kingdom_of_Dale)
 	- [Erebor](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 	- [Grey Mountain Goblins](https://www.pinterest.com/pin/541698661430483809/)
+	- [Woodland Realm](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 
 	
 ## References
