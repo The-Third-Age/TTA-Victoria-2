@@ -8,6 +8,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Play around with colormaps
  - Set liferatings and climates
  - Explore adding textures of notable places such as Minas Tirith
+ - Add Upper Anduin crossings
  
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
