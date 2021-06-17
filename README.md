@@ -76,6 +76,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Dain Ironfoot II](https://www.reddit.com/r/lotr/comments/ey4crf/dain_ironfoot_concept_art_by_nickbkeller/)
 	- [Thranduil](https://middle-earth.xenite.org/how-is-thranduil-different-from-the-book/)
 	- [Khamul](https://villains.fandom.com/wiki/Kham%C3%BBl)
+	- [Beorn](https://lotr.fandom.com/wiki/Beorn)
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
 	- [Principality of Dol Amroth](https://en.everybodywiki.com/Dol_Amroth)
@@ -117,6 +118,10 @@ A Lord of the Rings mod for Victoria 2
 	- [Shadow of Dol Guldur](https://www.pinterest.com/pin/496240452661364039/)
 	- [Thranduil](https://www.pinterest.com/pin/720364902878112869/)
 	- [Khamûl the Easterling](https://www.reddit.com/r/lotr/comments/hfj6vw/my_oil_painting_of_dol_guldur_on_canvas/)
+	- [Stoor Hobbits](https://doubtfulsea.com/2020/08/26/bushwhacked/)
+	- [Woodsmen of the Vale](https://doubtfulsea.com/2020/08/26/bushwhacked/)
+	- [Beornings of the Vale](https://doubtfulsea.com/2020/08/26/bushwhacked/)
+	- [Beorn](https://tor-fotm.obsidianportal.com/wikis/beorns-hall)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units

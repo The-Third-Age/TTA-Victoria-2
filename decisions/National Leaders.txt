@@ -138,4 +138,19 @@ political_decisions = {
 			country_event = 30056
 		}
 	}
+	
+	chief_beorn = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = beorn
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30064
+		}
+	}
 }
