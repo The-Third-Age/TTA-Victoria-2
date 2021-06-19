@@ -29,6 +29,10 @@ A Lord of the Rings mod for Victoria 2
 ## Credits to
  - Bernd_das_BrotB7 (Population Estimates and Info)
  
+## Integrated Graphics Mods
+ - Mish Mash Map Mod
+ - Big Flags Mod
+ 
 ## Assets
 - Terrain textures
 	- [HFME](https://github.com/JmanThunder/HFM-Expanded)

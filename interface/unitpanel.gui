@@ -16,21 +16,21 @@ guiTypes = {
 		{
 			name ="unitpanel_bg"
 			spriteType = "GFX_unit_toppanel_bg"
-			position = { x= -1 y = 0 }
+			position = { x= -1 y = 26 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		iconType =	{
 			name ="leader_photo"
 			spriteType = "GFX_leader_generic0"
-			position = { x = 18 y = 6 }
+			position = { x = 18 y = 32 }
 			Orientation = "UPPER_LEFT"
 		}
 
 		iconType = {
 			name ="unit_activity"
 			spriteType = "GFX_unit_activity_strip"
-			position = { x= 26 y = 43 }
+			position = { x= 26 y = 69 }
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -38,13 +38,13 @@ guiTypes = {
 		{
 			name ="leader_button"
 			quadTextureSprite = "GFX_unit_leader_button"
-			position = { x= 51 y = 28 }
+			position = { x= 51 y = 54 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		instantTextBoxType = {
 			name = "unitleader"
-			position = { x = 55 y = 28 }
+			position = { x = 55 y = 54 }
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 0 y = 0}
@@ -57,13 +57,13 @@ guiTypes = {
 
 		guiButtonType = {
 				name = "unit_location_button"
-				position = { x = 51 y = 45 }
+				position = { x = 51 y = 71 }
 				quadTextureSprite ="GFX_unit_location_button"
 		}
 
 		instantTextBoxType = {
 			name = "unitlocation"
-			position = { x = 55 y = 44 }
+			position = { x = 55 y = 70 }
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
@@ -76,7 +76,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "unitstrength"
-			position = { x = 201 y = 28 }
+			position = { x = 201 y = 54 }
 			textureFile = ""
 			font = "Arial14_black"
 			borderSize = {x = 0 y = 0}
@@ -88,7 +88,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "unitattrition"
-			position = { x = 260  y = 43 }
+			position = { x = 260  y = 69 }
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
@@ -101,7 +101,7 @@ guiTypes = {
 		iconType = {
 			name ="unitattrition_icon"
 			spriteType = "GFX_unit_attr"
-			position = { x = 245  y = 42 }
+			position = { x = 245  y = 68 }
 			Orientation = "UPPER_LEFT"
 			#allwaystransparent = yes
 		}
@@ -109,7 +109,7 @@ guiTypes = {
 		iconType = {
 			name ="org_bar"
 			spriteType = "GFX_morale_progress"
-			position = { x= 312 y = 52 }
+			position = { x= 312 y = 78 }
 			Orientation = "UPPER_LEFT"
 			rotation = 1.5708
 		}
@@ -117,70 +117,70 @@ guiTypes = {
 		iconType = {
 			name ="str_bar"
 			spriteType = "GFX_strength_progress"
-			position = { x= 320 y = 52 }
+			position = { x= 320 y = 78 }
 			Orientation = "UPPER_LEFT"
 			rotation = 1.5708
 		}
 		
 		guiButtonType = {
 			name = "disbandtoosmallbutton"
-			position = { x = 214 y = 6 }
+			position = { x = 214 y = 32 }
 			quadTextureSprite ="GFX_unit_disband_red"
 		}		
 			
 		guiButtonType = {
 			name = "disbandbutton"
-			position = { x = 235 y = 6 }
+			position = { x = 235 y = 32 }
 			quadTextureSprite ="GFX_unit_disband"
 		}	
 
 		guiButtonType = {
 			name = "splitinhalf"
-			position = { x = 254 y = 6 }
+			position = { x = 254 y = 32 }
 			quadTextureSprite ="GFX_unit_splitinhalf"
 			shortcut = "s"
 		}		
 
 		guiButtonType = {
 			name = "newunitbutton"
-			position = { x = 279 y = 6 }
+			position = { x = 279 y = 32 }
 			quadTextureSprite ="GFX_unit_reorg"
 			shortcut = "r"
 		}
 		
 		guiButtonType = {
 			name = "remove_unit_from_selection_button"
-			position = { x = 303 y = 6 }
+			position = { x = 303 y = 32 }
 			quadTextureSprite ="GFX_unit_close"
 		}
 
 		guiButtonType = {
 			name = "only_unit_from_selection_button"
-			position = { x = 327 y = 15 }
+			position = { x = 327 y = 41 }
 			quadTextureSprite ="GFX_unit_selectonly"
 			buttonText = "Select"
 			buttonFont = "vic_18_black"
 		}
 		
 		editBoxType = {
-			position = { x = 38 y = 0 }
+			position = { x = 38 y = 26 }
 			name = "unitname"
 			font = "Arial14"
 			borderSize = {x = 8 y = 4}	
-			size = { x=180 y=24}
+			size = { x=190 y=24}
 			text = ""	
 			orientation = "UPPER_LEFT"
 		}
 		iconType = {
 			name ="prestige_bar_frame"
 			spriteType = "GFX_prestige_bar_frame"
-			position = { x = 6 y = 8 }
+			position = { x = 6 y = 34 }
 			#allwaystransparent = yes
 		}
 		iconType = {
 			name ="leader_prestige_bar"
 			spriteType = "GFX_leader_prestige_progress_bar"
-			position = { x = 16 y = 38 }
+			position = { x = 16 y = 64 }
 			Orientation = "UPPER_LEFT"
 			rotation = 1.5708
 			#allwaystransparent = yes
@@ -188,7 +188,7 @@ guiTypes = {
 		iconType = {
 			name ="leader_prestige_icon"
 			spriteType = "GFX_prestige_icon_2"
-			position = { x=6 y=40 }
+			position = { x=6 y=66 }
 			#allwaystransparent = yes
 		}
 	}
@@ -199,7 +199,7 @@ guiTypes = {
 	windowType = {
 		name = "multi_unitpanel"
 		backGround=""
-		position = { x=-1 y=152 }	
+		position = { x=-1 y=176 }	
 		size = { x=432 y=100 }
 		moveable = 0
 		dontRender = ""
