@@ -153,4 +153,49 @@ political_decisions = {
 			country_event = 30064
 		}
 	}
+	
+	lord_celeborn_n_lady_galadriel = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = celeborn_n_galadriel
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30072
+		}
+	}
+	
+	lord_treebeard = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = treebeard
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30080
+		}
+	}
+	
+	king_thengel = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = thengel
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30088
+		}
+	}
 }

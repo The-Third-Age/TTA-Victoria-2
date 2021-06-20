@@ -224,4 +224,49 @@ political_decisions = {
 			country_event = 35045
 		}
 	}
+	
+	realm_of_lothlorien = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = LOR
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35049
+		}
+	}
+	
+	ents_of_fangorn = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = FAN
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35053
+		}
+	}
+	
+	kingdom_of_rohan = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = ROH
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35057
+		}
+	}
 }

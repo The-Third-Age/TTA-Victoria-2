@@ -81,6 +81,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Thranduil](https://middle-earth.xenite.org/how-is-thranduil-different-from-the-book/)
 	- [Khamul](https://villains.fandom.com/wiki/Kham%C3%BBl)
 	- [Beorn](https://lotr.fandom.com/wiki/Beorn)
+	- [Celeborn and Galadriel](https://www.pinterest.com/pin/590604938609629407/)
+	- [Treebeard](https://www.geektopiagames.com/games/epic-duels/lord-of-the-rings-epic-duels/treebeard/)
+	- [Thengel](https://lotr.fandom.com/it/wiki/Thengel)
 - Decisions
 	- [Kingdom of Gondor](https://commons.wikimedia.org/wiki/File:Flag_of_Gondor.svg)
 	- [Principality of Dol Amroth](https://en.everybodywiki.com/Dol_Amroth)
@@ -126,6 +129,12 @@ A Lord of the Rings mod for Victoria 2
 	- [Woodsmen of the Vale](https://doubtfulsea.com/2020/08/26/bushwhacked/)
 	- [Beornings of the Vale](https://doubtfulsea.com/2020/08/26/bushwhacked/)
 	- [Beorn](https://tor-fotm.obsidianportal.com/wikis/beorns-hall)
+	- [Realm of Lothlorien](https://www.pinterest.com/pin/323485185712558408/)
+	- [Ents of Fangorn](https://middle-earth.xenite.org/how-long-is-an-ent-stride/fangorn-forest-map-01/)
+	- [Kingdom of Rohan](https://www.pinterest.com/pin/41658365283480844/)
+	- [Celeborn and Galadriel](https://www.mdislander.com/living/arts-a-living/visit-lothlorien)
+	- [Treebeard](https://hobbitlotrtrilogy.fandom.com/wiki/Fangorn_Forest)
+	- [Thengel](https://www.wesleygardner.com/projects/e0vlO3)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units
