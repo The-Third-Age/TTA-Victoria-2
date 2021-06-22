@@ -68,6 +68,7 @@ fiefdom = {
 	flagType = monarchy
 }
 
+# Special government for realms lead by Sauron
 sauron_dictatorship = {
 	prostate = yes
 	servants = yes
@@ -76,12 +77,26 @@ sauron_dictatorship = {
 	appoint_ruling_party = yes
 }
 
+# Special government for realms lead by a Nazgul
 nazgul_dictatorship = {
 	prostate = yes
 	servants = yes
 	
 	election = no
 	appoint_ruling_party = yes
+}
+
+# Special government for realms lead by a Wizard
+istari_kingdom = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
 }
 
 goblin_tribe = {

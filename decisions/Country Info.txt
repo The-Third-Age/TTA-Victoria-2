@@ -269,4 +269,49 @@ political_decisions = {
 			country_event = 35057
 		}
 	}
+	
+	realm_of_isengard = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = ISE
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35061
+		}
+	}
+	
+	tribes_of_enedwaith = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = ENE
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35065
+		}
+	}
+	
+	tribes_of_dunland = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = DUN
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35069
+		}
+	}
 }

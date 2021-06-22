@@ -198,4 +198,19 @@ political_decisions = {
 			country_event = 30088
 		}
 	}
+	
+	lord_saruman = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = saruman
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30096
+		}
+	}
 }
