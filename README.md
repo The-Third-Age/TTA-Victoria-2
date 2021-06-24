@@ -2,7 +2,7 @@
 A Lord of the Rings mod for Victoria 2
 
 ## Installation Instructions
-1. Download the mod by clicking [here](https://github.com/SirRunner/The-Third-Age/archive/main.zip) or click the the green Code button, then Download ZIP.
+1. Download the mod by clicking [here](https://github.com/The-Third-Age/TTA-Victoria-2/archive/main.zip) or click the the green Code button, then Download ZIP.
 2. Extract the folder to your game directory. If you use Steam, the folder is mostly likely `C:\Program Files (x86)\Steam\steamapps\commmon\Victoria 2\mod`
 3. Go to that folder. You should see a folder named TTA-Victoria-2-main. Rename that folder to "TTA", without the quotation marks.
 4. Go into the newly renamed TTA folder and move TTA.mod up one level to `C:\Program Files (x86)\Steam\steamapps\commmon\Victoria 2\mod`. This file will mostly likely be identified as a movie file by your computer.
@@ -35,7 +35,7 @@ A Lord of the Rings mod for Victoria 2
  
 ## Assets
 - Terrain textures
-	- [HFME](https://github.com/JmanThunder/HFM-Expanded)
+	- [HFME](https://github.com/Historical-Expansion-Mod/Greater-Flavor-Mod)
 - Terrains
 	- [Anórien](https://lotr.fandom.com/wiki/An%C3%B3rien?file=Anorienwide.jpg)
 	- [Drúadan Forest](http://tolkiengateway.net/wiki/File:Gail_McIntosh_-_Dr%C3%BAadan_Forest.jpg)
