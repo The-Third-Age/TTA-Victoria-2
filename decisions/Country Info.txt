@@ -314,4 +314,36 @@ political_decisions = {
 			country_event = 35069
 		}
 	}
+	
+	goblins_of_moria = {
+		alert = no
+		picture = "grey_mountain_goblins"
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = GMO
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35073
+		}
+	}
+	
+	goblins_of_goblin_town = {
+		alert = no
+		picture = "grey_mountain_goblins"
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = GGT
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35077
+		}
+	}
 }
