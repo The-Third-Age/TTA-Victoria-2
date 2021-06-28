@@ -213,4 +213,34 @@ political_decisions = {
 			country_event = 30096
 		}
 	}
+	
+	chief_aragorn = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = aragorn
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30104
+		}
+	}
+	
+	lord_elrond = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = elrond
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30112
+		}
+	}
 }

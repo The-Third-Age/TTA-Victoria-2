@@ -347,4 +347,49 @@ political_decisions = {
 			country_event = 35077
 		}
 	}
+	
+	hillmen_of_rhudaur = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = RHR
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35081
+		}
+	}
+	
+	dunedain_of_the_north = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = DND
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35085
+		}
+	}
+	
+	realm_of_imladris = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = IML
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35089
+		}
+	}
 }
