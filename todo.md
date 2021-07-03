@@ -8,7 +8,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Play around with colormaps
  - Set liferatings and climates
  - Explore adding textures of notable places such as Minas Tirith
- - Add Upper Anduin crossings
+ - Add Anduin crossings
  
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
@@ -31,8 +31,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Update the new goods icons (horse and administrative services are probably ok)
  - Change modifier icons to LOTRy icons
  - Change the Vic2 interface to something more aesthetically pleasing
- - Images for events, decisions and terrain, generals, flags
- - 3d models/skins, both buildings and soldiers/ships? (long shot)
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
  - Serf POP icon
