@@ -243,4 +243,19 @@ political_decisions = {
 			country_event = 30112
 		}
 	}
+	
+	lord_cirdan = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			nationalvalue = cirdan
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 30120
+		}
+	}
 }

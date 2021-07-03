@@ -7,7 +7,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Coastlines/small islands, Anduin river oversights along the southern Gondor shore and Cair Andros
  - Play around with colormaps
  - Set liferatings and climates
- - Explore adding textures of notable places such as Minas Tirith
  - Add Anduin crossings
  
 ## Gameplay
