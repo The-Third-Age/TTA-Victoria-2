@@ -452,4 +452,64 @@ political_decisions = {
 			country_event = 35105
 		}
 	}
+	
+	hobbits_of_the_shire = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = SHI
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35109
+		}
+	}
+	
+	free_peoples_of_breeland = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = BRE
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35113
+		}
+	}
+	
+	men_of_angmar = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = MAN
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35117
+		}
+	}
+	
+	orcs_of_gundabad = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = GUN
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35121
+		}
+	}
 }
