@@ -2,12 +2,10 @@
 Some are obvious, others are not. Just a smallish list at the moment. It clearly should be many times longer...
  
 ## Map
- - Finish up the provinces map
  - Fix the farm/grassland issue, "pathiness" of forests
  - Coastlines/small islands, Anduin river oversights along the southern Gondor shore and Cair Andros
  - Play around with colormaps
  - Set liferatings and climates
- - Add Anduin crossings
  
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
