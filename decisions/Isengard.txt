@@ -1,0 +1,47 @@
+# Isengard Decisions:
+#	Starting Decision (Unseen)
+
+# Starting Decision
+political_decisions = {
+	isengard_start_decision = {
+		potential = {
+			tag = ISE
+			always = no
+		}
+		
+		allow = { }
+		
+		effect = {
+			add_country_modifier = {
+				name = saruman_modifier
+				duration = -1
+			}
+		}
+	}
+	
+	lord_of_isengard = {
+		potential = {
+			tag = ISE
+			vassal_of = GON
+			NOT = { year = 2955 }
+			NOT = { month = 3 }
+			nationalvalue = saruman
+		}
+		
+		allow = {
+			NOT = { year = 2955 }
+			NOT = { month = 3 }
+		}
+		
+		effect = {
+			GON = { 
+				diplomatic_influence = {
+					who = ISE
+					value = -200
+				}
+				release_vassal = ISE
+				country_event = 50100
+			}
+		}
+	}
+}

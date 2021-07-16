@@ -1,0 +1,54 @@
+# Gondor Events: {
+# 50100 - 50199 }
+
+# The Lord of Isengard
+country_event = {
+	id = 50100
+	picture = lord_of_isengard
+	title = "The Lord of Isengard!"
+	desc = "EVTDESC50100"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "§BThere is nothing we can do...§!"
+		
+		prestige = -10
+		
+		relation = {
+			who = FROM
+			value = -200
+		}
+		
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		name = "He has challenged Gondor, and we will not back down!"
+		
+		badboy = 5
+		
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 12
+		}
+		
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_global_flag = railroading_enabled
+			}
+		}
+	}
+}

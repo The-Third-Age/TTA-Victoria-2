@@ -373,3 +373,47 @@ country_event = {
 		set_global_flag = birth_of_faramir
 	}
 }
+
+# Service of Thorongil
+country_event = {
+	id = 50012
+	picture = thorongil
+	title = "The Service of Thorongil"
+	desc = "EVTDESC50012"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GON
+		has_country_modifier = encouraging_outside_military_recruitment
+		nationalvalue = ecthelion_ii
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+		
+		modifier = {
+			factor = 0.9
+			year = 2960
+		}
+		
+		modifier = {
+			factor = 0.5
+			year = 2965
+		}
+		
+		modifier = {
+			factor = 0.01
+			year = 2968
+		}
+	}
+	
+	option = {
+		name = "A great warrior"
+		
+		prestige = 5
+		add_country_modifier = {
+			name = thorongil
+			duration = 4380
+		}
+	}
+}

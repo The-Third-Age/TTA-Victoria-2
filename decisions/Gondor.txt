@@ -349,3 +349,68 @@ political_decisions = {
 		}
 	}
 }
+
+# Ecthelion II Flavor
+political_decisions = {
+	encourage_outside_military_recruitment = {
+		picture = "travellers"
+		potential = {
+			nationalvalue = ecthelion_ii
+			tag = GON
+			NOT = { has_country_modifier = encouraging_outside_military_recruitment }
+		}
+		
+		allow = {
+			training_2 = 1
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = encouraging_outside_military_recruitment
+				duration = -1
+			}
+		}
+	}
+	
+	gondorian_coastal_defences = {
+		picture = "coastal_fortifications"
+		potential = {
+			nationalvalue = ecthelion_ii
+			has_country_modifier = thorongil
+			NOT = { has_global_flag = gondor_prepared_coastal_defences }
+			# Should not show up if Umbar/Harad does not exist or own Umbar
+		}
+		
+		allow = {
+			money = 100000
+		}
+		
+		effect = {
+			treasury = -100000
+			
+			# Make it so it increases level by 1
+			any_owned = {
+				limit = {
+					port = yes
+				}
+				naval_base = -6
+				naval_base = 4
+			}
+			
+			any_country = {
+				limit = {
+					vassal_of = GON
+				}
+				any_owned = {
+					limit = {
+						port = yes
+					}
+					naval_base = -6
+					naval_base = 4
+				}
+			}
+			
+			set_global_flag = gondor_prepared_coastal_defences
+		}
+	}
+}
