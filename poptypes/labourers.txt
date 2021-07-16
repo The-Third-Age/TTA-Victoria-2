@@ -2,7 +2,6 @@ sprite = 9
 color = { 189 57 36 }
 strata = poor
 unemployment = yes
-equivalent = farmers
 
 rebel = {
 	infantry = 1
@@ -83,10 +82,6 @@ country_migration_target = {
 						NOT = { unemployment_by_type = { value = 0.1 type = labourers } }
 					}
 					AND = {
-						has_pop_type = farmers
-						NOT = { unemployment_by_type = { value = 0.1 type = farmers } }
-					}
-					AND = {
 						state_scope = { has_factories = yes }
 						NOT = { unemployment_by_type = { value = 0.1 type = craftsmen } }
 					}
@@ -132,10 +127,7 @@ migration_target = {
 			}
 			can_build_factory = no
 		}
-		OR = { 
-			unemployment_by_type = { type = farmers value = 0.1 }
-			unemployment_by_type = { type = labourers value = 0.1 }
-		}
+		unemployment_by_type = { type = labourers value = 0.1 }
 	}
 	modifier = {
 		factor = 1.2
