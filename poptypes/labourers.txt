@@ -87,10 +87,6 @@ country_migration_target = {
 						NOT = { unemployment_by_type = { value = 0.1 type = farmers } }
 					}
 					AND = {
-						has_pop_type = clerks
-						NOT = { unemployment_by_type = { value = 0.1 type = clerks } }
-					}
-					AND = {
 						state_scope = { has_factories = yes }
 						NOT = { unemployment_by_type = { value = 0.1 type = craftsmen } }
 					}
@@ -139,7 +135,6 @@ migration_target = {
 		OR = { 
 			unemployment_by_type = { type = farmers value = 0.1 }
 			unemployment_by_type = { type = labourers value = 0.1 }
-			unemployment_by_type = { type = clerks value = 0.1 }
 		}
 	}
 	modifier = {
@@ -546,17 +541,6 @@ promote_to = {
 				factor = -100
 				soldiers = 0.05
 			}
-		}
-	}
-	clerks = { # and labourers
-		factor = 1
-		modifier = {
-			factor = -100
-			NOT = { location = { produces = administrative_services } }
-		}
-		modifier = {
-			factor = 100
-			location = { produces = administrative_services }
 		}
 	}
 	craftsmen = {
