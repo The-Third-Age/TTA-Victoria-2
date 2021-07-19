@@ -1,0 +1,747 @@
+# RGO Modifiers decisions: {
+#	Great Roads 
+#	Road Extensions}
+
+# Great Roads
+political_decisions = {
+	bywater_road = {
+		picture = "roads"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 1029
+					NOT = { 1029 = { has_province_modifier = bywater_road_m } }
+				}
+				AND = {
+					owns = 1041
+					NOT = { 1041 = { has_province_modifier = bywater_road_m } }
+				}
+			}
+			infrastructure_tech_3 = 1
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = { 
+					OR = {
+						province_id = 1029
+						province_id = 1041
+					}
+				}
+				add_province_modifier = { 
+					name = bywater_road_m 
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	old_forest_road = {
+		picture = "roads"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 753
+					NOT = { 753 = { has_province_modifier = old_forest_road_m } }
+				}
+				AND = {
+					owns = 754
+					NOT = { 754 = { has_province_modifier = old_forest_road_m } }
+				}
+				AND = {
+					owns = 735
+					NOT = { 735 = { has_province_modifier = old_forest_road_m } }
+				}
+				AND = {
+					owns = 707
+					NOT = { 707 = { has_province_modifier = old_forest_road_m } }
+				}
+				AND = {
+					owns = 705
+					NOT = { 705 = { has_province_modifier = old_forest_road_m } }
+				}
+				AND = {
+					owns = 702
+					NOT = { 702 = { has_province_modifier = old_forest_road_m } }
+				}
+				AND = {
+					owns = 526
+					NOT = { 526 = { has_province_modifier = old_forest_road_m } }
+				}
+				AND = {
+					owns = 646
+					NOT = { 646 = { has_province_modifier = old_forest_road_m } }
+				}
+				AND = {
+					owns = 848
+					NOT = { 848 = { has_province_modifier = old_forest_road_m } }
+				}
+			}
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 753
+						province_id = 754
+						province_id = 735
+						province_id = 707
+						province_id = 705
+						province_id = 702
+						province_id = 526
+						province_id = 646
+						province_id = 848
+					}
+				}
+				add_province_modifier = { 
+					name = old_forest_road_m 
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	great_west_road = {
+		picture = "roads"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 794
+					NOT = { 794 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 793
+					NOT = { 793 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 791
+					NOT = { 791 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 786
+					NOT = { 786 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 787
+					NOT = { 787 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 2
+					NOT = { 2 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 4
+					NOT = { 4 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 7
+					NOT = { 7 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 8
+					NOT = { 8 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 9
+					NOT = { 9 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 13
+					NOT = { 13 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 17
+					NOT = { 17 = { has_province_modifier = great_west_road_m } }
+				}
+				AND = {
+					owns = 16
+					NOT = { 16 = { has_province_modifier = great_west_road_m } }
+				}
+			}
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 794
+						province_id = 793
+						province_id = 791
+						province_id = 786
+						province_id = 787
+						province_id = 2
+						province_id = 4
+						province_id = 7
+						province_id = 8
+						province_id = 9
+						province_id = 13
+						province_id = 17
+						province_id = 16
+					}
+				}
+				add_province_modifier = { 
+					name = great_west_road_m 
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	greenway = {
+		picture = "roads"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 1015
+					NOT = { 1015 = { has_province_modifier = greenway_m } }
+				}
+				AND = {
+					owns = 1014
+					NOT = { 1014 = { has_province_modifier = greenway_m } }
+				}
+				AND = {
+					owns = 1013
+					NOT = { 1013 = { has_province_modifier = greenway_m } }
+				}
+				AND = {
+					owns = 1012
+					NOT = { 1012 = { has_province_modifier = greenway_m } }
+				}
+				AND = {
+					owns = 883
+					NOT = { 883 = { has_province_modifier = greenway_m } }
+				}
+				AND = {
+					owns = 882
+					NOT = { 882 = { has_province_modifier = greenway_m } }
+				}
+				AND = {
+					owns = 887
+					NOT = { 887 = { has_province_modifier = greenway_m } }
+				}
+				AND = {
+					owns = 890
+					NOT = { 890 = { has_province_modifier = greenway_m } }
+				}
+				AND = {
+					owns = 891
+					NOT = { 891 = { has_province_modifier = greenway_m } }
+				}
+				AND = {
+					owns = 892
+					NOT = { 892 = { has_province_modifier = greenway_m } }
+				}
+			}
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1015
+						province_id = 1014
+						province_id = 1013
+						province_id = 1012
+						province_id = 883
+						province_id = 882
+						province_id = 887
+						province_id = 890
+						province_id = 891
+						province_id = 892
+					}
+				}
+				add_province_modifier = {
+					name = greenway_m
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	old_south_road = {
+		picture = "roads"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 837
+					NOT = { 837 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 838
+					NOT = { 838 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 835
+					NOT = { 835 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 834
+					NOT = { 834 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 833
+					NOT = { 833 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 832
+					NOT = { 832 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 817
+					NOT = { 817 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 816
+					NOT = { 816 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 814
+					NOT = { 814 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 805
+					NOT = { 805 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 804
+					NOT = { 804 = { has_province_modifier = old_south_road_m } }
+				}
+				AND = {
+					owns = 799
+					NOT = { 799 = { has_province_modifier = old_south_road_m } }
+				}
+			}
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 837
+						province_id = 838
+						province_id = 835
+						province_id = 834
+						province_id = 833
+						province_id = 832
+						province_id = 817
+						province_id = 816
+						province_id = 814
+						province_id = 805
+						province_id = 804
+						province_id = 799
+					}
+				}
+				add_province_modifier = {
+					name = old_south_road_m
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	gondor_road = {
+		picture = "roads"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 21
+					NOT = { 21 = { has_province_modifier = gondor_road_m } }
+				}
+				AND = {
+					owns = 24
+					NOT = { 24 = { has_province_modifier = gondor_road_m } }
+				}
+				AND = {
+					owns = 26
+					NOT = { 26 = { has_province_modifier = gondor_road_m } }
+				}
+				AND = {
+					owns = 41
+					NOT = { 41 = { has_province_modifier = gondor_road_m } }
+				}
+				AND = {
+					owns = 40
+					NOT = { 40 = { has_province_modifier = gondor_road_m } }
+				}
+				AND = {
+					owns = 43
+					NOT = { 43 = { has_province_modifier = gondor_road_m } }
+				}
+				AND = {
+					owns = 44
+					NOT = { 44 = { has_province_modifier = gondor_road_m } }
+				}
+			}
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 21
+						province_id = 24
+						province_id = 26
+						province_id = 41
+						province_id = 40
+						province_id = 43
+						province_id = 44
+					}
+				}
+				add_province_modifier = {
+					name = gondor_road_m
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	morgul_road = {
+		picture = "roads"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 14
+					NOT = { 14 = { has_province_modifier = morgul_road_m } }
+				}
+				AND = {
+					owns = 198
+					NOT = { 198 = { has_province_modifier = morgul_road_m } }
+				}
+				AND = {
+					owns = 204
+					NOT = { 204 = { has_province_modifier = morgul_road_m } }
+				}
+				AND = {
+					owns = 433
+					NOT = { 433 = { has_province_modifier = morgul_road_m } }
+				}
+				AND = {
+					owns = 434
+					NOT = { 434 = { has_province_modifier = morgul_road_m } }
+				}
+				AND = {
+					owns = 435
+					NOT = { 435 = { has_province_modifier = morgul_road_m } }
+				}
+				AND = {
+					owns = 444
+					NOT = { 444 = { has_province_modifier = morgul_road_m } }
+				}
+				AND = {
+					owns = 445
+					NOT = { 445 = { has_province_modifier = morgul_road_m } }
+				}
+				AND = {
+					owns = 449
+					NOT = { 449 = { has_province_modifier = morgul_road_m } }
+				}
+			}
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 14
+						province_id = 198
+						province_id = 204
+						province_id = 433
+						province_id = 434
+						province_id = 435
+						province_id = 444
+						province_id = 445
+						province_id = 449
+					}
+				}
+				add_province_modifier = {
+					name = morgul_road_m
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	great_east_road = {
+		picture = "road"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 936
+					NOT = { 936 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 935
+					NOT = { 935 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 933
+					NOT = { 933 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 1030
+					NOT = { 1030 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 1031
+					NOT = { 1031 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 1040
+					NOT = { 1040 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 1010
+					NOT = { 1010 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 1011
+					NOT = { 1011 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 1009
+					NOT = { 1009 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 861
+					NOT = { 861 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 864
+					NOT = { 864 = { has_province_modifier = great_east_road_m } }
+				}
+				AND = {
+					owns = 865
+					NOT = { 865 = { has_province_modifier = great_east_road_m } }
+				}
+			}
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 936
+						province_id = 935
+						province_id = 933
+						province_id = 1030
+						province_id = 1031
+						province_id = 1040
+						province_id = 1010
+						province_id = 1011
+						province_id = 1009
+						province_id = 861
+						province_id = 864
+						province_id = 865
+					}
+				}
+				add_province_modifier = {
+					name = great_east_road_m
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	harad_road = {
+		picture = "roads"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 205
+					NOT = { 205 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 207
+					NOT = { 207 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 208
+					NOT = { 208 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 209
+					NOT = { 209 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 211
+					NOT = { 211 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 212
+					NOT = { 212 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 219
+					NOT = { 219 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 218
+					NOT = { 218 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 249
+					NOT = { 249 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 244
+					NOT = { 244 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 241
+					NOT = { 241 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 240
+					NOT = { 240 { has_province_modifier = harad_road_m } }
+				}
+				AND = {
+					owns = 288
+					NOT = { 288 { has_province_modifier = harad_road_m } }
+				}
+			}
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 205
+						province_id = 207
+						province_id = 208
+						province_id = 209
+						province_id = 211
+						province_id = 212
+						province_id = 219
+						province_id = 218
+						province_id = 249
+						province_id = 244
+						province_id = 241
+						province_id = 240
+						province_id = 288
+					}
+				}
+				add_province_modifier = {
+					name = harad_road_m
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+# Road Extensions
+political_decisions = {
+	extend_old_forest_road_dale = {
+		picture = "roads"
+		
+		potential = {
+			OR = {
+				AND = {
+					owns = 641
+					646 = { has_province_modifier = old_forest_road_m }
+					NOT = { 641 = { has_province_modifier = old_forest_road_m } }
+				}
+				AND = {
+					owns = 640
+					641 = { has_province_modifier = old_forest_road_m }
+					NOT = { 640 = { has_province_modifier = old_forest_road_m } }
+				}
+			}
+		}
+		
+		allow = {
+			667 = {
+				owner = {
+					relation = {
+						who = THIS
+						value = 100
+					}
+				}
+			}
+			invention = great_roads
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 641
+						province_id = 640
+					}
+				}
+				add_province_modifier = { 
+					name = old_forest_road_m 
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	extend_old_forest_road_iron_hills = {
+		picture = "roads"
+		
+		potential = {
+			owns = 667
+			NOT = { 667 = { has_province_modifier = old_forest_road_m } }
+		}
+		
+		allow = {
+			invention = great_roads
+		}
+		
+		effect = {
+			667 = {
+				add_province_modifier = { 
+					name = old_forest_road_m 
+					duration = -1
+				}
+			}
+		}
+	}
+}

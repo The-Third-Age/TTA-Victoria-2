@@ -34,6 +34,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## Flavor
  - Event 50005, get the syntax for getting the general correct
+ - Extension of the Gondor Road
 
 ## Others 
  - Music (BFME2 for example)
