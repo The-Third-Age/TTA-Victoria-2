@@ -703,12 +703,18 @@ promote_to = {
 				soldiers = 0.05
 			}
 		}
-		modifier = {
-			factor = -100
-			AND = {
-				soldiers = 0.03
-				country = { 
-					has_country_flag = low_military_recruitment
+		group = {
+			modifier = {
+				factor = -10
+				country = { has_country_flag = low_military_recruitment }
+			}
+			modifier = {
+				factor = -100
+				AND = {
+					soldiers = 0.03
+					country = { 
+						has_country_flag = low_military_recruitment
+					}
 				}
 			}
 		}
