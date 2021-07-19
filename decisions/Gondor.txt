@@ -83,6 +83,14 @@ political_decisions = {
 			}
 			set_country_flag = good_realm
 			set_country_flag = infantry_realm
+			any_pop = {
+				limit = { has_pop_culture = silvan }
+				literacy = 0.5
+			}
+			any_pop = {
+				limit = { type = clergymen }
+				literacy = 0.05
+			}
 		}
 	}
 }
