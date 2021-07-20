@@ -40,4 +40,3 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Others 
  - Music (BFME2 for example)
  - WoTR = world war (literally) between good and evil (if possible, Gondor and Mordor leading)
- - Fix backend (resign screen) interface
