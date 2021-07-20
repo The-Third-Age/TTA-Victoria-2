@@ -16,21 +16,23 @@ political_decisions = {
 		allow = { }
 		
 		effect = {
+			# Starting Leader
 			add_country_modifier = {
 				name = ecthelion_ii_modifier
 				duration = -1
 			}
+			
+			# Setting flags for flavor
 			add_country_modifier = {
 				name = low_military_recruitment
 				duration = -1
 			}
-			add_country_modifier = {
-				name = good_realm
-				duration = -1
-			}
-			set_country_flag = good_realm
-			set_country_flag = infantry_realm
 			set_country_flag = low_military_recruitment
+			
+			# Research related
+			set_country_flag = infantry_realm
+			
+			# Literacy boosts
 			any_pop = {
 				limit = { has_pop_culture = dunedain }
 				literacy = 0.1
@@ -39,30 +41,24 @@ political_decisions = {
 				limit = { has_pop_culture = druedain }
 				literacy = -0.1
 			}
-			any_pop = {
-				limit = { type = clergymen }
-				literacy = 0.05
-			}
+			
+			# Substate Effects
 			any_country = {
 				limit = { substate_of = GON }
-				set_country_flag = good_realm
-				set_country_flag = infantry_realm
+				# Setting flags for flavor
 				set_country_flag = low_military_recruitment
 				add_country_modifier = {
 					name = low_military_recruitment
 					duration = -1
 				}
-				add_country_modifier = {
-					name = good_realm
-					duration = -1
-				}
+				
+				# Research related
+				set_country_flag = infantry_realm
+				
+				# Literacy boosts
 				any_pop = {
 					limit = { has_pop_culture = dunedain }
 					literacy = 0.1
-				}
-				any_pop = {
-					limit = { type = clergymen }
-					literacy = 0.05
 				}
 			}
 		}
@@ -77,19 +73,23 @@ political_decisions = {
 		allow = { }
 		
 		effect = {
+			# Starting Leader
 			add_country_modifier = {
 				name = angelimir_modifier
 				duration = -1
 			}
-			set_country_flag = good_realm
+			
+			# Research related
 			set_country_flag = infantry_realm
+			
+			# Literacy boosts
 			any_pop = {
 				limit = { has_pop_culture = silvan }
 				literacy = 0.5
 			}
 			any_pop = {
-				limit = { type = clergymen }
-				literacy = 0.05
+				limit = { has_pop_culture = dunedain }
+				literacy = 0.1
 			}
 		}
 	}

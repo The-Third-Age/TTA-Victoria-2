@@ -13,6 +13,7 @@ political_decisions = {
 		allow = { }
 		
 		effect = {
+			# For the World Bank
 			any_owned = {
 				add_province_modifier = {
 					name = bank_cheats
@@ -22,6 +23,53 @@ political_decisions = {
 			add_country_modifier = {
 				name = no_points_for_you
 				duration = -1
+			}
+			
+			# For Substates (substates are not meant to be playable)
+			any_country = {
+				limit = { is_substate = yes }
+				add_country_modifier = {
+					name = no_points_for_you
+					duration = -1
+				}
+			}
+			
+			# For Good Realms
+			any_country = {
+				limit = {
+					OR = {
+						is_culture_group = dunedain
+						is_culture_group = druedain
+						is_culture_group = eldar
+						is_culture_group = teleri
+						is_culture_group = avari
+					}
+				}
+				set_country_flag = good_realm
+				add_country_modifier = {
+					name = good_realm
+					duration = -1
+				}
+			}
+			
+			# For Evil Realms
+			any_country = {
+				limit = {
+					religion = orc
+				}
+				set_country_flag = evil_realm
+				add_country_modifier = {
+					name = evil_realm
+					duration = -1
+				}
+			}
+			
+			# Literacy boost for Loremasters
+			any_country = {
+				any_pop = {
+					limit = { type = clergymen }
+					literacy = 0.05
+				}
 			}
 		}
 	}
