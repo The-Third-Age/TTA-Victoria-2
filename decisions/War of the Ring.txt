@@ -1,6 +1,11 @@
 # Imladris Decisons: {
 #	Council of Elrond }
 
+# ring_controller mapping:
+#	0 = Bilbo
+#	1 = Frodo
+#	2 = Fellowship
+
 # Council of Elrond
 political_decisions = {
 	council_of_elrond = {
@@ -21,8 +26,10 @@ political_decisions = {
 		}
 		
 		allow = {
-			diplomacy_5 = 1
-			year = 3010
+			OR = {
+				diplomacy_5 = 1
+				year = 3010
+			}
 			OR = {
 				AND = {
 					tag = IML
