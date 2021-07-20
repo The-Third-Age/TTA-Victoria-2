@@ -1,5 +1,6 @@
 # World Bank Decisions: {
-#	Starting Decision (unseen) }
+#	Starting Decision (unseen) 
+#	Time Specific Event Firing }
 
 # Starting Decision
 political_decisions = {
@@ -22,6 +23,34 @@ political_decisions = {
 				name = no_points_for_you
 				duration = -1
 			}
+		}
+	}
+}
+
+# Time Specific Event Firing
+political_decisions = {
+	bilbos_111_birthday = {
+		potential = {
+			tag = FOR
+			year = 3001
+			NOT = { has_global_flag = bilbos_111_birthday_party }
+		}
+		
+		allow = {
+			NOT = { year = 3002 }
+			month = 8
+		}
+		
+		effect = {
+			1040 = {
+				owner = {
+					country_event = {
+						id = 50200
+						days = 20
+					}
+				}
+			}
+			set_global_flag = bilbos_111_birthday_party
 		}
 	}
 }

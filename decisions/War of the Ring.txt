@@ -1,0 +1,68 @@
+# Imladris Decisons: {
+#	Council of Elrond }
+
+# Council of Elrond
+political_decisions = {
+	council_of_elrond = {
+		potential = {
+			check_variable = {
+				which = ring_controller
+				value = 1 # Frodo
+			}
+			NOT = {
+				check_variable = {
+					which = ring_controller
+					value = 2 # Anyone else
+				}
+			}
+			year = 3000
+			has_country_flag = good_realm
+			NOT = { has_global_flag = the_council_of_elrond }	
+		}
+		
+		allow = {
+			diplomacy_5 = 1
+			year = 3010
+			OR = {
+				AND = {
+					tag = IML
+					nationalvalue = elrond
+				}
+				AND = {
+					tag = IML
+					NOT = { nationalvalue = elrond }
+					is_greater_power = yes
+				}
+				AND = {
+					NOT = { tag = IML }
+					is_greater_power = yes
+					IML = {
+						NOT = { nationalvalue = elrond }
+						is_greater_power = no
+					}
+				}
+			}
+		}
+		
+		effect = {
+			set_global_flag = the_council_of_elrond
+			set_country_flag = the_council_of_elrond_host
+			any_country = {
+				limit = {
+					has_country_flag = good_realm
+					NOT = { tag = IML }
+					is_vassal = no
+					OR = {
+						is_greater_power = yes
+						is_secondary_power = yes
+					}
+				}
+				country_event = 50300
+			}
+			country_event = {
+				id = 50303
+				days = 3
+			}
+		}
+	}
+}

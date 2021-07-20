@@ -1,0 +1,162 @@
+# War of the Ring Events: {
+# 50300 - 50399 }
+
+# An Invitation from Elrond
+country_event = {
+	id = 50300
+	picture = council_of_elrond
+	title = "An Invitation from Elrond"
+	desc = "EVTDESC50300"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We accept! §R(We will be part of the Council of Elrond)§!"
+		
+		create_alliance = FROM
+		country_event = {
+			id = 50301
+			days = 1
+		}
+		
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				NOT = {
+					relation = {
+						who = FROM
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "We refuse! §R(The Council will go on without us)§!"
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				relation = {
+					who = FROM
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+# Voting on the formation of the Fellowship
+country_event = {
+	id = 50301
+	picture = council_of_elrond
+	title = "The Matter of the Fellowship"
+	desc = "EVTDESC50301"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They shall have our support! §R(We will have representative(s) within the Fellowship)§!"
+		
+		prestige = 10
+		add_country_modifier = {
+			name = fellowship_member
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = "We will support the Fellowship, but cannot spare any people"
+	}
+	
+	option = {
+		name = "We cannot support such an endeavor. §R(This will have diplomatic repercussions)§!"
+		
+		prestige = -10
+		country_event = {
+			id = 50302
+			days = 1
+		}
+	}
+}
+
+# Consequenes of rejecting the Fellowship
+country_event = {
+	id = 50302
+	picture = council_of_elrond
+	title = "The Realms of the Fellowship"
+	desc = "EVTDESC50302"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Drat"
+		
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = the_council_of_elrond_host
+					has_country_modifier = fellowship_member
+				}
+			}
+			leave_alliance = FROM
+			relation = {
+				who = FROM
+				value = -200
+			}
+		}
+	}
+}
+
+# The Fellowship of the Ring
+country_event = {
+	id = 50303
+	picture = council_of_elrond
+	title = "The Fellowship of the Ring"
+	desc = "EVTDESC50303"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "9 companions... so be it."
+		
+		prestige = 25
+		set_variable = {
+			which = fellowship_members
+			value = 9
+		}
+		clr_country_flag = the_council_of_elrond_host
+		
+		ai_chance = {
+			factor = 90
+		}
+	}
+	
+	option = {
+		name = "10 companions... so be it. §R(We will have a member join the Fellowship)§!"
+		
+		prestige = 50
+		add_country_modifier = {
+			name = fellowship_member
+			duration = -1
+		}
+		set_variable = {
+			which = fellowship_members
+			value = 10
+		}
+		clr_country_flag = the_council_of_elrond_host
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_global_flag = railroading_enabled
+			}
+		}
+	}
+}
+	
+	
