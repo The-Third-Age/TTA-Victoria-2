@@ -26,8 +26,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
- - Change modifier icons to LOTRy icons
- - Change the Vic2 interface to something more aesthetically pleasing
  - New terrain textures (with a more LOTR-esque feel)
  - Unit colors for each country (common/country_colors.txt)
  - Land and Naval unit icons
