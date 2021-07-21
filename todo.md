@@ -38,3 +38,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Others 
  - Music (BFME2 for example)
  - WoTR = world war (literally) between good and evil (if possible, Gondor and Mordor leading)
+ - Fix diplomatic actions on map being hidden by newspaper
+ - Pukel's land (or whoever it is) able to free Druedain Forest if they win the first Andrast War: Make it its own flavor rather than tied to Gondor losing
+ - Way for Gondor to remove Pukel's land cores, modifiers to Andrast lands

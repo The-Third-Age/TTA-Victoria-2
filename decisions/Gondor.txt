@@ -3,6 +3,7 @@
 #	Substate Annexation
 #	Province Flavor
 #	Military Buildup
+#	Expansions to the West
 #	Province Flavor }
 
 # Starting Decisions
@@ -125,6 +126,7 @@ political_decisions = {
 			GON_23 = {
 				aristocrats = { militancy = 2 }
 				remove_core = LOS
+				add_core = GON
 			}
 			GON_27 = {
 				aristocrats = { militancy = 2 }
@@ -178,6 +180,7 @@ political_decisions = {
 			any_owned = {
 				limit = { is_core = LEB }
 				remove_core = LEB
+				add_core = GON
 				aristocrats = { militancy = 2 }
 			}
 			prestige = 7
@@ -284,6 +287,7 @@ political_decisions = {
 			any_owned = {
 				limit = { is_core = LAM }
 				remove_core = LAM
+				add_core = GON
 				aristocrats = { militancy = 2 }
 			}
 			prestige = 10
@@ -334,6 +338,7 @@ political_decisions = {
 			any_owned = {
 				limit = { is_core = ANF }
 				remove_core = ANF
+				add_core = GON
 				aristocrats = { militancy = 2 }
 			}
 			prestige = 12
@@ -366,6 +371,7 @@ political_decisions = {
 		allow = { 
 			crown_land_ownership = all_land_ownership
 			city_jurisdiction = royal_cities
+			war = no
 		}
 		
 		effect = {
@@ -377,6 +383,44 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				has_global_flag = railroading_enabled
+			}
+		}
+	}
+	
+	annex_andrast = {
+		picture = "gondor_noimage"
+		
+		potential = {
+			tag = GON
+			ADR = {
+				exists = yes
+				vassal_of = GON
+			}
+			owns = 133
+		}
+		
+		allow = {
+			OR = {
+				crown_land_ownership = seventy_land_ownership
+				crown_land_ownership = all_land_ownership
+			}
+			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			war = no
+		}
+		
+		effect = {
+			inherit = ADR
+			
+			prestige = 8
+			
+			any_owned = {
+				limit = { is_core = ADR }
+				remove_core = ADR
+				add_core = GON
+				aristocrats = { militancy = 2 }
 			}
 		}
 	}
@@ -415,8 +459,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			soldiers = 0.029
-			# May need a different score
+			soldiers = 0.027
 			military_score = 50
 		}
 		
@@ -431,6 +474,255 @@ political_decisions = {
 				remove_country_modifier = low_military_recruitment
 				clr_country_flag = low_military_recruitment
 			}
+		}
+	}
+}
+
+# Expansion to the West
+political_decisions = {	
+	andrast_territory = {
+		picture = "andrast_map"
+		potential = {
+			tag = GON
+			NOT = { has_country_modifier = low_military_recruitment }
+			161 = { 
+				owner = { civilized = no }
+				is_core = ADR
+				is_vassal = no
+			}
+			ADR = { exists = no }
+			war = no
+			NOT = { has_global_flag = GON_andrast_war }
+			NOT = { has_global_flag = GON_lost_andrast_war } # to prevent this being taken multiple times should Gondor lose the first one
+		}
+		
+		allow = {
+			war = no
+			161 = { owner = { NOT = { truce_with = GON } } }
+		}
+		
+		effect = {
+			badboy = 2
+			
+			random_country = {
+				limit = { owns = 161 }
+				add_casus_belli = {
+					target = GON
+					type = humiliate
+					months = 12
+				}
+				country_event = 100004
+			}
+		}
+	}
+	
+	andrast_war_end_GON = {
+		picture = "andrast_map"
+		potential = {
+			tag = GON
+			has_recently_lost_war = no
+			has_global_flag = GON_andrast_war
+			war = no
+			165 = { 
+				owner = { 
+					truce_with = GON
+					has_recently_lost_war = yes
+					NOT = { is_vassal = yes }
+				} 
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			prestige = 5
+			
+			clr_global_flag = GON_andrast_war
+			
+			165 = {
+				owner = {
+					country_event = 100005
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { is_greater_power = yes }
+				}
+				diplomatic_influence = {
+					who = ADR
+					value = 400
+				}
+			}
+		}
+	}
+	
+	andrast_war_end_PUK = {
+		picture = "andrast_map"
+		potential = {
+			GON = { has_recently_lost_war = yes }
+			truce_with = GON
+			has_recently_lost_war = no
+			war = no
+			has_global_flag = GON_andrast_war
+			owns = 165
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			prestige = 25
+			
+			clr_global_flag = GON_andrast_war
+			set_global_flag = GON_lost_andrast_war
+			
+			GON = { country_event = 100006 }
+		}
+	}
+	
+	all_of_andrast = {
+		picture = "andrast_map"
+		potential = {
+			tag = GON
+			OR = {
+				ADR = { vassal_of = GON }
+				owns = 161
+			}
+			165 = { owner = { 
+				civilized = no
+				NOT = { tag = ADR } 
+			}
+			NOT = { has_global_flag = GON_andrast_war_2 }
+			NOT = { has_global_flag = GON_lost_andrast_war } # to prevent this being taken multiple times should Gondor lose the first one
+		}
+		
+		allow = {
+			165 = { owner = { NOT = { truce_with = GON } } }
+			war = no
+		}
+		
+		effect = {
+			badboy = 5
+			
+			random_country = {
+				limit = { owns = 165 }
+				add_casus_belli = {
+					target = GON
+					type = liberate_country
+					months = 12
+				}
+				country_event = 100008
+			}
+		}
+	}
+	
+	andrast_war_2_end_GON = {
+		picture = "andrast_map"
+		potential = {
+			tag = GON
+			ADR = { owns = 165 }
+			OR = {
+				ADR = {
+					vassal_of = GON
+				}
+				owns = 161
+			}
+			has_global_flag = GON_andrast_war_2
+			war = no
+			has_recently_lost_war = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			prestige = 10
+			
+			ADR = { capital = 165 }
+			
+			random_country = {
+				limit = {
+					tag = ADR
+					GON = { owns = 161 }
+				}
+				annex_to = GON
+			}
+			
+			any_owned = {
+				limit = {
+					is_core = ADR
+				}
+				remove_core = ADR
+				add_core = GON
+			}
+			
+			clr_global_flag = GON_andrast_war_2
+		}
+	}
+	
+	andrast_war_2_end_PUK = {
+		picture = "andrast_map"
+		potential = {
+			has_global_flag = GON_andrast_war_2
+			war = no
+			has_recently_lost_war = no
+			GON = { has_recently_lost_war = yes }
+			owns = 165
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			prestige = 50
+			
+			random_country = {
+				limit = {
+					tag = ADR
+					vassal_of = GON
+				}
+				GON = { release_vassal = ADR }
+				
+				THIS = { inherit = ADR }
+			}
+			
+			random_country = {
+				limit = {
+					tag = GON
+					NOT = { exists = ADR }
+					owns = 161
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							region = GON_161
+							region = GON_165
+							region = GON_169
+							region = GON_175
+							region = GON_183
+							region = GON_186
+						}
+					}
+					secede_province = THIS
+				}
+			}
+			
+			any_owned = {
+				limit = { 
+					is_core = GON
+				}
+				remove_core = GON
+				add_core = ADR
+			}
+			
+			clr_global_flag = GON_andrast_war_2
+			set_global_flag = GON_lost_andrast_war
 		}
 	}
 }

@@ -1,7 +1,7 @@
 # Clean Up Events: {
 # 100000 - 199999 }
 
-# Setup Event
+# Setup Event {
 country_event = {
 	id = 100000
 	title = "Setup Event"
@@ -22,7 +22,9 @@ country_event = {
 		}
 	}
 }
+# }
 
+# Ring Movements {
 # Ring passes from Bilbo to Frodo
 country_event = {
 	id = 100001
@@ -110,3 +112,221 @@ country_event = {
 		}
 	}
 }
+# }
+
+# Andrast War {
+# Start Andrast war 
+country_event = {
+	id = 100004
+	picture = andrast_war
+	title = "The Andrast War"
+	desc = "EVTDESC100004"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They shall not take our lands!"
+		
+		casus_belli = {
+			target = GON
+			type = humiliate
+			months = 12
+		}
+		
+		GON = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = humiliate }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+		
+		set_global_flag = GON_andrast_war
+	}
+}
+
+# End of Andrast War - Gondor Victorious
+country_event = {
+	id = 100005
+	picture = andrast_war
+	title = "Gondor is Victorious!"
+	desc = "EVTDESC100005"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Andrast will be free..."
+		
+		any_owned = {
+			limit = {
+				OR = {
+					region = GON_161
+					region = GON_165
+					region = GON_183
+				}
+				NOT = {
+					OR = {
+						province_id = 165
+						province_id = 166
+					}
+				}
+			}
+			secede_province = ADR
+		}
+		
+		GON = {
+			create_vassal = ADR
+			create_alliance = ADR
+			relation = {
+				who = ADR
+				value = 200
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GON
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = ADR
+				value = 400
+			}
+		}
+		
+		ADR = {
+			government = fiefdom
+			capital = 161
+		}
+	}
+}
+
+# End of Andrast War - Gondor Lost
+country_event = {
+	id = 100006
+	picture = andrast_war
+	title = "We have lost!"
+	desc = "EVTDESC100006"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We are humiliated."
+		
+		set_country_flag = low_military_recruitment
+		add_country_modifier = {
+			name = low_military_recruitment
+			duration = -1
+		}
+		
+		# TODO: Make this its own flavor for PUK
+		random_owned = {
+			limit = {
+				province_id = 11
+				is_core = DRU
+			}
+			secede_province = DRU
+			remove_core = GON
+		}
+		
+		FROM = {
+			create_alliance = DRU
+			relation = {
+				who = ADR
+				value = 200
+			}
+		}
+		
+		random_country = {
+			limit = {
+				tag = FROM
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = DRU
+				value = 400
+			}
+		}
+		
+		random_country = {
+			limit = {
+				tag = FROM
+				OR = {
+					primary_culture = druedain
+					accepted_culture = druedain
+				}
+			}
+			country_event = 100007
+		}
+	}
+}
+
+# End of Andrast War - Puppet DRU? Only if of the same culture
+country_event = {
+	id = 100007
+	picture = andrast_war
+	title = "Our Cultural Brethren"
+	desc = "EVTDESC100007"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will puppet them, for their own protection."
+		
+		create_vassal = DRU
+		badboy = 2
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				badboy = 0.9
+			}
+		}
+	}
+	
+	option = {
+		name = "They can fend for themselves."
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 0.25
+				is_greater_power = yes
+			}
+		}
+	}
+}
+
+# Start Gondor acquiring all of Andrast
+country_event = {
+	id = 100008
+	picture = andrast_war
+	title = "The Andrast War"
+	desc = "EVTDESC100008"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Drat."
+		
+		casus_belli = {
+			target = GON
+			type = humiliate
+			months = 12
+		}
+		
+		GON = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = liberate_country country = ADR state_province_id = 165 }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+		
+		set_global_flag = GON_andrast_war_2
+	}
+}
+# }
