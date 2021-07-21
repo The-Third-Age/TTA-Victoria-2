@@ -1,6 +1,7 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new groups or cultures, make sure they are unique.
 
+# The descendants of the Dúnedain of Númenór and the natives of Middle-Earth who adopted their customs
 dunedain = {
 	leader = dunedain
 	unit = EuropeanGC
@@ -51,6 +52,7 @@ dunedain = {
 		}
 	}
 	
+	# Because one of the planned paths for Dol Amroth takes it away from Gondor (accepted culture of Gondorian is removed), this is needed
 	amrothian = {
 		color = { 180 220 250 }
 		first_names = { Adrahil Aglahad Aldamir Alphros Amrothos Anardil Anborn Angamaitë Angbor Angelimir Anárion Aragorn
@@ -68,6 +70,7 @@ dunedain = {
 		last_names = { "of Belfalas" "of Dol Amroth" "of Linhir" "of Methrast" }
 	}
 	
+	# Will probably be split up into Arthedani and Cardolani
 	arnorian = {
 		color = { 110 100 135 }
 		first_names = { Abonnen Adanedhel Adanel Adrahil Aegnor Aerandir Agarwaen Alphros Amarthan Amlaith Amras Amrod Amroth Amrothos Anardil Anárion Anborn Angbor Anfang Angbor Angolodh Angrod Annael Aradan Arador Arador Araglas Aragorn Aragost Arahad Arahael Aramund Aranarth Aranel Aranuir Araphant Araphor Aranarth Aranuir  Arassuil Arathorn Araval Aravir Aravorn Argeleb Argonui Arminas Arothir Arthad Arvedui Arvegil Arveleg Astoron Avarion 
@@ -90,125 +93,78 @@ dunedain = {
 		}
 	}
 		
-} 
-
-halethrim = {
-	leader = european
-	unit = EuropeanGC
-	gondorian_middlemen = {
-		color = { 170 155 14 }
-		first_names = { Agathor Albarth Amlach Angrim Arachon Arambil Balan Ban Bannâtha Barabatta Barach Baran Beldir Belegor Belemir Belen Bëor Bereg Bilcuzil Boromir Boron Bregor Bunga Daruin Dorlas Ebor Elroth Enthor Forhend Galhir Gethron Gorlim Grithnir Gwerin Halabor Haldad Haldan Halmir Harathor Hardan Hardang Hundad Hundar Hunthor Huor Imlach Ingold Malach Manthor Marach Maracha Mattalic Nothlir Nothlir Ogmandab Ran Ranugad Sagroth Talbor Tôbias Tomacca Tomburân Torbath Tuor Tûr 
-		
-		}
-		
-		last_names = { "hal" "Bolgra" "Brandagamba" "Hlothram" "Ranugad" "Zilbirâpha"
-		
-		}
-	}
-	
-	mountain_men = { 
-		leader = european
-		unit = EuropeanGC
-		color = { 170 155 14 }
-		first_names = {
-		
-		}
-		
-		last_names = {
-		
-		}
-	}
-	
-}
-	
-
-wildmen = {
-	leader = european
-	unit = EuropeanGC
-	druedain = {
-		color = { 50 50 50 }
-		first_names = { Aghan Ghân Ghân-buri-Ghân Qhân-Buni-Qhân Qhân Zhân-Zuni-Zhân Zhân Qhûn-Vodi-Qhûn Qhûn
-		Vhân-Guro-Vhân Vhân Qhûn-Bema-Qhûn Qhûn Bhôn-Hovo-Bhôn Bhôn Thûn-Dozi-Thûn Thûn Zhôn-Dazi-Zhôn Zhôn
-		}
-		
-		last_names = { " " }
-	}
-	wildmen = { # May be a place holder for the time being
-		color = { 63 56 41 }
-		first_names = { " " }
-		last_names = { " " }
-	}
 }
 
-rohirrim = {
-	leader = european
-	unit = EuropeanGC
-	rohirrim = {
-		color = { 75 93 22 }
-		first_names = { " " }
-		last_names = { " " }
-	}
-}
-
+# Will probably be squashed into one culture - Ñoldor (Imladris)
 eldar = {
 	leader = elven
 	unit = EuropeanGC
 	vanyar = {
 		
 		color = { 81 82 45 }
-		first_names = {
-		
+		first_names = { Lothanar Annuiben Gwaurwen Colfindor Edemen Eliedir Trenaror Lumorndir Gruithor
+		Goldir Lîrwen Lîrrien Cairdaer Maethion
 		}
-		last_names = { " "
-		
-		}
+
+		last_names = { "The Great" "The Lord of the Mountain" "The Elder" "The Warrior" "The Wise" "The commander"
+		"The Lord of the Rivers" "of the capital" "the old one" "the prayerer" "the dissident" }
 	}
 	
 	noldor = {
 		
 		color = { 66 76 86 }
-		first_names = {
-		
+		first_names = { Aulë Rúmil Fëanor Finwë Fingolfin Fingon Turgon Finarfin Maedhros Celebrimbor Aegnor Amras Amdír
+		Anairë Angrod Caranthir Celegorm  
+	
 		}
-		last_names = { " "
-		
-		}
+		last_names = { "The Great" "The Lord of the Mountain" "The Elder" "The Warrior" "The Wise" "The commander"
+		"The Lord of the Rivers" "of the capital" "the old one" "the prayerer" "the dissident" }
 	}
 }
 
+# Will probably be squashed into 3 cultures - Falathrim (Lindon), Silvan (Woodland Realm), Galadhrim (Lothlórien)
 teleri = {
 	leader = elven
 	unit = EuropeanGC
 	falmari = { # Teleri who went to Valinor
 		color = { 71 100 95 }
-		first_names = {
+		first_names = {Neodrach Cairrik Zaniven Kyterin Linoir Gldel Ereader Syluigh Seddin Akksaran
+		Lalelara Eloastar Kytrna Shandra Llandi Beloah Valedyl Isimrithe Imothara Celebiahala
+		Liamoth Piobeth Bieddin Coehaeryn Shyiandrach Sylehon Etel Sunaith Dagenaith Raondaur
 		
 		}
-		last_names = { " "
-		
-		}
+		last_names = { "The Great" "The Lord of the Mountain" "The Elder" "The Warrior" "The Wise" "The commander"
+		"The Lord of the Rivers" "of the capital" "the old one" "the prayerer" "the dissident" }
 	}
+	
 	lathrim = { # Sindar of Doriath
 		color = { 24 73 43 }
-		first_names = {
+		first_names = { Aulë Rúmil Fëanor Finwë Fingolfin Fingon Turgon Finarfin Maedhros Celebrimbor Aegnor Amras Amdír
+		Anairë Angrod Caranthir  Kytrna Shandra Llandi Beloah Valedyl Isimrithe Shyiandrach Sylehon Etel Sunaith Dagenaith Raondaur 
 		
 		}
-		last_names = { " "
+		last_names = { "The Great" "The Lord of the Mountain" "The Elder" "The Warrior" "The Wise" "The commander"
+		"The Lord of the Rivers" "of the capital" "the old one" "the prayerer" "the dissident"
 		
 		}
 	}
 	falathrim = { # Sindar of the Coast (Cirdan)
 		color = { 58 97 97 }
-		first_names = {
+		first_names = {  Aulë Rúmil Fëanor Finwë Fingolfin Fingon Turgon Finarfin Maedhros Celebrimbor Aegnor Amras Amdír
+		Anairë Angrod Caranthir  Kytrna Shandra Llandi Beloah Valedyl Isimrithe Shyiandrach Sylehon Etel Sunaith Dagenaith Raondaur 
 		
 		}
-		last_names = { " "
+		last_names = { "The Great" "The Lord of the Mountain" "The Elder" "The Warrior" "The Wise" "The commander"
+		"The Lord of the Rivers" "of the capital" "the old one" "the prayerer" "the dissident"
 		
 		}
 	}
 	silvan = { # Nandor - Silvans
 		color = { 128 255 0 }
-		first_names = {
+		first_names = { Neodrach Cairrik Zaniven Kyterin Linoir Gldel Ereader Syluigh Seddin Akksaran
+		Lalelara Eloastar Kytrna Shandra Llandi Beloah Valedyl Isimrithe Imothara Celebiahala
+		Liamoth Piobeth Bieddin Coehaeryn Shyiandrach Sylehon Etel Sunaith Dagenaith Raondaur
+		
 		
 		}
 		last_names = { " "
@@ -217,7 +173,9 @@ teleri = {
 	}
 	laiquendi = { # Nandor - Laiquendi 
 		color = { 26 56 39 }
-		first_names = {
+		first_names = { Aulë Rúmil Fëanor Finwë Fingolfin Fingon Turgon Finarfin Maedhros Celebrimbor Aegnor Amras Amdír
+		Anairë Angrod Caranthir Kytrna Shandra Shandra Llandi Beloah Valedyl Isimrithe Imothara Celebiahala
+		Liamoth Piobeth Bieddin Coehaeryn Shyiandrach Sylehon Etel Sunaith Dagenaith Raondaur
 		
 		}
 		last_names = { " "
@@ -226,12 +184,14 @@ teleri = {
 	}
 }
 
+# Will probably be squashed into one overarching culture - Avari
 avari = {
 	leader = elven
 	unit = EuropeanGC
 	kindi = {
 		color = { 67 91 77 }
-		first_names = {
+		first_names = { Kivoir Soneuvethel Metichyr Yeiarelar Reloarallin Caenn Aqiark Khterin Flaeynnhv Lutdacil
+		Eldimoth Thannor Araathoridan Jorefehon Pleedro Dakambaerth Qunduil Aywipen
 		
 		}
 		last_names = { " "
@@ -240,16 +200,15 @@ avari = {
 	}
 	cuind = {
 		color = { 67 91 77 }
-		first_names = {
-		
-		}
+		first_names = { Joiel Arbroth Ylevendor Onaeithor Qilikanthae Pleandrach Ergodrach Daleurel Elpae Ardaleas
+		Havyr Ayarlion Horiane Eiverel Cluewin Khuoyrth Ganeimar Fhaoperr Afuraun Ieear		}
 		last_names = { " "
 		
 		}
 	}
 	hwenti = {
 		color = { 67 91 77 }
-		first_names = {
+		first_names = { Lainn Tinestri Jharu Ghaeene Fhowmoon Usceas Galadhieth Alleyn Avaiessa Saéswana
 		
 		}
 		last_names = { " "
@@ -282,5 +241,372 @@ avari = {
 		last_names = { " "
 		
 		}
+	}
+}
+
+# Split regionally as they will be starting in independent tribes (separated by culture)
+# Names here could be the same across all of the cultures
+haradrim = {
+	leader = european
+	unit = EuropeanGC
+	umbarrim = { # Haradrim living in Umbar's lands
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	harnendan = { # The Gondorian/Haradrim mix living in Harnendor and Harondor
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	haruzani = { # Haradrim south of Chelkar, around Amrûn (city), east of the Poros
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	pezarsani = { # Haradrim around Korondaj/Kajbah/Miraz
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	lurmsakuni = { # Haradrim around Enmahadh
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	arysan = { # Haradrim in Velarith/Arysis
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Númenóreans who are not Dúnedain
+kingsmen = {
+	leader = european
+	unit = EuropeanGC
+	kingsmen = { # Those on the meme isle ruin of Meneltarma
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	black_numenorean = { # The descendents of Númenór who live in Umbar
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# The tribesmen of Khand and Nûrn
+khandish = {
+	leader = european
+	unit = EuropeanGC
+	variag = { # Those living in the lands usually called "Khand"
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	nurniag = { # The human slaves of Mordor working in Nûrn. No names needed here
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Orcs of Mordor
+mordorian = {
+	leader = european
+	unit = EuropeanGC
+	mordor_orc = { # Orcs of Mordor
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	mordor_uruk = { # Uruks of Mordor. May not be used. Only need a couple names here (like 5, max)
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	guldurrim = { # Orcs of Dol Guldur. Arguably they could be mordor_orc
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Wicked men of the East
+# Split into cultures by their tribe
+# Names could be the same for each culture
+easterlings = {
+	leader = european
+	unit = EuropeanGC
+	sagath = { # Those living in Sagathavuld
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	sekel = { # Those living in Sekelvuld
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	urgath = { # Those living in Urgathavuld and around Mistrand
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	kuga = { # Those living in Kugavuld
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	logath = { # Those living in Logathavuld
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# The men of Dale, Dorwinion and parts of Rhovanion
+northmen = {
+	leader = european
+	unit = EuropeanGC
+	dorwinrim = { # The men of Dorwinion
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	ehwathrim = { # The men of Ehwathrumavuld (West of Dorwinion, south of the Celduin, east of Mirkwood)
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	barding = { # The men of Dale and Esgaroth
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# All of the dwarves. They could be split into 2 culture groups, but for the moment, there does not seem to be a need to.
+# Firebeard and Broadbeam could be combined into one culture
+dwarves = {
+	leader = european
+	unit = EuropeanGC
+	longbeard = { # Dwarves of Erebor/Iron Hills/those in Ered Luin who fled Erebor in 2790
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	firebeard = { # Dwarves of Ered Luin
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	broadbeam = { # Dwarves of Ered Luin
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Men and Hobbits of the Upper Anduin Vale
+anduinrim = {
+	leader = european
+	unit = EuropeanGC
+	woodsmen = { # Men who are not living around Beorn's House
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	beorning = { # Men who are living around Beorn's House. Could use skinchanger names
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	stoor_hobbit = { # Hobbits of the Gladden Fields
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Ents and Huorns
+ents = {
+	leader = european
+	unit = EuropeanGC
+	ent = { # Awakened, sapient trees
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	huorn = { # Awakened, non-sapient trees
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Natives of Middle Earth in Enedwaith/Gondor/Rohan
+wildmen = {
+	leader = european
+	unit = EuropeanGC
+	druedain = { # Wildmen in Drúadan Forest and Drúwaith Iaur
+		color = { 50 50 50 }
+		first_names = { Aghan Ghân Ghân-buri-Ghân Qhân-Buni-Qhân Qhân Zhân-Zuni-Zhân Zhân Qhûn-Vodi-Qhûn Qhûn
+		Vhân-Guro-Vhân Vhân Qhûn-Bema-Qhûn Qhûn Bhôn-Hovo-Bhôn Bhôn Thûn-Dozi-Thûn Thûn Zhôn-Dazi-Zhôn Zhôn
+		}
+		
+		last_names = { Grarn Drarmadoc Gant Grarn Remadoc Versond Ranont Halmodoc Dennig Maddidoc }
+	}
+	wildmen = { # May be a place holder for the time being
+		color = { 63 56 41 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	dunnish = { # Men of Dunland
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	enedwaithrim = { # Men of Enedwaith
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# The Rohirrim
+rohirrim = {
+	leader = european
+	unit = EuropeanGC
+	rohirrim = {
+		color = { 75 93 22 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Uruk-hai of Isengard
+uruk_hai = {
+	leader = european
+	unit = EuropeanGC
+	urukhai = {
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Goblins of the Misty, Grey and Angmar Mountains
+northern_goblins = {
+	leader = european
+	unit = EuropeanGC
+	morian = { # Goblins of Moria and the surrounding land
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	goblin_towner = { # Goblins of Goblin Town and surrounding area
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	gundabad_orc = { # Goblins of Gundabad and surrounding area
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	snow_orc = { # Goblins of Grey Mountains
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	angmar_orc = { # Orcs of Angmar
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Men of Angmar and Rhudaur
+angmarrim = {
+	leader = european
+	unit = EuropeanGC
+	angmarrim = { # Men of Angmar
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	hillmen = { # Hillmen of Rhudaur
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Independent men of Lossoth
+lossoth = {
+	leader = european
+	unit = EuropeanGC
+	lossoth = {
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Men and Hobbits of Breeland
+breelander = {
+	leader = european
+	unit = EuropeanGC
+	breelander = { # Men of Breeland
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+	
+	breeland_hobbit = { # Hobbits of Breeland
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
+	}
+}
+
+# Hobbits of the Shire
+shirelings = {
+	leader = european
+	unit = EuropeanGC
+	shire_hobbit = {
+		color = { 0 0 0 }
+		first_names = { " " }
+		last_names = { " " }
 	}
 }

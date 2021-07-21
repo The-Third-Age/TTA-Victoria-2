@@ -9,6 +9,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
+ - AI chances on tech
  - Pop reform/party policy tendencies
  - Add rebels
  - Inventions and tech schools
@@ -18,7 +19,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Figure out how to add `minimum_wage` effect to something
  - "Unciv" reforms?
  - Figure out 6 regions to use a continents (to reskin the vanilla ones)
- - What to replace plurality with
  - Revanchism
  - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending
  - Gas Attack?
@@ -41,3 +41,5 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Fix diplomatic actions on map being hidden by newspaper
  - Pukel's land (or whoever it is) able to free Druedain Forest if they win the first Andrast War: Make it its own flavor rather than tied to Gondor losing
  - Way for Gondor to remove Pukel's land cores, modifiers to Andrast lands
+ - Starting literacy/prestige
+ - Starting flags (research and good/evil wise)
