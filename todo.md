@@ -34,12 +34,12 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Event 50005, get the syntax for getting the general correct
  - Extension of the Gondor Road
  - (Great) Roads (modifier) able to be destroyed and remade
+ - Pukel's land (or whoever it is) able to free Druedain Forest if they win the first Andrast War: Make it its own flavor rather than tied to Gondor losing
+ - Way for Gondor to remove Pukel's land cores, modifiers to Andrast lands
 
 ## Others 
  - Music (BFME2 for example)
  - WoTR = world war (literally) between good and evil (if possible, Gondor and Mordor leading)
  - Fix diplomatic actions on map being hidden by newspaper
- - Pukel's land (or whoever it is) able to free Druedain Forest if they win the first Andrast War: Make it its own flavor rather than tied to Gondor losing
- - Way for Gondor to remove Pukel's land cores, modifiers to Andrast lands
  - Starting literacy/prestige
  - Starting flags (research and good/evil wise)
