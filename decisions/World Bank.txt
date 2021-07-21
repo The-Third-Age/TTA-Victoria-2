@@ -1,6 +1,7 @@
 # World Bank Decisions: {
 #	Starting Decision (unseen) 
-#	Time Specific Event Firing }
+#	Time Specific Event Firing 
+#	Clean Up }
 
 # Starting Decision
 political_decisions = {
@@ -39,10 +40,21 @@ political_decisions = {
 				limit = {
 					OR = {
 						is_culture_group = dunedain
-						is_culture_group = druedain
 						is_culture_group = eldar
 						is_culture_group = teleri
 						is_culture_group = avari
+						is_culture_group = northmen
+						is_culture_group = dwarves
+						is_culture_group = anduinrim
+						is_culture_group = ents
+						AND = {
+							is_culture_group = wildmen
+							NOT = { tag = DUN }
+						}
+						is_culture_group = rohirrim
+						is_culture_group = lossoth
+						is_culture_group = breelander
+						is_culture_group = shirelings
 					}
 				}
 				set_country_flag = good_realm
@@ -55,7 +67,20 @@ political_decisions = {
 			# For Evil Realms
 			any_country = {
 				limit = {
-					religion = orc
+					OR = {
+						is_culture_group = haradrim
+						is_culture_group = kingsmen
+						is_culture_group = khandish
+						is_culture_group = mordorian
+						is_culture_group = easterlings
+						AND = {
+							is_culture_group = wildmen
+							tag = DUN
+						}
+						is_culture_group = uruk_hai
+						is_culture_group = northern_goblins
+						is_culture_group = angmarrim
+					}	
 				}
 				set_country_flag = evil_realm
 				add_country_modifier = {
@@ -70,6 +95,69 @@ political_decisions = {
 					limit = { type = clergymen }
 					literacy = 0.05
 				}
+			}
+			
+			# Research flags for infantry focused realms
+			any_country = {
+				limit = {
+					OR = {
+						is_culture_group = dunedain
+						is_culture_group = dwarves
+						AND = {
+							is_culture_group = anduinrim
+							NOT = { tag = STO }
+						}
+						is_culture_group = ents
+						AND = {
+							is_culture_group = wildmen
+							tag = DUN
+						}
+						is_culture_group = lossoth
+						is_culture_group = breelander
+						is_culture_group = kingsmen
+						is_culture_group = mordorian
+						is_culture_group = uruk_hai
+						is_culture_group = northern_goblins
+						is_culture_group = angmarrim
+					}
+				}
+				set_country_flag = infantry_realm
+			}
+			
+			# Research flags for ranged focused realms
+			any_country = {
+				limit = {
+					OR = {
+						is_culture_group = eldar
+						is_culture_group = teleri
+						is_culture_group = avari
+						is_culture_group = northmen
+						AND = {
+							is_culture_group = wildmen
+							NOT = { tag = DUN }
+						}
+						AND = {
+							is_culture_group = anduinrim
+							tag = STO
+						}
+						
+						is_culture_group = shirelings
+					}
+				}
+				set_country_flag = ranged_focused
+			}
+			
+			# Research flags for cavalry focused realms
+			any_country = {
+				limit = {
+					OR = {
+						is_culture_group = rohirrim
+						is_culture_group = haradrim
+						is_culture_group = khandish
+						is_culture_group = easterlings
+					}
+				}
+				set_country_flag = ranged_focused
 			}
 		}
 	}
@@ -99,6 +187,118 @@ political_decisions = {
 				}
 			}
 			set_global_flag = bilbos_111_birthday_party
+		}
+	}
+}
+
+# Clean Up
+political_decisions = {
+	good_evil_messed_up = {
+		potential = {
+			tag = FOR
+			OR = {
+				# Has evil_realm modifier or does not have good_realm modifier as good_realm
+				any_neighbor_country = {
+					has_country_flag = good_realm
+					NOT = { has_country_flag = evil_realm }
+					OR = {
+						NOT = { has_country_modifier = good_realm }
+						has_country_modifier = evil_realm
+					}
+				}
+				# Has evil_realm flag as good_realm
+				any_neighbor_country = {
+					has_country_flag = good_realm
+					has_country_modifier = good_realm
+					has_country_flag = evil_realm
+					NOT = { has_country_modifier = evil_realm }
+				}
+				# Has good_realm_modifier or does not have evil_realm modifier as evil_realm
+				any_neighbor_country = {
+					has_country_flag = evil_realm
+					NOT = { has_country_flag = good_realm }
+					OR = {
+						NOT = { has_country_modifier = evil_realm }
+						has_country_modifier = good_realm
+					}
+				}
+				# Has good_realm as evil_realm
+				any_neighbor_country = {
+					has_country_flag = evil_realm
+					has_country_modifier = evil_realm
+					has_country_flag = good_realm
+					NOT = { has_country_modifier = good_realm }
+				}
+				# Is both evil_realm and good_realm
+				any_neighbor_country = {
+					has_country_flag = good_realm
+					has_country_modifier = good_realm
+					has_country_flag = evil_realm
+					has_country_flag = good_realm
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = good_realm
+					NOT = { has_country_flag = evil_realm }
+					OR = {
+						NOT = { has_country_modifier = good_realm }
+						has_country_modifier = evil_realm
+					}
+				}
+				add_country_modifier = {
+					name = good_realm
+					duration = -1
+				}
+				remove_country_modifier = evil_realm
+			}
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = good_realm
+					has_country_modifier = good_realm
+					has_country_flag = evil_realm
+					NOT = { has_country_modifier = evil_realm }
+				}
+				clr_country_flag = evil_realm
+			}
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = evil_realm
+					NOT = { has_country_flag = good_realm }
+					OR = {
+						NOT = { has_country_modifier = evil_realm }
+						has_country_modifier = good_realm
+					}
+				}
+				add_country_modifier = {
+					name = evil_realm
+					duration = -1
+				}
+				remove_country_modifier = good_realm
+			}
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = evil_realm
+					has_country_modifier = evil_realm
+					has_country_flag = good_realm
+					NOT = { has_country_modifier = good_realm }
+				}
+				clr_country_flag = good_realm
+			}
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = good_realm
+					has_country_modifier = good_realm
+					has_country_flag = evil_realm
+					has_country_flag = good_realm
+				}
+				country_event = 99000
+			}
 		}
 	}
 }

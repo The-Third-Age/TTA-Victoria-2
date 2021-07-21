@@ -1,0 +1,26 @@
+# World Bank Events: {
+# 99000 - 99999 }
+
+# Realm has is both good and evil
+country_event = {
+	id = 99000
+	picture = introduction
+	name = "Both Good and Evil?"
+	desc = "EVTDESC99000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		
+		remove_country_modifier = evil_realm
+		clr_country_flag = evil_realm
+	}
+	
+	option = {
+		name = "Evil"
+		
+		remove_country_modifier = good_realm
+		clr_country_flag = good_realm
+	}
+}

@@ -13,16 +13,17 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Pop reform/party policy tendencies
  - Add rebels
  - Inventions and tech schools
- - Cultures and Pops
+ - Pops
  - Reset OnAction event ids
  - Province terrains
  - Figure out how to add `minimum_wage` effect to something
  - "Unciv" reforms?
- - Figure out 6 regions to use a continents (to reskin the vanilla ones)
  - Revanchism
  - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending
  - Gas Attack?
  - Great/World Wars?
+ - Starting literacy/prestige
+ - General Spawn events
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
@@ -36,9 +37,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - (Great) Roads (modifier) able to be destroyed and remade
  - Pukel's land (or whoever it is) able to free Druedain Forest if they win the first Andrast War: Make it its own flavor rather than tied to Gondor losing
  - Way for Gondor to remove Pukel's land cores, modifiers to Andrast lands
+ - WoTR = world war (literally) between good and evil (if possible, Gondor and Mordor leading)
 
 ## Others 
  - Music (BFME2 for example)
- - WoTR = world war (literally) between good and evil (if possible, Gondor and Mordor leading)
- - Starting literacy/prestige
- - Starting flags (research and good/evil wise)
