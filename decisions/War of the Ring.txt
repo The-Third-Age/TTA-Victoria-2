@@ -170,7 +170,7 @@ political_decisions = {
 			any_neighbor_country = { war = no }
 			NOT = { has_country_flag = get_realms_to_fight }
 			any_neighbor_country = { has_country_flag = good_leader }
-			any_neighbor_country = { has_country_flag = evil_leaver }
+			any_neighbor_country = { has_country_flag = evil_leader }
 		}
 		
 		allow = { }
@@ -186,7 +186,7 @@ political_decisions = {
 			
 			any_neighbor_country = {
 				limit = {
-					war = yes
+					war = no
 					has_country_flag = evil_realm
 				}
 				country_event = 50309

@@ -301,4 +301,63 @@ political_decisions = {
 			}
 		}
 	}
+	
+	break_alliance_with_FOR = {
+		picture = "dont_do_that"
+		
+		potential = {
+			FOR = { any_neighbor_country = { alliance_with = FOR } }
+			OR = {
+				tag = FOR
+				AND = {
+					alliance_with = FOR
+					ai = yes
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_country = {
+				limit = {
+					alliance_with = FOR
+				}
+				leave_alliance = FOR
+				relation = {
+					who = FOR
+					value = -400
+				}
+			}
+		}
+	}
+	
+	leave_sphere_FOR = {
+		picture = "dont_do_that"
+		
+		potential = {
+			FOR = { part_of_sphere = yes }
+			OR = {
+				tag = FOR
+				AND = {
+					is_sphere_leader_of = FOR
+					ai = yes
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_country = {
+				limit = {
+					is_sphere_leader_of = FOR
+				}
+				diplomatic_influence = {
+					who = FOR
+					value = -400
+				}
+			}
+		}
+	}
 }

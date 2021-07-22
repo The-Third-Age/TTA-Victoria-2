@@ -39,6 +39,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Way for Gondor to remove Pukel's land cores, modifiers to Andrast lands
  - Make countries end their wars prior to the WoTR starting
  - WoTR ending in 5 years if it has not already ended
+ - Add Country Fluff events/decisions for ADR/PUK/FOR. Sort countries at the same time
 
 ## Others 
  - Music (BFME2 for example)
