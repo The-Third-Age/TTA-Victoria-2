@@ -62,6 +62,7 @@ political_decisions = {
 					name = good_realm
 					duration = -1
 				}
+				add_accepted_culture = good_culture
 			}
 			
 			# For Evil Realms
@@ -87,6 +88,7 @@ political_decisions = {
 					name = evil_realm
 					duration = -1
 				}
+				add_accepted_culture = evil_culture
 			}
 			
 			# Literacy boost for Loremasters
@@ -242,6 +244,22 @@ political_decisions = {
 					has_country_flag = evil_realm
 					has_country_flag = good_realm
 				}
+				# Has good_realm but not good_culture or has evil_culture
+				any_neighbor_country = {
+					has_country_flag = good_realm
+					OR = {
+						NOT = { accepted_culture = good_culture }
+						accepted_culture = evil_culture
+					}
+				}
+				# Has evil_realm but not evil_culture or has good_culture
+				any_neighbor_country = {
+					has_country_flag = evil_realm
+					OR = {
+						NOT = { accepted_culture = evil_culture }
+						accepted_culture = good_culture
+					}
+				}
 			}
 		}
 		
@@ -304,6 +322,28 @@ political_decisions = {
 					has_country_flag = good_realm
 				}
 				country_event = 99000
+			}
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = good_realm
+					OR = {
+						NOT = { accepted_culture = good_culture }
+						accepted_culture = evil_culture
+					}
+				}
+				add_accepted_culture = good_culture
+				remove_accepted_culture = evil_culture
+			}
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = evil_realm
+					OR = {
+						NOT = { accepted_culture = evil_culture }
+						accepted_culture = good_culture
+					}
+				}
+				add_accepted_culture = evil_culture
+				remove_accepted_culture = good_culture
 			}
 		}
 	}
