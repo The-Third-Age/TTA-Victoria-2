@@ -33,6 +33,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## Flavor
  - Event 50005, get the syntax for getting the general correct
+ - Flavor research category for things like getting military hospital benefit from Houses of Healing?
  - Extension of the Gondor Road
  - (Great) Roads (modifier) able to be destroyed and remade
  - Pukel's land (or whoever it is) able to free Druedain Forest if they win the first Andrast War: Make it its own flavor rather than tied to Gondor losing
@@ -43,3 +44,4 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## Others 
  - Music (BFME2 for example)
+ - SirRunner. Do Disunited Kingdom Canada when done with Serbia campaign
