@@ -32,6 +32,7 @@ political_decisions = {
 			OR = {
 				tag = GON
 				substate_of = GON
+				tag = ADR
 			}
 		}
 		
@@ -52,7 +53,10 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = {
-						substate_of = GON
+						OR = {
+							substate_of = GON
+							tag = ADR
+						}
 					}
 				}
 				owner = { country_event = 35004 }
@@ -525,6 +529,37 @@ political_decisions = {
 		
 		effect = {
 			country_event = 35125
+		}
+	}
+	
+	druedain_of_druwaith_iaur = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = PUK
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35129
+		}
+	}
+	
+	bank_of_forodwaith = {
+		picture = "dont_do_that"
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = FOR
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35133
 		}
 	}
 }
