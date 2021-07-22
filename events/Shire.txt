@@ -14,6 +14,27 @@ country_event = {
 		name = "A party of special magnificence!"
 		
 		prestige = 5
-		set_global_flag = ring_goes_to_frodo
+		
+		# Gives the One Ring to Frodo if Bilbo has it
+		random_country = {
+			limit = {
+				tag = FOR
+				check_variable = {
+					which = ring_controller
+					value = 0 # Bilbo
+				}
+				NOT = {
+					check_variable = {
+						which = ring_controller
+						value = 1 # Anyone else
+					}
+				}
+			}
+			
+			set_variable = {
+				which = ring_controller
+				value = 1 # Frodo
+			}
+		}
 	}
 }

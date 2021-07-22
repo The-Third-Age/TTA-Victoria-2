@@ -2,116 +2,118 @@
 # 100000 - 199999 }
 
 # Setup Event {
-country_event = {
-	id = 100000
-	title = "Setup Event"
-	desc = "EVTDESC100000"
+# country_event = {
+	# id = 100000
+	# title = "Setup Event"
+	# desc = "EVTDESC100000"
 	
-	fire_only_once = yes
+	# fire_only_once = yes
 	
-	trigger = {
-		ai = no
-	}
+	# trigger = {
+		# ai = no
+	# }
 	
-	option = {
-		name = "OK"
+	# option = {
+		# name = "OK"
 		
-		set_variable = {
-			which = ring_controller
-			value = 0 # Bilbo
-		}
-	}
-}
+		# set_variable = {
+			# which = ring_controller
+			# value = 0 # Bilbo
+		# }
+	# }
+# }
 # }
 
-# Ring Movements {
+# Ring Movements DEPIRCATED {
 # Ring passes from Bilbo to Frodo
-country_event = {
-	id = 100001
-	picture = birthday
-	title = "Frodo Acquires the Ring"
-	desc = "EVTDESC100001"
+# country_event = {
+	# id = 100001
+	# picture = birthday
+	# title = "Frodo Acquires the Ring"
+	# desc = "EVTDESC100001"
 	
-	trigger = {
-		has_global_flag = ring_goes_to_frodo
-		ai = no
-		check_variable = {
-			which = ring_controller
-			value = 0 # Bilbo
-		}
-		NOT = {
-			check_variable = {
-				which = ring_controller
-				value = 1 # Anyone else
-			}
-		}
-	}
+	# trigger = {
+		# has_global_flag = ring_goes_to_frodo
+		# ai = no
+		# tag = FOR
+		# check_variable = {
+			# which = ring_controller
+			# value = 0 # Bilbo
+		# }
+		# NOT = {
+			# check_variable = {
+				# which = ring_controller
+				# value = 1 # Anyone else
+			# }
+		# }
+	# }
 	
-	option = {
-		name = "OK"
+	# option = {
+		# name = "OK"
 		
-		set_variable = {
-			which = ring_controller
-			value = 1 # Frodo
-		}
-		clr_global_flag = ring_goes_to_frodo
-	}
-}
+		# set_variable = {
+			# which = ring_controller
+			# value = 1 # Frodo
+		# }
+		# clr_global_flag = ring_goes_to_frodo
+	# }
+# }
 
 # Clearing ring_goes_to_frodo if Bilbo did not have the ring
-country_event = {
-	id = 100002
-	picture = birthday
-	title = "Frodo did not get the Ring"
-	desc = "EVTDESC100002"
+# country_event = {
+	# id = 100002
+	# picture = birthday
+	# title = "Frodo did not get the Ring"
+	# desc = "EVTDESC100002"
 	
-	trigger = {
-		has_global_flag = ring_goes_to_frodo
-		tag = FOR
-		check_variable = {
-			which = ring_controller
-			value = 1 # Anyone else
-		}
-	}
+	# trigger = {
+		# has_global_flag = ring_goes_to_frodo
+		# tag = FOR
+		# check_variable = {
+			# which = ring_controller
+			# value = 1 # Anyone else
+		# }
+	# }
 	
-	option = {
-		name = "OK"
+	# option = {
+		# name = "OK"
 		
-		clr_global_flag = ring_goes_to_frodo
-	}
-}
+		# clr_global_flag = ring_goes_to_frodo
+	# }
+# }
 
 # Update ring_controller from Frodo to the Fellowship
-country_event = {
-	id = 100003
-	picture = council_of_elrond
-	title = "The Fellowship of the Ring"
-	desc = "EVTDESC100003"
+# country_event = {
+	# id = 100003
+	# picture = council_of_elrond
+	# title = "The Fellowship of the Ring"
+	# desc = "EVTDESC100003"
 	
-	trigger = {
-		has_global_flag = the_council_of_elrond
-		ai = no
-		check_variable = {
-			which = ring_controller
-			value = 1 # Frodo
-		}
-		NOT = {
-			check_variable = {
-				which = ring_controller
-				value = 2 # Anyone else
-			}
-		}
-	}
+	# trigger = {
+		# has_global_flag = the_council_of_elrond
+		# ai = no
+		# tag = FOR
+		# check_variable = {
+			# which = ring_controller
+			# value = 1 # Frodo
+		# }
+		# NOT = {
+			# check_variable = {
+				# which = ring_controller
+				# value = 2 # Anyone else
+			# }
+		# }
+	# }
 	
-	option = {
-		name = "OK"
+	# option = {
+		# name = "OK"
 		
-		set_variable = {
-			which = ring_controller
-			value = 2
-		}
-	}
-}
+		# set_variable = {
+			# which = ring_controller
+			# value = 2
+		# }
+	# }
+# }
 # }
 
 # Andrast War {

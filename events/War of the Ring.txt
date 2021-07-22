@@ -127,7 +127,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "9 companions... so be it."
+		name = "§R9 companions... so be it.§!"
 		
 		prestige = 25
 		
@@ -137,6 +137,14 @@ country_event = {
 			add_country_modifier = {
 				name = wotr_countdown
 				duration = 1095
+			}
+			add_country_modifier = {
+				name = wotr_end_countdown
+				duration = 2920
+			}
+			set_variable = {
+				which = ring_controller
+				value = 2
 			}
 		}
 		
@@ -159,6 +167,14 @@ country_event = {
 			add_country_modifier = {
 				name = wotr_countdown
 				duration = 1095
+			}
+			add_country_modifier = {
+				name = wotr_end_countdown
+				duration = 2920
+			}
+			set_variable = {
+				which = ring_controller
+				value = 2
 			}
 		}
 		

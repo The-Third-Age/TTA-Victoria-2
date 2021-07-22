@@ -11,14 +11,16 @@
 political_decisions = {
 	council_of_elrond = {
 		potential = {
-			check_variable = {
-				which = ring_controller
-				value = 1 # Frodo
-			}
-			NOT = {
+			FOR = {
 				check_variable = {
 					which = ring_controller
-					value = 2 # Anyone else
+					value = 1 # Frodo
+				}
+				NOT = {
+					check_variable = {
+						which = ring_controller
+						value = 2 # Anyone else
+					}
 				}
 			}
 			year = 3000
