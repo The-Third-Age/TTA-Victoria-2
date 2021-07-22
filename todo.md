@@ -37,7 +37,8 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - (Great) Roads (modifier) able to be destroyed and remade
  - Pukel's land (or whoever it is) able to free Druedain Forest if they win the first Andrast War: Make it its own flavor rather than tied to Gondor losing
  - Way for Gondor to remove Pukel's land cores, modifiers to Andrast lands
- - WoTR = world war (literally) between good and evil (if possible, Gondor and Mordor leading)
+ - Make countries end their wars prior to the WoTR starting
+ - WoTR ending in 5 years if it has not already ended
 
 ## Others 
  - Music (BFME2 for example)

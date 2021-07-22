@@ -1,5 +1,6 @@
 # Imladris Decisons: {
-#	Council of Elrond }
+#	Council of Elrond 
+#	War of the Ring}
 
 # ring_controller mapping:
 #	0 = Bilbo
@@ -70,6 +71,161 @@ political_decisions = {
 				id = 50303
 				days = 3
 			}
+		}
+	}
+}
+
+# War of the Ring
+political_decisions = {
+	war_of_the_ring_leader_selection = {
+		picture = "war_of_the_ring"
+		
+		potential = {
+			tag = FOR
+			check_variable = {
+				which = ring_controller
+				value = 2 # Fellowship
+			}
+			NOT = {
+				check_variable = {
+					which = ring_controller
+					value = 3 # Anyone else
+				}
+			}
+			NOT = { has_country_modifier = wotr_countdown }
+			NOT = { has_global_flag = wotr_leaders_chosen }
+		}
+		
+		allow = { }
+		
+		effect = {
+			random_country = {
+				limit = {
+					OR = {
+						AND = {
+							OR = {
+								tag = GON
+								AND = {
+									is_greater_power = yes
+									ai = no
+								}
+							}
+							has_country_flag = good_realm
+						}
+						AND = {
+							NOT = { GON = { has_country_flag = good_realm } }
+							has_country_flag = good_realm
+							is_greater_power = yes
+						}
+						AND = {
+							NOT = { GON = { has_country_flag = good_realm } }
+							NOT = { any_greater_power = { has_country_flag = good_realm } }
+							has_country_flag = good_realm
+						}
+					}
+				}
+				set_country_flag = good_leader
+				country_event = 50304
+				country_event = { id = 50306 days = 1 }
+			}
+			
+			random_country = {
+				limit = {
+					OR = {
+						AND = {
+							OR = {
+								tag = MOR
+								AND = {
+									is_greater_power = yes
+									ai = no
+								}
+							}
+							has_country_flag = evil_realm
+						}
+						AND = {
+							NOT = { MOR = { has_country_flag = evil_realm } }
+							has_country_flag = evil_realm
+							is_greater_power = yes
+						}
+						AND = {
+							NOT = { MOR = { has_country_flag = evil_realm } }
+							NOT = { any_greater_power = { has_country_flag = evil_realm } }
+							has_country_flag = evil_realm
+						}
+					}
+				}
+				set_country_flag = evil_leader
+				country_event = 50305
+			}
+			
+			set_global_flag = wotr_leaders_chosen
+		}
+	}
+	
+	war_of_the_ring_ensure_realms_fight = {
+		picture = "war_of_the_ring"
+		
+		potential = {
+			tag = FOR
+			any_neighbor_country = { war = no }
+			NOT = { has_country_flag = get_realms_to_fight }
+			any_neighbor_country = { has_country_flag = good_leader }
+			any_neighbor_country = { has_country_flag = evil_leaver }
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					war = no
+					has_country_flag = good_realm
+				}
+				country_event = 50308
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					war = yes
+					has_country_flag = evil_realm
+				}
+				country_event = 50309
+			}
+			
+			set_country_flag = get_realms_to_fight
+		}
+	}
+	
+	war_of_the_ring_ensure_realms_fight_2 = {
+		picture = "war_of_the_ring"
+		
+		potential = {
+			tag = FOR
+			has_country_flag = get_realms_to_fight
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = good_leader
+					has_country_flag = good_needs_to_fight
+				}
+				clr_country_flag = good_needs_to_fight
+				country_event = 50310
+			}
+			
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = evil_leader
+					has_country_flag = evil_needs_to_fight
+				}
+				clr_country_flag = evil_needs_to_fight
+				country_event = 50310
+			}
+			
+			clr_country_flag = get_realms_to_fight
 		}
 	}
 }

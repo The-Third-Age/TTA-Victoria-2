@@ -130,11 +130,15 @@ country_event = {
 		name = "9 companions... so be it."
 		
 		prestige = 25
-		set_variable = {
-			which = fellowship_members
-			value = 9
-		}
+		
 		clr_country_flag = the_council_of_elrond_host
+		
+		FOR = {
+			add_country_modifier = {
+				name = wotr_countdown
+				duration = 1095
+			}
+		}
 		
 		ai_chance = {
 			factor = 90
@@ -145,14 +149,19 @@ country_event = {
 		name = "10 companions... so be it. §R(We will have a member join the Fellowship)§!"
 		
 		prestige = 50
+		
 		add_country_modifier = {
 			name = fellowship_member
 			duration = -1
 		}
-		set_variable = {
-			which = fellowship_members
-			value = 10
+		
+		FOR = {
+			add_country_modifier = {
+				name = wotr_countdown
+				duration = 1095
+			}
 		}
+		
 		clr_country_flag = the_council_of_elrond_host
 		
 		ai_chance = {
@@ -164,6 +173,183 @@ country_event = {
 		}
 	}
 }
+# }
+
+# War of the Ring {
+# Good nation alliance
+country_event = {
+	id = 50304
+	picture = war_of_the_ring
+	title = "The Alliance of Free Realms"
+	desc = "EVTDESC50304"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Our friends support us"
+		
+		any_country = {
+			limit = {
+				has_country_flag = good_realm
+			}
+			create_alliance = THIS
+		}
+		any_country = {
+			limit = {
+				has_country_flag = evil_realm
+			}
+			leave_alliance = THIS
+		}
+	}
+}
+
+# Evil nation alliance
+country_event = {
+	id = 50305
+	picture = war_of_the_ring
+	title = "The Alliance of Evil Realm"
+	desc = "EVTDESC50305"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Our allies support us"
+		
+		any_country = {
+			limit = {
+				has_country_flag = evil_realm
+			}
+			create_alliance = THIS
+		}
+		any_country = {
+			limit = {
+				has_country_flag = good_realm
+			}
+			leave_alliance = THIS
+		}
+	}
+}
+
+# The War of the Ring - Good
+country_event  {
+	id = 50306
+	picture = war_of_the_ring
+	title = "The War of the Ring"
+	desc = "EVTDESC50306"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "To arms!"
+		
+		random_country = {
+			limit = {
+				has_country_flag = evil_leader
+			}
+			country_event = 50307
+		}
+	}
+}
+
+# The War of the Ring - Evil (Actually starts the war)
+country_event = {
+	id = 50307
+	picture = war_of_the_ring
+	title = "The War of the Ring"
+	desc = "EVTDESC50307"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "To arms!"
+		
+		# Good side cb
+		add_casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 12
+		}
+		
+		# Evil side cb
+		casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 12
+		}
+		
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = humiliate }
+			defender_goal = { casus_belli = humiliate }
+			call_ally = yes
+		}
+	}
+}
+
+# War of the Ring - Good make alliance with good realm not at war
+country_event = {
+	id = 50308
+	picture = war_of_the_ring
+	title = "The War of the Ring Expands"
+	desc = "EVTDESC50308"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Middle-Earth in enveloped in war"
+		
+		random_country = {
+			limit = {
+				has_country_flag = good_leader
+			}
+			create_alliance = THIS
+			set_country_flag = good_needs_to_fight
+		}
+	}
+}
+
+# War of the Ring - Evil make alliance with evil realm not at war
+country_event = {
+	id = 50309
+	picture = war_of_the_ring
+	title = "The War of the Ring Expands"
+	desc = "EVTDESC50309"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Middle-Earth in enveloped in war"
+		
+		random_country = {
+			limit = {
+				has_country_flag = evil_leader
+			}
+			create_alliance = THIS
+			set_country_flag = evil_needs_to_fight
+		}
+	}
+}
+
+# War of the Ring - Start war with rebels to get allies to join
+country_event = {
+	id = 50310
+	picture = war_of_the_ring
+	title = "The War of the Ring Expands"
+	desc = "EVTDESC50310"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Middle-Earth is enveloped in war"
+		
+		war = { # No target initiates a one-day war that automatically resolves in a WP, but call_ally causes the new ally
+			attacker_goal = { casus_belli = humiliate }
+			call_ally = yes
+		}
+		badboy = -3
+	}
+}
+
 # }
 	
 	
