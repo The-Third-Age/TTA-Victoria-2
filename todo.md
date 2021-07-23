@@ -34,10 +34,11 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Flavor research category for things like getting military hospital benefit from Houses of Healing?
  - Extension of the Gondor Road
  - (Great) Roads (modifier) able to be destroyed and remade
- - Pukel's land (or whoever it is) able to free Druedain Forest if they win the first Andrast War: Make it its own flavor rather than tied to Gondor losing
  - Make countries end their wars prior to the WoTR starting
  - WoTR ending in 5 years if it has not already ended
  - Return to South Gondor
+ - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
+ - Revisit decision reqs (tech)
 
 ## Others 
  - Music (BFME2 for example)

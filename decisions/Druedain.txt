@@ -1,0 +1,112 @@
+# Druedain Decision: {
+#	Freedom of the Forest }
+
+# Freedom of the Forest
+political_decisions = {
+	free_druadan_forest = {
+		potential = {
+			is_culture_group = wildmen
+			has_global_flag = GON_lost_andrast_war
+			GON = { owns = 11 }
+			NOT = { exists = DRU }
+			any_neighbor_country = { 
+				OR = {
+					tag = GON
+					vassal_of = GON
+				}
+			}
+			NOT = { has_global_flag = wildmen_freedom_of_druadan_forest }
+			NOT = { has_global_flag = wildmen_lost_druadan_forest }
+		}
+		
+		allow = {
+			war = no
+			NOT = { truce_with = GON }
+		}
+		
+		effect = {
+			badboy = 2
+			
+			casus_belli = {
+				target = GON
+				type = liberate_country
+				months = 12
+			}
+			
+			war = {
+				target = GON
+				attacker_goal = { casus_belli = liberate_country country = DRU }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+			
+			set_global_flag = wildmen_freedom_of_druadan_forest
+			set_country_flag = druadan_forest_freer
+		}
+	}
+	
+	free_druadan_forest_end_wildmen = {
+		picture = "free_druadan_forest"
+		potential = {
+			GON = { has_recently_lost_war = yes }
+			truce_with = GON
+			has_recently_lost_war = no
+			war = no
+			is_culture_group = wildmen
+			DRU = { owns = 11 }
+			has_global_flag = wildmen_freedom_of_druadan_forest
+			has_country_flag = druadan_forest_freer
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			11 = { remove_core = GON }
+			
+			DRU = { country_event = 100009 }
+			
+			country_event = 100007
+			
+			clr_global_flag = wildmen_freedom_of_druadan_forest
+			set_global_flag = GON_lost_druadan_forest
+		}
+	}
+	
+	free_druadan_forest_end_GON = {
+		picture = "free_druadan_forest"
+		potential = {
+			tag = GON
+			has_recently_lost_war = no
+			has_global_flag = wildmen_freedom_of_druadan_forest
+			war = no
+			owns = 11
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			11 = { remove_core = DRU }
+			
+			any_pop = {
+				limit = {
+					location = { province_id = 11 }
+					has_pop_culture = druedain
+				}
+				reduce_pop = 0.8
+			}
+			
+			random_country = {
+				limit = {
+					has_country_flag = druadan_forest_freer
+				}
+				clr_country_flag = druadan_forest_freer
+			}
+			
+			clr_global_flag = wildmen_freedom_of_druadan_forest
+			set_global_flag = wildmen_lost_druadan_forest
+		}
+}

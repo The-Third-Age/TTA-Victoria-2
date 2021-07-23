@@ -4,7 +4,8 @@
 #	Province Flavor
 #	Military Buildup
 #	Expansions to the West
-#	Province Flavor }
+#	Province Flavor 
+#	Reclaiming Cores Removed Via Flavor }
 
 # Starting Decisions
 political_decisions = {
@@ -859,6 +860,59 @@ political_decisions = {
 			}
 			
 			set_global_flag = gondor_prepared_coastal_defences
+		}
+	}
+}
+
+# Reclaiming Cores Removed Via Flavor
+political_decisions = {
+	reclaim_druadan_forest = {
+		picture = "free_druadan_forest"
+		potential = {
+			tag = GON
+			NOT = { 11 = { is_core = GON } }
+			has_global_flag = GON_lost_druadan_forest
+			NOT = { has_country_modifier = low_military_recruitment }
+			NOT = { truce_with = DRU }
+		}
+		
+		allow = {
+			is_greater_power = yes
+			OR = {
+				owns = 8
+				owns = 9
+				owns = 12
+				owns = 13
+			}
+			war = no
+		}
+		
+		effect = {
+			11 = { add_core = GON }
+			
+			random_country = {
+				limit = {
+					has_country_flag = druadan_forest_freer
+				}
+				clr_country_flag = druadan_forest_freer
+				casus_belli = {
+					target = GON
+					type = humiliate
+					months = 12
+				}
+			}
+			
+			random_country = {
+				limit = {
+					tag = DRU
+				}
+				relation = {
+					who = GON
+					value = -200
+				}
+			}
+			
+			clr_global_flag = GON_lost_druadan_forest
 		}
 	}
 }

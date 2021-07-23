@@ -220,53 +220,13 @@ country_event = {
 			name = low_military_recruitment
 			duration = -1
 		}
-		
-		# TODO: Make this its own flavor for PUK
-		random_owned = {
-			limit = {
-				province_id = 11
-				is_core = DRU
-			}
-			secede_province = DRU
-			remove_core = GON
-		}
-		
-		FROM = {
-			create_alliance = DRU
-			relation = {
-				who = ADR
-				value = 200
-			}
-		}
-		
-		random_country = {
-			limit = {
-				tag = FROM
-				is_greater_power = yes
-			}
-			diplomatic_influence = {
-				who = DRU
-				value = 400
-			}
-		}
-		
-		random_country = {
-			limit = {
-				tag = FROM
-				OR = {
-					primary_culture = druedain
-					accepted_culture = druedain
-				}
-			}
-			country_event = 100007
-		}
 	}
 }
 
-# End of Andrast War - Puppet DRU? Only if of the same culture
+# End of Wildmen Freedom of Druadan Forest - Puppet DRU? Only if of the same culture
 country_event = {
 	id = 100007
-	picture = andrast_war
+	picture = druedain_of_druadan_forest
 	title = "Our Cultural Brethren"
 	desc = "EVTDESC100007"
 	
@@ -332,3 +292,27 @@ country_event = {
 	}
 }
 # }
+
+# Returning Gondor cores after Freedom of Druadan Forest
+country_event = {
+	id = 100009
+	picture = druedain_of_druadan_forest
+	title = "We are Free!"
+	desc = "EVTDESC100009"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We just wanted our freedom"
+		
+		any_owned = {
+			limit = {
+				NOT = { is_core = DRU }
+				is_core = GON
+			}
+			secede_province = GON
+		}
+		
+		create_alliance = FROM
+	}
+}
