@@ -528,7 +528,7 @@ emigration_chance = {
 
 #general assimilation mtth, same for all pops
 assimilation_chance = {
-	factor = 0.02
+	factor = 1
 	group = {
 		modifier = {
 			factor = 2
@@ -631,10 +631,8 @@ assimilation_chance = {
     	}
 	}
 	modifier = {
-    	factor = 2
-		location = {
-			is_core = THIS
-		}
+    	factor = 5
+		location = { is_core = THIS }
 	}
 	group = {
 		modifier = {
@@ -648,7 +646,7 @@ assimilation_chance = {
 	}
 	modifier = {
 		factor = -100
-		not = { religion = this }
+		NOT = { religion = THIS }
 	}
 	modifier = {
 		factor = -20
