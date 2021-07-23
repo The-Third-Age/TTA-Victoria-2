@@ -14,7 +14,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Add rebels
  - Inventions and tech schools
  - Pops
- - Reset OnAction event ids
  - Province terrains
  - Figure out how to add `minimum_wage` effect to something
  - "Unciv" reforms?
