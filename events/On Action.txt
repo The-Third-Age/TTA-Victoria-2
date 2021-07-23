@@ -1,16 +1,14 @@
 # On Action Events {
 #	70000 - 70999 }
 
-#$STATE$ Joins $COUNTRY$
+#$STATE$ Joins $COUNTRY$ - Slavery
 country_event = {
 	id = 70000
 	title = "$STATE$ Granted Statehood!"
 	desc = "EVTDESC70000"
 	picture = "Slaves"
 	trigger = {
-		country = {
-			slavery = yes_slavery
-		}
+		country = { slavery = yes_slavery }
 	}
 	is_triggered_only = yes
 	allow_multiple_instances = yes
@@ -60,26 +58,54 @@ country_event = {
 	}
 }
 
-#$STATE$ Joins $COUNTRY$!
+#$STATE$ Joins $COUNTRY$! - Remove Cores
 country_event = {
 	id = 70001
 	title = "$STATE$ Granted Statehood!"
 	desc = "EVTDESC70001"
 	picture = "Western"
 	trigger = {
-		country = {
-			slavery = no_slavery
-			capital_scope = {
-				NOT = { continent = europe }
+		country = { 
+			tag = GON
+			any_owned_province = {
+				OR = {
+					region = GON_161
+					region = GON_165
+					region = GON_169
+					region = GON_175
+					region = GON_183
+					region = GON_186
+				}
+				is_core = PUK
+				is_colonial = no
 			}
+			has_country_flag = andrast_gondorification
 		}
+		
 	}
 	is_triggered_only = yes
 	allow_multiple_instances = yes
 	
 	option = {
 		name = "Excellent!"
-		is_slave = no
+		
+		country = {
+			any_owned = {
+				limit = {
+					OR = {
+						region = GON_161
+						region = GON_165
+						region = GON_169
+						region = GON_175
+						region = GON_183
+						region = GON_186
+					}
+					is_core = PUK
+					is_colonial = no
+				}
+				remove_core = PUK
+			}
+		}
 	}
 }
 

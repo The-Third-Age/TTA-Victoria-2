@@ -725,6 +725,76 @@ political_decisions = {
 			set_global_flag = GON_lost_andrast_war
 		}
 	}
+	
+	gondorian_andrast_migration = {
+		picture = "andrast_map"
+		potential = {
+			tag = GON
+			any_owned_province = {
+				OR = {
+					region = GON_161
+					region = GON_165
+					region = GON_169
+					region = GON_175
+					region = GON_183
+					region = GON_186
+				}
+				is_colonial = yes
+				NOT = { has_province_modifier = gondorification }
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						region = GON_161
+						region = GON_165
+						region = GON_169
+						region = GON_175
+						region = GON_183
+						region = GON_186
+					}
+					is_colonial = yes
+				}
+				add_province_modifier = {
+					name = gondorification
+					duration = -1
+				}
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						region = GON_161
+						region = GON_165
+						region = GON_169
+						region = GON_175
+						region = GON_183
+						region = GON_186
+					}
+					is_colonial = no
+				}
+			}
+			any_owned = {
+				limit = {
+					is_colonial = no
+					total_pops = 250000
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				add_province_modifier = {
+					name = colonial_push
+					duration = 730
+				}
+			}
+			set_country_flag = andrast_gondorification
+		}
+	}
 }
 
 # Ecthelion II Flavor
@@ -755,6 +825,7 @@ political_decisions = {
 			nationalvalue = ecthelion_ii
 			has_country_modifier = thorongil
 			NOT = { has_global_flag = gondor_prepared_coastal_defences }
+			# Need to fix reqs and effects
 			# Should not show up if Umbar/Harad does not exist or own Umbar
 		}
 		
