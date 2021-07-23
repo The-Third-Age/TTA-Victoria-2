@@ -593,9 +593,11 @@ political_decisions = {
 				ADR = { vassal_of = GON }
 				owns = 161
 			}
-			165 = { owner = { 
-				civilized = no
-				NOT = { tag = ADR } 
+			165 = { 
+				owner = { 
+					civilized = no
+					NOT = { tag = ADR } 
+				}
 			}
 			NOT = { has_global_flag = GON_andrast_war_2 }
 			NOT = { has_global_flag = GON_lost_andrast_war } # to prevent this being taken multiple times should Gondor lose the first one

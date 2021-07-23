@@ -2,14 +2,13 @@
 Some are obvious, others are not. Just a smallish list at the moment. It clearly should be many times longer...
  
 ## Map
- - Fix the farm/grassland issue, "pathiness" of forests
+ - Fix the farm/grassland issue, "pathiness" of forests and arctic
  - Coastlines/small islands, Anduin river oversights along the southern Gondor shore and Cair Andros
  - Play around with colormaps
  - Set liferatings and climates
  
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
- - Limits on reforms
  - Pop reform/party policy tendencies
  - Add rebels
  - Inventions and tech schools

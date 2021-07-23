@@ -170,11 +170,13 @@ political_reforms = {
 	vote_franschise = {
 		next_step_only = yes
 		none_voting = {
+			allow = { NOT = { has_country_flag = democratic } }
 			rich_vote = 0
 			middle_vote = 0
 			poor_vote = 0
 		}
 		landed_voting = {
+			allow = { has_country_flag = democratic }
 			rich_vote = 1
 			middle_vote = 0
 			poor_vote = 0
@@ -182,6 +184,7 @@ political_reforms = {
 			global_immigrant_attract = 0.01
 		}
 		wealth_weighted_voting = {
+			allow = { has_country_flag = democratic }
 			rich_vote = 2
 			middle_vote = 1
 			poor_vote = 0
@@ -189,6 +192,7 @@ political_reforms = {
 			global_immigrant_attract = 0.02
 		}
 		wealth_voting = {
+			allow = { has_country_flag = democratic }
 			rich_vote = 1
 			middle_vote = 1
 			poor_vote = 0
@@ -196,6 +200,7 @@ political_reforms = {
 			global_immigrant_attract = 0.03
 		}
 		universal_weighted_voting = {
+			allow = { has_country_flag = democratic }
 			rich_vote = 3
 			middle_vote = 2
 			poor_vote = 1
@@ -203,6 +208,7 @@ political_reforms = {
 			global_immigrant_attract = 0.04
 		}
 		universal_voting = {
+			allow = { has_country_flag = democratic }
 			rich_vote = 1
 			middle_vote = 1
 			poor_vote = 1
@@ -210,8 +216,6 @@ political_reforms = {
 			global_immigrant_attract = 0.05
 		}
 	}
-	
-	
 	upper_house_composition = {
 		party_appointed = {
 			rules = { same_as_ruling_party = yes }
@@ -222,41 +226,31 @@ political_reforms = {
 		}
 		state_equal_weight = {
 			rules = { state_vote = yes }
-			allow = { 
-				NOT = { vote_franschise = none_voting }
-			}
+			allow = { NOT = { vote_franschise = none_voting } }
 			global_immigrant_attract = 0.02
 		}
 		population_equal_weight = {
 			rules = { population_vote = yes }
-			allow = { 
-				NOT = { vote_franschise = none_voting }
-			}
+			allow = { NOT = { vote_franschise = none_voting } }
 			global_immigrant_attract = 0.03
 		}
 	}
-
 	voting_system = {
 		first_past_the_post = {
 			rules = { largest_share = yes }
-			allow = { 
-				NOT = { vote_franschise = none_voting }
-			}
+			allow = { NOT = { vote_franschise = none_voting } }
 		}
 		jefferson_method = {
 			rules = { dhont = yes }
-			allow = { 
-				NOT = { vote_franschise = none_voting }
-			}
+			allow = { NOT = { vote_franschise = none_voting } }
 		}
 		proportional_representation = {
 			rules = { sainte_laque = yes }
-			allow = { 
-				NOT = { vote_franschise = none_voting }
-			}			
+			allow = { NOT = { vote_franschise = none_voting } }			
 		}
 	}
 	public_meetings = {
+		next_step_only = yes
 		no_meeting = {
 			#no immediate effect
 		}
@@ -271,8 +265,6 @@ political_reforms = {
 		}
 
 	}
-
-	# Add in militancy for nobility
 	nobility_autonomy = {
 		next_step_only = yes
 		
@@ -289,7 +281,6 @@ political_reforms = {
 		small_noble_autonomy = {
 		}
 	}
-	
 	noble_levy_contribution = {
 		next_step_only = yes
 		
@@ -297,17 +288,19 @@ political_reforms = {
 			mobilisation_size = 0.05
 			global_pop_militancy_modifier = 0.01
 			supply_consumption = 0.1
+			prestige = -0.05
 		}
 		medium_levy_contribution = {
 			mobilisation_size = 0.02
 			supply_consumption = 0.05
+			prestige = -0.025
+			allow = { NOT = { nobility_autonomy = large_noble_autonomy } }
 		}
 		small_levy_contribution = {
 			global_pop_militancy_modifier = -0.01
+			allow = { nobility_autonomy = small_noble_autonomy }
 		}
 	}
-	
-	# Add in militancy for nobility and the rest (they would be separate)
 	noble_tax_contribution = {
 		next_step_only = yes
 		
@@ -316,12 +309,12 @@ political_reforms = {
 		}
 		medium_tax_contribution = {
 			tax_efficiency = -0.01
+			allow = { NOT = { nobility_autonomy = large_noble_autonomy } }
 		}
 		large_tax_contribution = {
+			allow = { nobility_autonomy = small_noble_autonomy }
 		}
 	}
-	
-	# Add in militancy for nobility
 	knighting_rights = {
 		next_step_only = yes
 		
@@ -329,13 +322,13 @@ political_reforms = {
 			prestige = -0.05
 		}
 		restricted_knighting_rights = {
+			allow = { NOT = { nobility_autonomy = large_noble_autonomy } }
 		}
 		royal_knighting_rights = {
 			prestige = 0.05
+			allow = { nobility_autonomy = small_noble_autonomy }
 		}
 	}
-	
-	# Add in militancy for non-nobility
 	serfdom = {
 		next_step_only = yes
 		
@@ -348,7 +341,6 @@ political_reforms = {
 		banned_serfdom = {
 		}
 	}
-	
 	crown_land_ownership = {
 		next_step_only = yes
 		administrative = yes
@@ -389,9 +381,9 @@ political_reforms = {
 			administrative_efficiency_modifier = 0.02
 		}
 	}
-	
-	# Get slavery_womb working
+	# TODO: Get slavery_womb working
 	slavery = {
+		next_step_only = yes
 		yes_slavery = {
 			rules = { slavery_allowed = yes }
 		}
@@ -411,8 +403,8 @@ political_reforms = {
 			global_immigrant_attract = 0.01
 		}
 	}
-	
 	penal_reform = {
+		next_step_only = yes
 		capital_punishment = {
 			global_pop_militancy_modifier = -0.02
 			global_pop_consciousness_modifier = -0.02
@@ -425,17 +417,20 @@ political_reforms = {
 			global_pop_consciousness_modifier = 0.02
 		}
 	}
-	
 	cultural_rights = {
+		next_step_only = yes
 		primary_voting = {
 			rules = { primary_culture_voting = yes }
+			allow = { NOT = { vote_franschise = none_voting } }
 		}
 		accepted_voting = {
 			rules = { culture_voting = yes }
+			allow = { NOT = { vote_franschise = none_voting } }
 		}
 		# Not all_voting due to the rule being called all_voting
 		all_vote = {
 			rules = { all_voting = yes }
+			allow = { NOT = { vote_franschise = none_voting } }
 		}
 	}
 }
@@ -536,6 +531,7 @@ social_reforms = {
 	}
 
 	apprenticeship = {
+		next_step_only = yes
 		hereditary = {
 			factory_output = -0.05
 		}

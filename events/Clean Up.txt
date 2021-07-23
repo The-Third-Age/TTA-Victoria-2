@@ -1,63 +1,51 @@
 # Clean Up Events: {
 # 100000 - 199999 }
 
-# Setup Event {
-# country_event = {
-	# id = 100000
-	# title = "Setup Event"
-	# desc = "EVTDESC100000"
+# Noble Militancy from Reforms {
+# Militancy Increased
+country_event = {
+	id = 100000
+	picture = administration
+	title = "Nobles Enraged!"
+	desc = "EVTDESC100000"
 	
-	# fire_only_once = yes
+	is_triggered_only = yes
 	
-	# trigger = {
-		# ai = no
-	# }
-	
-	# option = {
-		# name = "OK"
+	option = {
+		name = "Screw them"
 		
-		# set_variable = {
-			# which = ring_controller
-			# value = 0 # Bilbo
-		# }
-	# }
-# }
+		any_pop = {
+			limit = {
+				type = aristocrats
+			}
+			militancy = 4
+		}
+	}
+}
+
+# Militancy Decreased
+country_event = {
+	id = 100001
+	picture = administration
+	title = "Nobles Delighted!"
+	desc = "EVTDESC100001"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		
+		any_pop = {
+			limit = {
+				type = aristocrats
+			}
+			militancy = -4
+		}
+	}
+}
 # }
 
 # Ring Movements DEPIRCATED {
-# Ring passes from Bilbo to Frodo
-# country_event = {
-	# id = 100001
-	# picture = birthday
-	# title = "Frodo Acquires the Ring"
-	# desc = "EVTDESC100001"
-	
-	# trigger = {
-		# has_global_flag = ring_goes_to_frodo
-		# ai = no
-		# tag = FOR
-		# check_variable = {
-			# which = ring_controller
-			# value = 0 # Bilbo
-		# }
-		# NOT = {
-			# check_variable = {
-				# which = ring_controller
-				# value = 1 # Anyone else
-			# }
-		# }
-	# }
-	
-	# option = {
-		# name = "OK"
-		
-		# set_variable = {
-			# which = ring_controller
-			# value = 1 # Frodo
-		# }
-		# clr_global_flag = ring_goes_to_frodo
-	# }
-# }
 
 # Clearing ring_goes_to_frodo if Bilbo did not have the ring
 # country_event = {

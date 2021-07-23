@@ -1,7 +1,9 @@
 # World Bank Decisions: {
 #	Starting Decision (unseen) 
 #	Time Specific Event Firing 
-#	Clean Up }
+#	Good/Evil Clean Up
+#	Leave For Alone 
+#	Government Flags Clean Up}
 
 # Starting Decision
 political_decisions = {
@@ -166,7 +168,42 @@ political_decisions = {
 			set_variable = {
 				which = ring_controller
 				value = 0 # Bilbo
-		}
+			}
+			
+			# Democratic country flag for democracies
+			any_country = {
+				limit = {
+					OR = {
+						government = democracy
+						government = ent_realm
+					}
+				}
+				set_country_flag = democratic
+			}
+			
+			# Noble Autonomy flags for noble militancy
+			any_country = {
+				limit = {
+					nobility_autonomy = large_noble_autonomy
+				}
+				set_country_flag = na_large
+			}
+			
+			# Noble Autonomy flags for noble militancy
+			any_country = {
+				limit = {
+					nobility_autonomy = medium_noble_autonomy
+				}
+				set_country_flag = na_medium
+			}
+			
+			# Noble Autonomy flags for noble militancy
+			any_country = {
+				limit = {
+					nobility_autonomy = small_noble_autonomy
+				}
+				set_country_flag = na_small
+			}
 		}
 	}
 }
@@ -199,7 +236,7 @@ political_decisions = {
 	}
 }
 
-# Clean Up
+# Good/Evil Clean Up
 political_decisions = {
 	good_evil_messed_up = {
 		potential = {
@@ -347,7 +384,10 @@ political_decisions = {
 			}
 		}
 	}
-	
+}
+
+# Leave FOR Alone
+political_decisions = {
 	break_alliance_with_FOR = {
 		picture = "dont_do_that"
 		
@@ -403,6 +443,158 @@ political_decisions = {
 					who = FOR
 					value = -400
 				}
+			}
+		}
+	}
+}
+
+# Government Flags Clean Up
+political_decisions = {
+	democratic_flag_clean_up = {
+		potential = {
+			OR = {
+				# Has democratic flag but not a democracy
+				any_neighbor_country = {
+					has_country_flag = democratic
+					NOT = {
+						government = ent_realm
+						government = democracy
+					}
+				}
+				# A democracy without democratic flag
+				any_neighbor_country = {
+					NOT = { has_country_flag = democratic }
+					OR = {
+						government = ent_realm
+						government = democracy
+					}
+				}
+			}
+			tag = FOR
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = democratic
+					OR = {
+						AND = {
+							NOT = { government = ent_realm }
+							is_culture_group = ents
+						}
+						AND = {
+							NOT = { government = democracy }
+							NOT = { is_culture_group = ents }
+						}
+					}
+				}
+				clr_country_flag = democratic
+			}
+			any_neighbor_country = {
+				limit = {
+					NOT = { has_country_flag = democratic }
+					OR = {
+						government = ent_realm
+						government = democracy
+					}
+				}
+				set_country_flag = democratic
+			}
+		}
+	}
+	
+	noble_autonomy_flag_clean_up = {
+		potential = {
+			OR = {
+				# Has large_noble_autonomy but not the country flag
+				any_neighbor_country = {
+					nobility_autonomy = large_noble_autonomy
+					NOT = { has_country_flag = na_large }
+				}
+				# Has medium_noble_autonomy but not the country flag
+				any_neighbor_country = {
+					nobility_autonomy = medium_noble_autonomy
+					NOT = { has_country_flag = na_medium }
+				}
+				# Has small_noble_autonomy but not the country flag
+				any_neighbor_country = {
+					nobility_autonomy = small_noble_autonomy
+					NOT = { has_country_flag = na_small }
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					nobility_autonomy = large_noble_autonomy
+					NOT = { has_country_flag = na_large }
+					OR = {
+						has_country_flag = na_small
+						has_country_flag = na_medium
+					}
+				}
+				country_event = 100001
+				set_country_flag = na_large
+				clr_country_flag = na_medium
+				clr_country_flag = na_small
+			}
+			any_neighbor_country = {
+				limit = {
+					nobility_autonomy = medium_noble_autonomy
+					has_country_flag = na_large
+				}
+				country_event = 100000
+				clr_country_flag = na_large
+				set_country_flag = na_medium
+			}
+			any_neighbor_country = {
+				limit = {
+					nobility_autonomy = medium_noble_autonomy
+					has_country_flag = na_small
+				}
+				country_event = 100001
+				set_country_flag = na_medium
+				clr_country_flag = na_small
+			}
+			any_neighbor_country = {
+				limit = {
+					nobility_autonomy = small_noble_autonomy
+					NOT = { has_country_flag = na_small }
+					OR = {
+						has_country_flag = na_medium
+						has_country_flag = na_large
+					}
+				}
+				country_event = 100000
+				clr_country_flag = na_large
+				clr_country_flag = na_medium
+				set_country_flag = na_small
+			}
+			any_neighbor_country = {
+				limit = {
+					nobility_autonomy = large_noble_autonomy
+					NOT = { has_country_flag = na_large }
+				}
+				set_country_flag = na_large
+			}
+			any_neighbor_country = {
+				limit = {
+					nobility_autonomy = medium_noble_autonomy
+					NOT = { has_country_flag = na_medium }
+				}
+				set_country_flag = na_medium
+			}
+			any_neighbor_country = {
+				limit = {
+					nobility_autonomy = small_noble_autonomy
+					NOT = { has_country_flag = na_small }
+				}
+				set_country_flag = na_small
 			}
 		}
 	}
