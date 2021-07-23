@@ -9,6 +9,30 @@ taxes_1 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			guild_autonomy_policy = independent_guilds
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.3 
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			year = 2960
+		}
 	}
 }
 
@@ -22,6 +46,30 @@ taxes_2 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			guild_autonomy_policy = independent_guilds
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.3 
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			year = 2965
+		}
 	}
 }
 
@@ -35,6 +83,30 @@ taxes_3 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			guild_autonomy_policy = independent_guilds
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.3 
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			year = 2980
+		}
 	}
 }
 
@@ -48,6 +120,30 @@ taxes_4 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			guild_autonomy_policy = independent_guilds
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.3 
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			year = 3000
+		}
 	}
 }
 
@@ -61,6 +157,30 @@ taxes_5 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			guild_autonomy_policy = independent_guilds
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.3 
+		}
+		modifier = {
+			factor = 1.1
+			literacy = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			year = 3010
+		}
 	}
 }
 
@@ -76,6 +196,24 @@ population_1 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 0
+			NOT = { total_pops = 800000 }
+		}
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			year = 2960
+		}
+		
 	}
 }
 
@@ -91,6 +229,23 @@ population_2 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 0
+			NOT = { total_pops = 1200000 }
+		}
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			year = 2965
+		}
 	}
 }
 
@@ -105,6 +260,23 @@ population_3 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 0
+			NOT = { total_pops = 1600000 }
+		}
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			year = 2980
+		}
 	}
 }
 
@@ -120,6 +292,23 @@ population_4 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 0
+			NOT = { total_pops = 2000000 }
+		}
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			year = 3000
+		}
 	}
 }
 
@@ -135,6 +324,23 @@ population_5 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 0
+			NOT = { total_pops = 2800000 }
+		}
+		modifier = {
+			factor = 3
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 1.1
+			year = 3010
+		}
 	}
 }
 
@@ -148,7 +354,24 @@ education_1 = {
 	education_efficiency = 0.1
 	
 	ai_chance = {
-		factor = 1
+		factor = 10
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 3
+			NOT = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 2960
+		}
 	}
 }
 
@@ -161,7 +384,24 @@ education_2 = {
 	education_efficiency = 0.1
 	
 	ai_chance = {
-		factor = 1
+		factor = 10
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 3
+			NOT = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 2965
+		}
 	}
 }
 
@@ -174,7 +414,24 @@ education_3 = {
 	education_efficiency = 0.2
 	
 	ai_chance = {
-		factor = 1
+		factor = 10
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 3
+			NOT = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 2980
+		}
 	}
 }
 
@@ -187,7 +444,24 @@ education_4 = {
 	education_efficiency = 0.2
 	
 	ai_chance = {
-		factor = 1
+		factor = 10
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 3
+			NOT = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 3000
+		}
 	}
 }
 
@@ -200,7 +474,24 @@ education_5 = {
 	education_efficiency = 0.4
 	
 	ai_chance = {
-		factor = 1
+		factor = 10
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 3
+			NOT = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 3010
+		}
 	}
 }
 
@@ -210,10 +501,9 @@ magic_1 = {
 	year = 2954
 	cost = 3600
 	
-	
-	
+	# Will come back to this later
 	ai_chance = {
-		factor = 1
+		factor = 0.1
 	}
 }
 
@@ -222,10 +512,9 @@ magic_2 = {
 	year = 2954
 	cost = 7200
 	
-	
-	
+	# Will come back to this later
 	ai_chance = {
-		factor = 1
+		factor = 0.1
 	}
 }
 
@@ -234,10 +523,9 @@ magic_3 = {
 	year = 2965
 	cost = 10800
 	
-	
-	
+	# Will come back to this later
 	ai_chance = {
-		factor = 1
+		factor = 0.1
 	}
 }
 
@@ -247,9 +535,9 @@ magic_4 = {
 	cost = 14400
 	
 	
-	
+	# Will come back to this later
 	ai_chance = {
-		factor = 1
+		factor = 0.1
 	}
 }
 
@@ -258,9 +546,8 @@ magic_5 = {
 	year = 3000
 	cost = 18000
 	
-	
-	
+	# Will come back to this later
 	ai_chance = {
-		factor = 1
+		factor = 0.1
 	}
 }

@@ -9,6 +9,32 @@ expansion_1 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { is_colonial = yes }
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				AND = {
+					has_country_flag = good_realm
+					any_neighbor_country = { has_country_flag = evil_realm }
+				}
+				AND = {
+					has_country_flag = evil_realm
+					any_neighbor_country = { has_country_flag = good_realm }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
+			year = 2960
+		}
 	}
 }
 
@@ -22,6 +48,32 @@ expansion_2 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { is_colonial = yes }
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				AND = {
+					has_country_flag = good_realm
+					any_neighbor_country = { has_country_flag = evil_realm }
+				}
+				AND = {
+					has_country_flag = evil_realm
+					any_neighbor_country = { has_country_flag = good_realm }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
+			year = 2965
+		}
 	}
 }
 
@@ -35,6 +87,32 @@ expansion_3 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { is_colonial = yes }
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				AND = {
+					has_country_flag = good_realm
+					any_neighbor_country = { has_country_flag = evil_realm }
+				}
+				AND = {
+					has_country_flag = evil_realm
+					any_neighbor_country = { has_country_flag = good_realm }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
+			year = 2980
+		}
 	}
 }
 
@@ -48,6 +126,32 @@ expansion_4 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { is_colonial = yes }
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				AND = {
+					has_country_flag = good_realm
+					any_neighbor_country = { has_country_flag = evil_realm }
+				}
+				AND = {
+					has_country_flag = evil_realm
+					any_neighbor_country = { has_country_flag = good_realm }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
+			year = 3000
+		}
 	}
 }
 
@@ -61,6 +165,32 @@ expansion_5 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { is_colonial = yes }
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				AND = {
+					has_country_flag = good_realm
+					any_neighbor_country = { has_country_flag = evil_realm }
+				}
+				AND = {
+					has_country_flag = evil_realm
+					any_neighbor_country = { has_country_flag = good_realm }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.1
+			year = 3010
+		}
 	}
 }
 
@@ -76,6 +206,23 @@ diplomacy_1 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.1 
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			year = 2960
+		}
 	}
 }
 
@@ -90,6 +237,23 @@ diplomacy_2 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.1 
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			year = 2965
+		}
 	}
 }
 
@@ -104,6 +268,23 @@ diplomacy_3 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.1 
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			year = 2980
+		}
 	}
 }
 
@@ -118,6 +299,23 @@ diplomacy_4 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.1 
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			year = 3000
+		}
 	}
 }
 
@@ -132,6 +330,23 @@ diplomacy_5 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.1 
+		}
+		modifier = {
+			factor = 1.05
+			literacy = 0.2
+		}
+		modifier = {
+			factor = 1.1
+			year = 3010
+		}
 	}
 }
 
@@ -146,6 +361,23 @@ wilderness_1 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { 
+				is_colonial = yes
+				NOT = { is_accepted_culture = yes }
+				NOT = { is_primary_culture = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			year = 2960
+		}
 	}
 }
 
@@ -160,6 +392,23 @@ wilderness_2 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { 
+				is_colonial = yes
+				NOT = { is_accepted_culture = yes }
+				NOT = { is_primary_culture = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			year = 2965
+		}
 	}
 }
 
@@ -173,6 +422,23 @@ wilderness_3 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { 
+				is_colonial = yes
+				NOT = { is_accepted_culture = yes }
+				NOT = { is_primary_culture = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			year = 2980
+		}
 	}
 }
 
@@ -187,6 +453,23 @@ wilderness_4 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { 
+				is_colonial = yes
+				NOT = { is_accepted_culture = yes }
+				NOT = { is_primary_culture = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			year = 3000
+		}
 	}
 }
 
@@ -201,6 +484,23 @@ wilderness_5 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			any_owned_province = { 
+				is_colonial = yes
+				NOT = { is_accepted_culture = yes }
+				NOT = { is_primary_culture = yes }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_province = { any_neighbor_province = { empty = yes } }
+		}
+		modifier = {
+			factor = 1.1
+			year = 3010
+		}
 	}
 }
 
@@ -215,6 +515,23 @@ culture_1 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 0.5
+			not = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 2960
+		}
 	}
 }
 
@@ -228,6 +545,23 @@ culture_2 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 0.5
+			not = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 2965
+		}
 	}
 }
 
@@ -241,6 +575,23 @@ culture_3 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 0.5
+			not = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 2980
+		}
 	}
 }
 
@@ -254,6 +605,23 @@ culture_4 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 0.5
+			not = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 3000
+		}
 	}
 }
 
@@ -267,5 +635,22 @@ culture_5 = {
 	
 	ai_chance = {
 		factor = 1
+		
+		modifier = {
+			factor = 2
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_secondary_power = yes
+		}
+		modifier = {
+			factor = 0.5
+			not = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = 1.1
+			year = 3010
+		}
 	}
 }

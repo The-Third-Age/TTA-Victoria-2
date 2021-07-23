@@ -53,8 +53,8 @@ schools = {
 		commerce_tech_research_bonus = 0.01
 		population_tech_research_bonus = 0.01
 		diplomacy_tech_research_bonus = 0.01
-		unciv_economic_modifier = 0.01
-		unciv_military_modifier = 0.01
+		unciv_economic_modifier = -0.01
+		unciv_military_modifier = -0.01
 	}
 	
 	army_tech_school = {
@@ -64,6 +64,28 @@ schools = {
 		commerce_tech_research-bonus = 0.0
 		population_tech_research_bonus = -0.1
 		diplomacy_tech_research_bonus = -0.1
+		unciv_economic_modifier = 0.02
+		unciv_military_modifier = -0.02
+	}
+	
+	navy_tech_school = {
+		army_tech_research_bonus = -0.05
+		military_theory_tech_research_bonus = 0.1
+		navy_tech_research_bonus = 0.15
+		commerce_tech_research-bonus = 0.0
+		population_tech_research_bonus = -0.1
+		diplomacy_tech_research_bonus = -0.1
+		unciv_economic_modifier = 0.02
+		unciv_military_modifier = -0.02
+	}
+	
+	commerce_tech_school = {
+		army_tech_research_bonus = -0.05
+		military_theory_tech_research_bonus = -0.1
+		navy_tech_research_bonus = -0.1
+		commerce_tech_research-bonus = 0.15
+		population_tech_research_bonus = 0.05
+		diplomacy_tech_research_bonus = 0.05
 		unciv_economic_modifier = -0.02
 		unciv_military_modifier = 0.02
 	}

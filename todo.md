@@ -9,7 +9,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
- - AI chances on tech
+ - Limits on reforms
  - Pop reform/party policy tendencies
  - Add rebels
  - Inventions and tech schools
@@ -26,7 +26,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
- - Unit colors for each country (common/country_colors.txt)
+ - Update UI to match new color scheme
  - Land and Naval unit icons
 
 ## Flavor
