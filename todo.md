@@ -22,6 +22,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Great/World Wars?
  - Starting literacy/prestige
  - General Spawn events
+ - Convert freedom of womb to non-accepted culture slaves only
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
@@ -38,6 +39,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Return to South Gondor
  - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
  - Revisit decision reqs (tech)
+ - Erelond/Ramlond/Umbar slave trade hub
 
 ## Others 
  - Music (BFME2 for example)
