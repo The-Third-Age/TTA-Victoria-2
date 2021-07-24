@@ -1,0 +1,212 @@
+# Harad Decisions: {
+#	Forming Harad 
+#	Core Adding/Removal }
+
+# Forming Harad
+political_decisions = {
+	form_harad = {
+		potential = {
+			is_culture_group = haradrim
+			NOT = { tag = UMB }
+			NOT = { exists = HAR }
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			HRN = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+			HRU = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+			PEZ = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+			LUR = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+			ARY = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			
+			all_core = { remove_core = THIS }
+			
+			change_tag = HAR
+			
+			any_country = {
+				limit = {
+					OR = {
+						tag = HRN
+						tag = HRU
+						tag = PEZ
+						tag = LUR
+						tag = ARY
+					}
+				}
+				country_event = 100003
+				
+				all_core = { add_core = HAR }
+			}
+		}
+	}
+}
+
+# Core Adding/Removal
+political_decisions = {
+	HAR_core_removal = {
+		potential = {
+			OR = {
+				HRN = { all_core = { owned_by = HAR } }
+				HRU = { all_core = { owned_by = HAR } }
+				PEZ = { all_core = { owned_by = HAR } }
+				LUR = { all_core = { owned_by = HAR } }
+				ARY = { all_core = { owned_by = HAR } }
+			}
+		}
+		
+		allow = {
+			war = no
+			any_owned_province = { controlled_by_rebels = no }
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					is_core = HRN
+					HRN = { all_core = { owned_by = HAR } }
+				}
+				remove_core = HRN
+			}
+			any_owned = {
+				limit = {
+					is_core = HRU
+					HRU = { all_core = { owned_by = HAR } }
+				}
+				remove_core = HRU
+			}
+			any_owned = {
+				limit = {
+					is_core = PEZ
+					PEZ = { all_core = { owned_by = HAR } }
+				}
+				remove_core = PEZ
+			}
+			any_owned = {
+				limit = {
+					is_core = LUR
+					LUR = { all_core = { owned_by = HAR } }
+				}
+				remove_core = LUR
+			}
+			any_owned = {
+				limit = {
+					is_core = ARY
+					ARY = { all_core = { owned_by = HAR } }
+				}
+				remove_core = ARY
+			}
+		}
+	}
+	
+	HAR_core_addition = {
+		picture = "HAR_core_removal"
+		potential = {
+			any_owned_province = {
+				OR = {
+					is_core = HRN
+					is_core = HRU
+					is_core = PEZ
+					is_core = LUR
+					is_core = ARY
+				}
+				NOT = { is_core = HAR }
+			}
+		}
+		
+		allow = {
+			war = no
+			any_owned_province = { controlled_by_rebels = no }
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = HRN
+						is_core = HRU
+						is_core = PEZ
+						is_core = LUR
+						is_core = ARY
+					}
+					NOT = { is_core = HAR }
+				}
+				add_core = HAR
+			}
+		}
+	}
+}

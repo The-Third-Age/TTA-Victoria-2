@@ -71,40 +71,58 @@ country_event = {
 	}
 }
 
-# Ring Movements DEPIRCATED {
-
-# Update ring_controller from Frodo to the Fellowship
-# country_event = {
-	# id = 100003
-	# picture = council_of_elrond
-	# title = "The Fellowship of the Ring"
-	# desc = "EVTDESC100003"
+# Annex Country Events {
+# Annex Country - Cultural Union
+country_event = {
+	id = 100003
+	picture = administration
+	title = "Our Cultural Union"
+	desc = "EVTDESC100003"
 	
-	# trigger = {
-		# has_global_flag = the_council_of_elrond
-		# ai = no
-		# tag = FOR
-		# check_variable = {
-			# which = ring_controller
-			# value = 1 # Frodo
-		# }
-		# NOT = {
-			# check_variable = {
-				# which = ring_controller
-				# value = 2 # Anyone else
-			# }
-		# }
-	# }
+	is_triggered_only = yes
 	
-	# option = {
-		# name = "OK"
+	option = {
+		name = "We will join them!"
 		
-		# set_variable = {
-			# which = ring_controller
-			# value = 2
-		# }
-	# }
-# }
+		all_core = { remove_core = THIS }
+		
+		annex_to = FROM
+		
+		ai_chance = {
+			factor = 90
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					relation = {
+						who = FROM
+						value = 0
+					}
+				}
+				NOT = { vassal_of = FROM }
+			}
+		}
+	}
+	
+	option = {
+		name = "Never!"
+		
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 0
+				OR = {
+					relation = {
+						who = FROM
+						value = 0
+					}
+					vassal_of = FROM
+				}
+			}
+		}
+	}
+}
 # }
 
 # Andrast War {

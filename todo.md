@@ -37,6 +37,8 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
  - Revisit decision reqs (tech)
  - Erelond/Ramlond/Umbar/Gobel Ancalimon slave trade hub
+ - Redo coring events
+ - Add way to form Harad diplomatically (as a tribe)
 
 ## Others 
  - Music (BFME2 for example)
