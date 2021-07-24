@@ -11,7 +11,6 @@ political_decisions = {
 			NOT = { has_global_flag = fluff_disabled }
 			ai = no
 			OR = {
-				tag = HAR
 				tag = KHA
 				tag = RHU
 			}
@@ -575,6 +574,39 @@ political_decisions = {
 		
 		effect = {
 			country_event = 35134
+		}
+	}
+	
+	tribes_of_harad = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			OR = {
+				tag = HAR
+				tag = HRU
+				tag = HRN
+				tag = PEZ
+				tag = LUR
+				tag = ARY
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			random_owned = {
+				limit = {
+					owner = { tag = HAR }
+				}
+				owner = { country_event = 35142 }
+			}
+			random_owned = {
+				limit = {
+					NOT = { owner = { tag = HAR } }
+				}
+				owner = { country_event = 35138 }
+			}
 		}
 	}
 }
