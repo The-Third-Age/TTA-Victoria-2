@@ -4,25 +4,22 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Map
  - Fix the farm/grassland issue, "pathiness" of forests and arctic
  - Coastlines/small islands, Anduin river oversights along the southern Gondor shore and Cair Andros
- - Play around with colormaps
  - Set liferatings and climates
  
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
  - Pop reform/party policy tendencies
  - Add rebels
- - Inventions and tech schools
+ - Inventions
  - Pops
  - Province terrains
  - Figure out how to add `minimum_wage` effect to something
  - "Unciv" reforms?
- - Revanchism
  - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending
  - Gas Attack?
  - Great/World Wars?
  - Starting literacy/prestige
  - General Spawn events
- - Convert freedom of womb to non-accepted culture slaves only
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)

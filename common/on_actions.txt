@@ -40,11 +40,12 @@ on_election_tick = {
 # for each acquired state.
 on_colony_to_state = 
 {
-	100 = 70000
-	100 = 70001
+	100 = 70000 # yes_slavery
+	100 = 70001 # removal of cores (flavor)
 }
 on_state_conquest = {
-	100 = 70000
+	100 = 70000 # yes_slavery
+	100 = 70007 # non_accepted_slavery
 }
 
 on_colony_to_state_free_slaves =

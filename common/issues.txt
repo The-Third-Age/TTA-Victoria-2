@@ -381,26 +381,16 @@ political_reforms = {
 			administrative_efficiency_modifier = 0.02
 		}
 	}
-	# TODO: Get slavery_womb working
 	slavery = {
 		next_step_only = yes
 		yes_slavery = {
 			rules = { slavery_allowed = yes }
 		}
-		slavery_womb = {
+		non_accepted_slavery = {
 			rules = { slavery_allowed = yes }
 		}
 		no_slavery = {
 			rules = { slavery_allowed = no }
-			allow = { 
-				OR = {
-					NOT = { 
-						has_country_flag = the_slavery_debate
-					}
-					year = 1875
-				}
-			}
-
 			global_immigrant_attract = 0.01
 		}
 	}

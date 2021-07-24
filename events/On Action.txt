@@ -226,5 +226,81 @@ country_event = {
 		}
 		
 	}
+}
 
+country_event = {
+	id = 70007
+	title = "Freeing Our Brethren"
+	desc = "EVTDESC70000"
+	picture = "administration"
+	
+	trigger = {
+		country = { slavery = non_accepted_slavery }
+	}
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "Extend slavery"
+		is_slave = yes
+		country = {
+			any_state = {
+				limit = {
+					is_slave = no
+				}
+				any_pop = { consciousness = 1 }
+			}
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				any_pop = { consciousness = -0.5 }
+			}
+			any_pop = {
+				limit = {
+					type = slaves
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				pop_type = labourers
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "Do not extend slavery"
+		is_slave = no
+		country = {
+			any_state = {
+				limit = {
+					is_slave = yes
+				}
+				any_pop = { consciousness = 1 }
+			}
+			any_state = {
+				limit = {
+					is_slave = no
+				}
+				any_pop = { consciousness = -0.5 }
+			}
+			any_pop = {
+				limit = {
+					type = slaves
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				pop_type = labourers
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}		
+	}
 }

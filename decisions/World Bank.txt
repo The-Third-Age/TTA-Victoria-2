@@ -204,6 +204,14 @@ political_decisions = {
 				}
 				set_country_flag = na_small
 			}
+			
+			# Slavery flags for yes_slavery
+			any_country = {
+				limit = {
+					slavery = yes_slavery
+				}
+				set_country_flag = has_all_slavery
+			}
 		}
 	}
 }
@@ -596,6 +604,51 @@ political_decisions = {
 					NOT = { has_country_flag = na_small }
 				}
 				set_country_flag = na_small
+			}
+		}
+	}
+	
+	non_accepted_slavery_clean_up = {
+		potential = {
+			tag = FOR
+			OR = {
+				# Has has_all_slavery flag but doesn't have yes_slavery
+				any_neighbor_country = {
+					has_country_flag = has_all_slavery
+					NOT = { slavery = yes_slavery }
+				}
+				# Has yes_slavery but not has_all_slavery
+				any_neighbor_country = {
+					NOT = { has_country_flag = has_all_slavery }
+					slavery = yes_slavery
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = has_all_slavery
+					slavery = non_accepted_slavery
+				}
+				clr_country_flag = has_all_slavery
+				country_event = 100002
+			}
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = has_all_slavery
+					slavery = no_slavery
+				}
+				clr_country_flag = has_all_slavery
+			}
+			any_neighbor_country = {
+				limit = {
+					NOT = { has_country_flag = has_all_slavery }
+					slavery = yes_slavery
+				}
+				set_country_flag = has_all_slavery
 			}
 		}
 	}
