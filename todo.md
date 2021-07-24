@@ -18,7 +18,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending
  - Gas Attack?
  - Great/World Wars?
- - Starting literacy/prestige
+ - Starting literacy
  - General Spawn events
 
 ## GFX and GUI
@@ -36,7 +36,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Return to South Gondor
  - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
  - Revisit decision reqs (tech)
- - Erelond/Ramlond/Umbar slave trade hub
+ - Erelond/Ramlond/Umbar/Gobel Ancalimon slave trade hub
 
 ## Others 
  - Music (BFME2 for example)
