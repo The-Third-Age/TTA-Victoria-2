@@ -42,4 +42,3 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## Others 
  - Music (BFME2 for example)
- - SirRunner. Do Disunited Kingdom Canada when done with Serbia campaign

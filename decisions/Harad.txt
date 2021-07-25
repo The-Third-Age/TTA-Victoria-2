@@ -112,6 +112,66 @@ political_decisions = {
 				
 				all_core = { add_core = HAR }
 			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = harnendan
+							accepted_culture = harnendan
+						}
+					}
+				}
+				owner = { add_accepted_culture = harnendan }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = haruzani
+							accepted_culture = haruzani
+						}
+					}
+				}
+				owner = { add_accepted_culture = haruzani }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = pezarsani
+							accepted_culture = pezarsani
+						}
+					}
+				}
+				owner = { add_accepted_culture = pezarsani }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = lurmsakuni
+							accepted_culture = lurmsakuni
+						}
+					}
+				}
+				owner = { add_accepted_culture = lurmsakuni }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = arysian
+							accepted_culture = arysian
+						}
+					}
+				}
+				owner = { add_accepted_culture = arysian }
+			}
 		}
 	}
 }
