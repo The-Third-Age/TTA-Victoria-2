@@ -181,11 +181,11 @@ political_decisions = {
 	HAR_core_removal = {
 		potential = {
 			OR = {
-				HRN = { all_core = { owned_by = HAR } }
-				HRU = { all_core = { owned_by = HAR } }
-				PEZ = { all_core = { owned_by = HAR } }
-				LUR = { all_core = { owned_by = HAR } }
-				ARY = { all_core = { owned_by = HAR } }
+				HRN = { all_core = { owned_by = HAR is_core = HAR } }
+				HRU = { all_core = { owned_by = HAR is_core = HAR } }
+				PEZ = { all_core = { owned_by = HAR is_core = HAR } }
+				LUR = { all_core = { owned_by = HAR is_core = HAR } }
+				ARY = { all_core = { owned_by = HAR is_core = HAR } }
 			}
 			tag = HAR
 		}
@@ -237,6 +237,7 @@ political_decisions = {
 	HAR_core_addition = {
 		picture = "HAR_core_removal"
 		potential = {
+			tag = HAR
 			any_owned_province = {
 				OR = {
 					is_core = HRN
@@ -246,7 +247,7 @@ political_decisions = {
 					is_core = ARY
 				}
 				NOT = { is_core = HAR }
-				tag = HAR
+				NOT = { has_province_modifier = cultural_core_integration }
 			}
 		}
 		
@@ -267,7 +268,8 @@ political_decisions = {
 					}
 					NOT = { is_core = HAR }
 				}
-				add_core = HAR
+				add_province_modifier = { name = cultural_core_integration duration = -1 }
+				remove_province_modifier = core_integration
 			}
 		}
 	}

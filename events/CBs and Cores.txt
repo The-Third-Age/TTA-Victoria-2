@@ -199,7 +199,7 @@ country_event = {
 	}
 }
 
-# Gain Core event
+# Starting to Core
 province_event = {
 	id = 2502
 	title = "The $PROVINCENAME$ Patrimony"
@@ -209,24 +209,21 @@ province_event = {
 		NOT = { is_core = THIS }
 		controlled_by = THIS
 		is_colonial = no
+		any_neighbor_province = {
+			is_core = THIS
+			controlled_by = THIS
+		}
+		NOT = { has_province_modifier = core_integration }
+		NOT = { has_province_modifier = cultural_core_integration }
+		owner = { war = no }
 		OR = {
 			is_primary_culture = yes
 			is_accepted_culture = yes
-			any_neighbor_province = {
-				AND = {
-					is_core = THIS
-					controlled_by = THIS
-				}
-			}
-		}
-		owner = {
-			tag = THIS
-			is_greater_power = yes
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 180
+		months = 30
 		modifier = {
 			factor = 0.5
 			is_primary_culture = yes
@@ -263,6 +260,89 @@ province_event = {
 	
 	option = {
 		name = "Long live $COUNTRY$!"
+		state_scope = { 
+			any_owned = {
+				limit = {
+					NOT = { is_core = THIS }
+					NOT = { has_province_modifier = core_integration }
+					is_colonial = no
+				}
+				add_province_modifier = {
+					name = core_integration
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+# Adding Core
+province_event = {
+	id = 2503
+	title = "The $PROVINCENAME$ Patrimony"
+	desc = "EVTDESC2502"
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_province_modifier = core_integration
+				any_neighbor_province = {
+					is_core = THIS
+					controlled_by = THIS
+				}
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			has_province_modifier = cultural_core_integration
+		}
+		owner = { war = no }
+		controlled_by = THIS
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.5
+			is_primary_culture = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_coastal = yes
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_militancy = 1
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_militancy = 2
+			}
+		}
+		modifier = {
+			factor = 0.95
+			NOT = {
+				average_militancy = 3
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				average_consciousness = 4
+			}
+		}
+	}
+	
+	option = {
+		name = "Long live $COUNTRY$!"
+		
+		owner = { prestige = 1 }
+		remove_province_modifier = core_integration
+		remove_province_modifier = cultural_core_integration
 		add_core = THIS
 	}
 }
