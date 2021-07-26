@@ -37,7 +37,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Revisit decision reqs (tech)
  - Erelond/Ramlond/Umbar/Gobel Ancalimon slave trade hub
  - Add way to form Harad diplomatically (as a tribe)
- - Chelkiag culture
  - Good/Evil influences (outside and internal)
  - attempting_to_democratic flag
 
