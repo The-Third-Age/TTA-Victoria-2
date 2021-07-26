@@ -385,13 +385,16 @@ political_reforms = {
 		next_step_only = yes
 		yes_slavery = {
 			rules = { slavery_allowed = yes }
+			allow = { has_country_flag = evil_realm }
 		}
 		non_accepted_slavery = {
 			rules = { slavery_allowed = yes }
+			allow = { has_country_flag = evil_realm }
 		}
 		no_slavery = {
 			rules = { slavery_allowed = no }
 			global_immigrant_attract = 0.01
+			allow = { has_country_flag = good_realm }
 		}
 	}
 	penal_reform = {

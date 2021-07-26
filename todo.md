@@ -9,7 +9,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
  - Pop reform/party policy tendencies
- - Add rebels
  - Inventions
  - Pops
  - Province terrains
@@ -37,8 +36,10 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
  - Revisit decision reqs (tech)
  - Erelond/Ramlond/Umbar/Gobel Ancalimon slave trade hub
- - Redo coring events
  - Add way to form Harad diplomatically (as a tribe)
+ - Chelkiag culture
+ - Good/Evil influences (outside and internal)
+ - attempting_to_democratic flag
 
 ## Others 
  - Music (BFME2 for example)

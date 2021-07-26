@@ -1,0 +1,224 @@
+# Revolt Events {
+# 3000 - 3499 }
+
+# Democratic Rebel Victory
+country_event = {
+	id = 3000
+	picture = administration
+	title = "Democratic Rebel Victory"
+	desc = "EVTDESC3000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn"
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						government = democracy
+						government = ent_realm
+					}
+					vote_franschise = universal_weighted_voting
+				}
+			}
+			owner = { political_reform = universal_voting }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						government = democracy
+						government = ent_realm
+					}
+					vote_franschise = wealth_voting
+				}
+			}
+			owner = { political_reform = universal_weighted_voting }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						government = democracy
+						government = ent_realm
+					}
+					vote_franschise = wealth_weighted_voting
+				}
+			}
+			owner = { political_reform = wealth_voting }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						government = democracy
+						government = ent_realm
+					}
+					vote_franschise = landed_voting
+				}
+			}
+			owner = { political_reform = wealth_weighted_voting }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_culture_group = ents
+					NOT = { government = ent_realm }
+				}
+			}
+			owner = {
+				government = ent_realm
+				political_reform = landed_voting
+				set_country_flag = democratic
+				election = yes
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { is_culture_group = ents }
+					NOT = { government = democracy }
+				}
+			}
+			owner = {
+				government = democracy
+				political_reform = landed_voting
+				set_country_flag = democratic
+				election = yes
+			}
+		}
+	}
+}
+
+# Fundamentalist Rebel Win
+country_event = {
+	id = 3001
+	picture = administration
+	title = "Fundamentalist Rebel Victory"
+	desc = "EVTDESC3001"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn"
+		
+		set_country_flag = na_large
+		clr_country_flag = na_medium
+		clr_country_flag = na_small
+		
+		political_reform = none_voting
+		political_reform = first_past_the_post
+		political_reform = no_meeting
+		political_reform = large_noble_autonomy
+		political_reform = large_levy_contribution
+		political_reform = small_tax_contribution
+		political_reform = allowed_knighting_rights
+		political_reform = enforced_serfdom
+		political_reform = five_land_ownership
+		political_reform = capital_punishment
+		political_reform = primary_voting
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = evil_realm }
+			}
+			owner = { political_reform = yes_slavery set_country_flag = has_all_slavery }
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = good_realm }
+			}
+			owner = { political_reform = no_slavery clr_country_flag = has_all_slavery }
+		}
+		political_reform = granted_exclusive_tr
+		political_reform = privileged_state_supplies
+		political_reform = independent_cities
+		political_reform = no_pensions
+		political_reform = hereditary
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						government = democracy
+						government = ent_realm
+					}
+				}
+			}
+			owner = { government = monarchy }
+		}
+	}
+}
+
+# Noble Rebel Win
+country_event = {
+	id = 3002
+	picture = administration
+	title = "Noble Rebel Victory"
+	desc = "EVTDESC3002"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn"
+		
+		set_country_flag = na_large
+		clr_country_flag = na_medium
+		clr_country_flag = na_small
+		
+		political_reform = large_noble_autonomy
+		political_reform = large_levy_contribution
+		political_reform = small_tax_contribution
+		political_reform = allowed_knighting_rights
+	}
+}
+
+# Good Rebel win
+country_event = {
+	id = 3003
+	picture = administration
+	title = "Good Rebel Victory"
+	desc = "EVTDESC3003"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn"
+		
+		political_reform = no_slavery
+		clr_country_flag = has_all_slavery
+		
+		clr_country_flag = evil_realm
+		remove_country_modifier = evil_realm
+		remove_accepted_culture = evil_culture
+		set_country_flag = good_realm
+		add_country_modifier = { name = good_realm duration = -1 }
+		add_accepted_culture = good_culture
+	}
+}
+
+# Evil Rebel win
+country_event = {
+	id = 3004
+	picture = administration 
+	title = "Evil Rebel Victory"
+	desc = "EVTDESC3004"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn"
+		
+		political_reform = yes_slavery
+		set_country_flag = has_all_slavery
+		
+		clr_country_flag = good_realm
+		remove_country_modifier = good_realm
+		remove_accepted_culture = good_culture
+		set_country_flag = evil_realm
+		add_country_modifier = { name = evil_realm duration = -1 }
+		add_accepted_culture = evil_culture
+	}
+}
