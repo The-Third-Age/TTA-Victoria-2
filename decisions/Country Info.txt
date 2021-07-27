@@ -609,4 +609,22 @@ political_decisions = {
 			}
 		}
 	}
+	
+	variags_of_khand = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			OR = {
+				tag = CHE
+				tag = KHA
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 35146
+		}
+	}
 }
