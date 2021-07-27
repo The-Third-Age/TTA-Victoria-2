@@ -19,6 +19,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Great/World Wars?
  - Starting literacy
  - General Spawn events
+ - Haradrim/Khandish oobs
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)

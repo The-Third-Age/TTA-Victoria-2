@@ -1,8 +1,38 @@
 # Harad Decisions: {
+#	Starting Decisions
 #	Forming Harad 
 #	Tribal Incorporation
 #	Core Adding/Removal
 #	Province Flavor }
+
+# Starting Decisions
+political_decisions = {
+	umbar_start_decision = {
+		potential = {
+			tag = UMB
+			always = no
+		}
+		
+		allow = { }
+		
+		effect = {
+			# Literacy boosts
+			any_pop = {
+				limit = {
+					type = slaves
+				}
+				literacy = -0.15
+			}
+			
+			any_pop = {
+				limit = {
+					has_pop_culture = black_numenorean
+				}
+				literacy = 0.05
+			}
+		}
+	}
+}
 
 # Forming Harad
 political_decisions = {
