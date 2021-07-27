@@ -1,5 +1,6 @@
 # Harad Decisions: {
 #	Forming Harad 
+#	Tribal Incorporation
 #	Core Adding/Removal }
 
 # Forming Harad
@@ -94,7 +95,7 @@ political_decisions = {
 		effect = {
 			prestige = 15
 			
-			all_core = { remove_core = THIS }
+			all_core = { remove_core = THIS add_core = HAR }
 			
 			change_tag = HAR
 			
@@ -172,6 +173,660 @@ political_decisions = {
 				}
 				owner = { add_accepted_culture = arysian }
 			}
+		}
+	}
+	
+	form_harad_diplo = {
+		picture = "form_harad"
+		potential = {
+			is_culture_group = haradrim
+			NOT = { tag = UMB }
+			NOT = { exists = HAR }
+			NOT = { has_global_flag = diplo_harad }
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			is_greater_power = yes
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					OR = {
+						tag = HRN
+						tag = HRU
+						tag = PEZ
+						tag = LUR
+						tag = ARY
+					}
+					NOT = { tag = THIS }
+				}
+				country_event = 100011
+			}
+			
+			prestige = 5
+			badboy = 2
+			
+			set_global_flag = diplo_harad
+		}
+	}
+
+	form_harad_UMB = {
+		picture = "form_harad"
+		potential = {
+			tag = UMB
+			NOT = { exists = HAR }
+			# TODO: NOT some tag about greater Umbar
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			has_unclaimed_cores = no
+			HRN = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						empty = yes
+					}
+				}
+			}
+			HRU = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						empty = yes
+					}
+				}
+			}
+			PEZ = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						empty = yes
+					}
+				}
+			}
+			LUR = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						empty = yes
+					}
+				}
+			}
+			ARY = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			
+			all_core = { remove_core = THIS add_core = HAR }
+			
+			change_tag = HAR
+			
+			any_country = {
+				limit = {
+					OR = {
+						tag = HRN
+						tag = HRU
+						tag = PEZ
+						tag = LUR
+						tag = ARY
+					}
+				}
+				country_event = 100003
+				
+				all_core = { add_core = HAR }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = harnendan } }
+				}
+				owner = { add_accepted_culture = harnendan }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = haruzani } }
+				}
+				owner = { add_accepted_culture = haruzani }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = pezarsani } }
+				}
+				owner = { add_accepted_culture = pezarsani }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = lurmsakuni } }
+				}
+				owner = { add_accepted_culture = lurmsakuni }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = arysian } }
+				}
+				owner = { add_accepted_culture = arysian }
+			}
+		}
+	}
+	
+	form_harad_khandish = {
+		picture = "form_harad"
+		potential = {
+			is_culture_group = khandish
+			NOT = { exists = HAR }
+			# TODO: NOT some country flag about greater Khand/Chelkar
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			has_unclaimed_cores = no
+			HRN = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+			HRU = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+			PEZ = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+			LUR = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+			ARY = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = haradrim } }
+						AND = {
+							owner = { is_culture_group = haradrim }
+							owner = { tag = UMB }
+						}
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			
+			all_core = { remove_core = THIS add_core = HAR }
+			
+			change_tag = HAR
+			
+			any_country = {
+				limit = {
+					OR = {
+						tag = HRN
+						tag = HRU
+						tag = PEZ
+						tag = LUR
+						tag = ARY
+					}
+				}
+				country_event = 100003
+				
+				all_core = { add_core = HAR }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = harnendan } }
+				}
+				owner = { add_accepted_culture = harnendan }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = haruzani } }
+				}
+				owner = { add_accepted_culture = haruzani }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = pezarsani } }
+				}
+				owner = { add_accepted_culture = pezarsani }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = lurmsakuni } }
+				}
+				owner = { add_accepted_culture = lurmsakuni }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { accepted_culture = arysian } }
+				}
+				owner = { add_accepted_culture = arysian }
+			}
+		}
+	}
+	
+	form_harad_GP = {
+		picture = "form_harad"
+		potential = {
+			NOT = { is_culture_group = haradrim }
+			NOT = { is_culture_group = khandish }
+			is_greater_power = yes
+			NOT = { exists = HAR }
+			OR = {
+				HRN = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				HRU = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				PEZ = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				LUR = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				ARY = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			HRN = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			HRU = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			PEZ = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			LUR = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			ARY = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			OR = {
+				AND = {
+					has_country_flag = evil_realm
+					OR = {
+						NOT = { exists = HRN }
+						HRN = { 
+							exists = yes
+							has_country_flag = evil_realm
+						}
+					}
+					OR = {
+						NOT = { exists = HRU }
+						HRU = { 
+							exists = yes
+							has_country_flag = evil_realm
+						}
+					}
+					OR = {
+						NOT = { exists = PEZ }
+						PEZ = { 
+							exists = yes
+							has_country_flag = evil_realm
+						}
+					}
+					OR = {
+						NOT = { exists = LUR }
+						LUR = { 
+							exists = yes
+							has_country_flag = evil_realm
+						}
+					}
+					OR = {
+						NOT = { exists = ARY }
+						ARY = { 
+							exists = yes
+							has_country_flag = evil_realm
+						}
+					}
+				}
+				AND = {
+					has_country_flag = good_realm
+					OR = {
+						NOT = { exists = HRN }
+						HRN = { 
+							exists = yes
+							has_country_flag = good_realm
+						}
+					}
+					OR = {
+						NOT = { exists = HRU }
+						HRU = { 
+							exists = yes
+							has_country_flag = good_realm
+						}
+					}
+					OR = {
+						NOT = { exists = PEZ }
+						PEZ = { 
+							exists = yes
+							has_country_flag = good_realm
+						}
+					}
+					OR = {
+						NOT = { exists = LUR }
+						LUR = { 
+							exists = yes
+							has_country_flag = good_realm
+						}
+					}
+					OR = {
+						NOT = { exists = ARY }
+						ARY = { 
+							exists = yes
+							has_country_flag = good_realm
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			badboy = 5
+			
+			any_country = {
+				limit = {
+					OR = {
+						tag = HRN
+						tag = HRU
+						tag = PEZ
+						tag = LUR
+						tag = ARY
+					}
+				}
+				annex_to = HAR
+				
+				all_core = { add_core = HAR remove_core = HRN remove_core = HRU remove_core = PEZ remove_core = LUR remove_core = ARY }
+			}
+			
+			create_vassal = HAR
+			HAR = { capital = 334 }
+			diplomatic_influence = {
+				who = HAR
+				value = 400 
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { has_country_flag = good_realm }
+				}
+				HAR = {
+					remove_country_modifier = evil_realm
+					clr_country_flag = evil_realm
+					remove_accepted_culture = evil_culture
+					add_country_modifier = { name = good_realm duration = -1 }
+					set_country_flag = good_realm
+					add_accepted_culture = good_culture
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { has_country_flag = evil_realm }
+				}
+				HAR = {
+					remove_country_modifier = good_realm
+					clr_country_flag = good_realm
+					remove_accepted_culture = good_culture
+					add_country_modifier = { name = evil_realm duration = -1 }
+					set_country_flag = evil_realm
+					add_accepted_culture = evil_culture
+				}
+			}
+		}
+	}
+}
+
+# Tribal Incorporation
+political_decisions = {
+	incorporate_chelkar = {
+		picture = "HAR_core_removal"
+		potential = {
+			tag = HAR
+			NOT = { accepted_culture = chelkiag }
+			NOT = { primary_culture = chelkiag }
+		}
+		
+		allow = {
+			CHE = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			CHE = { 
+				country_event = 100010 
+				all_core = { add_core = HAR }
+			}
+			
+			add_accepted_culture = chelkiag
+		}
+	}
+	
+	incorporate_khand = {
+		picture = "HAR_core_removal"
+		potential = {
+			tag = HAR
+			NOT = { accepted_culture = variag }
+			NOT = { primary_culture = variag }
+		}
+		
+		allow = {
+			KHA = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			KHA = {
+				country_event = 100010
+				all_core = { add_core = HAR }
+			}
+			
+			add_accepted_culture = variag
+		}
+	}
+	
+	incorporate_umbar = {
+		picture = "HAR_core_removal"
+		potential = {
+			tag = HAR
+			NOT = { accepted_culture = umbarrim }
+			NOT = { primary_culture = umbarrim }
+		}
+		
+		allow = {
+			UMB = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			UMB = {
+				country_event = 100010
+				all_core = { add_core = HAR }
+			}
+			
+			add_accepted_culture = umbarrim
 		}
 	}
 }

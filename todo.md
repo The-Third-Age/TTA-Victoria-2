@@ -35,9 +35,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Return to South Gondor
  - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
  - Erelond/Ramlond/Umbar/Gobel Ancalimon slave trade hub
- - Add way to form Harad diplomatically (as a tribe)
- - Forming Harad outside (GP or Umber or Khand/Chelkar)
- - Good/Evil influences (outside and internal)
+ - Good/Evil influences (outside and internal), spherelings being able to get rid of sphere if good/evil doesn't match up.
  - attempting_to_democratic flag
 
 ## Others 

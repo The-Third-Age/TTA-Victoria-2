@@ -93,13 +93,89 @@ country_event = {
 			
 			modifier = {
 				factor = 0
-				NOT = {
+				OR = {
+					AND = {
+						NOT = {
+							relation = {
+								who = FROM
+								value = 0
+							}
+						}
+						NOT = { vassal_of = FROM }
+					}
+					AND = {
+						has_country_flag = good_realm
+						NOT = { FROM = { has_country_flag = good_realm } }
+					}
+					AND = {
+						has_country_flag = evil_realm
+						NOT = { has_country_flag = evil_realm }
+					}
+					is_greater_power = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Never!"
+		
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 0
+				OR = {
 					relation = {
 						who = FROM
 						value = 0
 					}
+					vassal_of = FROM
 				}
-				NOT = { vassal_of = FROM }
+			}
+		}
+	}
+}
+
+# Annex Country - Non-cultural Union
+country_event = {
+	id = 100010
+	picture = administration
+	title = "Our Union With $FROMCOUNTRY$"
+	desc = "EVTDESC100003"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will join them!"
+		
+		annex_to = FROM
+		
+		ai_chance = {
+			factor = 90
+			
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						NOT = {
+							relation = {
+								who = FROM
+								value = 0
+							}
+						}
+						NOT = { vassal_of = FROM }
+					}
+					AND = {
+						has_country_flag = good_realm
+						NOT = { FROM = { has_country_flag = good_realm } }
+					}
+					AND = {
+						has_country_flag = evil_realm
+						NOT = { has_country_flag = evil_realm }
+					}
+					is_greater_power = yes
+				}
 			}
 		}
 	}
@@ -323,5 +399,86 @@ country_event = {
 		}
 		
 		create_alliance = FROM
+	}
+}
+
+# 100010 Annex event above
+
+# Diplomatic Invitation (for Union forming)
+country_event = {
+	id = 100011
+	# picture =
+	title = "An Invititation"
+	desc = "EVTDESC100011"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Of course!"
+		
+		FROM = {
+			diplomatic_influence = {
+				who = THIS
+				value = 400
+			}
+			relation = {
+				who = THIS
+				value = 400
+			}
+			create_alliance = THIS
+		}
+		
+		ai_chance = {
+			factor = 90
+			
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						NOT = {
+							relation = {
+								who = FROM
+								value = 0
+							}
+						}
+						NOT = { vassal_of = FROM }
+					}
+					AND = {
+						has_country_flag = good_realm
+						NOT = { FROM = { has_country_flag = good_realm } }
+					}
+					AND = {
+						has_country_flag = evil_realm
+						NOT = { has_country_flag = evil_realm }
+					}
+					is_greater_power = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Never!"
+		
+		add_casus_belli = {
+			tag = FROM
+			type = make_puppet
+			months = 24
+		}
+		
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 0
+				OR = {
+					relation = {
+						who = FROM
+						value = 0
+					}
+					vassal_of = FROM
+				}
+			}
+		}
 	}
 }
