@@ -34,9 +34,9 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - WoTR ending in 5 years if it has not already ended
  - Return to South Gondor
  - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
- - Revisit decision reqs (tech)
  - Erelond/Ramlond/Umbar/Gobel Ancalimon slave trade hub
  - Add way to form Harad diplomatically (as a tribe)
+ - Forming Harad outside (GP or Umber or Khand/Chelkar)
  - Good/Evil influences (outside and internal)
  - attempting_to_democratic flag
 
