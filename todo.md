@@ -24,6 +24,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Update the new goods icons (horse and administrative services are probably ok)
  - Update UI to match new color scheme
  - Land and Naval unit icons
+ - Update country font to include all characters
 
 ## Flavor
  - Event 50005, get the syntax for getting the general correct
