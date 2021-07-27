@@ -1,7 +1,8 @@
 # Harad Decisions: {
 #	Forming Harad 
 #	Tribal Incorporation
-#	Core Adding/Removal }
+#	Core Adding/Removal
+#	Province Flavor }
 
 # Forming Harad
 political_decisions = {
@@ -926,6 +927,40 @@ political_decisions = {
 				}
 				add_province_modifier = { name = cultural_core_integration duration = -1 }
 				remove_province_modifier = core_integration
+			}
+		}
+	}
+}
+
+# Province Flavor
+political_decisions = {
+	slave_trade = {
+		potential = {
+			OR = {
+				is_culture_group = haradrim
+				is_culture_group = khandish
+				primary_culture = black_numenorean
+			}
+			NOT = { slavery = no_slavery }
+			any_owned_province = {
+				slaves = 0.25
+				NOT = { has_province_modifier = major_slave_hub }
+			}
+		}
+		
+		allow = {
+			infrastructure_tech_1 = 1
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					slaves = 0.25
+				}
+				add_province_modifier = {
+					name = major_slave_hub
+					duration = -1
+				}
 			}
 		}
 	}
