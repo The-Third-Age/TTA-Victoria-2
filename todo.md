@@ -28,7 +28,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## Flavor
  - Event 50005, get the syntax for getting the general correct
- - Flavor research category for things like getting military hospital benefit from Houses of Healing?
  - Extension of the Gondor Road
  - (Great) Roads (modifier) able to be destroyed and remade
  - Make countries end their wars prior to the WoTR starting

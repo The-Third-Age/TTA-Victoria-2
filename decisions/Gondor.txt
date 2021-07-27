@@ -31,9 +31,6 @@ political_decisions = {
 			}
 			set_country_flag = low_military_recruitment
 			
-			# Research related
-			set_country_flag = infantry_realm
-			
 			# Literacy boosts
 			any_pop = {
 				limit = { has_pop_culture = dunedain }
@@ -53,9 +50,6 @@ political_decisions = {
 					name = low_military_recruitment
 					duration = -1
 				}
-				
-				# Research related
-				set_country_flag = infantry_realm
 				
 				# Literacy boosts
 				any_pop = {
@@ -434,6 +428,7 @@ political_decisions = {
 			owns = 16
 			NOT = { 16 = { has_province_modifier = houses_of_healing } }
 			is_culture_group = dunedain
+			NOT = { flavor_1 = 1 }
 		}
 		
 		allow = {
@@ -447,6 +442,8 @@ political_decisions = {
 					duration = -1
 				}
 			}
+			
+			activate_technology = flavor_1
 		}
 	}
 }
