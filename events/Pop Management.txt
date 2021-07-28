@@ -1,0 +1,148 @@
+# Pop Management Events: {
+# 9500 - 9999 }
+
+# Main Menu
+country_event = {
+	id = 9500
+	title = "Pop Management"
+	desc = "EVTDESC9500"
+	picture = administration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Manage Militancy"
+		
+		country_event = 9501
+	}
+	
+	option = {
+		name = "Manage Promotion"
+		
+		country_event = 9502
+	}
+	
+	option = {
+		name = "Quit"
+	}
+}
+
+# Miltancy Menu
+country_event = {
+	id = 9501
+	title = "Pop Militancy"
+	desc = "EVTDESC9501"
+	picture = administration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Make em mad"
+		
+		any_pop = {
+			militancy = 10
+		}
+	}
+	
+	option = {
+		name = "Make unaccepteds mad"
+		
+		any_pop = {
+			limit = {
+				is_accepted_culture = no
+				is_primary_culture = no
+			}
+			militancy = 10
+		}
+	}
+	
+	option = {
+		name = "Make non-colonial unaccepteds mad"
+		
+		any_pop = {
+			limit = {
+				is_accepted_culture = no
+				is_primary_culture = no
+				location = { is_colonial = no }
+			}
+			militancy = 10
+		}
+	}
+	
+	option = {
+		name = "Make accepteds happy"
+		
+		any_pop = {
+			limit = {
+				OR = {
+					is_accepted_culture = yes
+					is_primary_culture = yes
+				}
+			}
+			militancy = -10
+		}
+	}
+	
+	option = {
+		name = "Make em happy"
+		
+		any_pop = {
+			militancy = -10
+		}
+	}
+	
+	option = {
+		name = "Go Back"
+		
+		country_event = 9500
+	}
+	
+	option = {
+		name = "Quit"
+	}
+}
+
+# Demotion Menu
+country_event = {
+	id = 9502
+	title = "Pop Types"
+	desc = "EVTDESC9502"
+	picture = administration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Convert all non-accepteds to labourers"
+		
+		any_pop = {
+			limit = {
+				NOT = { is_accepted_culture = yes }
+				NOT = { is_primary_culture = yes }
+				NOT = { type = labourers }
+			}
+			pop_type = labourers
+		}
+	}
+	
+	option = {
+		name = "Convert all non-primary to labourers"
+		
+		any_pop = {
+			limit = {
+				NOT = { is_primary_culture = yes }
+				NOT = { type = labourers }
+			}
+			pop_type = labourers
+		}
+	}
+	
+	option = {
+		name = "Go Back"
+		
+		country_event = 9500
+	}
+	
+	option = {
+		name = "Quit"
+	}
+}

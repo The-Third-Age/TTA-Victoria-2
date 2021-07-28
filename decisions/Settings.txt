@@ -85,4 +85,118 @@ political_decisions = {
 			set_global_flag = fluff_disabled
 		}
 	}
+	
+	unciv_5 = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			has_global_flag = no_soldier_chosen
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = unciv_5
+			clr_global_flag = no_soldier_chosen
+		}
+	}
+	
+	unciv_75 = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			has_global_flag = no_soldier_chosen
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = unciv_7
+			clr_global_flag = no_soldier_chosen
+		}
+	}
+	
+	unciv_10 = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			has_global_flag = no_soldier_chosen
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = unciv_10
+			clr_global_flag = no_soldier_chosen
+		}
+	}
+	
+	remove_infamy = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = removed_infamy }
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = removed_infamy 
+		}
+	}
+	
+	put_back_infamy = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			has_global_flag = removed_infamy
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = removed_infamy
+		}
+	}
+	
+	enable_pop_management = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = pop_management }
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = pop_management
+		}
+	}
+	
+	disable_pop_management = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			has_global_flag = pop_management
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = pop_management
+		}
+	}
+	
+	manage_pops = {
+		potential = {
+			ai = no
+			has_global_flag = pop_management
+		}
+		
+		allow = {}
+		
+		effect = {
+			country_event = 9500
+		}
+	}
 }
