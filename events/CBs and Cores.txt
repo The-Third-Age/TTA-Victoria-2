@@ -346,3 +346,49 @@ province_event = {
 		add_core = THIS
 	}
 }
+
+country_event = {
+	id = 2504
+	title = "Diplomatic Mission under Siege!"
+	desc = "EVTDESC2504"
+	picture = "administration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "By Jingo!"
+		
+		sphere_owner = { country_event = 2505 }
+	}
+}
+
+country_event = {
+	id = 2505
+	title = "Diplomatic Mission under Siege!"
+	desc = "EVTDESC2504"
+	picture = "administration"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "By Jingo!"
+		diplomatic_influence = {
+			who = FROM
+			value = -400
+		}
+		casus_belli = {
+			target = FROM
+			type = add_to_sphere
+			months = 12
+		}
+	}
+
+	option = {
+		name = "Perhaps we should let the $FROMCOUNTRY_ADJ$ Dragon sleep."
+		diplomatic_influence = {
+			who = FROM
+			value = -400
+		}
+		prestige = -20
+	}
+}

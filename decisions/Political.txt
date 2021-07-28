@@ -4,10 +4,8 @@
 # Political
 political_decisions = {
 	leave_soi = {
-		alert = no
 		potential = {
 			part_of_sphere = yes
-			
 		}
 		
 		allow = {
@@ -24,13 +22,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			sphere_owner = {
-				diplomatic_influence = {
-					who = THIS
-					value = -200
-				}
-				country_event = 13201
-			}
+			sphere_owner = { country_event = 2505 }
 		}
 		
 		ai_will_do = {
@@ -45,8 +37,82 @@ political_decisions = {
 		}
 	}
 	
+	leave_soi_good_evil = {
+		potential = {
+			ai = no
+			part_of_sphere = yes
+			OR = {
+				AND = {
+					has_country_flag = good_realm
+					sphere_owner = { has_country_flag = evil_realm }
+				}
+				AND = {
+					has_country_flag = evil_realm
+					sphere_owner = { has_country_flag = good_realm }
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			sphere_owner = { country_event = 2505 }
+		}
+	}
+	
+	convert_good_evil = {
+		potential = {
+			part_of_sphere = yes
+			OR = {
+				AND = {
+					has_country_flag = good_realm
+					sphere_owner = { has_country_flag = evil_realm }
+				}
+				AND = {
+					has_country_flag = evil_realm
+					sphere_owner = { has_country_flag = good_realm }
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			random_owned = {
+				limit = {
+					owner = { sphere_owner = { has_country_flag = evil_realm } }
+				}
+				owner = {
+					remove_country_modifier = good_realm
+					clr_country_flag = good_realm
+					remove_accepted_culture = good_culture
+					add_country_modifier = { name = evil_realm duration = -1 }
+					set_country_flag = evil_realm
+					add_accepted_culture = evil_culture
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { sphere_owner = { has_country_flag = good_realm } }
+				}
+				owner = {
+					remove_country_modifier = evil_realm
+					clr_country_flag = evil_realm
+					remove_accepted_culture = evil_culture
+					add_country_modifier = { name = good_realm duration = -1 }
+					set_country_flag = good_realm
+					add_accepted_culture = good_culture
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
 	nationalize = {
-		alert = no
 		potential = {
 			can_nationalize = yes 
 		}

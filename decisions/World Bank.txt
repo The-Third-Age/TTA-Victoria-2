@@ -2,7 +2,7 @@
 #	Starting Decision (unseen) 
 #	Time Specific Event Firing 
 #	Good/Evil Clean Up
-#	Leave For Alone 
+#	Leave FOR Alone 
 #	Government Flags Clean Up}
 
 # Starting Decision
@@ -392,6 +392,48 @@ political_decisions = {
 				}
 				add_accepted_culture = evil_culture
 				remove_accepted_culture = good_culture
+			}
+		}
+	}
+	
+	good_evil_wrong_sphere = {
+		potential = {
+			tag = FOR
+			any_neighbor_country = {
+				ai = yes
+				part_of_sphere = yes
+				OR = {
+					AND = {
+						has_country_flag = good_realm
+						sphere_owner = { has_country_flag = evil_realm }
+					}
+					AND = {
+						has_country_flag = evil_realm
+						sphere_owner = { has_country_flag = good_realm }
+					}
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					ai = yes
+					part_of_sphere = yes
+					OR = {
+						AND = {
+							has_country_flag = good_realm
+							sphere_owner = { has_country_flag = evil_realm }
+						}
+						AND = {
+							has_country_flag = evil_realm
+							sphere_owner = { has_country_flag = good_realm }
+						}
+					}
+				}
+				country_event = 2504
 			}
 		}
 	}

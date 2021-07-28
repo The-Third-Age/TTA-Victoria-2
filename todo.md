@@ -21,6 +21,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - General Spawn events
  - National Foci
  - Slave craftsmen
+ - Cbs
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
@@ -36,7 +37,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - WoTR ending in 5 years if it has not already ended
  - Return to South Gondor
  - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
- - Good/Evil influences (outside and internal), spherelings being able to get rid of sphere if good/evil doesn't match up.
+ - Good/Evil influences (outside and internal)
  - attempting_to_democratic flag
 
 ## Others 
