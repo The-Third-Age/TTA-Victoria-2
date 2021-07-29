@@ -11,9 +11,8 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Inventions
  - Pops
  - Province terrains
- - Figure out how to add `minimum_wage` effect to something
  - "Unciv" reforms?
- - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending
+ - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending, Minimum Wage
  - Gas Attack?
  - Great/World Wars?
  - Starting literacy

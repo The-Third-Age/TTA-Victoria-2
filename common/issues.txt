@@ -6,6 +6,8 @@ party_issues = {
 		independent_guilds = {
 			factory_owner_cost = 0.3
 			factory_output = 0.05
+			min_tariff = -1
+			max_tariff = 1
 			
 			rules = {
 				build_factory = no
@@ -29,6 +31,8 @@ party_issues = {
 		}
 		oversight_guilds = {
 			factory_owner_cost = 0.5
+			min_tariff = -1
+			max_tariff = 1
 			
 			rules = {
 				build_factory = no
@@ -54,6 +58,9 @@ party_issues = {
 		}
 		controlled_guilds = {
 			factory_owner_cost = 0.6
+			min_tariff = -1
+			max_tariff = 1
+			
 			rules = {
 				build_factory = yes
 				expand_factory = yes
@@ -439,19 +446,13 @@ social_reforms = {
 		
 		granted_exclusive_tr = {
 			import_cost = 0.2
-			tax_efficiency = 0.03
-			max_tariff = 1
-			min_tariff = -1
+			tariff_efficiency_modifier = 0.1
 		}
 		limited_exclusive_tr = {
 			import_cost = 0.1
-			tax_efficiency = 0.01
-			max_tariff = 1
-			min_tariff = -1
+			tariff_efficiency_modifier = 0.05
 		}
 		abolished_exclusive_tr = {
-			max_tariff = 1
-			min_tariff = -1
 		}
 	}
 	state_supplies_monopoly = {
