@@ -7,8 +7,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Set liferatings and climates
  
 ## Gameplay
- - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms
- - Pop reform/party policy tendencies
+ - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms, pop reform/party policy tendencies
  - Inventions
  - Pops
  - Province terrains
@@ -39,6 +38,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
  - Good/Evil influences (outside and internal)
  - attempting_to_democratic flag
+ - QoL decisions (auto-building of roads, castles, naval bases)
 
 ## Others 
  - Music (BFME2 for example)

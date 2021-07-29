@@ -31,4 +31,24 @@ ideologies = {
 	}
 }
 issues = {
+	regional_autonomy = {
+		factor = 1
+	}
+	no_slavery = {
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = no_slavery }
+				country = { has_country_flag = evil_realm }
+			}
+		}
+	}
+	non_accepted_slavery = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = { is_next_reform = non_accepted_slavery }
+		}
+	}
 } 

@@ -947,7 +947,7 @@ ideologies = {
 		}
 		modifier = {
 			factor = 1.1
-			revancism = 0.05
+			revanchism = 0.05
 		}
 		modifier = {
 			factor = 1.1
@@ -966,4 +966,3561 @@ ideologies = {
 
 
 issues = {
+	##########################
+	##### PARTY POLICIES #####
+	##########################
+	independent_guilds = {
+		factor = 0.9
+		modifier = {
+			factor = 0
+			NOT = { life_needs = 1.0 }
+			country = { guild_autonomy_policy = independent_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1.0
+			country = { guild_autonomy_policy = independent_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { guild_autonomy_policy = independent_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { guild_autonomy_policy = independent_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { guild_autonomy_policy = independent_guilds }
+		}
+	} 
+	oversight_guilds = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { life_needs = 1.0 }
+			country = { guild_autonomy_policy = oversight_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1.0
+			country = { guild_autonomy_policy = oversight_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { guild_autonomy_policy = oversight_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { guild_autonomy_policy = oversight_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { guild_autonomy_policy = oversight_guilds }
+		}
+	} 
+	controlled_guilds = {
+		factor = 1.2
+		modifier = {
+			factor = 0
+			NOT = { life_needs = 1.0 }
+			country = { guild_autonomy_policy = controlled_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1.0
+			country = { guild_autonomy_policy = controlled_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { guild_autonomy_policy = controlled_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { guild_autonomy_policy = controlled_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { guild_autonomy_policy = controlled_guilds }
+		}
+	}
+	all_peoples = {
+		factor = 1
+		modifier = {
+			factor = 1.1
+			consciousness = 8
+			NOT = { is_state_religion = yes }
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 6
+			NOT = { is_state_religion = yes }
+			country = { racial_policy = racial_unity }
+		}
+		modifier = {
+			factor = 0.5
+			not = { consciousness = 6 }
+		}
+		modifier = {
+			factor = 0.5
+			not = { consciousness = 7 }
+		}
+		modifier = {
+			factor = 0.5
+			not = { consciousness = 8 }
+		}
+		modifier = {
+			factor = 0.5
+			not = { consciousness = 9 }
+		}	
+	}
+	non_orc = {
+		factor = 1
+		modifier = {
+			factor = 1.1
+			consciousness = 4
+			NOT = { consciousness = 6 }
+			NOT = { is_state_religion = yes }
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 9
+		}
+	}
+	racial_unity = {
+		factor = 1
+		modifier = {
+			factor = 1.2
+			NOT = { consciousness = 4 }
+			is_state_religion = yes
+		}
+		modifier = {
+			factor = 1.1
+			not = { consciousness = 4 }
+		}	
+		modifier = {
+			factor = 1.1
+			not = { consciousness = 3 }
+		}	
+		modifier = {
+			factor = 1.1
+			not = { consciousness = 2 }
+		}	
+		modifier = {
+			factor = 1.1
+			not = { consciousness = 1 }
+		}			
+		modifier = {
+			factor = 0.9
+			consciousness = 6
+		}
+		modifier = {
+			factor = 0.9
+			consciousness = 7
+		}
+		modifier = {
+			factor = 0.9
+			consciousness = 8
+		}
+		modifier = {
+			factor = 0.9
+			consciousness = 9
+		}
+	}
+	official_only = {
+		factor = 1.1
+		modifier = {
+			factor = 0 
+			NOT = { consciousness  = 5}
+		}
+		modifier = {
+			factor = 0 
+			NOT = { is_primary_culture = yes }
+		}		
+		modifier = {
+			factor = 1.1
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 9
+		}	
+	}
+	minority_toleration = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			NOT = { consciousness   = 5}
+		}
+		modifier = {
+			factor = 0 
+			NOT = { is_accepted_culture = yes }
+			NOT = { is_primary_culture = yes }
+		}		
+		modifier = {
+			factor = 1.1
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 9
+		}
+	}
+	regional_autonomy = {
+		factor = 1 
+		modifier = {
+			factor = 0 
+			NOT = { consciousness  = 5}
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { is_primary_culture = yes }
+			NOT = { is_accepted_culture = yes }
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { is_primary_culture = yes }
+			NOT = { is_accepted_culture = yes }
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { is_primary_culture = yes }
+			NOT = { is_accepted_culture = yes }
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { is_primary_culture = yes }
+			NOT = { is_accepted_culture = yes }
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { is_primary_culture = yes }
+			NOT = { is_accepted_culture = yes }
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 9
+		}
+	}
+	isolationist = {
+		factor = 1.1
+		modifier = {
+			factor = 1.1
+			NOT = { life_needs = 1.0 }
+			NOT = { country = { diplomatic_policy = isolationist } }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { diplomatic_policy = isolationist }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { diplomatic_policy = isolationist }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { diplomatic_policy = isolationist }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
+			country = { diplomatic_policy = isolationist }
+		}
+	}
+	reactive = {
+		factor = 1.1
+		modifier = {
+			factor = 1.1
+			NOT = { life_needs = 1.0 }
+			NOT = { country = { diplomatic_policy = reactive } }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { diplomatic_policy = reactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { diplomatic_policy = reactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { diplomatic_policy = reactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
+			country = { diplomatic_policy = reactive }
+		}
+	}
+	proactive = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { life_needs = 1.0 }
+			NOT = { country = { diplomatic_policy = proactive } }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1.0
+			country = { diplomatic_policy = proactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { diplomatic_policy = proactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { diplomatic_policy = proactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { diplomatic_policy = proactive }
+		}
+	}
+	interactive = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { life_needs = 1.0 }
+			NOT = { country = { diplomatic_policy = interactive } }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1.0
+			country = { diplomatic_policy = interactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { diplomatic_policy = interactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { diplomatic_policy = interactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { diplomatic_policy = interactive }
+		}
+	}
+	jingoism = {
+		factor = 1.1
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.01
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.02
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.03
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.04
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.05
+		}
+		modifier = {
+			factor = 1.1
+		 	revanchism = 0.10
+		}
+		modifier = {
+			factor = 4
+		 	revanchism = 0.15
+		}
+		modifier = {
+			factor = 8
+		 	revanchism = 0.20
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 10
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 20
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 30
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 40
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 50
+			}
+		}	
+		modifier = {
+			factor = 1.1
+			war = no
+			is_greater_power = yes
+			any_neighbor_country = {
+				is_greater_power = yes
+				military_score = THIS
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			civilized = yes
+			NOT = { is_greater_power = yes }
+			any_neighbor_country = {
+				civilized = yes
+				NOT = { is_greater_power = yes }
+				military_score = THIS
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			NOT = { civilized = yes }
+			any_neighbor_country = {
+				NOT = { civilized = yes }
+				military_score = THIS
+			}
+		}
+	}
+	pro_military = {
+		factor = 1.2
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 10
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 20
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 30
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 40
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			NOT = {
+				war_exhaustion = 50
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			is_greater_power = yes
+			any_neighbor_country = {
+				is_greater_power = yes
+				military_score = THIS
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			NOT = { is_greater_power = yes }
+			civilized = yes
+			any_neighbor_country = {
+				civilized = yes
+				NOT = { is_greater_power = yes }
+				military_score = THIS
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			NOT = { civilized = yes }
+			any_neighbor_country = {
+				NOT = { civilized = yes }
+				military_score = THIS
+			}
+		}
+	}
+	anti_military = {
+		factor = 0.9
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 30
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 40
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			is_greater_power = yes
+			any_neighbor_country = {
+				is_greater_power = yes
+				NOT = { military_score = THIS }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			NOT = { is_greater_power = yes }
+			civilized = yes
+			any_neighbor_country = {
+				civilized = yes
+				NOT = { is_greater_power = yes }
+				NOT = { military_score = THIS }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			NOT = { civilized = yes }
+			any_neighbor_country = {
+				NOT = { civilized = yes }
+				NOT = { military_score = THIS }
+			}
+		}
+	}
+	pacifism = {
+		factor = 0.8
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 30
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 40
+		}
+		modifier = {
+			factor = 1.1
+			war = yes
+			war_exhaustion = 50
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			is_greater_power = yes
+			any_neighbor_country = {
+				is_greater_power = yes
+				NOT = { military_score = THIS }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			NOT = { is_greater_power = yes }
+			civilized = yes
+			any_neighbor_country = {
+				civilized = yes
+				NOT = { is_greater_power = yes }
+				NOT = { military_score = THIS }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			war = no
+			NOT = { civilized = yes }
+			any_neighbor_country = {
+				NOT = { civilized = yes }
+				NOT = { military_score = THIS }
+			}
+		}
+	}
+	#############################
+	##### POLITICAL REFORMS #####
+	#############################
+	landed_voting = {
+		factor = 1.25
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = landed_voting }
+				NOT = { consciousness = 6 }
+				luxury_needs =  1.0
+				NOT = { life_needs = 0.7 }
+				AND = {
+					NOT = { country = { has_country_flag = attempting_to_democratic } }
+					country = { vote_franschise = none_voting }
+					NOT = { militancy = 6 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	wealth_weighted_voting = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = wealth_weighted_voting }
+				NOT = { consciousness = 6 }
+				luxury_needs =  1.0
+				NOT = { life_needs = 0.7 }
+				NOT = { country = { has_country_flag = democratic } }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}			
+	wealth_voting = {
+		factor = 0.9
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = wealth_voting }
+				NOT = { consciousness = 6 }
+				luxury_needs =  1.0
+				NOT = { life_needs = 0.7 }
+				NOT = { country = { has_country_flag = democratic } }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			country = {
+				civilized = no
+			}
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	universal_weighted_voting = {
+		factor = 0.8
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = universal_weighted_voting }
+				NOT = { consciousness = 6 }
+				luxury_needs =  1.0
+				NOT = { life_needs = 0.7 }
+				NOT = { country = { has_country_flag = democratic } }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	universal_voting = {
+		factor = 0.7
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = universal_voting }
+				NOT = { consciousness = 6 }
+				luxury_needs =  1.0
+				NOT = { life_needs = 0.7 }
+				NOT = { country = { has_country_flag = democratic } }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	appointed = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = appointed }
+				NOT = { consciousness = 6 }
+				luxury_needs =  1.0
+				NOT = { life_needs = 0.7 }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	state_equal_weight = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = state_equal_weight }
+				NOT = { consciousness = 6 }
+				luxury_needs =  1.0
+				NOT = { life_needs = 0.7 }
+				vote_franschise = none_voting
+			}
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	population_equal_weight = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = population_equal_weight }
+				NOT = { consciousness = 6 }
+				luxury_needs =  1.0
+				NOT = { life_needs = 0.7 }
+				vote_franschise = none_voting
+			}
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	jefferson_method = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = proportional_representation }
+				NOT = { consciousness = 6 }
+				NOT = { life_needs = 1 }
+				vote_franschise = none_voting
+			}
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.5
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+	}
+	proportional_representation = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = proportional_representation }
+				NOT = { consciousness = 6 }
+				NOT = { life_needs = 1 }
+				vote_franschise = none_voting
+			}
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.5
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+	}
+	meeting_curfew = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = meeting_curfew }
+				NOT = { consciousness = 4 }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	yes_meeting = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = yes_meeting }
+				NOT = { consciousness = 4 }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	medium_noble_autonomy = {
+		factor = 1.25
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = medium_noble_autonomy }
+				NOT = { consciousness = 4 }
+				strata = rich
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	small_noble_autonomy = {
+		factor = 1.25
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = small_noble_autonomy }
+				NOT = { consciousness = 4 }
+				strata = rich
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	medium_levy_contribution = {
+		factor = 1.25
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = medium_levy_contribution }
+				NOT = { consciousness = 4 }
+				strata = rich
+				NOT = { nobility_autonomy = large_noble_autonomy }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	small_levy_contribution = {
+		factor = 1.25
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = small_levy_contribution }
+				NOT = { consciousness = 4 }
+				strata = rich
+				nobility_autonomy = small_noble_autonomy
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	medium_tax_contribution = {
+		factor = 1.25
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = medium_tax_contribution }
+				NOT = { consciousness = 4 }
+				strata = rich
+				NOT = { nobility_autonomy = large_noble_autonomy }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	large_tax_contribution = {
+		factor = 1.25
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = large_tax_contribution }
+				NOT = { consciousness = 4 }
+				strata = rich
+				nobility_autonomy = small_noble_autonomy
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	restricted_knighting_rights = {
+		factor = 1.25
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = restricted_knighting_rights }
+				NOT = { consciousness = 4 }
+				strata = rich
+				NOT = { nobility_autonomy = large_noble_autonomy }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	royal_knighting_rights = {
+		factor = 1.25
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = royal_knighting_rights }
+				NOT = { consciousness = 4 }
+				strata = rich
+				nobility_autonomy = small_noble_autonomy
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	discouraged_serfdom = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = discouraged_serfdom }
+				strata = rich
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 1.1
+			country = { serfdom = enforced_serfdom }
+			NOT = { life_needs = 1.0 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { serfdom = enforced_serfdom }
+			NOT = { everyday_needs = 1.0 }
+		}
+		modifier = {
+			factor = 1.2
+			state_scope = { is_slave = yes }
+		}	
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = yes }
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = yes }
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = yes }
+			consciousness = 8
+		}	
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = yes }
+			consciousness = 9
+		}	
+	}
+	banned_serfdom = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = banned_serfdom }
+				strata = rich
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.5
+			state_scope = { is_slave = yes }
+		}	
+		modifier = {
+			factor = 1.1
+			life_needs = 1.0
+			everyday_needs = 1.0
+		}
+		modifier = {
+			factor = 1.1
+			life_needs = 1.0
+			everyday_needs = 1.0
+			luxury_needs = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			life_needs = 1.0
+			everyday_needs = 1.0
+			luxury_needs = 1.0
+		}
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = no }
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = no }
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = no }
+			consciousness = 8
+		}
+		modifier = {
+			factor = 3
+			state_scope = { is_slave = no }
+			consciousness = 9
+		}
+	}
+	ten_land_ownership = {
+		factor = 0.9
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = ten_land_ownership }
+				NOT = { consciousness = 4 }
+				strata = rich
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	thirty_land_ownership = {
+		factor = 0.9
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = thirty_land_ownership }
+				NOT = { consciousness = 4 }
+				strata = rich
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	half_land_ownership = {
+		factor = 0.9
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = half_land_ownership }
+				NOT = { consciousness = 4 }
+				strata = rich
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	seventy_land_ownership = {
+		factor = 0.9
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = seventy_land_ownership }
+				NOT = { consciousness = 4 }
+				strata = rich
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	all_land_ownership = {
+		factor = 0.9
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { is_next_reform = all_land_ownership }
+				NOT = { consciousness = 4 }
+				strata = rich
+			}
+		}
+		modifier = {
+			factor = 0.5
+			strata = middle
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	non_accepted_slavery = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = non_accepted_slavery }
+				state_scope = { is_slave = no }
+			}
+		}
+		modifier = {
+			factor = 2
+			country = { has_country_flag = good_realm }
+		}
+		modifier = {
+			factor = 0.5
+			is_accepted_culture = no
+			is_primary_culture = no
+		}
+		modifier = {
+			factor = 1.1
+			country = { slavery = yes_slavery }
+			NOT = { life_needs = 1.0 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { slavery = yes_slavery }
+			NOT = { everyday_needs = 1.0 }
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			consciousness = 8
+		}	
+		modifier = {
+			factor = 1.5
+			consciousness = 9
+		}	
+	}
+	no_slavery = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = no_slavery }
+				country = { has_country_flag = evil_realm }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			state_scope = { is_slave = yes }
+		}
+		modifier = {
+			factor = 2
+			country = { has_country_flag = good_realm }
+		}
+		modifier = {
+			factor = 1.1
+			life_needs = 1.0
+			everyday_needs = 1.0
+		}
+		modifier = {
+			factor = 1.1
+			life_needs = 1.0
+			everyday_needs = 1.0
+			luxury_needs = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			life_needs = 1.0
+			everyday_needs = 1.0
+			luxury_needs = 1.0
+		}
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = no }
+			consciousness = 6
+		}
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = no }
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.5
+			state_scope = { is_slave = no }
+			consciousness = 8
+		}
+		modifier = {
+			factor = 3
+			state_scope = { is_slave = no }
+			consciousness = 9
+		}
+	}
+	hard_labor = {
+		factor = 0.7
+		modifier = {
+			factor = 0
+			NOT = { is_next_reform = hard_labor }
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	incarceration = {
+		factor = 0.7
+		modifier = {
+			factor = 0
+			NOT = { is_next_reform = incarceration }
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.70 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.60 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.50 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.40 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.30 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.20 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.10 }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+	}
+	accepted_voting = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = accepted_voting }
+				NOT = { consciousness = 6 }
+				NOT = { life_needs = 1 }
+				vote_franschise = none_voting
+			}
+		}
+		modifier = {
+			factor = 0.75
+			is_primary_culture = yes
+		}
+		modifier = {
+			factor = 1.25
+			is_accepted_culture = yes
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.5
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+	}
+	all_vote = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { is_next_reform = all_vote }
+				NOT = { consciousness = 6 }
+				NOT = { life_needs = 1 }
+				vote_franschise = none_voting
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+		}
+		modifier = {
+			factor = 1.25
+			is_accepted_culture = no
+			is_primary_culture = no
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.5
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.90 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { agree_with_ruling_party = 0.80 }
+		}
+	}
+	###########################
+	##### BURGHER REFORMS #####
+	###########################
+	limited_exclusive_tr = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { life_needs = 1.0 }
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = limited_exclusive_tr }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	abolished_exclusive_tr = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { life_needs = 1.0 }
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = abolished_exclusive_tr }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	allowed_state_supplies = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { life_needs = 1.0 }
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = allowed_state_supplies }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	restricted_state_supplies = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { life_needs = 1.0 }
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = restricted_state_supplies }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	chartered_cities = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { life_needs = 1.0 }
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = chartered_cities }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	territorial_cities = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { life_needs = 1.0 }
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = territorial_cities }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	royal_cities = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { life_needs = 1.0 }
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = royal_cities }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	trinket_pensions = { 
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = trinket_pensions }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.25 }
+		}	
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.50 }
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.75 }
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	low_pensions = { 
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = low_pensions }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.25 }
+		}	
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.50 }
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.75 }
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	acceptable_pensions = { 
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = acceptable_pensions }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.25 }
+		}	
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.50 }
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.75 }
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	good_pensions = { 
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = good_pensions }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.25 }
+		}	
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.50 }
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 0.75 }
+		}
+		modifier = {
+			factor = 0.25
+			not = { life_needs = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	appointment = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { life_needs = 1.0 }
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = appointment }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
+	guild_school = {
+		factor = 1
+		modifier = {
+			factor = 0 
+			OR = {
+				NOT = { life_needs = 1.0 }
+				NOT = { consciousness = 6 }
+				NOT = { is_next_reform = guild_school }
+			}	
+		}
+		modifier = {
+			factor = 0.25
+			country = { civilized = no }
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 7
+		}	
+		modifier = {
+			factor = 1.25
+			consciousness = 8
+		}
+		modifier = {
+			factor = 1.25
+			consciousness = 9
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			everyday_needs = 1
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.25
+		}	
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.50
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 0.75
+		}
+		modifier = {
+			factor = 1.25
+			luxury_needs = 1
+		}
+	}
 } 
