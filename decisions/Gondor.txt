@@ -4,7 +4,7 @@
 #	Province Flavor
 #	Military Buildup
 #	Expansions to the West
-#	Province Flavor 
+#	Ecthelion II Flavor
 #	Reclaiming Cores Removed Via Flavor }
 
 # Starting Decisions
@@ -447,6 +447,32 @@ political_decisions = {
 			activate_technology = flavor_1
 		}
 	}
+	
+	gondorification_of_DRU = {
+		picture = "free_druadan_forest"
+		potential = {
+			tag = GON
+			owns = 11
+			11 = {
+				has_province_modifier = gondorification
+			}
+		}
+		
+		allow = {
+			11 = {
+				OR = {
+					is_accepted_culture = yes
+					is_primary_culture = yes
+				}
+			}
+		}
+		
+		effect = {
+			remove_province_modifier = gondorification
+			remove_province_modifier = nationalist_resistance
+			11 = { remove_core = DRU }
+		}
+	}
 }
 
 # Military Build Up
@@ -796,6 +822,92 @@ political_decisions = {
 				}
 			}
 			set_country_flag = andrast_gondorification
+		}
+	}
+	
+	druadan_forest_rebellion_end_GON = {
+		picture = "free_druadan_forest"
+		potential = {
+			has_country_flag = DRU_rebelling_from
+			has_global_flag = DRU_rebellion
+			owns = 11
+			NOT = { exists = DRU }
+			war = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_pop = {
+				limit = {
+					location = { province_id = 11 }
+					has_pop_culture = druedain
+				}
+				reduce_pop = 0.95
+			}
+			any_pop = {
+				limit = {
+					location = { province_id = 11 }
+					has_pop_culture = druedain
+					type = soldiers
+				}
+				pop_type = labourers
+			}
+			clr_global_flag = DRU_rebellion
+			clr_country_flag = DRU_rebelling_from
+			
+			random_owned = {
+				limit = {
+					owner = { tag = GON }
+					province_id = 11
+				}
+				add_province_modifier = { name = gondorification duration = -1 }
+				add_province_modifier = { name = nationalist_resistance duration = -1 }
+			}
+		}
+	}
+	
+	druadan_forest_rebellion_end_DRU = {
+		picture = "free_druadan_forest"
+		potential = {
+			has_global_flag = DRU_rebellion
+			owns = 11
+			war = no
+			tag = DRU
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_pop = {
+				limit = {
+					location = { province_id = 11 }
+					NOT = { has_pop_culture = druedain }
+				}
+				reduce_pop = 0.5
+			}
+			
+			any_pop = {
+				limit = {
+					location = { province_id = 11 }
+					has_pop_culture = druedain
+					type = soldiers
+				}
+				pop_type = labourers
+			}
+			
+			clr_global_flag = DRU_rebellion
+			
+			random_country = {
+				limit = {
+					has_country_flag = DRU_rebelling_from
+				}
+				clr_country_flag = DRU_rebelling_from
+			}
 		}
 	}
 }

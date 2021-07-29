@@ -34,7 +34,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Make countries end their wars prior to the WoTR starting
  - WoTR ending in 5 years if it has not already ended
  - Return to South Gondor
- - Gondorification of Druadan Forest - result of druadan forest rebellion (starts if militancy too high)
  - Good/Evil influences (outside and internal)
  - attempting_to_democratic flag
  - QoL decisions (auto-building of roads, castles, naval bases)
