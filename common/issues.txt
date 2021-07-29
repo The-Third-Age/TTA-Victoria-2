@@ -183,7 +183,12 @@ political_reforms = {
 			poor_vote = 0
 		}
 		landed_voting = {
-			allow = { has_country_flag = democratic }
+			allow = {
+				OR = {
+					has_country_flag = democratic 
+					has_country_flag = attempting_to_democratic
+				}
+			}
 			rich_vote = 1
 			middle_vote = 0
 			poor_vote = 0

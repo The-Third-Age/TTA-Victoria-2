@@ -3,7 +3,7 @@
 #	Time Specific Event Firing 
 #	Good/Evil Clean Up
 #	Leave FOR Alone 
-#	Government Flags Clean Up}
+#	Government Flags Clean Up }
 
 # Starting Decision
 political_decisions = {
@@ -554,6 +554,51 @@ political_decisions = {
 					}
 				}
 				set_country_flag = democratic
+			}
+		}
+	}
+	
+	something_to_democracy = {
+		potential = {
+			tag = FOR
+			any_neighbor_country = {
+				has_country_flag = attempting_to_democratic
+				vote_franschise = landed_voting
+				NOT = {
+					OR = {
+						government = ent_realm
+						government = democracy
+					}
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = attempting_to_democratic
+					vote_franschise = landed_voting
+					is_culture_group = ents
+					NOT = { government = ent_realm }
+				}
+				clr_country_flag = attempting_to_democratic
+				set_country_flag = democratic
+				government = ent_realm
+				election = yes
+			}
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = attempting_to_democratic
+					vote_franschise = landed_voting
+					NOT = { is_culture_group = ents }
+					NOT = { government = democracy }
+				}
+				clr_country_flag = attempting_to_democratic
+				set_country_flag = democratic
+				government = democracy
+				election = yes
 			}
 		}
 	}

@@ -1,5 +1,6 @@
-# Political Decisions
-# Political
+# Political Decisions: {
+# 	Political
+#	Government Reform }
 
 # Political
 political_decisions = {
@@ -127,6 +128,77 @@ political_decisions = {
 		
 		ai_will_do = {
 			factor = 0
+		}
+	}
+}
+
+# Government Reform
+political_decisions = {
+	show_government_decisions = {
+		potential = {
+			ai = no
+			NOT = { has_global_flag = viewing_government_decisions }
+		}
+		
+		allow = { }
+		
+		effect = {
+			set_global_flag = viewing_government_decisions
+		}
+	}
+	
+	hide_government_decisions = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_government_decisions
+		}
+		
+		allow = { }
+		
+		effect = {
+			clr_global_flag = viewing_government_decisions
+		}
+	}
+	
+	democratizing = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_government_decisions
+			NOT = { has_country_flag = attempting_to_democratic }
+			NOT = {
+				government = democracy
+				government = ent_realm
+			}
+			vote_franschise = none_voting
+		}
+		
+		allow = { }
+		
+		effect = {
+			set_country_flag = attempting_to_democratic
+			
+			any_pop = {
+				limit = {
+					OR = {
+						AND = {
+							OR = {
+								is_primary_culture = yes
+								is_accepted_culture = yes
+							}
+							NOT = { militancy = 6 }
+						}
+						AND = {
+							is_primary_culture = no
+							is_accepted_culture = no
+							NOT = { militancy = 4 }
+						}
+					}
+				}
+				dominant_issue = {
+					value = landed_voting
+					factor = 0.25
+				}
+			}
 		}
 	}
 }
