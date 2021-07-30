@@ -969,8 +969,8 @@ issues = {
 	#####################
 	##### ALIGNMENT #####
 	#####################
-	good_alignment = {
-		factor = 1
+	good_alignment_fake = {
+		factor = 5
 		modifier = {
 			factor = 0
 			NOT = { life_needs = 1 }
@@ -1013,8 +1013,15 @@ issues = {
 			country = { any_neighbor_country = { good_evil_alignment = good_alignment } }
 		}
 		modifier = {
-			factor = 3
+			factor = 25
 			country = { has_country_flag = attempting_to_good }
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				country = { has_country_flag = attempting_to_neutral }
+				country = { has_country_flag = attempting_to_evil }
+			}
 		}
 		modifier = {
 			factor = 2
@@ -1024,32 +1031,32 @@ issues = {
 			}
 		}
 	}
-	neutral_alignment = {
-		factor = 1
+	neutral_alignment_fake = {
+		factor = 5
 		modifier = {
 			factor = 0
 			NOT = { life_needs = 1 }
-			country = { has_country_flag = neutral_realm }
+			country = { good_evil_alignment = neutral_alignment }
 		}
 		modifier = {
 			factor = 1.1
 			everyday_needs = 1.0
-			country = { has_country_flag = neutral_realm }
+			country = {good_evil_alignment = neutral_alignment }
 		}
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.25
-			country = { has_country_flag = neutral_realm }
+			country = { good_evil_alignment = neutral_alignment }
 		}
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.5
-			country = { has_country_flag = neutral_realm }
+			country = { good_evil_alignment = neutral_alignment }
 		}
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.75
-			country = { has_country_flag = neutral_realm }
+			country = { good_evil_alignment = neutral_alignment }
 		}
 		modifier = {
 			factor = 2
@@ -1057,22 +1064,29 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			country = { any_neighbor_country = { has_country_flag = neutral_realm } }
+			country = { any_neighbor_country = { good_evil_alignment = neutral_alignment } }
 		}
 		modifier = {
-			factor = 3
+			factor = 25
 			country = { has_country_flag = attempting_to_neutral }
 		}
 		modifier = {
 			factor = 2
 			country = {
 				is_vassal = yes
-				overlord = { has_country_flag = neutral_realm }
+				overlord = { good_evil_alignment = neutral_alignment }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				country = { has_country_flag = attempting_to_good }
+				country = { has_country_flag = attempting_to_evil }
 			}
 		}
 	}
-	evil_alignment = {
-		factor = 1
+	evil_alignment_fake = {
+		factor = 5
 		modifier = {
 			factor = 0
 			NOT = { life_needs = 1 }
@@ -1115,7 +1129,7 @@ issues = {
 			country = { any_neighbor_country = { good_evil_alignment = evil_alignment } }
 		}
 		modifier = {
-			factor = 3
+			factor = 25
 			country = { has_country_flag = attempting_to_evil }
 		}
 		modifier = {
@@ -1123,6 +1137,13 @@ issues = {
 			country = {
 				is_vassal = yes
 				overlord = { good_evil_alignment = evil_alignment }
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				country = { has_country_flag = attempting_to_good }
+				country = { has_country_flag = attempting_to_neutral }
 			}
 		}
 	}

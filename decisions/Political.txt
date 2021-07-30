@@ -142,6 +142,119 @@ political_decisions = {
 			factor = 0
 		}
 	}
+	
+	convert_to_good = {
+		potential = {
+			OR = {
+				good_alignment_fake = 30
+				has_country_flag = attempt_to_good
+			}
+		}
+		
+		allow = {
+			good_alignment_fake = 30
+		}
+		
+		effect = {
+			political_reform = good_alignment
+			add_accepted_culture = good_culture
+			
+			random_owned = {
+				limit = {
+					owner = { accepted_culture = neutral_culture }
+				}
+				remove_accepted_culture = neutral_culture
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { accepted_culture = evil_culture }
+				}
+				remove_accepted_culture = evil_culture
+			}
+			
+			clr_country_flag = attempt_to_good
+			clr_country_flag = attempt_to_neutral
+			clr_country_flag = attempt_to_evil
+			
+			any_pop = { dominant_issue = { value = good_alignment_fake factor = 0.1 }
+		}
+	}
+	
+	convert_to_neutral = {
+		potential = {
+			OR = {
+				neutral_alignment_fake = 30
+				has_country_flag = attempt_to_neutral
+			}
+		}
+		
+		allow = {
+			neutral_alignment_fake = 30
+		}
+		
+		effect = {
+			political_reform = neutral_alignment
+			add_accepted_culture = neutral_culture
+			
+			random_owned = {
+				limit = {
+					owner = { accepted_culture = good_culture }
+				}
+				remove_accepted_culture = good_culture
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { accepted_culture = evil_culture }
+				}
+				remove_accepted_culture = evil_culture
+			}
+			
+			clr_country_flag = attempt_to_good
+			clr_country_flag = attempt_to_neutral
+			clr_country_flag = attempt_to_evil
+			
+			any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 0.1 }
+		}
+	}
+	
+	convert_to_evil = {
+		potential = {
+			OR = {
+				evil_alignment_fake = 30
+				has_country_flag = attempt_to_evil
+			}
+		}
+		
+		allow = {
+			evil_alignment_fake = 30
+		}
+		
+		effect = {
+			political_reform = evil_alignment
+			add_accepted_culture = evil_culture
+			
+			random_owned = {
+				limit = {
+					owner = { accepted_culture = good_culture }
+				}
+				remove_accepted_culture = good_culture
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { accepted_culture = neutral_culture }
+				}
+				remove_accepted_culture = neutral_culture
+			}
+			
+			clr_country_flag = attempt_to_good
+			clr_country_flag = attempt_to_neutral
+			clr_country_flag = attempt_to_evil
+			
+			any_pop = { dominant_issue = { value = evil_alignment_fake factor = 0.1 }
+	}
 }
 
 # Government Reform
@@ -184,7 +297,9 @@ political_decisions = {
 			vote_franschise = none_voting
 		}
 		
-		allow = { }
+		allow = {
+			population_1 = 1
+		}
 		
 		effect = {
 			set_country_flag = attempting_to_democratic
@@ -211,6 +326,60 @@ political_decisions = {
 					factor = 0.25
 				}
 			}
+		}
+	}
+	
+	attempt_to_good = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_government_decisions
+			NOT = { has_country_flag = attempting_to_good }
+			NOT = { has_country_flag = attempting_to_neutral }
+			NOT = { has_country_flag = attempting_to_evil }
+			NOT = { good_evil_alignment = good_alignment }
+		}
+		
+		allow = { }
+		
+		effect = {
+			set_country_flag = attempting_to_good
+			dominant_issue = { value = good_alignment_fake factor = 0.1 }
+		}
+	}
+	
+	attempt_to_neutral = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_government_decisions
+			NOT = { has_country_flag = attempting_to_good }
+			NOT = { has_country_flag = attempting_to_neutral }
+			NOT = { has_country_flag = attempting_to_evil }
+			NOT = { good_evil_alignment = neutral_alignment }
+		}
+		
+		allow = { }
+		
+		effect = {
+			set_country_flag = attempting_to_neutral
+			dominant_issue = { value = neutral_alignment_fake factor = 0.1 }
+		}
+	}
+	
+	attempt_to_evil = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_government_decisions
+			NOT = { has_country_flag = attempting_to_good }
+			NOT = { has_country_flag = attempting_to_neutral }
+			NOT = { has_country_flag = attempting_to_evil }
+			NOT = { good_evil_alignment = evil_alignment }
+		}
+		
+		allow = { }
+		
+		effect = {
+			set_country_flag = attempting_to_evil
+			dominant_issue = { value = evil_alignment_fake factor = 0.1 }
 		}
 	}
 }
