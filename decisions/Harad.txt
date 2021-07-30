@@ -636,35 +636,50 @@ political_decisions = {
 						NOT = { exists = HRN }
 						HRN = { 
 							exists = yes
-							good_evil_alignment = evil_alignment
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
 						}
 					}
 					OR = {
 						NOT = { exists = HRU }
 						HRU = { 
 							exists = yes
-							good_evil_alignment = evil_alignment
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
 						}
 					}
 					OR = {
 						NOT = { exists = PEZ }
 						PEZ = { 
 							exists = yes
-							good_evil_alignment = evil_alignment
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
 						}
 					}
 					OR = {
 						NOT = { exists = LUR }
 						LUR = { 
 							exists = yes
-							good_evil_alignment = evil_alignment
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
 						}
 					}
 					OR = {
 						NOT = { exists = ARY }
 						ARY = { 
 							exists = yes
-							good_evil_alignment = evil_alignment
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
 						}
 					}
 				}
@@ -674,35 +689,50 @@ political_decisions = {
 						NOT = { exists = HRN }
 						HRN = { 
 							exists = yes
-							good_evil_alignment = good_alignment
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
 						}
 					}
 					OR = {
 						NOT = { exists = HRU }
 						HRU = { 
 							exists = yes
-							good_evil_alignment = good_alignment
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
 						}
 					}
 					OR = {
 						NOT = { exists = PEZ }
 						PEZ = { 
 							exists = yes
-							good_evil_alignment = good_alignment
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
 						}
 					}
 					OR = {
 						NOT = { exists = LUR }
 						LUR = { 
 							exists = yes
-							good_evil_alignment = good_alignment
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
 						}
 					}
 					OR = {
 						NOT = { exists = ARY }
 						ARY = { 
 							exists = yes
-							good_evil_alignment = good_alignment
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
 						}
 					}
 				}

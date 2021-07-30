@@ -1,7 +1,7 @@
-# Do not change tags in here without changing every other reference to them.
-# If adding new forms of governemnts, make sure they are uniquely named.
-
-# Will probably be removed eventually
+#######################
+##### DEMOCRACIES #####
+#######################
+# Mayor
 democracy = {
 	servants = yes
 	high_nobility = yes
@@ -16,105 +16,8 @@ democracy = {
 	flagType = republic
 }
 
-monarchy = {
-	high_nobility = yes
-	low_nobility = yes
-	burgher = yes
-	fundamentalist = yes
-	loremaster = yes
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
-
-# Special monarchy for Gondor when a Steward is in power
-stewardship = {
-	high_nobility = yes
-	low_nobility = yes
-	burgher = yes
-	fundamentalist = yes
-	loremaster = yes
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
-
-# Special monarchy for Dol Amroth when a Prince is in power
-principality = {
-	high_nobility = yes
-	low_nobility = yes
-	burgher = yes
-	fundamentalist = yes
-	loremaster = yes
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
-
-# Special monarchy for Fiefs of Gondor
-fiefdom = {
-	high_nobility = yes
-	low_nobility = yes
-	burgher = yes
-	fundamentalist = yes
-	loremaster = yes
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
-
-# Special government for realms lead by Sauron
-sauron_dictatorship = {
-	servants = yes
-	
-	election = no
-	appoint_ruling_party = yes
-}
-
-# Special government for realms lead by a Nazgul
-nazgul_dictatorship = {
-	servants = yes
-	
-	election = no
-	appoint_ruling_party = yes
-}
-
-# Special government for realms lead by a Wizard
-istari_kingdom = {
-	high_nobility = yes
-	low_nobility = yes
-	burgher = yes
-	fundamentalist = yes
-	loremaster = yes
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
-
-goblin_tribe = {
-	servants = yes
-	
-	election = no
-	appoint_ruling_party = yes
-}
-
-man_tribe = {
-	high_nobility = yes
-	low_nobility = yes
-	burgher = yes
-	fundamentalist = yes
-	loremaster = yes
-	
-	election = no
-	appoint_ruling_party = yes
-}
-
 # Special democracy for Ents of Fangorn
+# Lord
 ent_realm = {
 	high_nobility = yes
 	low_nobility = yes
@@ -128,7 +31,63 @@ ent_realm = {
 	flagType = republic
 }
 
+######################
+##### MONARCHIES #####
+######################
+# King
+monarchy = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+
+# Steward
+stewardship = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+
+# Prince
+principality = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+
+# Lord
+fiefdom = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+
 # Special monarchy for Lothlorien
+# Lord and Lady
 galadhrim_monarchy = {
 	high_nobility = yes
 	low_nobility = yes
@@ -141,7 +100,7 @@ galadhrim_monarchy = {
 	flagType = monarchy
 }
 
-# Special monarchy for Imladris
+# Lord
 imladris_monarchy = {
 	high_nobility = yes
 	low_nobility = yes
@@ -152,4 +111,63 @@ imladris_monarchy = {
 	election = no
 	appoint_ruling_party = yes
 	flagType = monarchy
+}
+
+#########################
+##### DICTATORSHIPS #####
+#########################
+# Not necessarily evil
+
+# Special government for realms lead by Sauron
+# Dark Lord
+sauron_dictatorship = {
+	servants = yes
+	
+	election = no
+	appoint_ruling_party = yes
+}
+
+# Special government for realms lead by a Nazgul
+# Lord
+nazgul_dictatorship = {
+	servants = yes
+	
+	election = no
+	appoint_ruling_party = yes
+}
+
+# Special government for realms lead by a Wizard
+# Lord
+istari_kingdom = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+}
+
+##################
+##### TRIBAL #####
+##################
+# Chieftain
+goblin_tribe = {
+	servants = yes
+	
+	election = no
+	appoint_ruling_party = yes
+}
+
+# Chief
+man_tribe = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
 }
