@@ -21,6 +21,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Slave craftsmen
  - Cbs
  - governments organization/flipping
+ - internal influence of good/neutral/evil
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
@@ -35,7 +36,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Make countries end their wars prior to the WoTR starting
  - WoTR ending in 5 years if it has not already ended
  - Return to South Gondor
- - Good/Evil influences (outside and internal)
  - QoL decisions (auto-building of roads, castles, naval bases)
 
 ## Others 

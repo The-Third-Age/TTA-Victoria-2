@@ -7,6 +7,11 @@
 
 # Starting Decision
 political_decisions = {
+	test = {
+		potential = { ai = no }
+		allow = { good_evil_alignment = good_alignment good_evil_alignment = neutral_alignment good_evil_alignment = evil_alignment evil_alignment = 10 }
+		effect = { }
+	}
 	FOR_start_decision = {
 		potential = {
 			always = no
@@ -58,16 +63,22 @@ political_decisions = {
 						}
 						is_culture_group = rohirrim
 						is_culture_group = lossoth
-						is_culture_group = breelander
-						is_culture_group = shirelings
 					}
 				}
-				set_country_flag = good_realm
-				add_country_modifier = {
-					name = good_realm
-					duration = -1
-				}
+				political_reform = good_alignment
 				add_accepted_culture = good_culture
+			}
+			
+			# For Neutral Realms
+			any_country = {
+				limit = {
+					OR = {
+						is_culture_group = breelander
+						is_culture_group = shire_hobbit
+					}
+				}
+				add_accepted_culture = neutral_culture
+				political_reform = neutral_alignment
 			}
 			
 			# For Evil Realms
@@ -88,12 +99,8 @@ political_decisions = {
 						is_culture_group = angmarrim
 					}	
 				}
-				set_country_flag = evil_realm
-				add_country_modifier = {
-					name = evil_realm
-					duration = -1
-				}
 				add_accepted_culture = evil_culture
+				political_reform = evil_alignment
 			}
 			
 			# Literacy boost for Loremasters
@@ -253,59 +260,28 @@ political_decisions = {
 		potential = {
 			tag = FOR
 			OR = {
-				# Has evil_realm modifier or does not have good_realm modifier as good_realm
 				any_neighbor_country = {
-					has_country_flag = good_realm
-					NOT = { has_country_flag = evil_realm }
-					OR = {
-						NOT = { has_country_modifier = good_realm }
-						has_country_modifier = evil_realm
-					}
-				}
-				# Has evil_realm flag as good_realm
-				any_neighbor_country = {
-					has_country_flag = good_realm
-					has_country_modifier = good_realm
-					has_country_flag = evil_realm
-					NOT = { has_country_modifier = evil_realm }
-				}
-				# Has good_realm_modifier or does not have evil_realm modifier as evil_realm
-				any_neighbor_country = {
-					has_country_flag = evil_realm
-					NOT = { has_country_flag = good_realm }
-					OR = {
-						NOT = { has_country_modifier = evil_realm }
-						has_country_modifier = good_realm
-					}
-				}
-				# Has good_realm as evil_realm
-				any_neighbor_country = {
-					has_country_flag = evil_realm
-					has_country_modifier = evil_realm
-					has_country_flag = good_realm
-					NOT = { has_country_modifier = good_realm }
-				}
-				# Is both evil_realm and good_realm
-				any_neighbor_country = {
-					has_country_flag = good_realm
-					has_country_modifier = good_realm
-					has_country_flag = evil_realm
-					has_country_flag = good_realm
-				}
-				# Has good_realm but not good_culture or has evil_culture
-				any_neighbor_country = {
-					has_country_flag = good_realm
+					good_evil_alignment = good_alignment
 					OR = {
 						NOT = { accepted_culture = good_culture }
+						accepted_culture = neutral_culture
 						accepted_culture = evil_culture
 					}
 				}
-				# Has evil_realm but not evil_culture or has good_culture
 				any_neighbor_country = {
-					has_country_flag = evil_realm
+					good_evil_alignment = neutral_alignment
 					OR = {
-						NOT = { accepted_culture = evil_culture }
 						accepted_culture = good_culture
+						NOT = { accepted_culture = neutral_culture }
+						accepted_culture = evil_culture
+					}
+				}
+				any_neighbor_country = {
+					good_evil_alignment = evil_culture
+					OR = {
+						accepted_culture = good_culture
+						accepted_culture = neutral_culture
+						NOT = { accepted_culture = evil_culture }
 					}
 				}
 			}
@@ -316,82 +292,42 @@ political_decisions = {
 		effect = {
 			any_neighbor_country = {
 				limit = {
-					has_country_flag = good_realm
-					NOT = { has_country_flag = evil_realm }
-					OR = {
-						NOT = { has_country_modifier = good_realm }
-						has_country_modifier = evil_realm
-					}
-				}
-				add_country_modifier = {
-					name = good_realm
-					duration = -1
-				}
-				remove_country_modifier = evil_realm
-			}
-			any_neighbor_country = {
-				limit = {
-					has_country_flag = good_realm
-					has_country_modifier = good_realm
-					has_country_flag = evil_realm
-					NOT = { has_country_modifier = evil_realm }
-				}
-				clr_country_flag = evil_realm
-			}
-			any_neighbor_country = {
-				limit = {
-					has_country_flag = evil_realm
-					NOT = { has_country_flag = good_realm }
-					OR = {
-						NOT = { has_country_modifier = evil_realm }
-						has_country_modifier = good_realm
-					}
-				}
-				add_country_modifier = {
-					name = evil_realm
-					duration = -1
-				}
-				remove_country_modifier = good_realm
-			}
-			any_neighbor_country = {
-				limit = {
-					has_country_flag = evil_realm
-					has_country_modifier = evil_realm
-					has_country_flag = good_realm
-					NOT = { has_country_modifier = good_realm }
-				}
-				clr_country_flag = good_realm
-			}
-			any_neighbor_country = {
-				limit = {
-					has_country_flag = good_realm
-					has_country_modifier = good_realm
-					has_country_flag = evil_realm
-					has_country_flag = good_realm
-				}
-				country_event = 99000
-			}
-			any_neighbor_country = {
-				limit = {
-					has_country_flag = good_realm
+					good_evil_alignment = good_alignment
 					OR = {
 						NOT = { accepted_culture = good_culture }
+						accepted_culture = neutral_culture
 						accepted_culture = evil_culture
 					}
 				}
 				add_accepted_culture = good_culture
+				remove_accepted_culture = neutral_culture
 				remove_accepted_culture = evil_culture
 			}
 			any_neighbor_country = {
 				limit = {
-					has_country_flag = evil_realm
+					good_evil_alignment = neutral_alignment
 					OR = {
-						NOT = { accepted_culture = evil_culture }
 						accepted_culture = good_culture
+						NOT = { accepted_culture = neutral_culture }
+						accepted_culture = evil_culture
 					}
 				}
-				add_accepted_culture = evil_culture
 				remove_accepted_culture = good_culture
+				add_accepted_culture = neutral_culture
+				remove_accepted_culture = evil_culture
+			}
+			any_neighbor_country = {
+				limit = {
+					good_evil_alignment = evil_alignment
+					OR = {
+						accepted_culture = good_culture
+						accepted_culture = neutral_culture
+						NOT = { accepted_culture = evil_culture }
+					}
+				}
+				remove_accepted_culture = good_culture
+				remove_accepted_culture = neutral_culture
+				add_accepted_culture = evil_culture
 			}
 		}
 	}
@@ -404,12 +340,12 @@ political_decisions = {
 				part_of_sphere = yes
 				OR = {
 					AND = {
-						has_country_flag = good_realm
-						sphere_owner = { has_country_flag = evil_realm }
+						good_evil_alignment = good_alignment
+						sphere_owner = { good_evil_alignment = evil_alignment }
 					}
 					AND = {
-						has_country_flag = evil_realm
-						sphere_owner = { has_country_flag = good_realm }
+						good_evil_alignment = evil_alignment
+						sphere_owner = { good_evil_alignment = good_alignment }
 					}
 				}
 			}
@@ -424,12 +360,12 @@ political_decisions = {
 					part_of_sphere = yes
 					OR = {
 						AND = {
-							has_country_flag = good_realm
-							sphere_owner = { has_country_flag = evil_realm }
+							good_evil_alignment = good_alignment
+							sphere_owner = { good_evil_alignment = evil_alignment }
 						}
 						AND = {
-							has_country_flag = evil_realm
-							sphere_owner = { has_country_flag = good_realm }
+							good_evil_alignment = evil_alignment
+							sphere_owner = { good_evil_alignment = good_alignment }
 						}
 					}
 				}

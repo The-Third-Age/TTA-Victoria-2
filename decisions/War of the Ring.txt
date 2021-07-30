@@ -24,7 +24,7 @@ political_decisions = {
 				}
 			}
 			year = 3000
-			has_country_flag = good_realm
+			good_evil_alignment = good_alignment
 			NOT = { has_global_flag = the_council_of_elrond }	
 		}
 		
@@ -59,7 +59,7 @@ political_decisions = {
 			set_country_flag = the_council_of_elrond_host
 			any_country = {
 				limit = {
-					has_country_flag = good_realm
+					good_evil_alignment = good_alignment
 					NOT = { tag = IML }
 					is_vassal = no
 					OR = {
@@ -112,17 +112,17 @@ political_decisions = {
 									ai = no
 								}
 							}
-							has_country_flag = good_realm
+							good_evil_alignment = good_alignment
 						}
 						AND = {
-							NOT = { GON = { has_country_flag = good_realm } }
-							has_country_flag = good_realm
+							NOT = { GON = { good_evil_alignment = good_alignment } }
+							good_evil_alignment = good_alignment
 							is_greater_power = yes
 						}
 						AND = {
-							NOT = { GON = { has_country_flag = good_realm } }
-							NOT = { any_greater_power = { has_country_flag = good_realm } }
-							has_country_flag = good_realm
+							NOT = { GON = { good_evil_alignment = good_alignment } }
+							NOT = { any_greater_power = { good_evil_alignment = good_alignment } }
+							good_evil_alignment = good_alignment
 						}
 					}
 				}
@@ -142,17 +142,17 @@ political_decisions = {
 									ai = no
 								}
 							}
-							has_country_flag = evil_realm
+							good_evil_alignment = evil_alignment
 						}
 						AND = {
-							NOT = { MOR = { has_country_flag = evil_realm } }
-							has_country_flag = evil_realm
+							NOT = { MOR = { good_evil_alignment = evil_alignment } }
+							good_evil_alignment = evil_alignment
 							is_greater_power = yes
 						}
 						AND = {
-							NOT = { MOR = { has_country_flag = evil_realm } }
-							NOT = { any_greater_power = { has_country_flag = evil_realm } }
-							has_country_flag = evil_realm
+							NOT = { MOR = { good_evil_alignment = evil_alignment } }
+							NOT = { any_greater_power = { good_evil_alignment = evil_alignment } }
+							good_evil_alignment = evil_alignment
 						}
 					}
 				}
@@ -181,7 +181,7 @@ political_decisions = {
 			any_neighbor_country = {
 				limit = {
 					war = no
-					has_country_flag = good_realm
+					good_evil_alignment = good_alignment
 				}
 				country_event = 50308
 			}
@@ -189,7 +189,7 @@ political_decisions = {
 			any_neighbor_country = {
 				limit = {
 					war = no
-					has_country_flag = evil_realm
+					good_evil_alignment = evil_alignment
 				}
 				country_event = 50309
 			}

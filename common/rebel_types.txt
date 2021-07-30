@@ -435,7 +435,7 @@ democratic_rebels = {
 		}
 		modifier = {
 			factor = 0.75
-			country = { has_country_flag = evil_realm }
+			country = { good_evil_alignment = evil_alignment }
 		}
 		modifier = {
 			factor = 1.5
@@ -1082,10 +1082,9 @@ good_rebels = {
 			factor = 0
 			OR = {
 				pop_majority_ideology = servants
-				country = { has_country_flag = good_realm }
+				country = { good_evil_alignment = good_alignment }
 			}
 		}
-
 		modifier = {
 			factor = 1.1
 			consciousness = 5
@@ -1099,15 +1098,51 @@ good_rebels = {
 		}
 		modifier = {
 			factor = 1.25
-			country = {
-				any_neighbor_country = { has_country_flag = good_realm }
-			}
+			country = { any_neighbor_country = { good_evil_alignment = good_alignment } }
 		}
 		modifier = {
 			factor = 1.1
-			location = {
-				controller = { has_country_flag = good_realm }
-			}
+			location = { controller = { good_evil_alignment = good_alignment } }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 10 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 20 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 40 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 50 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 60 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { good_alignment = 99 }
 		}
 	}
  
@@ -1233,10 +1268,9 @@ evil_rebels = {
 			factor = 0
 			OR = {
 				pop_majority_ideology = servants
-				country = { has_country_flag = evil_realm }
+				country = { good_evil_alignment = evil_alignment }
 			}
 		}
-
 		modifier = {
 			factor = 1.1
 			consciousness = 5
@@ -1250,15 +1284,51 @@ evil_rebels = {
 		}
 		modifier = {
 			factor = 1.25
-			country = {
-				any_neighbor_country = { has_country_flag = evil_realm }
-			}
+			country = { any_neighbor_country = { good_evil_alignment = evil_alignment } }
 		}
 		modifier = {
 			factor = 1.1
-			location = {
-				controller = { has_country_flag = evil_realm }
-			}
+			location = { controller = { good_evil_alignment = evil_alignment } }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 10 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 20 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 40 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 50 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 60 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { evil_alignment = 99 }
 		}
 	}
  
@@ -1307,6 +1377,192 @@ evil_rebels = {
 	}
 	demands_enforced_effect = {
 		country_event = 3004
+        prestige_factor = -0.1
+        war_exhaustion = 50
+	}
+}
+
+###################################
+# Neutral Rebels
+###################################
+neutral_rebels = {
+	icon = 2
+	
+	area = nation 				  # Stays within the nation
+	break_alliance_on_win = no
+	
+	# <this is the governement in the country> = <this is what the rebels want>
+	government = {
+		democracy = democracy
+		monarchy = monarchy
+		stewardship = stewardship
+		principality = principality
+		fiefdom = fiefdom
+		sauron_dictatorship = sauron_dictatorship
+		nazgul_dictatorship = nazgul_dictatorship
+		istari_kingdom = istari_kingdom
+		goblin_tribe = goblin_tribe
+		man_tribe = man_tribe
+		ent_realm = ent_realm
+		galadhrim_monarchy = galadhrim_monarchy
+		imladris_monarchy = imladris_monarchy
+	}
+	
+	defection = none                    # Will defect to the "best" alternative.
+    independence = none                # Does not strive for independence
+    defect_delay = 18
+	
+	allow_all_cultures = yes
+	allow_all_religions = yes
+	allow_all_ideologies = yes
+	
+	resilient = yes                    # Does not disband on retreat
+    reinforcing = yes                # Receives reinforcements
+    general = yes                    # Uses generals
+    smart = yes                    # Assaults forts, tactically withdraws from battle, etc.
+    unit_transfer = no                # Units remain after enforcing demands.
+
+    occupation_mult = 1.0            # The amount of strength this rebel gains from taking provinces
+
+	# triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
+    will_rise = {
+        factor = 1
+
+        modifier = {
+            war = yes
+            factor = 0.8
+        }
+        modifier = {
+            war_exhaustion = 40
+            factor = 0.95
+        }
+        modifier = {
+            war_exhaustion = 60
+            factor = 0.95
+        }
+        modifier = {
+            war_exhaustion = 80
+            factor = 0.95
+        }
+    }
+	
+	# The rebel type with the highest modifier for this pop gets picked
+	spawn_chance = {
+		factor = 0.5
+		
+		modifier = {
+			factor = 0
+			OR = {
+				pop_majority_ideology = servants
+				country = { good_evil_alignment = neutral_alignment }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			consciousness = 5
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_primary_culture = yes
+				is_accepted_culture = yes
+			}
+		}
+		modifier = {
+			factor = 1.25
+			country = { any_neighbor_country = { good_evil_alignment = neutral_alignment } }
+		}
+		modifier = {
+			factor = 1.1
+			location = { controller = { good_evil_alignment = neutral_alignment } }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 10 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 20 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 40 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 50 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 60 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 70 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 80 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 90 }
+		}
+		modifier = {
+			factor = 1.1
+			country = { neutral_alignment = 99 }
+		}
+	}
+ 
+ 	#This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 4
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_militancy = 8
+		}
+		modifier = {
+			factor = 2.0
+			is_capital = yes
+		}
+	}
+	
+ 	# Province Scope
+ 	#siege_won_trigger = {
+ 	#}
+	
+	#siege_won_effect = {
+	#}
+	
+	# Country scope
+	demands_enforced_trigger = {
+		capital_scope = {
+            controlled_by = REB
+            province_control_days = 90
+        }
+	}
+	demands_enforced_effect = {
+		country_event = 3005
         prestige_factor = -0.1
         war_exhaustion = 50
 	}

@@ -173,6 +173,19 @@ party_issues = {
 # Political reforms.
 ##########################################
 political_reforms = {
+	good_evil_alignment = {
+		good_alignment = {
+			allow = { always = no }
+		}
+		
+		neutral_alignment = {
+			allow = { always = no }
+		}
+		
+		evil_alignment = {
+			allow = { always = no }
+		}
+	}
 
 	vote_franschise = {
 		next_step_only = yes
@@ -397,16 +410,16 @@ political_reforms = {
 		next_step_only = yes
 		yes_slavery = {
 			rules = { slavery_allowed = yes }
-			allow = { has_country_flag = evil_realm }
+			allow = { good_evil_alignment = evil_alignment }
 		}
 		non_accepted_slavery = {
 			rules = { slavery_allowed = yes }
-			allow = { has_country_flag = evil_realm }
+			allow = { good_evil_alignment = evil_alignment }
 		}
 		no_slavery = {
 			rules = { slavery_allowed = no }
 			global_immigrant_attract = 0.01
-			allow = { has_country_flag = good_realm }
+			allow = { good_evil_alignment = good_alignment }
 		}
 	}
 	penal_reform = {

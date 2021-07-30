@@ -44,12 +44,12 @@ political_decisions = {
 			part_of_sphere = yes
 			OR = {
 				AND = {
-					has_country_flag = good_realm
-					sphere_owner = { has_country_flag = evil_realm }
+					good_evil_alignment = good_alignment
+					sphere_owner = { good_evil_alignment = evil_alignment }
 				}
 				AND = {
-					has_country_flag = evil_realm
-					sphere_owner = { has_country_flag = good_realm }
+					good_evil_alignment = evil_alignment
+					sphere_owner = { good_evil_alignment = good_alignment }
 				}
 			}
 		}
@@ -66,12 +66,16 @@ political_decisions = {
 			part_of_sphere = yes
 			OR = {
 				AND = {
-					has_country_flag = good_realm
-					sphere_owner = { has_country_flag = evil_realm }
+					good_evil_alignment = good_alignment
+					NOT = { sphere_owner = { good_evil_alignment = good_alignment } }
 				}
 				AND = {
-					has_country_flag = evil_realm
-					sphere_owner = { has_country_flag = good_realm }
+					good_evil_alignment = evil_alignment
+					NOT = { sphere_owner = { good_evil_alignment = evil_alignment } }
+				}
+				AND = {
+					good_evil_alignment = neutral_alignment
+					NOT = { sphere_owner = { good_evil_alignment = neutral_alignment } }
 				}
 			}
 		}
@@ -81,29 +85,37 @@ political_decisions = {
 		effect = {
 			random_owned = {
 				limit = {
-					owner = { sphere_owner = { has_country_flag = evil_realm } }
+					owner = { sphere_owner = { good_evil_alignment = evil_alignment } }
 				}
 				owner = {
-					remove_country_modifier = good_realm
-					clr_country_flag = good_realm
 					remove_accepted_culture = good_culture
-					add_country_modifier = { name = evil_realm duration = -1 }
-					set_country_flag = evil_realm
+					remove_accepted_culture = neutral_culture
+					political_reform = evil_alignment
 					add_accepted_culture = evil_culture
 				}
 			}
 			
 			random_owned = {
 				limit = {
-					owner = { sphere_owner = { has_country_flag = good_realm } }
+					owner = { sphere_owner = { good_evil_alignment = good_alignment } }
 				}
 				owner = {
-					remove_country_modifier = evil_realm
-					clr_country_flag = evil_realm
+					remove_accepted_culture = neutral_culture
 					remove_accepted_culture = evil_culture
-					add_country_modifier = { name = good_realm duration = -1 }
-					set_country_flag = good_realm
+					political_reform = good_alignment
 					add_accepted_culture = good_culture
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { sphere_owner = { good_evil_alignment = neutral_alignment } }
+				}
+				owner = {
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = evil_culture
+					political_reform = neutral_alignment
+					add_accepted_culture = neutral_culture
 				}
 			}
 		}

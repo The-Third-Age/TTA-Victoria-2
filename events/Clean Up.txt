@@ -104,12 +104,12 @@ country_event = {
 						NOT = { vassal_of = FROM }
 					}
 					AND = {
-						has_country_flag = good_realm
-						NOT = { FROM = { has_country_flag = good_realm } }
+						good_evil_alignment = good_alignment
+						NOT = { FROM = { good_evil_alignment = good_alignment } }
 					}
 					AND = {
-						has_country_flag = evil_realm
-						NOT = { has_country_flag = evil_realm }
+						good_evil_alignment = evil_alignment
+						NOT = { good_evil_alignment = evil_alignment }
 					}
 					is_greater_power = yes
 				}
@@ -167,12 +167,12 @@ country_event = {
 						NOT = { vassal_of = FROM }
 					}
 					AND = {
-						has_country_flag = good_realm
-						NOT = { FROM = { has_country_flag = good_realm } }
+						good_evil_alignment = good_alignment
+						NOT = { FROM = { good_evil_alignment = good_alignment } }
 					}
 					AND = {
-						has_country_flag = evil_realm
-						NOT = { has_country_flag = evil_realm }
+						good_evil_alignment = evil_alignment
+						NOT = { good_evil_alignment = evil_alignment }
 					}
 					is_greater_power = yes
 				}
@@ -444,12 +444,12 @@ country_event = {
 						NOT = { vassal_of = FROM }
 					}
 					AND = {
-						has_country_flag = good_realm
-						NOT = { FROM = { has_country_flag = good_realm } }
+						good_evil_alignment = good_alignment
+						NOT = { FROM = { good_evil_alignment = good_alignment } }
 					}
 					AND = {
-						has_country_flag = evil_realm
-						NOT = { has_country_flag = evil_realm }
+						good_evil_alignment = evil_alignment
+						NOT = { good_evil_alignment = evil_alignment }
 					}
 					is_greater_power = yes
 				}

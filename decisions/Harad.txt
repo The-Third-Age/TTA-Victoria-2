@@ -631,78 +631,78 @@ political_decisions = {
 			}
 			OR = {
 				AND = {
-					has_country_flag = evil_realm
+					good_evil_alignment = evil_alignment
 					OR = {
 						NOT = { exists = HRN }
 						HRN = { 
 							exists = yes
-							has_country_flag = evil_realm
+							good_evil_alignment = evil_alignment
 						}
 					}
 					OR = {
 						NOT = { exists = HRU }
 						HRU = { 
 							exists = yes
-							has_country_flag = evil_realm
+							good_evil_alignment = evil_alignment
 						}
 					}
 					OR = {
 						NOT = { exists = PEZ }
 						PEZ = { 
 							exists = yes
-							has_country_flag = evil_realm
+							good_evil_alignment = evil_alignment
 						}
 					}
 					OR = {
 						NOT = { exists = LUR }
 						LUR = { 
 							exists = yes
-							has_country_flag = evil_realm
+							good_evil_alignment = evil_alignment
 						}
 					}
 					OR = {
 						NOT = { exists = ARY }
 						ARY = { 
 							exists = yes
-							has_country_flag = evil_realm
+							good_evil_alignment = evil_alignment
 						}
 					}
 				}
 				AND = {
-					has_country_flag = good_realm
+					good_evil_alignment = good_alignment
 					OR = {
 						NOT = { exists = HRN }
 						HRN = { 
 							exists = yes
-							has_country_flag = good_realm
+							good_evil_alignment = good_alignment
 						}
 					}
 					OR = {
 						NOT = { exists = HRU }
 						HRU = { 
 							exists = yes
-							has_country_flag = good_realm
+							good_evil_alignment = good_alignment
 						}
 					}
 					OR = {
 						NOT = { exists = PEZ }
 						PEZ = { 
 							exists = yes
-							has_country_flag = good_realm
+							good_evil_alignment = good_alignment
 						}
 					}
 					OR = {
 						NOT = { exists = LUR }
 						LUR = { 
 							exists = yes
-							has_country_flag = good_realm
+							good_evil_alignment = good_alignment
 						}
 					}
 					OR = {
 						NOT = { exists = ARY }
 						ARY = { 
 							exists = yes
-							has_country_flag = good_realm
+							good_evil_alignment = good_alignment
 						}
 					}
 				}
@@ -737,29 +737,37 @@ political_decisions = {
 			
 			random_owned = {
 				limit = {
-					owner = { has_country_flag = good_realm }
+					owner = { good_evil_alignment = good_alignment }
 				}
 				HAR = {
-					remove_country_modifier = evil_realm
-					clr_country_flag = evil_realm
 					remove_accepted_culture = evil_culture
-					add_country_modifier = { name = good_realm duration = -1 }
-					set_country_flag = good_realm
+					remove_accepted_culture = neutral_culture
+					political_reform = good_alignment
 					add_accepted_culture = good_culture
 				}
 			}
 			
 			random_owned = {
 				limit = {
-					owner = { has_country_flag = evil_realm }
+					owner = { good_evil_alignment = evil_alignment }
 				}
 				HAR = {
-					remove_country_modifier = good_realm
-					clr_country_flag = good_realm
 					remove_accepted_culture = good_culture
-					add_country_modifier = { name = evil_realm duration = -1 }
-					set_country_flag = evil_realm
+					remove_accepted_culture = neutral_culture
+					political_reform = evil_alignment
 					add_accepted_culture = evil_culture
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { good_evil_alignment = neutral_alignment }
+				}
+				HAR = {
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = evil_culture
+					political_reform = neutral_alignment
+					add_accepted_culture = neutral_culture
 				}
 			}
 		}

@@ -31,6 +31,75 @@ ideologies = {
 	}
 }
 issues = {
+	#####################
+	##### ALIGNMENT #####
+	#####################
+	good_alignment = {
+		factor = 1
+		modifier = {
+			factor = 2
+			country = { has_country_flag = outside_good_influences }
+		}
+		modifier = {
+			factor = 1.25
+			country = { any_neighbor_country = { good_evil_alignment = good_alignment } }
+		}
+		modifier = {
+			factor = 3
+			country = { has_country_flag = attempting_to_good }
+		}
+		modifier = {
+			factor = 2
+			country = {
+				is_vassal = yes
+				overlord = { good_evil_alignment = good_alignment }
+			}
+		}
+	}
+	neutral_alignment = {
+		factor = 1
+		modifier = {
+			factor = 2
+			country = { has_country_flag = outside_neutral_influences }
+		}
+		modifier = {
+			factor = 1.25
+			country = { any_neighbor_country = { has_country_flag = neutral_realm } }
+		}
+		modifier = {
+			factor = 3
+			country = { has_country_flag = attempting_to_neutral }
+		}
+		modifier = {
+			factor = 2
+			country = {
+				is_vassal = yes
+				overlord = { has_country_flag = neutral_realm }
+			}
+		}
+	}
+	evil_alignment = {
+		factor = 1
+		modifier = {
+			factor = 2
+			country = { has_country_flag = outside_evil_influences }
+		}
+		modifier = {
+			factor = 1.25
+			country = { any_neighbor_country = { good_evil_alignment = evil_alignment } }
+		}
+		modifier = {
+			factor = 3
+			country = { has_country_flag = attempting_to_evil }
+		}
+		modifier = {
+			factor = 2
+			country = {
+				is_vassal = yes
+				overlord = { good_evil_alignment = evil_alignment }
+			}
+		}
+	}
 	regional_autonomy = {
 		factor = 1
 	}
@@ -40,7 +109,7 @@ issues = {
 			factor = 0
 			OR = {
 				NOT = { is_next_reform = no_slavery }
-				country = { has_country_flag = evil_realm }
+				country = { good_evil_alignment = evil_alignment }
 			}
 		}
 	}
