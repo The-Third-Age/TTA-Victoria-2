@@ -24,3 +24,10 @@
  - na_large
  - na_medium
  - na_small
+ 
+## Promotion Flags
+### Soldiers
+ - no_soldier_chosen
+ - unciv_5
+ - unciv_7
+ - unciv_10

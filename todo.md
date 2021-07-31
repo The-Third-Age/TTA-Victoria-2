@@ -17,7 +17,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Great/World Wars?
  - Starting literacy
  - General Spawn events
- - National Foci
  - Slave craftsmen
  - Cbs
  - governments organization/flipping

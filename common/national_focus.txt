@@ -1,37 +1,192 @@
-rail_focus =
+building_focus =
 {
-	encourage_rail = 
-	{
-		railroads = 0.5 #Capitalists 50% more likeley to choose railroads
+	military_goods_focus = {
+		melee_gear = 18.3
+		ranged_gear = 18.3
+		artillery = 18.3
 		icon = 2
+		limit = { 
+			civilized = yes
+		}
+	}
+	shipping_focus =
+	{
+		clipper_convoy = 18.3
+		icon = 3
+		limit = { 
+			civilized = yes
+			state_scope = { any_owned_province = { port = yes } }
+		}
+	}
+	basic_industry_focus = {
+	{
+		steel = 18.3
+		cut_stone = 18.3
+		lumber = 18.3
+		coal = 18.3
+		icon = 4
+		limit = {
+			civilized = yes
+		}
+	}
+	textile_focus = {
+		clothes = 18.3
+		fabric = 18.3
+		icon = 5
+		limit = {
+			civilized = yes
+		}
+	}
+	consumer_goods_focus = {
+		furniture = 18.3
+		liquor = 18.3
+		paper = 18.3
+		glass = 18.3
+		icon = 6
+		limit = {
+			civilized = yes
+		}
 	}
 }
 
-immigration_focus = 
+production_focus = 
 {
-	immigration =
-	{
-		immigrant_attract = 0.2 #increases attactiveness to immigrants by 20 %
-		icon = 3
+	artisan_prod_focus = {
+		local_artisan_output = 0.25
+		pop_militancy_modifier = 0.03
+		limit = { 
+			is_colonial = no
+		}
+		icon = 7
+	}
+	
+	artisan_prod_colony_focus = {
+		local_artisan_output = 0.5
+		pop_militancy_modifier = 0.05
+		limit = { 
+			is_colonial = yes
+		}
+		icon = 8
+	}
+	
+	factory_prod_focus = {
+		local_factory_output = 0.25
+		pop_militancy_modifier = 0.03
+		limit = { 
+			is_colonial = no
+			civilized = yes
+		}
+		icon = 9
+	}
+	
+	rgo_prod_focus = {
+		local_RGO_output = 0.25
+		pop_militancy_modifier = 0.03
+		icon = 10
+		limit = { 
+			is_colonial = no
+		}
+	}
+	
+	rgo_prod_colony_focus = {
+		local_RGO_output = 0.25
+		pop_militancy_modifier = 0.05
+		icon = 11
+		limit = { 
+			is_colonial = yes
+		}
+	}
+	
+	ship_focus = {
+		local_repair = 0.25
+		local_ship_build = -0.25
+		icon = 12
+		limit = {
+			state_scope = { any_owned_province = { port = yes } }
+		}
 	}
 }
 
 diplomatic_focus =
 {
-	increase_tension =
-	{
-		icon = 4
+	increase_tension = {
+		icon = 13
 		has_flashpoint = yes
 		own_provinces = no
 
-		flashpoint_tension = 0.15
+		flashpoint_tension = 0.25
 
 		limit = {
 			is_core = THIS
-			THIS = {
-				is_greater_power = no
-			}
 		}
+	}
+	
+	decrease_tension = {
+		icon = 14
+		has_flashpoint = yes
+
+		flashpoint_tension = -0.25
+
+		limit = {
+			is_colonial = no
+			any_core = { NOT = { is_core = THIS } }
+		}
+	}
+}
+
+population_focus =
+{
+	militancy_decrease = {
+		pop_militancy_modifier = -0.1
+		icon = 15
+	}
+	
+	militancy_increase = {
+		pop_militancy_modifier = 0.1
+		icon = 16
+	}
+	
+	consciousness_decrease = {
+		pop_consciousness_modifier = -0.05
+		icon = 17
+	}
+	
+	consciousness_increase = {
+		pop_consciousness_modifier = 0.05
+		icon = 18
+	}
+	
+	assimilation_increase = {
+		assimilation_rate = 0.5
+		limit = { 
+			is_colonial = no
+		}
+		icon = 19
+	}
+	
+	immigration_increase =
+	{
+		immigrant_attract = 0.5
+		icon = 20
+		limit = { 
+			is_colonial = no
+		}
+	}
+	
+	colonial_immigration = 
+	{
+		immigrant_attract = 2
+		icon = 21
+		limit = {
+			is_colonial = yes
+		}
+	}
+	
+	social_programs = {
+		population_growth = 0.001
+		pop_militancy_modifier = -0.01
+		pop_consciousness_modifier = -0.01
+		icon = 22
 	}
 }
 
@@ -39,157 +194,141 @@ promotion_focus =
 {
 	promote_aristocrats =
 	{
-		aristocrats = 0.20 #20% more likeley to become artisans
-		icon = 5
+		aristocrats = 0.20
+		icon = 23
 		outliner_show_as_percent = yes
+		limit = {
+			NOT = { state_scope = { aristocrats = 0.02 } }
+		}
 	}
 
 	promote_artisans =
 	{
-		artisans = 0.20 #20% more likeley to become this type
-		icon = 6
+		artisans = 0.20
+		icon = 24
 		outliner_show_as_percent = yes
 	}
 
 	promote_bureaucrats =
 	{
-		bureaucrats = 0.20 #20% more likeley to become this type
-		icon = 7
+		bureaucrats = 0.20
+		icon = 25
 		outliner_show_as_percent = yes
+		limit = {
+			NOT = { state_scope = { bureaucrats = 0.04 } }
+		}
 	}
 
 	promote_capitalists =
 	{
-		capitalists = 0.20 #20% more likeley to become this type
-		icon = 8
+		capitalists = 0.20
+		icon = 26
 		outliner_show_as_percent = yes
 		limit = { 
 			civilized = yes
+			is_colonial = no
 		}
 
 	}
 	
 	promote_clergymen =
 	{
-		clergymen = 0.20 #20% more likeley to become this type
-		icon = 9
+		clergymen = 0.20
+		icon = 27
 		outliner_show_as_percent = yes
-	}
-
-	promote_clerks =
-	{
-		clerks = 0.20 #20% more likeley to become this type
-		icon = 10
-		outliner_show_as_percent = yes
-		limit = { 
-			civilized = yes
+		limit = {
+			NOT = { state_scope = { clergymen = 0.04 } }
 		}
 	}
 
 	promote_craftsmen =
 	{
-		craftsmen = 0.20 #20% more likeley to become this type
-		icon = 11
+		craftsmen = 0.20
+		icon = 28
 		outliner_show_as_percent = yes
 		limit = { 
 			civilized = yes
+			is_colonial = no
+			NOT = { state_scope = { craftsmen = 0.4 } }
 		}
-	}
-
-	promote_farmers =
-	{
-		farmers = 0.20 #20% more likeley to become this type
-		icon = 12
-		outliner_show_as_percent = yes
 	}
 	
 	promote_labourers =
 	{
-		labourers = 0.20 #20% more likeley to become this type
-		icon = 13
-		outliner_show_as_percent = yes
-	}
-
-	promote_officers =
-	{
-		officers = 0.20 #20% more likeley to become this type
-		icon = 14
+		labourers = 0.20
+		icon = 29
 		outliner_show_as_percent = yes
 	}
 
 	promote_soldiers =
 	{
-		soldiers = 0.20 #20% more likeley to become this type
-		icon = 15
+		soldiers = 0.20
+		icon = 30
 		outliner_show_as_percent = yes
+		limit = {
+			OR = {
+				NOT = { state_scope = { soldiers = 0.05 } }
+				AND = {
+					civilized = no
+					NOT = { state_scope = { soldiers = 0.075 } }
+					has_global_flag = unciv_7
+				}
+				AND = {
+					civilized = no
+					NOT = { state_scope = { soldiers = 0.1 } }
+					has_global_flag = unciv_10
+				}
+			}
+		}
 	}
 }
 
-production_focus =
+party_loyalty_focus =
 {
-	automation_focus =
+	servants_focus =
 	{
-		clipper_convoy = 18.3
-		icon = 16
-		limit = { year = 1880 }
+		ideology = servants
+		loyalty_value = 0.001
+		icon = 31
 	}
-
-	electrical_focus =
+	
+	high_nobility_focus =
 	{
-		clipper_convoy = 18.3
-		icon = 17
-		limit = { year = 1880 }
+		ideology = high_nobility
+		loyalty_value = 0.001
+		icon = 32
 	}
-
-	chemical_focus =
+	
+	low_nobility_focus =
 	{
-		clipper_convoy = 18.3
-		icon = 18
-		limit = { year = 1880 }
+		ideology = low_nobility
+		loyalty_value = 0.001
+		icon = 33
 	}
-
-	shipping_focus =
+	
+	burgher_focus =
 	{
-		clipper_convoy = 18.3
-		icon = 19
-		limit = { 
-			state_scope = { any_owned_province = { port = yes } }
-		}
+		ideology = burgher
+		loyalty_value = 0.001
+		icon = 34
 	}
-
-	textile_focus =
+	
+	loremaster_focus =
 	{
-		clothes = 18.3
-		fabric = 0.3
-		dye = 0.3
-		icon = 20
+		ideology = loremaster
+		loyalty_value = 0.001
+		icon = 35
 	}
-
-	wood_focus = 
+	
+	fundamentalist_focus =
 	{
-		paper = 18.3
-		furniture = 18.3
-		lumber = 18.3
-		icon = 21
+		ideology = fundamentalist
+		loyalty_value = 0.001
+		icon = 36
 	}
-
-	basic_industry_focus =
-	{
-		steel = 18.3
-		icon = 22
-	}
-
-	armaments_focus = 
-	{
-		artillery = 18.3
-		food = 18.3  
-		icon = 23
-	}
-
-	consumer_focus = 
-	{
-		liquor = 18.3
-		glass = 18.3
-		icon = 24
+	
+	ruling_party_focus = {
+		local_ruling_party_support = 0.25
+		icon = 37
 	}
 }
