@@ -30,8 +30,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## Flavor
  - Event 50005, get the syntax for getting the general correct
- - Extension of the Gondor Road
- - (Great) Roads (modifier) able to be destroyed and remade
  - Make countries end their wars prior to the WoTR starting
  - WoTR ending in 5 years if it has not already ended
  - Return to South Gondor

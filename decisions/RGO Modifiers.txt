@@ -1,6 +1,7 @@
 # RGO Modifiers decisions: {
 #	Great Roads 
-#	Road Extensions}
+#	Road Extensions 
+#	Road Destruction }
 
 # Great Roads
 political_decisions = {
@@ -12,10 +13,12 @@ political_decisions = {
 				AND = {
 					owns = 1029
 					NOT = { 1029 = { has_province_modifier = large_road } }
+					NOT = { 1029 = { has_province_modifier = sacked_large_road } }
 				}
 				AND = {
 					owns = 1041
 					NOT = { 1041 = { has_province_modifier = large_road } }
+					NOT = { 1041 = { has_province_modifier = sacked_large_road } }
 				}
 			}
 			infrastructure_tech_3 = 1
@@ -50,38 +53,47 @@ political_decisions = {
 				AND = {
 					owns = 753
 					NOT = { 753 = { has_province_modifier = major_road } }
+					NOT = { 753 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 754
 					NOT = { 754 = { has_province_modifier = major_road } }
+					NOT = { 754 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 735
 					NOT = { 735 = { has_province_modifier = major_road } }
+					NOT = { 735 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 707
 					NOT = { 707 = { has_province_modifier = major_road } }
+					NOT = { 707 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 705
 					NOT = { 705 = { has_province_modifier = major_road } }
+					NOT = { 705 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 702
 					NOT = { 702 = { has_province_modifier = major_road } }
+					NOT = { 702 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 526
 					NOT = { 526 = { has_province_modifier = major_road } }
+					NOT = { 526 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 646
 					NOT = { 646 = { has_province_modifier = major_road } }
+					NOT = { 646 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 848
 					NOT = { 848 = { has_province_modifier = major_road } }
+					NOT = { 848 = { has_province_modifier = sacked_major_road } }
 				}
 			}
 			infrastructure_tech_3 = 1
@@ -123,54 +135,67 @@ political_decisions = {
 				AND = {
 					owns = 794
 					NOT = { 794 = { has_province_modifier = great_road } }
+					NOT = { 794 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 793
 					NOT = { 793 = { has_province_modifier = great_road } }
+					NOT = { 793 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 791
 					NOT = { 791 = { has_province_modifier = great_road } }
+					NOT = { 791 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 786
 					NOT = { 786 = { has_province_modifier = great_road } }
+					NOT = { 786 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 787
 					NOT = { 787 = { has_province_modifier = great_road } }
+					NOT = { 787 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 2
 					NOT = { 2 = { has_province_modifier = great_road } }
+					NOT = { 2 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 4
 					NOT = { 4 = { has_province_modifier = great_road } }
+					NOT = { 4 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 7
 					NOT = { 7 = { has_province_modifier = great_road } }
+					NOT = { 7 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 8
 					NOT = { 8 = { has_province_modifier = great_road } }
+					NOT = { 8 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 9
 					NOT = { 9 = { has_province_modifier = great_road } }
+					NOT = { 9 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 13
 					NOT = { 13 = { has_province_modifier = great_road } }
+					NOT = { 13 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 17
 					NOT = { 17 = { has_province_modifier = great_road } }
+					NOT = { 17 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 16
 					NOT = { 16 = { has_province_modifier = great_road } }
+					NOT = { 16 = { has_province_modifier = sacked_great_road } }
 				}
 			}
 			infrastructure_tech_3 = 1
@@ -216,42 +241,52 @@ political_decisions = {
 				AND = {
 					owns = 1015
 					NOT = { 1015 = { has_province_modifier = great_road } }
+					NOT = { 1015 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 1014
 					NOT = { 1014 = { has_province_modifier = great_road } }
+					NOT = { 1014 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 1013
 					NOT = { 1013 = { has_province_modifier = great_road } }
+					NOT = { 1013 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 1012
 					NOT = { 1012 = { has_province_modifier = great_road } }
+					NOT = { 1012 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 883
 					NOT = { 883 = { has_province_modifier = great_road } }
+					NOT = { 883 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 882
 					NOT = { 882 = { has_province_modifier = great_road } }
+					NOT = { 882 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 887
 					NOT = { 887 = { has_province_modifier = great_road } }
+					NOT = { 887 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 890
 					NOT = { 890 = { has_province_modifier = great_road } }
+					NOT = { 890 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 891
 					NOT = { 891 = { has_province_modifier = great_road } }
+					NOT = { 891 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 892
 					NOT = { 892 = { has_province_modifier = great_road } }
+					NOT = { 892 = { has_province_modifier = sacked_great_road } }
 				}
 			}
 			infrastructure_tech_3 = 1
@@ -294,50 +329,62 @@ political_decisions = {
 				AND = {
 					owns = 837
 					NOT = { 837 = { has_province_modifier = great_road } }
+					NOT = { 837 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 838
 					NOT = { 838 = { has_province_modifier = great_road } }
+					NOT = { 838 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 835
 					NOT = { 835 = { has_province_modifier = great_road } }
+					NOT = { 835 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 834
 					NOT = { 834 = { has_province_modifier = great_road } }
+					NOT = { 834 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 833
 					NOT = { 833 = { has_province_modifier = great_road } }
+					NOT = { 833 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 832
 					NOT = { 832 = { has_province_modifier = great_road } }
+					NOT = { 832 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 817
 					NOT = { 817 = { has_province_modifier = great_road } }
+					NOT = { 817 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 816
 					NOT = { 816 = { has_province_modifier = great_road } }
+					NOT = { 816 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 814
 					NOT = { 814 = { has_province_modifier = great_road } }
+					NOT = { 814 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 805
 					NOT = { 805 = { has_province_modifier = great_road } }
+					NOT = { 805 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 804
 					NOT = { 804 = { has_province_modifier = great_road } }
+					NOT = { 804 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 799
 					NOT = { 799 = { has_province_modifier = great_road } }
+					NOT = { 799 = { has_province_modifier = sacked_great_road } }
 				}
 			}
 			infrastructure_tech_3 = 1
@@ -382,30 +429,37 @@ political_decisions = {
 				AND = {
 					owns = 21
 					NOT = { 21 = { has_province_modifier = great_road } }
+					NOT = { 21 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 24
 					NOT = { 24 = { has_province_modifier = great_road } }
+					NOT = { 24 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 26
 					NOT = { 26 = { has_province_modifier = great_road } }
+					NOT = { 26 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 41
 					NOT = { 41 = { has_province_modifier = great_road } }
+					NOT = { 41 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 40
 					NOT = { 40 = { has_province_modifier = great_road } }
+					NOT = { 40 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 43
 					NOT = { 43 = { has_province_modifier = great_road } }
+					NOT = { 43 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 44
 					NOT = { 44 = { has_province_modifier = great_road } }
+					NOT = { 44 = { has_province_modifier = sacked_great_road } }
 				}
 			}
 			infrastructure_tech_3 = 1
@@ -445,38 +499,47 @@ political_decisions = {
 				AND = {
 					owns = 14
 					NOT = { 14 = { has_province_modifier = major_road } }
+					NOT = { 14 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 198
 					NOT = { 198 = { has_province_modifier = major_road } }
+					NOT = { 198 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 204
 					NOT = { 204 = { has_province_modifier = major_road } }
+					NOT = { 204 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 433
 					NOT = { 433 = { has_province_modifier = major_road } }
+					NOT = { 433 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 434
 					NOT = { 434 = { has_province_modifier = major_road } }
+					NOT = { 434 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 435
 					NOT = { 435 = { has_province_modifier = major_road } }
+					NOT = { 435 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 444
 					NOT = { 444 = { has_province_modifier = major_road } }
+					NOT = { 444 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 445
 					NOT = { 445 = { has_province_modifier = major_road } }
+					NOT = { 445 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 449
 					NOT = { 449 = { has_province_modifier = major_road } }
+					NOT = { 449 = { has_province_modifier = sacked_major_road } }
 				}
 			}
 			infrastructure_tech_3 = 1
@@ -518,50 +581,62 @@ political_decisions = {
 				AND = {
 					owns = 936
 					NOT = { 936 = { has_province_modifier = great_road } }
+					NOT = { 936 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 935
 					NOT = { 935 = { has_province_modifier = great_road } }
+					NOT = { 935 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 933
 					NOT = { 933 = { has_province_modifier = great_road } }
+					NOT = { 933 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 1030
 					NOT = { 1030 = { has_province_modifier = great_road } }
+					NOT = { 1030 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 1031
 					NOT = { 1031 = { has_province_modifier = great_road } }
+					NOT = { 1031 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 1040
 					NOT = { 1040 = { has_province_modifier = great_road } }
+					NOT = { 1040 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 1010
 					NOT = { 1010 = { has_province_modifier = great_road } }
+					NOT = { 1010 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 1011
 					NOT = { 1011 = { has_province_modifier = great_road } }
+					NOT = { 1011 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 1009
 					NOT = { 1009 = { has_province_modifier = great_road } }
+					NOT = { 1009 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 861
 					NOT = { 861 = { has_province_modifier = great_road } }
+					NOT = { 861 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 864
 					NOT = { 864 = { has_province_modifier = great_road } }
+					NOT = { 864 = { has_province_modifier = sacked_great_road } }
 				}
 				AND = {
 					owns = 865
 					NOT = { 865 = { has_province_modifier = great_road } }
+					NOT = { 865 = { has_province_modifier = sacked_great_road } }
 				}
 			}
 			infrastructure_tech_3 = 1
@@ -606,54 +681,67 @@ political_decisions = {
 				AND = {
 					owns = 205
 					NOT = { 205 = { has_province_modifier = major_road } }
+					NOT = { 205 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 207
 					NOT = { 207 = { has_province_modifier = major_road } }
+					NOT = { 207 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 208
 					NOT = { 208 = { has_province_modifier = major_road } }
+					NOT = { 208 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 209
 					NOT = { 209 = { has_province_modifier = major_road } }
+					NOT = { 209 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 211
 					NOT = { 211 = { has_province_modifier = major_road } }
+					NOT = { 211 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 212
 					NOT = { 212 = { has_province_modifier = major_road } }
+					NOT = { 212 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 219
 					NOT = { 219 = { has_province_modifier = major_road } }
+					NOT = { 219 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 218
 					NOT = { 218 = { has_province_modifier = major_road } }
+					NOT = { 218 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 249
 					NOT = { 249 = { has_province_modifier = major_road } }
+					NOT = { 249 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 244
 					NOT = { 244 = { has_province_modifier = major_road } }
+					NOT = { 244 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 241
 					NOT = { 241 = { has_province_modifier = major_road } }
+					NOT = { 241 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 240
 					NOT = { 240 = { has_province_modifier = major_road } }
+					NOT = { 240 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 288
 					NOT = { 288 = { has_province_modifier = major_road } }
+					NOT = { 288 = { has_province_modifier = sacked_major_road } }
 				}
 			}
 			infrastructure_tech_3 = 1
@@ -703,11 +791,13 @@ political_decisions = {
 					owns = 641
 					646 = { has_province_modifier = major_road }
 					NOT = { 641 = { has_province_modifier = major_road } }
+					NOT = { 641 = { has_province_modifier = sacked_major_road } }
 				}
 				AND = {
 					owns = 640
 					641 = { has_province_modifier = major_road }
 					NOT = { 640 = { has_province_modifier = major_road } }
+					NOT = { 640 = { has_province_modifier = sacked_major_road } }
 				}
 			}
 		}
@@ -746,7 +836,9 @@ political_decisions = {
 		
 		potential = {
 			owns = 667
+			640 = { has_province_modifier = major_road }
 			NOT = { 667 = { has_province_modifier = major_road } }
+			NOT = { 667 = { has_province_modifier = sacked_major_road } }
 		}
 		
 		allow = {
@@ -763,4 +855,136 @@ political_decisions = {
 			}
 		}
 	}
+}
+
+# Road Destruction
+political_decisions = {
+	road_destruction = {
+		picture = "roads"
+		potential = {
+			war_countries = {
+				any_owned_province = {
+					controlled_by = THIS
+					OR = {
+						has_province_modifier = large_road
+						has_province_modifier = major_road
+						has_province_modifier = great_road
+					}
+				}
+			}
+		}
+		
+		allow = {
+			war = yes
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					war_with = THIS
+				}
+				any_owned = {
+					limit = {
+						controlled_by = THIS
+						has_province_modifier = large_road
+					}
+					remove_province_modifier = large_road
+					add_province_modifier = {
+						name = sacked_large_road
+						duration = -1
+					}
+					THIS = { treasury = 500 }
+				}
+			}
+			
+			any_country = {
+				limit = {
+					war_with = THIS
+				}
+				any_owned = {
+					limit = {
+						controlled_by = THIS
+						has_province_modifier = major_road
+					}
+					remove_province_modifier = major_road
+					add_province_modifier = {
+						name = sacked_major_road
+						duration = -1
+					}
+					THIS = { treasury = 1000 }
+				}
+			}
+			
+			any_country = {
+				limit = {
+					war_with = THIS
+				}
+				any_owned = {
+					limit = {
+						controlled_by = THIS
+						has_province_modifier = great_road
+					}
+					remove_province_modifier = great_road
+					add_province_modifier = {
+						name = sacked_great_road
+						duration = -1
+					}
+					THIS = { treasury = 1500 }
+				}
+			}
+		}
+	}
+	
+	repair_road = {
+		picture = "roads"
+		potential = {
+			any_owned_province = {
+				OR = {
+					has_province_modifier = sacked_great_road
+					has_province_modifier = sacked_large_road
+					has_province_modifier = sacked_major_road
+				}
+			}
+		}
+		
+		allow = {
+			money = 250000
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					has_province_modifier = sacked_great_road
+				}
+				treasury = -3000
+				remove_province_modifier = sacked_great_road
+				add_province_modifier = {
+					name = great_road
+					duration = -1
+				}
+			}
+			
+			any_owned = {
+				limit = {
+					has_province_modifier = sacked_large_road
+				}
+				treasury = -2000
+				remove_province_modifier = sacked_large_road
+				add_province_modifier = {
+					name = large_road
+					duration = -1
+				}
+			}
+			
+			any_owned = {
+				limit = {
+					has_province_modifier = sacked_major_road
+				}
+				treasury = -1000
+				remove_province_modifier = sacked_major_road
+				add_province_modifier = {
+					name = major_road
+					duration = -1
+				}
+			}
 }
