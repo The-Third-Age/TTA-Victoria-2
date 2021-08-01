@@ -17,6 +17,9 @@
  - attempting_to_democratic
  - democratic
  
+### Monarchy
+ - attempting_to_monarchize
+ 
 ### Slavery
  - has_all_slavery
  

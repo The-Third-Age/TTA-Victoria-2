@@ -337,3 +337,31 @@ country_event = {
 		}		
 	}
 }
+
+# Become Monarchy
+country_event = {
+	id = 70008
+	title = "Our New Government"
+	desc = "EVTDESC70008"
+	picture = administration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "King"
+		
+		government = monarchy
+	}
+	
+	option = {
+		name = "Prince"
+		
+		government = principality
+	}
+	
+	option = {
+		name = "Lord"
+		
+		government = lord_monarchy
+	}
+}

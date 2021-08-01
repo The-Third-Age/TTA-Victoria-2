@@ -19,7 +19,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - General Spawn events
  - Slave craftsmen
  - Cbs
- - governments flipping
  - get flag list done
 
 ## GFX and GUI

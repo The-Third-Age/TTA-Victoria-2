@@ -204,7 +204,12 @@ political_reforms = {
 	vote_franschise = {
 		next_step_only = yes
 		none_voting = {
-			allow = { NOT = { has_country_flag = democratic } }
+			allow = {
+				OR = {
+					NOT = { has_country_flag = democratic }
+					has_country_flag = attempting_to_monarchize
+				}
+			}
 			rich_vote = 0
 			middle_vote = 0
 			poor_vote = 0

@@ -13,7 +13,7 @@ political_decisions = {
 			tag = FOR
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			# For the World Bank
@@ -282,7 +282,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			any_neighbor_country = {
@@ -346,7 +346,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			any_neighbor_country = {
@@ -403,7 +403,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			any_neighbor_country = {
@@ -464,7 +464,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			any_country = {
@@ -494,7 +494,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			any_country = {
@@ -535,7 +535,7 @@ political_decisions = {
 			tag = FOR
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			any_neighbor_country = {
@@ -582,7 +582,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			any_neighbor_country = {
@@ -612,6 +612,42 @@ political_decisions = {
 		}
 	}
 	
+	monarchize_flag_cleanup = {
+		potential = {
+			tag = FOR
+			any_neighbor_country = {
+				has_country_flag = attempting_to_monarchize
+				OR = {
+					government = monarchy
+					government = principality
+					government = stewardship
+					government = fiefdom
+					government = galadhrim_monarchy
+					government = lord_monarchy
+				}
+			}
+		}
+		
+		allow = {}
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = attempting_to_monarchize
+					OR = {
+						government = monarchy
+						government = principality
+						government = stewardship
+						government = fiefdom
+						government = galadhrim_monarchy
+						government = lord_monarchy
+					}
+				}
+				clr_country_flag = attempting_to_monarchize
+			}
+		}
+	}
+	
 	noble_autonomy_flag_clean_up = {
 		potential = {
 			tag = FOR
@@ -634,7 +670,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			any_neighbor_country = {
@@ -724,7 +760,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			any_neighbor_country = {
