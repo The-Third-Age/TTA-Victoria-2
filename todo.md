@@ -20,7 +20,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Slave craftsmen
  - Cbs
  - governments organization/flipping
- - outside_influences
  - get flag list done
 
 ## GFX and GUI

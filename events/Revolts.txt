@@ -194,13 +194,13 @@ country_event = {
 			limit = {
 				owner = { accepted_culture = neutral_culture }
 			}
-			remove_accepted_culture = neutral_culture
+			owner = { remove_accepted_culture = neutral_culture }
 		}
 		random_owned = {
 			limit = {
 				owner = { accepted_culture = evil_culture }
 			}
-			remove_accepted_culture = evil_culture
+			owner = { remove_accepted_culture = evil_culture }
 		}
 		
 		political_reform = good_alignment
@@ -211,6 +211,9 @@ country_event = {
 		clr_country_flag = attempting_to_good
 		clr_country_flag = attempting_to_neutral
 		clr_country_flag = attempting_to_evil
+		clr_country_flag = outside_good_influences
+		clr_country_flag = outside_neutral_influences
+		clr_country_flag = outside_evil_influences
 	}
 }
 
@@ -233,13 +236,13 @@ country_event = {
 			limit = {
 				owner = { accepted_culture = good_culture }
 			}
-			remove_accepted_culture = good_culture
+			owner = { remove_accepted_culture = good_culture }
 		}
 		random_owned = {
 			limit = {
 				owner = { accepted_culture = neutral_culture }
 			}
-			remove_accepted_culture = neutral_culture
+			owner = { remove_accepted_culture = neutral_culture }
 		}
 		
 		
@@ -251,6 +254,9 @@ country_event = {
 		clr_country_flag = attempting_to_good
 		clr_country_flag = attempting_to_neutral
 		clr_country_flag = attempting_to_evil
+		clr_country_flag = outside_good_influences
+		clr_country_flag = outside_neutral_influences
+		clr_country_flag = outside_evil_influences
 	}
 }
 
@@ -258,7 +264,7 @@ country_event = {
 country_event = {
 	id = 3005
 	picture = administration 
-	title = "Evil Rebel Victory"
+	title = "Neutral Rebel Victory"
 	desc = "EVTDESC3005"
 	
 	is_triggered_only = yes
@@ -270,13 +276,13 @@ country_event = {
 			limit = {
 				owner = { accepted_culture = good_culture }
 			}
-			remove_accepted_culture = good_culture
+			owner = { remove_accepted_culture = good_culture }
 		}
 		random_owned = {
 			limit = {
 				owner = { accepted_culture = evil_culture }
 			}
-			remove_accepted_culture = evil_culture
+			owner = { remove_accepted_culture = evil_culture }
 		}
 		
 		political_reform = neutral_alignment
@@ -287,5 +293,8 @@ country_event = {
 		clr_country_flag = attempting_to_good
 		clr_country_flag = attempting_to_neutral
 		clr_country_flag = attempting_to_evil
+		clr_country_flag = outside_good_influences
+		clr_country_flag = outside_neutral_influences
+		clr_country_flag = outside_evil_influences
 	}
 }
