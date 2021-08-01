@@ -1,0 +1,219 @@
+# Building Construction Decisions: {
+#	Constructions }
+
+# Constructions
+political_decisions = {
+	level_1_castles = {
+		potential = {
+			any_owned_province = { NOT = { has_province_modifier = level_1_castle } }
+			fortifications_1 = 1
+			NOT = { fortifications_2 = 1 }
+			ai = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = level_1_castle }
+				}
+				fort = -6
+				fort = 1
+				add_province_modifier = {
+					name = level_1_castle
+					duration = -1
+				}
+				add_province_modifier = {
+					name = castle_construction
+					duration = 365
+				}
+			}
+		}
+	}
+	
+	level_2_castles = {
+		potential = {
+			any_owned_province = {
+				NOT = { has_province_modifier = level_2_castle }
+				NOT = { has_province_modifier = castle_construction }
+			}
+			fortifications_2 = 1
+			NOT = { fortifications_3 = 1 }
+			ai = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = level_2_castle }
+					NOT = { has_province_modifier = castle_construction }
+				}
+				fort = -6
+				fort = 2
+				add_province_modifier = {
+					name = level_2_castle
+					duration = -1
+				}
+				add_province_modifier = {
+					name = castle_construction
+					duration = 365
+				}
+				remove_province_modifier = level_1_castle
+			}
+		}
+	}
+	
+	level_3_castles = {
+		potential = {
+			any_owned_province = {
+				NOT = { has_province_modifier = level_3_castle }
+				NOT = { has_province_modifier = castle_construction }
+			}
+			fortifications_3 = 1
+			ai = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = level_3_castle }
+					NOT = { has_province_modifier = castle_construction }
+				}
+				fort = -6
+				fort = 3
+				add_province_modifier = {
+					name = level_3_castle
+					duration = -1
+				}
+				add_province_modifier = {
+					name = castle_construction
+					duration = 365
+				}
+				remove_province_modifier = level_1_castle
+				remove_province_modifier = level_2_castle
+			}
+		}
+	}
+	
+	level_1_naval_bases = {
+		potential = {
+			any_owned_province = {
+				NOT = { has_province_modifier = level_1_naval_base }
+				port = yes
+			}
+			merchant_marine_1 = 1
+			NOT = { merchant_marine_2 = 1 }
+			ai = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = level_1_naval_base }
+					port = yes
+				}
+				naval_base = -6
+				naval_base = 1
+				add_province_modifier = {
+					name = level_1_naval_base
+					duration = -1
+				}
+				add_province_modifier = {
+					name = naval_base_construction
+					duration = 365
+				}
+			}
+		}
+	}
+	
+	level_2_naval_bases = {
+		potential = {
+			any_owned_province = {
+				NOT = { has_province_modifier = level_2_naval_base }
+				NOT = { has_province_modifier = naval_base_construction }
+				port = yes
+			}
+			merchant_marine_2 = 1
+			NOT = { merchant_marine_3 = 1 }
+			ai = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = level_2_naval_base }
+					NOT = { has_province_modifier = naval_base_construction }
+					port = yes
+				}
+				naval_base = -6
+				naval_base = 2
+				add_province_modifier = {
+					name = level_2_naval_base
+					duration = -1
+				}
+				add_province_modifier = {
+					name = naval_base_construction
+					duration = 365
+				}
+				remove_province_modifier = level_1_naval_base
+			}
+		}
+	}
+	
+	level_3_naval_bases = {
+		potential = {
+			any_owned_province = {
+				NOT = { has_province_modifier = level_3_naval_base }
+				NOT = { has_province_modifier = naval_base_construction }
+				port = yes
+			}
+			merchant_marine_3 = 1
+			ai = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = level_3_naval_base }
+					NOT = { has_province_modifier = naval_base_construction }
+					port = yes
+				}
+				naval_base = -6
+				naval_base = 3
+				add_province_modifier = {
+					name = level_3_naval_base
+					duration = -1
+				}
+				add_province_modifier = {
+					name = naval_base_construction
+					duration = 365
+				}
+				remove_province_modifier = level_1_naval_base
+				remove_province_modifier = level_2_naval_base
+			}
+		}
+	}
+}
