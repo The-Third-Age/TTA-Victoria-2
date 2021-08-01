@@ -16,7 +16,7 @@ democracy = {
 	flagType = republic
 }
 
-# Special democracy for Ents of Fangorn
+# Special democracy for Ent realms
 # Lord
 ent_realm = {
 	high_nobility = yes
@@ -73,7 +73,7 @@ principality = {
 	flagType = monarchy
 }
 
-# Lord
+# Lord (Gondor specific puppet)
 fiefdom = {
 	high_nobility = yes
 	low_nobility = yes
@@ -101,7 +101,7 @@ galadhrim_monarchy = {
 }
 
 # Lord
-imladris_monarchy = {
+lord_monarchy = {
 	high_nobility = yes
 	low_nobility = yes
 	burgher = yes
@@ -170,4 +170,33 @@ man_tribe = {
 	
 	election = no
 	appoint_ruling_party = yes
+}
+
+################
+##### FAKE #####
+################
+cosmetic_1_govt = {
+	servants = yes
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = cosmetic_1
+}
+
+cosmetic_2_govt = {
+	servants = yes
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = cosmetic_2
 }
