@@ -147,8 +147,9 @@ political_decisions = {
 		potential = {
 			OR = {
 				good_alignment_fake = 30
-				has_country_flag = attempt_to_good
+				has_country_flag = attempting_to_good
 			}
+			NOT = { good_evil_alignment = good_alignment }
 		}
 		
 		allow = {
@@ -173,11 +174,11 @@ political_decisions = {
 				remove_accepted_culture = evil_culture
 			}
 			
-			clr_country_flag = attempt_to_good
-			clr_country_flag = attempt_to_neutral
-			clr_country_flag = attempt_to_evil
+			clr_country_flag = attempting_to_good
+			clr_country_flag = attempting_to_neutral
+			clr_country_flag = attempting_to_evil
 			
-			any_pop = { dominant_issue = { value = good_alignment_fake factor = 0.1 }
+			any_pop = { dominant_issue = { value = good_alignment_fake factor = 0.1 } }
 		}
 	}
 	
@@ -185,8 +186,9 @@ political_decisions = {
 		potential = {
 			OR = {
 				neutral_alignment_fake = 30
-				has_country_flag = attempt_to_neutral
+				has_country_flag = attempting_to_neutral
 			}
+			NOT = { good_evil_alignment = neutral_alignment }
 		}
 		
 		allow = {
@@ -211,11 +213,11 @@ political_decisions = {
 				remove_accepted_culture = evil_culture
 			}
 			
-			clr_country_flag = attempt_to_good
-			clr_country_flag = attempt_to_neutral
-			clr_country_flag = attempt_to_evil
+			clr_country_flag = attempting_to_good
+			clr_country_flag = attempting_to_neutral
+			clr_country_flag = attempting_to_evil
 			
-			any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 0.1 }
+			any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 0.1 } }
 		}
 	}
 	
@@ -223,8 +225,9 @@ political_decisions = {
 		potential = {
 			OR = {
 				evil_alignment_fake = 30
-				has_country_flag = attempt_to_evil
+				has_country_flag = attempting_to_evil
 			}
+			NOT = { good_evil_alignment = evil_alignment }
 		}
 		
 		allow = {
@@ -249,11 +252,12 @@ political_decisions = {
 				remove_accepted_culture = neutral_culture
 			}
 			
-			clr_country_flag = attempt_to_good
-			clr_country_flag = attempt_to_neutral
-			clr_country_flag = attempt_to_evil
+			clr_country_flag = attempting_to_good
+			clr_country_flag = attempting_to_neutral
+			clr_country_flag = attempting_to_evil
 			
-			any_pop = { dominant_issue = { value = evil_alignment_fake factor = 0.1 }
+			any_pop = { dominant_issue = { value = evil_alignment_fake factor = 0.1 } }
+		}
 	}
 }
 

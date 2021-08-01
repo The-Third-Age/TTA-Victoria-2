@@ -630,6 +630,7 @@ political_decisions = {
 				}
 			}
 			OR = {
+				good_evil_alignment = neutral_alignment
 				AND = {
 					good_evil_alignment = evil_alignment
 					OR = {
@@ -756,6 +757,14 @@ political_decisions = {
 				annex_to = HAR
 				
 				all_core = { add_core = HAR remove_core = HRN remove_core = HRU remove_core = PEZ remove_core = LUR remove_core = ARY }
+			}
+			
+			any_owned = {
+				limit = {
+					is_core = HAR
+					is_core = THIS
+				}
+				remove_core = HAR
 			}
 			
 			create_vassal = HAR

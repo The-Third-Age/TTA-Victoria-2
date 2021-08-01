@@ -4,6 +4,7 @@
 #	Province Flavor
 #	Military Buildup
 #	Expansions to the West
+#	Return to South Gondor
 #	Ecthelion II Flavor
 #	Reclaiming Cores Removed Via Flavor }
 
@@ -382,44 +383,6 @@ political_decisions = {
 			}
 		}
 	}
-	
-	annex_andrast = {
-		picture = "gondor_noimage"
-		
-		potential = {
-			tag = GON
-			ADR = {
-				exists = yes
-				vassal_of = GON
-			}
-			owns = 133
-		}
-		
-		allow = {
-			OR = {
-				crown_land_ownership = seventy_land_ownership
-				crown_land_ownership = all_land_ownership
-			}
-			OR = {
-				city_jurisdiction = territorial_cities
-				city_jurisdiction = royal_cities
-			}
-			war = no
-		}
-		
-		effect = {
-			inherit = ADR
-			
-			prestige = 8
-			
-			any_owned = {
-				limit = { is_core = ADR }
-				remove_core = ADR
-				add_core = GON
-				aristocrats = { militancy = 2 }
-			}
-		}
-	}
 }
 
 # Province Flavor
@@ -754,6 +717,44 @@ political_decisions = {
 		}
 	}
 	
+	annex_andrast = {
+		picture = "gondor_noimage"
+		
+		potential = {
+			tag = GON
+			ADR = {
+				exists = yes
+				vassal_of = GON
+			}
+			owns = 133
+		}
+		
+		allow = {
+			OR = {
+				crown_land_ownership = seventy_land_ownership
+				crown_land_ownership = all_land_ownership
+			}
+			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			war = no
+		}
+		
+		effect = {
+			inherit = ADR
+			
+			prestige = 8
+			
+			any_owned = {
+				limit = { is_core = ADR }
+				remove_core = ADR
+				add_core = GON
+				aristocrats = { militancy = 2 }
+			}
+		}
+	}
+	
 	gondorian_andrast_migration = {
 		picture = "andrast_map"
 		potential = {
@@ -806,6 +807,7 @@ political_decisions = {
 					}
 					is_colonial = no
 				}
+				remove_core = PUK
 			}
 			any_owned = {
 				limit = {
@@ -908,6 +910,503 @@ political_decisions = {
 				}
 				clr_country_flag = DRU_rebelling_from
 			}
+		}
+	}
+}
+
+# Return to South Gondor
+political_decisions = {
+	return_to_south_gondor = {
+		picture = "south_gondor_map"
+		potential = {
+			NOT = { exists = HRD }
+			tag = GON
+			NOT = { has_country_modifier = low_military_recruitment }
+			OR = {
+				216 = { empty = yes }
+				219 = { empty = yes }
+				220 = { empty = yes }
+				225 = { empty = yes }
+				224 = { empty = yes }
+				226 = { empty = yes }
+				15 = { empty = yes }
+			}
+		}
+		
+		allow = {
+			wilderness_1 = 1
+			war = no
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					province_id = 212
+					216 = { empty = yes }
+				}
+				216 = { secede_province = THIS }
+			}
+			
+			random_owned = {
+				limit = {
+					province_id = 212
+					219 = { empty = yes }
+				}
+				219 = { secede_province = THIS }
+			}
+			
+			random_owned = {
+				limit = {
+					province_id = 214
+					220 = { empty = yes }
+				}
+				220 = { secede_province = THIS }
+			}
+			
+			random_owned = {
+				limit = {
+					province_id = 214
+					224 = { empty = yes }
+				}
+				224 = { secede_province = THIS }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						225 = { empty = yes }
+						owns = 214
+					}
+				}
+				225 = { secede_province = THIS }
+			}
+			
+			random_owned = {
+				limit = {
+					OR = {
+						province_id = 50
+						50 = { owner = { tag = LEB } }
+					}
+					15 = { empty = yes }
+				}
+				15 = { secede_province = THIS }
+			}
+			
+			random_owned = {
+				limit = {
+					OR = {
+						province_id = 50
+						50 = { owner = { tag = LEB } }
+					}
+					226 = { empty = yes }
+				}
+				226 = { secede_province = THIS }
+			}
+			
+			release = HRD
+			create_vassal = HRD
+			create_alliance = HRD
+			relation = {
+				who = HRD
+				value = 400
+			}
+			diplomatic_influence = {
+				who = HRD
+				value = 400
+			}
+			
+			random_country = {
+				limit = {
+					tag = HRD
+					good_evil_alignment = neutral_alignment
+				}
+				political_reform = good_alignment
+				remove_accepted_culture = neutral_culture
+				add_accepted_culture = good_culture
+			}
+			
+			random_country = {
+				limit = {
+					tag = HRD
+					good_evil_alignment = evil_alignment
+				}
+				political_reform = good_alignment
+				remove_accepted_culture = evil_culture
+				add_accepted_culture = good_culture
+			}
+			
+			HRD = {
+				set_country_flag = outside_good_influences
+				clr_country_flag = outside_neutral_influences
+				clr_country_flag = outside_evil_influences
+				clr_country_flag = attempting_to_good
+				clr_country_flag = attempting_to_neutral
+				clr_country_flag = attempting_to_evil
+				government = fiefdom
+				primary_culture = gondorian
+				add_accepted_culture = harnendan
+			}
+		}
+	}
+	
+	south_gondor_coastal_expansion = {
+		picture = "south_gondor_map"
+		potential = {
+			tag = GON
+			HRD = { vassal_of = GON }
+			OR = {
+				227 = { empty = yes }
+				228 = { empty = yes }
+				231 = { empty = yes }
+				232 = { empty = yes }
+				233 = { empty = yes }
+			}
+			NOT = { has_country_modifier = low_military_recruitment }
+		}
+		
+		allow = {
+			wilderness_2 = 1
+			war = no
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					227 = { empty = yes }
+				}
+				227 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					228 = { empty = yes }
+				}
+				228 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					231 = { empty = yes }
+				}
+				231 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					232 = { empty = yes }
+				}
+				232 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					233 = { empty = yes }
+				}
+				233 = { secede_province = THIS }
+			}
+			
+			HRD = { country_event = 100012 }
+		}
+	}
+	
+	south_gondor_steppes = {
+		picture = "south_gondor_map"
+		potential = {
+			tag = GON
+			HRD = { vassal_of = GON }
+			OR = {
+				215 = { empty = yes }
+				217 = { empty = yes }
+				218 = { empty = yes }
+				221 = { empty = yes }
+				222 = { empty = yes }
+				223 = { empty = yes }
+				229 = { empty = yes }
+				230 = { empty = yes }
+				235 = { empty = yes }
+				237 = { empty = yes }
+				241 = { empty = yes }
+				243 = { empty = yes }
+				244 = { empty = yes }
+				245 = { empty = yes }
+				246 = { empty = yes }
+				247 = { empty = yes }
+				248 = { empty = yes }
+				249 = { empty = yes }
+				250 = { empty = yes }
+				251 = { empty = yes }
+				252 = { empty = yes }
+				253 = { empty = yes }
+				254 = { empty = yes }
+				255 = { empty = yes }
+			}
+			NOT = { has_country_modifier = low_military_recruitment }
+		}
+		
+		allow = {
+			wilderness_3 = 1
+			war = no
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					215 = { empty = yes }
+				}
+				215 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					217 = { empty = yes }
+				}
+				217 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					218 = { empty = yes }
+				}
+				218 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					221 = { empty = yes }
+				}
+				221 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					222 = { empty = yes }
+				}
+				222 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					223 = { empty = yes }
+				}
+				223 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					229 = { empty = yes }
+				}
+				229 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					230 = { empty = yes }
+				}
+				230 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					235 = { empty = yes }
+				}
+				235 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					237 = { empty = yes }
+				}
+				237 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					241 = { empty = yes }
+				}
+				241 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					243 = { empty = yes }
+				}
+				243 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					244 = { empty = yes }
+				}
+				244 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					245 = { empty = yes }
+				}
+				245 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					246 = { empty = yes }
+				}
+				246 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					247 = { empty = yes }
+				}
+				247 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					248 = { empty = yes }
+				}
+				248 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					249 = { empty = yes }
+				}
+				249 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					250 = { empty = yes }
+				}
+				250 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					251 = { empty = yes }
+				}
+				251 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					252 = { empty = yes }
+				}
+				252 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					253 = { empty = yes }
+				}
+				253 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					254 = { empty = yes }
+				}
+				254 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					255 = { empty = yes }
+				}
+				255 = { secede_province = THIS }
+			}
+			
+			HRD = { country_event = 100012 }
+		}
+	}
+	
+	reconquer_south_gondor = {
+		picture = "south_gondor_military"
+		potential = {
+			HRD = { 
+				all_core = { empty = no }
+				NOT = { 
+					all_core = { 
+						OR = {
+							owned_by = HRD
+							owned_by = THIS
+						} 
+					}
+				}
+			}
+			tag = GON
+			NOT = { has_country_modifier = low_military_recruitment }
+		}
+		
+		allow = {
+			war = no
+			expansion_2 = 1
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					NOT = { tag = THIS }
+					NOT = { tag = HRD }
+					any_owned_province = { is_core = HRD }
+				}
+				country_event = 100013
+			}
+		}
+	}
+	
+	annex_south_gondor = {
+		picture = "gondor_noimage"
+		
+		potential = {
+			tag = GON
+			HRD = { vassal_of = GON }
+		}
+		
+		allow = {
+			OR = {
+				crown_land_ownership = seventy_land_ownership
+				crown_land_ownership = all_land_ownership
+			}
+			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			war = no
+			HRD = {
+				all_core = { 
+					OR = {
+						owned_by = HRD
+						owned_by = THIS
+					} 
+				}
+			}
+		}
+		
+		effect = {
+			inherit = HRD
+			
+			prestige = 10
+			
+			any_owned = {
+				limit = { is_core = HRD }
+				add_core = GON
+				aristocrats = { militancy = 2 }
+			}
+			
+			any_owned = {
+				limit = {
+					is_core = HRD
+					OR = {
+						is_core = HRN
+						is_core = HRU
+						is_core = HAR
+					}
+				}
+				add_province_modifier = {
+					name = gondorification
+					duration = -1
+				}
+			}
+			
+			set_country_flag = south_gondor_gondorification
+		}
+	}
+	
+	accept_harnedan = {
+		picture = "south_gondor_military"
+		potential = {
+			tag = GON
+			HRD = { all_core = { owned_by = GON } }
+			NOT = { accepted_culture = harnendan }
+		}
+		
+		allow = {
+			war = no
+			HRD = {
+				all_core = {
+					owned_by = GON
+					is_colonial = no
+				}
+			}
+		}
+		
+		effect = {
+			add_accepted_culture = harnendan
 		}
 	}
 }

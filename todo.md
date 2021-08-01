@@ -20,6 +20,8 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Slave craftsmen
  - Cbs
  - governments organization/flipping
+ - outside_influences
+ - get flag list done
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
@@ -31,7 +33,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Event 50005, get the syntax for getting the general correct
  - Make countries end their wars prior to the WoTR starting
  - WoTR ending in 5 years if it has not already ended
- - Return to South Gondor
  - QoL decisions (auto-building of roads, castles, naval bases)
 
 ## Others 

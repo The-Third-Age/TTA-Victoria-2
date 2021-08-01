@@ -482,3 +482,56 @@ country_event = {
 		}
 	}
 }
+
+# Cede land to puppet
+country_event = {
+	id = 100012
+	title = "Our Lands"
+	desc = "EVTDESC100012"
+	picture = administration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		
+		FROM = {
+			any_owned = {
+				limit = {
+					is_core = THIS
+					NOT = { is_core = FROM }
+				}
+				secede_province = THIS
+			}
+		}
+	}
+}
+
+# Start South Gondor liberate_country war
+country_event = {
+	id = 100013
+	title = "Our Lands"
+	desc = "EVTDESC100013"
+	picture = acquisition_of_south_gondor
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Drat"
+		
+		add_casus_belli = {
+			target = FROM
+			type = liberate_country
+			months = 12
+		}
+		
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = liberate_country country = HRD }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+	}
+}
