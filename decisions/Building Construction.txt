@@ -3,6 +3,17 @@
 
 # Constructions
 political_decisions = {
+	test = {
+		potential = {
+			ai = no
+		}
+		
+		allow = {
+			has_country_flag = possible_free_peoples_target
+		}
+		
+		effect = {}
+	}
 	level_1_castles = {
 		potential = {
 			any_owned_province = { NOT = { has_province_modifier = level_1_castle } }
