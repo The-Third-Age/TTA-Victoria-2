@@ -834,7 +834,6 @@ cut_down_to_size = {
 	}
 }
 
-# TODO: Figure out how to set good_evil_alignment
 free_peoples = {
 	sprite_index = 9
 	is_triggered_only = yes
@@ -887,16 +886,107 @@ free_peoples = {
 
 	war_name = WAR_FREE_NAME
 	
+	# scope = THIS = country applying wargoal
+	# FROM = country that currently owns the provinces
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
 			to = pro_military
 			value = 0.25
 		}
+		
+		any_country = {
+			limit = {
+				exists = no
+				any_core = { owner = { tag = FROM } }
+			}
+			set_country_flag = possible_free_peoples_target
+		}
+	}
+	
+	# scope = country that had owned the provinces
+	# THIS = country that applied wargoal
+	on_po_accepted = {
+		any_country = { 
+			limit = {
+				has_country_flag = possible_free_peoples_target
+				exists = no
+				any_core = { owner = { tag = FROM } }
+			}
+			clr_country_flag = possible_free_peoples_target
+		}
+		
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = possible_free_peoples_target
+			}
+			random_owned = {
+				limit = {
+					owner = { THIS = { good_evil_alignment = good_alignment } }
+					NOT = { owner = { good_evil_alignment = good_alignment } }
+				}
+				owner = {
+					political_reform = good_alignment
+					add_accepted_culture = good_culture
+					remove_accepted_culture = neutral_culture
+					remove_accepted_culture = evil_culture
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+					set_country_flag = outside_good_influences
+					clr_country_flag = outside_neutral_influences
+					clr_country_flag = outside_evil_influences
+					
+					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { THIS = { good_evil_alignment = neutral_alignment } }
+					NOT = { owner = { good_evil_alignment = neutral_alignment } }
+				}
+				owner = {
+					political_reform = neutral_alignment
+					remove_accepted_culture = good_culture
+					add_accepted_culture = neutral_culture
+					remove_accepted_culture = evil_culture
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+					clr_country_flag = outside_good_influences
+					set_country_flag = outside_neutral_influences
+					clr_country_flag = outside_evil_influences
+					
+					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { THIS = { good_evil_alignment = evil_alignment } }
+					NOT = { owner = { good_evil_alignment = evil_alignment } }
+				}
+				owner = {
+					political_reform = evil_alignment
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = neutral_culture
+					add_accepted_culture = evil_culture
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+					clr_country_flag = outside_good_influences
+					clr_country_flag = outside_neutral_influences
+					set_country_flag = outside_evil_influences
+					
+					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
+				}
+			}
+			create_alliance = THIS
+			clr_country_flag = possible_free_peoples_target
+		}
 	}
 }
 
-# TODO: Figure out how to set good_evil_alignment
 liberate_country = {
 	sprite_index = 15
 	is_triggered_only = yes
@@ -947,15 +1037,106 @@ liberate_country = {
 	}
 	all_allowed_states = yes
 	po_transfer_provinces = yes
-	#po_remove_cores = yes
 
 	war_name = WAR_LIBERATE_NAME
 	
+	# scope = THIS = country applying wargoal
+	# FROM = country that currently owns the provinces
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
 			to = pro_military
 			value = 0.25
+		}
+		
+		any_country = {
+			limit = {
+				exists = no
+				any_core = { owner = { tag = FROM } }
+			}
+			set_country_flag = possible_liberate_realm_target
+		}
+	}
+	
+	# scope = country that had owned the provinces
+	# THIS = country that applied wargoal
+	on_po_accepted = {
+		any_country = { 
+			limit = {
+				has_country_flag = possible_liberate_realm_target
+				exists = no
+				any_core = { owner = { tag = FROM } }
+			}
+			clr_country_flag = possible_liberate_realm_target
+		}
+		
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = possible_liberate_realm_target
+			}
+			random_owned = {
+				limit = {
+					owner = { THIS = { good_evil_alignment = good_alignment } }
+					NOT = { owner = { good_evil_alignment = good_alignment } }
+				}
+				owner = {
+					political_reform = good_alignment
+					add_accepted_culture = good_culture
+					remove_accepted_culture = neutral_culture
+					remove_accepted_culture = evil_culture
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+					set_country_flag = outside_good_influences
+					clr_country_flag = outside_neutral_influences
+					clr_country_flag = outside_evil_influences
+					
+					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { THIS = { good_evil_alignment = neutral_alignment } }
+					NOT = { owner = { good_evil_alignment = neutral_alignment } }
+				}
+				owner = {
+					political_reform = neutral_alignment
+					remove_accepted_culture = good_culture
+					add_accepted_culture = neutral_culture
+					remove_accepted_culture = evil_culture
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+					clr_country_flag = outside_good_influences
+					set_country_flag = outside_neutral_influences
+					clr_country_flag = outside_evil_influences
+					
+					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = { THIS = { good_evil_alignment = evil_alignment } }
+					NOT = { owner = { good_evil_alignment = evil_alignment } }
+				}
+				owner = {
+					political_reform = evil_alignment
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = neutral_culture
+					add_accepted_culture = evil_culture
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+					clr_country_flag = outside_good_influences
+					clr_country_flag = outside_neutral_influences
+					set_country_flag = outside_evil_influences
+					
+					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
+				}
+			}
+			create_alliance = THIS
+			clr_country_flag = possible_liberate_realm_target
 		}
 	}
 }

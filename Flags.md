@@ -8,6 +8,9 @@
 
 ### Free Peoples
  - possible_free_peoples_target
+ 
+### Liberate Realm
+ - possible_liberate_realm_target
 
 ## Good-Evil Alignment
 ### Good Flags

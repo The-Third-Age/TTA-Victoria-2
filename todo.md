@@ -18,7 +18,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Starting literacy
  - General Spawn events
  - Slave craftsmen
- - Cbs
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
