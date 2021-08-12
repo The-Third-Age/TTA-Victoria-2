@@ -3,26 +3,6 @@
 
 # Country Information
 political_decisions = {
-	### WILL BE REMOVED EVENTUALLY
-	# Harad, Khand, Rhun
-	union_country = {
-		alert = no
-		potential = {
-			NOT = { has_global_flag = fluff_disabled }
-			ai = no
-			OR = {
-				tag = KHA
-				tag = RHU
-			}
-		}
-		
-		allow = {}
-		
-		effect = {
-			country_event = 39999
-		}
-	}
-	
 	kingdom_of_gondor = {
 		alert = no
 		potential = {
@@ -627,6 +607,68 @@ political_decisions = {
 		
 		effect = {
 			country_event = 35146
+		}
+	}
+	
+	tribes_of_the_easterlings = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			OR = {
+				tag = RHU
+				tag = SEK
+				tag = SAG
+				tag = URG
+				tag = LOG
+				tag = KUG
+			}
+		}
+		
+		allow = {}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					NOT = { owner = { tag = RHU } }
+				}
+				owner = { country_event = 35150 }
+			}
+			random_owned = {
+				limit = {
+					owner = { tag = RHU }
+				}
+				owner = { country_event = 35154 }
+			}
+		}
+	}
+	
+	northmen_of_rhovanion = {
+		alert = no
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			OR = {
+				tag = RHO
+				tag = EHW
+			}
+		}
+		
+		allow = {}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					NOT = { owner = { tag = RHO } }
+				}
+				owner = { country_event = 35158 }
+			}
+			random_owned = {
+				limit = {
+					owner = { tag = RHO }
+				}
+				owner = { country_event = 35162 }
+			}
 		}
 	}
 }
