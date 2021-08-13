@@ -1,0 +1,463 @@
+# Dale Decisions: {
+#	Starting Decisions (Unseen)
+#	Forming Rhovanion
+#	Core Adding/Removal }
+
+# Starting Decisions
+political_decisions = {
+	dale_start_decision = {
+		potential = {
+			tag = DAL
+			always = no
+		}
+		
+		allow = {}
+		
+		effect = {
+			# Starting Leader
+			add_country_modifier = {
+				name = bard_i_modifier
+				duration = -1
+			}
+		}
+	}
+	
+	dorwinion_start_decision = {
+		potential = {
+			tag = DOR
+			always = no
+		}
+		
+		allow = {}
+		
+		effect = {
+			# Starting Leader
+			add_country_modifier = {
+				name = hegon_koldana_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+# Forming Rhovanion
+political_decisions = {
+	form_rhovanion = {
+		potential = {
+			is_culture_group = northmen
+			NOT = { exists = RHO }
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			DAL = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = northmen } }
+						empty = yes
+					}
+				}
+			}
+			DOR = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = northmen } }
+						empty = yes
+					}
+				}
+			}
+			EHW = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = northmen } }
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			
+			all_core = { remove_core = THIS add_core = RHO }
+			
+			change_tag = RHO
+			
+			any_country = {
+				limit = {
+					OR = {
+						tag = DAL
+						tag = DOR
+						tag = EHW
+					}
+				}
+				country_event = 100003
+				
+				all_core = { add_core = RHO }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = barding
+							accepted_culture = barding
+						}
+					}
+				}
+				owner = { add_accepted_culture = barding }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = dorwinrim
+							accepted_culture = dorwinrim
+						}
+					}
+				}
+				owner = { add_accepted_culture = dorwinrim }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = ehwathrim
+							accepted_culture = ehwathrim
+						}
+					}
+				}
+				owner = { add_accepted_culture = ehwathrim }
+			}
+		}
+	}
+	
+	form_rhovanion_GP = {
+		picture = "form_rhovanion"
+		potential = {
+			NOT = { is_culture_group = northmen }
+			is_greater_power = yes
+			NOT = { exists = RHO }
+			OR = {
+				DAL = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				DOR = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				EHW = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			DAL = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			DOR = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			EHW = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			OR = {
+				good_evil_alignment = neutral_alignment
+				AND = {
+					good_evil_alignment = evil_alignment
+					OR = {
+						NOT = { exists = DAL }
+						DAL = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = DOR }
+						DOR = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = EHW }
+						EHW = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+				}
+				AND = {
+					good_evil_alignment = good_alignment
+					OR = {
+						NOT = { exists = DAL }
+						DAL = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = DOR }
+						DOR = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = EHW }
+						EHW = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			badboy = 5
+			
+			any_country = {
+				limit = {
+					OR = {
+						tag = DAL
+						tag = DOR
+						tag = EHW
+					}
+				}
+				annex_to = RHO
+				
+				all_core = { add_core = RHO remove_core = DAL remove_core = DOR remove_core = EHW }
+			}
+			
+			any_owned = {
+				limit = {
+					is_core = RHO
+					is_core = THIS
+				}
+				remove_core = RHO
+			}
+			
+			any_owned = {
+				limit = {
+					is_core = RHO
+				}
+				secede_province = RHO
+			}
+			
+			create_vassal = RHO
+			RHO = { capital = 654 }
+			diplomatic_influence = {
+				who = RHO
+				value = 400 
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { good_evil_alignment = good_alignment }
+				}
+				RHO = {
+					remove_accepted_culture = evil_culture
+					remove_accepted_culture = neutral_culture
+					political_reform = good_alignment
+					add_accepted_culture = good_culture
+					set_country_flag = outside_good_influences
+					clr_country_flag = outside_neutral_influences
+					clr_country_flag = outside_evil_influences
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { good_evil_alignment = evil_alignment }
+				}
+				RHO = {
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = neutral_culture
+					political_reform = evil_alignment
+					add_accepted_culture = evil_culture
+					clr_country_flag = outside_good_influences
+					clr_country_flag = outside_neutral_influences
+					set_country_flag = outside_evil_influences
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { good_evil_alignment = neutral_alignment }
+				}
+				RHO = {
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = evil_culture
+					political_reform = neutral_alignment
+					add_accepted_culture = neutral_culture
+					clr_country_flag = outside_good_influences
+					set_country_flag = outside_neutral_influences
+					clr_country_flag = outside_evil_influences
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+				}
+			}
+		}
+	}
+}
+
+# Core Adding/Removal
+political_decisions = {
+	RHO_core_removal = {
+		picture = "form_rhovanion"
+		potential = {
+			OR = {
+				DAL = { all_core = { owned_by = RHO is_core = RHO } }
+				DOR = { all_core = { owned_by = RHO is_core = RHO } }
+				EHW = { all_core = { owned_by = RHO is_core = RHO } }
+			}
+			tag = RHO
+		}
+		
+		allow = {
+			war = no
+			any_owned_province = { controlled_by_rebels = no }
+			diplomacy_3 = 1
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					is_core = DAL
+					DAL = { all_core = { owned_by = RHO } }
+				}
+				remove_core = DAL
+			}
+			any_owned = {
+				limit = {
+					is_core = DOR
+					DOR = { all_core = { owned_by = RHO } }
+				}
+				remove_core = DOR
+			}
+			any_owned = {
+				limit = {
+					is_core = EHW
+					EHW = { all_core = { owned_by = RHO } }
+				}
+				remove_core = EHW
+			}
+		}
+	}
+	
+	RHO_core_addition = {
+		picture = "form_rhovanion"
+		potential = {
+			tag = RHO
+			any_owned_province = {
+				OR = {
+					is_core = DAL
+					is_core = DOR
+					is_core = EHW
+				}
+				NOT = { is_core = RHO }
+				NOT = { has_province_modifier = cultural_core_integration }
+			}
+		}
+		
+		allow = {
+			war = no
+			any_owned_province = { controlled_by_rebels = no }
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = DAL
+						is_core = DOR
+						is_core = EHW
+					}
+					NOT = { is_core = RHO }
+				}
+				add_province_modifier = { name = cultural_core_integration duration = -1 }
+				remove_province_modifier = core_integration
+			}
+		}
+	}
+}
