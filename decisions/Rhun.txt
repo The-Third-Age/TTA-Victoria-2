@@ -1,0 +1,606 @@
+# Rhun Decisions: {
+#	Forming Rhun 
+#	Core Adding/Removal }
+
+# Forming Rhun
+political_decisions = {
+	form_rhun = {
+		potential = {
+			is_culture_group = easterlings
+			NOT = { exists = RHU }
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			SEK = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = easterlings } }
+						empty = yes
+					}
+				}
+			}
+			SAG = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = easterlings } }
+						empty = yes
+					}
+				}
+			}
+			URG = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = easterlings } }
+						empty = yes
+					}
+				}
+			}
+			KUG = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = easterlings } }
+						empty = yes
+					}
+				}
+			}
+			LGV = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = easterlings } }
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			
+			all_core = { remove_core = THIS add_core = RHU }
+			
+			change_tag = RHU
+			
+			any_country = {
+				limit = {
+					OR = {
+						tag = SEK
+						tag = SAG
+						tag = URG
+						tag = KUG
+						tag = LGV
+					}
+				}
+				country_event = 100003
+				
+				all_core = { add_core = RHU }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = sekel
+							accepted_culture = sekel
+						}
+					}
+				}
+				owner = { add_accepted_culture = sekel }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = sagath
+							accepted_culture = sagath
+						}
+					}
+				}
+				owner = { add_accepted_culture = sagath }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = urgath
+							accepted_culture = urgath
+						}
+					}
+				}
+				owner = { add_accepted_culture = urgath }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = kuga
+							accepted_culture = kuga
+						}
+					}
+				}
+				owner = { add_accepted_culture = kuga }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = logath
+							accepted_culture = logath
+						}
+					}
+				}
+				owner = { add_accepted_culture = logath }
+			}
+		}
+	}
+	
+	form_rhun_diplo = {
+		picture = "form_rhun"
+		potential = {
+			is_culture_group = easterlings
+			NOT = { exists = RHU }
+			NOT = { has_global_flag = diplo_rhun }
+		}
+		
+		allow = {
+			is_greater_power = yes
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					OR = {
+						tag = SEK
+						tag = SAG
+						tag = URG
+						tag = KUG
+						tag = LGV
+					}
+					NOT = { tag = THIS }
+				}
+				country_event = 100011
+			}
+			
+			prestige = 5
+			badboy = 2
+			
+			set_global_flag = diplo_rhun
+		}
+	}
+	
+	form_rhun_GP = {
+		picture = "form_rhun"
+		potential = {
+			NOT = { is_culture_group = easterlings }
+			is_greater_power = yes
+			NOT = { exists = RHU }
+			OR = {
+				SEK = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				SAG = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				URG = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				KUG = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+				LGV = {
+					any_core = {
+						OR = {
+							owner = { tag = THIS }
+							owner = { vassal_of = THIS }
+							owner = { in_sphere = THIS }
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			SEK = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			SAG = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			URG = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			LGV = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			KUG = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+			OR = {
+				good_evil_alignment = neutral_alignment
+				AND = {
+					good_evil_alignment = evil_alignment
+					OR = {
+						NOT = { exists = SEK }
+						SEK = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = SAG }
+						SAG = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = LGV }
+						LGV = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = KUG }
+						KUG = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = URG }
+						URG = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+				}
+				AND = {
+					good_evil_alignment = good_alignment
+					OR = {
+						NOT = { exists = SEK }
+						SEK = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = KUG }
+						KUG = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = LGV }
+						LGV = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = SAG }
+						SAG = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+						}
+					}
+					OR = {
+						NOT = { exists = URG }
+						URG = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			badboy = 5
+			
+			any_country = {
+				limit = {
+					OR = {
+						tag = SEK
+						tag = SAG
+						tag = URG
+						tag = LGV
+						tag = KUG
+					}
+				}
+				annex_to = RHU
+				
+				all_core = { add_core = RHU remove_core = SEK remove_core = SAG remove_core = URG remove_core = LGV remove_core = KUG }
+			}
+			
+			any_owned = {
+				limit = {
+					is_core = RHU
+					is_core = THIS
+				}
+				remove_core = RHU
+			}
+			
+			any_owned = {
+				limit = {
+					is_core = RHU
+				}
+				secede_province = RHU
+			}
+			
+			create_vassal = RHU
+			RHU = { capital = 566 }
+			diplomatic_influence = {
+				who = RHU
+				value = 400 
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { good_evil_alignment = good_alignment }
+				}
+				RHU = {
+					remove_accepted_culture = evil_culture
+					remove_accepted_culture = neutral_culture
+					political_reform = good_alignment
+					add_accepted_culture = good_culture
+					set_country_flag = outside_good_influences
+					clr_country_flag = outside_neutral_influences
+					clr_country_flag = outside_evil_influences
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { good_evil_alignment = evil_alignment }
+				}
+				RHU = {
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = neutral_culture
+					political_reform = evil_alignment
+					add_accepted_culture = evil_culture
+					clr_country_flag = outside_good_influences
+					clr_country_flag = outside_neutral_influences
+					set_country_flag = outside_evil_influences
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { good_evil_alignment = neutral_alignment }
+				}
+				RHU = {
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = evil_culture
+					political_reform = neutral_alignment
+					add_accepted_culture = neutral_culture
+					clr_country_flag = outside_good_influences
+					set_country_flag = outside_neutral_influences
+					clr_country_flag = outside_evil_influences
+					clr_country_flag = attempting_to_good
+					clr_country_flag = attempting_to_neutral
+					clr_country_flag = attempting_to_evil
+				}
+			}
+		}
+	}
+}
+
+# Core Adding/Removal
+political_decisions = {
+	RHU_core_removal = {
+		potential = {
+			OR = {
+				SEK = { all_core = { owned_by = RHU is_core = RHU } }
+				SAG = { all_core = { owned_by = RHU is_core = RHU } }
+				URG = { all_core = { owned_by = RHU is_core = RHU } }
+				KUG = { all_core = { owned_by = RHU is_core = RHU } }
+				LGV = { all_core = { owned_by = RHU is_core = RHU } }
+			}
+			tag = RHU
+		}
+		
+		allow = {
+			war = no
+			any_owned_province = { controlled_by_rebels = no }
+			diplomacy_3 = 1
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					is_core = SEK
+					SEK = { all_core = { owned_by = RHU } }
+				}
+				remove_core = SEK
+			}
+			any_owned = {
+				limit = {
+					is_core = SAG
+					SAG = { all_core = { owned_by = RHU } }
+				}
+				remove_core = SAG
+			}
+			any_owned = {
+				limit = {
+					is_core = URG
+					URG = { all_core = { owned_by = RHU } }
+				}
+				remove_core = URG
+			}
+			any_owned = {
+				limit = {
+					is_core = KUG
+					KUG = { all_core = { owned_by = RHU } }
+				}
+				remove_core = KUG
+			}
+			any_owned = {
+				limit = {
+					is_core = LGV
+					LGV = { all_core = { owned_by = RHU } }
+				}
+				remove_core = LGV
+			}
+		}
+	}
+	
+	RHU_core_addition = {
+		picture = "RHU_core_removal"
+		potential = {
+			tag = RHU
+			any_owned_province = {
+				OR = {
+					is_core = SEK
+					is_core = SAG
+					is_core = URG
+					is_core = KUG
+					is_core = LGV
+				}
+				NOT = { is_core = RHU }
+				NOT = { has_province_modifier = cultural_core_integration }
+			}
+		}
+		
+		allow = {
+			war = no
+			any_owned_province = { controlled_by_rebels = no }
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						is_core = SEK
+						is_core = SAG
+						is_core = URG
+						is_core = KUG
+						is_core = LGV
+					}
+					NOT = { is_core = RHU }
+				}
+				add_province_modifier = { name = cultural_core_integration duration = -1 }
+				remove_province_modifier = core_integration
+			}
+		}
+	}
+}
