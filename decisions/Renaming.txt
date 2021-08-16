@@ -1,0 +1,167 @@
+# Renaming Decisions: {
+#	Gondor }
+
+# Gondor
+political_decisions = {
+	# 0 = Gondor 1 = Rohan
+	rename_anorien = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# Gondor - Far Anorien
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = far_anorien_name value = -0.1 } } }
+								FOR = { check_variable = { which = far_anorien_name value = 0.1 } }
+							}
+						}
+						# Rohan - Far Anorien
+						AND = {
+							is_culture_group = rohirrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = far_anorien_name value = 0.9 } } }
+								FOR = { check_variable = { which = far_anorien_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 1 owns = 2 owns = 3 owns = 4 owns = 5 owns = 6 owns = 7
+				}
+				AND = {
+					OR = {
+						# Gondor - Talath Anor
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = middle_anorien_name value = -0.1 } } }
+								FOR = { check_variable = { which = middle_anorien_name value = 0.1 } }
+							}
+						}
+						# Rohan - Talath Anor
+						AND = {
+							is_culture_group = rohirrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = middle_anorien_name value = 0.9 } } }
+								FOR = { check_variable = { which = middle_anorien_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 8 owns = 9 owns = 10 owns = 11 owns = 12 owns = 13 owns = 14
+				}
+				AND = {
+					OR = {
+						# Gondor - Old Anorien
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = near_anorien_name value = -0.1 } } }
+								FOR = { check_variable = { which = near_anorien_name value = 0.1 } }
+							}
+						}
+						# Rohan - Old Anorien
+						AND = {
+							is_culture_group = rohirrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = near_anorien_name value = 0.9 } } }
+								FOR = { check_variable = { which = near_anorien_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 16 owns = 17 owns = 18 owns = 19
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			# Gondor - Far Anorien
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 1
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = far_anorien_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = far_anorien_name value = 0.1 } } }
+					}
+				}
+				1 = { state_scope = { change_region_name = "Far Anórien" } }
+				owner = { FOR = { set_variable = { which = far_anorien_name value = 0 } } } # Gondor
+			}
+			
+			# Rohan - Far Anorien
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = rohirrim }
+					province_id = 1
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = far_anorien_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = far_anorien_name value = 1.1 } } }
+					}
+				}
+				1 = { state_scope = { change_region_name = "Sunlending" } }
+				owner = { FOR = { set_variable = { which = far_anorien_name value = 1 } } } # Rohan
+			}
+			
+			# Gondor - Talath Anor
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 8
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = middle_anorien_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = middle_anorien_name value = 0.1 } } }
+					}
+				}
+				1 = { state_scope = { change_region_name = "Talath Anór" } }
+				owner = { FOR = { set_variable = { which = middle_anorien_name value = 0 } } } # Gondor
+			}
+			
+			# Rohan - Talath Anor
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = rohirrim }
+					province_id = 8
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = middle_anorien_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = middle_anorien_name value = 1.1 } } }
+					}
+				}
+				1 = { state_scope = { change_region_name = "Sun Plains" } }
+				owner = { FOR = { set_variable = { which = middle_anorien_name value = 1 } } } # Rohan
+			}
+			
+			# Gondor - Old Anorien
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 16
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = near_anorien_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = near_anorien_name value = 0.1 } } }
+					}
+				}
+				1 = { state_scope = { change_region_name = "Old Anórien" } }
+				owner = { FOR = { set_variable = { which = near_anorien_name value = 0 } } } # Gondor
+			}
+			
+			# Rohan - Old Anorien
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = rohirrim }
+					province_id = 16
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = near_anorien_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = near_anorien_name value = 1.1 } } }
+					}
+				}
+				1 = { state_scope = { change_region_name = "Old Sunlending" } }
+				owner = { FOR = { set_variable = { which = near_anorien_name value = 1 } } } # Rohan
+			}
+		}
+	}
+}
