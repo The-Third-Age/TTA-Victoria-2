@@ -19,16 +19,8 @@ country_event = {
 		random_country = {
 			limit = {
 				tag = FOR
-				check_variable = {
-					which = ring_controller
-					value = 0 # Bilbo
-				}
-				NOT = {
-					check_variable = {
-						which = ring_controller
-						value = 1 # Anyone else
-					}
-				}
+				NOT = { check_variable = { which = ring_controller value = -0.1 } } # Frodo
+				check_variable = { which = ring_controller value = 0.1 } # Frodo
 			}
 			
 			set_variable = {

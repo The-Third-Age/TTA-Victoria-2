@@ -11,18 +11,8 @@
 political_decisions = {
 	council_of_elrond = {
 		potential = {
-			FOR = {
-				check_variable = {
-					which = ring_controller
-					value = 1 # Frodo
-				}
-				NOT = {
-					check_variable = {
-						which = ring_controller
-						value = 2 # Anyone else
-					}
-				}
-			}
+			FOR = { NOT = { check_variable = { which = ring_controller value = 0.9 } } } # Frodo
+			FOR = { check_variable = { which = ring_controller value = 1.1 } } # Frodo
 			year = 3000
 			good_evil_alignment = good_alignment
 			NOT = { has_global_flag = the_council_of_elrond }	
@@ -84,16 +74,8 @@ political_decisions = {
 		
 		potential = {
 			tag = FOR
-			check_variable = {
-				which = ring_controller
-				value = 2 # Fellowship
-			}
-			NOT = {
-				check_variable = {
-					which = ring_controller
-					value = 3 # Anyone else
-				}
-			}
+			NOT = { check_variable = { which = ring_controller value = 1.9 } } # Frodo
+			check_variable = { which = ring_controller value = 2.1 } # Frodo
 			NOT = { has_country_modifier = wotr_countdown }
 			NOT = { has_global_flag = wotr_leaders_chosen }
 		}
