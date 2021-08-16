@@ -436,6 +436,86 @@ political_decisions = {
 			11 = { remove_core = DRU }
 		}
 	}
+	
+	stonewain_valley = {
+		picture = "free_druadan_forest"
+		potential = {
+			OR = {
+				AND = {
+					owns = 7
+					owns = 13
+					11 = { is_core = DRU }
+					OR = {
+						owns = 11
+						DRU = { owns = 11 }
+					}
+					war = yes
+					NOT = { 11 = { has_province_modifier = stonewain_valley_modifier } }
+					OR = {
+						AND = {
+							good_evil_alignment = good_alignment
+							NOT = { DRU = { good_evil_alignment = evil_alignment } }
+						}
+						AND = {
+							good_evil_alignment = evil_alignment
+							NOT = { DRU = { good_evil_alignment = good_alignment } }
+						}
+						good_evil_alignment = neutral_alignment
+					}
+				}
+				primary_culture = druedain
+				accepted_culture = druedain
+			}
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					owns = 11
+					11 = { NOT = { average_militancy = 3 } }
+				}
+				AND = {
+					DRU = { owns = 11 }
+					relation = { who = DRU value = 50 }
+				}
+				primary_culture = druedain
+				accepted_culture = druedain
+			}
+		}
+		
+		effect = {
+			random_country = {
+				limit = {
+					NOT = { tag = THIS }
+					tag = DRU
+					exists = yes
+					owns = 11
+				}
+				THIS = { military_access = DRU }
+			}
+			
+			11 = { add_province_modifier = { name = stonewain_valley_modifier duration = -1 } }
+			set_country_flag = stonewain_requester
+		}
+	}
+	
+	clear_stonewain_valley = {
+		picture = "free_druadan_forest"
+		potential = {
+			tag = FOR
+			11 = { has_province_modifier = stonewain_valley_modifier }
+			any_neighbor_country = {
+				has_country_flag = stonewain_requester
+				war = no
+			}
+		}
+		
+		allow = {}
+		
+		effect = {
+			11 = { remove_province_modifier = stonewain_valley_modifier }
+		}
+	}
 }
 
 # Military Build Up
