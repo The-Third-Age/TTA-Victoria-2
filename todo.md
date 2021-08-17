@@ -31,5 +31,4 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Pops
  - "Unciv" reforms?
  - General Spawn events
- - Update UI to match new color scheme
  - Fix all of the broken loc (colors, have ? in them)
