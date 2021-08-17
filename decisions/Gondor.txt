@@ -440,29 +440,25 @@ political_decisions = {
 	stonewain_valley = {
 		picture = "free_druadan_forest"
 		potential = {
+			owns = 7
+			owns = 13
+			11 = { is_core = DRU }
+			OR = {
+				owns = 11
+				DRU = { owns = 11 }
+			}
+			war = yes
+			NOT = { 11 = { has_province_modifier = stonewain_valley_modifier } }
 			OR = {
 				AND = {
-					owns = 7
-					owns = 13
-					11 = { is_core = DRU }
-					OR = {
-						owns = 11
-						DRU = { owns = 11 }
-					}
-					war = yes
-					NOT = { 11 = { has_province_modifier = stonewain_valley_modifier } }
-					OR = {
-						AND = {
-							good_evil_alignment = good_alignment
-							NOT = { DRU = { good_evil_alignment = evil_alignment } }
-						}
-						AND = {
-							good_evil_alignment = evil_alignment
-							NOT = { DRU = { good_evil_alignment = good_alignment } }
-						}
-						good_evil_alignment = neutral_alignment
-					}
+					good_evil_alignment = good_alignment
+					NOT = { DRU = { good_evil_alignment = evil_alignment } }
 				}
+				AND = {
+					good_evil_alignment = evil_alignment
+					NOT = { DRU = { good_evil_alignment = good_alignment } }
+				}
+				good_evil_alignment = neutral_alignment
 				primary_culture = druedain
 				accepted_culture = druedain
 			}
