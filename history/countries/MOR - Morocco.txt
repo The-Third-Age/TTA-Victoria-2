@@ -5,7 +5,6 @@ culture = orc_culture
 culture = guldurrim
 religion = orc
 government = sauron_dictatorship
-plurality = 0
 nationalvalue = sauron
 literacy = 0
 civilized = yes
@@ -14,21 +13,14 @@ decision = mordor_start_decision
 
 oob = "MOR_oob.txt"
 
-ruling_party = generic_high_nobility
+ruling_party = generic_servants
 
 upper_house = {
-	
-	servants = 20
-	high_nobility = 20
-	low_nobility = 20
-	burgher = 10
-	fundamentalist = 30
+	servants = 100
 }
 
-decision = mordor_start_decision
+slavery = yes_slavery
 
-# Starting Consciousness
-consciousness = 2
-nonstate_consciousness = 1
+decision = mordor_start_decision
 
 schools = traditional_academic

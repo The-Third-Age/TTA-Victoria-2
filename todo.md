@@ -8,19 +8,14 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Gameplay
  - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms, pop reform/party policy tendencies
  - Inventions
- - Pops
  - Province terrains
- - "Unciv" reforms?
  - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending, Minimum Wage
  - Gas Attack?
  - Great/World Wars?
- - Starting literacy
- - General Spawn events
  - Slave craftsmen
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
- - Update UI to match new color scheme
  - Land and Naval unit icons
  - Update country font to include all characters
 
@@ -31,4 +26,10 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## Others 
  - Music (BFME2 for example)
+ 
+## For 0.1
+ - Pops
+ - "Unciv" reforms?
+ - General Spawn events
+ - Update UI to match new color scheme
  - Fix all of the broken loc (colors, have ? in them)
