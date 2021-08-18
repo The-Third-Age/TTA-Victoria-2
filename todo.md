@@ -6,7 +6,7 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Coastlines/small islands, Anduin river oversights along the southern Gondor shore and Cair Andros
  
 ## Gameplay
- - Actually balance out goods, starting rgos, pops, ideology chances, tech, migration, assimilation, reforms, pop reform/party policy tendencies
+ - Actually balance everything
  - Inventions
  - Province terrains
  - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending, Minimum Wage
@@ -29,6 +29,5 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  
 ## For 0.1
  - Pops
- - "Unciv" reforms?
  - General Spawn events
  - Fix all of the broken loc (colors, have ? in them)
