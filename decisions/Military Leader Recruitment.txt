@@ -6,6 +6,7 @@ political_decisions = {
 	recruit_generals = {
 		potential = {
 			NOT = { has_country_modifier = recruited_generals }
+			NOT = { tag = FOR }
 		}
 		
 		allow = {}
@@ -20,16 +21,239 @@ political_decisions = {
 						OR = {
 							AND = {
 								primary_culture = dunedain
-								accepted_culture = gondorian
+								OR = {
+									accepted_culture = gondorian
+									accepted_culture = amrothian
+									NOT = {
+										accepted_culture = gondorian
+										accepted_culture = amrothian
+										accepted_culture = arnorian
+									}
+								}
 							}
 							primary_culture = gondorian
-							
-							# Temporary
-							primary_culture = silvan
+							primary_culture = amrothian
 						}
 					}
 				}
 				owner = { country_event = { id = 40000 } }
+			}
+			
+			# Northern Dúnedain and Arnorian
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								primary_culture = dunedain
+								accepted_culture = arnorian
+							}
+							primary_culture = arnorian
+						}
+					}
+				}
+				owner = { country_event = { id = 40002 } }
+			}
+			
+			# High Elves
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							primary_culture = noldor
+							primary_culture = falathrim
+						}
+					}
+				}
+				owner = { country_event = { id = 40004 } }
+			}
+			
+			# Silvan Elves
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							primary_culture = silvan
+							primary_culture = galadhrim
+						}
+					}
+				}
+				owner = { country_event = { id = 40006 } }
+			}
+			
+			# Avarin Elves
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = avari
+					}
+				}
+				owner = { country_event = { id = 40008 } }
+			}
+			
+			# Haradrim
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = haradrim
+					}
+				}
+				owner = { country_event = { id = 40010 } }
+			}
+			
+			# Kingsmen/Black Numenoreans
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = kingsmen
+					}
+				}
+				owner = { country_event = { id = 40012 } }
+			}
+			
+			# Khandish
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = khandish
+					}
+				}
+				owner = { country_event = { id = 40014 } }
+			}
+			
+			# Easterlings
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = easterlings
+					}
+				}
+				owner = { country_event = { id = 40016 } }
+			}
+			
+			# Northmen
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = northmen
+					}
+				}
+				owner = { country_event = { id = 40018 } }
+			}
+			
+			# Dwarves
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = dwarves
+					}
+				}
+				owner = { country_event = { id = 40020 } }
+			}
+			
+			# Anduinrim (Men)
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = anduinrim
+					}
+				}
+				owner = { country_event = { id = 40022 } }
+			}
+			
+			# Ents
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = ents
+					}
+				}
+				owner = { country_event = { id = 40024 } }
+			}
+			
+			# Druedain
+			random_owned = {
+				limit = {
+					owner = {
+						primary_culture = druedain
+					}
+				}
+				owner = { country_event = { id = 40026 } }
+			}
+			
+			# Non-Druedain Wildmen
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = wildmen
+						NOT = { primary_culture = druedain }
+					}
+				}
+				owner = { country_event = { id = 40028 } }
+			}
+			
+			# Rohirrim
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = rohirrim
+					}
+				}
+				owner = { country_event = { id = 40030 } }
+			}
+			
+			# Orcs/Uruks
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = uruk_hai
+							is_culture_group = mordorian
+							is_culture_group = northern_goblins
+						}
+					}
+				}
+				owner = { country_event = { id = 40032 } }
+			}
+			
+			# Angmarrim (Men)
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = angmarrim
+					}
+				}
+				owner = { country_event = { id = 40034 } }
+			}
+			
+			# Lossoth
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = lossoth
+					}
+				}
+				owner = { country_event = { id = 40036 } }
+			}
+			
+			# Breelander (men)
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = breelander
+					}
+				}
+				owner = { country_event = { id = 40038 } }
+			}
+			
+			# Hobbit
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = hobbits
+					}
+				}
+				owner = { country_event = { id = 40040 } }
 			}
 		}
 	}
@@ -38,6 +262,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_modifier = recruited_admirals }
 			any_owned_province = { port = yes }
+			NOT = { tag = FOR }
 		}
 		
 		allow = {}
@@ -52,16 +277,239 @@ political_decisions = {
 						OR = {
 							AND = {
 								primary_culture = dunedain
-								accepted_culture = gondorian
+								OR = {
+									accepted_culture = gondorian
+									accepted_culture = amrothian
+									NOT = {
+										accepted_culture = gondorian
+										accepted_culture = amrothian
+										accepted_culture = arnorian
+									}
+								}
 							}
 							primary_culture = gondorian
-							
-							# Temporary
-							primary_culture = silvan
+							primary_culture = amrothian
 						}
 					}
 				}
 				owner = { country_event = { id = 40001 } }
+			}
+			
+			# Northern Dúnedain and Arnorian
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								primary_culture = dunedain
+								accepted_culture = arnorian
+							}
+							primary_culture = arnorian
+						}
+					}
+				}
+				owner = { country_event = { id = 40003 } }
+			}
+			
+			# High Elves
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							primary_culture = noldor
+							primary_culture = falathrim
+						}
+					}
+				}
+				owner = { country_event = { id = 40005 } }
+			}
+			
+			# Silvan Elves
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							primary_culture = silvan
+							primary_culture = galadhrim
+						}
+					}
+				}
+				owner = { country_event = { id = 40007 } }
+			}
+			
+			# Avarin Elves
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = avari
+					}
+				}
+				owner = { country_event = { id = 40009 } }
+			}
+			
+			# Haradrim
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = haradrim
+					}
+				}
+				owner = { country_event = { id = 40011 } }
+			}
+			
+			# Kingsmen/Black Numenoreans
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = kingsmen
+					}
+				}
+				owner = { country_event = { id = 40013 } }
+			}
+			
+			# Khandish
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = khandish
+					}
+				}
+				owner = { country_event = { id = 40015 } }
+			}
+			
+			# Easterlings
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = easterlings
+					}
+				}
+				owner = { country_event = { id = 40017 } }
+			}
+			
+			# Northmen
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = northmen
+					}
+				}
+				owner = { country_event = { id = 40019 } }
+			}
+			
+			# Dwarves
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = dwarves
+					}
+				}
+				owner = { country_event = { id = 40021 } }
+			}
+			
+			# Anduinrim (Men)
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = anduinrim
+					}
+				}
+				owner = { country_event = { id = 40023 } }
+			}
+			
+			# Ents
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = ents
+					}
+				}
+				owner = { country_event = { id = 40025 } }
+			}
+			
+			# Druedain
+			random_owned = {
+				limit = {
+					owner = {
+						primary_culture = druedain
+					}
+				}
+				owner = { country_event = { id = 40027 } }
+			}
+			
+			# Non-Druedain Wildmen
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = wildmen
+						NOT = { primary_culture = druedain }
+					}
+				}
+				owner = { country_event = { id = 40029 } }
+			}
+			
+			# Rohirrim
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = rohirrim
+					}
+				}
+				owner = { country_event = { id = 40031 } }
+			}
+			
+			# Orcs/Uruks
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = uruk_hai
+							is_culture_group = mordorian
+							is_culture_group = northern_goblins
+						}
+					}
+				}
+				owner = { country_event = { id = 40033 } }
+			}
+			
+			# Angmarrim (Men)
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = angmarrim
+					}
+				}
+				owner = { country_event = { id = 40035 } }
+			}
+			
+			# Lossoth
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = lossoth
+					}
+				}
+				owner = { country_event = { id = 40037 } }
+			}
+			
+			# Breelander (men)
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = breelander
+					}
+				}
+				owner = { country_event = { id = 40039 } }
+			}
+			
+			# Hobbit
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = hobbits
+					}
+				}
+				owner = { country_event = { id = 40041 } }
 			}
 		}
 	}
