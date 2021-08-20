@@ -28,5 +28,4 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Music (BFME2 for example)
  
 ## For 0.1
- - Pops
  - Fix all of the broken loc (colors, have ? in them)
