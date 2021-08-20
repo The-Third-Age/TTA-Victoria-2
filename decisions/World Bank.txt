@@ -3,7 +3,8 @@
 #	Time Specific Event Firing 
 #	Good/Evil Clean Up
 #	Leave FOR Alone 
-#	Government Flags Clean Up }
+#	Government Flags Clean Up 
+#	AI Cheats }
 
 # Starting Decision
 political_decisions = {
@@ -30,15 +31,6 @@ political_decisions = {
 			
 			# For settings
 			set_global_flag = no_soldier_chosen
-			
-			# For Substates (substates are not meant to be playable)
-			any_country = {
-				limit = { is_substate = yes }
-				add_country_modifier = {
-					name = no_points_for_you
-					duration = -1
-				}
-			}
 			
 			# For Good Realms
 			any_country = {
@@ -790,6 +782,35 @@ political_decisions = {
 					slavery = yes_slavery
 				}
 				set_country_flag = has_all_slavery
+			}
+		}
+	}
+}
+
+# AI Cheats
+political_decisions = {
+	help_ai_with_money = {
+		potential = {
+			tag = FOR
+			any_neighbor_country = { 
+				NOT = { money = 25000 }
+				ai = yes
+				war = no
+			}
+			money = 25000
+		}
+		
+		allow = {}
+		
+		effect = {
+			treasury = -25000
+			random_country = {
+				limit = {
+					NOT = { money = 25000 }
+					ai = yes
+					war = no
+				}
+				treasury = 25000
 			}
 		}
 	}
