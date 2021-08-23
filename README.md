@@ -72,6 +72,11 @@ A Lord of the Rings mod for Victoria 2
 	- [Darek Zabrocki](https://www.deviantart.com/darekzabrocki/art/reaching-the-Victory-397615037)
 - Main Menu art
 	- [WallpaperAccess](https://wallpaperaccess.com/full/758025.jpg)
+- Battle resolution art
+	- [Jose Daniel Cabrera Peña](https://www.artstation.com/artwork/o2xk)
+	- [Oleh Yolchiiev](https://www.artstation.com/artwork/oxNxz)
+	- [Thomas Luny](https://en.wikipedia.org/wiki/File:Thomas_Luny_-_A_Packet_Boat_Under_Sail_in_a_Breeze_off_the_South_Foreland_-_Google_Art_Project.jpg)
+	- [Creative Assembly](https://www.worldhistory.org/image/2566/roman-naval-warfare/)
 - National Leaders
 	- [Ecthelion ii](https://www.deviantart.com/maelstromarts/art/The-White-Sanctuary-347365430)
 	- [Angelimir](https://ar.pinterest.com/pin/512636370079480435/)
