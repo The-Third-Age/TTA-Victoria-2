@@ -50,6 +50,12 @@ nationalist_resistance = {
 	icon = 2
 }
 
+patriot_uprising = {
+    pop_consciousness_modifier = 0.2
+    pop_militancy_modifier = 0.25
+    icon = 4
+}
+
 # }
 ##### Economic Events ##### {
 
@@ -98,7 +104,7 @@ cultural_core_integration = {
 
 ##### RGO MODIFIERS ##### {
 repairing_mine = {
-	local_RGO_throughput = -0.5
+	mine_rgo_size = -0.5
 	icon = 2
 }
 
@@ -117,7 +123,7 @@ high_production = {
 }
 
 large_road = {
-	local_rgo_throughput = 0.1
+	local_rgo_output = 0.1
 	local_factory_throughput = 0.1
 	local_artisan_throughput = 0.1
 	immigrant_attract = 0.1
@@ -133,7 +139,7 @@ sacked_large_road = {
 }
 
 major_road = {
-	local_factory_throughput = 0.25
+	local_rgo_output = 0.25
 	local_factory_output = 0.25
 	local_artisan_throughput = 0.25
 	immigrant_attract = 0.25
@@ -150,7 +156,7 @@ sacked_major_road = {
 
 great_road = {
 	local_rgo_throughput = 0.35
-	local_factory_throughput = 0.35
+	local_rgo_output = 0.35
 	local_artisan_throughput = 0.35
 	immigrant_attract = 0.35
 	movement_cost = -0.035
@@ -186,7 +192,7 @@ level_3_castle = {
 
 castle_construction = {
 	local_factory_throughput = -0.25
-	local_rgo_throughput = -0.25
+	local_rgo_output = -0.25
 	icon = 8
 }
 
@@ -204,7 +210,7 @@ level_3_naval_base = {
 
 naval_base_construction = {
 	local_factory_throughput = -0.15
-	local_rgo_throughput = -0.15
+	local_rgo_output = -0.15
 	local_repair = -0.25
 	local_ship_build = 0.25
 	icon = 8

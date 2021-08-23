@@ -298,3 +298,363 @@ country_event = {
 		clr_country_flag = outside_evil_influences
 	}
 }
+
+# $COUNTRY_ADJ$ Patriots
+country_event = {
+    id = 3006
+    title = "$COUNTRY_ADJ$ Patriots"
+    desc = "EVTDESC3006"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "We welcome their return"
+        random_country = {
+            limit = {
+                tag = FROM
+                any_owned_province = {
+                    OR = {
+                        NOT = { has_province_modifier = patriot_uprising }
+                        NOT = { is_core = THIS }
+                    }
+                }
+            }
+            relation = {
+                who = THIS
+                value = -100
+            }
+            casus_belli = {
+                target = THIS
+                type = humiliate
+                months = 36
+            }
+            casus_belli = {
+                target = THIS
+                type = acquire_any_state
+                months = 36
+            }
+            any_state = {
+                limit = {
+                    any_owned_province = {
+                        has_province_modifier = patriot_uprising
+                        is_core = THIS
+                    }
+                }
+                any_owned = {
+                    limit = { is_core = THIS }
+                    any_pop = { militancy = -4 }
+                    secede_province = THIS
+                    change_controller = THIS
+                }
+            }
+        }
+        random_country = {
+            limit = {
+                tag = FROM
+                NOT = {
+                    any_owned_province = {
+                        OR = {
+                            NOT = { has_province_modifier = patriot_uprising }
+                            NOT = { is_core = THIS }
+                        }
+                    }
+                }
+            }
+            sphere_owner = {
+                casus_belli = {
+                    target = THIS
+                    type = free_peoples
+                    months = 75
+                }
+            }
+            any_pop = { militancy = -4 }
+            any_owned = { change_controller = THIS }
+            annex_to = THIS
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+    option = {
+        name = "It is too risky"
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = 3
+        }
+        FROM = {
+            relation = {
+                who = THIS
+                value = 20
+            }
+            any_owned = {
+                limit = {
+                    has_province_modifier = patriot_uprising
+                    is_core = THIS
+                }
+                remove_province_modifier = patriot_uprising
+                any_pop = { militancy = -8 }
+            }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+# $COUNTRY_ADJ$ Patriots (Annexation Event)
+country_event = {
+    id = 3007
+    title = "$COUNTRY_ADJ$ Patriots"
+    desc = "EVTDESC3006"
+    picture = "administration"
+
+    trigger = {
+        any_neighbor_country = {
+            any_owned_province = {
+                has_province_modifier = patriot_uprising
+                controlled_by = REB
+                province_control_days = 90
+                is_core = THIS
+                OR = {
+                    AND = {
+                        is_coastal = yes
+                        province_control_days = 120
+                    }
+                    any_neighbor_province = {
+                        owned_by = THIS
+                    }
+                }
+                state_scope = {
+                    NOT = {
+                        any_owned_province = {
+                            is_core = THIS
+                            NOT = { controlled_by = REB }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "We welcome their return"
+        random_country = {
+            limit = {
+                neighbour = THIS
+                any_owned_province = {
+                    has_province_modifier = patriot_uprising
+                    controlled_by = REB
+                    province_control_days = 90
+                    is_core = THIS
+                    OR = {
+                        AND = {
+                            is_coastal = yes
+                            province_control_days = 120
+                        }
+                        any_neighbor_province = {
+                            owned_by = THIS
+                        }
+                    }
+                    state_scope = {
+                        NOT = {
+                            any_owned_province = {
+                                is_core = THIS
+                                NOT = { controlled_by = REB }
+                            }
+                        }
+                    }
+                }
+            }
+            relation = {
+                who = THIS
+                value = -50
+            }
+            casus_belli = {
+                target = THIS
+                type = humiliate
+                months = 12
+            }
+        }
+        any_neighbor_country = {
+            limit = {
+                any_owned_province = {
+                    OR = {
+                        NOT = { has_province_modifier = patriot_uprising }
+                        NOT = { is_core = THIS }
+                        NOT = { controlled_by = REB }
+                    }
+                }
+            }
+            any_state = {
+                limit = {
+                    any_owned_province = {
+                        has_province_modifier = patriot_uprising
+                        controlled_by = REB
+                        province_control_days = 90
+                        is_core = THIS
+                        OR = {
+                            AND = {
+                                is_coastal = yes
+                                province_control_days = 120
+                            }
+                            any_neighbor_province = {
+                                owned_by = THIS
+                            }
+                        }
+                    }
+                    NOT = {
+                        any_owned_province = {
+                            is_core = THIS
+                            NOT = { controlled_by = REB }
+                        }
+                    }
+                }
+                any_owned = {
+                    limit = { is_core = THIS }
+                    remove_province_modifier = patriot_uprising
+                    any_pop = {
+                        militancy = -4
+                    }
+                    secede_province = THIS
+                    change_controller = THIS
+                }
+            }
+        }
+        any_neighbor_country = {
+            limit = {
+                NOT = {
+                    any_owned_province = {
+                        OR = {
+                            NOT = { has_province_modifier = patriot_uprising }
+                            NOT = { is_core = THIS }
+                            NOT = { controlled_by = REB }
+                        }
+                    }
+                }
+            }
+            sphere_owner = {
+                casus_belli = {
+                    target = THIS
+                    type = free_peoples
+                    months = 75
+                }
+            }
+            any_pop = { militancy = -4 }
+            any_owned = { change_controller = THIS }
+            annex_to = THIS
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+    option = {
+        name = "It is too risky"
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            militancy = 3
+        }
+        random_country = {
+            limit = {
+                neighbour = THIS
+                any_owned_province = {
+                    has_province_modifier = patriot_uprising
+                    controlled_by = REB
+                    province_control_days = 90
+                    is_core = THIS
+                    OR = {
+                        AND = {
+                            is_coastal = yes
+                            province_control_days = 120
+                        }
+                        any_neighbor_province = {
+                            owned_by = THIS
+                        }
+                    }
+                    state_scope = {
+                        NOT = {
+                            any_owned_province = {
+                                is_core = THIS
+                                NOT = { controlled_by = REB }
+                            }
+                        }
+                    }
+                }
+            }
+            relation = {
+                who = THIS
+                value = 20
+            }
+        }
+        any_neighbor_country = {
+            any_owned = {
+                limit = {
+                    has_province_modifier = patriot_uprising
+                    controlled_by = REB
+                    province_control_days = 90
+                    is_core = THIS
+                    OR = {
+                        AND = {
+                            is_coastal = yes
+                            province_control_days = 120
+                        }
+                        any_neighbor_province = {
+                            owned_by = THIS
+                        }
+                    }
+                    state_scope = {
+                        NOT = {
+                            any_owned_province = {
+                                is_core = THIS
+                                NOT = { controlled_by = REB }
+                            }
+                        }
+                    }
+                }
+                remove_province_modifier = patriot_uprising
+                any_pop = {
+                    militancy = -8
+                }
+            }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+# Provinces Under Control
+country_event = {
+    id = 3008
+    title = "Provinces Under Control"
+    desc = "EVTDESC3008"
+    picture = "administration"
+
+    trigger = {
+        war = no
+        any_owned_province = {
+            controlled_by = THIS
+            has_province_modifier = patriot_uprising
+        }
+        NOT = { num_of_revolts = 1 }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "Good"
+        any_owned = {
+            limit = {
+                controlled_by = THIS
+                has_province_modifier = patriot_uprising
+            }
+            remove_province_modifier = patriot_uprising
+        }
+    }
+}
