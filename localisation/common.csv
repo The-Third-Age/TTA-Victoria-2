@@ -29,9 +29,9 @@ Wednesday;Wednesday;x
 ######################;x }
 ##### Broken loc #####;x {
 ######################;x
-CANT_COLONIZE;§RUnable to colonize:§!;x
-COLONIZE_NOT_GP_OR_SECONDARY;Only §YGreat Powers§! or §YSecondary Powers§! can colonize;x
-CANT_CREATE_PROTECTORATE_COST;You need to have §Y$VALUE$§! free colonial power points to create a protectorate.;x
+CANT_COLONIZE;§RUnable to settle:§!;x
+COLONIZE_NOT_GP_OR_SECONDARY;Only §YGreat Powers§! or §YSecondary Powers§! can settle unclaimed land;x
+CANT_CREATE_PROTECTORATE_COST;You need to have §Y$VALUE$§! free territorial power points to create a protectorate.;x
 ACTIVATE_TECH_EFFECT;Activate technology: §Y$NAME$§!;x
 REFORM_RESEARCH_COST;Research Cost: §Y$COST$§!;RCout de recherche: ?$COST$?;Forschungskosten: ?$COST$?;;;;;;;;;;;x
 ADD_RELATIVE_INCOME_EFFECT;Treasury: $VALUE$§!;x
@@ -40,12 +40,102 @@ NF_OVERWRITE_HEADER;To set the new national focus §Y$NF$§! you must remove anoth
 NF_OVERWRITE_ENTRY;§Y$NF$§!\nin §Y$STATE$§!;x
 POP_INTERNAL_MIGRATION;§Y$NUM$§! people intend to move to other national provinces.;x
 POP_EXTERNAL_MIGRATION;§Y$NUM$§! people intend to move to another country.;x
-POP_COLONIAL_MIGRATION;§Y$NUM$§! people intend to move to the colonies.;x
+POP_COLONIAL_MIGRATION;§Y$NUM$§! people intend to move to the territories.;x
 AVAILABLE_COLONIAL_POWER;Available: §Y$VALUE$§!;x
-colonial_b;Colonial;x
-PW_CANT_UPGRADE_TO_COLONY;Upgrading to colony cost §Y$VALUE$§! colonial power points.;x
-PW_CANT_UPGRADE_TO_STATE;Incorporating as a state cost §Y$VALUE$§! colonial power points.;x
+colonial_b;Territorial;x
+PW_CANT_UPGRADE_TO_COLONY;Upgrading to territory cost §Y$VALUE$§! territorial power points.;x
+PW_CANT_UPGRADE_TO_STATE;Incorporating as a state cost §Y$VALUE$§! territorial power points.;x
 COUNTRYALERT_ColonialGood_protectorate;§GWe can create a protectorate in §Y$REGION$§!;x
-COUNTRYALERT_ColonialGood_colony;§GWe can create a colony in §Y$REGION$?§!;x
+COUNTRYALERT_ColonialGood_colony;§GWe can create a territory in §Y$REGION$?§!;x
 COUNTRYALERT_ColonialGood_state;§GWe can create a state in §Y$REGION$§!;x
 UNIT_REBEL_HUNT_IS_BUSY;§RArmy is currently busy, and will not hunt any rebels right now.§!;x
+HAS_COLONIES;is a territorial nation.\n;x
+HAS_NO_COLONIES;is not a territorial nation.\n;x
+COLONIAL_EDUCATION;Territory: $VAL$;x
+POP_DETAILS_COLONIAL_MIGRATION;Territorial migration:;x
+COLONIAL_MIGRATION_TECH;Territorial Migration;x
+COLONY_SUCCESS_SETUP;When we succeed with the settlement of an unclaimed province.;x
+COLONY_FAIL_SETUP;When we fail to settle an unclaimed province.;x
+COLONY_IN_CRISIS;Currently involved in territorial crisis;x
+NON_COLONIAL_POWER;We are not a second rank nation or great power yet so we have no territorial power.;x
+CRISIS_DESCRIPTION_COLONIZE;Crisis over the rights to settle unclaimed land.;x
+CB_COLONY_CLAIMS;Enforce territorial claim;x
+COUNTRYALERT_ColonialGood_invest;§GWe can invest in our settlement in §Y$REGION$§!;x
+CB_GENERATION_SPEED_BONUS_ON_COLONY_COMPETITION;Competing with §Y$COUNTRY$§! for settling §Y$REGION$§!, speed bonus §Y$BONUS$§!.;x
+COLONIZE_MAX_SLOTS;No more then §Y$NUM$§! countries can compete for province settlement.;x
+COLONY_ABORT_MAP;Settlement Aborted!;x
+COLONY_ABORT_SETUP;When settlement is aborted.;x
+COLONY_ABORT_LOG;Settlement of $TARGET$ has been aborted.;x
+COLONY_ABORT_5;We can no longer settle this region.;x
+COLONY_ABORT_HEADER;When our settlement has been aborted.;x
+COLONY_ABORT_1;Settlemtn of Unclaimed Region Aborted!;x
+COLONY_ABORT_2;$MONARCHTITLE$, our settlement in;x
+MODIFIER_CORE_POP_MILITANCY_MODIFIER;Militancy in Non-Territorial;x
+MODIFIER_CORE_POP_CONSCIOUSNESS_MODIFIER;Consciousness in Non-Territorial;x
+BUILD_COLONIAL;Non-territorial state;x
+COLONY_SUCCESS_LOG;We successfully settled $TARGET$.;x
+COLONY_FAIL_LOG;$OTHER$ managed to to settle $TARGET$ before us.;x
+PW_COLONY_NO_STATE;At least §Y$NUM$§!% of the population need to be Bureaucrats of an accepted Culture in order to convert this territorial possession into a full national state. Current ratio is §Y$CURR$§!%;x
+PW_CANTCOLONIZE;Not possible to settle here yet.;x
+IS_COLONIAL_STATE_POPVIEW;Territorial State;x
+COLONIAL_RANGE;Territorial Range: §Y+$VAL$§!;x
+BP_TOOL_ICON_COLONY;Territory icon;x
+UNCOLONIZED_DO_INVEST_LVL2;Send settlers;x
+UNCOLONIZED_INVEST_LVL2;Settlers;x
+COLONIAL_POINTS;Territorial Power;x
+COLONIAL_POINTS_TECH;Territorial power points;x
+PW_UPGRADE_TO_COLONY;Click to convert to upgrade to territory. You need §Y$VALUE$§Y territorial power points free to do this.;x
+COLONY_INVEST_COST;Cost of investment: §Y$COST$§! Territorial Power;x
+COLONY_INVEST_COST_LACK;Cost of investment: §R$COST$§! Territorial Power;x
+COUNTRYALERT_NO_Colonial;Nothing in our territories needs attention.;x
+COLONIZE_PHASE_INTEREST_DESC;Compete with investment of territorial power. The top two countries when someone gets $LEVELS$ levels ahead go on to next state of competition;x
+COLONIZE_PHASE_INFLUENCE;Territorial competition;x
+COLONIZE_PHASE_INFLUENCE_DESC;Two countries battle with territorial power until one side can not match influence. Every time investment is made tension in state will increase and if it gets too hot turns into a crisis.;x
+COLONIZE_PHASE_COLONIZATION;Settling;x
+COLONIZE_PHASE_COLONIZATION_DESC;Winner of previous phases has $MONTHS$ months to convert to a territory or lose investments.;x
+COLONY_ADD_INFLUENCE;Add territorial influence;x
+IS_NOT_COLONIAL_STATE;Is not a territorial state.;x
+IS_COLONIAL_STATE;Is a territorial state.;x
+COLONIAL_PRESTIGE_MODIFIER_TECH;Territorial prestige;x
+PROVINCEVIEW_UNCOLONIZED;Unsettled;x
+PV_UNCOLONIZED;Unsettled;x
+PV_COLONY_PROG;Settlement progress: §Y$VAL$§!%. Estimated completion: §Y$TIME$§!;x
+PW_COLONY;Territorial Province;x
+PW_COLONY_STATE;Click to convert to state. This requires §R$VALUE$§! free territorial power points.;x
+POP_COLONIAL_MIGRATION_FACTORS;Territorial migration factors:;x
+POP_COLONIAL_MIGRATION_NONE;No territorial migration.;x
+PV_COLONIAL_EMIGRATION;Territorial Emigration: ;x
+COLONY_FAIL_MAP;Settlement Failed!;x
+COLONY_SUCCESS_MAP;Settlement Created!;x
+COLONY_FAIL_HEADER;When our attempt to settle unclaimed land failed.;x
+COLONY_FAIL_1;Settling Failed!;x
+COLONY_FAIL_2;$MONARCHTITLE$, our settlement in;x
+COLONY_SUCCESS_HEADER;When our settlement efforts are successful.;x
+COLONY_SUCCESS_1;Territory Created!;x
+COLONY_SUCCESS_2;$MONARCHTITLE$, we have successfully settled;x
+CONFIRM_CREATE_STATE_DESC;Do you wish to turn this territory into a state?\nThis will make it into a normal state in your nation, conferring upon its population the same rights and privileges as your other citizens.;x
+COLONIZE_LIFE_RATING;Liferating: §R$RATE$§!. Current tech allows territories where liferating is at least: §Y$TECH$§!;x
+MAPMODE_7;Territorial Mapmode;x
+FOCUS_OWNED_COLONY;You cannot settle a non empty province.;x
+CEASECOLONIZATION_OTHER_DECLINE_3;§Y$RECIPIENT$§! declined to stop settling $RSTATE$.;x
+CEASECOLONIZATION_OTHER_DECLINE_4;In return, §Y$ACTOR$§! offered to stop settling;x
+CEASECOLONIZATION_WE_DECLINE_5;to cease settling $ASTATE$;x
+CEASECOLONIZATION_WE_DECLINE_3;from ?$ACTOR$? to stop settling $RSTATE$.;x
+CEASECOLONIZATION_THEY_DECLINE_6;to end their settlement attempts there.;x
+CEASECOLONIZATION_THEY_DECLINE_3;to stop settling $RSTATE$.;x
+CEASECOLONIZATION_THEY_DECLINE_4;We generously offered to cease settling;x
+CEASECOLONIZATION_OTHER_ACCEPT_4;§Y$ACTOR$§! agreed to cease settling $ASTATE$.;x
+CEASECOLONIZATION_OTHER_ACCEPT_5;In return, §Y$RECIPIENT$§! agreed to cease settling $RSTATE$.;x
+CEASECOLONIZATION_WE_ACCEPT_4;§Y$ACTOR$§! agreed to cease settling;x
+CEASECOLONIZATION_WE_ACCEPT_2;$MONARCHTITLE$, we agreed to cease settling;x
+CEASECOLONIZATION_THEY_ACCEPT_4;§Y$RECIPIENT$§! agreed to cease settling;x
+CEASECOLONIZATION_THEY_ACCEPT_2;$MONARCHTITLE$, we agreed to cease settling;x
+CEASECOLONIZATION_THEY_ACCEPT_LOG;$RECIPIENT$ agreed to cease settling $RSTATE$ if we cease settling $ASTATE$.;x
+CEASECOLONIZATION_WE_ACCEPT_LOG;We've agreed to cease settling $RSTATE$, if $ACTOR$ cease settling $ASTATE$.;x
+CEASECOLONIZATION_OTHER_ACCEPT_LOG;$RECIPIENT$ agreed to cease settling $RSTATE$ if $ACTOR$ cease settling $ASTATE$.;x
+CEASECOLONIZATION_THEY_DECLINE_LOG;$RECIPIENT$ declined to cease settling $RSTATE$.;x
+CEASECOLONIZATION_WE_DECLINE_LOG;We've declined to cease settling $RSTATE$.;x
+CEASECOLONIZATION_OTHER_DECLINE_LOG;$RECIPIENT$ declined to cease settling $RSTATE$, $ACTOR$ offered to cease settling $ASTATE$.;x
+CEASECOLONIZATION_DESC;Ask country to cease settling a state we are also settling, and in exchange, we do the same.;x
+CEASECOLONIZATION_BUTTON;Cease Settling;x
+CEASECOLONIZATION_OFFER;$ACTOR$ requests that we cease settling $RSTATE$. In return, they will stop settling $ASTATEx

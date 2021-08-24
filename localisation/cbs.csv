@@ -43,12 +43,12 @@ acquire_state_setup;Acquire $STATE$ from $RECIPIENT$;x
 acquire_state_desc;Aquire an enemy §Ystate§!;x
 place_in_the_sun;Place in the sun;x
 place_in_the_sun_short;Acquire $STATE$;x
-place_in_the_sun_setup;Acquire colony $STATE$ from $RECIPIENT$;x
-place_in_the_sun_desc;Aquire an enemy §Ycolonial state§!;x
-colonial_competition;Enforce colonial claim;x
-colonial_competition_desc;Acquire a §Ycolonial region§!;x
-colonial_competition_short;Acquire colony $REGION$;x
-colonial_competition_setup;Acquire colony $REGION$;x
+place_in_the_sun_setup;Acquire territorial $STATE$ from $RECIPIENT$;x
+place_in_the_sun_desc;Aquire an enemy §Yterritorial state§!;x
+colonial_competition;Enforce territorial claim;x
+colonial_competition_desc;Acquire a §Yterritorial region§!;x
+colonial_competition_short;Acquire territory $REGION$;x
+colonial_competition_setup;Acquire territory $REGION$;x
 cut_down_to_size;Cut down to size;x
 cut_down_to_size_short;Cut $RECIPIENT$ down to size;x
 cut_down_to_size_setup;Cut $RECIPIENT$ down to size;x
@@ -82,8 +82,8 @@ humiliate_short;Humiliate $RECIPIENT$;x
 humiliate_setup;Humiliate $RECIPIENT$;x
 humiliate_desc;Show our military might by humiliating an enemy §Yrealm§!, thus increasing our §Yprestige§! while lowering theirs;x
 demand_concession_casus_belli;Demand Concession;x
-demand_concession_casus_belli_desc;Force an §Yuncentralized realm§! to secede territory to form a colonial concession.;x
-demand_concession_casus_belli_setup;Demand that $RECIPIENT$ secede territory to form a colonial concession.;x
+demand_concession_casus_belli_desc;Force an §Yuncentralized realm§! to secede land to form a territorial concession.;x
+demand_concession_casus_belli_setup;Demand that $RECIPIENT$ secede land to form a territorial concession.;x
 demand_concession_casus_belli_short;Demand $STATE$;x
 establish_protectorate_casus_belli;Establish Protectorate;x
 establish_protectorate_casus_belli_desc;Annex an §Yuncentralized realm§! by forcing them to become a protectorate of ours.;x
@@ -116,8 +116,8 @@ NORMAL_WAR_RESTORE_ORDER_NAME;$ORDER$$FIRST$ Restoration of Order to the $SECOND
 AGRESSION_WAR_RESTORE_ORDER_NAME;$ORDER$$FIRST$ Restoration of Order to the $SECOND$ provinces;x
 NORMAL_WAR_TAKE_NAME;$ORDER$$FIRST$ Conquest of $STATE$;
 AGRESSION_WAR_TAKE_NAME;$ORDER$$FIRST$ War of $STATE$;
-NORMAL_WAR_COLONIAL_NAME;$ORDER$$FIRST$ Colonial Conquest of $STATE$;x
-AGRESSION_WAR_COLONIAL_NAME;$ORDER$$FIRST$ Colonial War for $STATE$;x
+NORMAL_WAR_COLONIAL_NAME;$ORDER$$FIRST$ Territorial Conquest of $STATE$;x
+AGRESSION_WAR_COLONIAL_NAME;$ORDER$$FIRST$ Territorial War for $STATE$;x
 NORMAL_WAR_FREE_NAME;$ORDER$$FIRST$ War of $COUNTRY_ADJ$ Freedom;x
 AGRESSION_WAR_FREE_NAME;$ORDER$$FIRST$ War of Propping up $COUNTRY$;x
 NORMAL_WAR_LIBERATE_NAME;$ORDER$$FIRST$ War of $COUNTRY_ADJ$ Freedom;x
