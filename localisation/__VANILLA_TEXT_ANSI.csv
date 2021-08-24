@@ -104,11 +104,8 @@ COLONY_INVEST_COST;Cost of investment: 即$COST$? Colonial Power;;Investitionskos
 COLONY_INVEST_COST_LACK;Cost of investment: 刪$COST$? Colonial Power;;Investitionskosten: 刪$COST$? Kolonialmacht;;;;;;;;x;;;
 COLONIAL_INVESTMENT;Currently invested: 刪$VALUE$?;;Aktuell investiert: 刪$VALUE$?;;;;;;;;x;;;
 COLONIAL_MAINTENANCE;Power tied up in maintenance: 刪$VALUE$?;;Durch Versorgung gebundene Kolonialmacht: 刪$VALUE$?;;;;;;;;x;;;
-AVAILABLE_COLONIAL_POWER;Available: 即$VALUE$?;;Verfugbar: 即$VALUE$?;;;;;;;;x;;;
 PW_PROTECTORATE;Protectorate;;Protektorat;;;;;;;;x;;;
 PW_UPGRADE_TO_COLONY;Click to convert to upgrade to colony. You need 即$VALUE$? colonial power points free to do this.;;Klickt, um eine Kolonie zu konvertieren und aufzuwerten. Ihr benotigt 即$VALUE$? verfugbare Kolonialmacht, um dies tun zu konnen.;;;;;;;;x;;;
-PW_CANT_UPGRADE_TO_COLONY;Upgrading to colony cost 刪$VALUE$? colonial power points.;;Die Aufwertung zur Kolonie kostet 刪$VALUE$? Punkte Kolonialmacht.;;;;;;;;x;;;
-PW_CANT_UPGRADE_TO_STATE;Incorporating as a state cost 刪$VALUE$? colonial power points.;;Die Einfuhrung als Staat kostet 刪$VALUE$? Punkte Kolonialmacht.;;;;;;;;x;;;
 CREATE_DOMINION;Release Dominion;;Dominion entlassen;;;;;;;;x;;;
 MULTI_SEL_DESC;佈SHIFT+LMB? to pick multiple units from current selection.;;佈SHIFT+LMT?, um mehrere Einheiten in der momentanen Auswahl auszuwahlen.;;;;;;;;x;;;;
 SM_DETAILS;Details;;Details;;;;;;;;x;;;;
@@ -212,7 +209,6 @@ NAVAL_COMBAT_STATUS_FIRING;Damage 佈$ORG$?/刪$STR$?;;Schaden 佈$ORG$?/刪$STR$?;;
 NAVAL_COMBAT_STATUS_RETREAT;Retreating;;Auf dem Ruckzug;;;;;;;;x;;;;
 NAVAL_COMBAT_STATUS_DISENGAGED;Disengaged;;Zuruckgezogen;;;;;;;;x;;;;
 SUPPLY_LOAD;Supplies weight;;Vorratsgewicht;;;;;;;;x;;;;
-SUPPLY_LOAD_STATUS_DESC_BASIC;The total 即supply throughput? of all our 即naval ports? is $TOT$.\nAll our ships requires in total $REQ$.;;Der gesamte 即Versorgungsdurchsatz? all unserer 即Marinehafen? betragt $TOT$.\nAll unsere Schiffe benotigen insgesamt $REQ$.;;;;;;;;x;;;;
 SUPPLY_LOAD_STATUS_DESC_PENALTY;Our ships suffer $PEN$ penalty of supplying them.;;Unsere Schiffe erleiden $PEN$ Malus fur ihre Versorgung.;;;;;;;;x;;;;
 SUPPLY_LOAD_STATUS_DESC_HINT;Consider building naval bases, or disband some ships.;;Uberlegt, einige Marinestutzpunkte zu bauen, oder entlasst einige Schiffe.;;;;;;;;x;;;;
 SUPPLY_LOAD_STATUS_DESC_UPCOMING_PENALTY;New ships are under construction, that will exceed the supply limits by $EXC$.;;Neue Schiffe befinden sich im Bau, dies wird das Versorgungslimit um $EXC$ uberschreiten.;;;;;;;;x;;;;
@@ -1210,7 +1206,6 @@ CONFIRM_CREATE_STATE_DESC2;(All local effects will be removed.);(Tous les effets
 UNIT_ENABLE_REBEL_HUNT;Hunt Rebels;Chasse aux rebelles;Jagt Rebellen;Cazar rebeldes;;;;;;;;;;x
 UNIT_DISABLE_REBEL_HUNT;(hunting rebels);(chasse des rebelles);(Rebellen jagen);(cazando rebeldes);;;;;;;;;;x
 UNIT_REBEL_HUNT_WILL_HUNT;佈Army is ready for rebel hunting.?;佈L'armee est prete pour la chasse aux rebelles.?;佈Die Armee ist bereit, Rebellen zu jagen.?;;;;;;;;;;;x
-UNIT_REBEL_HUNT_IS_BUSY;刪Army is currently busy, and will not hunt any rebels right now.?;刪L'armee est occupee et ne pourra pas chasser les rebelles tout de suite.?;刪Die Armee ist derzeit beschaftigt und wird momentan keine Rebellen jagen.?;;;;;;;;;;;x
 UNIT_REBEL_HUNT_LOW_MORALE;刪Army has too low morale, and will not hunt any rebels right now.?;刪L'armee a un moral trop faible et ne peut pas chasser les rebelles maintenant.?;刪Die Moral der Armee ist zu gering und sie wird momentan keine Rebellen jagen.?;;;;;;;;;;;x
 UNIT_REBEL_HUNT_NO_VALID;刪Enemy rebels has been detected, but our army will not attack them, because they are too strong for us, or couldn't find a safe path to get there.?;刪Des rebelles ont ete detectes mais notre armee ne les attaquera pas parce qu'ils sont trop fort pour nous ou qu'on ne peut pas trouver un passage sur pour aller vers eux.?;刪Feindliche Rebellen wurden aufgespurt, aber unsere Armee weigert sich, sie anzugreifen, da sie viel zu stark fur uns sind oder unsere Truppen keinen sicheren Weg zu ihnen finden konnten.?;;;;;;;;;;;x
 NOT_RELEASE_AT_WAR;刪(It is not possible to release nations when at war.)劬;刪(Il n'est pas possible de liberer des nations en temps de guerre.)劬;刪(Es ist nicht moglich, wahrend eines Krieges Nationen zu entlassen.)劬;;;;;;;;x;;;
@@ -1259,8 +1254,6 @@ CONFIRM_REMOVE_COLONY_NF_DESC;Your colonization progress will be lost. Do you wa
 CB_ALLOWED_INSTALL_COMMUNIST_GOV_TYPE;Install communist government;Installer un gouvernement communiste;Kommunistische Regierung einsetzen;;;;;;;;;;;x
 po_install_communist_gov_type;Install communist government;Installer un gouvernement communiste;Kommunistische Regierung einsetzen;;;;;;;;;;x;
 CB_ALLOWED_UNINSTALL_COMMUNIST_GOV_TYPE;Uninstall communist government;Revoquer le gouvernement communiste;Kommunistische Regierung absetzen;;;;;;;;;;;x
-NF_OVERWRITE_HEADER;To set the new national focus 即$NF$? you must remove another one.;Pour adopter la nouvelle cause nationale 即$NF$? vous devez en supprimer une autre.;Um den neuen nationalen Fokus auf 即$NF$? setzen zu konnen, musst Ihr einen anderen entfernen. ;;;;;;;;;;;x
-NF_OVERWRITE_ENTRY;即$NF$?\nin 佈$STATE$?;即$NF$?\nen 佈$STATE$?;即$NF$?\nin 佈$STATE$?;;;;;;;;;;;x
 PRESTIGE_MORALE_BONUS;Morale bonus: 即$VAL$?;Bonus du moral : 即$VAL$?;Moral-Bonus: 即$VAL$?;;;;;;;;;;;x
 PRESTIGE_MAX_ORG_BONUS;Organization bonus: 即$VAL$?;Bonus pour l''organisation : 即$VAL$?;Organizationsbonus: 即$VAL$?;;;;;;;;;;;x
 PRESTIGE_PENALTY_ON_LEADER_TRANSFER_TITLE;Prestige penalty.;Penalite de prestige.;Prestige-Strafe.;;;;;;;;;;;x
@@ -1723,9 +1716,6 @@ PRODUCTION_BONUS_POSSIBLE;Possible bonus from:;;Mogliche Boni durch:;;;;;;;;x
 COLONIZE_PHASE_INITIAL_INTEREST;Send expedition;;Expedition entsenden;;;;;;;;x
 COLONIZE_PHASE_INITIAL_INTEREST_DESC;The first step of influencing an area is to send an expedition. If it is not challenged in 即$DAYS$? days it will allow you to create a protectorate;;Der erste Schritt um Einfluss in einer Region zu erlangen ist das Entsenden einer Expedition. Falls keine andere Nation innerhalb von 即$DAYS$? Tagen ebenfalls Interesse anmeldet, konnen wir sofort ein Protektorat errichten.;;;;;;;;x
 INITIAL_COLONIZE_DEFAULT_TIME;If nobody competes with your expedition by 即$DATE$? you can skip directly to creating a protectorate;;Wenn keine andere Nation bis zum 即$DATE$? mit unserer Expedition konkurriert, konnen wir sofort ein Protektorat errichten.;;;;;;;;x
-COUNTRYALERT_ColonialGood_protectorate;佈We can create a protectorate in ?即$REGION$?;;佈Wir konnen ein Protektorat in ?即$REGION$?errichten!;;;;;;;;x
-COUNTRYALERT_ColonialGood_colony;佈We can create a colony in ?即$REGION$?;;佈Wir konnen eine Kolonie in ?即$REGION$?errichten!;;;;;;;;x
-COUNTRYALERT_ColonialGood_state;佈We can create a state in ?即$REGION$?;;佈Wir konnen einen Nationalstaat ?即$REGION$? Grunden!;;;;;;;;x
 COUNTRYALERT_ColonialBad_colonizationtimer;刪We need to create a protectorate in ?即$REGION$?刪 before 即$DATE$?刪 or lose it.?;;刪Wir mussen ein Protektorat in ?即$REGION$?刪 vor dem 即$DATE$?刪 errichten oder wir werden diese Region verlieren.?;;;;;;;;x
 COUNTRYALERT_ColonialBad_influence;刪We are losing the race in ?即$REGION$?;;刪Wir verlieren den Wettlauf um ?即$REGION$?;;;;;;;;x
 NON_COLONIAL_POWER;We are not a second rank nation or great power yet so we have no colonial power.;;Wir sind derzeit weder Sekundarmacht noch Grosmacht und haben daher keinerlei koloniale Einflusspunkte.;;;;;;;;;;;x
@@ -1819,9 +1809,6 @@ GREAT_WAR_CB_JUSTIFY_COST_DESC;Infamy cost deducted to 佈$PERC$%? of original co
 GREAT_WAR_CB_CONSTRUCTION_SPEED_DESC;At Great War with 即$TARGET$?;En Grande Guerre contre 即$TARGET$?;In einem Grosen Krieg mit 即$TARGET$?;;;;;;;;;;;x
 WAR_GOAL_SUCCESS_PRESTIGE_CHANGE;If we complete this wargoal, we will gain $PRES$ prestige.;Si nous atteignons ce but de guerre, nous gagnerons $PRES$ points de prestige.;Beim erreichen von diesem Kriegsziel, erhalten wir $PRES$ Prestige.;;;;;;;;;;;x
 WAR_GOAL_FAILURE_PRESTIGE_CHANGE;If we fail to achieve this wargoal, we will lose $PRES$ prestige.;Si nous n'atteignons pas ce but de guerre, nous perdrons $PRES$ points de prestige.;Bei einem Fehlschlag von diesem Kriegsziel, verlieren wir $PRES$ Prestige.;;;;;;;;;;;x
-POP_INTERNAL_MIGRATION;即$NUM$? people intend to move to other national provinces.;即$NUM$? personnes ont l'intention de migrer vers d'autres provinces du pays.;即$NUM$? Personen haben die Tendenz in eine andere Nationale Provinz zu migireren.;;;;;;;;;;;x
-POP_EXTERNAL_MIGRATION;即$NUM$? people intend to move to another country.;即$NUM$? personnes ont l'intention de migrer vers un autre pays.;即$NUM$? Personen haben die Tendenz in eine andere Nation zu emigrieren.;;;;;;;;;;;x
-POP_COLONIAL_MIGRATION;即$NUM$? people intend to move to the colonies.;即$NUM$? personnes ont l'intention de migrer vers les colonies.;即$NUM$? Personen haben die Tendenz in eine unserer Kolonien zu migrieren.;;;;;;;;;;;x
 INVESTED_IN_US_SETUP;When a country invests in us;Quand un pays investit chez nous;Wenn eine andere Nation in unserer investiert;;;;;;;;;;;x
 INVESTED_IN_US_HEADER;Foreign Investment;Investissement etranger;Auslandische Investitionen;;;;;;;;;;;x
 INVESTED_IN_US_1;$ICOUNTRY$ has invested in us!;$ICOUNTRY$ a investi chez nous !;$ICOUNTRY$ hat bei uns investiert!;;;;;;;;;;;x
