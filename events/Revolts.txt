@@ -18,7 +18,7 @@ country_event = {
 				owner = {
 					OR = {
 						government = democracy
-						government = ent_realm
+						government = hobbit_realm
 					}
 					vote_franschise = universal_weighted_voting
 				}
@@ -30,7 +30,7 @@ country_event = {
 				owner = {
 					OR = {
 						government = democracy
-						government = ent_realm
+						government = hobbit_realm
 					}
 					vote_franschise = wealth_voting
 				}
@@ -43,7 +43,7 @@ country_event = {
 				owner = {
 					OR = {
 						government = democracy
-						government = ent_realm
+						government = hobbit_realm
 					}
 					vote_franschise = wealth_weighted_voting
 				}
@@ -56,7 +56,7 @@ country_event = {
 				owner = {
 					OR = {
 						government = democracy
-						government = ent_realm
+						government = hobbit_realm
 					}
 					vote_franschise = landed_voting
 				}
@@ -66,12 +66,12 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					is_culture_group = ents
-					NOT = { government = ent_realm }
+					is_culture_group = hobbits
+					NOT = { government = hobbit_realm }
 				}
 			}
 			owner = {
-				government = ent_realm
+				government = hobbit_realm
 				political_reform = landed_voting
 				set_country_flag = democratic
 				election = yes
@@ -80,7 +80,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { is_culture_group = ents }
+					NOT = { is_culture_group = hobbits }
 					NOT = { government = democracy }
 				}
 			}
@@ -143,7 +143,7 @@ country_event = {
 				owner = {
 					OR = {
 						government = democracy
-						government = ent_realm
+						government = hobbit_realm
 					}
 				}
 			}
@@ -214,6 +214,17 @@ country_event = {
 		clr_country_flag = outside_good_influences
 		clr_country_flag = outside_neutral_influences
 		clr_country_flag = outside_evil_influences
+		
+		random_owned = {
+			limit = {
+				owner = {
+					government = dark_realm
+					government = sauron_dictatorship
+					government = nazgul_dictatorship
+				}
+			}
+			owner = { government = monarchy }
+		}
 	}
 }
 
@@ -245,7 +256,6 @@ country_event = {
 			owner = { remove_accepted_culture = neutral_culture }
 		}
 		
-		
 		political_reform = evil_alignment
 		add_accepted_culture = evil_culture
 		
@@ -257,6 +267,22 @@ country_event = {
 		clr_country_flag = outside_good_influences
 		clr_country_flag = outside_neutral_influences
 		clr_country_flag = outside_evil_influences
+		
+		random_owned = {
+			limit = {
+				NOT = {
+					owner = {
+						government = dark_realm
+						government = sauron_dictatorship
+						government = nazgul_dictatorship
+					}
+				}
+			}
+			owner = {
+				government = dark_realm
+				political_reform = none_voting
+			}
+		}
 	}
 }
 
@@ -296,6 +322,17 @@ country_event = {
 		clr_country_flag = outside_good_influences
 		clr_country_flag = outside_neutral_influences
 		clr_country_flag = outside_evil_influences
+		
+		random_owned = {
+			limit = {
+				owner = {
+					government = dark_realm
+					government = sauron_dictatorship
+					government = nazgul_dictatorship
+				}
+			}
+			owner = { government = monarchy }
+		}
 	}
 }
 

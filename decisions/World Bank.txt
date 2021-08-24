@@ -173,7 +173,7 @@ political_decisions = {
 				limit = {
 					OR = {
 						government = democracy
-						government = ent_realm
+						government = hobbit_realm
 					}
 				}
 				set_country_flag = democratic
@@ -517,7 +517,7 @@ political_decisions = {
 				any_neighbor_country = {
 					has_country_flag = democratic
 					NOT = {
-						government = ent_realm
+						government = hobbit_realm
 						government = democracy
 					}
 				}
@@ -525,7 +525,7 @@ political_decisions = {
 				any_neighbor_country = {
 					NOT = { has_country_flag = democratic }
 					OR = {
-						government = ent_realm
+						government = hobbit_realm
 						government = democracy
 					}
 				}
@@ -541,12 +541,12 @@ political_decisions = {
 					has_country_flag = democratic
 					OR = {
 						AND = {
-							NOT = { government = ent_realm }
-							is_culture_group = ents
+							NOT = { government = hobbit_realm }
+							is_culture_group = hobbits
 						}
 						AND = {
 							NOT = { government = democracy }
-							NOT = { is_culture_group = ents }
+							NOT = { is_culture_group = hobbits }
 						}
 					}
 				}
@@ -556,7 +556,7 @@ political_decisions = {
 				limit = {
 					NOT = { has_country_flag = democratic }
 					OR = {
-						government = ent_realm
+						government = hobbit_realm
 						government = democracy
 					}
 				}
@@ -573,7 +573,7 @@ political_decisions = {
 				vote_franschise = landed_voting
 				NOT = {
 					OR = {
-						government = ent_realm
+						government = hobbit_realm
 						government = democracy
 					}
 				}
@@ -587,19 +587,19 @@ political_decisions = {
 				limit = {
 					has_country_flag = attempting_to_democratic
 					vote_franschise = landed_voting
-					is_culture_group = ents
-					NOT = { government = ent_realm }
+					is_culture_group = hobbits
+					NOT = { government = hobbit_realm }
 				}
 				clr_country_flag = attempting_to_democratic
 				set_country_flag = democratic
-				government = ent_realm
+				government = hobbit_realm
 				election = yes
 			}
 			any_neighbor_country = {
 				limit = {
 					has_country_flag = attempting_to_democratic
 					vote_franschise = landed_voting
-					NOT = { is_culture_group = ents }
+					NOT = { is_culture_group = hobbits }
 					NOT = { government = democracy }
 				}
 				clr_country_flag = attempting_to_democratic

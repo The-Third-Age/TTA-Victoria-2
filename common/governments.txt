@@ -1,7 +1,7 @@
 #######################
 ##### DEMOCRACIES #####
 #######################
-# Mayor
+# Lord (generic democracy)
 democracy = {
 	servants = yes
 	high_nobility = yes
@@ -16,9 +16,8 @@ democracy = {
 	flagType = republic
 }
 
-# Special democracy for Ent realms
-# Lord
-ent_realm = {
+# Mayor (Special democracy for Hobbit realms)
+hobbit_realm = {
 	high_nobility = yes
 	low_nobility = yes
 	burgher = yes
@@ -34,8 +33,34 @@ ent_realm = {
 ######################
 ##### MONARCHIES #####
 ######################
-# King
+# King (generic monarchy)
 monarchy = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+
+# Prince (generic monarchy)
+principality = {
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	fundamentalist = yes
+	loremaster = yes
+	
+	election = no
+	appoint_ruling_party = yes
+	flagType = monarchy
+}
+
+# Lord (generic monarchy)
+lord_monarchy = {
 	high_nobility = yes
 	low_nobility = yes
 	burgher = yes
@@ -49,19 +74,6 @@ monarchy = {
 
 # Steward (Special monarchy for Gondor)
 stewardship = {
-	high_nobility = yes
-	low_nobility = yes
-	burgher = yes
-	fundamentalist = yes
-	loremaster = yes
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
-
-# Prince
-principality = {
 	high_nobility = yes
 	low_nobility = yes
 	burgher = yes
@@ -99,26 +111,18 @@ galadhrim_monarchy = {
 	flagType = monarchy
 }
 
-# Lord
-lord_monarchy = {
-	high_nobility = yes
-	low_nobility = yes
-	burgher = yes
-	fundamentalist = yes
-	loremaster = yes
-	
-	election = no
-	appoint_ruling_party = yes
-	flagType = monarchy
-}
-
 #########################
 ##### DICTATORSHIPS #####
 #########################
-# Not necessarily evil
+# Lord (generic evil realm)
+dark_realm = {
+	servants = yes
+	
+	election = no
+	appoint_ruling_party = yes
+}
 
-# Special government for realms lead by Sauron
-# Dark Lord
+# Dark Lord (Special government for realms lead by Sauron)
 sauron_dictatorship = {
 	servants = yes
 	
@@ -126,8 +130,7 @@ sauron_dictatorship = {
 	appoint_ruling_party = yes
 }
 
-# Special government for realms lead by a Nazgul
-# Lord
+# Lord (Special government for realms lead by a Nazgul)
 nazgul_dictatorship = {
 	servants = yes
 	
@@ -135,8 +138,7 @@ nazgul_dictatorship = {
 	appoint_ruling_party = yes
 }
 
-# Special government for realms lead by a Wizard
-# Lord
+# Lord (Special government for realms lead by a Wizard)
 istari_kingdom = {
 	high_nobility = yes
 	low_nobility = yes
