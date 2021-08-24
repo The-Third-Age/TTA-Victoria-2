@@ -418,6 +418,7 @@ political_decisions = {
 			owns = 11
 			11 = {
 				has_province_modifier = gondorification
+				is_core = DRU
 			}
 		}
 		
@@ -431,9 +432,11 @@ political_decisions = {
 		}
 		
 		effect = {
-			remove_province_modifier = gondorification
-			remove_province_modifier = nationalist_resistance
-			11 = { remove_core = DRU }
+			11 = { 
+				remove_province_modifier = gondorification
+				remove_province_modifier = nationalist_resistance
+				remove_core = DRU
+			}
 		}
 	}
 	
