@@ -526,7 +526,10 @@ political_decisions = {
 		}
 		
 		allow = {
-			soldiers = 0.027
+			OR = {
+				soldiers = 0.027
+				has_country_modifier = encouraging_outside_military_recruitment
+			}
 			military_score = 50
 		}
 		
@@ -1122,8 +1125,7 @@ political_decisions = {
 				clr_country_flag = attempting_to_neutral
 				clr_country_flag = attempting_to_evil
 				government = fiefdom
-				primary_culture = gondorian
-				add_accepted_culture = harnendan
+				add_accepted_culture = gondorian
 			}
 		}
 	}
