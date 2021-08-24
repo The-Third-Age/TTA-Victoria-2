@@ -163,7 +163,7 @@ cut_stone_factory = {
 	}		# Total	  60 + 0.33 = 60.33
 
 	output_goods = cut_stone
-	value = 50 # 75
+	value = 25 # 75
 	
 	bonus = {
 		trigger = { trade_goods_in_state = rock }
@@ -346,6 +346,19 @@ glass_factory = {
 	value = 18	# 43.5
 	bonus = {
 		trigger = { trade_goods_in_state = coal }
+		value = 0.25
+	}
+}
+
+dye_factory = {       
+	template = factory_template
+	input_goods = {            
+		food = 5	# 10
+	}		# Total   10 + 0.635 = 10.835
+	output_goods = dye 
+	value = 1.1	# 13.2
+	bonus = {
+		trigger = { trade_goods_in_state = food }
 		value = 0.25
 	}
 }
@@ -603,7 +616,7 @@ artisan_cut_stone = {
 	}
 
 	output_goods = cut_stone
-	value = 50
+	value = 25
 	owner = {
 		poptype = artisan 
 		effect = output
@@ -787,6 +800,42 @@ artisan_glass = {
 	
 	owner = {
 		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 10000
+}
+
+artisan_dye = {       
+	input_goods = {            
+		food = 5	# 10
+	}
+	output_goods = dye 
+	value = 1.1
+	
+	owner = {
+		poptype = artisan 
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 10000
+}
+
+##### ARTISAN ONLY #####
+
+artisan_horse_to_food = {
+	input_goods = {
+		horses = 2	# 16
+	}
+	output_goods = food
+	value = 9	# 18
+	
+	owner = {
+		poptype = artisan
 		effect = output
 	}
 	

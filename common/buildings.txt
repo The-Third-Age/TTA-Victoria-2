@@ -4,7 +4,7 @@ will_never_be_unlocked = {
 	type = factory
 	
 	on_completion = factory
-	conpletion_size = 0.2
+	completion_size = 0.2
 	max_level = 1
 	goods_cost = { }
 	time = 1
@@ -329,6 +329,26 @@ glass_factory = {
 	onmap = no
 		
 	production_type = glass_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+dye_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost =
+	{
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+		
+	production_type = dye_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
