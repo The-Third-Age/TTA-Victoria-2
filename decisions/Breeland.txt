@@ -1,0 +1,38 @@
+# Breeland Decisions: {
+#	Starting Decision
+#	Province Flavor }
+
+# Starting Decision
+political_decisions = {
+	bree_start_decision = {
+		potential = {
+			tag = BRE
+			always = no
+		}
+		
+		allow = {}
+		
+		effect = {
+		}
+	}
+}
+
+# Province Flavor
+political_decisions = {
+	friggin_bree = {
+		picture = "bree"
+		potential = {
+			owns = 1013
+			tag = BRE
+			has_global_flag = memes_enabled
+			1013 = { NOT = { has_province_modifier = friggin_bree_mod } }
+			taxes_3 = 1
+		}
+		
+		allow = {}
+		
+		effect = {
+			1013 = { add_province_modifier = { name = friggin_bree_mod duration = -1 } }
+		}
+	}
+}

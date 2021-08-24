@@ -58,6 +58,20 @@ political_decisions = {
 		}
 	}
 	
+	enable_memes = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = memes_enabled }
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = memes_enabled
+		}
+	}
+	
 	enable_fluff = {
 		potential = {
 			ai = no
