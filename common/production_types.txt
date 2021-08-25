@@ -91,7 +91,7 @@ melee_gear_factory = {
 	template = factory_template
 	input_goods = { 
 		steel = 8	# 37.6	
-		timber = 2	#  1.8
+		timber = 1	#  1.8
 	}		# Total	  39.4 + 0.635 = 40.035
 	
 	output_goods = melee_gear 
@@ -110,7 +110,7 @@ melee_gear_factory = {
 ranged_gear_factory = {       
 	template = factory_template
 	input_goods = { 
-		timber = 10	# 9
+		timber = 5	# 9
 		iron = 2	# 7
 	}		# Total	 16 + 0.635 = 15.635
 	
@@ -159,7 +159,7 @@ clipper_shipyard = {
 cut_stone_factory = {       
 	template = construction_good_factory_template
 	input_goods = { 
-		rock = 50	# 60
+		rock = 100	# 60
 	}		# Total	  60 + 0.33 = 60.33
 
 	output_goods = cut_stone
@@ -174,7 +174,7 @@ cut_stone_factory = {
 lumber_mill = {       
 	template = construction_good_factory_template
 	input_goods = {       
-		timber = 100	# 90
+		timber = 50	# 90
 	}			# Total   90 + 0.33 = 90.33
 	
 	output_goods = lumber
@@ -210,7 +210,7 @@ steel_factory = {
 charcoal_factory = {
 	template = factory_template
 	input_goods = {
-		timber = 10 # 9
+		timber = 5 # 9
 	}		# Total # 9 + 0.635 = 9.635
 	
 	output_goods = coal
@@ -251,7 +251,7 @@ furniture_factory = {
 paper_mill = {       
 	template = factory_template
 	input_goods = { 
-		timber = 50	#45
+		timber = 25	#45
 	}		# Total  45 + 0.635 = 45.635
 	
 	output_goods = paper 
@@ -440,7 +440,7 @@ RGO_template_clerks = {
 rock_quarry = {
 	template = RGO_template_labourers
 	output_goods = rock
-	value = 20
+	value = 10
 	mine = yes
 }
 
@@ -555,7 +555,7 @@ artisan_melee_gear = {
 	template = factory_template
 	input_goods = { 
 		steel = 8	# 37.6	
-		timber = 2	#  1.8
+		timber = 1	#  1.8
 	}
 	output_goods = melee_gear 
 	value = 2.5
@@ -572,7 +572,7 @@ artisan_melee_gear = {
 artisan_ranged_gear = {       
 	template = factory_template
 	input_goods = { 
-		timber = 10	# 9
+		timber = 5	# 9
 		iron = 2	# 7
 	}
 	output_goods = ranged_gear 
@@ -612,7 +612,7 @@ artisan_clipper = {
 artisan_cut_stone = {       
 	template = factory_template
 	input_goods = { 
-		rock = 50	# 60
+		rock = 100	# 60
 	}
 
 	output_goods = cut_stone
@@ -629,7 +629,7 @@ artisan_cut_stone = {
 
 artisan_lumber = {       
 	input_goods = {       
-		timber = 100	# 90
+		timber = 50	# 90
 	}
 	output_goods = lumber 
 	
@@ -669,7 +669,7 @@ artisan_steel = {
 
 artisan_charcoal = {
 	input_goods = {
-		timber = 10 # 9
+		timber = 5 # 9
 	}
 	
 	output_goods = coal
@@ -707,7 +707,7 @@ artisan_furniture = {
 
 artisan_paper = {       
 	input_goods = { 
-		timber = 50	#45
+		timber = 25	#45
 	}
 	output_goods = paper 
 	value = 20
