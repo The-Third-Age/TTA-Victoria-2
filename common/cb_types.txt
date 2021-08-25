@@ -541,6 +541,10 @@ acquire_core_state = {
 			value = 0.25
 		}
 	}
+	
+	on_po_accepted = {
+		country_event = 2506
+	}
 }
 
 annex_core_country = {
@@ -907,6 +911,7 @@ free_peoples = {
 	# scope = country that had owned the provinces
 	# THIS = country that applied wargoal
 	on_po_accepted = {
+		country_event = 2507
 		any_country = { 
 			limit = {
 				has_country_flag = possible_free_peoples_target
@@ -1061,6 +1066,7 @@ liberate_country = {
 	# scope = country that had owned the provinces
 	# THIS = country that applied wargoal
 	on_po_accepted = {
+		country_event = 2507
 		any_country = { 
 			limit = {
 				has_country_flag = possible_liberate_realm_target
