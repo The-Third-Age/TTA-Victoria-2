@@ -362,13 +362,16 @@ fort = {
 		lumber = 100
 		cut_stone = 200
 		artillery = 20
+		melee_gear = 5
+		ranged_gear = 5
 	}
-	time = 1080 
+	time = 365 
 	visibility = yes
 	onmap = yes
 	max_level = 6
 	province = yes
 	fort_level = 1
+	pop_build_factory = yes
 }
 
 naval_base = {    
@@ -380,17 +383,18 @@ naval_base = {
 		lumber = 50
 		cut_stone = 100
 	}
-	time = 1080
+	time = 365
 	naval_capacity = 1
 	capital = yes
 	onmap = yes
 	port = yes
 	visibility = yes
 	max_level = 6
-	colonial_points = { 30 50 70 90 110 130 } #points at levels 1-6
+	colonial_points = { 0 0 0 0 0 0 }
 	province = yes
 	colonial_range = 50
 	local_ship_build = -0.10
+	pop_build_factory = yes
 }
        
 railroad = {   
@@ -400,7 +404,7 @@ railroad = {
 		timber = 100
 		cut_stone = 100
 	}
-	time = 720
+	time = 180
 	visibility = yes
 	onmap = yes
 	max_level = 6
