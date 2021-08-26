@@ -29,7 +29,7 @@ factory_template = {
 
 construction_good_factory_template = {
 	efficiency = {
-		rock = 0.2		# 0.24
+		rock = 0.1		# 0.24
 		timber = 0.1	# 0.09
 	}			# Total	  0.33
 	
@@ -66,7 +66,7 @@ artillery_factory = {
 	input_goods = { 
 		steel = 8	# 37.6
 		lumber = 30 # 30
-		rock = 1	#  1.2
+		rock = 0.5	#  1.2
 	}		# Total	  68.8 + 0.635 = 69.435	
 	
 	output_goods = artillery 
@@ -159,11 +159,11 @@ clipper_shipyard = {
 cut_stone_factory = {       
 	template = construction_good_factory_template
 	input_goods = { 
-		rock = 100	# 60
+		rock = 25	# 60
 	}		# Total	  60 + 0.33 = 60.33
 
 	output_goods = cut_stone
-	value = 25 # 75
+	value = 6.25 # 75
 	
 	bonus = {
 		trigger = { trade_goods_in_state = rock }
@@ -440,7 +440,7 @@ RGO_template_clerks = {
 rock_quarry = {
 	template = RGO_template_labourers
 	output_goods = rock
-	value = 10
+	value = 3
 	mine = yes
 }
 
@@ -536,7 +536,7 @@ artisan_artillery = {
 	input_goods = { 
 		steel = 8	# 37.6
 		lumber = 30 # 30
-		rock = 1	#  1.2
+		rock = 0.5	#  1.2
 	}
 	output_goods = artillery 
 	value = 1.3
@@ -612,11 +612,11 @@ artisan_clipper = {
 artisan_cut_stone = {       
 	template = factory_template
 	input_goods = { 
-		rock = 100	# 60
+		rock = 25	# 60
 	}
 
 	output_goods = cut_stone
-	value = 25
+	value = 6.25
 	owner = {
 		poptype = artisan 
 		effect = output
@@ -833,6 +833,74 @@ artisan_horse_to_food = {
 	}
 	output_goods = food
 	value = 9	# 18
+	
+	owner = {
+		poptype = artisan
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 10000
+}
+
+artisan_food_to_horse = {
+	input_goods = {
+		food = 10	# 20
+	}
+	output_goods = horses
+	value = 3	# 24
+	
+	owner = {
+		poptype = artisan
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 10000
+}
+
+artisan_tea_to_food = {
+	input_goods = {
+		tea = 5		# 13
+	}
+	output_goods = food
+	value = 8	# 16
+	
+	owner = {
+		poptype = artisan
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 10000
+}
+
+artisan_food_to_tea = {
+	input_goods = {
+		food = 3	# 6
+	}
+	output_goods = tea
+	value = 3	# 7.8
+	
+	owner = {
+		poptype = artisan
+		effect = output
+	}
+	
+	type = artisan
+	
+	workforce = 10000
+}
+
+artisan_liquor_to_food = {
+	input_goods = {
+		liquor = 2	# 12.8
+	}
+	output_goods = food
+	value = 7	# 14
 	
 	owner = {
 		poptype = artisan
