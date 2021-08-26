@@ -37,10 +37,6 @@ issues = {
 	good_alignment_fake = {
 		factor = 5
 		modifier = {
-			factor = 2
-			country = { has_country_flag = outside_good_influences }
-		}
-		modifier = {
 			factor = 1.25
 			country = { any_neighbor_country = { good_evil_alignment = good_alignment } }
 		}
@@ -62,13 +58,13 @@ issues = {
 				country = { has_country_flag = attempting_to_evil }
 			}
 		}
+		modifier = {
+			factor = 1.1
+			has_pop_religion = elven
+		}
 	}
 	neutral_alignment_fake = {
 		factor = 5
-		modifier = {
-			factor = 2
-			country = { has_country_flag = outside_neutral_influences }
-		}
 		modifier = {
 			factor = 1.25
 			country = { any_neighbor_country = { good_evil_alignment = neutral_alignment } }
@@ -95,10 +91,6 @@ issues = {
 	evil_alignment_fake = {
 		factor = 5
 		modifier = {
-			factor = 2
-			country = { has_country_flag = outside_evil_influences }
-		}
-		modifier = {
 			factor = 1.25
 			country = { any_neighbor_country = { good_evil_alignment = evil_alignment } }
 		}
@@ -119,6 +111,10 @@ issues = {
 				country = { has_country_flag = attempting_to_good }
 				country = { has_country_flag = attempting_to_neutral }
 			}
+		}
+		modifier = {
+			factor = 1.1
+			has_pop_religion = orc
 		}
 	}
 	regional_autonomy = {

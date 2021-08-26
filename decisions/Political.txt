@@ -202,9 +202,6 @@ political_decisions = {
 			clr_country_flag = attempting_to_good
 			clr_country_flag = attempting_to_neutral
 			clr_country_flag = attempting_to_evil
-			clr_country_flag = outside_good_influences
-			clr_country_flag = outside_neutral_influences
-			clr_country_flag = outside_evil_influences
 			
 			any_pop = { dominant_issue = { value = good_alignment_fake factor = 0.1 } }
 		}
@@ -251,9 +248,6 @@ political_decisions = {
 			clr_country_flag = attempting_to_good
 			clr_country_flag = attempting_to_neutral
 			clr_country_flag = attempting_to_evil
-			clr_country_flag = outside_good_influences
-			clr_country_flag = outside_neutral_influences
-			clr_country_flag = outside_evil_influences
 			
 			any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 0.1 } }
 		}
@@ -300,9 +294,6 @@ political_decisions = {
 			clr_country_flag = attempting_to_good
 			clr_country_flag = attempting_to_neutral
 			clr_country_flag = attempting_to_evil
-			clr_country_flag = outside_good_influences
-			clr_country_flag = outside_neutral_influences
-			clr_country_flag = outside_evil_influences
 			
 			any_pop = { dominant_issue = { value = evil_alignment_fake factor = 0.1 } }
 		}
@@ -503,81 +494,6 @@ political_decisions = {
 		effect = {
 			set_country_flag = attempting_to_evil
 			dominant_issue = { value = evil_alignment_fake factor = 0.1 }
-		}
-	}
-	
-	influence_neighbors = {
-		potential = {
-			is_greater_power = yes
-			OR = {
-				AND = {
-					good_evil_alignment = good_alignment
-					any_neighbor_country = { NOT = { has_country_flag = outside_good_influences } }
-				}
-				AND = {
-					good_evil_alignment = neutral_alignment
-					any_neighbor_country = { NOT = { has_country_flag = outside_neutral_influences } }
-				}
-				AND = {
-					good_evil_alignment = evil_alignment
-					any_neighbor_country = { NOT = { has_country_flag = outside_evil_influences } }
-				}
-			}
-			OR = {
-				ai = yes
-				AND = {
-					ai = no
-					has_global_flag = viewing_government_decisions
-				}
-			}
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			random_owned = {
-				limit = {
-					owner = { good_evil_alignment = good_alignment }
-				}
-				owner = {
-					any_neighbor_country = {
-						limit = {
-							NOT = { has_country_flag = outside_good_influences }
-						}
-						set_country_flag = outside_good_influences
-					}
-				}
-			}
-			
-			random_owned = {
-				limit = {
-					owner = { good_evil_alignment = neutral_alignment }
-				}
-				owner = {
-					any_neighbor_country = {
-						limit = {
-							NOT = { has_country_flag = outside_neutral_influences }
-						}
-						set_country_flag = outside_neutral_influences
-					}
-				}
-			}
-			
-			random_owned = {
-				limit = {
-					owner = { good_evil_alignment = evil_alignment }
-				}
-				owner = {
-					any_neighbor_country = {
-						limit = {
-							NOT = { has_country_flag = outside_evil_influences }
-						}
-						set_country_flag = outside_evil_influences
-					}
-				}
-			}
 		}
 	}
 }

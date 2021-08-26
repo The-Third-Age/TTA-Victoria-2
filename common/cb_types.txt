@@ -128,9 +128,6 @@ add_to_sphere = {
 				clr_country_flag = attempting_to_good
 				clr_country_flag = attempting_to_neutral
 				clr_country_flag = attempting_to_evil
-				set_country_flag = outside_good_influences
-				clr_country_flag = outside_neutral_influences
-				clr_country_flag = outside_evil_influences
 					
 				any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
 			}
@@ -148,9 +145,6 @@ add_to_sphere = {
 				clr_country_flag = attempting_to_good
 				clr_country_flag = attempting_to_neutral
 				clr_country_flag = attempting_to_evil
-				clr_country_flag = outside_good_influences
-				set_country_flag = outside_neutral_influences
-				clr_country_flag = outside_evil_influences
 					
 				any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
 			}
@@ -168,9 +162,6 @@ add_to_sphere = {
 				clr_country_flag = attempting_to_good
 				clr_country_flag = attempting_to_neutral
 				clr_country_flag = attempting_to_evil
-				clr_country_flag = outside_good_influences
-				clr_country_flag = outside_neutral_influences
-				set_country_flag = outside_evil_influences
 					
 				any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
 			}
@@ -202,23 +193,6 @@ take_from_sphere = {
 	can_use = {
 		THIS = { is_greater_power = yes }
 		is_greater_power = yes
-		# OR = {
-			# AND = {
-				# THIS = { good_evil_alignment = good_alignment }
-				# OR = {
-					# any_sphere_member = { good_evil_alignment = good_alignment }
-					# any_sphere_member = { good_evil_alignment = neutral_alignment }
-				# }
-			# }
-			# AND = {
-				# THIS = { good_evil_alignment = evil_alignment }
-				# OR = {
-					# any_sphere_member = { good_evil_alignment = neutral_alignment }
-					# any_sphere_member = { good_evil_alignment = evil_alignment }
-				# }
-			# }
-			# THIS = { good_evil_alignment = neutral_alignment }
-		# }
 	}
 	
 	# scope = country being taken from sphere
@@ -230,18 +204,6 @@ take_from_sphere = {
 			FROM = { is_vassal = no }
 			THIS = { is_our_vassal = FROM }
 		}
-		# OR = {
-			# AND = {
-				# THIS = { good_evil_alignment = good_alignment }
-				# NOT = { good_evil_alignment = evil_alignment }
-			# }
-			# AND = {
-				# THIS = { good_evil_alignment = evil_alignment }
-				# NOT = { good_evil_alignment = good_alignment }
-			# }
-			# THIS = { good_evil_alignment = neutral_alignment }
-			# good_evil_alignment = neutral_alignment
-		# }
 	}
 	
 	po_add_to_sphere = yes
@@ -291,9 +253,6 @@ take_from_sphere = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					set_country_flag = outside_good_influences
-					clr_country_flag = outside_neutral_influences
-					clr_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
 				}
@@ -311,9 +270,6 @@ take_from_sphere = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					clr_country_flag = outside_good_influences
-					set_country_flag = outside_neutral_influences
-					clr_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
 				}
@@ -331,9 +287,6 @@ take_from_sphere = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					clr_country_flag = outside_good_influences
-					clr_country_flag = outside_neutral_influences
-					set_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
 				}
@@ -939,9 +892,6 @@ free_peoples = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					set_country_flag = outside_good_influences
-					clr_country_flag = outside_neutral_influences
-					clr_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
 				}
@@ -959,9 +909,6 @@ free_peoples = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					clr_country_flag = outside_good_influences
-					set_country_flag = outside_neutral_influences
-					clr_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
 				}
@@ -979,9 +926,6 @@ free_peoples = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					clr_country_flag = outside_good_influences
-					clr_country_flag = outside_neutral_influences
-					set_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
 				}
@@ -1094,9 +1038,6 @@ liberate_country = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					set_country_flag = outside_good_influences
-					clr_country_flag = outside_neutral_influences
-					clr_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
 				}
@@ -1114,9 +1055,6 @@ liberate_country = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					clr_country_flag = outside_good_influences
-					set_country_flag = outside_neutral_influences
-					clr_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
 				}
@@ -1134,9 +1072,6 @@ liberate_country = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					clr_country_flag = outside_good_influences
-					clr_country_flag = outside_neutral_influences
-					set_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
 				}
@@ -1227,7 +1162,6 @@ release_puppet = {
 	# war target country of goal is scope
 	allowed_countries = {
 		is_our_vassal = FROM
-		# FROM = { is_substate = no }
 	}
 	
 	po_release_puppet = yes
@@ -1281,9 +1215,6 @@ release_puppet = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					set_country_flag = outside_good_influences
-					clr_country_flag = outside_neutral_influences
-					clr_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
 				}
@@ -1301,9 +1232,6 @@ release_puppet = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					clr_country_flag = outside_good_influences
-					set_country_flag = outside_neutral_influences
-					clr_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
 				}
@@ -1321,9 +1249,6 @@ release_puppet = {
 					clr_country_flag = attempting_to_good
 					clr_country_flag = attempting_to_neutral
 					clr_country_flag = attempting_to_evil
-					clr_country_flag = outside_good_influences
-					clr_country_flag = outside_neutral_influences
-					set_country_flag = outside_evil_influences
 					
 					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
 				}
@@ -1388,9 +1313,6 @@ make_puppet = {
 				clr_country_flag = attempting_to_good
 				clr_country_flag = attempting_to_neutral
 				clr_country_flag = attempting_to_evil
-				set_country_flag = outside_good_influences
-				clr_country_flag = outside_neutral_influences
-				clr_country_flag = outside_evil_influences
 					
 				any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
 			}
@@ -1408,9 +1330,6 @@ make_puppet = {
 				clr_country_flag = attempting_to_good
 				clr_country_flag = attempting_to_neutral
 				clr_country_flag = attempting_to_evil
-				clr_country_flag = outside_good_influences
-				set_country_flag = outside_neutral_influences
-				clr_country_flag = outside_evil_influences
 					
 				any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
 			}
@@ -1428,9 +1347,6 @@ make_puppet = {
 				clr_country_flag = attempting_to_good
 				clr_country_flag = attempting_to_neutral
 				clr_country_flag = attempting_to_evil
-				clr_country_flag = outside_good_influences
-				clr_country_flag = outside_neutral_influences
-				set_country_flag = outside_evil_influences
 					
 				any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
 			}

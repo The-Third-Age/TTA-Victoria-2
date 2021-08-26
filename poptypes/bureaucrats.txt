@@ -1037,18 +1037,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			strata = middle
-		}
-		modifier = {
-			factor = 1.5
-			strata = poor
-		}
-		modifier = {
-			factor = 2
-			country = { has_country_flag = outside_good_influences }
-		}
-		modifier = {
-			factor = 1.25
 			country = { any_neighbor_country = { good_evil_alignment = good_alignment } }
 		}
 		modifier = {
@@ -1068,6 +1056,10 @@ issues = {
 				is_vassal = yes
 				overlord = { good_evil_alignment = good_alignment }
 			}
+		}
+		modifier = {
+			factor = 1.1
+			has_pop_religion = elven
 		}
 	}
 	neutral_alignment_fake = {
@@ -1096,10 +1088,6 @@ issues = {
 			factor = 1.1
 			everyday_needs = 0.75
 			country = { good_evil_alignment = neutral_alignment }
-		}
-		modifier = {
-			factor = 2
-			country = { has_country_flag = outside_neutral_influences }
 		}
 		modifier = {
 			factor = 1.25
@@ -1153,18 +1141,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			strata = middle
-		}
-		modifier = {
-			factor = 1.5
-			strata = rich
-		}
-		modifier = {
-			factor = 2
-			country = { has_country_flag = outside_evil_influences }
-		}
-		modifier = {
-			factor = 1.25
 			country = { any_neighbor_country = { good_evil_alignment = evil_alignment } }
 		}
 		modifier = {
@@ -1184,6 +1160,10 @@ issues = {
 				country = { has_country_flag = attempting_to_good }
 				country = { has_country_flag = attempting_to_neutral }
 			}
+		}
+		modifier = {
+			factor = 1.1
+			has_pop_religion = orc
 		}
 	}
 	##########################

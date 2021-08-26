@@ -15,15 +15,12 @@
 ## Good-Evil Alignment
 ### Good Flags
  - attempting_to_good (country)
- - outside_good_influences (country)
 
 ### Neutral Flags
  - attempting_to_neutral (country)
- - outside_neutral_influences (country)
 
 ### Evil Flags
  - attempting_to_evil (country)
- - outside_evil_influences (country)
 
 ## Government Flags
 ### Democracy
