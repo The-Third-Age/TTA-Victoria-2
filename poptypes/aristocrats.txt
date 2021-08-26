@@ -75,8 +75,43 @@ country_migration_target = {
 		unemployment = 0.5
 	}
 	modifier = {
-		factor = 2.0
+		factor = 1.25
 		has_pop_culture = THIS
+	}
+	modifier = {
+		factor = 2
+		is_culture_group = THIS
+	}
+	modifier = {
+		factor = 200
+		THIS = { has_pop_religion = men }
+		accepted_culture = men_culture
+	}
+	modifier = {
+		factor = 200
+		THIS = { has_pop_religion = elven }
+		accepted_culture = elven_culture
+		primary_culture = falathrim
+	}
+	modifier = {
+		factor = 200
+		THIS = { has_pop_religion = dwarven }
+		accepted_culture = dwarven_culture
+	}
+	modifier = {
+		factor = 200
+		THIS = { has_pop_religion = orc }
+		accepted_culture = orc_culture
+	}
+	modifier = {
+		factor = 200
+		THIS = { has_pop_religion = hobbit }
+		accepted_culture = hobbit_culture
+	}
+	modifier = {
+		factor = 200
+		THIS = { has_pop_religion = ent }
+		accepted_culture = ent_culture
 	}
 	modifier = {
 		factor = 0.1
@@ -104,9 +139,7 @@ migration_target = {
 	modifier = {
 		factor = 0.1
 		unemployment = 0.1
-		state_scope = {
-			has_factories = no
-		}
+		state_scope = { has_factories = no }
 	}
 	
 	modifier = {
@@ -129,9 +162,7 @@ migration_target = {
 	modifier = {
 		factor = 0
 		AND = {
-			state_scope = {
-				has_factories = no
-			}
+			state_scope = { has_factories = no }
 			can_build_factory = no
 		}
 		unemployment_by_type = { type = labourers value = 0.1 }
@@ -142,9 +173,7 @@ migration_target = {
 	}
 	modifier = {
 		factor = 2
-		state_scope = {
-			has_factories = yes
-		}
+		state_scope = { has_factories = yes }
 	}
 	modifier = {
 		factor = 1.2
@@ -156,9 +185,7 @@ migration_target = {
 	}
 	modifier = {
 		factor = 0.75
-		state_scope = {
-			is_slave = yes
-		}
+		state_scope = { is_slave = yes is_colonial = no }
 	}
 	modifier = {
 		factor = 2
@@ -169,12 +196,16 @@ migration_target = {
 		is_capital = yes
 	}
 	modifier = {
-		factor = 1.05
-		is_coastal = yes
+		factor = 2
+		life_rating = 35
 	}
 	modifier = {
 		factor = 2
 		life_rating = 40
+	}
+	modifier = {
+		factor = 2
+		life_rating = 45
 	}
 	modifier = {
 		factor = 2
