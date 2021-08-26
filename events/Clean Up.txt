@@ -120,6 +120,13 @@ country_event = {
 	option = {
 		name = "Never!"
 		
+		FROM = {
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+		}
+		
 		ai_chance = {
 			factor = 10
 			
