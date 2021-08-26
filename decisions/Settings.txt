@@ -145,6 +145,54 @@ political_decisions = {
 		}
 	}
 	
+	borders_closed = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = borders_closed }
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = borders_closed
+			clr_global_flag = borders_race
+			clr_global_flag = borders_open
+		}
+	}
+	
+	borders_race = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = borders_race }
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = borders_closed
+			set_global_flag = borders_race
+			clr_global_flag = borders_open
+		}
+	}
+	
+	borders_open = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = borders_open }
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = borders_closed
+			clr_global_flag = borders_race
+			set_global_flag = borders_open
+		}
+	}
+	
 	remove_infamy = {
 		potential = {
 			ai = no

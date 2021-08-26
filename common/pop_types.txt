@@ -430,6 +430,10 @@ colonialmigration_chance = {
 emigration_chance = {
 	factor = 0.5
 
+	modifier = {
+		factor = -100
+		country = { border_policy = closed_borders }
+	}
 	group = {
 		modifier = {
 			factor = 0.2

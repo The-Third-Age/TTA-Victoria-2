@@ -31,6 +31,7 @@ political_decisions = {
 			
 			# For settings
 			set_global_flag = no_soldier_chosen
+			set_global_flag = borders_closed
 			
 			# For Good Realms
 			any_country = {
@@ -782,6 +783,43 @@ political_decisions = {
 					slavery = yes_slavery
 				}
 				set_country_flag = has_all_slavery
+			}
+		}
+	}
+	
+	border_laws_clean_up = {
+		potential = {
+			tag = FOR
+			OR = {
+				AND = {
+					has_global_flag = borders_closed
+					any_neighbor_country = { NOT = { border_policy = closed_borders } }
+				}
+				AND = {
+					has_global_flag = borders_race
+					any_neighbor_country = { NOT = { border_policy = race_borders } }
+				}
+				AND = {
+					has_global_flag = borders_open
+					any_neighbor_country = { NOT = { border_policy = open_borders } }
+				}
+			}
+		}
+		
+		allow = {}
+		
+		effect = {
+			any_neighbor_country = {
+				limit = { has_global_flag = borders_closed }
+				political_reform = closed_borders
+			}
+			any_neighbor_country = {
+				limit = { has_global_flag = borders_race }
+				political_reform = race_borders
+			}
+			any_neighbor_country = {
+				limit = { has_global_flag = borders_open }
+				political_reform = open_borders
 			}
 		}
 	}
