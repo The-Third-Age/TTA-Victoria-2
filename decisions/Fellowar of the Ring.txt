@@ -12,6 +12,31 @@
 
 # Pre-Fellowship
 political_decisions = {
+	bilbos_111_birthday = {
+		potential = {
+			tag = FOR
+			year = 3001
+			NOT = { has_global_flag = bilbos_111_birthday_party }
+		}
+		
+		allow = {
+			NOT = { year = 3002 }
+			month = 8
+		}
+		
+		effect = {
+			1040 = {
+				owner = {
+					country_event = {
+						id = 50200
+						days = 20
+					}
+				}
+			}
+			set_global_flag = bilbos_111_birthday_party
+		}
+	}
+	
 	search_for_the_ring_hobbiton = {
 		picture = "bilbo_party"
 		potential = {
@@ -134,12 +159,23 @@ political_decisions = {
 
 # Council of Elrond
 political_decisions = {
+	# Special council_of_capital for Imladris
 	council_of_elrond = {
 		potential = {
-			FOR = { NOT = { check_variable = { which = ring_controller value = 0.9 } } } # Frodo
-			FOR = { check_variable = { which = ring_controller value = 1.1 } } # Frodo
-			year = 3000
-			good_evil_alignment = good_alignment
+			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+			NOT = { good_evil_alignment = evil_alignment }
+			nationalvalue = elrond
+			tag = IML
+			OR = {
+				has_country_flag = frodo_chose_us
+				FOR = {
+					any_neighbor_country = {
+						NOT = { has_country_flag = frodo_chose_us }
+						good_evil_alignment = good_alignment
+					}
+				}
+			}
 			NOT = { has_global_flag = the_council_of_elrond }	
 		}
 		
@@ -149,24 +185,15 @@ political_decisions = {
 				year = 3010
 			}
 			OR = {
-				AND = {
-					tag = IML
-					nationalvalue = elrond
-				}
-				AND = {
-					tag = IML
-					NOT = { nationalvalue = elrond }
-					is_greater_power = yes
-				}
-				AND = {
-					NOT = { tag = IML }
-					is_greater_power = yes
-					IML = {
-						NOT = { nationalvalue = elrond }
-						is_greater_power = no
+				has_country_flag = frodo_chose_us
+				FOR = {
+					any_neighbor_country = {
+						NOT = { has_country_flag = frodo_chose_us }
+						good_evil_alignment = good_alignment
 					}
 				}
 			}
+			NOT = { good_evil_alignment = evil_alignment }
 		}
 		
 		effect = {
@@ -181,11 +208,74 @@ political_decisions = {
 						is_greater_power = yes
 						is_secondary_power = yes
 					}
+					exists = yes
 				}
-				country_event = 50300
+				country_event = 50250
 			}
 			country_event = {
-				id = 50303
+				id = 50253
+				days = 3
+			}
+		}
+	}
+	
+	council_of_capital = {
+		picture = "council_of_elrond"
+		potential = {
+			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+			NOT = { good_evil_alignment = evil_alignment }
+			NOT = {
+				nationalvalue = elrond
+				tag = IML
+			}
+			OR = {
+				has_country_flag = frodo_chose_us
+				FOR = {
+					any_neighbor_country = {
+						NOT = { has_country_flag = frodo_chose_us }
+						good_evil_alignment = good_alignment
+					}
+				}
+			}
+			NOT = { has_global_flag = the_council_of_elrond }	
+		}
+		
+		allow = {
+			OR = {
+				diplomacy_5 = 1
+				year = 3010
+			}
+			OR = {
+				has_country_flag = frodo_chose_us
+				FOR = {
+					any_neighbor_country = {
+						NOT = { has_country_flag = frodo_chose_us }
+						good_evil_alignment = good_alignment
+					}
+				}
+			}
+			NOT = { good_evil_alignment = evil_alignment }
+		}
+		
+		effect = {
+			set_global_flag = the_council_of_elrond
+			set_country_flag = the_council_of_elrond_host
+			any_country = {
+				limit = {
+					good_evil_alignment = good_alignment
+					NOT = { tag = IML }
+					is_vassal = no
+					OR = {
+						is_greater_power = yes
+						is_secondary_power = yes
+					}
+					exists = yes
+				}
+				country_event = 50250
+			}
+			country_event = {
+				id = 50253
 				days = 3
 			}
 		}

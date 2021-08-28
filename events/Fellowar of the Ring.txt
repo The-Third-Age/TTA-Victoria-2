@@ -10,6 +10,7 @@
 
 # 50203 - Generic Owner Finds Ring
 
+# Prefellowship {
 # Bilbo's 111th Birthday
 country_event = {
 	id = 50200
@@ -446,6 +447,7 @@ country_event = {
 		owns = 1010
 		FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 		FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+		NOT = { has_global_flag = railroading_enabled }
 	}
 	
 	mean_time_to_happen = {
@@ -566,14 +568,15 @@ country_event = {
 		name = "Why didn't he choose us?"
 	}
 }
+# }
 
 # Council of Elrond {
 # An Invitation from Elrond
 country_event = {
-	id = 50300
+	id = 50250
 	picture = council_of_elrond
-	title = "An Invitation from Elrond"
-	desc = "EVTDESC50300"
+	title = "An Invitation from $FROMCOUNTRY$"
+	desc = "EVTDESC50250"
 	
 	is_triggered_only = yes
 	
@@ -582,7 +585,7 @@ country_event = {
 		
 		create_alliance = FROM
 		country_event = {
-			id = 50301
+			id = 50251
 			days = 1
 		}
 		
@@ -590,11 +593,16 @@ country_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = {
-					relation = {
-						who = FROM
-						value = 0
+				NOT = { has_global_flag = railroading_enabled }
+				OR = {
+					NOT = {
+						relation = {
+							who = FROM
+							from = -50
+						}
 					}
+					any_core = { owed_by = FROM }
+					truce_with = FROM
 				}
 			}
 		}
@@ -607,10 +615,7 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				relation = {
-					who = FROM
-					value = 0
-				}
+				has_global_flag = railroading_enabled
 			}
 		}
 	}
@@ -618,10 +623,10 @@ country_event = {
 
 # Voting on the formation of the Fellowship
 country_event = {
-	id = 50301
+	id = 50251
 	picture = council_of_elrond
 	title = "The Matter of the Fellowship"
-	desc = "EVTDESC50301"
+	desc = "EVTDESC50251"
 	
 	is_triggered_only = yes
 	
@@ -644,18 +649,20 @@ country_event = {
 		
 		prestige = -10
 		country_event = {
-			id = 50302
+			id = 50252
 			days = 1
 		}
+		
+		ai_chance = { factor = 0 }
 	}
 }
 
 # Consequenes of rejecting the Fellowship
 country_event = {
-	id = 50302
+	id = 50252
 	picture = council_of_elrond
 	title = "The Realms of the Fellowship"
-	desc = "EVTDESC50302"
+	desc = "EVTDESC50252"
 	
 	is_triggered_only = yes
 	
@@ -680,15 +687,15 @@ country_event = {
 
 # The Fellowship of the Ring
 country_event = {
-	id = 50303
+	id = 50253
 	picture = council_of_elrond
 	title = "The Fellowship of the Ring"
-	desc = "EVTDESC50303"
+	desc = "EVTDESC50253"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "§R9 companions... so be it.§!"
+		name = "§B9 companions... so be it.§!"
 		
 		prestige = 25
 		
@@ -711,6 +718,10 @@ country_event = {
 		
 		ai_chance = {
 			factor = 90
+			modifier = {
+				factor = 0
+				NOT = { FOR = { any_neighbor_country = { has_country_modifier = fellowship_member } } }
+			}
 		}
 	}
 	
@@ -739,13 +750,12 @@ country_event = {
 			}
 		}
 		
-		clr_country_flag = the_council_of_elrond_host
-		
 		ai_chance = {
 			factor = 10
 			modifier = {
 				factor = 0
 				has_global_flag = railroading_enabled
+				FOR = { any_neighbor_country = { has_country_modifier = fellowship_member } }
 			}
 		}
 	}

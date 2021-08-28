@@ -58,3 +58,7 @@
  - frodo_is_safe (global)
  - frodo_chose_us (country)
  
+### Council of Elrond
+ - the_council_of_elrond (global)
+ - the_council_of_elrond_host (country)
+ 
