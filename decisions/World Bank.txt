@@ -746,32 +746,3 @@ political_decisions = {
 		}
 	}
 }
-
-# AI Cheats
-political_decisions = {
-	help_ai_with_money = {
-		potential = {
-			tag = FOR
-			any_neighbor_country = { 
-				NOT = { money = 25000 }
-				ai = yes
-				war = no
-			}
-			money = 25000
-		}
-		
-		allow = {}
-		
-		effect = {
-			treasury = -25000
-			random_country = {
-				limit = {
-					NOT = { money = 25000 }
-					ai = yes
-					war = no
-				}
-				treasury = 25000
-			}
-		}
-	}
-}

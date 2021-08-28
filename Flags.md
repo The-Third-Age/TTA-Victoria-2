@@ -44,3 +44,11 @@
  - unciv_5 (global)
  - unciv_7 (global)
  - unciv_10 (global)
+ 
+## Fellowar of the Ring
+### Pre-Fellowship
+ - bilbos_111_birthday_party (global)
+ - hobbiton_search_for_ring (global)
+ - frodo_fled_shire (global)
+ - findings_of_gandalf (global)
+ - nine_hunting_frodo (global)

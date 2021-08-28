@@ -1,10 +1,308 @@
 # War of the Ring Events: {
-# 50300 - 50399 }
+# 50200 - 50399 }
 
 # ring_controller mapping:
 #	0 = Bilbo
 #	1 = Frodo
 #	2 = Fellowship
+#	3 = Other
+#	4 = Gollum
+
+# 50203 - Generic Owner Finds Ring
+
+# Bilbo's 111th Birthday
+country_event = {
+	id = 50200
+	picture = birthday
+	title = "Bilbo's 111th Birthday"
+	desc = "EVTDESC50200"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "A party of special magnificence!"
+		
+		prestige = 5
+		
+		FOR = {
+			# Gives the One Ring to Frodo
+			set_variable = {
+				which = ring_controller
+				value = 1 # Frodo
+			}
+			
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50201
+			}
+		}
+	}
+}
+
+# Frodo Acquires the Ring (Cosmetic)
+country_event = {
+	id = 50201
+	picture = frodo_ring
+	title = "Frodo Acquires the Ring"
+	desc = "EVTDESC50201"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "But that's just a magic ring!"
+	}
+}
+
+# Evil Hobbiton Owner Unable to Find Ring
+country_event = {
+	id = 50202
+	picture = frodo_ring
+	title = "We Have Failed to Acquire the One Ring"
+	desc = "EVTDESC50202"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Somehow Frodo slipped our grasps"
+		
+		prestige = -5
+		
+		scaled_militancy = {
+			factor = 4
+			issue = good_alignment_fake
+		}
+		
+		scaled_militancy = {
+			factor = 2
+			issue = neutral_alignment_fake
+		}
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50205
+			}
+		}
+		
+		set_global_flag = frodo_fled_shire
+	}
+}
+
+# Generic Owner Finds Ring
+country_event = {
+	id = 50203
+	picture = acquire_ring
+	title = "We Have Taken the One Ring"
+	desc = "EVTDESC50203"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "ash nazg thrakatulûk agh burzum-ishi krimpatul"
+		
+		prestige = 25
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50204
+			}
+			
+			set_variable = {
+				which = ring_controller
+				value = 3 # Other
+			}
+			
+			any_country = {
+				limit = {
+					has_country_modifier = ring_hunters
+				}
+				remove_country_modifier = ring_hunters
+			}
+		}
+		
+		
+		# TODO: Stuff about the ring
+	}
+}
+
+# $FROMCOUNTRY$ Acquires the Ring (Cosmetic)
+country_event = {
+	id = 50204
+	picture = acquire_ring
+	title = "$FROMCOUNTRY$ Has Acquired the One Ring"
+	desc = "EVTDESC50204"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That will make them a powerful threat."
+	}
+}
+
+# Frodo Flees the Shire (Cosmetic)
+country_event = {
+	id = 50205
+	picture = leave_shire
+	title = "Frodo Flees the Shire"
+	desc = "EVTDESC50205"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "If I take one more step, it will be the farthest away from home I've ever been..."
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = ring_hunters
+					NOT = { tag = MOR }
+				}
+			}
+			owner = { remove_country_modifier = ring_hunters }
+		}
+	}
+}
+
+# The Findings of Gandalf
+country_event = {
+	id = 50206
+	picture = innovation
+	title = "The Research of Gandalf"
+	desc = "EVTDESC50206"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = bilbos_111_birthday_party
+		FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+		FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+		owns = 1040
+		NOT = { has_global_flag = findings_of_gandalf }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "Why does a little person have something so important?"
+		
+		prestige = 2
+		scaled_consciousness = {
+			factor = 2
+			issue = good_alignment_fake
+		}
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50207
+			}
+		}
+		
+		set_global_flag = findings_of_gandalf
+	}
+}
+
+# The Findings of Gandalf (Cosmetic)
+country_event = {
+	id = 50207
+	picture = innovation
+	title = "The Research of Gandalf"
+	desc = "EVTDESC50207"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Why does a little person have something so important?"
+	}
+}
+
+# Frodo Flees the Shire
+country_event = {
+	id = 50208
+	picture = leave_shire
+	title = "Frodo Flees the Shire"
+	desc = "EVTDESC50208"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 1040
+		has_global_flag = findings_of_gandalf
+		NOT = { has_global_flag = frodo_fled_shire }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.95
+			FOR = {
+				any_neighbor_country = {
+					has_country_modifier = ring_hunters
+					NOT = { tag = MOR }
+				}
+			}
+		}
+		modifier = {
+			factor = {
+				factor = 0.75
+				has_global_flag = nine_hunting_frodo
+			}
+		}
+	}
+	
+	option = {
+		name = "Run Frodo. Run!"
+		
+		any_pop = {
+			limit = {
+				pop_majority_issue = good_alignment_fake
+			}
+			dominant_issue = {
+				value = jingoism
+				value = 0.33
+			}
+		}
+		
+		any_pop = {
+			limit = {
+				pop_majority_issue = neutral_alignment_fake
+			}
+			dominant_issue = {
+				value = jingoism
+				value = 0.17
+			}
+		}
+		
+		any_country = {
+			limit = {
+				has_country_modifier = ring_hunters
+				ai = yes
+				NOT = { tag = MOR }
+			}
+			remove_country_modifier = ring_hunters
+		}
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50205
+			}
+		}
+	}
+}
 
 # Council of Elrond {
 # An Invitation from Elrond

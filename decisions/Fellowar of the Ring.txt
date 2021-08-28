@@ -1,11 +1,135 @@
 # Imladris Decisons: {
+#	Pre-Fellowship
 #	Council of Elrond 
-#	War of the Ring}
+#	War of the Ring }
 
 # ring_controller mapping:
 #	0 = Bilbo
 #	1 = Frodo
 #	2 = Fellowship
+#	3 = Other
+#	4 = Gollum
+
+# Pre-Fellowship
+political_decisions = {
+	search_for_the_ring_hobbiton = {
+		picture = "bilbo_party"
+		potential = {
+			owns = 1040
+			good_evil_alignment = evil_alignment
+			has_global_flag = bilbos_111_birthday_party
+			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+			NOT = { has_global_flag = hobbiton_search_for_ring }
+			NOT = { has_global_flag = frodo_fled_shire }
+			NOT = { has_global_flag = findings_of_gandalf }
+		}
+		
+		allow = {
+			good_evil_alignment = evil_alignment
+		}
+		
+		effect = {
+			badboy = 3
+			# Railroading ensures that Frodo flees the Shire
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = railroading_enabled }
+				}
+				owner = { country_event = { id = 50202 days = 10 } }
+			}
+			
+			# No Railroading, 1% chance of finding the Ring
+			random_owned = {
+				limit = {
+					owner = { NOT = { has_global_flag = railroading_enabled } }
+				}
+				owner = {
+					random_list = {
+						99 = { country_event = { id = 50202 days = 10 } }
+						1 = { country_event = { id = 50203 days = 10 } }
+					}
+				}
+			}
+			
+			set_global_flag = hobbiton_search_for_ring
+		}
+	}
+	
+	release_the_nine = {
+		potential = {
+			tag = MOR
+			NOT = { has_country_modifier = ring_hunters }
+			good_evil_alignment = evil_alignment
+			has_global_flag = findings_of_gandalf
+			nationalvalue = sauron
+			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+			NOT = { has_global_flag = nine_hunting_frodo }
+		}
+		
+		allow = {
+			good_evil_alignment = evil_alignment
+			nationalvalue = sauron
+		}
+		
+		effect = {
+			add_country_modifier = { name = ring_hunters duration = -1 } # Removed when Frodo reaches the council capital
+
+			# No Railroading, 0.25% chance of finding the Ring
+			random_owned = {
+				limit = {
+					owner = { NOT = { has_global_flag = railroading_enabled } }
+				}
+				owner = {
+					random_list = {
+						399 = {}
+						1 = { country_event = 50203 }
+					}
+				}
+			}
+			set_global_flag = nine_hunting_frodo 
+		}
+	}
+	
+	send_ring_hunters = {
+		potential = {
+			NOT = { tag = MOR }
+			NOT = { has_country_modifier = ring_hunters }
+			good_evil_alignment = evil_alignment
+			has_global_flag = findings_of_gandalf
+			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+			NOT = { has_global_flag = frodo_fled_shire }
+		}
+		
+		allow = {
+			good_evil_alignment = evil_alignment
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		
+		effect = {
+			add_country_modifier = { name = ring_hunters duration = -1 } # Removed when Frodo flees the shire
+			
+			# No Railroading, 0.25% chance of finding the Ring
+			random_owned = {
+				limit = {
+					owner = { NOT = { has_global_flag = railroading_enabled } }
+				}
+				owner = {
+					random_list = {
+						399 = {}
+						1 = { country_event = 50203 }
+					}
+				}
+			}
+			
+		}
+	}
+}
 
 # Council of Elrond
 political_decisions = {
