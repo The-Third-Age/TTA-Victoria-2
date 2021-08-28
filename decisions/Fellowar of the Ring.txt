@@ -101,6 +101,7 @@ political_decisions = {
 			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
 			NOT = { has_global_flag = frodo_fled_shire }
+			NOT = { owns = 1040 }
 		}
 		
 		allow = {

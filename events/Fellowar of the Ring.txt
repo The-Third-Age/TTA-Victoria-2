@@ -189,6 +189,10 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 24
+		modifier = {
+			factor = 0.5
+			year = 3005
+		}
 	}
 	
 	option = {
@@ -254,10 +258,8 @@ country_event = {
 			}
 		}
 		modifier = {
-			factor = {
-				factor = 0.75
-				has_global_flag = nine_hunting_frodo
-			}
+			factor = 0.75
+			has_global_flag = nine_hunting_frodo
 		}
 	}
 	
@@ -270,7 +272,7 @@ country_event = {
 			}
 			dominant_issue = {
 				value = jingoism
-				value = 0.33
+				factor = 0.33
 			}
 		}
 		
@@ -280,7 +282,7 @@ country_event = {
 			}
 			dominant_issue = {
 				value = jingoism
-				value = 0.17
+				factor = 0.17
 			}
 		}
 		
@@ -301,6 +303,267 @@ country_event = {
 				country_event = 50205
 			}
 		}
+		
+		set_global_flag = frodo_fled_shire
+	}
+}
+
+# The Prancing Pony
+country_event = {
+	id = 50209
+	picture = prancing_pony
+	title = "The Prancing Pony"
+	desc = "EVTDESC50209"
+	
+	trigger = {
+		has_global_flag = frodo_fled_shire
+		NOT = { has_global_flag = frodo_in_bree }
+		owns = 1013
+		FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+		FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+		NOT = { good_evil_alignment = evil_alignment }
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 0.5
+			has_global_flag = nine_hunting_frodo
+		}
+	}
+	
+	option = {
+		name = "A fine choice"
+		
+		prestige = 5
+		
+		treasury = -5000
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50210
+			}
+		}
+		
+		set_global_flag = frodo_in_bree
+	}
+}
+
+# The Prancing Pony (Cosmetic)
+country_event = {
+	id = 50210
+	picture = prancing_pony
+	title = "The Prancing Pony"
+	desc = "EVTDESC50210"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "PP. Lol"
+	}
+}
+
+# The Camp at Weathertop
+country_event = {
+	id = 50211
+	picture = weathertop
+	title = "The Camp at Weathertop"
+	desc = "EVTDESC50211"
+	
+	trigger = {
+		OR = {
+			has_global_flag = frodo_in_bree
+			AND = {
+				has_global_flag = frodo_fled_shire
+				1013 = { owner = { good_evil_alignment = evil_alignment } }
+			}
+		}
+		FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+		FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+		NOT = { has_global_flag = frodo_camped_at_weathertop }
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 0.5
+			has_global_flag = nine_hunting_frodo
+		}
+	}
+	
+	option = {
+		name = "Why did they light a fire again?"
+		
+		prestige = 2
+		
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = nine_hunting_frodo }
+			}
+			owner = { set_global_flag = frodo_stabbed }
+		}
+		
+		set_global_flag = frodo_camped_at_weathertop
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50212
+			}
+		}
+	}
+}
+
+# The Camp at Weathertop (Cosmetic)
+country_event = {
+	id = 50212
+	picture = weathertop
+	title = "The Camp at Weathertop"
+	desc = "EVTDESC50212"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Nice, cripsy bacon!"
+	}
+}
+
+# Frodo Succumbs to his Wound
+country_event = {
+	id = 50213
+	picture = frodo_stabbed
+	title = "Frodo Succumbs to his Wound"
+	desc = "EVTDESC50213"
+	
+	trigger = {
+		has_global_flag = frodo_stabbed
+		NOT = { has_global_flag = frodo_is_safe }
+		owns = 1010
+		FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+		FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "The horror!"
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50214
+			}
+		}
+		
+		MOR = { country_event = { id = 50203 days = 5 } }
+	}
+}
+
+# Frodo Succumbs to his Wound (Cosmetic)
+country_event = {
+	id = 50214
+	picture = frodo_stabbed
+	title = "Frodo Succumbs to his Wound"
+	desc = "EVTDESC50214"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The horror!"
+	}
+}
+
+# Frodo Arrives
+country_event = {
+	id = 50215
+	picture = frodo_arrives
+	title = "A Traveller has Arrived"
+	desc = "EVTDESC50215"
+	
+	trigger = {
+		has_global_flag = frodo_camped_at_weathertop
+		FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
+		FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
+		NOT = { good_evil_alignment = evil_alignment }
+		OR = {
+			# Owns Imladris
+			owns = 865
+			# Imladris owned by an evil realm
+			AND = {
+				865 = { owner = { good_evil_alignment = evil_alignment } }
+				OR = {
+					is_greater_power = yes
+					is_secondary_power = yes
+				}
+			}
+		}
+		NOT = { has_global_flag = frodo_is_safe }
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+		modifier = {
+			factor = 1.25
+			has_global_flag = frodo_stabbed
+		}
+		modifier = {
+			factor = 0.25
+			tag = IML
+			owns = 865
+		}
+		modifier = {
+			factor = 4
+			NOT = { capital_scope = { continent = eriador } }
+		}
+		modifier = {
+			factor = 0.9
+			is_greater_power = yes
+		}
+		modifier = {
+			factor = 0.85
+			good_evil_alignment = good_alignment
+		}
+	}
+	
+	option = {
+		name = "He is safe now"
+		
+		prestige = 15
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50216
+			}
+		}
+		
+		set_global_flag = frodo_is_safe
+		set_country_flag = frodo_chose_us
+	}
+}
+
+# Frodo Arrives (Cosmetic)
+country_event = {
+	id = 50216
+	picture = frodo_arrives
+	title = "Frodo Arrives in $FROMCOUNTRY$"
+	desc = "EVTDESC50216"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Why didn't he choose us?"
 	}
 }
 

@@ -52,3 +52,9 @@
  - frodo_fled_shire (global)
  - findings_of_gandalf (global)
  - nine_hunting_frodo (global)
+ - frodo_in_bree (global)
+ - frodo_camped_at_weathertop (global)
+ - frodo_stabbed (global)
+ - frodo_is_safe (global)
+ - frodo_chose_us (country)
+ 
