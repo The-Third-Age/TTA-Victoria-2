@@ -166,7 +166,6 @@ political_decisions = {
 			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
 			NOT = { good_evil_alignment = evil_alignment }
 			nationalvalue = elrond
-			tag = IML
 			OR = {
 				has_country_flag = frodo_chose_us
 				FOR = {
@@ -225,10 +224,7 @@ political_decisions = {
 			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
 			NOT = { good_evil_alignment = evil_alignment }
-			NOT = {
-				nationalvalue = elrond
-				tag = IML
-			}
+			NOT = { nationalvalue = elrond }
 			OR = {
 				has_country_flag = frodo_chose_us
 				FOR = {

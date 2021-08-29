@@ -550,6 +550,8 @@ country_event = {
 			}
 		}
 		
+		MOR = { remove_country_modifier = ring_hunters }
+		
 		set_global_flag = frodo_is_safe
 		set_country_flag = frodo_chose_us
 	}
@@ -746,7 +748,13 @@ country_event = {
 			}
 			set_variable = {
 				which = ring_controller
-				value = 2
+				value = 2 # Fellowship
+			}
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50254
 			}
 		}
 		
@@ -758,6 +766,20 @@ country_event = {
 				FOR = { any_neighbor_country = { has_country_modifier = fellowship_member } }
 			}
 		}
+	}
+}
+
+# Fellowship of the Ring (Cosmetic)
+country_event = {
+	id = 50254
+	picture = council_of_elrond
+	title = "The Fellowship of the Ring"
+	desc = "EVTDESC50254"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That's fancy"
 	}
 }
 # }
