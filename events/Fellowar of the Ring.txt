@@ -7,9 +7,11 @@
 #	2 = Fellowship
 #	3 = Other
 #	4 = Gollum
+#	5 = Destroyed
 
 # 50203 - Generic Owner Finds Ring
 # 50300 - Generic Fellowship Member has Died
+# 50318 - Fellowship Modifier/Flag Clean Up
 
 # Prefellowship {
 # Bilbo's 111th Birthday
@@ -71,14 +73,16 @@ country_event = {
 		
 		prestige = -5
 		
-		scaled_militancy = {
-			factor = 4
-			issue = good_alignment_fake
-		}
-		
-		scaled_militancy = {
-			factor = 2
-			issue = neutral_alignment_fake
+		any_pop = {
+			scaled_militancy = {
+				factor = 4
+				issue = good_alignment_fake
+			}
+			
+			scaled_militancy = {
+				factor = 2
+				issue = neutral_alignment_fake
+			}
 		}
 		
 		FOR = {
@@ -121,11 +125,13 @@ country_event = {
 				value = 3 # Other
 			}
 			
+			country_event = 50318
+			
 			any_country = {
 				limit = {
-					has_country_modifier = ring_hunters
+					has_country_modifier = fellowship_member
 				}
-				remove_country_modifier = ring_hunters
+				remove_country_modifier = fellowship_member
 			}
 		}
 		
@@ -201,9 +207,12 @@ country_event = {
 		name = "Why does a little person have something so important?"
 		
 		prestige = 2
-		scaled_consciousness = {
-			factor = 2
-			issue = good_alignment_fake
+		
+		any_pop = {
+			scaled_consciousness = {
+				factor = 2
+				issue = good_alignment_fake
+			}
 		}
 		
 		FOR = {
@@ -788,9 +797,11 @@ country_event = {
 		name = "That is a shame"
 		remove_country_modifier = fellowship_member
 		prestige = -10
-		dominant_issue = {
-			value = good_alignment_fake
-			factor = 0.5
+		any_pop = {
+			dominant_issue = {
+				value = good_alignment_fake
+				factor = 0.5
+			}
 		}
 		FOR = {
 			any_country = {
@@ -829,6 +840,8 @@ country_event = {
 		has_country_modifier = fellowship_member
 		NOT = { has_global_flag = fellowship_has_failed }
 		NOT = { has_global_flag = fellowship_crossed_caradhras }
+		FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 	}
 	
 	mean_time_to_happen = {
@@ -897,7 +910,18 @@ country_event = {
 					}
 				}
 			}
-			owner = { country_event = 50306 }
+			owner = { 
+				country_event = 50306
+				FOR = {
+					any_country = {
+						limit = {
+							has_country_flag = last_fought_the_fellowship
+						}
+						clr_country_flag = last_fought_the_fellowship
+					}
+				}
+				843 = { owner = { set_country_flag = last_fought_the_fellowship } }
+			}
 		}
 		
 		FOR = {
@@ -941,9 +965,11 @@ country_event = {
 		
 		remove_country_modifier = fellowship_member
 		prestige = -10
-		dominant_issue = {
-			value = good_alignment_fake
-			factor = 0.5
+		any_pop = {
+			dominant_issue = {
+				value = good_alignment_fake
+				factor = 0.5
+			}
 		}
 		add_country_modifier = { name = remembered_sacrifice duration = -1 }
 		set_country_flag = remembered_sacrifice
@@ -982,6 +1008,8 @@ country_event = {
 			}
 		}
 		NOT = { has_global_flag = fellowship_passed_through_lothlorien }
+		FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 	}
 	
 	mean_time_to_happen = {
@@ -998,6 +1026,8 @@ country_event = {
 				}
 				country_event = 50308
 			}
+			
+			country_event = 50318
 		}
 		
 		set_global_flag = fellowship_passed_through_lothlorien
@@ -1031,6 +1061,8 @@ country_event = {
 		NOT = { has_global_flag = fellowship_has_failed }
 		has_global_flag = fellowship_passed_through_lothlorien
 		NOT = { has_global_flag = fellowship_passed_through_ithilien }
+		FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 	}
 	
 	mean_time_to_happen = {
@@ -1047,6 +1079,8 @@ country_event = {
 				}
 				country_event = 50310
 			}
+			
+			country_event = 50318
 		}
 		
 		set_global_flag = fellowship_passed_through_ithilien
@@ -1080,6 +1114,8 @@ country_event = {
 		NOT = { has_global_flag = fellowship_has_failed }
 		has_global_flag = fellowship_passed_through_ithilien
 		NOT = { has_global_flag = fellowship_into_mordor }
+		FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 	}
 	
 	mean_time_to_happen = {
@@ -1100,6 +1136,8 @@ country_event = {
 				}
 				country_event = 50312
 			}
+			
+			country_event = 50318
 		}
 		
 		set_global_flag = fellowship_into_mordor
@@ -1119,6 +1157,428 @@ country_event = {
 		name = "They are so close"
 	}
 }
+
+# The Test
+country_event = {
+	id = 50313
+	picture = the_test
+	title = "The Test of Galadriel"
+	desc = "EVTDESC50313"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "I have passed the test"
+		
+		prestige = 10
+		
+		any_pop = {
+			dominant_issue = {
+				value = good_alignment_fake
+				factor = 0.2
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "In place of a Dark Lord, you would have a Queen!"
+		
+		prestige = -25
+		
+		any_pop = {
+			scaled_militancy = {
+				factor = 10
+				issue = good_alignment_fake
+			}
+		}
+		
+		country_event = 50203
+		
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				has_global_flag = railroading_enabled
+			}
+		}
+	}
+}
+
+# The Assault on Amon Hen
+country_event = {
+	id = 50314
+	picture = amon_hen_assault
+	title = "The Assault on Amon Hen"
+	desc = "EVTDESC50314"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The horn of Gondor!"
+		
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = railroading_enabled }
+				owner = { GON = { has_country_modifier = fellowship_member } }
+			}
+			owner = { GON = { country_event = 50300 } }
+		}
+		
+		random_owned = {
+			limit = {
+				OR = {
+					NOT = { owner = { has_global_flag = railroading_enabled } }
+					NOT = { owner = { GON = { has_country_modifier = fellowship_member } } }
+				}
+			}
+			
+			owner = {
+				random_list = {
+					25 = {
+						random_country = {
+							limit = {
+								has_country_modifier = fellowship_member
+							}
+							country_event = 50300
+						}
+					}
+					75 = {}
+				}
+			}
+		}
+		
+		random_list = {
+			2 = { country_event = { id = 50203 days = 5 } }
+			98 = {}
+		}
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50315
+			}
+		
+			any_country = {
+				limit = {
+					has_country_flag = last_fought_the_fellowship
+				}
+				clr_country_flag = last_fought_the_fellowship
+			}
+		}
+	}
+}
+
+# The Assault on Amon Hen (Cosmetic)
+country_event = {
+	id = 50315
+	picture = amon_hen_assault
+	title = "The Assault on Amon Hen"
+	desc = "EVTDESC50315"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The horn of Gondor!"
+	}
+}
+
+# Skirmish with the Fellowship
+country_event = {
+	id = 50316
+	# picture =
+	title = "A Skirmish with the Fellowship"
+	desc = "EVTDESC50316"
+	
+	trigger = {
+		NOT = { has_global_flag = fellowship_has_failed }
+		has_country_flag = fellowship_in_our_lands
+		has_country_modifier = ring_hunters
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			has_global_flag = war_of_the_ring_started
+		}
+	}
+	
+	option = {
+		name = "Good. Perhaps they will all perish"
+		
+		random_country = {
+			limit = {
+				has_country_modifier = fellowship_member
+			}
+			country_event = 50300
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = last_fought_the_fellowship
+			}
+			clr_country_flag = last_fought_the_fellowship
+		}
+		
+		set_country_flag = last_fought_the_fellowship
+	}
+}
+
+# The Fellowship has been Discovered in Our Lands
+country_event = {
+	id = 50317
+	picture = crisis
+	title = "The Fellowship has been Discovered in Our Lands"
+	desc = "EVTDESC50317"
+	
+	trigger = {
+		NOT = { has_country_flag = fellowship_in_our_lands }
+		FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
+		OR = {
+			AND = {
+				has_global_flag = fellowship_crossed_caradhras
+				NOT = { has_global_flag = fellowship_passed_through_lothlorien }
+				owns = 843
+			}
+			AND = {
+				has_global_flag = fellowship_passed_through_lothlorien
+				NOT = { has_global_flag = fellowship_passed_through_ithilien }
+				NOT = { tag = LOR }
+				OR = {
+					owns = 765
+					owns = 784
+					owns = 465
+				}
+			}
+			AND = {
+				has_global_flag = fellowship_passed_through_ithilien
+				NOT = { has_global_flag = fellowship_into_mordor }
+				OR = {
+					owns = 201
+					owns = 198
+				}
+			}
+			AND = {
+				has_global_flag = fellowship_into_mordor
+				OR = {
+					owns = 433
+					owns = 444
+					owns = 449
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 25
+		modifier = {
+			factor = 0.5
+			good_evil_alignment = good_alignment
+		}
+		modifier = {
+			factor = 0.75
+			good_evil_alignment = neutral_alignment
+		}
+		modifier = {
+			factor = 0.01
+			has_country_modifier = fellowship_member
+		}
+	}
+	
+	option = {
+		name = "THE Fellowship?"
+		
+		set_country_flag = fellowship_in_our_lands
+	}
+}
+
+# Flag/Modifier Clean-Up
+country_event = {
+	id = 50318
+	picture = crisis
+	title = "Fellowship Clean Up"
+	desc = "EVTDESC50318"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ok"
+		
+		any_country = {
+			limit = {
+				has_country_modifier = ring_hunters
+			}
+			remove_country_modifier = ring_hunters
+		}
+	
+		any_country = {
+			limit = {
+				has_country_flag = last_fought_the_fellowship
+			}
+			clr_country_flag = last_fought_the_fellowship
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = fellowship_in_our_lands
+			}
+			clr_country_flag = fellowship_in_our_lands
+		}
+	}
+}
+
+# Gollum joins the Fellowship
+country_event = {
+	id = 50319
+	picture = gollum
+	title = "Gollum Joins the Fellowship"
+	desc = "EVTDESC50319"
+	
+	trigger = {
+		has_country_modifier = fellowship_member
+		FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
+		NOT = { has_global_flag = fellowship_has_failed }
+		has_global_flag = fellowship_passed_through_lothlorien
+		NOT = has_global_flag = gollum_in_fellowship
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	option = {
+		name = "He only wants 'his' precious"
+		set_global_flag = gollum_in_fellowship
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50320
+			}
+		}
+	}
+}
+
+# Gollum joins the Fellowship (Cosmetic)
+country_event = {
+	id = 50320
+	picture = gollum
+	title = "Gollum Joins the Fellowship"
+	desc = "EVTDESC50320"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "He only wants 'his' precious"
+	}
+}
+
+# Gollum Steals the Ring
+country_event = {
+	id = 50321
+	picture = gollum
+	title = "Gollum Steals the One Ring"
+	desc = "EVTDESC50321"
+	
+	trigger = {
+		has_country_modifier = fellowship_member
+		has_global_flag = gollum_in_fellowship
+		FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "He won't get far"
+		
+		
+		FOR = {
+			set_variable = {
+				which = ring_controller
+				value = 4 # Gollum
+			}
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50322
+			}
+			any_country = {
+				limit = {
+					has_country_modifier = fellowship_member
+				}
+				remove_country_modifier = fellowship_member
+			}
+			country_event = 50318
+		}
+	}
+}
+
+# Gollum Steals the Ring (Cosmetic)
+country_event = {
+	id = 50322
+	picture = gollum
+	title = "Gollum Steals the Ring"
+	desc = "EVTDESC50322"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "He won't get far"
+	}
+}
+
+# Gollum Captured
+country_event = {
+	id = 50323
+	picture = gollum
+	title = "We have Captured Gollum"
+	desc = "EVTDESC50323"
+	
+	trigger = {
+		has_country_modifier = ring_hunters
+		FOR = { check_variable = { which = ring_controller value = 3.9 } } # Gollum
+		FOR = { NOT = { check_variable = { which = ring_controller value = 4.1 } } } # Gollum
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			tag = MOR
+		}
+	}
+	
+	option = {
+		name = "Good"
+		
+		country_event = 50203
+	}
+}
+
+# The End of the Fellowship (Cosmetic)
+country_event = {
+	id = 50324
+	picture = acquire_ring
+	title = "The Fellowship has Failed"
+	desc = "EVTDESC324"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "What do we do now?"
+	}
 # }
 
 # War of the Ring {

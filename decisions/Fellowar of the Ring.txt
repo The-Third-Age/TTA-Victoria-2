@@ -10,6 +10,7 @@
 #	2 = Fellowship
 #	3 = Other
 #	4 = Gollum
+#	5 = Destroyed
 
 # Pre-Fellowship
 political_decisions = {
@@ -288,6 +289,8 @@ political_decisions = {
 			has_global_flag = the_council_of_elrond
 			NOT = { has_global_flag = fellowship_has_failed }
 			NOT = { has_global_flag = temp_flag_no_failed_fellowship }
+			FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+			FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 		}
 		
 		allow = {}
@@ -297,10 +300,212 @@ political_decisions = {
 				limit = {
 					has_country_flag = the_council_of_elrond_host
 				}
-				# TODO: Event notifying about the failure of the Fellowship
 				clr_country_flag = the_council_of_elrond_host
-				set_global_flag = fellowship_has_failed
 			}
+			set_global_flag = fellowship_has_failed
+			remove_country_modifier = wotr_countdown
+			remove_country_modifier = wotr_end_countdown
+			
+			random_country = {
+				limit = {
+					has_country_flag = last_fought_the_fellowship
+				}
+				country_event = 50203
+			}
+			
+			# Defaults to Mordor if no one previously fought the fellowship
+			random_country = {
+				limit = {
+					tag = MOR
+					NOT = { FOR = { any_neighbor_country = { has_country_flag = last_fought_the_fellowship } } }
+				}
+				country_event = 50203
+			}
+			
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50324
+			}
+		}
+	}
+	
+	the_test = {
+		potential = {
+			tag = LOR
+			has_global_flag = fellowship_passed_through_lothlorien
+			NOT = { has_global_flag = fellowship_has_failed }
+			NOT = { has_global_flag =  fellowship_passed_through_ithilien }
+			NOT = { good_evil_alignment = evil_alignment }
+			nationalvalue = celeborn_n_galadriel
+			NOT = { has_country_flag = galadriel_did_the_test }
+			FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+			FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
+			has_country_flag = fellowship_in_our_lands
+		}
+		
+		allow = {
+			nationalvalue = celeborn_n_galadriel
+			NOT = { good_evil_alignment = evil_alignment }
+		}
+		
+		effect = {
+			country_event = 50313
+			set_country_flag = galadriel_did_the_test
+		}
+	}
+	
+	galadriels_fellowship_gifts = {
+		potential = {
+			tag = LOR
+			has_global_flag = fellowship_passed_through_lothlorien
+			NOT = { has_global_flag = fellowship_has_failed }
+			NOT = { has_global_flag =  fellowship_passed_through_ithilien }
+			NOT = { good_evil_alignment = evil_alignment }
+			nationalvalue = celeborn_n_galadriel
+			FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+			FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
+			NOT = { has_country_flag = galadriel_gave_gifts }
+			has_country_flag = fellowship_in_our_lands
+		}
+		
+		allow = {
+			nationalvalue = celeborn_n_galadriel
+			NOT = { good_evil_alignment = evil_alignment }
+			money = 50000
+		}
+		
+		effect = {
+			treasury = -50000
+			prestige = 15
+			set_country_flag = galadriel_gave_gifts
+		}
+	}
+	
+	unleash_uruk_hai_raiders = {
+		potential = {
+			tag = ISE
+			has_global_flag = fellowship_passed_through_lothlorien
+			NOT = { has_global_flag = fellowship_has_failed }
+			NOT = { has_global_flag =  fellowship_passed_through_ithilien }
+			good_evil_alignment = evil_alignment
+			primary_culture = uruk_hai
+			nationalvalue = saruman
+			FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+			FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
+			NOT = { has_country_flag = unleashed_uruk_hai_raiders }
+		}
+		
+		allow = {
+			money = 100000
+			nationalvalue = saruman
+			good_evil_alignment = evil_alignment
+		}
+		
+		effect = {
+			treasury = -100000
+			badboy = 5
+			country_event = 50314
+			set_country_flag = unleashed_uruk_hai_raiders
+			set_country_flag = last_fought_the_fellowship
+		}
+	}
+	
+	supply_the_fellowship = {
+		potential = {
+			has_country_flag = fellowship_in_our_lands
+			OR = {
+				has_country_modifier = fellowship_member
+				good_evil_alignment = good_alignment
+			}
+			NOT = { has_country_flag = supplied_fellowship }
+		}
+		
+		allow = {
+			has_country_modifier = fellowship_member
+			money = 25000
+		}
+		
+		effect = {
+			treasury = -25000
+			prestige = 10
+			set_country_flag = supplied_fellowship
+		}
+	}
+	
+	order_member_to_steal_the_ring = {
+		potential = {
+			has_country_flag = fellowship_in_our_lands
+			has_country_modifier = fellowship_member
+			NOT = { has_global_flag = railroading_enabled }
+		}
+		
+		allow = {	
+			has_country_modifier = fellowship_member
+		}
+		
+		effect = {
+			badboy = 10
+			remove_country_modifier = fellowship_member
+			any_country = {
+				limit = {
+					OR = {
+						has_country_flag = the_council_of_elrond_host
+						has_country_modifier = fellowship_member
+					}
+				}
+				relation = {
+					who = THIS
+					value = -400
+				}
+			}
+			random_list = {
+				10 = { country_event = 50203 }
+				90 = {}
+			}
+		}
+		
+		ai_will_do = { factor = 0 }
+	}
+	
+	hunt_for_the_fellowship = {
+		picture = "send_ring_hunters"
+		potential = {
+			has_country_flag = fellowship_in_our_lands
+			NOT = { has_country_modifier = fellowship_member }
+			NOT = { has_global_flag = fellowship_has_failed }
+			NOT = { has_country_modifier = ring_hunters }
+			OR = {
+				good_evil_alignment = evil_alignment
+				NOT = { has_global_flag = railroading_enabled }
+			}
+		}
+		
+		allow = {}
+		
+		effect = {
+			badboy = 1
+			add_country_modifier = { name = ring_hunters duration = -1 }
+		}
+	}
+	
+	hunt_for_gollum = {
+		potential = {
+			FOR = { check_variable = { which = ring_controller value = 3.9 } } # Gollum
+			FOR = { NOT = { check_variable = { which = ring_controller value = 4.1 } } } # Gollum
+			NOT = { has_country_modifier = ring_hunters }
+		}
+		
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+		}
+		
+		effect = {
+			add_country_modifier = { name = ring_hunters duration = -1 }
 		}
 	}
 }

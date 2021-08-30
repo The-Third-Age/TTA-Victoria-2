@@ -69,6 +69,10 @@
  - fellowship_passed_through_lothlorien (global)
  - fellowship_passed_through_ithilien (global)
  - fellowship_into_mordor (global)
+ - fellowship_in_our_lands (country)
+ - supplied_the_fellowship (country)
+ - last_fought_the_fellowship (country)
+ - gollum_in_fellowship (global)
  
 ### War of the Ring
  - war_of_the_ring_started (global)
