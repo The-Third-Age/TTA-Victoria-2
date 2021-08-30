@@ -140,6 +140,13 @@ A Lord of the Rings mod for Victoria 2
 	- [Celeborn and Galadriel](https://www.mdislander.com/living/arts-a-living/visit-lothlorien)
 	- [Treebeard](https://hobbitlotrtrilogy.fandom.com/wiki/Fangorn_Forest)
 	- [Thengel](https://www.wesleygardner.com/projects/e0vlO3)
+- Technology art
+	- [John Howe](https://www.john-howe.com/portfolio/gallery/categories.php?cat_id=66)
+	- [Daniel Falconer](https://www.artstation.com/artwork/GaNGx4)
+	- [Nick Keller](http://www.nickkellerart.com/)
+	- [JRR Harlequin](https://jrrharlequin.com/lord-of-the-rings-battle-for-middle-earth)
+	- [Brian Raty](https://www.artstation.com/brianraty)
+	- [Jan Pospisil](https://www.deviantart.com/merlkir/gallery/29988/the-last-days-tolkien-related)
 - Main Theme
 	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - Units
