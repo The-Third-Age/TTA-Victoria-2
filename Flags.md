@@ -62,3 +62,14 @@
  - the_council_of_elrond (global)
  - the_council_of_elrond_host (country)
  
+### Fellowship
+ - fellowship_has_failed (global)
+ - fellowship_crossed_caradhras (global)
+ - fellowship_passed_through_moria (global)
+ - fellowship_passed_through_lothlorien (global)
+ - fellowship_passed_through_ithilien (global)
+ - fellowship_into_mordor (global)
+ 
+### War of the Ring
+ - war_of_the_ring_started (global)
+ 

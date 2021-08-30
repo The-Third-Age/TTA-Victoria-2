@@ -1,6 +1,7 @@
 # Imladris Decisons: {
 #	Pre-Fellowship
 #	Council of Elrond 
+#	Fellowship
 #	War of the Ring }
 
 # ring_controller mapping:
@@ -198,10 +199,10 @@ political_decisions = {
 		effect = {
 			set_global_flag = the_council_of_elrond
 			set_country_flag = the_council_of_elrond_host
+			set_global_flag = temp_flag_no_failed_fellowship
 			any_country = {
 				limit = {
 					good_evil_alignment = good_alignment
-					NOT = { tag = IML }
 					is_vassal = no
 					OR = {
 						is_greater_power = yes
@@ -260,7 +261,6 @@ political_decisions = {
 			any_country = {
 				limit = {
 					good_evil_alignment = good_alignment
-					NOT = { tag = IML }
 					is_vassal = no
 					OR = {
 						is_greater_power = yes
@@ -273,6 +273,33 @@ political_decisions = {
 			country_event = {
 				id = 50253
 				days = 3
+			}
+		}
+	}
+}
+
+# Fellowship
+political_decisions = {
+	end_the_fellowship = {
+		picture = "travellers"
+		potential = {
+			tag = FOR
+			NOT = { any_neighbor_country = { has_country_modifier = fellowship_member } }
+			has_global_flag = the_council_of_elrond
+			NOT = { has_global_flag = fellowship_has_failed }
+			NOT = { has_global_flag = temp_flag_no_failed_fellowship }
+		}
+		
+		allow = {}
+		
+		effect = {
+			random_country = {
+				limit = {
+					has_country_flag = the_council_of_elrond_host
+				}
+				# TODO: Event notifying about the failure of the Fellowship
+				clr_country_flag = the_council_of_elrond_host
+				set_global_flag = fellowship_has_failed
 			}
 		}
 	}
@@ -320,8 +347,8 @@ political_decisions = {
 					}
 				}
 				set_country_flag = good_leader
-				country_event = 50304
-				country_event = { id = 50306 days = 1 }
+				country_event = 50354
+				country_event = { id = 50356 days = 1 }
 			}
 			
 			random_country = {
@@ -350,7 +377,7 @@ political_decisions = {
 					}
 				}
 				set_country_flag = evil_leader
-				country_event = 50305
+				country_event = 50355
 			}
 			
 			set_global_flag = wotr_leaders_chosen
@@ -376,7 +403,7 @@ political_decisions = {
 					war = no
 					good_evil_alignment = good_alignment
 				}
-				country_event = 50308
+				country_event = 50358
 			}
 			
 			any_neighbor_country = {
@@ -384,7 +411,7 @@ political_decisions = {
 					war = no
 					good_evil_alignment = evil_alignment
 				}
-				country_event = 50309
+				country_event = 50359
 			}
 			
 			set_country_flag = get_realms_to_fight
@@ -408,7 +435,7 @@ political_decisions = {
 					has_country_flag = good_needs_to_fight
 				}
 				clr_country_flag = good_needs_to_fight
-				country_event = 50310
+				country_event = 50360
 			}
 			
 			any_neighbor_country = {
@@ -417,7 +444,7 @@ political_decisions = {
 					has_country_flag = evil_needs_to_fight
 				}
 				clr_country_flag = evil_needs_to_fight
-				country_event = 50310
+				country_event = 50360
 			}
 			
 			clr_country_flag = get_realms_to_fight

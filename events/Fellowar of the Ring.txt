@@ -9,6 +9,7 @@
 #	4 = Gollum
 
 # 50203 - Generic Owner Finds Ring
+# 50300 - Generic Fellowship Member has Died
 
 # Prefellowship {
 # Bilbo's 111th Birthday
@@ -596,16 +597,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = { has_global_flag = railroading_enabled }
-				OR = {
-					NOT = {
-						relation = {
-							who = FROM
-							from = -50
-						}
-					}
-					any_core = { owed_by = FROM }
-					truce_with = FROM
-				}
+				any_core = { owner = { tag = FROM } }
 			}
 		}
 	}
@@ -640,10 +632,6 @@ country_event = {
 			name = fellowship_member
 			duration = -1
 		}
-	}
-	
-	option = {
-		name = "We will support the Fellowship, but cannot spare any people"
 	}
 	
 	option = {
@@ -701,7 +689,7 @@ country_event = {
 		
 		prestige = 25
 		
-		clr_country_flag = the_council_of_elrond_host
+		clr_global_flag = temp_flag_no_failed_fellowship
 		
 		FOR = {
 			add_country_modifier = {
@@ -731,6 +719,8 @@ country_event = {
 		name = "10 companions... so be it. §R(We will have a member join the Fellowship)§!"
 		
 		prestige = 50
+		
+		clr_global_flag = temp_flag_no_failed_fellowship
 		
 		add_country_modifier = {
 			name = fellowship_member
@@ -784,13 +774,360 @@ country_event = {
 }
 # }
 
+# Fellowship {
+# Our Fellowship Member has Died
+country_event = {
+	id = 50300
+	picture = dead_fellowship_member
+	title = "Our Fellowship Member has Died!"
+	desc = "EVTDESC50300"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "That is a shame"
+		remove_country_modifier = fellowship_member
+		prestige = -10
+		dominant_issue = {
+			value = good_alignment_fake
+			factor = 0.5
+		}
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50301
+			}
+		}
+	}
+}
+
+# Fellowship Member Died (Cosmetic)
+country_event = {
+	id = 50301
+	picture = dead_fellowship_member
+	title = "$FROMCOUNTRY$'s Fellowship Member has Died!"
+	desc = "EVTDESC50301"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Unfortunate"
+	}
+}
+
+# The Pass of Caradhras
+country_event = {
+	id = 50302
+	picture = fellowship_cross_caradhras
+	title = "Crossing Caradhras"
+	desc = "EVTDESC50302"
+	
+	trigger = {
+		has_global_flag = the_council_of_elrond
+		has_country_modifier = fellowship_member
+		NOT = { has_global_flag = fellowship_has_failed }
+		NOT = { has_global_flag = fellowship_crossed_caradhras }
+	}
+	
+	mean_time_to_happen = {
+		months = 20
+	}
+	
+	option = {
+		name = "A most treacherous path"
+		
+		random_country = {
+			limit = {
+				tag = ISE
+				nationalvalue = saruman
+				good_evil_alignment = evil_alignment
+			}
+			THIS = { country_event = { id = 50304 days = 30 } }
+		}
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50303
+			}
+		}
+		
+		set_global_flag = fellowship_crossed_caradhras
+	}
+}
+
+# The Pass of Caradhras (Cosmetic)
+country_event = {
+	id = 50303
+	picture = fellowship_cross_caradhras
+	title = "The Fellowship has Crossed Caradhras"
+	desc = "EVTDESC50303"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "A most treacherous path"
+	}
+}
+
+# The Mines of Moria
+country_event = {
+	id = 50304
+	picture = fellowship_in_moria
+	title = "The Fellowship Passes Through the Mines of Moria"
+	desc = "EVTDESC50304"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "I hope that the rumours are not true"
+		
+		random_owned = {
+			limit = {
+				owner = {
+					843 = {
+						OR = {
+							owner = { accepted_culture = orc_culture }
+							owner = { good_evil_alignment = evil_alignment }
+						}
+					}
+				}
+			}
+			owner = { country_event = 50306 }
+		}
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50305
+			}
+		}
+		
+		set_global_flag = fellowship_passed_through_moria
+	}
+}
+
+# The Mines of Moria (Cosmetic)
+country_event = {
+	id = 50305
+	picture = fellowship_in_moria
+	title = "The Fellowship Passes Through the Mines of Moria"
+	desc = "EVTDESC50305"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "I hope that the rumours are not true"
+	}
+}
+
+# Fellowship Member Dies in Moria
+country_event = {
+	id = 50306
+	picture = dead_fellowship_member
+	title = "Our Fellowship Member's Sacrifice"
+	desc = "EVTDESC50306"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They will be remembered"
+		
+		remove_country_modifier = fellowship_member
+		prestige = -10
+		dominant_issue = {
+			value = good_alignment_fake
+			factor = 0.5
+		}
+		add_country_modifier = { name = remembered_sacrifice duration = -1 }
+		set_country_flag = remembered_sacrifice
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50301
+			}
+		}
+	}
+}
+
+# Fellowship in Lothlorien
+country_event = {
+	id = 50307
+	picture = fellowship_in_lothlorien
+	title = "The Fellowship Passes Through Lothlórien"
+	desc = "EVTDESC50307"
+	
+	trigger = {
+		has_global_flag = the_council_of_elrond
+		has_country_modifier = fellowship_member
+		NOT = { has_global_flag = fellowship_has_failed }
+		OR = {
+			has_global_flag = fellowship_passed_through_moria
+			AND = {
+				has_global_flag = fellowship_crossed_caradhras
+				NOT = {
+					ISE = {
+						nationalvalue = saruman
+						good_evil_alignment = evil_alignment
+					}
+				}
+			}
+		}
+		NOT = { has_global_flag = fellowship_passed_through_lothlorien }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "Will the Elves help them?"
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50308
+			}
+		}
+		
+		set_global_flag = fellowship_passed_through_lothlorien
+	}
+}
+
+# Fellowship in Lothlorien (Cosmetic)
+country_event = {
+	id = 50308
+	picture = fellowship_in_lothlorien
+	title = "The Fellowship Passes Through Lothlórien"
+	desc = "EVTDESC50308"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Will the Elves help them?"
+	}
+}
+
+# Fellowship in Ithilien
+country_event = {
+	id = 50309
+	picture = fellowship_in_ithilien
+	title = "The Fellowship Passes Through Ithilien"
+	desc = "EVTDESC50309"
+	
+	trigger = {
+		has_global_flag = the_council_of_elrond
+		has_country_modifier = fellowship_member
+		NOT = { has_global_flag = fellowship_has_failed }
+		has_global_flag = fellowship_passed_through_lothlorien
+		NOT = { has_global_flag = fellowship_passed_through_ithilien }
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		name = "Isn't Ithilien overrun?"
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50310
+			}
+		}
+		
+		set_global_flag = fellowship_passed_through_ithilien
+	}
+}
+
+# Fellowship in Ithilien (Cosmetic)
+country_event = {
+	id = 50310
+	picture = fellowship_in_ithilien
+	title = "The Fellowship Passes Through Ithilien"
+	desc = "EVTDESC50310"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Isn't Ithilien overrun?"
+	}
+}
+
+# Fellowship passes into Mordor
+country_event = {
+	id = 50311
+	picture = fellowship_in_mordor
+	title = "The Fellowship Passes into Mordor"
+	desc = "EVTDESC50311"
+	
+	trigger = {
+		has_global_flag = the_council_of_elrond
+		has_country_modifier = fellowship_member
+		NOT = { has_global_flag = fellowship_has_failed }
+		has_global_flag = fellowship_passed_through_ithilien
+		NOT = { has_global_flag = fellowship_into_mordor }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+		modifier = {
+			factor = 0.5
+			has_global_flag = war_of_the_ring_started
+		}
+	}
+	
+	option = {
+		name = "They are so close"
+		
+		FOR = {
+			any_country = {
+				limit = {
+					ai = no
+				}
+				country_event = 50312
+			}
+		}
+		
+		set_global_flag = fellowship_into_mordor
+	}
+}
+
+# Fellowship passes into Mordor (Cosmetic)
+country_event = {
+	id = 50312
+	picture = fellowship_in_mordor
+	title = "The Fellowship Passes into Mordor"
+	desc = "EVTDESC50312"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They are so close"
+	}
+}
+# }
+
 # War of the Ring {
 # Good nation alliance
 country_event = {
-	id = 50304
+	id = 50354
 	picture = war_of_the_ring
 	title = "The Alliance of Free Realms"
-	desc = "EVTDESC50304"
+	desc = "EVTDESC50354"
 	
 	is_triggered_only = yes
 	
@@ -814,10 +1151,10 @@ country_event = {
 
 # Evil nation alliance
 country_event = {
-	id = 50305
+	id = 50355
 	picture = war_of_the_ring
 	title = "The Alliance of Evil Realm"
-	desc = "EVTDESC50305"
+	desc = "EVTDESC50355"
 	
 	is_triggered_only = yes
 	
@@ -841,10 +1178,10 @@ country_event = {
 
 # The War of the Ring - Good
 country_event = {
-	id = 50306
+	id = 50356
 	picture = war_of_the_ring
 	title = "The War of the Ring"
-	desc = "EVTDESC50306"
+	desc = "EVTDESC50356"
 	
 	is_triggered_only = yes
 	
@@ -855,17 +1192,17 @@ country_event = {
 			limit = {
 				has_country_flag = evil_leader
 			}
-			country_event = 50307
+			country_event = 50357
 		}
 	}
 }
 
 # The War of the Ring - Evil (Actually starts the war)
 country_event = {
-	id = 50307
+	id = 50357
 	picture = war_of_the_ring
 	title = "The War of the Ring"
-	desc = "EVTDESC50307"
+	desc = "EVTDESC50357"
 	
 	is_triggered_only = yes
 	
@@ -897,10 +1234,10 @@ country_event = {
 
 # War of the Ring - Good make alliance with good realm not at war
 country_event = {
-	id = 50308
+	id = 50358
 	picture = war_of_the_ring
 	title = "The War of the Ring Expands"
-	desc = "EVTDESC50308"
+	desc = "EVTDESC50358"
 	
 	is_triggered_only = yes
 	
@@ -919,10 +1256,10 @@ country_event = {
 
 # War of the Ring - Evil make alliance with evil realm not at war
 country_event = {
-	id = 50309
+	id = 50359
 	picture = war_of_the_ring
 	title = "The War of the Ring Expands"
-	desc = "EVTDESC50309"
+	desc = "EVTDESC50359"
 	
 	is_triggered_only = yes
 	
@@ -941,10 +1278,10 @@ country_event = {
 
 # War of the Ring - Start war with rebels to get allies to join
 country_event = {
-	id = 50310
+	id = 50360
 	picture = war_of_the_ring
 	title = "The War of the Ring Expands"
-	desc = "EVTDESC50310"
+	desc = "EVTDESC50360"
 	
 	is_triggered_only = yes
 	
