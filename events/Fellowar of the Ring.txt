@@ -133,7 +133,16 @@ country_event = {
 				}
 				remove_country_modifier = fellowship_member
 			}
+			
+			any_country = {
+				limit = {
+					accepted_culture = one_ring_culture
+				}
+				remove_accepted_culture = one_ring_culture
+			}
 		}
+		
+		add_accepted_culture = one_ring_culture
 		
 		
 		# TODO: Stuff about the ring
@@ -1572,16 +1581,204 @@ country_event = {
 	id = 50324
 	picture = acquire_ring
 	title = "The Fellowship has Failed"
-	desc = "EVTDESC324"
+	desc = "EVTDESC50324"
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = "What do we do now?"
 	}
+}
+
+# The Ring is Destroyed
+country_event = {
+	id = 50325
+	picture = ring_is_destroyed
+	title = "The Ring is Destroyed!"
+	desc = "EVTDESC50325"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good Riddence"
+		
+		MOR = { prestige = -25 }
+		random_country = {
+			limit = {
+				tag = MOR
+				accepted_culture = one_ring_culture
+			}
+			remove_accepted_culture = one_ring_culture
+		}
+		random_country = {
+			limit = {
+				has_country_flag = the_council_of_elrond_host
+			}
+			prestige = 50
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = fellowship_member
+			}
+			remove_country_modifier = fellowship_member
+			prestige = 25
+		}
+		country_event = 50318
+		
+		MOR = {
+			# Return cores to existing realms
+			any_country = {
+				limit = {
+					exists = yes
+					any_core = { owned_by = MOR }
+				}
+				country_event = 50328
+			}
+			
+			# Releases any vassal
+			any_country = {
+				limit = { vassal_of = MOR }
+				leave_alliance = MOR
+				country_event = 50329
+			}
+			
+			# Releases non-existing realms
+			any_country = {
+				limit = {
+					exists = no
+					any_core = { owned_by = MOR }
+				}
+				country_event = 50327
+			}
+		}
+		
+		MOR = { annex_to = D99 }
+		
+		any_country = {
+			limit = {
+				ai = no
+			}
+			country_event = 50326
+		}
+	}
+}
+
+# The Ring is Destroyed (Cosmetic)
+country_event = {
+	id = 50326
+	picture = ring_is_destroyed
+	title = "The Ring is Destroyed"
+	desc = "EVTDESC50326"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "But I can carry you!"
+	}
+}
+
+# The Ring is Destroyed - Release non-existing realms
+country_event = {
+	id = 50327
+	picture = administration
+	title = "We are Free"
+	desc = "EVTDESC50327"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		MOR = {
+            any_state = {
+                limit = {
+                    any_owned_province = { is_core = THIS }
+                }
+                any_owned = {
+                    limit = { is_core = THIS }
+                    secede_province = THIS
+                }
+            }
+        }
+	}
+}
+
+# The Ring is Destroyed - Release land of existing realms
+country_event = {
+	id = 50328
+	picture = administration
+	title = "Our Lands Returned"
+	desc = "EVTDESC50328"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They are rightfully ours"
+		MOR = {
+            any_state = {
+                limit = {
+                    any_owned_province = { is_core = THIS }
+                }
+                any_owned = {
+                    limit = {
+                        is_core = THIS
+                        is_capital = no
+                    }
+                    secede_province = THIS
+                }
+            }
+        }
+	}
+}
+
+# The Ring is Destroyed - Release Vassals
+country_event = {
+	id = 50329
+	picture = administration
+	title = "Our Lands Returned"
+	desc = "EVTDESC50329"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We are free"
+		MOR = { release_vassal = THIS }
+	}
+}
+
 # }
 
 # War of the Ring {
+# Fake Vassal Clean Up
+country_event = {
+	id = 50350
+	picture = war_of_the_ring
+	title = "Fake Vassal Clean Up"
+	desc = "EVTDESC50350"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		release_vassal = THIS
+	}
+}
+
+# Fake Vassal Creation
+country_event = {
+	id = 50351
+	picture = war_of_the_ring
+	title = "Create Fake Vassals"
+	desc = "EVTDESC50351"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "I don't like this"
+		FROM = { create_vassal = THIS }
+		create_alliance = FROM
+	}
+}
+		
 # Good nation alliance
 country_event = {
 	id = 50354
@@ -1605,6 +1802,16 @@ country_event = {
 				good_evil_alignment = evil_alignment
 			}
 			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+				good_evil_alignment = good_alignment
+				is_vassal = no
+				NOT = { num_of_vassals = 1 }
+				exists = yes
+			}
+			set_country_flag = wotr_temp_vassal
+			country_event = 50351
 		}
 	}
 }
@@ -1632,6 +1839,16 @@ country_event = {
 				good_evil_alignment = good_alignment
 			}
 			leave_alliance = THIS
+		}
+		any_country = {
+			limit = {
+				good_evil_alignment = evil_alignment
+				is_vassal = no
+				NOT = { num_of_vassals = 1 }
+				exists = yes
+			}
+			set_country_flag = wotr_temp_vassal
+			country_event = 50351
 		}
 	}
 }
@@ -1689,73 +1906,16 @@ country_event = {
 			defender_goal = { casus_belli = humiliate }
 			call_ally = yes
 		}
-	}
-}
-
-# War of the Ring - Good make alliance with good realm not at war
-country_event = {
-	id = 50358
-	picture = war_of_the_ring
-	title = "The War of the Ring Expands"
-	desc = "EVTDESC50358"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Middle-Earth in enveloped in war"
 		
-		random_country = {
+		set_global_flag = war_of_the_ring_started
+		any_country = {
 			limit = {
-				has_country_flag = good_leader
+				has_country_flag = wotr_temp_vassal
 			}
-			create_alliance = THIS
-			set_country_flag = good_needs_to_fight
+			country_event = { id = 50350 days = 5 }
 		}
 	}
 }
-
-# War of the Ring - Evil make alliance with evil realm not at war
-country_event = {
-	id = 50359
-	picture = war_of_the_ring
-	title = "The War of the Ring Expands"
-	desc = "EVTDESC50359"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Middle-Earth in enveloped in war"
-		
-		random_country = {
-			limit = {
-				has_country_flag = evil_leader
-			}
-			create_alliance = THIS
-			set_country_flag = evil_needs_to_fight
-		}
-	}
-}
-
-# War of the Ring - Start war with rebels to get allies to join
-country_event = {
-	id = 50360
-	picture = war_of_the_ring
-	title = "The War of the Ring Expands"
-	desc = "EVTDESC50360"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Middle-Earth is enveloped in war"
-		
-		war = { # No target initiates a one-day war that automatically resolves in a WP, but call_ally causes the new ally
-			attacker_goal = { casus_belli = humiliate }
-			call_ally = yes
-		}
-		badboy = -3
-	}
-}
-
 # }
 	
 	

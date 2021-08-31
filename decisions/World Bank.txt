@@ -405,6 +405,27 @@ political_decisions = {
 			}
 		}
 	}
+	
+	end_war_FOR = {
+		picture = "dont_do_that"
+		
+		potential = {
+			tag = FOR
+			war = yes
+			NOT = { has_country_modifier = dont_peace_out }
+		}
+		
+		allow = {}
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					war_with = FOR
+				}
+				end_war = FOR
+			}
+		}
+	}
 }
 
 # Government Flags Clean Up

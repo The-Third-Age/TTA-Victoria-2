@@ -508,6 +508,52 @@ political_decisions = {
 			add_country_modifier = { name = ring_hunters duration = -1 }
 		}
 	}
+	
+	start_wotr_early = {
+		potential = {
+			good_evil_alignment = evil_alignment
+			NOT = { has_global_flag = war_of_the_ring_started }
+			OR = {
+				AND = {
+					FOR = { check_variable = { which = ring_controller value = 2.9 } } # Other
+					FOR = { NOT = { check_variable = { which = ring_controller value = 3.1 } } } # Other
+					accepted_culture = one_ring_culture
+				}
+				AND = {
+					tag = MOR
+					OR = {
+						NOT = { FOR = { check_variable = { which = ring_controller value = 1.9 } } } # Fellowship
+						FOR = { check_variable = { which = ring_controller value = 2.1 } } # Fellowship
+					}
+				}
+				AND = {
+					NOT = { tag = MOR }
+					NOT = { MOR = { good_evil_alignment = evil_alignment } }
+					OR = {
+						NOT = { FOR = { check_variable = { which = ring_controller value = 1.9 } } } # Fellowship
+						FOR = { check_variable = { which = ring_controller value = 2.1 } } # Fellowship
+					}
+					OR = {
+						is_greater_power = yes
+						AND = {
+							NOT = { any_greater_power = { good_evil_alignment = evil_alignment } }
+							is_secondary_power = yes
+						}
+					}
+				}
+			}
+			NOT = { has_global_flag = wotr_early_start }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = preferred_evil_leader
+			set_global_flag = wotr_early_start
+		}
+	}
 }
 
 # War of the Ring
@@ -517,9 +563,14 @@ political_decisions = {
 		
 		potential = {
 			tag = FOR
-			NOT = { check_variable = { which = ring_controller value = 1.9 } } # Frodo
-			check_variable = { which = ring_controller value = 2.1 } # Frodo
-			NOT = { has_country_modifier = wotr_countdown }
+			OR = {
+				AND = {
+					FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+					FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
+					NOT = { has_country_modifier = wotr_countdown }
+				}
+				has_global_flag = wotr_early_start
+			}
 			NOT = { has_global_flag = wotr_leaders_chosen }
 		}
 		
@@ -559,6 +610,7 @@ political_decisions = {
 			random_country = {
 				limit = {
 					OR = {
+						has_country_flag = preferred_evil_leader
 						AND = {
 							OR = {
 								tag = MOR
@@ -568,16 +620,19 @@ political_decisions = {
 								}
 							}
 							good_evil_alignment = evil_alignment
+							NOT = { has_global_flag = wotr_early_start }
 						}
 						AND = {
 							NOT = { MOR = { good_evil_alignment = evil_alignment } }
 							good_evil_alignment = evil_alignment
 							is_greater_power = yes
+							NOT = { has_global_flag = wotr_early_start }
 						}
 						AND = {
 							NOT = { MOR = { good_evil_alignment = evil_alignment } }
 							NOT = { any_greater_power = { good_evil_alignment = evil_alignment } }
 							good_evil_alignment = evil_alignment
+							NOT = { has_global_flag = wotr_early_start }
 						}
 					}
 				}
@@ -589,70 +644,25 @@ political_decisions = {
 		}
 	}
 	
-	war_of_the_ring_ensure_realms_fight = {
+	the_fellowship_succeeds = {
 		picture = "war_of_the_ring"
-		
 		potential = {
 			tag = FOR
-			any_neighbor_country = { war = no }
-			NOT = { has_country_flag = get_realms_to_fight }
-			any_neighbor_country = { has_country_flag = good_leader }
-			any_neighbor_country = { has_country_flag = evil_leader }
+			NOT = { has_country_modifier = wotr_end_countdown }
+			has_global_flag = fellowship_into_mordor
+			FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
+			FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
+			NOT = { has_global_flag = wotr_ended }
 		}
 		
 		allow = {}
 		
 		effect = {
-			any_neighbor_country = {
-				limit = {
-					war = no
-					good_evil_alignment = good_alignment
-				}
-				country_event = 50358
+			country_event = 50325
+			set_variable = {
+				which = ring_controller
+				value = 5
 			}
-			
-			any_neighbor_country = {
-				limit = {
-					war = no
-					good_evil_alignment = evil_alignment
-				}
-				country_event = 50359
-			}
-			
-			set_country_flag = get_realms_to_fight
-		}
-	}
-	
-	war_of_the_ring_ensure_realms_fight_2 = {
-		picture = "war_of_the_ring"
-		
-		potential = {
-			tag = FOR
-			has_country_flag = get_realms_to_fight
-		}
-		
-		allow = {}
-		
-		effect = {
-			any_neighbor_country = {
-				limit = {
-					has_country_flag = good_leader
-					has_country_flag = good_needs_to_fight
-				}
-				clr_country_flag = good_needs_to_fight
-				country_event = 50360
-			}
-			
-			any_neighbor_country = {
-				limit = {
-					has_country_flag = evil_leader
-					has_country_flag = evil_needs_to_fight
-				}
-				clr_country_flag = evil_needs_to_fight
-				country_event = 50360
-			}
-			
-			clr_country_flag = get_realms_to_fight
 		}
 	}
 }
