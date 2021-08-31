@@ -1144,7 +1144,7 @@ country_event = {
 		months = 40
 		modifier = {
 			factor = 0.5
-			has_global_flag = war_of_the_ring_started
+			has_global_flag = wotr_started
 		}
 	}
 	
@@ -1615,6 +1615,13 @@ country_event = {
 	option = {
 		name = "Good Riddence"
 		
+		FOR = {
+			set_variable = {
+				which = ring_controller
+				value = 5
+			}
+		}
+		
 		random_country = {
 			limit = {
 				has_country_flag = the_council_of_elrond_host
@@ -1783,175 +1790,6 @@ country_event = {
 # }
 
 # War of the Ring {
-# Fake Vassal Clean Up
-country_event = {
-	id = 50350
-	picture = war_of_the_ring
-	title = "Fake Vassal Clean Up"
-	desc = "EVTDESC50350"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Good"
-		release_vassal = THIS
-	}
-}
-
-# Fake Vassal Creation
-country_event = {
-	id = 50351
-	picture = war_of_the_ring
-	title = "Create Fake Vassals"
-	desc = "EVTDESC50351"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "I don't like this"
-		FROM = { create_vassal = THIS }
-		create_alliance = FROM
-	}
-}
-		
-# Good nation alliance
-country_event = {
-	id = 50354
-	picture = war_of_the_ring
-	title = "The Alliance of Free Realms"
-	desc = "EVTDESC50354"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Our friends support us"
-		
-		any_country = {
-			limit = {
-				good_evil_alignment = good_alignment
-			}
-			create_alliance = THIS
-		}
-		any_country = {
-			limit = {
-				good_evil_alignment = evil_alignment
-			}
-			leave_alliance = THIS
-		}
-		any_country = {
-			limit = {
-				good_evil_alignment = good_alignment
-				is_vassal = no
-				NOT = { num_of_vassals = 1 }
-				exists = yes
-			}
-			set_country_flag = wotr_temp_vassal
-			country_event = 50351
-		}
-	}
-}
-
-# Evil nation alliance
-country_event = {
-	id = 50355
-	picture = war_of_the_ring
-	title = "The Alliance of Evil Realm"
-	desc = "EVTDESC50355"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Our allies support us"
-		
-		any_country = {
-			limit = {
-				good_evil_alignment = evil_alignment
-			}
-			create_alliance = THIS
-		}
-		any_country = {
-			limit = {
-				good_evil_alignment = good_alignment
-			}
-			leave_alliance = THIS
-		}
-		any_country = {
-			limit = {
-				good_evil_alignment = evil_alignment
-				is_vassal = no
-				NOT = { num_of_vassals = 1 }
-				exists = yes
-			}
-			set_country_flag = wotr_temp_vassal
-			country_event = 50351
-		}
-	}
-}
-
-# The War of the Ring - Good
-country_event = {
-	id = 50356
-	picture = war_of_the_ring
-	title = "The War of the Ring"
-	desc = "EVTDESC50356"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "To arms!"
-		
-		random_country = {
-			limit = {
-				has_country_flag = evil_leader
-			}
-			country_event = 50357
-		}
-	}
-}
-
-# The War of the Ring - Evil (Actually starts the war)
-country_event = {
-	id = 50357
-	picture = war_of_the_ring
-	title = "The War of the Ring"
-	desc = "EVTDESC50357"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "To arms!"
-		
-		# Good side cb
-		add_casus_belli = {
-			target = FROM
-			type = humiliate
-			months = 12
-		}
-		
-		# Evil side cb
-		casus_belli = {
-			target = FROM
-			type = humiliate
-			months = 12
-		}
-		
-		war = {
-			target = FROM
-			attacker_goal = { casus_belli = humiliate }
-			defender_goal = { casus_belli = humiliate }
-			call_ally = yes
-		}
-		
-		set_global_flag = war_of_the_ring_started
-		any_country = {
-			limit = {
-				has_country_flag = wotr_temp_vassal
-			}
-			country_event = { id = 50350 days = 5 }
-		}
-	}
-}
-
 # Mordor Asks for the Ring
 country_event = {
 	id = 50358

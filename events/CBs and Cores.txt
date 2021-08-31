@@ -393,13 +393,13 @@ country_event = {
 	}
 }
 
-##### Return cores event chain #####
+##### Return cores event chain ##### {
 
 # Return Cores Starter (take core)
 country_event = {
     id = 2506
     title = "$FROMCOUNTRY_ADJ$ Lands" #Territory Lost
-    desc = "EVTDESC2650"
+    desc = "EVTDESC2506"
     picture = "war_ended"
 
     is_triggered_only = yes
@@ -416,7 +416,7 @@ country_event = {
 country_event = {
     id = 2507
     title = "The $FROMCOUNTRY_ADJ$ Demand" #Territory Lost
-    desc = "EVTDESC2651"
+    desc = "EVTDESC2507"
     picture = "war_ended"
 
     is_triggered_only = yes
@@ -451,7 +451,7 @@ country_event = {
 country_event = {
     id = 2508
     title = "Our Lands Returned"
-    desc = "EVTDESC2660"
+    desc = "EVTDESC2508"
     picture = "war_ended"
 
     is_triggered_only = yes
@@ -491,4 +491,69 @@ country_event = {
         name = "We will keep everything we've gained."
         ai_chance = { factor = 0 }
     }
+}
+# }
+
+# Good/Evil CB Cleanup
+country_event = {
+	id = 2509
+	title = "Good/Evil Post-war Cleanup"
+	desc = "EVTDESC2509"
+	picture = war_of_the_ring
+	
+	is_triggered_only = yes
+	
+	option = {
+		random_owned = {
+			limit = {
+				owner = { FROM = { good_evil_alignment = good_alignment } }
+				NOT = { owner = { good_evil_alignment = good_alignment } }
+			}
+			owner = {
+				political_reform = good_alignment
+				add_accepted_culture = good_culture
+				remove_accepted_culture = neutral_culture
+				remove_accepted_culture = evil_culture
+				clr_country_flag = attempting_to_good
+				clr_country_flag = attempting_to_neutral
+				clr_country_flag = attempting_to_evil
+					
+				any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { FROM = { good_evil_alignment = neutral_alignment } }
+				NOT = { owner = { good_evil_alignment = neutral_alignment } }
+			}
+			owner = {
+				political_reform = neutral_alignment
+				remove_accepted_culture = good_culture
+				add_accepted_culture = neutral_culture
+				remove_accepted_culture = evil_culture
+				clr_country_flag = attempting_to_good
+				clr_country_flag = attempting_to_neutral
+				clr_country_flag = attempting_to_evil
+					
+				any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { FROM = { good_evil_alignment = evil_alignment } }
+				NOT = { owner = { good_evil_alignment = evil_alignment } }
+			}
+			owner = {
+				political_reform = evil_alignment
+				remove_accepted_culture = good_culture
+				remove_accepted_culture = neutral_culture
+				add_accepted_culture = evil_culture
+				clr_country_flag = attempting_to_good
+				clr_country_flag = attempting_to_neutral
+				clr_country_flag = attempting_to_evil
+					
+				any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
+			}
+		}
+	}
 }

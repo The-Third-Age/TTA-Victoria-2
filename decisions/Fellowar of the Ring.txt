@@ -508,138 +508,10 @@ political_decisions = {
 			add_country_modifier = { name = ring_hunters duration = -1 }
 		}
 	}
-	
-	start_wotr_early = {
-		potential = {
-			good_evil_alignment = evil_alignment
-			NOT = { has_global_flag = war_of_the_ring_started }
-			OR = {
-				AND = {
-					FOR = { check_variable = { which = ring_controller value = 2.9 } } # Other
-					FOR = { NOT = { check_variable = { which = ring_controller value = 3.1 } } } # Other
-					accepted_culture = one_ring_culture
-				}
-				AND = {
-					tag = MOR
-					FOR = { check_variable = { which = ring_controller value = 2.9 } } # Other or Gollum
-					FOR = { NOT = { check_variable = { which = ring_controller value = 4.1 } } } # Other or Gollum
-				}
-				AND = {
-					NOT = { tag = MOR }
-					NOT = { MOR = { good_evil_alignment = evil_alignment } }
-					FOR = { check_variable = { which = ring_controller value = 2.9 } } # Other or Gollum
-					FOR = { NOT = { check_variable = { which = ring_controller value = 4.1 } } } # Other or Gollum
-					OR = {
-						is_greater_power = yes
-						AND = {
-							NOT = { any_greater_power = { good_evil_alignment = evil_alignment } }
-							is_secondary_power = yes
-						}
-					}
-				}
-			}
-			NOT = { has_global_flag = wotr_early_start }
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			set_country_flag = preferred_evil_leader
-			set_global_flag = wotr_early_start
-		}
-	}
 }
 
 # War of the Ring
-political_decisions = {
-	war_of_the_ring_leader_selection = {
-		picture = "war_of_the_ring"
-		
-		potential = {
-			tag = FOR
-			OR = {
-				AND = {
-					FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
-					FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
-					NOT = { has_country_modifier = wotr_countdown }
-				}
-				has_global_flag = wotr_early_start
-			}
-			NOT = { has_global_flag = wotr_leaders_chosen }
-		}
-		
-		allow = {}
-		
-		effect = {
-			random_country = {
-				limit = {
-					OR = {
-						AND = {
-							OR = {
-								tag = GON
-								AND = {
-									is_greater_power = yes
-									ai = no
-								}
-							}
-							good_evil_alignment = good_alignment
-						}
-						AND = {
-							NOT = { GON = { good_evil_alignment = good_alignment } }
-							good_evil_alignment = good_alignment
-							is_greater_power = yes
-						}
-						AND = {
-							NOT = { GON = { good_evil_alignment = good_alignment } }
-							NOT = { any_greater_power = { good_evil_alignment = good_alignment } }
-							good_evil_alignment = good_alignment
-						}
-					}
-				}
-				set_country_flag = good_leader
-				country_event = 50354
-				country_event = { id = 50356 days = 1 }
-			}
-			
-			random_country = {
-				limit = {
-					OR = {
-						has_country_flag = preferred_evil_leader
-						AND = {
-							OR = {
-								tag = MOR
-								AND = {
-									is_greater_power = yes
-									ai = no
-								}
-							}
-							good_evil_alignment = evil_alignment
-							NOT = { has_global_flag = wotr_early_start }
-						}
-						AND = {
-							NOT = { MOR = { good_evil_alignment = evil_alignment } }
-							good_evil_alignment = evil_alignment
-							is_greater_power = yes
-							NOT = { has_global_flag = wotr_early_start }
-						}
-						AND = {
-							NOT = { MOR = { good_evil_alignment = evil_alignment } }
-							NOT = { any_greater_power = { good_evil_alignment = evil_alignment } }
-							good_evil_alignment = evil_alignment
-							NOT = { has_global_flag = wotr_early_start }
-						}
-					}
-				}
-				set_country_flag = evil_leader
-				country_event = 50355
-			}
-			
-			set_global_flag = wotr_leaders_chosen
-		}
-	}
-	
+political_decisions = {	
 	the_fellowship_succeeds = {
 		picture = "war_of_the_ring"
 		potential = {
@@ -654,14 +526,49 @@ political_decisions = {
 		
 		effect = {
 			country_event = 50325
-			set_variable = {
-				which = ring_controller
-				value = 5
+		}
+	}
+	
+	destroy_one_ring = {
+		picture = "war_of_the_ring"
+		potential = {
+			has_country_flag = has_one_ring
+			NOT = { good_evil_alignment = evil_alignment }
+		}
+		
+		allow = {
+			controls = 448
+		}
+		
+		effect = {
+			FOR = {
+				any_country = {
+					limit = {
+						accepted_culture = one_ring_culture
+					}
+					remove_accepted_culture = one_ring_culture
+				}
+				
+				any_country = {
+					limit = {
+						has_country_flag = has_one_ring
+					}
+					clr_country_flag = has_one_ring
+				}
+				
+				any_country = {
+					limit = {
+						has_country_modifier = one_ring
+					}
+					remove_country_modifier = one_ring
+				}
+				country_event = 50325
 			}
 		}
 	}
 	
 	request_the_ring = {
+		picture = "war_of_the_ring"
 		potential = {
 			tag = MOR
 			good_evil_alignment = evil_alignment
@@ -692,6 +599,7 @@ political_decisions = {
 	}
 	
 	give_ring_to_mordor = {
+		picture = "war_of_the_ring"
 		potential = {
 			NOT = { tag = MOR }
 			good_evil_alignment = evil_alignment
@@ -732,6 +640,33 @@ political_decisions = {
 				tag = ISE
 				nationalvalue = saruman
 			}
+		}
+	}
+	
+	mordor_start_war_of_the_ring = {
+		picture = "war_of_the_ring"
+		potential = {
+			tag = MOR
+			NOT = { has_global_flag = wotr_started }
+			good_evil_alignment = evil_alignment
+			has_global_flag = the_council_of_elrond
+			NOT = { GON = { good_evil_alignment = evil_alignment } }
+		}
+		
+		allow = {
+			is_greater_power = yes
+			good_evil_alignment = evil_alignment
+			expansion_5 = 1
+		}
+		
+		effect = {
+			war = {
+				target = GON
+				attacker_goal = { casus_belli = war_of_the_ring_cb }
+				defender_goal = { casus_belli = casus_belli }
+				call_ally = yes
+			}
+			set_global_flag = wotr_started
 		}
 	}
 }

@@ -40,6 +40,7 @@
 # Order that CBs are executed in a peace treaty
 peace_order = { 
 take_one_ring
+war_of_the_ring_cb
 add_to_sphere
 take_from_sphere
 status_quo
@@ -118,6 +119,65 @@ take_one_ring = {
 	}
 }
 
+war_of_the_ring_cb = {
+	sprite_index = 17
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+	
+	badboy_factor = 1.5
+	prestige_factor = 1
+	peace_cost_factor = 100
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	always = yes
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		OR = {
+			has_global_flag = wotr_started
+			AND = {
+				has_global_flag = the_council_of_elrond
+				NOT = { FOR = { has_country_modifier = wotr_countdown } }
+			}
+		}
+		NOT = { good_evil_alignment = evil_alignment }
+		THIS = { is_greater_power = yes }
+		THIS = { good_evil_alignment = evil_alignment }
+		OR = {
+			FOR = { check_variable = { which = ring_controller value = 5.1 } } # Destroyed
+			FOR = { NOT = { check_variable = { which = ring_controller value = 4.9 } } } # Destroyed
+		}
+	}
+	
+	po_make_puppet = yes
+	po_disarmament = yes
+	
+	war_name = WAR_OF_THE_RING
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+		country_event = 2509
+	}
+}
+	
+
 add_to_sphere = {
 	sprite_index = 3
 	is_triggered_only = yes
@@ -168,57 +228,7 @@ add_to_sphere = {
 	# scope = target
 	# THIS = country that applied wargoal
 	on_po_accepted = {
-		random_owned = {
-			limit = {
-				owner = { THIS = { good_evil_alignment = good_alignment } }
-				NOT = { owner = { good_evil_alignment = good_alignment } }
-			}
-			owner = {
-				political_reform = good_alignment
-				add_accepted_culture = good_culture
-				remove_accepted_culture = neutral_culture
-				remove_accepted_culture = evil_culture
-				clr_country_flag = attempting_to_good
-				clr_country_flag = attempting_to_neutral
-				clr_country_flag = attempting_to_evil
-					
-				any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = { THIS = { good_evil_alignment = neutral_alignment } }
-				NOT = { owner = { good_evil_alignment = neutral_alignment } }
-			}
-			owner = {
-				political_reform = neutral_alignment
-				remove_accepted_culture = good_culture
-				add_accepted_culture = neutral_culture
-				remove_accepted_culture = evil_culture
-				clr_country_flag = attempting_to_good
-				clr_country_flag = attempting_to_neutral
-				clr_country_flag = attempting_to_evil
-					
-				any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = { THIS = { good_evil_alignment = evil_alignment } }
-				NOT = { owner = { good_evil_alignment = evil_alignment } }
-			}
-			owner = {
-				political_reform = evil_alignment
-				remove_accepted_culture = good_culture
-				remove_accepted_culture = neutral_culture
-				add_accepted_culture = evil_culture
-				clr_country_flag = attempting_to_good
-				clr_country_flag = attempting_to_neutral
-				clr_country_flag = attempting_to_evil
-					
-				any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
-			}
-		}
+		country_event = 2509
 	}
 }
 
@@ -293,57 +303,7 @@ take_from_sphere = {
 				}
 				has_country_flag = possible_take_from_sphere_target
 			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = good_alignment } }
-					NOT = { owner = { good_evil_alignment = good_alignment } }
-				}
-				owner = {
-					political_reform = good_alignment
-					add_accepted_culture = good_culture
-					remove_accepted_culture = neutral_culture
-					remove_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = neutral_alignment } }
-					NOT = { owner = { good_evil_alignment = neutral_alignment } }
-				}
-				owner = {
-					political_reform = neutral_alignment
-					remove_accepted_culture = good_culture
-					add_accepted_culture = neutral_culture
-					remove_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = evil_alignment } }
-					NOT = { owner = { good_evil_alignment = evil_alignment } }
-				}
-				owner = {
-					political_reform = evil_alignment
-					remove_accepted_culture = good_culture
-					remove_accepted_culture = neutral_culture
-					add_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
-				}
-			}
+			country_event = 2509
 			create_alliance = THIS
 			clr_country_flag = possible_take_from_sphere_target
 		}
@@ -932,57 +892,7 @@ free_peoples = {
 				exists = yes
 				has_country_flag = possible_free_peoples_target
 			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = good_alignment } }
-					NOT = { owner = { good_evil_alignment = good_alignment } }
-				}
-				owner = {
-					political_reform = good_alignment
-					add_accepted_culture = good_culture
-					remove_accepted_culture = neutral_culture
-					remove_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = neutral_alignment } }
-					NOT = { owner = { good_evil_alignment = neutral_alignment } }
-				}
-				owner = {
-					political_reform = neutral_alignment
-					remove_accepted_culture = good_culture
-					add_accepted_culture = neutral_culture
-					remove_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = evil_alignment } }
-					NOT = { owner = { good_evil_alignment = evil_alignment } }
-				}
-				owner = {
-					political_reform = evil_alignment
-					remove_accepted_culture = good_culture
-					remove_accepted_culture = neutral_culture
-					add_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
-				}
-			}
+			country_event = 2509
 			create_alliance = THIS
 			clr_country_flag = possible_free_peoples_target
 		}
@@ -1078,57 +988,7 @@ liberate_country = {
 				exists = yes
 				has_country_flag = possible_liberate_realm_target
 			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = good_alignment } }
-					NOT = { owner = { good_evil_alignment = good_alignment } }
-				}
-				owner = {
-					political_reform = good_alignment
-					add_accepted_culture = good_culture
-					remove_accepted_culture = neutral_culture
-					remove_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = neutral_alignment } }
-					NOT = { owner = { good_evil_alignment = neutral_alignment } }
-				}
-				owner = {
-					political_reform = neutral_alignment
-					remove_accepted_culture = good_culture
-					add_accepted_culture = neutral_culture
-					remove_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = evil_alignment } }
-					NOT = { owner = { good_evil_alignment = evil_alignment } }
-				}
-				owner = {
-					political_reform = evil_alignment
-					remove_accepted_culture = good_culture
-					remove_accepted_culture = neutral_culture
-					add_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
-				}
-			}
+			country_event = 2509
 			create_alliance = THIS
 			clr_country_flag = possible_liberate_realm_target
 		}
@@ -1255,57 +1115,7 @@ release_puppet = {
 				is_vassal = no
 				has_country_flag = possible_release_vassal_target
 			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = good_alignment } }
-					NOT = { owner = { good_evil_alignment = good_alignment } }
-				}
-				owner = {
-					political_reform = good_alignment
-					add_accepted_culture = good_culture
-					remove_accepted_culture = neutral_culture
-					remove_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = neutral_alignment } }
-					NOT = { owner = { good_evil_alignment = neutral_alignment } }
-				}
-				owner = {
-					political_reform = neutral_alignment
-					remove_accepted_culture = good_culture
-					add_accepted_culture = neutral_culture
-					remove_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
-				}
-			}
-			random_owned = {
-				limit = {
-					owner = { THIS = { good_evil_alignment = evil_alignment } }
-					NOT = { owner = { good_evil_alignment = evil_alignment } }
-				}
-				owner = {
-					political_reform = evil_alignment
-					remove_accepted_culture = good_culture
-					remove_accepted_culture = neutral_culture
-					add_accepted_culture = evil_culture
-					clr_country_flag = attempting_to_good
-					clr_country_flag = attempting_to_neutral
-					clr_country_flag = attempting_to_evil
-					
-					any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
-				}
-			}
+			country_event = 2509
 			create_alliance = THIS
 			clr_country_flag = possible_release_vassal_target
 		}
@@ -1353,57 +1163,7 @@ make_puppet = {
 	# scope = target
 	# THIS = country that applied wargoal
 	on_po_accepted = {
-		random_owned = {
-			limit = {
-				owner = { THIS = { good_evil_alignment = good_alignment } }
-				NOT = { owner = { good_evil_alignment = good_alignment } }
-			}
-			owner = {
-				political_reform = good_alignment
-				add_accepted_culture = good_culture
-				remove_accepted_culture = neutral_culture
-				remove_accepted_culture = evil_culture
-				clr_country_flag = attempting_to_good
-				clr_country_flag = attempting_to_neutral
-				clr_country_flag = attempting_to_evil
-					
-				any_pop = { dominant_issue = { value = good_alignment_fake factor = 20 } }
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = { THIS = { good_evil_alignment = neutral_alignment } }
-				NOT = { owner = { good_evil_alignment = neutral_alignment } }
-			}
-			owner = {
-				political_reform = neutral_alignment
-				remove_accepted_culture = good_culture
-				add_accepted_culture = neutral_culture
-				remove_accepted_culture = evil_culture
-				clr_country_flag = attempting_to_good
-				clr_country_flag = attempting_to_neutral
-				clr_country_flag = attempting_to_evil
-					
-				any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 20 } }
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = { THIS = { good_evil_alignment = evil_alignment } }
-				NOT = { owner = { good_evil_alignment = evil_alignment } }
-			}
-			owner = {
-				political_reform = evil_alignment
-				remove_accepted_culture = good_culture
-				remove_accepted_culture = neutral_culture
-				add_accepted_culture = evil_culture
-				clr_country_flag = attempting_to_good
-				clr_country_flag = attempting_to_neutral
-				clr_country_flag = attempting_to_evil
-					
-				any_pop = { dominant_issue = { value = evil_alignment_fake factor = 20 } }
-			}
-		}
+		country_event = 2509
 	}
 }
 

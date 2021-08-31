@@ -75,11 +75,7 @@
  - gollum_in_fellowship (global)
  
 ### War of the Ring
- - war_of_the_ring_started (global)
- - preferred_evil_leader (country)
- - wotr_early_start (global)
- - wotr_temp_vassal (country)
- - wotr_ended (global)
+ - wotr_started (global)
  
 ### One Ring
  - has_one_ring (country)
