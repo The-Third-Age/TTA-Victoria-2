@@ -521,18 +521,14 @@ political_decisions = {
 				}
 				AND = {
 					tag = MOR
-					OR = {
-						NOT = { FOR = { check_variable = { which = ring_controller value = 1.9 } } } # Fellowship
-						FOR = { check_variable = { which = ring_controller value = 2.1 } } # Fellowship
-					}
+					FOR = { check_variable = { which = ring_controller value = 2.9 } } # Other or Gollum
+					FOR = { NOT = { check_variable = { which = ring_controller value = 4.1 } } } # Other or Gollum
 				}
 				AND = {
 					NOT = { tag = MOR }
 					NOT = { MOR = { good_evil_alignment = evil_alignment } }
-					OR = {
-						NOT = { FOR = { check_variable = { which = ring_controller value = 1.9 } } } # Fellowship
-						FOR = { check_variable = { which = ring_controller value = 2.1 } } # Fellowship
-					}
+					FOR = { check_variable = { which = ring_controller value = 2.9 } } # Other or Gollum
+					FOR = { NOT = { check_variable = { which = ring_controller value = 4.1 } } } # Other or Gollum
 					OR = {
 						is_greater_power = yes
 						AND = {
@@ -652,7 +648,6 @@ political_decisions = {
 			has_global_flag = fellowship_into_mordor
 			FOR = { check_variable = { which = ring_controller value = 1.9 } } # Fellowship
 			FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
-			NOT = { has_global_flag = wotr_ended }
 		}
 		
 		allow = {}
@@ -662,6 +657,80 @@ political_decisions = {
 			set_variable = {
 				which = ring_controller
 				value = 5
+			}
+		}
+	}
+	
+	request_the_ring = {
+		potential = {
+			tag = MOR
+			good_evil_alignment = evil_alignment
+			nationalvalue = sauron
+			FOR = {
+				any_neighbor_country = {
+					has_country_flag = has_one_ring
+					good_evil_alignment = evil_alignment
+					NOT = { has_country_flag = rejected_mordor_ask_for_ring }
+					NOT = { tag = MOR }
+				} 
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			random_country = {
+				limit = {
+					has_country_flag = has_one_ring
+					good_evil_alignment = evil_alignment
+				}
+				country_event = 50358
+			}
+		}
+	}
+	
+	give_ring_to_mordor = {
+		potential = {
+			NOT = { tag = MOR }
+			good_evil_alignment = evil_alignment
+			MOR = {
+				nationalvalue = sauron
+				good_evil_alignment = evil_alignment
+			}
+			NOT = { war_with = MOR }
+			has_country_flag = has_one_ring
+		}
+		
+		allow = {}
+		
+		effect = {
+			prestige = -25
+			create_alliance = MOR
+			MOR = { country_event = 50203 }
+			random_owned = {
+				limit = {
+					owner = { is_greater_power = no }
+					owner = { MOR = { is_greater_power = yes } }
+				}
+				owner = {
+					MOR = {
+						diplomatic_influence = {
+							who = THIS
+							value = 400
+						}
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = ISE
+				nationalvalue = saruman
 			}
 		}
 	}

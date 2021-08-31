@@ -140,12 +140,25 @@ country_event = {
 				}
 				remove_accepted_culture = one_ring_culture
 			}
+			
+			any_country = {
+				limit = {
+					has_country_flag = has_one_ring
+				}
+				clr_country_flag = has_one_ring
+			}
+			
+			any_country = {
+				limit = {
+					has_country_modifier = one_ring
+				}
+				remove_country_modifier = one_ring
+			}
 		}
 		
 		add_accepted_culture = one_ring_culture
-		
-		
-		# TODO: Stuff about the ring
+		set_country_flag = has_one_ring
+		add_country_modifier = { name = one_ring duration = -1 }
 	}
 }
 
@@ -1602,14 +1615,6 @@ country_event = {
 	option = {
 		name = "Good Riddence"
 		
-		MOR = { prestige = -25 }
-		random_country = {
-			limit = {
-				tag = MOR
-				accepted_culture = one_ring_culture
-			}
-			remove_accepted_culture = one_ring_culture
-		}
 		random_country = {
 			limit = {
 				has_country_flag = the_council_of_elrond_host
@@ -1625,34 +1630,7 @@ country_event = {
 		}
 		country_event = 50318
 		
-		MOR = {
-			# Return cores to existing realms
-			any_country = {
-				limit = {
-					exists = yes
-					any_core = { owned_by = MOR }
-				}
-				country_event = 50328
-			}
-			
-			# Releases any vassal
-			any_country = {
-				limit = { vassal_of = MOR }
-				leave_alliance = MOR
-				country_event = 50329
-			}
-			
-			# Releases non-existing realms
-			any_country = {
-				limit = {
-					exists = no
-					any_core = { owned_by = MOR }
-				}
-				country_event = 50327
-			}
-		}
-		
-		MOR = { annex_to = D99 }
+		MOR = { country_event = 50330 }
 		
 		any_country = {
 			limit = {
@@ -1745,6 +1723,63 @@ country_event = {
 	}
 }
 
+# The Ring is Destroyed - Mordor 
+country_event = {
+	id = 50330
+	picture = ring_is_destroyed
+	title = "The One Ring is Destroyed"
+	desc = "EVTDESC50330"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Dark Lord has fallen"
+		
+		# Return cores to existing realms
+		any_country = {
+			limit = {
+				exists = yes
+				any_core = { owned_by = MOR }
+			}
+			country_event = 50328
+		}
+		
+		# Releases any vassal
+		any_country = {
+			limit = { vassal_of = MOR }
+			leave_alliance = MOR
+			country_event = 50329
+		}
+		
+		# Releases non-existing realms
+		any_country = {
+			limit = {
+				exists = no
+				any_core = { owned_by = MOR }
+			}
+			country_event = 50327
+		}
+
+		prestige = -25
+		
+		random_owned = {
+			limit = {
+				owner = { nationalvalue = sauron }
+			}
+			owner = {
+				nationalvalue = generic_leader
+				remove_country_modifier = sauron_modifier
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { government = sauron_dictatorship }
+			}
+			owner = { government = goblin_tribe }
+		}
+	}
+}
 # }
 
 # War of the Ring {
@@ -1913,6 +1948,68 @@ country_event = {
 				has_country_flag = wotr_temp_vassal
 			}
 			country_event = { id = 50350 days = 5 }
+		}
+	}
+}
+
+# Mordor Asks for the Ring
+country_event = {
+	id = 50358
+	picture = acquire_ring
+	title = "Mordor Asks for the Ring"
+	desc = "EVTDESC50538"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Only for our protection"
+		
+		prestige = -25
+		create_alliance = MOR
+		random_owned = {
+			limit = {
+				owner = { is_greater_power = no }
+				owner = { MOR = { is_greater_power = yes } }
+			}
+			owner = {
+				MOR = {
+					diplomatic_influence = {
+						who = THIS
+						value = 400
+					}
+				}
+			}
+		}
+		MOR = { country_event = 50203 }
+		
+		ai_chance = {
+			factor = 95
+		}
+	}
+	
+	option = {
+		name = "Not my Precious!"
+		
+		prestige = 10
+		
+		MOR = {
+			war = {
+				target = This
+				attacker_goal = { casus_belli = take_one_ring }
+				call_ally = yes
+			}
+		}
+		
+		set_country_flag = rejected_mordor_ask_for_ring
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_global_flag = railroading_enabled
+				NOT = { tag = ISE }
+				NOT = { nationalvalue = saruman }
+			}
 		}
 	}
 }

@@ -81,3 +81,7 @@
  - wotr_temp_vassal (country)
  - wotr_ended (global)
  
+### One Ring
+ - has_one_ring (country)
+ - rejected_mordor_ask_for_ring (country)
+ 
