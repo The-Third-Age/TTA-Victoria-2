@@ -4,7 +4,7 @@
 #	Good/Evil Clean Up
 #	Leave FOR Alone 
 #	Government Flags Clean Up 
-#	AI Cheats }
+#	Realm Leaders }
 
 # Starting Decision
 political_decisions = {
@@ -739,6 +739,35 @@ political_decisions = {
 			any_neighbor_country = {
 				limit = { has_global_flag = borders_open }
 				political_reform = open_borders
+			}
+		}
+	}
+}
+
+# Realm Leaders
+political_decisions = {
+	set_initial_leader = {
+		potential = {
+			tag = FOR
+			any_neighbor_country = { NOT = { has_country_flag = existing_country } }
+		}
+		
+		allow = {}
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					NOT = { has_country_flag = existing_country }
+					nationalvalue = generic_leader
+				}
+				set_country_flag = existing_country
+				country_event = 3500
+			}
+			any_neighbor_country = {
+				limit = {
+					NOT = { has_country_flag = existing_country }
+				}
+				set_country_flag = existing_country
 			}
 		}
 	}

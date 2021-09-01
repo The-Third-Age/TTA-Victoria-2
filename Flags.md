@@ -23,6 +23,9 @@
  - attempting_to_evil (country)
 
 ## Government Flags
+### Realm Leaders
+ - existing_country (country)
+ 
 ### Democracy
  - attempting_to_democratic (country)
  - democratic (country)

@@ -292,6 +292,134 @@ looted_heavy = {
 	population_growth = -0.030
 }
 
+#}
+##### DYNAMIC LEADER TRAITS ##### {
+# Personality (randomly assigned)
+kind = {
+	global_pop_militancy_modifier = -0.01
+	
+	icon = 5
+}
+
+smart_modifier = {
+	research_points = 0.01
+	
+	icon = 5
+}
+
+of_noble_house = {
+	global_pop_consciousness_modifier = -0.01
+	
+	icon = 5
+}
+
+defensive_modifier = { # cannot also have "aggressive_modifier"
+	cb_generation_speed_modifier = -0.25
+	min_military_spending = 0.25
+	
+	icon = 5
+}
+
+aggressive_modifier = { # cannot also have "defensive_modifier"
+	cb_generation_speed_modifier = 0.25
+	min_military_spending = 0.25
+	
+	icon = 5
+}
+
+strong = {
+	diplomatic_points_modifier = 0.1
+	
+	icon = 5
+}
+
+honest = { # cannot also have "deceitful"
+	global_pop_consciousness_modifier = -0.01
+	diplomatic_points_modifier = 0.1
+	
+	icon = 5
+}
+
+deceitful = { # cannot also have "honest"
+	global_pop_consciousness_modifier = 0.01
+	diplomatic_points_modifier = -0.1
+	
+	icon = 5
+}
+
+# Spectrum (variable)
+aristocrat_modifier = { # opposite is "of_the_people"
+	global_pop_militancy_modifier = 0.01
+	rgo_output = 0.05
+	factory_output = 0.05
+	
+	icon = 5
+}
+
+of_the_people = { # opposite if "aristocrat"
+	global_pop_militancy_modifier = -0.01
+	tax_efficiency = -0.03
+	
+	icon = 5
+}
+
+charlatan = { # opposite is "wise_ruler"
+	global_pop_consciousness_modifier = 0.01
+	political_reform_desire = 0.1
+	social_reform_desire = 0.1
+	
+	icon = 5
+}
+
+wise_ruler = { # opposite is "charlatan"
+	global_pop_consciousness_modifier = -0.01
+	political_reform_desire = -0.1
+	social_reform_desire = -0.1
+	
+	icon = 5
+}
+
+lazy = { # opposite is "diligent"
+	rgo_output = -0.05
+	factory_output = -0.05
+	global_pop_militancy_modifier = -0.01
+	
+	icon = 5
+}
+
+diligent = { # opposite is "lazy"
+	rgo_output = 0.05
+	factory_output = 0.05
+	
+	icon = 5
+}
+
+greedy = { # opposite is "generous"
+	tax_efficiency = 0.05
+	global_assimilation_rate = -0.1
+	
+	icon = 5
+}
+
+generous = { # opposite is "greedy"
+	global_assimilation_rate = 0.1
+	tax_efficiency = -0.05
+	
+	icon = 5
+}
+
+corrupt = { # opposite is "just"
+	tax_efficiency = -0.05
+	
+	icon = 5
+}
+
+just = { # opposite is "corrupt"
+	global_assimilation_rate = 0.1
+	
+	icon = 5
+}
+
 # }
 ##### NATIONAL LEADER MODIFIERS ##### {
 ecthelion_ii_modifier = {

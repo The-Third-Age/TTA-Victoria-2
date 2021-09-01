@@ -1,0 +1,628 @@
+# Dynamic Traits Events: {
+# 3500 - 3999 }
+
+# New Leader
+country_event = {
+	id = 3500
+	picture = administration
+	title = "A New Leader"
+	desc = "EVTDESC3500"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Let's see what our new leader has..."
+		
+		random = {
+			chance = 20
+			add_country_modifier = { name = kind duration = -1 }
+		}
+		random = {
+			chance = 20
+			add_country_modifier = { name = smart_modifier duration = -1 }
+		}
+		random = {
+			chance = 20
+			add_country_modifier = { name = of_noble_house duration = -1 }
+		}
+		random = {
+			chance = 20
+			add_country_modifier = { name = strong duration = -1 }
+		}
+		random = {
+			chance = 20
+			random_list = {
+				50 = { add_country_modifier = { name = defensive_modifier duration = -1 } }
+				50 = { add_country_modifier = { name = aggressive_modifier duration = -1 } }
+			}
+		}
+		random = {
+			chance = 20
+			random_list = {
+				50 = { add_country_modifier = { name = honest duration = -1 } }
+				50 = { add_country_modifier = { name = deceitful duration = -1 } }
+			}
+		}
+		
+		set_variable = { which = strata_support value = 0 }
+		set_variable = { which = wisdom value = 0 }
+		set_variable = { which = work_ethic value = 0 }
+		set_variable = { which = generosity value = 0 }
+		set_variable = { which = corruption value = 0 }
+	}
+}
+
+# Generic Leader Dies
+country_event = {
+	id = 3501
+	picture = administration
+	title = "Our Leader has Died!"
+	desc = "EVTDESC3501"
+	
+	trigger = {
+		nationalvalue = generic_leader
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.75
+			war = yes
+		}
+	}
+	
+	option = {
+		name = "Drat"
+		remove_country_modifier = kind
+		remove_country_modifier = smart_modifier
+		remove_country_modifier = of_noble_house
+		remove_country_modifier = strong
+		remove_country_modifier = defensive_modifier
+		remove_country_modifier = aggressive_modifier
+		remove_country_modifier = honest
+		remove_country_modifier = deceitful
+		remove_country_modifier = of_the_people
+		remove_country_modifier = aristocrat_modifier
+		remove_country_modifier = charlatan
+		remove_country_modifier = wise_ruler
+		remove_country_modifier = lazy
+		remove_country_modifier = diligent
+		remove_country_modifier = greedy
+		remove_country_modifier = generous
+		remove_country_modifier = corrupt
+		remove_country_modifier = just
+		
+		set_variable = { which = strata_support value = 0 }
+		set_variable = { which = wisdom value = 0 }
+		set_variable = { which = work_ethic value = 0 }
+		set_variable = { which = generosity value = 0 }
+		set_variable = { which = corruption value = 0 }
+		
+		country_event = 3500
+	}
+}
+
+# strata_support Modifiers
+country_event = {
+	id = 3502
+	picture = administration
+	title = "A Trait Change"
+	desc = "EVTDESC3502"
+	
+	trigger = {
+		OR = {
+			AND = {
+				check_variable = { which = strata_support value = 2.9 }
+				NOT = { has_country_modifier = of_the_people }
+			}
+			AND = {
+				NOT = { check_variable = { which = strata_support value = 2.9 } }
+				has_country_modifier = of_the_people
+			}
+			AND = {
+				NOT = { check_variable = { which = strata_support value = -2.9 } }
+				NOT = { has_country_modifier = aristocrat_modifier }
+			}
+			AND = {
+				check_variable = { which = strata_support value = -2.9 }
+				has_country_modifier = aristocrat_modifier
+			}
+		}
+	}
+	
+	option = {
+		name = "Ok"
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = strata_support value = 2.9 }
+					NOT = { has_country_modifier = of_the_people }
+				}
+			}
+			owner = { add_country_modifier = { name = of_the_people duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = strata_support value = 2.9 } }
+					has_country_modifier = of_the_people
+				}
+			}
+			owner = { remove_country_modifier = of_the_people }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = strata_support value = -2.9 } }
+					NOT = { has_country_modifier = aristocrat_modifier }
+				}
+			}
+			owner = { add_country_modifier = { name = aristocrat_modifier duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = strata_support value = -2.9 }
+					has_country_modifier = aristocrat_modifier
+				}
+			}
+			owner = { remove_country_modifier = aristocrat_modifier }
+		}
+	}
+}
+
+# Change in strata_support
+country_event = {
+	id = 3503
+	picture = administration
+	title = "The Plight of the Working Folk"
+	desc = "EVTDESC3503"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		money = -10000
+	}
+	
+	option = {
+		name = "Of Course!"
+		
+		treasury = -10000
+		
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = -1
+		}
+		
+		change_variable = { which = strata_support value = 1 }
+	}
+	
+	option = {
+		name = "Why don't they ask their local land and guild owners?"
+		
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			militancy = -1
+		}
+		
+		change_variable = { which = strata_support value = -1 }
+	}
+}
+
+# wisdom Modifiers
+country_event = {
+	id = 3504
+	picture = administration
+	title = "A Trait Change"
+	desc = "EVTDESC3504"
+	
+	trigger = {
+		OR = {
+			AND = {
+				check_variable = { which = wisdom value = 2.9 }
+				NOT = { has_country_modifier = wise_ruler }
+			}
+			AND = {
+				NOT = { check_variable = { which = wisdom value = 2.9 } }
+				has_country_modifier = wise_ruler
+			}
+			AND = {
+				NOT = { check_variable = { which = wisdom value = -2.9 } }
+				NOT = { has_country_modifier = charlatan }
+			}
+			AND = {
+				check_variable = { which = wisdom value = -2.9 }
+				has_country_modifier = charlatan
+			}
+		}
+	}
+	
+	option = {
+		name = "Ok"
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = wisdom value = 2.9 }
+					NOT = { has_country_modifier = wise_ruler }
+				}
+			}
+			owner = { add_country_modifier = { name = wise_ruler duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = wisdom value = 2.9 } }
+					has_country_modifier = wise_ruler
+				}
+			}
+			owner = { remove_country_modifier = wise_ruler }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = wisdom value = -2.9 } }
+					NOT = { has_country_modifier = charlatan }
+				}
+			}
+			owner = { add_country_modifier = { name = charlatan duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = wisdom value = -2.9 }
+					has_country_modifier = charlatan
+				}
+			}
+			owner = { remove_country_modifier = charlatan }
+		}
+	}
+}
+
+# Change in wisdom
+country_event = {
+	id = 3505
+	picture = administration
+	title = "A Request for Aid"
+	desc = "EVTDESC3505"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		money = -10000
+	}
+	
+	option = {
+		name = "Why would we give a non-ally our money?"
+		
+		change_variable = { which = wisdom value = 1 }
+	}
+	
+	option = {
+		name = "Of Course!"
+		
+		treasury = -10000
+		random_country = {
+			limit = {
+				THIS = { good_evil_alignment = good_alignment }
+				NOT = { good_evil_alignment = good_alignment }
+				NOT = { alliance_with = THIS }
+			}
+			treasury = 10000
+		}
+		random_country = {
+			limit = {
+				THIS = { good_evil_alignment = neutral_alignment }
+				NOT = { alliance_with = THIS }
+			}
+			treasury = 10000
+		}random_country = {
+			limit = {
+				THIS = { good_evil_alignment = evil_alignment }
+				NOT = { good_evil_alignment = evil_alignment }
+				NOT = { alliance_with = THIS }
+			}
+			treasury = 10000
+		}
+		
+		change_variable = { which = wisdom value = -1 }
+	}
+}
+
+# work_ethic Modifiers
+country_event = {
+	id = 3506
+	picture = administration
+	title = "A Trait Change"
+	desc = "EVTDESC3506"
+	
+	trigger = {
+		OR = {
+			AND = {
+				check_variable = { which = work_ethic value = 2.9 }
+				NOT = { has_country_modifier = diligent }
+			}
+			AND = {
+				NOT = { check_variable = { which = work_ethic value = 2.9 } }
+				has_country_modifier = diligent
+			}
+			AND = {
+				NOT = { check_variable = { which = work_ethic value = -2.9 } }
+				NOT = { has_country_modifier = lazy }
+			}
+			AND = {
+				check_variable = { which = work_ethic value = -2.9 }
+				has_country_modifier = lazy
+			}
+		}
+	}
+	
+	option = {
+		name = "Ok"
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = work_ethic value = 2.9 }
+					NOT = { has_country_modifier = diligent }
+				}
+			}
+			owner = { add_country_modifier = { name = diligent duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = work_ethic value = 2.9 } }
+					has_country_modifier = diligent
+				}
+			}
+			owner = { remove_country_modifier = diligent }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = work_ethic value = -2.9 } }
+					NOT = { has_country_modifier = lazy }
+				}
+			}
+			owner = { add_country_modifier = { name = lazy duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = work_ethic value = -2.9 }
+					has_country_modifier = lazy
+				}
+			}
+			owner = { remove_country_modifier = lazy }
+		}
+	}
+}
+
+# Change in work_ethic
+country_event = {
+	id = 3507
+	picture = administration
+	title = "A Game of Golf?"
+	desc = "EVTDESC3507"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Of Course!"
+		
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			militancy = -1
+		}
+		
+		change_variable = { which = work_ethic value = 1 }
+	}
+	
+	option = {
+		name = "That's too much work"
+		
+		change_variable = { which = work_ethic value = -1 }
+	}
+}
+
+# generosity Modifiers
+country_event = {
+	id = 3508
+	picture = administration
+	title = "A Trait Change"
+	desc = "EVTDESC3508"
+	
+	trigger = {
+		OR = {
+			AND = {
+				check_variable = { which = generosity value = 2.9 }
+				NOT = { has_country_modifier = generous }
+			}
+			AND = {
+				NOT = { check_variable = { which = generosity value = 2.9 } }
+				has_country_modifier = generous
+			}
+			AND = {
+				NOT = { check_variable = { which = generosity value = -2.9 } }
+				NOT = { has_country_modifier = greedy }
+			}
+			AND = {
+				check_variable = { which = generosity value = -2.9 }
+				has_country_modifier = greedy
+			}
+		}
+	}
+	
+	option = {
+		name = "Ok"
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = generosity value = 2.9 }
+					NOT = { has_country_modifier = generous }
+				}
+			}
+			owner = { add_country_modifier = { name = generous duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = generosity value = 2.9 } }
+					has_country_modifier = generous
+				}
+			}
+			owner = { remove_country_modifier = generous }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = generosity value = -2.9 } }
+					NOT = { has_country_modifier = greedy }
+				}
+			}
+			owner = { add_country_modifier = { name = greedy duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = generosity value = -2.9 }
+					has_country_modifier = greedy
+				}
+			}
+			owner = { remove_country_modifier = greedy }
+		}
+	}
+}
+
+# Change in generosity
+country_event = {
+	id = 3509
+	picture = administration
+	title = "Gifts to the People?"
+	desc = "EVTDESC3509"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		money = -10000
+	}
+	
+	option = {
+		name = "Of Course!"
+		
+		treasury = -10000
+		
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = -1
+		}
+		
+		change_variable = { which = generosity value = 1 }
+	}
+	
+	option = {
+		name = "They can earn it"
+		
+		change_variable = { which = generosity value = -1 }
+	}
+}
+
+# corruption Modifiers
+country_event = {
+	id = 3510
+	picture = administration
+	title = "A Trait Change"
+	desc = "EVTDESC3510"
+	
+	trigger = {
+		OR = {
+			AND = {
+				check_variable = { which = corruption value = 2.9 }
+				NOT = { has_country_modifier = just }
+			}
+			AND = {
+				NOT = { check_variable = { which = corruption value = 2.9 } }
+				has_country_modifier = just
+			}
+			AND = {
+				NOT = { check_variable = { which = corruption value = -2.9 } }
+				NOT = { has_country_modifier = corrupt }
+			}
+			AND = {
+				check_variable = { which = corruption value = -2.9 }
+				has_country_modifier = corrupt
+			}
+		}
+	}
+	
+	option = {
+		name = "Ok"
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = corruption value = 2.9 }
+					NOT = { has_country_modifier = just }
+				}
+			}
+			owner = { add_country_modifier = { name = just duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = corruption value = 2.9 } }
+					has_country_modifier = just
+				}
+			}
+			owner = { remove_country_modifier = just }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = corruption value = -2.9 } }
+					NOT = { has_country_modifier = corrupt }
+				}
+			}
+			owner = { add_country_modifier = { name = corrupt duration = -1 } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = corruption value = -2.9 }
+					has_country_modifier = corrupt
+				}
+			}
+			owner = { remove_country_modifier = corrupt }
+		}
+	}
+}
+
+# Change in corruption
+country_event = {
+	id = 3511
+	picture = administration
+	title = "The Trial"
+	desc = "EVTDESC3511"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "No. This court does not take bribes"
+		
+		change_variable = { which = corruption value = 1 }
+	}
+	
+	option = {
+		name = "I mean, a little money can't hurt..."
+		
+		treasury = 2000
+		
+		change_variable = { which = corruption value = -1 }
+	}
+}
