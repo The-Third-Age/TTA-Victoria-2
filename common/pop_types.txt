@@ -282,15 +282,15 @@ migration_chance = {
 	group = {
 		modifier = {
 			factor = 0.1
-			consciousness = 7
+			consciousness = 2
 		}
 		modifier = {
 			factor = 0.1
-			consciousness = 8
+			consciousness = 4
 		}
 		modifier = {
 			factor = 0.1
-			consciousness = 9 
+			consciousness = 5
 		}
 	}
 	modifier = {
@@ -357,6 +357,19 @@ migration_chance = {
 		factor = -0.3
 		state_scope = { has_factories = yes }
 	}
+	modifier = {
+		factor = 0.3
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
+		location = {
+			OR = {
+				is_accepted_culture = yes
+				is_primary_culture = yes
+			}
+		}
+	}
 }
 
 #general colonial migration mtth, same for all pops
@@ -364,22 +377,24 @@ colonialmigration_chance = {
 	factor = 0.01
 	
 	modifier = {
-		factor = -5
-		is_primary_culture = no
-		is_accepted_culture = no
+		factor = 1
+		OR = {
+			is_primary_culture = yes
+			is_accepted_culture = yes
+		}
 	}
 	group = {
 		modifier = {
-			factor = -0.2
-			NOT = { consciousness = 2 }
+			factor = 0.1
+			consciousness = 2
 		}
 		modifier = {
-			factor = -0.2
-			NOT = { consciousness = 5 }
+			factor = 0.1
+			consciousness = 4
 		}
 		modifier = {
-			factor = -0.2
-			NOT = { consciousness = 8 } 
+			factor = 0.1
+			consciousness = 5
 		}
 	}
 	group = {
