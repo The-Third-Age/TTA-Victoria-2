@@ -1467,7 +1467,7 @@ country_event = {
 		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 		NOT = { has_global_flag = fellowship_has_failed }
 		has_global_flag = fellowship_passed_through_lothlorien
-		NOT = has_global_flag = gollum_in_fellowship
+		NOT = { has_global_flag = gollum_in_fellowship }
 	}
 	
 	mean_time_to_happen = {
@@ -1523,7 +1523,6 @@ country_event = {
 	
 	option = {
 		name = "He won't get far"
-		
 		
 		FOR = {
 			set_variable = {
