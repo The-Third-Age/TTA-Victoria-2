@@ -148,3 +148,114 @@ country_event = {
 		name = "Quit"
 	}
 }
+
+# Slavery Options
+country_event = {
+	id = 9503
+	title = "Choose a Slavery Option"
+	desc = "EVTDESC9503"
+	picture = administration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Do not enslave conquered pops"
+		
+		clr_country_flag = poor_slaving
+		clr_country_flag = all_slaving
+	}
+	
+	option = {
+		name = "Enslave poor conquered pops"
+		
+		set_country_flag = poor_slaving
+		clr_country_flag = all_slaving
+	}
+	
+	option = {
+		name = "Enslave all non-accepted conquered pops"
+		
+		clr_country_flag = poor_slaving
+		set_country_flag = all_slaving
+	}
+}
+
+# Enslave poor
+country_event = {
+	id = 9504
+	title = "Enslaving the New Poor"
+	desc = "EVTDESC9504"
+	picture = administration
+	
+	trigger = {
+		any_owned_province = {
+			any_pop = {
+				is_accepted_culture = no
+				is_primary_culture = no
+				strata = poor
+				NOT = { type = slaves }
+			}
+			is_slave = yes
+		}
+		NOT = { slavery = no_slavery }
+		has_country_flag = poor_slavery
+	}
+	
+	option = {
+		name = "Our new slaves"
+		
+		any_pop = {
+			limit = {
+				is_accepted_culture = no
+				is_primary_culture = no
+				strata = poor
+				location = { is_slave = yes }
+			}
+			pop_type = slaves
+		}
+	}
+}
+
+# Enslave all
+country_event = {
+	id  = 9505
+	title = "Enslaving the Unaccepteds"
+	desc = "EVTDESC9505"
+	picture = administration
+	
+	trigger = {
+		any_owned_province = {
+			any_pop = {
+				is_accepted_culture = no
+				is_primary_culture = no
+				NOT = { type = slaves }
+			}
+			is_slave = yes
+		}
+		NOT = { slavery = no_slavery }
+		has_country_flag = all_slaving
+	}
+	
+	option = {
+		name = "Our new slaves"
+		
+		any_pop = {
+			limit = {
+				is_accepted_culture = no
+				is_primary_culture = no
+				location = { is_slave = yes }
+			}
+			pop_type = slaves
+		}
+		
+		any_pop = [
+			limit = {
+				type = slaves
+			}
+			ideology = {
+				value = slave_ideology
+				factor = 10
+			}
+		}
+	}
+}

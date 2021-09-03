@@ -261,4 +261,18 @@ political_decisions = {
 			country_event = 9500
 		}
 	}
+	
+	slaving_rules = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { slavery = no_slavery }
+		}
+		
+		allow = {}
+		
+		effect = {
+			country_event = 9503
+		}
+	}
 }

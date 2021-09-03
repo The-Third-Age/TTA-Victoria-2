@@ -1,5 +1,28 @@
 # If you add types, and use those tags, do not change them without changing everywhere they are used.	
-	
+
+# cosmetic. Does nothing in game except define slaves for pop_types
+slave_group = {
+	slave_ideology = {
+		color = { 17 17 17 }
+		
+		add_political_reform = {
+			base = 1
+		}
+		
+		remove_political_reform = {
+			base = 1
+		}
+		
+		add_social_reform = {
+			base = 1
+		}
+		
+		remove_social_reform = {
+			base = 1
+		}
+	}
+}
+
 prosauron_group = {
 	# always supports political reform. Always wants to remove them
 	# always supports social reform. Always wants to remove them

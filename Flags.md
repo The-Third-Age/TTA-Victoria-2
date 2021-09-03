@@ -35,6 +35,10 @@
 
 ### Slavery
  - has_all_slavery (country)
+ 
+### Slavery Rules
+ - poor_slaving (country)
+ - all_slaving (country)
 
 ### Nobility Autonomy
  - na_large (country)
@@ -47,6 +51,7 @@
  - unciv_5 (global)
  - unciv_7 (global)
  - unciv_10 (global)
+ - low_military_recruitment (country)
  
 ## Fellowar of the Ring
 ### Pre-Fellowship

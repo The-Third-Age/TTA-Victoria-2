@@ -6,6 +6,9 @@
  - The Fellowship of the Ring
  - The One Ring
  - The War(s) of the Ring
+
+### Content:
+ - Slave to you heart's desire! For a realm with some sort of slavery, different options can be set for what pops get enslaved when conquering land.
  
 ### Tweaks
  - Timber production has been increased
