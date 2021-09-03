@@ -19,7 +19,10 @@ political_decisions = {
 			# Literacy boosts
 			any_pop = {
 				limit = {
-					type = slaves
+					OR = {
+						type = slaves
+						type = slave_craftsmen
+					}
 				}
 				literacy = -0.15
 			}
@@ -1036,7 +1039,26 @@ political_decisions = {
 			}
 			NOT = { slavery = no_slavery }
 			any_owned_province = {
-				slaves = 0.25
+				OR = {
+					slaves = 0.25
+					slave_craftsmen = 0.25
+					AND = {
+						slaves = 0.05
+						slave_craftsmen = 0.20
+					}
+					AND = {
+						slaves = 0.10
+						slave_craftsmen = 0.15
+					}
+					AND = {
+						slaves = 0.15
+						slave_craftsmen = 0.10
+					}
+					AND = {
+						slaves = 0.20
+						slave_craftsmen = 0.05
+					}
+				}
 				NOT = { has_province_modifier = major_slave_hub }
 			}
 		}
@@ -1048,7 +1070,26 @@ political_decisions = {
 		effect = {
 			any_owned = {
 				limit = {
-					slaves = 0.25
+					OR = {
+						slaves = 0.25
+						slave_craftsmen = 0.25
+						AND = {
+							slaves = 0.05
+							slave_craftsmen = 0.20
+						}
+						AND = {
+							slaves = 0.10
+							slave_craftsmen = 0.15
+						}
+						AND = {
+							slaves = 0.15
+							slave_craftsmen = 0.10
+						}
+						AND = {
+							slaves = 0.20
+							slave_craftsmen = 0.05
+						}
+					}
 				}
 				add_province_modifier = {
 					name = major_slave_hub

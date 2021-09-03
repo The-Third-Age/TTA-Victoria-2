@@ -299,6 +299,16 @@ country_event = {
 				}
 				pop_type = labourers
 			}
+			any_pop = {
+				limit = {
+					type = slave_craftsmen
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				pop_type = craftsmen
+			}
 		}
 		ai_chance = {
 			factor = 50
@@ -330,6 +340,16 @@ country_event = {
 					}
 				}
 				pop_type = labourers
+			}
+			any_pop = {
+				limit = {
+					type = slave_craftsmen
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				pop_type = craftsmen
 			}
 		}
 		ai_chance = {

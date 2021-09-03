@@ -120,6 +120,7 @@ country_event = {
 				NOT = { is_primary_culture = yes }
 				NOT = { type = labourers }
 				NOT = { type = slaves }
+				NOT = { type = slave_craftsmen }
 			}
 			pop_type = labourers
 		}
@@ -133,6 +134,7 @@ country_event = {
 				NOT = { is_primary_culture = yes }
 				NOT = { type = labourers }
 				NOT = { type = slaves }
+				NOT = { type = slave_craftsmen }
 			}
 			pop_type = labourers
 		}
@@ -194,6 +196,7 @@ country_event = {
 				is_primary_culture = no
 				strata = poor
 				NOT = { type = slaves }
+				NOT = { type = slave_craftsmen }
 			}
 			is_slave = yes
 		}
@@ -208,10 +211,34 @@ country_event = {
 			limit = {
 				is_accepted_culture = no
 				is_primary_culture = no
+				type = craftsmen
+				location = { is_slave = yes }
+			}
+			pop_type = slave_craftsmen
+		}
+		
+		any_pop = {
+			limit = {
+				is_accepted_culture = no
+				is_primary_culture = no
 				strata = poor
+				NOT = { type = slave_craftsmen }
 				location = { is_slave = yes }
 			}
 			pop_type = slaves
+		}
+		
+		any_pop = [
+			limit = {
+				OR = {
+					type = slaves
+					type = slave_craftsmen
+				}
+			}
+			ideology = {
+				value = slave_ideology
+				factor = 10
+			}
 		}
 	}
 }
@@ -229,6 +256,7 @@ country_event = {
 				is_accepted_culture = no
 				is_primary_culture = no
 				NOT = { type = slaves }
+				NOT = { type = slave_craftsmen }
 			}
 			is_slave = yes
 		}
@@ -243,14 +271,31 @@ country_event = {
 			limit = {
 				is_accepted_culture = no
 				is_primary_culture = no
+				OR = {
+					type = craftsmen
+					type = artisans
+				}
 				location = { is_slave = yes }
+			}
+			pop_type = slave_craftsmen
+		}
+		
+		any_pop = {
+			limit = {
+				is_accepted_culture = no
+				is_primary_culture = no
+				location = { is_slave = yes }
+				NOT = { type = slave_craftsmen }
 			}
 			pop_type = slaves
 		}
 		
-		any_pop = [
+		any_pop = {
 			limit = {
-				type = slaves
+				OR = {
+					type = slaves
+					type = slave_craftsmen
+				}
 			}
 			ideology = {
 				value = slave_ideology
