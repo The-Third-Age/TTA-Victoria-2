@@ -210,6 +210,19 @@ political_decisions = {
 					slavery = yes_slavery
 				}
 				set_country_flag = has_all_slavery
+				any_state = { is_slave = yes }
+			}
+			
+			any_country = {
+				limit = {
+					is_substate = no
+				}
+				random_owned = {
+					limit = {
+						is_capital = yes
+					}
+					trade_goods = administrative_services
+				}
 			}
 			
 			# Province/State Renaming variables
