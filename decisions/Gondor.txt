@@ -110,6 +110,7 @@ political_decisions = {
 				crown_land_ownership = half_land_ownership
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
+				ai = yes
 			}
 			OR = {
 				city_jurisdiction = territorial_cities
@@ -155,6 +156,7 @@ political_decisions = {
 				crown_land_ownership = half_land_ownership
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
+				ai = yes
 			}
 			OR = {
 				city_jurisdiction = territorial_cities
@@ -205,6 +207,7 @@ political_decisions = {
 				crown_land_ownership = half_land_ownership
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
+				ai = yes
 			}
 			OR = {
 				city_jurisdiction = territorial_cities
@@ -270,6 +273,7 @@ political_decisions = {
 				crown_land_ownership = half_land_ownership
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
+				ai = yes
 			}
 			OR = {
 				city_jurisdiction = territorial_cities
@@ -321,6 +325,7 @@ political_decisions = {
 			OR = {
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
+				ai = yes
 			}
 			OR = {
 				city_jurisdiction = territorial_cities
@@ -365,7 +370,10 @@ political_decisions = {
 		}
 		
 		allow = { 
-			crown_land_ownership = all_land_ownership
+			OR = {
+				crown_land_ownership = all_land_ownership
+				ai = yes
+			}
 			city_jurisdiction = royal_cities
 			war = no
 			diplomacy_3 = 1
