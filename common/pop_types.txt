@@ -414,10 +414,6 @@ colonialmigration_chance = {
 			NOT = { luxury_needs = 0.1 }
 		}
 	}
-	modifier = {
-		factor = -100
-		NOT = { agree_with_ruling_party = 0.02 }
-	}
 	group = {
 		modifier = {
 			factor = 3
@@ -449,6 +445,10 @@ emigration_chance = {
 	modifier = {
 		factor = -100
 		country = { border_policy = closed_borders }
+	}
+	modifier = {
+		factor = -100
+		NOT = { agree_with_ruling_party = 0.02 }
 	}
 	group = {
 		modifier = {
