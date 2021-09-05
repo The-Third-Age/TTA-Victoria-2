@@ -110,11 +110,6 @@ promotion_chance = {
 demotion_chance = {
 	factor = 1
 	modifier = {
-		factor = 90
-		NOT = { agree_with_ruling_party = 0.02 }
-		location = { is_colonial = yes }
-	}
-	modifier = {
 		factor = -0.1
 		not = { religion = this }
 		strata = poor
@@ -309,10 +304,6 @@ migration_chance = {
 			NOT = { location = { controlled_by = owner } }
 		}
 	}
-	modifier = {
-		factor = -100
-		NOT = { agree_with_ruling_party = 0.02 }
-	}
 	group = {
 		modifier = {
 			factor = 0.1
@@ -498,10 +489,6 @@ emigration_chance = {
 			factor = -0.1
 			NOT = { consciousness = 8 } 
 		}
-	}
-	modifier = {
-		factor = -100
-		NOT = { agree_with_ruling_party = 0.02 }
 	}
 	group = {
 		modifier = {

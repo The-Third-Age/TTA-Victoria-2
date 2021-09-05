@@ -242,10 +242,7 @@ patriot_rebels = {
 
         modifier = {
             factor = 0
-			OR = {
-				type = slaves
-				type = slave_craftsmen
-			}
+			type = slaves
         }
         modifier = {
             factor = 0
@@ -443,12 +440,7 @@ slave_revolt = {
         factor = 0.25
         modifier = {
             factor = 0
-			NOT = { 
-				OR = {
-					type = slave_craftsmen
-					type = slaves
-				}
-			}
+			NOT = { type = slaves }
         }
         modifier = {
             factor = 0
@@ -470,12 +462,7 @@ slave_revolt = {
         }
         modifier = {
             factor = 0.25
-            NOT = { 
-				OR = {
-					has_pop_type = slave_craftsmen
-					has_pop_type = slaves
-				}
-			}
+            NOT = {  has_pop_type = slaves }
         }
         modifier = {
             factor = 0.001
@@ -502,10 +489,7 @@ slave_revolt = {
     siege_won_effect = {
         any_pop = {
             limit = {
-				AND = {
-					NOT = { type = slaves }
-					NOT = { type = slave_craftsmen }
-				}
+				NOT = { type = slaves }
             }
             reduce_pop = 0.75
         }
@@ -516,12 +500,6 @@ slave_revolt = {
             }
             pop_type = labourers
         }
-		any_pop = {
-			limit = {
-				type = slave_craftsmen
-			}
-			pop_type = craftsmen
-		}
 
     }
 
@@ -602,7 +580,6 @@ democratic_rebels = {
 			factor = 0
 			OR = {
 				type = slaves
-				type = slave_craftsmen
 				country = { civilized = no }
 				country = { vote_franschise = universal_voting }
 				pop_majority_ideology = servants
@@ -753,7 +730,6 @@ fundamentalist_rebels = {
 			factor = 0
 			OR = {
 				type = slaves
-				type = slave_craftsmen
 				country = { civilized = no }
 				pop_majority_ideology = servants
 				pop_majority_ideology = loremaster
@@ -899,7 +875,6 @@ noble_rebels = {
 			factor = 0
 			OR = {
 				type = slaves
-				type = slave_craftsmen
 				country = { civilized = no }
 				pop_majority_ideology = servants
 				pop_majority_ideology = loremaster
