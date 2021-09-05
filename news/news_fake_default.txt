@@ -1,0 +1,38 @@
+################
+##No date fakes
+################
+pattern = { #quick method of repeating news stories
+	name = "fake_news_pattern"
+
+	generator_selector ={
+		type = "FAKE"
+		name = "some_fake_ANY_%1%" #var 1
+		case = { value = 100 }
+		case = { trigger = { news_printing_count = 1 } value = -999	}
+	}
+	news_priority = {
+		type = "FAKE"
+		name = "some_fake_ANY_%1%"
+		case = { priority_add = 5 }
+	}
+	generate_article = {
+		type = "FAKE"
+		size = small
+		name = "some_fake_ANY_%1%"
+		title_case = { text_add = { %2% } } #var 2
+		description_case = { text_add = { %3% } } #var 3
+	}
+}
+
+fake_news_pattern = { "1" "some_fake_ANY_title_1" "some_fake_ANY_1" } #var 1, 2,3 are replaced by these
+fake_news_pattern = { "2" "some_fake_ANY_title_2" "some_fake_ANY_2" }
+fake_news_pattern = { "3" "some_fake_ANY_title_3" "some_fake_ANY_3" }
+fake_news_pattern = { "4" "some_fake_ANY_title_4" "some_fake_ANY_4" }
+fake_news_pattern = { "5" "some_fake_ANY_title_5" "some_fake_ANY_5" }
+fake_news_pattern = { "6" "some_fake_ANY_title_6" "some_fake_ANY_6" }
+fake_news_pattern = { "7" "some_fake_ANY_title_7" "some_fake_ANY_7" }
+fake_news_pattern = { "8" "some_fake_ANY_title_8" "some_fake_ANY_8" }
+fake_news_pattern = { "9" "some_fake_ANY_title_9" "some_fake_ANY_9" }
+fake_news_pattern = { "10" "some_fake_ANY_title_10" "some_fake_ANY_10" }
+fake_news_pattern = { "11" "some_fake_ANY_title_11" "some_fake_ANY_11" }
+fake_news_pattern = { "12" "some_fake_ANY_title_12" "some_fake_ANY_12" }
