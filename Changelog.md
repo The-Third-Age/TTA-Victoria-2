@@ -18,9 +18,11 @@
  - Internal and colonial migration have been slightly increased
  - Shortened construction times for roads, castles and ports
  - Increased "High Quality Goods" MTTH (was spammy)
-
+ - Slightly changed how many research points on are what pops
+ 
 ### Graphics
  - Army tech pictures added
+ - Unit icons redone
  
 ## v0.1
  - too lazy to do this after the fact.
