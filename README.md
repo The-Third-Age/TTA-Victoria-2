@@ -33,7 +33,8 @@ A Lord of the Rings mod for Victoria 2
  - Mish Mash Map Mod
  - Big Flags Mod
  
-## Graphical Credits
+## Asset Credits
+### Graphic Assets
 - Terrain textures
 	- [HFME](https://github.com/Historical-Expansion-Mod/Greater-Flavor-Mod)
 - Terrains
@@ -169,7 +170,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Grey Mountain Goblins](https://www.pinterest.com/pin/541698661430483809/)
 	- [Woodland Realm](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 
-## Music & Sound Credits
+### Music & Sound Assets
 - Main Theme: [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
 - War Declared SFX: Lord of the Rings: Return of the King (2003)
 	
