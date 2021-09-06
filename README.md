@@ -33,7 +33,7 @@ A Lord of the Rings mod for Victoria 2
  - Mish Mash Map Mod
  - Big Flags Mod
  
-## Assets
+## Graphical Credits
 - Terrain textures
 	- [HFME](https://github.com/Historical-Expansion-Mod/Greater-Flavor-Mod)
 - Terrains
@@ -145,21 +145,22 @@ A Lord of the Rings mod for Victoria 2
 	- [Thengel](https://www.wesleygardner.com/projects/e0vlO3)
 - Technology art
 	- [John Howe](https://www.john-howe.com/portfolio/gallery/categories.php?cat_id=66)
+	- [Alan Lee](https://www.iamag.co/the-art-of-alan-lee/)
 	- [Daniel Falconer](https://www.artstation.com/artwork/GaNGx4)
 	- [Nick Keller](http://www.nickkellerart.com/)
 	- [JRR Harlequin](https://jrrharlequin.com/lord-of-the-rings-battle-for-middle-earth)
 	- [Brian Raty](https://www.artstation.com/brianraty)
-	- [Jan Pospisil](https://www.deviantart.com/merlkir/gallery/29988/the-last-days-tolkien-related)
-- Main Theme
-	- [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
-- Units
-	- [Levies](https://forums.ageofempires.com/t/nordic-swordsman-should-be-renamed-to-nordic-axeman/89246)
-	- [Swordsmen](https://www.deviantart.com/2zak/art/Swordsman-minimalist-sprite-542129859)
-	- [Pikemen](https://www.spriters-resource.com/fullview/42154/)
-	- [Horse Archers](https://pixabay.com/vectors/horse-archer-archery-arrow-5698294/)
-	- [Heavy Cavalry](https://opengameart.org/content/cavalry-sprite-for-freesiege)
-	- [Archers](https://www.deviantart.com/magecraft22/art/Archer-Pixel-Art-572073117)
-	- [Artillery](https://scribblenauts.fandom.com/wiki/Catapult)
+	- [Jan Pospisil](https://www.deviantart.com/merlkir)
+	- [Jan Boruta](https://www.deviantart.com/janboruta)
+	- [Ramon Bruin](https://www.deviantart.com/ramonbruin)
+	- [Sergey Glushakov](https://www.deviantart.com/dinodrawing)
+	- [CapturedJoe](https://www.deviantart.com/capturedjoe)
+	- [Frank Att](https://www.deviantart.com/frankatt)
+	- [Bo Chicoine](https://www.deviantart.com/bochicoine)
+	- [Firat Solhan](https://www.deviantart.com/firatsolhan)
+	- [DubuGomdori](https://www.deviantart.com/dubugomdori)
+	- [Ubisoft](https://www.wallpaperflare.com/artwork-assassins-creed-concept-art-sailing-ship-shipyard-wallpaper-uteqo)
+	- Various 15th to 19th century artwork
  - Flags
 	- [Rhun](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 	- [Dorwinion](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
@@ -168,6 +169,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Grey Mountain Goblins](https://www.pinterest.com/pin/541698661430483809/)
 	- [Woodland Realm](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 
+## Music & Sound Credits
+- Main Theme: [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
+- War Declared SFX: Lord of the Rings: Return of the King (2003)
 	
 ## References
  - [Lindëfirion](http://lindefirion.net/)
