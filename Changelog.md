@@ -9,6 +9,7 @@
 
 ### Content:
  - Slave to you heart's desire! For a realm with some sort of slavery, different options can be set for what pops get enslaved when conquering land.
+ - Add filler news: mainly memes
  
 ### Tweaks
  - Timber production has been increased
