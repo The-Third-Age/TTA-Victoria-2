@@ -60,6 +60,9 @@ A Lord of the Rings mod for Victoria 2
 	- [Ranged Gear](https://www.pinterest.com/pin/814588651337049655/)
 	- [Horses (AOE Expanded)](https://github.com/AoE-guys/AOE-exp)
 	- [Administrative Services (EU4)](https://store.steampowered.com/app/236850/Europa_Universalis_IV/)
+	- [Icons of Crusader Kings 3](https://ck3.paradoxwikis.com/Category:Icons)
+	- [Icons of Imperator: Rome](https://imperator.paradoxwikis.com/Category:Icons)
+	- [Icons of March of the Eagles](https://store.steampowered.com/app/227760/March_of_the_Eagles/)
 - General/Admiral portraits
 	- [Medieval 2 TW: Divide and Conquer](https://www.moddb.com/mods/divide-and-conquer)
 - Loading Screen Paintings
