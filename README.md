@@ -164,6 +164,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Abe Papakhian](https://www.deviantart.com/abepapakhian)
 	- [Peter Kmiecik](https://www.deviantart.com/peterkmiecik)
 	- [Joona Kujanen](https://www.deviantart.com/tulikoura)
+	- [Nabs-Draws](https://www.deviantart.com/nabs-draws)
 	- [Re-Rian](https://www.deviantart.com/re-rian)
 	- [AlexanderCrW](https://www.deviantart.com/alexandercrw)
 	- [DubuGomdori](https://www.deviantart.com/dubugomdori)
