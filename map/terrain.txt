@@ -300,22 +300,21 @@ categories =  {
 		immigrant_attract = -1
 	}
 	
-	# urban (not above)
+	# hills
 	cair_andros = {
-		# malus from urban
 		movement_cost = 1.2
 		
+		# bumped from hills
 		defence = 2
-		combat_width = -0.20
+		combat_width = -0.25
 		
 		color = { 135 70 0 }
 
-		farm_rgo_eff = -0.2
-		mine_rgo_eff = -0.2
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1
+		# bumped from hills
+		supply_limit = 4
 		
-		supply_limit = 6
-		
-		# malus from urban
 		min_build_railroad = 1
 	}
 	
@@ -502,6 +501,38 @@ categories =  {
 		supply_limit = 3
 		
 		min_build_railroad = 1
+	}
+	
+	# urban (not above)
+	pelargir = {
+		movement_cost = 1.0
+		
+		defence = 2
+		combat_width = -0.20
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.2
+		mine_rgo_size = 0.2
+		
+		# bumped from urban
+		supply_limit = 7
+	}
+
+	# farmlands 
+	lebennin = {
+		movement_cost = 1.0
+		
+		defence = -1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.3
+		farm_rgo_eff = 0.2
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 6
 	}
 	
 	###################
