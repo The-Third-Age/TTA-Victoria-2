@@ -151,6 +151,8 @@ A Lord of the Rings mod for Victoria 2
 	- [Nick Keller](http://www.nickkellerart.com/)
 	- [JRR Harlequin](https://jrrharlequin.com/lord-of-the-rings-battle-for-middle-earth)
 	- [Brian Raty](https://www.artstation.com/brianraty)
+	- [Tony Chao](http://www.tonychaoillustration.com/lord-of-the-rings)
+	- [Denis Gordeev](https://disk.yandex.com/a/pkxz6VuF3VVtEY)
 	- [Jan Pospisil](https://www.deviantart.com/merlkir)
 	- [Jan Boruta](https://www.deviantart.com/janboruta)
 	- [Ramon Bruin](https://www.deviantart.com/ramonbruin)
@@ -161,9 +163,13 @@ A Lord of the Rings mod for Victoria 2
 	- [Firat Solhan](https://www.deviantart.com/firatsolhan)
 	- [Abe Papakhian](https://www.deviantart.com/abepapakhian)
 	- [Peter Kmiecik](https://www.deviantart.com/peterkmiecik)
+	- [Joona Kujanen](https://www.deviantart.com/tulikoura)
+	- [Re-Rian](https://www.deviantart.com/re-rian)
+	- [AlexanderCrW](https://www.deviantart.com/alexandercrw)
 	- [DubuGomdori](https://www.deviantart.com/dubugomdori)
 	- [BROKENHILL](https://www.deviantart.com/brokenhill)
-	- [Norloth](https://www.deviantart.com/norloth)	
+	- [Norloth](https://www.deviantart.com/norloth)
+	- [firith456](http://www.councilofelrond.com/imagegallerycats/firith456/)
 	- [Ubisoft](https://www.wallpaperflare.com/artwork-assassins-creed-concept-art-sailing-ship-shipyard-wallpaper-uteqo)
 	- Various 15th to 19th century artwork
  - Flags
