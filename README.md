@@ -159,7 +159,11 @@ A Lord of the Rings mod for Victoria 2
 	- [Frank Att](https://www.deviantart.com/frankatt)
 	- [Bo Chicoine](https://www.deviantart.com/bochicoine)
 	- [Firat Solhan](https://www.deviantart.com/firatsolhan)
+	- [Abe Papakhian](https://www.deviantart.com/abepapakhian)
+	- [Peter Kmiecik](https://www.deviantart.com/peterkmiecik)
 	- [DubuGomdori](https://www.deviantart.com/dubugomdori)
+	- [BROKENHILL](https://www.deviantart.com/brokenhill)
+	- [Norloth](https://www.deviantart.com/norloth)	
 	- [Ubisoft](https://www.wallpaperflare.com/artwork-assassins-creed-concept-art-sailing-ship-shipyard-wallpaper-uteqo)
 	- Various 15th to 19th century artwork
  - Flags
