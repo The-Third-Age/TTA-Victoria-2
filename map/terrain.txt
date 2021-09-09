@@ -278,12 +278,6 @@ categories =  {
 		farm_rgo_eff = -0.2
 		mine_rgo_size = 0.2
 		
-		population_growth = -0.0005
-		# cities birthrates were usually lower than their deathrates until the advent of medicine
-		
-		immigrant_attract = 2.0 
-		# They only grew through migration from the countryside
-		
 		supply_limit = 6
 	}
 	
@@ -318,9 +312,6 @@ categories =  {
 
 		farm_rgo_eff = -0.2
 		mine_rgo_eff = -0.2
-		
-		population_growth = -0.0005 
-		# cities birthrates were usually lower than their deathrates until the advent of medicine
 		
 		supply_limit = 6
 		
@@ -357,14 +348,6 @@ categories =  {
 		farm_rgo_eff = -0.2
 		mine_rgo_size = 0.2
 		
-		
-		
-		population_growth = -0.0005
-		# cities birthrates were usually lower than their deathrates until the advent of medicine
-		
-		immigrant_attract = 2.0 
-		# They only grew through migration from the countryside
-		
 		supply_limit = 6
 	}
 	
@@ -378,12 +361,6 @@ categories =  {
 		farm_rgo_eff = 0.1
 		mine_rgo_size = 0.2
 		mine_rgo_eff = 0.1
-		
-		population_growth = -0.0005
-		# cities birthrates were usually lower than their deathrates until the advent of medicine
-		
-		immigrant_attract = 1.0 
-		# They only grew through migration from the countryside
 		
 		# bumped from plains
 		supply_limit = 6
@@ -441,6 +418,90 @@ categories =  {
 		mine_rgo_eff = 0.1
 		
 		supply_limit = 5
+	}
+	
+	# woods
+	henneth_annun = {
+		movement_cost = 1.2
+		
+		# bumped from woods
+		defence = 2
+		# bumped from woods
+		combat_width = -0.25
+		
+		color = { 91 123 10 }
+		
+		farm_rgo_size = -0.2
+		farm_rgo_eff = -0.2
+		mine_rgo_size = -0.2
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 3
+	}
+	
+	# woods
+	ithilien_woods = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.20
+		
+		color = { 91 123 10 }
+		
+		farm_rgo_size = -0.2
+		farm_rgo_eff = -0.2
+		mine_rgo_size = -0.2
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 3
+	}
+	
+	# plains
+	ithilduin = {
+		movement_cost = 1.0
+		
+		# bumped from plains
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
+	}
+	
+	# plains
+	ithilien_plains = {
+		movement_cost = 1.0
+		
+		defence = -1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
+	}
+	
+	# hills 
+	ithilien_hills = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
 	}
 	
 	###################
