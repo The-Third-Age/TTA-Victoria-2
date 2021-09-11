@@ -226,18 +226,18 @@ categories =  {
 		movement_cost = 1.4
 		
 		defence = 2
-		combat_width = -0.4
+		combat_width = -0.5
 		
 		color = { 117 108 119 }
 		
-		farm_rgo_size = -0.45
+		# bumped from mountains
+		farm_rgo_size = -0.2
+		# bumped from mountains
 		farm_rgo_eff = -0.2
-		mine_rgo_size = 0.05
-		mine_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.2
 		
-		supply_limit = -1
-		
-		immigrant_attract = -0.2
+		supply_limit = 1
 		
 		min_build_railroad = 2
 	}
@@ -809,6 +809,88 @@ categories =  {
 		mine_rgo_eff = 0.1
 		
 		supply_limit = 5
+	}
+	
+	# hills 
+	belfalas = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# mountain 
+	ered_tarthonion = {
+		movement_cost = 1.4
+		
+		defence = 2
+		combat_width = -0.5
+		
+		color = { 117 108 119 }
+		
+		farm_rgo_size = -0.3
+		farm_rgo_eff = -0.3
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.2
+		
+		supply_limit = 1
+		
+		min_build_railroad = 2
+	}
+	
+	# urban (not above)
+	dol_amroth = {
+		movement_cost = 1.0
+		
+		# bumpbed from urban
+		defence = 3
+		combat_width = -0.20
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.2
+		mine_rgo_size = 0.2
+		
+		supply_limit = 6
+	}
+	
+	# steppe 
+	nan_rochben = {
+		movement_cost = 1.0
+		
+		color = { 211 201 184 }
+		
+		farm_rgo_size = 0.1
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.1
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 4
+	}
+	
+	# urban (not above)
+	edhellond = {
+		movement_cost = 1.0
+		
+		defence = 2
+		combat_width = -0.20
+		
+		color = { 135 70 0 }
+
+		# bumped from urban
+
+		mine_rgo_size = 0.2
+		
+		# bumped from urban
+		supply_limit = 7
 	}
 	
 	###################
