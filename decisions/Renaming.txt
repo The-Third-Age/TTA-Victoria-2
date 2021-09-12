@@ -117,7 +117,7 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = middle_anorien_name value = 0.1 } } }
 					}
 				}
-				1 = { state_scope = { change_region_name = "Talath Anór" } }
+				8 = { state_scope = { change_region_name = "Talath Anór" } }
 				owner = { FOR = { set_variable = { which = middle_anorien_name value = 0 } } } # Gondor
 			}
 			
@@ -131,7 +131,7 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = middle_anorien_name value = 1.1 } } }
 					}
 				}
-				1 = { state_scope = { change_region_name = "Sun Plains" } }
+				8 = { state_scope = { change_region_name = "Sun Plains" } }
 				owner = { FOR = { set_variable = { which = middle_anorien_name value = 1 } } } # Rohan
 			}
 			
@@ -145,7 +145,7 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = near_anorien_name value = 0.1 } } }
 					}
 				}
-				1 = { state_scope = { change_region_name = "Old Anórien" } }
+				16 = { state_scope = { change_region_name = "Old Anórien" } }
 				16 = { change_province_name = "Minas Tirith" }
 				owner = { FOR = { set_variable = { which = near_anorien_name value = 0 } } } # Gondor
 			}
@@ -160,9 +160,252 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = near_anorien_name value = 1.1 } } }
 					}
 				}
-				1 = { state_scope = { change_region_name = "Old Sunlending" } }
+				16 = { state_scope = { change_region_name = "Old Sunlending" } }
 				16 = { change_province_name = "Mundberg" }
 				owner = { FOR = { set_variable = { which = near_anorien_name value = 1 } } } # Rohan
+			}
+		}
+	}
+	
+	rename_ithilien = {
+		# 0 = Gondor 1 = Druedain 2 = Mordor
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# Gondor - Forithilien
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = forithilien_name value = -0.1 } } }
+								FOR = { check_variable = { which = forithilien_name value = 0.1 } }
+							}
+						}
+						# Druedain - Forithilien
+						AND = {
+							is_culture_group = wildmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = forithilien_name value = 0.9 } } }
+								FOR = { check_variable = { which = forithilien_name value = 1.1 } }
+							}
+						}
+						# Mordor - Forithilien
+						AND = {
+							is_culture_group = mordorian
+							OR = {
+								FOR = { NOT = { check_variable = { which = forithilien_name value = 1.9 } } }
+								FOR = { check_variable = { which = forithilien_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 198 owns = 199 owns = 200 owns = 201 owns = 202 owns = 203 owns = 204
+				}
+				AND = {
+					OR = {
+						# Gondor - Emyn Arnen
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = emyn_arnen_name value = -0.1 } } }
+								FOR = { check_variable = { which = emyn_arnen_name value = 0.1 } }
+							}
+						}
+						# Druedain - Emyn Arnen
+						AND = {
+							is_culture_group = wildmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = emyn_arnen_name value = 0.9 } } }
+								FOR = { check_variable = { which = emyn_arnen_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 205 owns = 206 owns = 207 owns = 208 owns = 209
+				}
+				AND = {
+					OR = {
+						# Gondor - Harithilien
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = harithilien_name value = -0.1 } } }
+								FOR = { check_variable = { which = harithilien_name value = 0.1 } }
+							}
+						}
+						# Druedain - Harithilien
+						AND = {
+							is_culture_group = wildmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = harithilien_name value = 0.9 } } }
+								FOR = { check_variable = { which = harithilien_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 210 owns = 211 owns = 212 owns = 213 owns = 214
+				}
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			# Gondor - Forithilien
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 198
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = forithilien_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = forithilien_name value = 0.1 } } }
+					}
+				}
+				198 = { state_scope = { change_region_name = "Forithilien" } }
+				199 = { change_province_name = "Taur Ithilien" }
+				204 = { change_province_name = "Ithilduin" }
+				owner = { FOR = { set_variable = { which = forithilien_name value = 0 } } } # Gondor
+			}
+			
+			# Druedain - Forithilien
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = wildmen }
+					province_id = 198
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = forithilien_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = forithilien_name value = 1.1 } } }
+					}
+				}
+				198 = { state_scope = { change_region_name = "Forarnen" } }
+				199 = { change_province_name = "Taur Arnen" }
+				204 = { change_province_name = "Arnenduin" }
+				owner = { FOR = { set_variable = { which = forithilien_name value = 1 } } } # Druedain
+			}
+			
+			# Mordor - Forithilien
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = mordorian }
+					province_id = 198
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = forithilien_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = forithilien_name value = 2.1 } } }
+					}
+				}
+				204 = { change_province_name = "Morgulduin" }
+				owner = { FOR = { set_variable = { which = forithilien_name value = 2 } } } # Mordor
+			}
+			
+			# Gondor - Emyn Arnen
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 205
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = emyn_arnen_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = emyn_arnen_name value = 0.1 } } }
+					}
+				}
+				207 = { change_province_name = "Ostithil" }
+				owner = { FOR = { set_variable = { which = emyn_arnen_name value = 0 } } } # Gondor
+			}
+			
+			# Druedain - Emyn Arnen
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = wildmen }
+					province_id = 205
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = emyn_arnen_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = emyn_arnen_name value = 1.1 } } }
+					}
+				}
+				207 = { change_province_name = "Ostarnen" }
+				owner = { FOR = { set_variable = { which = emyn_arnen_name value = 1 } } } # Druedain
+			}
+			
+			# Gondor - Harithilien
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 210
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harithilien_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = harithilien_name value = 0.1 } } }
+					}
+				}
+				210 = { state_scope = { change_region_name = "Harithilien" } }
+				owner = { FOR = { set_variable = { which = harithilien_name value = 0 } } } # Gondor
+			}
+			
+			# Druedain - Harithilien
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = wildmen }
+					province_id = 210
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harithilien_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = harithilien_name value = 1.1 } } }
+					}
+				}
+				210 = { state_scope = { change_region_name = "Hararnen" } }
+				owner = { FOR = { set_variable = { which = harithilien_name value = 1 } } } # Druedain
+			}
+		}
+	}
+	
+	rename_lossarnach = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				# Gondor - Lossarnach
+				AND = {
+					is_culture_group = dunedain
+					OR = {
+						FOR = { NOT = { check_variable = { which = lossarnach_name value = -0.1 } } }
+						FOR = { check_variable = { which = lossarnach_name value = 0.1 } }
+					}
+				}
+				# Druedain - Lossarnach
+				AND = {
+					is_culture_group = wildmen
+					OR = {
+						FOR = { NOT = { check_variable = { which = lossarnach_name value = 0.9 } } }
+						FOR = { check_variable = { which = lossarnach_name value = 1.1 } }
+					}
+				}
+			}
+			owns = 22 owns = 26 owns = 27 owns = 28 owns = 29 owns = 30
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			# Gondor - Lossarnach
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 22
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = lossarnach_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = lossarnach_name value = 0.1 } } }
+					}
+				}
+				22 = { state_scope = { change_region_name = "Lossarnach" } }
+				owner = { FOR = { set_variable = { which = lossarnach_name value = 0 } } } # Gondor
+			}
+			
+			# Druedain - Lossarnach
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = wildmen }
+					province_id = 22
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = lossarnach_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = lossarnach_name value = 1.1 } } }
+					}
+				}
+				22 = { state_scope = { change_region_name = "Arnach" } }
+				owner = { FOR = { set_variable = { which = lossarnach_name value = 1 } } } # Druedain
 			}
 		}
 	}
