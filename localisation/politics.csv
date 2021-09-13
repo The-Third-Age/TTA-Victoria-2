@@ -1,195 +1,254 @@
 #############################;x
 ##### Political Reforms #####;x {
 #############################;x
+REFORM_MOVEMENT_DESC;Movement calling for the enactment of §Y$REFORM$§!;x
+NATIONALIST_UNION_MOVEMENT_DESC;Movement calling for the forming of §Y$COUNTRY$§!;x
+NATIONALIST_LIBERATION_MOVEMENT_DESC;Movement calling for the liberation of §Y$COUNTRY$§!;x
 political_reforms;Political Reforms;R?ormes politiques;Politische Reformen;;Reformas pol?icas;x
 POLITICS_NOBILITY_PRIVILEGE;Nobility Privilege;;Adelsprivilegien;;;;;;;;;;;x
 good_evil_alignment;Alignment;x
 good_alignment;§GGood Alignment§!;x
 good_alignment_l;Good Alignment;x
 good_alignment_desc;We are considered a Good Realm;x
+movement_good_alignment;Movement to become a Good Realm;x
 neutral_alignment;§PNeutral Alignment§!;x
 neutral_alignment_l;Neutral Alignment;x
 neutral_alignment_desc;We are considered a Neutral Realm;x
+movement_neutral_alignment;Movement to become a Neutral Realm;x
 evil_alignment;§REvil Alignment§!;x
 evil_alignment_l;Evil Alignment;x
 evil_alignment_desc;We are considered an Evil Realm;x
+movement_evil_alignment;Movement to become an Evil Realm;x
 good_evil_alignment_fake;Alignment;x
 good_alignment_fake;§GGood Alignment§!;x
 good_alignment_fake_l;Good Alignment;x
 good_alignment_fake_desc;Our Leading Interest Group is Good.;x
+movement_good_alignment_fake;Movement to become a Good Realm;x
 neutral_alignment_fake;§PNeutral Alignment§!;x
 neutral_alignment_fake_l;Neutral Alignment;x
 neutral_alignment_fake_desc;Our Leading Interest Group is Neutral.;x
+movement_neutral_alignment_fake;Movement to become a Neutral Realm;x
 evil_alignment_fake;§REvil Alignment§!;x
 evil_alignment_fake_l;Evil Alignment;x
 evil_alignment_fake_desc;Our Leading Interest Group is Evil.;x
+movement_evil_alignment_fake;Movement to become an Evil Realm;x
+no_alignment;No Alignment;x
+no_alignment_l;No Alignment;x
+no_alignment_desc;Our Leading Interest Group doesn't have an alignment.;x
+movement_no_alignment;Movement to have no alignment;x
 border_policy;Borders;x
 closed_borders;Closed Borders;x
 closed_borders_l;Closed Borders;x
 closed_borders_desc;No external migration occurs.;x
+movement_closed_borders;Movement to close the borders;x
 race_borders;Race Borders;x
 race_borders_l;Race Borders;x
 race_borders_desc;External migration only occurs when a pop moves to a realm of their race.;x
+movement_race_borders;Movement to allow only our race into our realm;x
 open_borders;Open Borders;x
 open_borders_l;Open Borders;x
 open_borders_desc;There are no restrictions on external migration.;x
-no_alignment;No Alignment;x
-no_alignment_l;No Alignment;x
-no_alignment_desc;Our Leading Interest Group doesn't have an alignment.;x
+movement_open_borders;Movement to open the borders;x
 nobility_autonomy;Autonomy;;Autonomie;;;;;;;;;;;x
 large_noble_autonomy;High Autonomy;;Große Autonomie;;;;;;;;;;;x
 large_noble_autonomy_l;High Autonomy;;Große Autonomie;;;;;;;;;;;x
 large_noble_autonomy_desc;The realm's nobles have high autonomy. They can make almost all decisions without the consent of the central authority.;x
+movement_large_noble_autonomy;Movement to increase noble autonomy;x
 medium_noble_autonomy;Average Autonomy;;Durchschnittliche Autonomie;;;;;;;;;;;x
 medium_noble_autonomy_l;Average Autonomy;;Durchschnittliche Autonomie;;;;;;;;;;;x
 medium_noble_autonomy_desc;The realm's nobles have average autonomy. They can make many decisions without the consent of the central authority.;x
+movement_medium_noble_autunomy;Movement to restrict noble autonomy;x
 small_noble_autonomy;Low Autonomy;;Geringe Autonomie;;;;;;;;;;;x
 small_noble_autonomy_l;Low Autonomy;;Geringe Autonomie;;;;;;;;;;;x
 small_noble_autonomy_desc;The realm's nobles have little autonomy. Any decisions outside the day-to-day running of their fiefs needs to be run through the central authority.;x
+movement_small_noble_autonomy;Movement to restrict noble autonomy;x
 noble_levy_contribution;Levy Contribution;;Heerbann;;;;;;;;;;;x
 large_levy_contribution;Large Noble Levies;;Hohes Aufgebot an Truppen;;;;;;;;;;;x
 large_levy_contribution_l;Large Noble Levies;;Hohes Aufgebot an Truppen;;;;;;;;;;;x
 large_levy_contribution_desc;Almost all armed forces are raised by the nobles. There is no to little of a standing army beyond the household guards and personal retinue of the ruler and his court.;x
+movement_large_levy_contribution;Movement to increase noble levy contribution;x
 medium_levy_contribution;Average Noble Levies;;Mittleres Aufgebot an Truppen;;;;;;;;;;;x
 medium_levy_contribution_l;Average Noble Levies;;Mittleres Aufgebot an Truppen;;;;;;;;;;;x
 medium_levy_contribution_desc;Some of the armed forces are raised by the nobles. There is a central standing army which can be supplemented by levies raised by the nobility;x
+movement_medium_levy_contribution;Movement to decrease noble levy contribution;x
 small_levy_contribution;Small Noble Levies;;Kleines Aufgebot an Truppen;;;;;;;;;;;x
 small_levy_contribution_l;Small Noble Levies;;Kleines Aufgebot an Truppen;;;;;;;;;;;x
 small_levy_contribution_desc;Few of the armed forces are raised by the nobles. The central standing army is large enough that levies are not needed for army supplement.;x
+movement_small_levy_contribution;Movement to decrease noble levy contribution;x
 noble_tax_contribution;Tax Contribution;;Steuern und Abgaben;;;;;;;;;;;x
 small_tax_contribution;No Taxes;;Keine Steuern;;;;;;;;;;;x
 small_tax_contribution_l;No Taxes;;Keine Steuern;;;;;;;;;;;x
 small_tax_contribution_desc;The nobility, in return for their loyalty, are completely excempt from taxes.;x
+movement_small_tax_contribution;Movement to decrease noble tax contribution;x
 medium_tax_contribution;Reduced Taxes;;Reduzierte Steuern;;;;;;;;;;;x
 medium_tax_contribution_l;Reducted Taxes;;Reduzierte Steuern;;;;;;;;;;;x
 medium_tax_contribution_desc;The nobility pay a tax, but it is a portion of what the rest of the population pays.;x
+movement_medium_tax_contribution;Movement to increase noble tax contribution;x
 large_tax_contribution;Normal Taxes;;Durchschnittliche Steuern;;;;;;;;;;;x
 large_tax_contribution_l;Normal Taxes;;Durchschnittliche Steuern;;;;;;;;;;;x
 large_tax_contribution_desc;There is no special tax reduction for the nobility. They pay the same taxes as the rest of the population.;x
+movement_large_tax_contribution;Movement to increase noble tax contribution;x
 knighting_rights;Knighting Rights;;Recht zum Ritterschlag;;;;;;;;;;;x
 allowed_knighting_rights;Knighting Allowed;;Recht zum Ritterschlag genehmigt;;;;;;;;;;;x
 allowed_knighting_rights_l;Knighting Allowed;;Recht zum Ritterschlag genehmigt;;;;;;;;;;;x
 allowed_knighting_rights_desc;The nobility is allowed to knight anyone they please for any reason. There are no restictions whatsoever.;x
+movement_allowed_knighting_rights;Movement to increase nobility knighting rights;x
 restricted_knighting_rights;Restricted Knighting;;Recht zum Ritterschlag beschränkt;;;;;;;;;;;x
 restricted_knighting_rights_l;Restricted Knighting;;Recht zum Ritterschlag beschränkt;;;;;;;;;;;x
 restricted_knighting_rights_desc;The nobility is allowed to knight people under specific conditions for a small number of tasks. All other knightings must be given out by the central authority.;x
+movement_restricted_knighting_rights;Movement to restrict nobility knighting rights;x
 royal_knighting_rights;Royal Knighting;;Nur königlicher Ritterschlag erlaubt;;;;;;;;;;;x
 royal_knighting_rights_l;Royal Knighting;;Nur königlicher Ritterschlag erlaubt;;;;;;;;;;;x
 royal_knighting_rights_desc;The nobility is not allowed to knight people. All knightings must go through the central authority.;x
+movement_royal_knighting_rights;Movement to restrict nobility knighting rights;x
 POLITICS_LAND_EDICTS;Land Edicts;;Landrechte;;;;;;;;;;;x
 crown_land_ownership;Land Ownership;;Landbesitz;;;;;;;;;;;x
 five_land_ownership;5%;5%;;;;;;;;;;;;x
 five_land_ownership_l;5%;x
 five_land_ownership_desc;About 5% of all land in the realm is controlled by the central authority instead of the nobles.;x
+movement_five_land_ownership;Movement to decrease realm land control;x
 ten_land_ownership;10%;x
 ten_land_ownership_l;10%;x
 ten_land_ownership_desc;About 10% of all land in the realm is controlled by the central authority instead of the nobles.;x
+movement_ten_land_ownership;Movement to increase realm land control;x
 thirty_land_ownership;30%;x
 thirty_land_ownership_l;30%;x
 thirty_land_ownership_desc;About 30% of all land in the realm is controlled by the central authority instead of the nobles.;x
+movement_thirty_land_ownership;Movement to increase realm land control;x
 half_land_ownership;50%;x
 half_land_ownership_l;50%;x
 half_land_ownership_desc;About 50% of all land in the realm is controlled by the central authority instead of the nobles.;x
+movement_half_land_ownership;Movement to increase realm land control;x
 seventy_land_ownership;70%;x
 seventy_land_ownership_l;70%;x
 seventy_land_ownership_desc;About 70% of all land in the realm is controlled by the central authority instead of the nobles.;x
+movement_seventy_land_ownership;Movement to increase realm land control;x
 all_land_ownership;About 95%;x
 all_land_ownership_l;About 95%;x
 all_land_ownership_desc;Nearly all of the land in the realm is controlled by the central authority.;x
+movement_all_land_ownership;Movement to increase realm land control;x
 serfdom;Serfdom;;Leibeigenschaft;;;;;;;;;;;x
 enforced_serfdom;Enforced Serfdom;;Erzwungene Leibeigenschaft;;;;;;;;;;;x
 enforced_serfdom_l;Enforced Serfdom;x
 enforced_serfdom_desc;Serfdom is enforced. Serfs are bound to the land they work unless they are specifically granted leave or property by their master;x
+movement_enforced_serfdom;Movement to enforce serfdom;x
 discouraged_serfdom;Discouraged Serfdom;;Leibeigenschaft;;;;;;;;;;;x
 discouraged_serfdom_l;Discouraged Serfdom;x
 discouraged_serfdom_desc;Serfdom is legal but discouraged. The rulers want to bring the realm on the way towards abolishing serfdom, be it because of the aspirations of their own or because of practical reasons. Serfdom appears to be a unliked institution that will mostly be replaced by a system of indentured servitude or through ownership of land by freeholding peasants.;x
+movement_discouraged_serfdom;Movement to restrict serfdom;x
 banned_serfdom;Serfdom Banned;;Leibeigenschaft verboten;;;;;;;;;;;x
 banned_serfdom_l;Serfdom Banned;x
 banned_serfdom_desc;Serfdom is illegal. Those who practice it are punished. Every serf in the realm has been liberated and made a free person, who is not restricted by location and can move elsewhere to improve their chances. How it applies in practice is another matter.;x
+movement_banned_serfdom;Movement to abolish serfdom;x
 slavery;Slavery;Esclavage;Sklaverei;;Esclavismo;x
 yes_slavery;Allowed;Autoris?Gestattet;;Permitido;x
 yes_slavery_l;Slavery Allowed;Esclavage autoris?Sklaverei gestattet;;Esclavitud permitida;x
 yes_slavery_desc;Slavery is allowed. Slaves are used from manual labor to various other tasks as well as grand infrastructure projects.;L'esclavage est autoris?Sklaverei ist gestattet;;Se permite el esclavismo;x
+movement_yes_slavery;Movement to expand slavery;x
 non_accepted_slavery;Non-Accepted Slavery;x
 non_accepted_slavery_l;Non-Accepted Slavery;x
 non_accepted_slavery_desc;Only pops that are not primary or accepted cultures are slaves.;x
+movement_non_accepted_slavery;Movement to free cultural brethrin from slavery;x
 no_slavery;Outlawed;x
 no_slavery_l;Outlaw Slavery;Esclavage interdit;Sklaverei ?chten;;Esclavitud abolida;x
 no_slavery_desc;Slavery is forbidden and punished by law.;L'esclavage est interdit;Sklaverei ist ge?htet;;Se proh?e la esclavitud;x
+movement_no_slavery;Movement to abolish slavery;x
 POLITICS_VOTING_REFORM;Voting Reform;x
 vote_franschise;Vote Franchise;Droit de vote;Wahlrecht;;Derecho electoral;x
 none_voting;No Voting;Aucun vote;Keine Wahlen;;Sin sufragios;x
 none_voting_l;No Voting;Aucun vote;Keine Wahlen;;Sin sufragios;x
 none_voting_desc;No one is allowed to vote.;Personne ne peut voter.;Niemand darf w?len.;;A nadie se le permite votar.;x
+movement_none_voting;Movement to abolish voting;x
 landed_voting;Only Landed;Syst?e censitaire;Nur Landbesitzer;;Solo terratenientes;x
 landed_voting_l;Landed Voting;Syst?me ?lectoral censitaire;Landbesitzerwahl;;Terratenientes;x
 landed_voting_desc;Only aristocrats and Capitalists may vote.;Seuls les aristocrates et les capitalistes peuvent voter.;Nur Aristokraten und Kapitalisten haben Wahlrecht.;;Solo votan los Arist?ratas y los Capitalistas.;x
+movement_landed_voting;Movement to expand voting franschise;x
 wealth_weighted_voting;Weighted Wealth;Richesse pond??;Verm?ensgewichtung;;Censit. compensado;x
 wealth_weighted_voting_l;Wealth Weighted Voting;Droit de vote pond?r?bas?sur la fortune;Wahlen mit Verm?gensgewichtung;;Sufragio censitario compensado;x
 wealth_weighted_voting_desc;Only the wealthy (clerks and above) may vote, but the rich men's votes are worth twice as much as middle-class votes.;Seuls les plus ais? (employ? ou sup?ieur) peuvent voter, mais les votes des riches comptent deux fois plus que ceux des classes moyennes.;Nur wohlhabende Menschen (Angestellte und h?er) d?fen w?len, aber die Stimmen reicher M?ner z?len doppelt so viel wie die von Angeh?igen der Mittelklasse.;;Solo pueden votar las clases adineradas (Oficinistas y superiores), pero los votos de los ricos valen el doble que los de las clases medias.;x
+movement_weighted_voting;Movement to expand voting franschise;x
 wealth_voting;Wealth;Richesse;Verm?en;;Censitario;x
 wealth_voting_l;Wealth Voting;Droit de vote bas?sur la fortune;Verm?genswahl;;Sufragio censitario;x
 wealth_voting_desc;Only the middle and upper classes may vote.;Seules les classes moyennes et sup?ieures peuvent voter.;Nur Angeh?ige der Mittel- und Oberklasse d?fen w?len.;;Solo pueden votar las clases altas y medias.;x
+movement_wealth_voting;Movement to expand voting franschise;x
 universal_weighted_voting;Weighted Universal;Scrutin universel pond??Universalgewichtung;;Univer. compensado;x
 universal_weighted_voting_l;Universal Weighted Voting;Droit de vote universel pond?r?Universal gewichtete Wahl;;Sufragio universal compensado;x
 universal_weighted_voting_desc;Everyone is allowed to vote, but the rich men's votes are worth more.;Tout le monde peut voter, mais les votes des riches comptent davantage.;Jedermann darf w?len, aber die Stimmen reicher M?ner z?len mehr.;;Todo el mundo tiene derecho al voto, pero los votos de los ricos valen m?.;x
+movement_universal_weighted_voting;Movement to expand voting franschise;x
 universal_voting;Universal;Scrutin universel;Universal;;Universal;x
 universal_voting_l;Universal Voting;Droit de vote universel;Universalwahlen;;Sufragio universal ;x
 universal_voting_desc;Everyone is allowed to vote.;Tout le monde peut voter.;Alle d?fen w?len.;;Todo el mundo puede votar.;x
+movement_universal_voting;Movement to expand voting franschise;x
 cultural_rights;Cultural Rights;x
 primary_voting;Primary Culture Voting;x
 primary_voting_l;Primary Culture Voting;x
 primary_voting_desc;Only those of the primary culture can vote.;x
+movement_primary_voting;Movement to restrict voting rights;x
 accepted_voting;Accepted Culture Voting;x
 accepted_voting_l;Accepted Culture Voting;x
 accepted_voting_desc;All primary and accepted cultures can vote.;x
+mvoement_accepted_voting;Movement to increase voting rights;x
 all_vote;All Voting;x
 all_vote_l;All Voting;x
 all_vote_desc;All people can vote regardless of their culture.;x
+movement_all_vote;Movement to increase voting rights;x
 voting_system;Voting System;Syst?e de vote;Wahlsystem;;Sistema electoral;x
 first_past_the_post;First Past the Post;Uninominal ?un tour;Mehrheitswahl;;Todo para el ganador;x
 first_past_the_post_l;First Past the Post;Scrutin uninominal majoritaire ?un tour;Mehrheitswahl;;Todo para el ganador;x
 first_past_the_post_desc;The candidate with the most votes wins.;Le candidat qui obtient le plus de voix l'emporte.;Der Kandidat mit den meisten Stimmen gewinnt.;;Gana el candidato con m? votos.;x
+movement_first_past_the_post;Movement to change the voting system;x
 jefferson_method;Jefferson Method;M?hode de Jefferson;Jefferson-Methode;;M?odo Jefferson;x
 jefferson_method_l;Jefferson Method;M?thode de Jefferson;Jefferson-Methode;;M?todo Jefferson;x
 jefferson_method_desc;The Jefferson Method is a highest averages method for allocating seats.;La m?hode de Jefferson correspond ?la m?hode des moyennes les plus hautes pour attribuer des si?es.;Die Jefferson-Methode ist eine Methode der h?hsten Querschnittswerte zur Zuteilung der Sitze.;;El m?odo Jefferson es un m?odo de asignaci? de esca?s basado en medias superiores.;x
+movement_jefferson_method;Movement to change the voting system;x
 proportional_representation;Proportional Representation;Repr?entation proportionnelle;Proportionalwahl;;Proporcional;x
 proportional_representation_l;Proportional Representation;Repr?sentation proportionnelle;Proportionale Repr?sentation;;Representaci?n proporcional;x
 proportional_representation_desc;The percentage of votes that groups of candidates obtain in elections equals the percentage of seats they receive;Le pourcentage de voix que les groupes de candidats obtiennent lors des ?ections correspondent au pourcentage de si?es qu'ils re?ivent.;Der Prozentsatz an Stimmen, den Kandidatengruppen bei Wahlen erzielen, ist gleich dem Prozentsatz an Sitzen, den sie erhalten.;;El porcentaje de votos obtenido por los grupos en las elecciones equivale al de esca?s que reciben.;x
+movement_proportional_representation;Movement to change the voting system;x
 POLITICS_OTHER_POLITICAL_REFORMS;Other Political Reforms;x
 upper_house_composition;Advisors;Chambre haute;Oberhaus;;C?ara alta;x
 appointed;Appointed;Nomm?;Ernennung;;Nombrada;x
 appointed_l;Appointed UH;Chambre haute nomm?e;Ernanntes OH;;CA nombrada;x
 appointed_desc;Aristocrats or guild masters have been assigned advising positions by the leader of the realm.;Le dirigeant du pays a attribu?aux aristocrates ou aux capitalistes des si?es ?la Chambre haute.;Aristokraten oder Kapitalisten wurden vom Anf?rer des Landes Sitze im Oberhaus zugeteilt.;;El l?er del pa? asigna los esca?s de la c?ara alta a Arist?ratas o Capitalistas.;x
+movement_appionted;Movement to change Advisor composition;x
 party_appointed;Leading Interest Group Only;Parti dirigeant seulement;Nur Regierungspartei;;Solo partido gobernante;x
 party_appointed_l;UH same as Ruling Party;Chambre haute identique au parti dirigeant;OH entspricht Regierungspartei;;CA id?ntica al partido gobernante;x
 party_appointed_desc;Only members of the leading interest group can be appointed to the ruler's advisors.;Seuls les membres du parti dirigeant de m?e id?logie peuvent ?re nomm? pour repr?enter le parti ?la Chambre haute.;Nur Mitglieder der Regierungspartei, die derselben Ideologie anh?gen, k?nen zur Vertretung der Partei im Oberhaus ausgew?lt werden.;;Solo se puede nombrar a miembros del partido gobernante, con la misma ideolog?, que lo representan en la c?ara alta.;x
+movement_party_appointed;Movement to change Advisor composition;x
 state_equal_weight;Two per State;Deux par ?at;Zwei pro Staat;;Dos por estado;x
 state_equal_weight_l;Two per state in UH;?galit?de tous les ?tats ?la Chambre haute;Alle Regionen im OH gleich;;Dos esca?os por estado en la CA ;x
 state_equal_weight_desc;Each state has two votes to appoint advisors.;Chaque ?at dispose de deux votes pour nommer les repr?entants de la Chambre haute.;Jeder Staat hat zwei Stimmen zur Ernennung von Oberhausvertretern.;;Cada estado puede nombrar a dos representantes en la c?ara alta.;x
+movement_state_equal_weight;Movement to change Advisor composition;x
 population_equal_weight;Based on Population;Selon la population;Bev?kerungsbasiert;;Principio demogr?ico;x
 population_equal_weight_l;Population equal in UH;?galit?de la population ?la Chambre haute;Bev. im OH gleich vertreten;;CA proporcional a la poblaci?n;x
 population_equal_weight_desc;Advisors are determined by the collected ideologies of the population.;Les id?logies de la population d?erminent les repr?entants.;Die Vertreter werden anhand der in der Bev?kerung pr?enten Ideologien bestimmt.;;Los representantes se determinan en funci? de las ideolog?s de la poblaci?.;x
+movement_population_equal_weight;Movement to change Advisor composition;x
 penal_reform;Punishments;x
 capital_punishment;Capital Punishment;x
 capital_punishment_l;Capital Punishment;x
 capital_punishment_desc;Petty criminals are hanged for their crimes and major offendors are decapitated.;x
+movement_capital_punishment;Movement to change punishment laws;x
 hard_labor;Hard Labor;x
 hard_labor_l;Hard Labor;x
 hard_labor_desc;The punishment system is expanded. For serious crimes that do not warrant death, criminals are sentenced to hard labor.;x
+movement_hard_labor;Movement for hard labor punishment;x
 incarceration;Incarceration;x
 incarceration_l;Incarceration;x
 incarceration_desc;The punishment system is expanded farther. For crimes that are not serious enough to warrant hard labor, criminals are sentenced to prisons for a specific amount of time related to their crime.;x
+movement_incarceration;Movement to create prisons;x
 public_meetings;Public Meetings;R?n. publiques;Versammlungen;;Derecho reuni?;x
 yes_meeting;Meetings allowed;Rassemblements autoris?;Gestattet;;Permitido;x
 yes_meeting_l;Allow Public Meetings;Autoriser les r?unions publiques;?ffentliche Versammlungen gestatten;;Reuniones p?blicas permitidas;x
 yes_meeting_desc;Public meetings and rallies are allowed.;Les r?nions publiques et les rassemblements sont autoris?.;?fentliche Versammlungen und Kundgebungen sind gestattet.;;Se permiten concentraciones y reuniones p?licas.;x
+movement_yes_meeting;Movement to allow public meetings;x
 meeting_curfew;Curfews;x
 meeting_curfew_l;Curfews;x
 meeting_curfew_desc;Public meetings are allowed during the day. At sundown, they are to disband or have its members arrested.;x
+movement_meeting_curfew;Movement to allow meetings in the day;x
 no_meeting;Meetings not allowed;Interdites;Nicht gestattet;;No permitido;x
 no_meeting_l;Outlaw Public Meetings;Interdire les r?unions publiques;?ffentliche Versammlungen ?chten;;Reuniones p?blicas prohibidas;x
 no_meeting_desc;Public meetings are prohibited.;Les r?nions publiques ne sont pas autoris?s.;?fentliche Versammlungen sind verboten.;;Se proh?en las reuniones p?licas.;x
+movement_no_meetings;Movement to abolish public meetings;x
 ###########################;x }
 ##### Burgher Reforms #####;x {
 ###########################;x
@@ -198,61 +257,79 @@ exclusive_trading_rights;Exclusive Trade;x
 granted_exclusive_tr;Granted;x
 granted_exclusive_tr_l;Granted Exclusive Trading Rights;x
 granted_exclusive_tr_desc;Trading rights for specific goods are for specific people only. Usually, these people are the nobles or powerful guilds.;x
+movement_granted_explusive_tr;Movement to expand exclusive trading rights;x
 limited_exclusive_tr;Limited;x
 limited_exclusive_tr_l;Limited Exclusive Trading Rights;x
 limited_exclusive_tr_desc;Trading rights for specific goods are for specific people only. This only affects a couple goods rather than most.;x
+movement_limited_exlucisve_tr;Movement to restrict exclusive trading rights;x
 abolished_exclusive_tr;Abolished;x
 abolished_exclusive_tr_l;Abolished Exclusive Trading Rights;x
 abolished_exclusive_tr_desc;No exclusive trading rights are granted. There are no restrictions on who can trade what.;x
+movement_abolished_exclusive_tr;Movement to abolish exclusive trading rights;x
 apprenticeship;Apprenticeship;x
 hereditary;Hereditary;x
 hereditary_l;Hereditary Apprenticeship;x
 hereditary_desc;Apprentices are determined by a person's bloodline. A son will be his father's apprentice, and the grandson will be the father's.;x
+movement_hereditary;Movement to make apprenticeships based upon family;x
 appointment;Appointment;x
 appointment_l;Appointed Apprenticeship;x
 appointment_desc;Apprentices can either be hereditary or appointed.;x
+movement_appointment;Movement to allow apprentices to be appointed;x
 guild_school;Guild School;x
 guild_school_l;Guild School;x
 guild_school_desc;Existing guilds have schools in which students can learn their trade. From here, these students can get apprenticeships with guild members.;x
+movement_guild_school;Movement to create guild schools;x
 state_supplies_monopoly;State Supplies;x
 privileged_state_supplies;Privileged;x
 privileged_state_supplies_l:Privileged State Supplies;x
 privileged_state_supplies_desc;The monopoly on the sale of state supplies, ranging from military goods to the everyday food the court consumes, is held by the cities and the burghers alone with others being at a severe disadvantage when dealing with it. Thus the burghers and various guilds are able to leverage exorbitant prices for their products.;x
+movement_privileged_state_supplies;Movement to increase state supply privileges;x
 restricted_state_supplies;Restricted;x
 restricted_state_supplies_l;Restricted State Supplies;x
 restricted_state_supplies_desc;There are no restrictions on the sale of goods to the state and it is determined only by the demand of such and nothing else. The state employs their own suppliers to guarantee the independence from private enterprises. The monopoly on the sale however is partially transferred to the state as it tries to maintain self-sufficiency.;x
+movement_restricted_state_supplies;Movement to decrease state supply privileges;x
 allowed_state_supplies;Allowed;x
 allowed_state_supplies_l;Allowed State Supplies;x
 allowed_state_supplies_desc;Most of the supplies are still bought from the burghers and the guilds, however it is possible for other sources to sell their products to the state and hindrances to it have been partially removed.;x
+movement_allowed_state_supplies;Movement to decrease state supply privileges;x
 pensions;Alms;x
 no_pensions;No Alms;x
 no_pensions_l;No Alms;x
 no_pensions_desc;No state alms.;x
+movement_no_pensions;Movement to remove alms;x
 trinket_pensions;Trinket Alms;x
 trinket_pensions_l;Trinket Alms;x
 trinket_pensions_desc;Very low state alms.;x
+movement_trinket_pensions;Movement to increase alms;x
 low_pensions;Low Alms;x
 low_pensions_l;Low Alms;x
 low_pensions_desc;Low state alms.;x
+movement_low_pensions;Movement to increase_alms;x
 acceptable_pensions;Acceptable Alms;x
 acceptable_pensions_l;Acceptable Alms;x
 acceptable_pensions_desc;Acceptable state alms.;x
+movement_acceptable_pensions;Movement to increase_alms;x
 good_pensions;Good Alms;x
 good_pensions_l;Good Alms;x
 good_pensions_desc;High state alms.;x
+movement_good_pensions;Movement to increase_alms;x
 city_jurisdiction;City Jurisdiction;x
 independent_cities;Independent;x
 independent_cities_l;Independent Cities;x
 independent_cities_desc;Cities are completely independent of the central authority.;x
+movement_independent_cities;Movement to increase city independence;x
 chartered_cities;Chartered;x
 chartered_cities_l;Chartered Cities;x
 chartered_cities_desc;Recognized cities are given a charter from the authority.;x
+movement_chartered_cities;Movement to decrease city independence;x
 territorial_cities;Territorial;x
 territorial_cities_l;Territorial Cities;x
 territorial_cities_desc;Cities are incorporated into different territorial regions.;x
+movement_territorial_cities;Movement to decrease city independence;x
 royal_cities;Royal;x
 royal_cities_l;Royal Cities;x
 royal_cities_desc;Cities are owned directly by the central authority.;x
+movement_royal_cities;Movement to decrease city independence;x
 ############################;x }
 ##### Military Reforms #####;x {
 ############################;x
