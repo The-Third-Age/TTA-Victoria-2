@@ -1,12 +1,96 @@
+# - Climate regions according to the Köppen climate classification
+# - <climate region> = <notation> <attributes> <possible locations>
+# - Info and formula (in English): https://www.britannica.com/science/Koppen-climate-classification
+
+# - Resources on agricultural efficiency: http://sites.tufts.edu/willmasters/files/2010/06/MastersAndWeibe-ClimateAndAgProductivity.pdf
+# - efficiency and sizes are estimates here (not much info on ecology of ME avaiable, none in terms of numbers)
+# - https://decolonialatlas.wordpress.com/2015/03/11/global-agriculture-where-we-grow-what-we-grow-and-how-we-grow/
+
+# - https://64.media.tumblr.com/6860d4bd5ca674c81d18124955b042da/tumblr_p0bye3T1Pr1ug4fnjo1_1280.jpg
+
+arctic_polar_climate = # EF polar regions
+{
+	farm_rgo_size = -0.45
+	farm_rgo_eff = -0.98
+	mine_rgo_size = -0.8
+	mine_rgo_eff = -0.6
+}
+
+cold_highlands_climate = # Ds warm highland
+{
+	farm_rgo_size = -0.1
+	farm_rgo_eff = -0.05
+	mine_rgo_size = 0.3
+	mine_rgo_eff = 0.2
+}
+
+cold_humid_climate = # Df cold temperate humid
+{
+	farm_rgo_size = 0.2
+	farm_rgo_eff = 0.15
+	mine_rgo_size = 0.2
+	mine_rgo_eff = 0.1
+}
+
+temperate_oceanic_climate = # Cfb/Cfc temperate maritime
+{
+	farm_rgo_size = 0.4
+	farm_rgo_eff = 0.25
+	mine_rgo_size = 0.2
+	mine_rgo_eff = 0.1
+}
+
+temperate_drysummer_climate = # Cs warm dry subtropical
+{
+	farm_rgo_size = 0.15
+	farm_rgo_eff = 0.05
+	mine_rgo_size = 0.1
+	mine_rgo_eff = 0.1
+}
+
+temperate_subtropical_climate = # Cfa warm temperate humid subtropical
+{
+	farm_rgo_size = 0.5
+	farm_rgo_eff = 0.3
+	mine_rgo_size = 0.05
+	mine_rgo_eff = 0.15
+}
+
+arid_cold_climate = # Bsk Cold Deserts
+{
+	farm_rgo_size = -0.45
+	farm_rgo_eff = -0.5
+	mine_rgo_size = -0.3
+	mine_rgo_eff = -0.2
+}
+
+arid_climate = # Bwh Hot Deserts
+{
+	farm_rgo_size = -0.45
+	farm_rgo_eff = -0.95
+	mine_rgo_size = -0.3
+	mine_rgo_eff = -0.2
+	max_attrition = 5
+}
+
+semi_arid_climate = # Bsh Hot Steppes
+{
+	farm_rgo_size = -0.2
+	farm_rgo_eff = -0.4
+	mine_rgo_size = -0.05
+	mine_rgo_eff = -0.1
+	max_attrition = 3
+}
+
 cold_highlands_climate = {
 	1 5 6 12 18 22 30 
-	31 54 55 56 67 71 72 73 74 75 76 86 91 94 100 109 116 396 400 402 403 406 407 408 431 432 433 434 435 436 437 438 439 440 450 
+	31 54 55 56 71 72 73 74 75 76 86 91 94 100 109 116 396 400 402 403 406 407 408 431 432 433 434 435 436 437 438 439 440 450 
 	451 452 453 454 455 551 552 553 554 555 556 614 667 668 669 670 671 673 674 676 677 678 679 681 682 683 684 685 686 687 688 689 788 789 790 795 796 797 798 806 807 812 813 842 843 844 845 846 847 848 849 850 851 917 918 919 920 942 943 944 945 946 947 968 969 970 971 986 987 993 994 995 999 
 }
 
 temperate_drysummer_climate = {
-	2 3 4 7 8 9 10 11 13 14 15 16 17 19 20 21 23 24 25 26 27 28 29 32 33 35 36 37 39 41 42 43 44 45 46 47 48 49 50 51 52 53 57 58 59 60 
-	61 62 63 64 65 66 68 69 70 77 78 79 80 81 82 83 84 85 87 88 89 92 93 96 97 98 101 102 103 104 105 107 110 112 113 114 115 117 118 119 120 
+	2 3 4 7 8 9 10 11 13 14 15 16 17 19 20 21 23 24 25 26 27 28 29 32 33 35 36 37 39 41 42 43 44 45 46 47 48 49 50 51 52 53 57 58 60 
+	62 63 65 66 69 70 77 78 79 80 81 82 83 84 85 87 88 89 92 93 96 97 98 101 102 103 104 105 107 110 112 113 114 115 117 118 119 120 
 	121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 
 	151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 198 199 200 201 202 203 204 205 206 207 208 209 210 
 	211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 
@@ -16,7 +100,7 @@ temperate_drysummer_climate = {
 }
 
 arctic_polar_climate = {
-	34 40 90 
+	34 40 59 61 64 67 68 90 
 	95 106 108 111 1042 1043 1044 1045 1046 1047 1048 1049 1050 
 	1051 1052 1053 1054 1055 1056 1057 1058 1059 1060 1061 1062 1063 1064 1065 
 }
@@ -68,4 +152,6 @@ semi_arid_climate = {
 	391 392 393 394 395 397 398 399 401 404 405 409 410 411 412 413 414 415 416 417 418 419 420 
 	586 587 588 589 590 591 595 
 }
+
+
 
