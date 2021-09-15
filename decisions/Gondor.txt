@@ -569,7 +569,7 @@ political_decisions = {
 		potential = {
 			tag = GON
 			NOT = { has_country_modifier = low_military_recruitment }
-			161 = { 
+			162 = { 
 				owner = { civilized = no }
 				is_core = ADR
 				is_vassal = no
@@ -582,14 +582,14 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			161 = { owner = { NOT = { truce_with = GON } } }
+			162 = { owner = { NOT = { truce_with = GON } } }
 		}
 		
 		effect = {
 			badboy = 2
 			
 			random_country = {
-				limit = { owns = 161 }
+				limit = { owns = 162 }
 				add_casus_belli = {
 					target = GON
 					type = humiliate
@@ -674,7 +674,7 @@ political_decisions = {
 			tag = GON
 			OR = {
 				ADR = { vassal_of = GON }
-				owns = 161
+				owns = 162
 			}
 			165 = { 
 				owner = { 
@@ -735,7 +735,7 @@ political_decisions = {
 			random_country = {
 				limit = {
 					tag = ADR
-					GON = { owns = 161 }
+					GON = { owns = 162 }
 				}
 				annex_to = GON
 			}
@@ -783,12 +783,12 @@ political_decisions = {
 				limit = {
 					tag = GON
 					NOT = { exists = ADR }
-					owns = 161
+					owns = 162
 				}
 				any_owned = {
 					limit = {
 						OR = {
-							region = GON_161
+							region = GON_162
 							region = GON_165
 							region = GON_169
 							region = GON_175
@@ -856,7 +856,7 @@ political_decisions = {
 			tag = GON
 			any_owned_province = {
 				OR = {
-					region = GON_161
+					region = GON_162
 					region = GON_165
 					region = GON_169
 					region = GON_175
@@ -875,7 +875,7 @@ political_decisions = {
 			any_owned = {
 				limit = {
 					OR = {
-						region = GON_161
+						region = GON_162
 						region = GON_165
 						region = GON_169
 						region = GON_175
@@ -891,7 +891,7 @@ political_decisions = {
 			any_owned = {
 				limit = {
 					OR = {
-						region = GON_161
+						region = GON_162
 						region = GON_165
 						region = GON_169
 						region = GON_175
