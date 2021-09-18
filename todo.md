@@ -8,11 +8,9 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 ## Gameplay
  - Actually balance everything
  - Inventions
- - Province terrains
  - Max/Min Tariff/Taxes/Military Spending/Education Spending/Social Spending/Administrative Spending/National Stockpile Spending, Minimum Wage
  - Gas Attack?
  - Great/World Wars?
- - Slave craftsmen
 
 ## GFX and GUI
  - Update the new goods icons (horse and administrative services are probably ok)
@@ -21,8 +19,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
 
 ## Flavor
  - Event 50005, get the syntax for getting the general correct
- - Make countries end their wars prior to the WoTR starting
- - WoTR ending in 5 years if it has not already ended
 
 ## Others 
  - Music (BFME2 for example)
