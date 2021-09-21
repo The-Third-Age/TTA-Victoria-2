@@ -1,0 +1,84 @@
+# Mordor events {
+#	50500 - 50599 }
+
+# The Eruption of Mount Doom
+country_event = {
+	id = 50500
+	title = "Mount Doom Erupts!"
+	desc = "EVTDESC50500"
+	picture = mount_doom_eruption_major
+	major = yes
+	news = yes
+	news_desc_long = "EVTDESC50500_NEWS_LONG"
+	news_desc_medium = "EVTDESC50500_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC50500_NEWS_SHORT"
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 448
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+		
+		modifier = {
+			factor = 3
+			NOT = { nationalvalue = sauron }
+		}
+	}
+	
+	option = {
+		name = "A glorious display of Sauron's power"
+		
+		random_country = {
+			limit = {
+				tag = GON
+				owns = 198
+			}
+			country_event = 50501
+		}
+	}
+}
+
+# The Eruption of Mount Doom - Gondor
+country_event = {
+	id = 50501
+	title = "Mount Doom Erupts"
+	desc = "EVTDESC50501"
+	picture = mount_doom_eruption
+	is_triggered_only = yes
+	
+	option = {
+		name = "The rumors are true..."
+		any_owned = {
+			limit = {
+				OR = {
+					region = GON_198
+					region = GON_205
+					region = GON_212
+				}
+			}
+			add_province_modifier = { name = fear_of_mount_doom duration = 3650 }
+		}
+		
+		any_owned = {
+			limit = {
+				OR = {
+					region = GON_4
+					region = GON_14
+					region = GON_16
+				}
+				OR = {
+					terrain = anorien
+					terrain = anorien_woods
+					terrain = minas_tirith
+					terrain = pelennor_fields
+					terrain = harlond_gondor
+				}
+			}
+			add_province_modifier = { name = ithilien_immigrants duration = 3650 }
+		}
+		
+		set_country_flag = ithilien_depopulating
+	}
+}

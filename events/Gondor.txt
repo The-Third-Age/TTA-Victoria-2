@@ -417,3 +417,56 @@ country_event = {
 		}
 	}
 }
+
+# Renaming of Dol Calemir
+province_event = {
+	id = 50013
+	title = "The Fortress of Lornost"
+	desc = "EVTDESC50013"
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			owner = { tag = GON }
+			AND = {
+				owner = { ai = no }
+				owner = { is_culture_group = dunedain }
+			}
+		}
+		province_id = 45
+		has_building = fort
+	}
+
+	option = {
+		name = "A name befitting the new castle"
+		
+		change_province_name = "Lornost"
+	}
+}
+
+# Juggling School of Cabed Angren
+province_event = {
+	id = 50014
+	title = "The Juggling School of Caben Angren"
+	desc = "EVTDESC50014"
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			owner = { tag = GON }
+			AND = {
+				owner = { ai = no }
+				owner = { is_culture_group = dunedain }
+			}
+		}
+		province_id = 112
+		culture_2 = 1
+	}
+	
+	option = {
+		name = "They are entertaining, aren't they?"
+		
+		militancy = -1
+		owner = { prestige = 2 }
+	}
+}
