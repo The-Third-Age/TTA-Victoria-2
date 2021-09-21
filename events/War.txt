@@ -1,0 +1,352 @@
+# War Events: {
+# 150000 - 199999 }
+
+# Andrast War {
+# Start Andrast war 
+country_event = {
+	id = 150000
+	picture = andrast_war
+	title = "The Andrast War"
+	desc = "EVTDESC150000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They shall not take our lands!"
+		
+		casus_belli = {
+			target = GON
+			type = humiliate
+			months = 12
+		}
+		
+		GON = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = humiliate }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+		
+		set_global_flag = GON_andrast_war
+	}
+}
+
+# End of Andrast War - Gondor Victorious
+country_event = {
+	id = 150001
+	picture = andrast_war
+	title = "Gondor is Victorious!"
+	desc = "EVTDESC150001"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Andrast will be free..."
+		
+		any_owned = {
+			limit = {
+				OR = {
+					region = GON_162
+					region = GON_165
+					region = GON_183
+				}
+				NOT = {
+					OR = {
+						province_id = 165
+						province_id = 166
+					}
+				}
+			}
+			secede_province = ADR
+		}
+		
+		GON = {
+			create_vassal = ADR
+			create_alliance = ADR
+			relation = {
+				who = ADR
+				value = 200
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GON
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = ADR
+				value = 400
+			}
+		}
+		
+		ADR = {
+			government = fiefdom
+			capital = 162
+		}
+	}
+}
+
+# End of Andrast War - Gondor Lost
+country_event = {
+	id = 150002
+	picture = andrast_war
+	title = "We have lost!"
+	desc = "EVTDESC150002"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We are humiliated."
+		
+		set_country_flag = low_military_recruitment
+		add_country_modifier = {
+			name = low_military_recruitment
+			duration = -1
+		}
+	}
+}
+
+# End of Wildmen Freedom of Druadan Forest - Puppet DRU? Only if of the same culture
+country_event = {
+	id = 150003
+	picture = druadan_forest_rebellion
+	title = "Our Cultural Brethren"
+	desc = "EVTDESC150003"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will puppet them, for their own protection."
+		
+		create_vassal = DRU
+		badboy = 2
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				badboy = 0.9
+			}
+		}
+	}
+	
+	option = {
+		name = "They can fend for themselves."
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 0.25
+				is_greater_power = yes
+			}
+		}
+	}
+}
+
+# Start Gondor acquiring all of Andrast
+country_event = {
+	id = 150004
+	picture = andrast_war
+	title = "The Andrast War"
+	desc = "EVTDESC150004"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Drat."
+		
+		casus_belli = {
+			target = GON
+			type = humiliate
+			months = 12
+		}
+		
+		GON = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = liberate_country country = ADR state_province_id = 165 }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+		
+		set_global_flag = GON_andrast_war_2
+	}
+}
+# }
+
+# Returning Gondor cores after Freedom of Druadan Forest
+country_event = {
+	id = 150005
+	picture = druadan_forest_rebellion
+	title = "We are Free!"
+	desc = "EVTDESC150005"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We just wanted our freedom"
+		
+		any_owned = {
+			limit = {
+				NOT = { is_core = DRU }
+				is_core = GON
+			}
+			secede_province = GON
+		}
+		
+		create_alliance = FROM
+	}
+}
+
+# Start South Gondor liberate_country war
+country_event = {
+	id = 150006
+	title = "Our Lands"
+	desc = "EVTDESC150006"
+	picture = acquisition_of_south_gondor
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Drat"
+		
+		add_casus_belli = {
+			target = FROM
+			type = liberate_country
+			months = 12
+		}
+		
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = liberate_country country = HRD }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+	}
+}
+
+# Druadan Forest Rebellion
+country_event = {
+	id = 150007
+	picture = druadan_forest_rebellion
+	title = "The Drúadan Rebellion"
+	desc = "EVTDESC150007"
+	
+	trigger = {
+		owns = 11
+		NOT = { primary_culture = druedain }
+		NOT = { accepted_culture = druedain }
+		11 = {
+			average_militancy = 6
+			is_core = DRU
+			is_primary_culture = DRU
+		}
+		NOT = { exists = DRU }
+		NOT = { has_global_flag = DRU_rebellion }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		
+		modifier = {
+			factor = 0.9
+			11 = { average_consciousness = 5 }
+		}
+		modifier = {
+			factor = 0.9
+			11 = { average_consciousness = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			11 = { average_militancy = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			11 = { average_militancy = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			11 = { average_militancy = 9 }
+		}
+		modifier = {
+			factor = 0.5
+			11 = { average_militancy = 10 }
+		}
+	}
+	
+	option = {
+		name = "They wouldn't!"
+		
+		prestige = -3
+		
+		any_pop = {
+			limit = { 
+				type = labourers 
+				has_pop_culture = druedain
+				location = { province_id = 11 }
+			}
+			pop_type = soldiers
+		}
+		11 = { secede_province = DRU }
+		any_pop = {
+			limit = {
+				has_pop_culture = druedain
+				NOT = { location = { province_id = 11 } }
+			}
+			militancy = 1
+			consciousness = 4
+		}
+		DRU = { country_event = { id = 150008 days = 90 } }
+	}
+}
+
+# Druadan Forest Rebellion Start
+country_event = {
+	id = 150008
+	picture = druadan_forest_rebellion
+	title = "The Drúadan Rebellion"
+	desc = "EVTDESC150008"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "To Arms!"
+		
+		capital_scope = {
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = scouts value = current }
+			sub_unit = { type = artillery value = current }
+		}
+		
+		treasury = 100000
+			
+		add_casus_belli = {
+			target = FROM
+			type = conquest
+			months = 12
+		}
+		FROM = {
+			war = {
+				target = DRU
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+			set_country_flag = DRU_rebelling_from
+		}
+		set_global_flag = DRU_rebellion
+	}
+}
