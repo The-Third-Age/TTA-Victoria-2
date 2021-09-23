@@ -59,6 +59,7 @@ liberate_country
 release_puppet
 become_independent
 make_puppet
+liberate_and_puppet_country
 dismantle_forts
 humiliate
 demand_concession_casus_belli
@@ -990,6 +991,104 @@ liberate_country = {
 			country_event = 2509
 			create_alliance = THIS
 			clr_country_flag = possible_liberate_realm_target
+		}
+	}
+}
+
+liberate_and_puppet_country = {
+	sprite_index = 15
+	is_triggered_only = yes
+	months = 12
+
+	badboy_factor = 18
+	prestige_factor = 1
+	peace_cost_factor = 1
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+	}
+
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		number_of_states = 2
+		NOT = {
+			tag = FROM
+			this_culture_union = FROM	
+		}
+		any_owned_province = {
+			is_core = FROM
+			NOT = { is_core = THIS }
+		}
+		is_releasable_vassal = FROM
+	}
+
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal's state
+	allowed_states = {
+		any_owned_province = {
+			is_core = FROM
+		}
+	}
+	
+	all_allowed_states = yes
+	po_transfer_provinces = yes
+
+	war_name = WAR_LIBERATE_NAME
+	
+	# scope = THIS = country applying wargoal
+	# FROM = country that currently owns the provinces
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+		
+		any_country = {
+			limit = {
+				exists = no
+				any_core = { owner = { tag = FROM } }
+			}
+			set_country_flag = possible_liberate_and_puppet_realm_target
+		}
+	}
+	
+	# scope = country that had owned the provinces
+	# THIS = country that applied wargoal
+	on_po_accepted = {
+		country_event = 2507
+		any_country = { 
+			limit = {
+				has_country_flag = possible_liberate_and_puppet_realm_target
+				exists = no
+				any_core = { owner = { tag = FROM } }
+			}
+			clr_country_flag = possible_liberate_and_puppet_realm_target
+		}
+		
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = possible_liberate_and_puppet_realm_target
+			}
+			country_event = 2509
+			country_event = 2510
+			create_alliance = THIS
+			clr_country_flag = possible_liberate_and_puppet_realm_target
 		}
 	}
 }
