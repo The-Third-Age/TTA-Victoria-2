@@ -1,7 +1,7 @@
 # War Events: {
 # 150000 - 199999 }
 
-# Andrast War {
+# Gondor Expanding {
 # Start Andrast war 
 country_event = {
 	id = 150000
@@ -16,189 +16,20 @@ country_event = {
 		
 		casus_belli = {
 			target = GON
-			type = humiliate
+			type = liberate_and_puppet_country
 			months = 12
 		}
 		
 		GON = {
 			war = {
 				target = THIS
-				attacker_goal = { casus_belli = humiliate }
+				attacker_goal = { casus_belli = liberate_and_puppet_country country = ADR }
 				defender_goal = { casus_belli = humiliate }
 				call_ally = yes
 			}
 		}
 		
 		set_global_flag = GON_andrast_war
-	}
-}
-
-# End of Andrast War - Gondor Victorious
-country_event = {
-	id = 150001
-	picture = andrast_war
-	title = "Gondor is Victorious!"
-	desc = "EVTDESC150001"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Andrast will be free..."
-		
-		any_owned = {
-			limit = {
-				OR = {
-					region = GON_162
-					region = GON_165
-					region = GON_183
-				}
-				NOT = {
-					OR = {
-						province_id = 165
-						province_id = 166
-					}
-				}
-			}
-			secede_province = ADR
-		}
-		
-		GON = {
-			create_vassal = ADR
-			create_alliance = ADR
-			relation = {
-				who = ADR
-				value = 200
-			}
-		}
-		random_country = {
-			limit = {
-				tag = GON
-				is_greater_power = yes
-			}
-			diplomatic_influence = {
-				who = ADR
-				value = 400
-			}
-		}
-		
-		ADR = {
-			government = fiefdom
-			capital = 162
-		}
-	}
-}
-
-# End of Andrast War - Gondor Lost
-country_event = {
-	id = 150002
-	picture = andrast_war
-	title = "We have lost!"
-	desc = "EVTDESC150002"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "We are humiliated."
-		
-		set_country_flag = low_military_recruitment
-		add_country_modifier = {
-			name = low_military_recruitment
-			duration = -1
-		}
-	}
-}
-
-# End of Wildmen Freedom of Druadan Forest - Puppet DRU? Only if of the same culture
-country_event = {
-	id = 150003
-	picture = druadan_forest_rebellion
-	title = "Our Cultural Brethren"
-	desc = "EVTDESC150003"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "We will puppet them, for their own protection."
-		
-		create_vassal = DRU
-		badboy = 2
-		
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0
-				badboy = 0.9
-			}
-		}
-	}
-	
-	option = {
-		name = "They can fend for themselves."
-		
-		ai_chance = {
-			factor = 50
-			
-			modifier = {
-				factor = 0.25
-				is_greater_power = yes
-			}
-		}
-	}
-}
-
-# Start Gondor acquiring all of Andrast
-country_event = {
-	id = 150004
-	picture = andrast_war
-	title = "The Andrast War"
-	desc = "EVTDESC150004"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Drat."
-		
-		casus_belli = {
-			target = GON
-			type = humiliate
-			months = 12
-		}
-		
-		GON = {
-			war = {
-				target = THIS
-				attacker_goal = { casus_belli = liberate_country country = ADR state_province_id = 165 }
-				defender_goal = { casus_belli = humiliate }
-				call_ally = yes
-			}
-		}
-		
-		set_global_flag = GON_andrast_war_2
-	}
-}
-# }
-
-# Returning Gondor cores after Freedom of Druadan Forest
-country_event = {
-	id = 150005
-	picture = druadan_forest_rebellion
-	title = "We are Free!"
-	desc = "EVTDESC150005"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "We just wanted our freedom"
-		
-		any_owned = {
-			limit = {
-				NOT = { is_core = DRU }
-				is_core = GON
-			}
-			secede_province = GON
-		}
-		
-		create_alliance = FROM
 	}
 }
 
@@ -230,6 +61,7 @@ country_event = {
 		}
 	}
 }
+# }
 
 # Druadan Forest Rebellion
 country_event = {

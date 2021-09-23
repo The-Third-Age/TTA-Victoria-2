@@ -310,3 +310,36 @@ country_event = {
 		}
 	}
 }
+
+# No longer a Fiefdom of Gondor/Reunited Kingdom
+country_event = {
+	id = 100007
+	title = "Our New Government"
+	desc = "EVTDESC100007"
+	picture = administration
+	
+	trigger = {
+		government = fiefdom
+		NOT = {
+			OR = { vassal_of = GON }
+			OR = { vassal_of = RUN }
+		}
+	}
+	
+	option = {
+		name = "Our new King!"
+		
+		government = monarchy
+	}
+	
+	option = {
+		name = "Our new Prince!"
+		
+		government = principality
+	}
+	
+	option = {
+		name = "Our new Lord!"
+		
+		government = lord_monarchy
+	}

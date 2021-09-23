@@ -577,7 +577,6 @@ political_decisions = {
 			ADR = { exists = no }
 			war = no
 			NOT = { has_global_flag = GON_andrast_war }
-			NOT = { has_global_flag = GON_lost_andrast_war } # to prevent this being taken multiple times should Gondor lose the first one
 		}
 		
 		allow = {
@@ -586,7 +585,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			badboy = 2
+			badboy = 5
 			
 			random_country = {
 				limit = { owns = 162 }
@@ -597,218 +596,8 @@ political_decisions = {
 				}
 				country_event = 150000
 			}
-		}
-	}
-	
-	andrast_war_end_GON = {
-		picture = "andrast_map"
-		potential = {
-			tag = GON
-			has_recently_lost_war = no
-			has_global_flag = GON_andrast_war
-			war = no
-			165 = { 
-				owner = { 
-					truce_with = GON
-					has_recently_lost_war = yes
-					NOT = { is_vassal = yes }
-				} 
-			}
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			prestige = 5
 			
-			clr_global_flag = GON_andrast_war
-			
-			165 = {
-				owner = {
-					country_event = 150001
-				}
-			}
-			
-			random_owned = {
-				limit = {
-					owner = { is_greater_power = yes }
-				}
-				diplomatic_influence = {
-					who = ADR
-					value = 400
-				}
-			}
-		}
-	}
-	
-	andrast_war_end_PUK = {
-		picture = "andrast_map"
-		potential = {
-			GON = { has_recently_lost_war = yes }
-			truce_with = GON
-			has_recently_lost_war = no
-			war = no
-			has_global_flag = GON_andrast_war
-			owns = 165
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			prestige = 25
-			
-			clr_global_flag = GON_andrast_war
-			set_global_flag = GON_lost_andrast_war
-			
-			GON = { country_event = 150002 }
-		}
-	}
-	
-	all_of_andrast = {
-		picture = "andrast_map"
-		potential = {
-			tag = GON
-			OR = {
-				ADR = { vassal_of = GON }
-				owns = 162
-			}
-			165 = { 
-				owner = { 
-					civilized = no
-					NOT = { tag = ADR } 
-				}
-			}
-			NOT = { has_global_flag = GON_andrast_war_2 }
-			NOT = { has_global_flag = GON_lost_andrast_war } # to prevent this being taken multiple times should Gondor lose the first one
-		}
-		
-		allow = {
-			165 = { owner = { NOT = { truce_with = GON } } }
-			war = no
-			expansion_1 = 1
-		}
-		
-		effect = {
-			badboy = 5
-			
-			random_country = {
-				limit = { owns = 165 }
-				add_casus_belli = {
-					target = GON
-					type = liberate_country
-					months = 12
-				}
-				country_event = 150004
-			}
-		}
-	}
-	
-	andrast_war_2_end_GON = {
-		picture = "andrast_map"
-		potential = {
-			tag = GON
-			ADR = { owns = 165 }
-			OR = {
-				ADR = {
-					vassal_of = GON
-				}
-				owns = 161
-			}
-			has_global_flag = GON_andrast_war_2
-			war = no
-			has_recently_lost_war = no
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			prestige = 10
-			
-			ADR = { capital = 165 }
-			
-			random_country = {
-				limit = {
-					tag = ADR
-					GON = { owns = 162 }
-				}
-				annex_to = GON
-			}
-			
-			any_owned = {
-				limit = {
-					is_core = ADR
-				}
-				remove_core = ADR
-				add_core = GON
-			}
-			
-			clr_global_flag = GON_andrast_war_2
-		}
-	}
-	
-	andrast_war_2_end_PUK = {
-		picture = "andrast_map"
-		potential = {
-			has_global_flag = GON_andrast_war_2
-			war = no
-			has_recently_lost_war = no
-			GON = { has_recently_lost_war = yes }
-			owns = 165
-		}
-		
-		allow = {
-			war = no
-		}
-		
-		effect = {
-			prestige = 50
-			
-			random_country = {
-				limit = {
-					tag = ADR
-					vassal_of = GON
-				}
-				GON = { release_vassal = ADR }
-				
-				THIS = { inherit = ADR }
-			}
-			
-			random_country = {
-				limit = {
-					tag = GON
-					NOT = { exists = ADR }
-					owns = 162
-				}
-				any_owned = {
-					limit = {
-						OR = {
-							region = GON_162
-							region = GON_165
-							region = GON_169
-							region = GON_175
-							region = GON_186
-						}
-					}
-					secede_province = THIS
-				}
-			}
-			
-			any_owned = {
-				limit = { 
-					is_core = GON
-				}
-				remove_core = GON
-				add_core = ADR
-			}
-			
-			clr_global_flag = GON_andrast_war_2
-			set_global_flag = GON_lost_andrast_war
+			set_global_flag = GON_andrast_war
 		}
 	}
 	

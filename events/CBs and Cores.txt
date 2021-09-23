@@ -558,3 +558,48 @@ country_event = {
 		}
 	}
 }
+
+# Make target puppet
+country_event = {
+	id = 2510
+	title = "Our new Overlords"
+	desc = "EVTDESC2510"
+	picture = administration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We welcome our new masters"
+		
+		FROM = {
+			create_vassal = THIS
+			create_alliance = THIS
+			relation = {
+				who = THIS
+				value = 200
+			}
+		}
+		
+		random_country = {
+			limit = {
+				tag = FROM
+				is_greater_power = yes
+			}
+			diplomatic_influence = {
+				who = THIS
+				value = 400
+			}
+		}
+		
+		random_country = {
+			limit = {
+				is_our_vassal = THIS
+				OR = {
+					tag = GON
+					tag = RUN
+				}
+			}
+			THIS = { government = fiefdom }
+		}
+	}
+}
