@@ -77,39 +77,75 @@ country_event = {
 	option = {
 		name = "Excellent!"
 		
-		country = {
-			any_owned = {
-				limit = {
-					owner = { tag = GON }
-					OR = {
-						region = GON_162
-						region = GON_165
-						region = GON_169
-						region = GON_175
-						region = GON_183
+		# Outcome of Gondorification of Andrast
+		random_owned = {
+			limit = {
+				owner = {
+					tag = GON
+					has_country_flag = andrast_gondorification
+					any_owned_province = {
+						OR = {
+							region = GON_162
+							region = GON_165
+							region = GON_169
+							region = GON_175
+							region = GON_183
+						}
+						is_core = PUK
+						is_colonial = no
 					}
-					is_core = PUK
-					is_colonial = no
 				}
-				remove_core = PUK
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						OR = {
+							region = GON_162
+							region = GON_165
+							region = GON_169
+							region = GON_175
+							region = GON_183
+						}
+						is_core = PUK
+						is_colonial = no
+					}
+					remove_core = PUK
+				}
 			}
 		}
 		
-		country = {
-			any_owned = {
-				limit = {
-					owner = { tag = GON }
-					is_core = HRD
-					OR = {
-						is_core = HRU
-						is_core = HRN
-						is_core = HAR
+		# Outcome of Gondorification of Harondor
+		random_owned = {
+			limit = {
+				owner = {
+					tag = GON
+					has_country_flag = south_gondor_gondorification
+					any_owned_province = {
+						OR = {
+							is_core = HRU
+							is_core = HRN
+							is_core = HAR
+						}
+						is_core = HRD
+						is_colonial = no
 					}
-					is_colonial = no
 				}
-				remove_core = HRU
-				remove_core = HRN
-				remove_core = HAR
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = HRD
+						OR = {
+							is_core = HRU
+							is_core = HRN
+							is_core = HAR
+						}
+						is_colonial = no
+					}
+					remove_core = HRU
+					remove_core = HRN
+					remove_core = HAR
+				}
 			}
 		}
 	}
