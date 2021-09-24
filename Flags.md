@@ -11,6 +11,9 @@
  
 ### Liberate Realm
  - possible_liberate_realm_target
+ 
+### Liberate and Puppet Realm
+ - possible_liberate_and_puppet_realm_target
 
 ## Good-Evil Alignment
 ### Good Flags
