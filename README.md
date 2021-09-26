@@ -188,6 +188,7 @@ A Lord of the Rings mod for Victoria 2
 	- [Erebor](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 	- [Grey Mountain Goblins](https://www.pinterest.com/pin/541698661430483809/)
 	- [Woodland Realm](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
+	- [Arnor](https://www.deviantart.com/yashael341/art/Banner-for-the-Kingdom-of-Arnor-810714226)
 
 ### Music & Sound Assets
 - Main Theme: [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
