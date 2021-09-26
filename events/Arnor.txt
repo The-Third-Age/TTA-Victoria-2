@@ -1,0 +1,117 @@
+# Arnor Events: {
+# 50600 - 50699 }
+
+# Choose capital - Fornost Erain is owned
+country_event = {
+    id = 50610
+    title = "A new capital for the Kingdom"
+    desc = "EVTDESC50610"
+    picture = "placeholder_event"
+
+    trigger = {
+        tag = ARN
+        war = no
+        owns = 1026
+        owns = 1015
+        NOT = { has_country_flag = arnor_chosen_capital }
+    }
+
+    mean_time_to_happen = { days = 180 }
+
+    option = {
+        name = "Annuminas shall be our capital"
+        prestige = 10
+        capital = 1026
+        1026 = {
+            any_pop = {
+                consciousness = -1
+                militancy = -1
+            }
+        }
+        set_country_flag = arnor_chosen_capital
+    }
+
+    option = {
+        name = "Fornost Erain shall be our capital"
+        prestige = 10
+        capital = 1015
+        1015 = {
+            any_pop = {
+                consciousness = -1
+                militancy = -1
+            }
+        }
+        set_country_flag = arnor_chosen_capital
+    }
+
+    option = {
+        name = "Our current capital is fine"
+        prestige = 10
+        capital_scope = {
+            any_pop = {
+                consciousness = -1
+                militancy = -1
+            }
+        }
+        set_country_flag = arnor_chosen_capital
+    }
+}
+
+# Choose capital - Fornost Erain is still uncolonised
+country_event = {
+    id = 50611
+    title = "A new capital for the Kingdom"
+    desc = "EVTDESC50610"
+    picture = "placeholder_event"
+
+    trigger = {
+        tag = ARN
+        war = no
+        owns = 1026
+        1015 = {
+            empty = yes
+        }
+        NOT = { has_country_flag = arnor_chosen_capital }
+    }
+
+    mean_time_to_happen = { days = 180 }
+
+    option = {
+        name = "Annuminas shall be our capital"
+        prestige = 10
+        capital = 1026
+        1026 = {
+            any_pop = {
+                consciousness = -1
+                militancy = -1
+            }
+        }
+        set_country_flag = arnor_chosen_capital
+    }
+
+    option = {
+        name = "Fornost Erain shall be our capital"
+        prestige = 10
+        capital = 1015
+        1015 = {
+            secede_province = ARN
+            any_pop = {
+                consciousness = -1
+                militancy = -1
+            }
+        }
+        set_country_flag = arnor_chosen_capital
+    }
+
+    option = {
+        name = "Our current capital is fine"
+        prestige = 10
+        capital_scope = {
+            any_pop = {
+                consciousness = -1
+                militancy = -1
+            }
+        }
+        set_country_flag = arnor_chosen_capital
+    }
+}

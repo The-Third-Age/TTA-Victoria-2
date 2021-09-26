@@ -1,0 +1,116 @@
+# Kingdom of Arnor decisions {
+# Form Arnor
+# }
+political_decisions = {
+    form_arnor = {
+        potential = {
+            OR = {
+                primary_culture = dunedain
+                primary_culture = arnorian
+            }
+            capital_scope = { continent = eriador }
+            NOT = {
+                tag = RUN
+                tag = GON
+                tag = ARN
+            }
+        }
+        allow = {
+            civilized = yes
+            is_independant = yes
+            is_greater_power = yes
+            war = no
+            DND = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            ai = yes
+                            in_sphere = THIS
+                            OR = {
+                                is_vassal = no
+                                vassal_of = THIS
+                            }
+                            war = no
+                            is_greater_power = no
+                        }
+                    }
+                }
+            }
+            CAR = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            ai = yes
+                            in_sphere = THIS
+                            OR = {
+                                is_vassal = no
+                                vassal_of = THIS
+                            }
+                            war = no
+                            is_greater_power = no
+                        }
+                    }
+                }
+            }
+            BRE = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = {
+                            ai = yes
+                            in_sphere = THIS
+                            OR = {
+                                is_vassal = no
+                                vassal_of = THIS
+                            }
+                            war = no
+                            is_greater_power = no
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            change_tag = ARN
+            prestige = 20
+            badboy = -5
+            DND = { all_core = { add_core = ARN } }
+            CAR = { all_core = { add_core = ARN } }
+            BRE = { all_core = { add_core = ARN } }
+            RHR = { all_core = { add_Core = ARN } }
+            DND_1026 = { add_core = ARN }
+            DND_1015 = { add_core = ARN }
+            DND_1007 = { add_core = ARN }
+
+            random_country = {
+                limit = {
+                    tag = DND
+                    exists = yes
+                    ai = yes
+                }
+                THIS = { inherit = DND }
+            }
+            random_country = {
+                limit = {
+                    tag = CAR
+                    exists = yes
+                    ai = yes
+                }
+                THIS = { inherit = CAR }
+            }
+            random_country = {
+                limit = {
+                    tag = BRE
+                    exists = yes
+                    ai = yes
+                }
+                THIS = { inherit = BRE }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
