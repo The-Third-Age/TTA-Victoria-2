@@ -1,8 +1,10 @@
 # Kingdom of Arnor decisions {
 # Form Arnor
+# Fate of the Shire
 # }
 political_decisions = {
     form_arnor = {
+		picture = "arnor"
         potential = {
             OR = {
                 primary_culture = dunedain
@@ -111,6 +113,39 @@ political_decisions = {
         }
         ai_will_do = {
             factor = 1
+        }
+    }
+
+    fate_of_the_shire = {
+		picture = "arnor"
+        potential = {
+            OR = {
+                tag = RUK
+                tag = ARN
+            }
+            SHI = {
+                exists = yes
+            }
+            NOT = { has_country_flag = fate_of_the_shire }
+        }
+        allow = {
+            SHI = {
+                OR = {
+                    vassal_of = THIS
+                    in_sphere = THIS
+                }
+            }
+            is_independant = yes
+            is_greater_power = yes
+            war = no
+            # Annuminas
+            owns = 1026
+            # Bree
+            owns = 1013
+        }
+        effect = {
+            country_event = 50620
+            set_country_flag = fate_of_the_shire
         }
     }
 }
