@@ -588,10 +588,10 @@ political_decisions = {
 			badboy = 5
 			
 			random_country = {
-				limit = { owns = 162 }
+				limit = { owns = 165 }
 				add_casus_belli = {
 					target = GON
-					type = humiliate
+					type = liberate_and_puppet_country
 					months = 12
 				}
 				country_event = 150000
@@ -635,6 +635,108 @@ political_decisions = {
 				remove_core = ADR
 				add_core = GON
 				aristocrats = { militancy = 2 }
+			}
+		}
+	}
+	
+	puppet_druwaith_iaur = {
+		picture = "druwaith_iaur"
+		potential = {
+			tag = GON
+			OR = {
+				is_our_vassal = ADR
+				owns = 162
+			}
+			PUK = {
+				civilized = no
+				any_core = {
+					owner = {
+						OR = {
+							tag = GON
+							tag = PUK
+							vassal_of = THIS
+						}
+					}
+				}
+				exists = yes
+				is_vassal = no
+			}
+			NOT = { has_country_modifier = low_military_recruitment }
+			NOT = { has_country_flag = GON_puppet_druwaith_iaur }
+		}
+		
+		allow = {
+			war = no
+			NOT = { truce_with = PUK }
+		}
+		
+		effect = {
+			casus_belli = {
+				target = PUK
+				type = make_puppet
+				duration = 12
+			}
+			
+			war = {
+				target = PUK
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+			
+			badboy = 3
+			set_country_flag = GON_puppet_druwaith_iaur
+		}
+	}
+	
+	annex_druwaith_iaur = {
+		picture = "gondor_noimage"
+		
+		potential = {
+			tag = GON
+			PUK = {
+				exists = yes
+				vassal_of = GON
+			}
+			owns = 165
+		}
+		
+		allow = {
+			OR = {
+				crown_land_ownership = seventy_land_ownership
+				crown_land_ownership = all_land_ownership
+			}
+			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			war = no
+		}
+		
+		effect = {
+			inherit = PUK
+			
+			prestige = 10
+			
+			any_owned = {
+				limit = {
+					is_core = PUK
+					NOT = { has_province_modifier = gondorification } 
+				}
+				add_core = GON
+				any_pop = {
+					limit = {
+						OR = {
+							type = aristocrats
+							AND = {
+								is_accepted_culture = no
+								is_primary_culture = no
+							}
+						}
+					}
+					militancy = 2
+				}
+				add_province_modifier = { name = gondorification duration = 730 }
 			}
 		}
 	}
@@ -829,6 +931,7 @@ political_decisions = {
 				}
 				any_owned_province = { is_core = HRD }
 			}
+			NOT = { has_country_flag = GON_returned_to_south_gondor }
 		}
 		
 		allow = {
@@ -957,6 +1060,8 @@ political_decisions = {
 				add_accepted_culture = gondorian
 				capital = 216
 			}
+			
+			set_country_flag = GON_returned_to_south_gondor
 		}
 	}
 	
@@ -1230,7 +1335,7 @@ political_decisions = {
 					NOT = { war_with = GON }
 					NOT = { truce_with = GON }
 				}
-				country_event = 150006
+				country_event = 150001
 			}
 		}
 	}
