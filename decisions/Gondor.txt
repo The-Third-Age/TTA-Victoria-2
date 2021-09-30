@@ -5,6 +5,7 @@
 #	Military Buildup
 #	Expansions to the West
 #	Return to South Gondor
+#	Reintegration of Rohan
 #	Ecthelion II Flavor
 #	Reclaiming Cores Removed Via Flavor }
 
@@ -1452,6 +1453,52 @@ political_decisions = {
 				}
 				add_province_modifier = { name = harondor_farm_expansions duration = -1 }
 			}
+		}
+	}
+}
+
+# Reintegration of Rohan
+political_decisions = {
+	reclaim_calednardhon = {
+		potential = {
+			tag = GON
+			NOT = { has_country_modifier = low_military_recruitment }
+			OR = {
+				good_evil_alignment = evil_alignment
+				AND = {
+					NOT = { good_evil_alignment = evil_alignment }
+					ROH = { good_evil_alignment = evil_alignment }
+				}
+			}
+			NOT = { has_country_flag = reclaimed_caledhardon }
+		}
+		
+		allow = {
+			NOT = { alliance_with = ROH }
+		}
+		
+		effect = {
+			badboy = 15
+			# TODO: Update this to specific regions once Rohan is done
+			ROH = { all_core = { add_core = GON } }
+			set_country_flag = calednardhon
+		}
+	}
+	
+	the_center_of_the_realm = {
+		picture = "tomb_of_elendil"
+		potential = {
+			tag = GON
+			has_country_flag = reclaimed_caledhardon
+			NOT = { 1 = { has_province_modifier = center_of_the_realm } }
+		}
+		
+		allow = {
+			owns = 1
+		}
+		
+		effect = {
+			1 = { add_province_modifier = { name = center_of_the_realm duration = -1 } }
 		}
 	}
 }
