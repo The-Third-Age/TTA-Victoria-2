@@ -43,6 +43,7 @@ take_one_ring
 war_of_the_ring_cb
 add_to_sphere
 take_from_sphere
+change_alignment
 status_quo
 gunboat
 conquest
@@ -57,6 +58,7 @@ cut_down_to_size
 free_peoples
 liberate_country 
 release_puppet
+take_puppet
 become_independent
 make_puppet
 liberate_and_puppet_country
@@ -308,6 +310,82 @@ take_from_sphere = {
 			create_alliance = THIS
 			clr_country_flag = possible_take_from_sphere_target
 		}
+	}
+}
+
+change_alignment = {
+	sprite_index = 13
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 4
+	prestige_factor = 2
+	peace_cost_factor = 25
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	# scope = target
+	# THIS = country applying wargoal
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		OR = {
+			THIS = { is_greater_power = no }
+			AND = {
+				THIS = { is_greater_power = yes }
+				is_greater_power = yes
+			}
+		}
+		OR = {
+			AND = {
+				THIS = { good_evil_alignment = good_alignment }
+				NOT = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				THIS = { good_evil_alignment = neutral_alignment }
+				NOT = { good_evil_alignment = neutral_alignment }
+			}
+			AND = {
+				THIS = { good_evil_alignment = evil_alignment }
+				NOT = { good_evil_alignment = evil_alignment }
+			}
+		}
+	}
+	
+	is_valid = {
+		OR = {
+			THIS = { is_greater_power = no }
+			AND = {
+				THIS = { is_greater_power = yes }
+				is_greater_power = yes
+			}
+		}
+	}
+	
+	po_add_to_sphere = yes
+	
+	war_name = WAR_CHANGE_ALIGNMENT
+	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	# scope = target
+	# THIS = country that applied wargoal
+	on_po_accepted = {
+		country_event = 2509
 	}
 }
 
@@ -1267,6 +1345,83 @@ make_puppet = {
 	on_po_accepted = {
 		country_event = 2509
 		country_event = 2510
+	}
+}
+
+take_puppet = {
+	sprite_index = 10
+	is_triggered_only = yes
+	months = 12
+
+	badboy_factor = 2 # 4 infamy
+	prestige_factor = 1
+	peace_cost_factor = 25
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+		NOT = { is_our_vassal = THIS }
+		num_of_vassals = 1
+	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		is_our_vassal = FROM
+	}
+	
+	po_release_puppet = yes
+	po_add_to_sphere = yes
+
+	war_name = WAR_NAME
+	
+	# scope = THIS = country applying wargoal
+	# FROM = country that currently has target as puppet
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+		
+		any_country = {
+			limit = {
+				vassal_of = FROM
+			}
+			set_country_flag = possible_take_vassal_target
+		}
+	}
+	
+	# scope = country that had target as puppet
+	# THIS = country that applied wargoal
+	on_po_accepted = {
+		any_country = {
+			limit = {
+				is_our_vassal = yes
+				has_country_flag = possible_take_vassal_target
+			}
+			clr_country_flag = possible_take_vassal_target
+		}
+		
+		any_country = {
+			limit = {
+				is_vassal = no
+				has_country_flag = possible_take_vassal_target
+			}
+			country_event = 2509
+			country_event = 2510
+			create_alliance = THIS
+			clr_country_flag = possible_take_vassal_target
+		}
 	}
 }
 
