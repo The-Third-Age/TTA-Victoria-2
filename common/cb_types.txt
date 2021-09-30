@@ -389,7 +389,10 @@ conquest = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		NOT = { number_of_states = 2 }
-		civilized = yes
+		OR = {
+			civilized = yes
+			THIS = { civilized = no }
+		}
 		is_independant = yes
 	}
 
