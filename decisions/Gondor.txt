@@ -583,6 +583,7 @@ political_decisions = {
 		allow = {
 			war = no
 			162 = { owner = { NOT = { truce_with = GON } } }
+			NOT = { has_country_flag = GON_andrast_war }
 		}
 		
 		effect = {
@@ -598,7 +599,7 @@ political_decisions = {
 				country_event = 150000
 			}
 			
-			set_global_flag = GON_andrast_war
+			set_country_flag = GON_andrast_war
 		}
 	}
 	
@@ -669,6 +670,7 @@ political_decisions = {
 		allow = {
 			war = no
 			NOT = { truce_with = PUK }
+			NOT = { has_country_flag = GON_puppet_druwaith_iaur }
 		}
 		
 		effect = {
@@ -938,6 +940,7 @@ political_decisions = {
 		allow = {
 			wilderness_1 = 1
 			war = no
+			NOT = { has_country_flag = GON_returned_to_south_gondor }
 		}
 		
 		effect = {
@@ -1470,18 +1473,19 @@ political_decisions = {
 					ROH = { good_evil_alignment = evil_alignment }
 				}
 			}
-			NOT = { has_country_flag = reclaimed_caledhardon }
+			NOT = { has_country_flag = GON_reclaimed_calednardhon }
 		}
 		
 		allow = {
 			NOT = { alliance_with = ROH }
+			NOT = { has_country_flag = GON_reclaimed_calednardhon }
 		}
 		
 		effect = {
 			badboy = 15
 			# TODO: Update this to specific regions once Rohan is done
 			ROH = { all_core = { add_core = GON } }
-			set_country_flag = calednardhon
+			set_country_flag = GON_reclaimed_calednardhon
 		}
 	}
 	
@@ -1489,12 +1493,21 @@ political_decisions = {
 		picture = "tomb_of_elendil"
 		potential = {
 			tag = GON
-			has_country_flag = reclaimed_caledhardon
+			has_country_flag = GON_reclaimed_calednardhon
 			NOT = { 1 = { has_province_modifier = center_of_the_realm } }
+			ROH = {
+				all_core = {
+					OR = {
+						owned_by = GON
+						owner = { vassal_of = THIS }
+					}
+				}
+			}
 		}
 		
 		allow = {
 			owns = 1
+			has_country_flag = GON_reclaimed_calednardhon
 		}
 		
 		effect = {
