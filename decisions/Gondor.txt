@@ -6,6 +6,7 @@
 #	Expansions to the West
 #	Return to South Gondor
 #	Reintegration of Rohan
+#	Generic Political Flavor
 #	Ecthelion II Flavor
 #	Reclaiming Cores Removed Via Flavor }
 
@@ -58,6 +59,19 @@ political_decisions = {
 					limit = { has_pop_culture = dunedain }
 					literacy = 0.1
 				}
+			}
+			
+			# Setting Orc Raids
+			add_country_modifier = { name = orc_raids_country duration = -1 }
+			any_owned = {
+				limit = {
+					OR = {
+						region = GON_198
+						region = GON_205
+						region = GON_212
+					}
+				}
+				add_province_modifier = { name = orc_raids duration = -1 }
 			}
 		}
 	}
@@ -1516,6 +1530,49 @@ political_decisions = {
 	}
 }
 
+# Generic Political Flavor
+political_decisions = {
+	call_the_council_of_gondor = {
+		picture = "gondor_throne"
+		potential = {
+			tag = GON
+			NOT = { has_country_modifier = council_of_gondor }
+		}
+		
+		allow = {
+			militancy = 3
+		}
+		
+		effect = {
+			militancy = -1
+			add_country_modifier = { name = council_of_gondor duration = -1 }
+		}
+	}
+	
+	declare_steward_king = {
+		picture = "gondor_throne"
+		potential = {
+			tag = GON
+			government = stewardship
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			militancy = 5
+			prestige = 10
+			government = monarchy
+			# TODO: add thing that starts civil war
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
 # Ecthelion II Flavor
 political_decisions = {
 	encourage_outside_military_recruitment = {
@@ -1579,6 +1636,43 @@ political_decisions = {
 			}
 			
 			set_global_flag = gondor_prepared_coastal_defences
+		}
+	}
+	
+	fund_ithilien_rangers = {
+		potential = {
+			nationalvalue = ecthelion_ii
+			NOT = { has_country_modifier = ithilien_rangers }
+			has_country_modifier = orc_raids_country
+			any_owned_province = {
+				OR = {
+					region = GON_198
+					region = GON_205
+					region = GON_212
+				}
+				has_province_modifier = orc_raids
+			}
+		}
+		
+		allow = {
+			money = 100000
+			archers_1 = 1
+		}
+		
+		effect = {
+			treasury = -100000
+			add_country_modifier = { name = ithilien_rangers duration = -1 }
+			any_owned = {
+				limit = {
+					OR = {
+						region = GON_198
+						region = GON_205
+						region = GON_212
+					}
+					has_province_modifier = orc_raids
+				}
+				add_province_modifier = { name = ithilien_rangers_province duration = -1 }
+			}
 		}
 	}
 }

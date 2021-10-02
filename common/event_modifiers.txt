@@ -170,6 +170,22 @@ sacked_great_road = {
 	icon = 12
 }
 
+orc_raids = {
+	immigrant_attract = -0.25
+	immigrant_push = 0.25
+	life_rating = -0.25
+	local_RGO_output = -0.5
+	local_artisan_output = -0.5
+	local_factory_output = -0.5
+	population_growth = -0.001
+	
+	icon = 20
+}
+
+orc_raids_country = {
+	icon = 18
+}
+
 # }
 ##### COLONIAL MODIFIERS ##### {
 colonial_push = {
@@ -266,30 +282,6 @@ wotr_countdown = {
 
 wotr_end_countdown = {
 	icon = 19
-}
-
-# }
-##### NEW DYNAMIC WAR SYSTEM ##### {
-province_claimed = {
-	pop_consciousness_modifier = 0.001
-}
-
-looted_light = {
-	local_RGO_output = -0.15
-	local_factory_output = -0.15
-	population_growth = -0.002
-}
-
-looted_medium = {
-	local_RGO_output = -0.25
-	local_factory_output = -0.35
-	population_growth = -0.010
-}
-
-looted_heavy = {
-	local_RGO_output = -0.45
-	local_factory_output = -0.65
-	population_growth = -0.030
 }
 
 #}
@@ -533,6 +525,29 @@ center_of_the_realm = {
 	immigrant_attract = 0.1
 	
 	icon = 9
+}
+
+ithilien_rangers = {
+	tax_efficiency = -0.05
+	
+	icon = 15
+}
+
+ithilien_rangers_province = {
+	immigrant_push = -0.1
+	life_rating = 0.1
+	local_RGO_output = 0.25
+	local_artisan_output = 0.25
+	local_factory_output = 0.25
+	population_growth = 0.001
+	
+	icon = 17
+}
+
+council_of_gondor = {
+	global_pop_consciousness_modifier = -0.02
+	
+	icon = 5
 }
 
 # }

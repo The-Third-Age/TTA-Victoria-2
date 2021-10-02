@@ -470,3 +470,37 @@ province_event = {
 		owner = { prestige = 2 }
 	}
 }
+
+# An Ambush in Ithlien
+country_event = {
+	id = 50015
+	title = "An Ambush"
+	desc = "EVTDESC50015"
+	picture = ithilien_ambush
+	
+	trigger = {
+		has_country_modifier = ithilien_rangers
+		any_neighbor_country = { good_evil_alignment = evil_alignment }
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+	
+	option = {
+		name = "Fewer troops for the Enemy"
+		
+		prestige = 2
+		
+		random_country = {
+			limit = {
+				neighbour = THIS
+				good_evil_alignment = evil_alignment
+			}
+			relation = {
+				who = THIS
+				value = -25
+			}
+		}
+	}
+}

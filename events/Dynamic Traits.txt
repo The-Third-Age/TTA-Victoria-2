@@ -73,6 +73,7 @@ country_event = {
 	
 	option = {
 		name = "Drat"
+		# Remove generic traits
 		remove_country_modifier = kind
 		remove_country_modifier = smart_modifier
 		remove_country_modifier = of_noble_house
@@ -92,11 +93,15 @@ country_event = {
 		remove_country_modifier = corrupt
 		remove_country_modifier = just
 		
+		# Reset trait counters
 		set_variable = { which = strata_support value = 0 }
 		set_variable = { which = wisdom value = 0 }
 		set_variable = { which = work_ethic value = 0 }
 		set_variable = { which = generosity value = 0 }
 		set_variable = { which = corruption value = 0 }
+		
+		# Reset flavor specific modifiers
+		remove_country_modifier = council_of_gondor
 		
 		country_event = 3500
 	}
