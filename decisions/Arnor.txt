@@ -1,6 +1,8 @@
 # Kingdom of Arnor decisions {
 # Form Arnor
 # Fate of the Shire
+# Northern Expansion
+# Claim Angmar
 # }
 political_decisions = {
     form_arnor = {
@@ -146,6 +148,57 @@ political_decisions = {
         effect = {
             country_event = 50620
             set_country_flag = fate_of_the_shire
+        }
+    }
+
+    northern_expansion = {
+		picture = "arnor"
+        potential = {
+            OR = {
+                tag = RUK
+                tag = ARN
+            }
+            NOT = { has_country_flag = northern_expansion }
+        }
+        allow = {
+            civilized = yes
+            is_independant = yes
+            is_greater_power = yes
+            war = no
+            all_core = { owned_by = THIS }
+        }
+        effect = {
+            prestige = 5
+            set_country_flag = northern_expansion
+            DND_1020 = { add_core = THIS }
+            DND_1004 = { add_core = THIS }
+        }
+    }
+
+    claim_angmar = {
+		picture = "arnor"
+        potential = {
+            OR = {
+                tag = RUK
+                tag = ARN
+            }
+            has_country_flag = northern_expansion
+            NOT = { has_country_flag = claim_angmar }
+        }
+        allow = {
+            civilized = yes
+            is_independant = yes
+            is_greater_power = yes
+            war = no
+            all_core = { owned_by = THIS }
+        }
+        effect = {
+            prestige = 5
+            set_country_flag = claim_angmar
+            ANG_976 = { add_core = THIS }
+            ANG_979 = { add_core = THIS }
+            ANG_987 = { add_core = THIS }
+            ANG_999 = { add_core = THIS }
         }
     }
 }
