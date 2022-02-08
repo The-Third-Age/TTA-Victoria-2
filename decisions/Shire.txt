@@ -15,3 +15,25 @@ political_decisions = {
 		}
 	}
 }
+political_decisions = {
+	accept_bre_hobbit = {
+		potential = {
+			tag = SHI
+			BRE = { all_core = { owned_by = SHI } }
+			NOT = { accepted_culture = breeland_hobbit }
+		}
+		
+		allow = {
+			war = no
+			BRE = {
+				all_core = {
+					owned_by = SHI
+				}
+			}
+		}
+		
+		effect = {
+			add_accepted_culture = breeland_hobbit
+		}
+	}
+}
