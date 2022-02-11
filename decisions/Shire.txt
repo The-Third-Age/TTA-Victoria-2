@@ -15,3 +15,23 @@ political_decisions = {
 		}
 	}
 }
+
+#Accepting Breeland Hobbits
+political_decisions = {
+	accept_bre_hobbit = {
+		picture = "free_peoples_of_breeland"
+		potential = {
+			tag = SHI
+			BRE = { all_core = { owned_by = SHI } }
+			NOT = { accepted_culture = breeland_hobbit }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			add_accepted_culture = breeland_hobbit
+		}
+	}
+}
