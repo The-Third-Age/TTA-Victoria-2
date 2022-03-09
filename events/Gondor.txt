@@ -510,7 +510,7 @@ country_event = {
 	id = 50016
 	title = "Movement in the Shadows"
 	desc = "EVTDESC50016"
-	# picture = ?
+	picture = second_kinstrife
 	fire_only_once = yes
 	
 	trigger = {
@@ -546,6 +546,18 @@ country_event = {
 		name = "Movement in the shadows?"
 		
 		prestige = -5
+
+		any_owned = {
+			limit = {
+				NOT = { region = GON_4 }
+				NOT = { region = GON_14 }
+				NOT = { region = GON_16 }
+			}
+			random = {
+				chance = 50
+				add_core = GNR
+			}
+		}
 		
 		country_event = {
 			id = 50017
@@ -559,55 +571,44 @@ country_event = {
 	id = 50017
 	title = "The Council of Gondor"
 	desc = "EVTDESC50017"
-	# picture = ?
+	picture = second_kinstrife
 	is_triggered_only = yes
 	
 	option = {
 		name = "A more fitting name is the Council of Traitors"
 		
-		# TODO: Make the rebel country
+		release = GNR
 		
 		any_owned = {
 			limit = {
 				is_core = THIS
-				is_state_capital = yes
 			}
-			random = {
-				chance = 50
-				add_province_modifier = { name = province_selection duration = -1 }
-			}
+			add_core = GNR
 		}
 		
-		any_owned = {
-			limit = {
-				# TODO: Check to see if the state capital has the province_selection modifier
-				# But not the state capital itself
-			}
-			secede_province = MOR
-		}
-		
-		any_owned = {
-			limit = {
-				has_province_modifier = province_selection
-			}
-			secede_province = MOR
-		}
-		
-		any_owned = {
-			limit = {
-				NOT = { is_core = THIS }
-			}
-			
-			secede_province = MOR
-		}
+		GNR = { government = stewardship }
 		
 		any_country = {
 			limit = {
 				exists = yes
-				substate_of = THIS
+				OR = {
+					substate_of = THIS
+					AND = {
+						vassal_of = THIS
+						tag = AMR
+					}
+				}
 			}
-			
-			annex_to = MOR
+			annex_to = GNR
+		}
+		
+		all_core = { add_core = GNR }
+		
+		war = {
+			target = GNR
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+			call_ally = no
 		}
 	}
 }
