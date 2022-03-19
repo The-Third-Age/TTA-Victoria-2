@@ -1,7 +1,8 @@
 # RGO Modifiers decisions: {
 #	Great Roads 
 #	Road Extensions 
-#	Road Destruction }
+#	Road Destruction 
+#	Trade Goods Changes }
 
 # Great Roads
 political_decisions = {
@@ -987,6 +988,28 @@ political_decisions = {
 					duration = -1
 				}
 			}
+		}
+	}
+}
+
+# Trade Goods Changes
+political_decisions = {
+	fund_ethring_lumber_camp = {
+		picture = ethring
+		potential = {
+			89 = { NOT = { trade_goods = timber } }
+			owns = 89
+		}
+		
+		allow = {
+			treasury = 5000
+			farming_tech_2 = 1
+		}
+		
+		effect = {
+			treasury = -5000
+			
+			89 = { trade_goods = timber }
 		}
 	}
 }
