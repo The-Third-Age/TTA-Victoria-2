@@ -12,6 +12,7 @@
 
 # TODO: Add decision to turn into Gondor of GNR wins second Kin-Strife
 # TODO: Add decision to annex GNR if second Kin-Strife is a draw
+# TODO: Make it possible to remove orc_raids(_country)
 
 # Starting Decisions
 political_decisions = {
@@ -440,6 +441,65 @@ political_decisions = {
 			}
 			
 			activate_technology = flavor_1
+		}
+	}
+	
+	restore_crossroads_fallen_king = {
+		picture = "crossroads_fallen_king"
+		potential = {
+			owns = 204
+			204 = { NOT = { has_province_modifier = crossroads_fallen_king } }
+			is_culture_group = dunedain
+		}
+		
+		allow = {
+			204 = { NOT = { has_province_modifier = orc_raids } }
+			money = 10000
+			war = no
+			culture_3 = 1
+		}
+		
+		effect = {
+			money = -10000
+			
+			204 = { add_province_modifier = { name = crossroads_fallen_king duration = -1 } }
+			
+			any_pop = {
+				limit = {
+					is_culture_group = dunedain
+				}
+				consciousness = -2
+			}
+		}
+	}
+	
+	destroy_crossroads_fallen_king = {
+		picture = "crossroads_fallen_king"
+		potential = {
+			NOT = { owns = 204 }
+			204 = { 
+				owner = { war_with = THIS }
+				has_province_modifier = crossroads_fallen_king
+			}
+			controls = 204
+		}
+		
+		allow = { }
+		
+		effect = {
+			prestige = 5
+			badboy = 2
+			204 = { owner = { prestige = -5 } }
+			
+			remove_province_modifier = crossroads_fallen_king
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.92
+			}
 		}
 	}
 	
