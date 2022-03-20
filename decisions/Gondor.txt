@@ -454,7 +454,7 @@ political_decisions = {
 		
 		allow = {
 			204 = { NOT = { has_province_modifier = orc_raids } }
-			treasury = 10000
+			money = 10000
 			war = no
 			culture_3 = 1
 		}
@@ -605,6 +605,37 @@ political_decisions = {
 		
 		effect = {
 			11 = { remove_province_modifier = stonewain_valley_modifier }
+		}
+	}
+	
+	rebuild_osgiliath = {
+		picture = "osgiliath"
+		potential = {
+			is_culture_group = dunedain
+			198 = { NOT = { has_province_modifier = orc_raids } }
+		}
+		
+		allow = {
+			owns = 14
+			14 = { 
+				total_pops = 100000
+				NOT = { has_province_modifier = rebuilt_city }
+			}
+			owns = 198
+			198 = { 
+				total_pops = 50000
+				NOT = { has_province_modifier = rebuilt_city }
+			}
+			war = no
+			money = 50000
+			
+		}
+		
+		effect = {
+			14 = { add_province_modifier = { name = rebuilt_city duration = -1 } }
+			198 = { add_province_modifier = { name = rebuilt_city duration = -1 } }
+			
+			treasury = -50000
 		}
 	}
 }
