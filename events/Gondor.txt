@@ -612,3 +612,35 @@ country_event = {
 		}
 	}
 }
+
+# The Flowers Expedition
+province_event = {
+	id = 50018
+	title = "The Flowers Expedition"
+	desc = "EVTDESC50018"
+	fire_only_once = yes
+	
+	trigger = {
+		owner = { 
+			tag = GON
+			owns = 16
+			flavor_1 = 1
+		}
+		province_id = 23
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			infrastructure_tech_2 = 1
+		}
+	}
+		
+
+	option = {
+		name = "To the Healers of Gondor!"
+		
+		add_province_modifier = { name = "flowers_expedition" duration = -1 }
+	}
+}
