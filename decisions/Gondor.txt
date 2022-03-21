@@ -613,27 +613,44 @@ political_decisions = {
 		potential = {
 			is_culture_group = dunedain
 			198 = { NOT = { has_province_modifier = orc_raids } }
+			14 = { NOT = { has_province_modifier = rebuilt_city } }
+			198 = { NOT = { has_province_modifier = rebuilt_city } }
 		}
 		
 		allow = {
 			owns = 14
-			14 = { 
-				total_pops = 100000
-				NOT = { has_province_modifier = rebuilt_city }
-			}
 			owns = 198
-			198 = { 
-				total_pops = 50000
-				NOT = { has_province_modifier = rebuilt_city }
-			}
+			14 = { total_pops = 100000 }
+			198 = { total_pops = 50000 }
 			war = no
-			money = 50000
+			money = 100000
 			
 		}
 		
 		effect = {
 			14 = { add_province_modifier = { name = rebuilt_city duration = -1 } }
 			198 = { add_province_modifier = { name = rebuilt_city duration = -1 } }
+			
+			treasury = -100000
+		}
+	}
+	
+	rebuild_dome_of_stars = {
+		potential = {
+			is_culture_group = dunedain
+			14 = { has_province_modifier = rebuilt_city }
+			14 = { NOT = { has_province_modifier = dome_of_stars } }
+		}
+		
+		allow = {
+			owns = 14
+			education_4 = 1
+			culture_4 = 1
+			money = 50000
+		}
+		
+		effect = {
+			14 = { add_province_modifier = { name = dome_of_stars duration = -1 }
 			
 			treasury = -50000
 		}
