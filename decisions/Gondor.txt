@@ -650,7 +650,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			14 = { add_province_modifier = { name = dome_of_stars duration = -1 }
+			14 = { add_province_modifier = { name = dome_of_stars duration = -1 } }
 			
 			treasury = -50000
 		}
@@ -1682,6 +1682,35 @@ political_decisions = {
 			factor = 0
 		}
 	}
+	
+	visit_tomb_of_elendil = {
+		picture = "tomb_of_elendil"
+		potential = {
+			is_culture_group = dunedain
+			NOT = { has_country_flag = leader_visited_tomb_of_elendil }
+			owns = 1
+		}
+		
+		allow = {
+			war = no
+			culture_2 = 1
+		}
+		
+		effect = {
+			# TODO: Make it so this can be done once per leader
+			set_country_flag = leader_visited_tomb_of_elendil
+			
+			any_pop = {
+				limit = {
+					OR = {
+						is_accepted_culture = yes
+						is_primary_culture = yes
+					}
+				}
+				consciousness = -3
+			}
+		}
+	}
 }
 
 # Ecthelion II Flavor
@@ -1713,8 +1742,8 @@ political_decisions = {
 			nationalvalue = ecthelion_ii
 			has_country_modifier = thorongil
 			NOT = { has_global_flag = gondor_prepared_coastal_defences }
-			# Need to fix reqs and effects
-			# Should not show up if Umbar/Harad does not exist or own Umbar
+			# TODO: Need to fix reqs and effects
+			# TODO: Should not show up if Umbar/Harad does not exist or own Umbar
 		}
 		
 		allow = {
@@ -1724,7 +1753,7 @@ political_decisions = {
 		effect = {
 			treasury = -100000
 			
-			# Make it so it increases level by 1
+			# TODO: Make it so it increases level by 1
 			any_owned = {
 				limit = {
 					port = yes

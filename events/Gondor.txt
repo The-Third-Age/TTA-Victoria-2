@@ -644,3 +644,99 @@ province_event = {
 		add_province_modifier = { name = "flowers_expedition" duration = -1 }
 	}
 }
+
+# Diplomatic Feast in the Merethrond
+country_event = {
+	id = 50019
+	title = "A Diplomatic Feast"
+	desc = "EVTDESC50019"
+	picture = the_merethrond
+	
+	trigger = {
+		is_culture_group = dunedain
+		war = no
+		any_neighbor_country = {
+			NOT = { tag = FOR }
+			OR = {
+				AND = {
+					THIS = { good_evil_alignment = good_alignment }
+					good_evil_alignment = good_alignment
+				}
+				AND = {
+					THIS = { good_evil_alignment = neutral_alignment }
+					good_evil_alignment = neutral_alignment
+				}
+				AND = {
+					THIS = { good_evil_alignment = evil_alignment }
+					good_evil_alignment = evil_alignment
+				}
+			}
+		}
+		owns = 16
+		money = 5000
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.95
+			culture_1 = 1
+		}
+		modifier = {
+			factor = 0.95
+			culture_2 = 1
+		}
+		modifier = {
+			factor = 0.95
+			culture_3 = 1
+		}
+		modifier = {
+			factor = 0.95
+			culture_4 = 1
+		}
+		modifier = {
+			factor = 0.95
+			culture_5 = 1
+		}
+	}
+	
+	option = {
+		name = "A toast to our friends!"
+		
+		
+		random_country = {
+			limit = {
+				NOT = { tag = FOR }
+				OR = {
+					AND = {
+						THIS = { good_evil_alignment = good_alignment }
+						good_evil_alignment = good_alignment
+					}
+					AND = {
+						THIS = { good_evil_alignment = neutral_alignment }
+						good_evil_alignment = neutral_alignment
+					}
+					AND = {
+						THIS = { good_evil_alignment = evil_alignment }
+						good_evil_alignment = evil_alignment
+					}
+				}
+				neighbour = THIS
+			}
+			
+			relation = {
+				who = THIS
+				value = 25
+			}
+		}
+		
+		prestige = 5
+		treasury = -5000
+	}
+	
+	option = {
+		name = "No, there's no need"
+		
+		prestige = -2
+	}
+}
