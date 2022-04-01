@@ -655,6 +655,55 @@ political_decisions = {
 			treasury = -50000
 		}
 	}
+	
+	repopulate_ithilien = {
+		potential = {
+			is_culture_group = dunedain
+			any_owned_province = {
+				OR = {
+					region = GON_198
+					region = GON_205
+                    region = GON_212
+				}
+				NOT = { has_province_modifier = resettle_ithilien }
+			}
+		}
+		
+		allow = {
+			owns = 433
+			HRD = {
+				all_core = {
+					owner = {
+						tag = THIS
+						vassal_of = THIS
+					}
+				}
+			}
+			NOT = {
+					any_owned_province = {
+					OR = {
+						region = GON_198
+						region = GON_205
+						region = GON_212
+					}
+					has_province_modifier = orc_raids
+				}
+			}
+			money = 50000
+		}
+		
+		effect = {
+			any_owned_province = {
+				limit = {
+					region = GON_198
+					region = GON_205
+                    region = GON_212
+				}
+				add_province_modifier = { name = resettle_ithilien duration = -1 }
+			}
+			treasury = -50000
+		}
+	}
 }
 
 # Military Build Up
