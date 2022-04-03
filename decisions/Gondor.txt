@@ -1808,6 +1808,58 @@ political_decisions = {
 			set_global_flag = restored_the_haudh_in_gwanur
 		}
 	}
+	
+	light_the_beacons = {
+		potential = {
+			tag = GON
+			exists = ROH
+			ROH = { war = no }
+			war = yes
+			NOT = { has_country_flag = lit_the_beacons }
+			owns = 16
+		}
+		
+		allow = {
+			OR = {
+				good_evil_alignment = neutral_alignment
+				AND = {
+					good_evil_alignment = good_alignment
+					NOT = { ROH = { good_evil_alignment = evil_alignment } }
+				}
+				AND = {
+					good_evil_alignment = evil_alignment
+					NOT = { ROH = { good_evil_alignment = good_alignment } }
+				}
+			}
+		}
+		
+		effect = {
+			ROH = { country_event = 50020 }
+			set_country_flag = lit_the_beacons
+		}
+	}
+	clear_lit_the_beacons = {
+		potential = {
+			tag = FOR
+			any_neighbor_country = {
+				has_country_flag = lit_the_beacons
+				war = no
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = lit_the_beacons
+					war = no
+				}
+				clr_country_flag = lit_the_beacons
+			}
+		}
+	}
 }
 
 # Ecthelion II Flavor

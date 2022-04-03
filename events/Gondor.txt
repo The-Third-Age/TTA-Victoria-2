@@ -740,3 +740,46 @@ country_event = {
 		prestige = -2
 	}
 }
+
+# The Beacons of Gondor are Lit!
+country_event = {
+	id = 50020
+	title = "The Beacons of Gondor are Lit..."
+	desc = "EVTDESC50020"
+	picture = "light_the_beacons"
+	is_triggered_only = yes
+	
+	option = {
+		name = "... and Rohan will answer. Muster the Rohirrim!"
+		
+		create_alliance = FROM
+		
+		FROM = {
+			war = { attacker_goal = { casus_belli = call_allies_cb } call_ally = yes }
+			relation = {
+				who = THIS
+				value = 50
+			}
+		}
+		
+		prestige = 5
+	}
+	
+	option = {
+		name = "The old alliances are dead"
+		
+		prestige = -5
+		
+		FROM = {
+			relation = {
+				who = THIS
+				value = -50
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 120
+			}
+		}
+	}
+}
