@@ -1760,6 +1760,54 @@ political_decisions = {
 			}
 		}
 	}
+	
+	restore_haudh_in_gwanur = {
+		potential = {
+			OR = {
+				tag = ROH
+				AND = {
+					is_culture_group = dunedain
+					exists = ROH
+				}
+			}
+			NOT = { has_global_flag = restored_the_haudh_in_gwanur }
+			owns = 212
+		}
+		
+		allow = {
+			OR = {
+				tag = ROH
+				ROH = { vassal_of = THIS }
+				good_evil_alignment = neutral_alignment
+				AND = {
+					good_evil_alignment = good_alignment
+					NOT = { ROH = { good_evil_alignment = evil_alignment } }
+				}
+				AND = {
+					good_evil_alignment = evil_alignment
+					NOT = { ROH = { good_evil_alignment = good_alignment } }
+				}
+			}
+			212 = { NOT = { has_province_modifier = orc_raids } }
+			money = 25000
+		}
+		
+		effect = {
+			treasury = -25000
+			prestige = 15
+			random_country = {
+				limit = {
+					tag = ROH
+					NOT = { tag = THIS }
+				}
+				relation = {
+					who = THIS
+					value = 50
+				}
+			}
+			set_global_flag = restored_the_haudh_in_gwanur
+		}
+	}
 }
 
 # Ecthelion II Flavor
