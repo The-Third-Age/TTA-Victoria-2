@@ -503,35 +503,6 @@ political_decisions = {
 		}
 	}
 	
-	gondorification_of_DRU = {
-		picture = "free_druadan_forest"
-		potential = {
-			tag = GON
-			owns = 11
-			11 = {
-				has_province_modifier = gondorification
-				is_core = DRU
-			}
-		}
-		
-		allow = {
-			11 = {
-				OR = {
-					is_accepted_culture = yes
-					is_primary_culture = yes
-				}
-			}
-		}
-		
-		effect = {
-			11 = { 
-				remove_province_modifier = gondorification
-				remove_province_modifier = nationalist_resistance
-				remove_core = DRU
-			}
-		}
-	}
-	
 	stonewain_valley = {
 		picture = "free_druadan_forest"
 		potential = {
@@ -757,7 +728,6 @@ political_decisions = {
 		allow = {
 			war = no
 			162 = { owner = { NOT = { truce_with = GON } } }
-			NOT = { has_country_flag = GON_andrast_war }
 		}
 		
 		effect = {
@@ -772,9 +742,9 @@ political_decisions = {
 				}
 				country_event = 150000
 			}
-			
-			set_country_flag = GON_andrast_war
 		}
+		
+		set_global_flag = GON_andrast_war
 	}
 	
 	annex_andrast = {
@@ -900,7 +870,6 @@ political_decisions = {
 					is_core = PUK
 					NOT = { has_province_modifier = gondorification } 
 				}
-				add_core = GON
 				any_pop = {
 					limit = {
 						OR = {
@@ -913,8 +882,9 @@ political_decisions = {
 					}
 					militancy = 2
 				}
-				add_province_modifier = { name = gondorification duration = 730 }
 			}
+			
+			set_global_flag = annexed_druwaith_iaur
 		}
 	}
 	
@@ -984,6 +954,138 @@ political_decisions = {
 				}
 			}
 			set_country_flag = andrast_gondorification
+		}
+	}
+	
+	druwaith_iaur_rebellion_end_GON = {
+		picture = "druwaith_iaur"
+		potential = {
+			has_global_flag = PUK_rebellion
+			has_country_flag = PUK_rebelling_from
+			NOT = { exists = DRU }
+			war = no
+			owns = 38
+			owns = 189
+			owns = 197
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_pop = {
+				limit = {
+					location = { 
+						is_core = PUK
+						NOT = { is_core = GON }
+						NOT = { is_core = ADR }
+					}
+					has_pop_culture = druedain
+					type = soldiers
+				}
+				pop_type = labourers
+			}
+			
+			clr_global_flag = PUK_rebellion
+			clr_country_flag = PUK_rebelling_from
+			
+			random_owned = {
+				limit = {
+					owner = { tag = GON }
+					is_core = PUK
+					NOT = { is_core = GON }
+					NOT = { is_core = ADR }
+					NOT = { has_province_modifier = gondorification }
+				}
+				add_province_modifier = { name = gondorification duration = -1 }
+				add_province_modifier = { name = nationalist_resistance duration = -1 }
+			}
+		}
+	}
+		
+	druwaith_iaur_rebellion_end_PUK = {
+		picture = "druwaith_iaur"
+		potential = {
+			has_global_flag = PUK_rebellion
+			war = no
+			tag = PUK
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_pop = {
+				limit = {
+					NOT = { has_pop_culture = druedain }
+				}
+				reduce_pop = 0.5
+			}
+			
+			any_pop = {
+				limit = {
+					has_pop_culture = druedain
+					type = soldiers
+				}
+				pop_type = labourers
+			}
+			
+			clr_global_flag = PUK_rebellion
+			
+			random_country = {
+				limit = {
+					has_country_flag = PUK_rebelling_from
+				}
+				clr_country_flag = PUK_rebelling_from
+			}
+		}
+	}
+	
+	gondorification_of_PUK = {
+		picture = "druwaith_iaur"
+		potential = {
+			tag = GON
+			owns = 11
+			any_owned_province = {
+				has_province_modifier = gondorification
+				is_core = PUK
+				NOT = { is_core = GON }
+				NOT = { is_core = ADR }
+			}
+		}
+		
+		allow = {
+			any_owned_province = {
+				has_province_modifier = gondorification
+				is_core = PUK
+				NOT = { is_core = GON }
+				NOT = { is_core = ADR }
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+		}
+		
+		effect = {
+			any_owned_province = {
+				limit = {
+					has_province_modifier = gondorification
+					is_core = PUK
+					NOT = { is_core = GON }
+					NOT = { is_core = ADR }
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				remove_province_modifier = gondorification
+				remove_province_modifier = nationalist_resistance
+				remove_core = PUK
+				add_core = GON
+			}
 		}
 	}
 	
@@ -1069,6 +1171,36 @@ political_decisions = {
 					has_country_flag = DRU_rebelling_from
 				}
 				clr_country_flag = DRU_rebelling_from
+			}
+		}
+	}
+	
+	gondorification_of_DRU = {
+		picture = "free_druadan_forest"
+		potential = {
+			tag = GON
+			owns = 11
+			11 = {
+				has_province_modifier = gondorification
+				is_core = DRU
+			}
+		}
+		
+		allow = {
+			11 = {
+				OR = {
+					is_accepted_culture = yes
+					is_primary_culture = yes
+				}
+			}
+			war = no
+		}
+		
+		effect = {
+			11 = { 
+				remove_province_modifier = gondorification
+				remove_province_modifier = nationalist_resistance
+				remove_core = DRU
 			}
 		}
 	}

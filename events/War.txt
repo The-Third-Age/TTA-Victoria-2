@@ -28,8 +28,6 @@ country_event = {
 				call_ally = yes
 			}
 		}
-		
-		set_global_flag = GON_andrast_war
 	}
 }
 
@@ -62,6 +60,120 @@ country_event = {
 	}
 }
 # }
+
+# The Druedain Rebellion
+country_event = {
+	id = 150002
+	picture = druedain_rebellion
+	title = "The Drúedain Rebellion"
+	desc = "EVTDESC150002"
+	fire_only_once = yes
+	
+	trigger = {
+		PUK = { exists = no }
+		has_global_flag = annexed_druwaith_iaur
+		any_pop = {
+			has_pop_culture = druedain
+			militancy = 4
+			location = {
+				is_core = PUK
+				NOT = { is_core = GON }
+				NOT = { is_core = ADR }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			any_pop = {
+				has_pop_culture = druedain
+				militancy = 7
+				location = {
+					is_core = PUK
+					NOT = { is_core = GON }
+					NOT = { is_core = ADR }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "They wouldn't!"
+		
+		prestige = -5
+		
+		any_owned = {
+			limit = {
+				is_core = PUK
+				NOT = { is_core = GON }
+				NOT = { is_core = ADR }
+				is_accepted_culture = no
+				is_primary_culture = no
+			}
+			
+			secede_province = PUK
+		}
+		
+		PUK = {
+			any_pop = {
+				limit = { 
+					type = labourers 
+					has_pop_culture = druedain
+				}
+				pop_type = soldiers
+			}
+			country_event = { id = 150003 days = 90 }
+		}
+		
+	}
+}
+
+# Druedain Rebellion Start
+country_event = {
+	id = 150003
+	picture = druedain_rebellion
+	title = "The Drúedain Rebellion"
+	desc = "EVTDESC150003"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "To Arms!"
+		
+		capital_scope = {
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = scouts value = current }
+			sub_unit = { type = artillery value = current }
+		}
+		
+		treasury = 100000
+			
+		add_casus_belli = {
+			target = FROM
+			type = conquest
+			months = 12
+		}
+		FROM = {
+			war = {
+				target = PUK
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+			set_country_flag = PUK_rebelling_from
+		}
+		set_global_flag = PUK_rebellion
+	}
+}
 
 # Druadan Forest Rebellion
 country_event = {
@@ -141,8 +253,8 @@ country_event = {
 # Druadan Forest Rebellion Start
 country_event = {
 	id = 150008
-	picture = druadan_forest_rebellion
 	title = "The Drúadan Rebellion"
+	picture = druadan_forest_rebellion
 	desc = "EVTDESC150008"
 	
 	is_triggered_only = yes
