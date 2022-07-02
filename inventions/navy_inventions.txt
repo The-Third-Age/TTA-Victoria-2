@@ -1,0 +1,15 @@
+shipbuilding = {
+	limit = { merchant_marine_1 = 1 }
+	chance = {
+		base = 0
+		
+		modifier = {
+			factor = 100
+			any_owned_province = {
+				is_coastal = yes
+			}
+		}
+	}
+	
+	effect = { activate_building = clipper_shipyard }
+}
