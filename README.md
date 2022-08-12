@@ -180,6 +180,7 @@ A Lord of the Rings mod for Victoria 2
 	- [AntonPo](https://www.deviantart.com/antonpo)
 	- [firith456](http://www.councilofelrond.com/imagegallerycats/firith456/)
 	- [Ubisoft](https://www.wallpaperflare.com/artwork-assassins-creed-concept-art-sailing-ship-shipyard-wallpaper-uteqo)
+	- [DALL·E mini/Craiyon](https://www.craiyon.com/)
 	- Various 15th to 19th century artwork
  - Flags
 	- [Rhun](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)

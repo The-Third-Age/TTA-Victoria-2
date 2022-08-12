@@ -1,0 +1,817 @@
+########################
+# CULTURE_1 INVENTIONS #
+########################
+
+all_that_is_gold = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			OR = {
+				accepted_culture = hobbit_culture
+				accepted_culture = men_culture
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = all_that_is_gold
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+seek_for_the_Sword = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = men_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = seek_for_the_Sword
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+roads_go_ever_ever_on = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = roads_go_ever_ever_on
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+song_of_nimrodel = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = elven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = song_of_nimrodel
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+walking_song = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = walking_song
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+the_bath_song = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = the_bath_song
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+to_the_bottle_i_go = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			OR = {
+				accepted_culture = hobbit_culture
+				accepted_culture = men_culture
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = to_the_bottle_i_go
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+hey_dol = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 1
+			magic_1 = 1
+		}
+		modifier = {
+			factor = 2
+			magic_2 = 1
+		}
+		modifier = {
+			factor = 5
+			magic_3 = 1
+		}
+		modifier = {
+			factor = 10
+			magic_4 = 1
+		}
+		modifier = {
+			factor = 20
+			magic_5 = 1
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+list_of_the_ents = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = ent_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = wanderers_in_the_shadowed_land
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+chip_the_glasses = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = dwarven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = chip_the_glasses
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+misty_mountains = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = dwarven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = misty_mountains
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+clap_snap_black_crack = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = orc_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = clap_snap_black_crack
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+########################
+# CULTURE_2 INVENTIONS #
+########################
+
+man_in_the_moon_stayed_up_too_late = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			OR = {
+				accepted_culture = hobbit_culture
+				accepted_culture = men_culture
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = man_in_the_moon_stayed_up_too_late
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+man_in_the_moon_came_down_too_soon = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			OR = {
+				accepted_culture = hobbit_culture
+				accepted_culture = men_culture
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = man_in_the_moon_came_down_too_soon
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+stone_troll = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = stone_troll
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+beren_and_luthien = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = men_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = beren_and_luthien
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+ring_verse = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 1
+			magic_1 = 1
+		}
+		modifier = {
+			factor = 2
+			magic_2 = 1
+		}
+		modifier = {
+			factor = 5
+			magic_3 = 1
+		}
+		modifier = {
+			factor = 10
+			magic_4 = 1
+		}
+		modifier = {
+			factor = 20
+			magic_5 = 1
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+hymn_to_elbereth = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = elven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = hymn_to_elbereth
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+fall_of_gil_galad = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = elven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = fall_of_gil_galad
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+farewell_we_call_to_hearth_and_hall = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = farewell_we_call_to_hearth_and_hall
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+wanderers_in_the_shadowed_land = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = wanderers_in_the_shadowed_land
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+ent_and_entwife = {
+	limit = { culture_3 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			OR = {
+				accepted_culture = hobbit_culture
+				accepted_culture = ent_culture
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = ent_and_entwife
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+fifteen_birds_five_fir_trees = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = orc_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = fifteen_birds_five_fir_trees
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+under_mountain = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = dwarven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = under_mountain
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+########################
+# CULTURE_3 INVENTIONS #
+########################
+
+song_of_earendil = {
+	limit = { culture_3 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			OR = {
+				accepted_culture = hobbit_culture
+				accepted_culture = men_culture
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = song_of_earendil
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 15 }
+}
+
+winter_first_begins_to_bite = {
+	limit = { culture_3 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = winter_first_begins_to_bite
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 15 }
+}
+
+cold_be_hand_and_heart_and_bone = {
+	limit = { culture_3 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = evil_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = cold_be_hand_and_heart_and_bone
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 15 }
+}
+
+ent_marching_song = {
+	limit = { culture_3 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = ent_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = ent_marching_song
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 15 }
+}
+
+arise_riders = {
+	limit = { culture_3 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = men_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = arise_riders
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 15 }
+}
+
+########################
+# CULTURE_4 INVENTIONS #
+########################
+
+over_the_land_there_lies_a_long_shadow = {
+	limit = { culture_4 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = men_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = over_the_land_there_lies_a_long_shadow
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 20 }
+}
+
+black_breath = {
+	limit = { culture_4 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = good_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = black_breath
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 20 }
+}
+
+bregalad_song = {
+	limit = { culture_4 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = ent_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = bregalad_song
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 20 }
+}
+
+lament_for_the_rohirrim = {
+	limit = { culture_4 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = men_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = lament_for_the_rohirrim
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 20 }
+}
+
+########################
+# CULTURE_5 INVENTIONS #
+########################
+
+bilbo_last_song = {
+	limit = { culture_5 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = bilbo_last_song
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 25 }
+}
+
+oliphaunt = {
+	limit = { culture_5 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = oliphaunt
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 25 }
+}
+
+into_the_west = {
+	limit = { culture_5 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = elven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = into_the_west
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 25 }
+}
+
+sing_all_ye_joyful = {
+	limit = { culture_5 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = elven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = sing_all_ye_joyful
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 25 }
+}
+
+the_road_goes_ever_on = {
+	limit = { culture_5 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = hobbit_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = the_road_goes_ever_on
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 25 }
+}
