@@ -8,28 +8,22 @@ A Lord of the Rings mod for Victoria 2
 4. Go into the newly renamed TTA folder and move TTA.mod up one level to `C:\Program Files (x86)\Steam\steamapps\commmon\Victoria 2\mod`. This file will mostly likely be identified as a movie file by your computer.
 5. Launch the game. You should see Lord of the Rings as one of the options. Tick it and the mod should load.
 
-## Development Team
- - SirRunner: Lead Modder
-   - Maps (Provinces, Terrain, Rivers)
-   - Reforms, Ideologies (implementation)
- - DerpAnarchist/Glariamn: Modder 
-   - POPs
-   - Map Verifier/Validator
-   - Reforms, Ideologies (ideas)
- - Cheese/s-williams: Modder
-   - Loadings Screens
-   - Main Menu Background
- - Jorde: Loremaster
+## Development Credits
+Modders: 
+ - SirRunner - Lead
+ - DerpAnarchist/Glariamn
+ - Cheese/s-williams
 
-## Special Thanks
+Loremasters:
+ - Jorde
+ - Kvopper
+
+### Special Thanks To
  - Radsterman
  - MoskauMaster
  - Jman
-
-## Credits to
- - Bernd_das_BrotB7 (Population Estimates and Info)
  
-## Integrated Graphics Mods
+### Integrated Graphics Mods
  - Mish Mash Map Mod
  - Big Flags Mod
  
@@ -196,6 +190,7 @@ A Lord of the Rings mod for Victoria 2
 - War Declared SFX: Lord of the Rings: Return of the King (2003)
 	
 ## References
+ - Bernd_das_BrotB7 (Population Estimates and Info)
  - [Lindëfirion](http://lindefirion.net/)
  - [The New Notions Fanclub Archive](https://notionclubarchives.fandom.com/wiki/Arda_Role_Playing_Wiki)
  - [Tolkien Gateway](http://tolkiengateway.net/wiki/Main_Page)
