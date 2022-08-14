@@ -46,12 +46,9 @@ political_decisions = {
 						is_culture_group = anduinrim
 						is_culture_group = ents
 						is_culture_group = eagles
-						AND = {
-							is_culture_group = wildmen
-							NOT = { tag = DUN }
-						}
 						is_culture_group = rohirrim
 						is_culture_group = lossoth
+						primary_culture = druedain
 					}
 				}
 				political_reform = good_alignment
@@ -64,6 +61,10 @@ political_decisions = {
 					OR = {
 						is_culture_group = breelander
 						is_culture_group = hobbits
+						is_culture_group = trolls
+						primary_culture = dunnish
+						primary_culture = enedwaithrim
+						primary_culture = wildmen
 						primary_culture = kingsmen
 					}
 				}
@@ -80,12 +81,7 @@ political_decisions = {
 						is_culture_group = khandish
 						is_culture_group = mordorian
 						is_culture_group = easterlings
-						is_culture_group = trolls
 						is_culture_group = spiders
-						AND = {
-							is_culture_group = wildmen
-							tag = DUN
-						}
 						is_culture_group = uruk_hai
 						is_culture_group = northern_goblins
 						is_culture_group = angmarrim
