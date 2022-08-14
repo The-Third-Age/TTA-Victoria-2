@@ -155,7 +155,7 @@ political_decisions = {
 			}
 			prestige = 5
 			define_general = {
-				name = "§BForlong, §MLord of Lossarnach§!"
+				name = "ï¿½BForlong, ï¿½MLord of Lossarnachï¿½!"
 				background = lord_of_lossarnach
 				personality = stalwart
 			}
@@ -211,7 +211,7 @@ political_decisions = {
 			}
 			prestige = 7
 			define_admiral = {
-				name = "§BOrodreth, §MLord of Lebennin§!"
+				name = "ï¿½BOrodreth, ï¿½MLord of Lebenninï¿½!"
 				background = lord_of_lebennin
 				personality = tactical
 			}
@@ -320,18 +320,18 @@ political_decisions = {
 			}
 			prestige = 10
 			define_general = {
-				name = "§BAngbor, §MLord of Lamedon§!"
+				name = "ï¿½BAngbor, ï¿½MLord of Lamedonï¿½!"
 				background = lord_of_lamedon
 				personality = fearless
 			}
 			define_general = {
-				name = "§BDuinhir, §MLord of Blackroot Vale§!"
+				name = "ï¿½BDuinhir, ï¿½MLord of Blackroot Valeï¿½!"
 				background = lord_of_blackroot_vale
 				personality = resolute
 			}
 			define_general = {
 				# Dervorin's Father
-				name = "§BBorhador, §MLord of Ringló Vale§!"
+				name = "ï¿½BBorhador, ï¿½MLord of Ringlï¿½ Valeï¿½!"
 				background = lord_of_ringlo_vale
 				personality = stalwart
 			}
@@ -372,12 +372,12 @@ political_decisions = {
 			}
 			prestige = 12
 			define_general = {
-				name = "§BHirluin, §MLord of Pinnath Gelin§!"
+				name = "ï¿½BHirluin, ï¿½MLord of Pinnath Gelinï¿½!"
 				background = lord_of_pinnath_gelin
 				personality = persistent
 			}
 			define_general = {
-				name = "§BGolasgil, §MLord of Anfalas§!"
+				name = "ï¿½BGolasgil, ï¿½MLord of Anfalasï¿½!"
 				background = lord_of_anfalas
 				personality = stout
 			}
@@ -717,30 +717,60 @@ political_decisions = {
 		picture = "andrast_map"
 		potential = {
 			tag = GON
-			NOT = { has_country_modifier = low_military_recruitment }
-			162 = { 
-				owner = { civilized = no }
-				is_core = ADR
-				is_vassal = no
-			}
-			ADR = { exists = no }
-			war = no
 			NOT = { has_global_flag = GON_andrast_war }
 		}
 		
 		allow = {
+			NOT = { has_country_modifier = low_military_recruitment }
 			war = no
-			162 = { owner = { NOT = { truce_with = GON } } }
+			162 = {
+				OR = {
+					owner = {
+						civilized = no
+						NOT = { truce_with = GON }
+					}
+					owner = {
+						tag = GON
+					}
+				}
+			}
+			165 = {
+				OR = {
+					owner = {
+						civilized = no
+						NOT = { truce_with = GON }
+					}
+					owner = {
+						tag = GON
+					}
+				}
+			}
+			180 = {
+				OR = {
+					owner = {
+						civilized = no
+						NOT = { truce_with = GON }
+					}
+					owner = {
+						tag = GON
+					}
+				}
+			}
+			is_vassal = no
 		}
 		
 		effect = {
 			badboy = 5
 			
 			random_country = {
-				limit = { owns = 165 }
+				limit = { 
+					any_owned_province {
+						is_core = ADR
+					}
+				 }
 				add_casus_belli = {
 					target = GON
-					type = liberate_and_puppet_country
+					type = conquest
 					months = 12
 				}
 				country_event = 150000
@@ -755,11 +785,7 @@ political_decisions = {
 		
 		potential = {
 			tag = GON
-			ADR = {
-				exists = yes
-				vassal_of = GON
-			}
-			owns = 133
+			has_global_flag = GON_andrast_war
 		}
 		
 		allow = {
@@ -776,9 +802,7 @@ political_decisions = {
 		
 		effect = {
 			inherit = ADR
-			
 			prestige = 8
-			
 			any_owned = {
 				limit = { is_core = ADR }
 				remove_core = ADR
