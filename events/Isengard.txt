@@ -52,3 +52,72 @@ country_event = {
 		}
 	}
 }
+
+# Alliance with Draig Luth
+country_event = {
+	id = 50110
+	picture = lord_of_isengard
+	title = "An alliance with the White Wizard?"
+	desc = "EVTDESC50110"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Acceptable"
+		prestige = 5
+		FROM = {
+			country_event = 50111
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = "Not a chance"
+		prestige = 5
+		FROM = {
+			country_event = 50112
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}
+
+# Alliance with the Dunnish accepted
+country_event = {
+	id = 50111
+	picture = lord_of_isengard
+	title = "Alliance accepted"
+	desc = "They have accepted our offer."
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Great"
+		prestige = 10		
+		create_vassal = FROM
+	}
+}
+
+# Alliance with the Dunnish Refused
+country_event = {
+	id = 50112
+	picture = lord_of_isengard
+	title = "Alliance Refused"
+	desc = "They have rejected our offer."
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "How dare they?"
+		FROM = {
+			add_casus_belli = {
+				target = ISE
+				type = make_puppet
+				months = 12
+			}
+		}
+	}
+}

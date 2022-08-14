@@ -45,3 +45,35 @@ political_decisions = {
 		}
 	}
 }
+
+# Dunland shenanigans
+political_decisions = {
+	alliance_with_draig_luth = {
+		potential = {
+			tag = ISE
+			is_vassal = no
+			nationalvalue = saruman
+		}
+
+		allow = {
+			diplomacy_1 = 1
+			war = no
+			814 = {
+				owner = {
+					war = no
+					civilized = no
+					primary_culture = dunnish
+					is_vassal = no
+				}
+			}
+		}
+
+		effect = {
+			814 = {
+				owner = {
+					country_event = 50110
+				}
+			}
+		}
+	}
+}
