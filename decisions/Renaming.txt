@@ -1432,3 +1432,178 @@ political_decisions = {
 		}
 	}
 }
+
+# Harad
+political_decisions = {
+	# 0 = Umbar 1 = Harad 2 - Gondor
+	rename_umbar = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# Umbar - Formendor
+						AND = {
+							is_culture_group = kingsmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = formendor_name value = -0.1 } } }
+								FOR = { check_variable = { which = formendor_name value = 0.1 } }
+							}
+						}
+						# Harad - Formendor
+						AND = {
+							is_culture_group = haradrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = formendor_name value = 0.9 } } }
+								FOR = { check_variable = { which = formendor_name value = 1.1 } }
+							}
+						}
+						# Gondor - Formendor
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = formendor_name value = 1.9 } } }
+								FOR = { check_variable = { which = formendor_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 256 owns = 257 owns = 258 owns = 259 owns = 260 owns = 282
+				}
+				AND = {
+					OR = {
+						# Umbar - Calenfalas
+						AND = {
+							is_culture_group = kingsmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = calenfalas_name value = -0.1 } } }
+								FOR = { check_variable = { which = calenfalas_name value = 0.1 } }
+							}
+						}
+						# Harad - Calenfalas
+						AND = {
+							is_culture_group = haradrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = calenfalas_name value = 0.9 } } }
+								FOR = { check_variable = { which = calenfalas_name value = 1.1 } }
+							}
+						}
+						# Gondor - Calenfalas
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = calenfalas_name value = 1.9 } } }
+								FOR = { check_variable = { which = calenfalas_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 271 owns = 272 owns = 273 owns = 274 owns = 275
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			# Umbar - Formendor
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = kingsmen }
+					province_id = 256
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = formendor_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = formendor_name value = 0.1 } } }
+					}
+				}
+				256 = { change_province_name = "Abârloni" }
+				259 = { change_province_name = "Sûkh an-Khôr" }
+				282 = { change_province_name = "An Ruilin" }
+				257 = { state_scope = { change_region_name = "Sakal an-Khar" } }
+				owner = { FOR = { set_variable = { which = formendor_name value = 0 } } } # Umbar
+			}
+			
+			# Harad - Formendor
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = haradrim }
+					province_id = 256
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = formendor_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = formendor_name value = 1.1 } } }
+					}
+				}
+				256 = { change_province_name = "Kas Shadoul" }
+				259 = { change_province_name = "Sôk Asní" }
+				282 = { change_province_name = "An Ruilin" }
+				257 = { state_scope = { change_region_name = "Sakal an-Khar" } }
+				owner = { FOR = { set_variable = { which = formendor_name value = 1 } } } # Harad
+			}
+			
+			# Gondor - Formendor
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 256
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = formendor_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = formendor_name value = 2.1 } } }
+					}
+				}
+				256 = { change_province_name = "Ramlond" }
+				259 = { change_province_name = "Eithel Angir" }
+				282 = { change_province_name = "Bar Númendur" }
+				257 = { state_scope = { change_region_name = "Formendor" } }
+				owner = { FOR = { set_variable = { which = formendor_name value = 2 } } } # Gondor
+			}
+			
+			# Umbar - Calenfalas
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = kingsmen }
+					province_id = 273
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = calenfalas_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = calenfalas_name value = 0.1 } } }
+					}
+				}
+				273 = { change_province_name = "Ardûmir" }
+				275 = { change_province_name = "Sarkâna" }
+				271 = { state_scope = { change_region_name = "Sakal-Pharaz" } }
+				owner = { FOR = { set_variable = { which = calenfalas_name value = 0 } } } # Umbar
+			}
+			
+			# Harad - Calenfalas
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = haradrim }
+					province_id = 273
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = calenfalas_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = calenfalas_name value = 1.1 } } }
+					}
+				}
+				273 = { change_province_name = "Ardûmir" }
+				275 = { change_province_name = "Saarkaana" }
+				271 = { state_scope = { change_region_name = "Harûkar" } }
+				owner = { FOR = { set_variable = { which = calenfalas_name value = 1 } } } # Harad
+			}
+			
+			# Gondor - Calenfalas
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 273
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = calenfalas_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = calenfalas_name value = 2.1 } } }
+					}
+				}
+				273 = { change_province_name = "Arhuimîrë" }
+				275 = { change_province_name = "Sarkâna" }
+				271 = { state_scope = { change_region_name = "Calenfalas" } }
+				owner = { FOR = { set_variable = { which = calenfalas_name value = 2 } } } # Gondor
+			}
+		}
+	}
+}
