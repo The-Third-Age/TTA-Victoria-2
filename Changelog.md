@@ -6,8 +6,8 @@ All notable changes will be documented in this file.
 ### New Tags
  - In Eriador: Bombadil, Trollshaws, Barrowwights, Lossoth, Eglain, Ost in Edhil, Trollfells, Suduri, Metraith, Forondir, Nadior, Benglaras, Caranthal, Nidada, Eryn Vorn, Arthedain, Khazadbizar, Thorins Halls, Khagolabbad Faraku, Nogrod, Belegost, Old Sylvana, Harvaneth, Reunited Kingdom
  - In Enedwaith: Caru Luth, Draig Luth, Hebog Luth, Turch Luth, Uch Luth, Haerawreigion, Andrast, Algraig, Gwathirim
- - In Anduin Valley and the North: Annak Khurfu, Melburg, Framsburg, Radagast, the Eagles, Spiders of Mirkwood, Iron Hills, Lake-town, Barukkizdin, Snow Orcs, Lar Huz, Romenost
- - In the east and south: Nurunkkhizdin, Shelob
+ - In Anduin Valley and the North: Annak Khurfu, Melburg, Framsburg, Radagast, the Eagles, Spiders of Mirkwood, Iron Hills, Lake-town, Barukkizdin, Snow Orcs, Lar Huz, Urukdurbzagh
+ - In the east and south: Nurunkkhizdin, Shelob, Romenost
 
 ### Mechanics/Content
  - Lot's of Gondor content: Kin-strife, Andrast, Osgiliath, etc
