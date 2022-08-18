@@ -1,4 +1,5 @@
 # Kingdom of Arnor decisions {
+# Form Cardolan
 # Form Arnor
 # Fate of the Shire
 # Northern Expansion
@@ -56,6 +57,65 @@ political_decisions = {
 				any_owned = {
 					limit = {
 						is_core = ARN
+					}
+					secede_province = THIS
+				}
+
+			}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    form_cardolan = {
+		picture = "cardolan"
+        potential = {
+            OR = {
+                primary_culture = dunedain
+                primary_culture = arnorian
+            }
+            capital_scope = { continent = eriador }
+            NOT = {
+                tag = RUN
+                tag = GON
+                tag = ARN
+                tag = CAR
+                tag = DND
+            }
+        }
+        allow = {
+            civilized = yes
+            is_independant = yes
+            war = no
+			CAR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+                            OR = {
+                                is_vassal = no
+                                vassal_of = THIS
+                            }
+						}
+					}
+				}
+			}
+        }
+        effect = {
+            change_tag = CAR
+            prestige = 7
+            badboy = -2
+            primary_culture = dunedain
+            add_accepted_culture = arnorian
+            any_country = {
+				limit = {
+					in_sphere = THIS
+				}
+				
+				any_owned = {
+					limit = {
+						is_core = CAR
 					}
 					secede_province = THIS
 				}
