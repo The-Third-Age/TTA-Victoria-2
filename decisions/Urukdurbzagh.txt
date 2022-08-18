@@ -1,0 +1,159 @@
+political_decisions = {
+	form_misty_mountains = {
+		picture = "mtn_decision"
+	
+		potential = {
+			is_independent = yes
+			is_culture_group = northern_goblins
+			NOT = { exists = MTN }
+		}
+
+		allow = {
+			war = no
+			GUN = { all_core = { owned_by = THIS } }
+			GMO = { all_core = { owned_by = THIS } }
+			GGT = { all_core = { owned_by = THIS } }
+			# Angirith Province
+			995 = { owned_by = THIS }
+		}
+
+		effect = {
+			prestige = 20
+			all_core = { add_core = MTN }
+			GUN = { all_core = { add_core = MTN } }
+			GMO = { all_core = { add_core = MTN } }
+			GGT = { all_core = { add_core = MTN } }
+			# Angirith Province
+			995 = { add_core = MTN }
+			# Foryagsh Province
+			994 = { add_core = MTN }
+			# Mount Gram Province
+			999 = { add_core = MTN }
+			
+			add_accepted_culture = morian
+			add_accepted_culture = goblin_towner
+			add_accepted_culture = gundabad_orc
+			add_accepted_culture = angmar_orc
+			
+			# Set capital to Goblin Town
+			# Rename to Fire(y) Pit, mirorring Moria's Black Pit
+			capital = 849
+			849 = {
+				change_province_name = Ghashia
+			}
+			change_tag = MTN
+			activate_technology = fortifications_1
+			activate_technology = training_1
+			activate_technology = mining_tech_1
+			activate_technology = guilds_1
+			activate_technology = infrastructure_tech_1
+			activate_technology = expansion_1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	make_snow_orcs_accepted = {
+		picture = "mtn_decision"
+
+		potential = {
+			tag = MTN
+			NOT = { primary_culture = snow_orc }
+			NOT = { accepted_culture = snow_orc }
+		}
+		
+		allow = {
+			GMG = { all_core = { owned_by = THIS } }
+		}
+		
+		effect = {
+			prestige = 5
+			GMG = { all_core = { add_core = MTN } }
+			add_accepted_culture = snow_orc
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	make_angrimm_accepted = {
+		picture = "mtn_decision"
+
+		potential = {
+			tag = MTN
+			NOT = { accepted_culture = angmarrim }
+		}
+		
+		allow = {
+			MAN = {
+				all_core = {
+					owned_by = THIS
+					NOT = { average_militancy = 2 }
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			add_accepted_culture = angmarrim
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	saruman_engineers = {
+		picture = "mtn_decision"
+
+		potential = {
+			tag = MTN
+			NOT = { has_country_modifier = saruman_engineers }
+		}
+		
+		allow = {
+			# Isengard Province
+			811 = { owned_by = THIS }
+		}
+		
+		effect = {
+			811 = { add_core = MTN }
+			add_country_modifier = {
+				name = saruman_engineers
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	goblin_industry = {
+		picture = "mtn_decision"
+
+		potential = {
+			tag = MTN
+			NOT = { has_country_modifier = goblin_industry }
+		}
+		
+		allow = {
+			literacy = .4
+		}
+		
+		effect = {
+			prestige = 1
+			add_country_modifier = {
+				name = goblin_industry
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
