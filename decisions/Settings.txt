@@ -275,4 +275,71 @@ political_decisions = {
 			country_event = 9503
 		}
 	}
+
+	annex_all = {
+        alert = no
+        potential = {
+            ai = no
+			has_global_flag = viewing_settings
+        }
+
+        allow = {}
+
+        effect = {
+            any_country = {
+				limit = {
+					NOT = {
+						tag = FOR
+					}
+				}
+                annex_to = THIS
+            }
+            
+			DND_1015 = { secede_province = THIS }
+			DND_1020 = { secede_province = THIS }
+			DND_1026 = { secede_province = THIS }
+			DND_1004 = { secede_province = THIS }
+			DND_1007 = { secede_province = THIS }
+			LIN_962 = { secede_province = THIS }
+			LIN_964 = { secede_province = THIS }
+			IML_865 = { secede_province = THIS }
+			IML_874 = { secede_province = THIS }
+			CAR_876 = { secede_province = THIS }
+			CAR_883 = { secede_province = THIS }
+			CAR_887 = { secede_province = THIS }
+			CAR_892 = { secede_province = THIS }
+			CAR_896 = { secede_province = THIS }
+			CAR_905 = { secede_province = THIS }
+			CAR_912 = { secede_province = THIS }
+			LOR_767 = { secede_province = THIS }
+			GOB_677 = { secede_province = THIS }
+			GOB_682 = { secede_province = THIS }
+			GOB_685 = { secede_province = THIS }
+			ROH_780 = { secede_province = THIS }
+			AND_749 = { secede_province = THIS }
+			AND_759 = { secede_province = THIS }
+			RHO_458 = { secede_province = THIS }
+			RHO_462 = { secede_province = THIS }
+			RHO_467 = { secede_province = THIS }
+			RHO_472 = { secede_province = THIS }
+			KHA_334 = { secede_province = THIS }
+			KHA_350 = { secede_province = THIS }
+			KHA_354 = { secede_province = THIS }
+			KHA_362 = { secede_province = THIS }
+			KHA_366 = { secede_province = THIS }
+			KHA_374 = { secede_province = THIS }
+			GON_216 = { secede_province = THIS }
+			GON_218 = { secede_province = THIS }
+			GON_228 = { secede_province = THIS }
+			GON_232 = { secede_province = THIS }
+			GON_238 = { secede_province = THIS }
+			GON_249 = { secede_province = THIS }
+			GON_253 = { secede_province = THIS }
+			GON_175 = { secede_province = THIS }
+			GON_186 = { secede_province = THIS }
+			GON_188 = { secede_province = THIS }
+			GON_162 = { secede_province = THIS }
+        }
+        ai_will_do = { factor = 0 }
+    }
 }
