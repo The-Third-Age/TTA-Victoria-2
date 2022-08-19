@@ -184,6 +184,9 @@ Loremasters:
 	- [Grey Mountain Goblins](https://www.pinterest.com/pin/541698661430483809/)
 	- [Woodland Realm](https://european-war-4.boards.net/thread/8501/lord-middle-earth-mod)
 	- [Arnor](https://www.deviantart.com/yashael341/art/Banner-for-the-Kingdom-of-Arnor-810714226)
+	- [Thorin's Halls](https://www.mcmiddleearth.com/community/attachments/thorins-halls-project-post-pdf.22822/)
+	- [Nogrod](https://www.deviantart.com/hurin63/art/Banner-of-Nogrod-820456648)
+	- [Belegost](https://www.deviantart.com/hurin63/art/Banner-of-Belegost-820455390)
 
 ### Music & Sound Assets
 - Main Theme: [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
