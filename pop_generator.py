@@ -21,7 +21,7 @@ MEN = {"dunedain", "gondorian", "druedain", "amrothian", "wildmen", "rohirrim", 
        "ehwathrim", "barding", "dorwinrim", "urgath", "woodsmen", "logath", "kuga", "beorning", "dunnish",
        "enedwaithrim", "arnorian", "hillmen", "angmarrim", "breelander", "lossoth", "kingsmen", "anduinmen"}
 ELVEN = {"silvan", "avari", "galadhrim", "falathrim", "noldor"}
-DWARVEN = {"longbeard", "firebeard", "broadbeam"}
+DWARVEN = {"longbeard", "firebeard", "broadbeam", "ironfist"}
 ORC = {"mordor_orc", "guldurrim", "snow_orc", "gundabad_orc",
        "angmar_orc", "goblin_towner", "morian", "uruk_hai", "wight"} # Wight may be misplaced
 HOBBIT = {"stoor_hobbit", "breeland_hobbit", "shire_hobbit"}
