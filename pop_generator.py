@@ -23,11 +23,13 @@ MEN = {"dunedain", "gondorian", "druedain", "amrothian", "wildmen", "rohirrim", 
 ELVEN = {"silvan", "avari", "galadhrim", "falathrim", "noldor"}
 DWARVEN = {"longbeard", "firebeard", "broadbeam", "ironfist"}
 ORC = {"mordor_orc", "guldurrim", "snow_orc", "gundabad_orc",
-       "angmar_orc", "goblin_towner", "morian", "uruk_hai", "wight"} # Wight may be misplaced
+       "angmar_orc", "goblin_towner", "morian", "uruk_hai"}
 HOBBIT = {"stoor_hobbit", "breeland_hobbit", "shire_hobbit"}
 ENT = {"ent", "huorn"}
-BEAST = {"cave_trolls", "hill_trolls", "mountain_trolls",
-         "snow_trolls", "stone_trolls", "olog_hai", "great_eagle", "great_spider"} # Seprate trolls?
+TROLL = {"cave_trolls", "hill_trolls", "mountain_trolls", "snow_trolls", "stone_trolls", "olog_hai"}
+EAGLE = {"great_eagle"}
+SPIDER = {"great_spider"}
+UNDEAD = {"wight"}
 provinces = []
 files = set()
 total_pops = 0
@@ -104,8 +106,14 @@ class Province:
                                 religion = "hobbit"
                             elif culture in ENT:
                                 religion = "ent"
-                            elif culture in BEAST:
-                                religion = "ent" # Yes beasts are ents don't worry about it
+                            elif culture in TROLL:
+                                religion = "troll"
+                            elif culture in EAGLE:
+                                religion = "eagle"
+                            elif culture in SPIDER:
+                                religion = "spider"
+                            elif culture in UNDEAD:
+                                religion = "undead"
                             else:
                                 print(f"Did not recognize {culture}")
 
