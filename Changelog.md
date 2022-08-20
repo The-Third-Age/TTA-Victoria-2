@@ -2,7 +2,9 @@
 
 All notable changes will be documented in this file.
 
-## [v0.3]() - Unreleased
+## [v0.4]() - In Development
+
+## [v0.3]() - 20 Aug 2021
 ### New Tags
  - In Eriador: Bombadil, Trollshaws, Barrowwights, Lossoth, Eglain, Ost in Edhil, Trollfells, Suduri, Metraith, Forondir, Nadior, Benglaras, Caranthal, Nidada, Eryn Vorn, Arthedain, Khazadbizar, Thorins Halls, Khagolabbad Faraku, Nogrod, Belegost, Old Sylvana, Harvaneth, Reunited Kingdom
  - In Enedwaith: Caru Luth, Draig Luth, Hebog Luth, Turch Luth, Uch Luth, Haerawreigion, Andrast, Algraig, Gwathirim
@@ -14,6 +16,8 @@ All notable changes will be documented in this file.
  - Start of Isengard content
  - Start of Dunedain of the North / Arnor content
  - Arnor, Cardolan, and Reunited Kingdom formable
+ - New population map with more detail pretty much everywhere. 
+ - Added Trolls, Spiders, Eagles, Wights, Anduinmen
 
 ### Graphics
  - Redone Umbar provinces
