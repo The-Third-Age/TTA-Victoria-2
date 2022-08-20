@@ -3,6 +3,7 @@ from re import compile
 from pathlib import Path
 from collections import namedtuple
 from os.path import expanduser
+import random
 # from os import path, walk, remove
 
 
@@ -15,7 +16,6 @@ from os.path import expanduser
 input_file = expanduser("~\\Downloads\\Provinces - Pops.csv")
 mod_folder = "."
 pops_folder = "history/pops/2954.1.1/"
-output_folder = f"../output/pops"
 MEN = {"dunedain", "gondorian", "druedain", "amrothian", "wildmen", "rohirrim", "harnendan", "umbarrim", "haruzani",
        "black_numenorean", "arysian", "pezarsani", "lurmsakuni", "variag", "chelkiag", "nurniag", "sagath", "sekel",
        "ehwathrim", "barding", "dorwinrim", "urgath", "woodsmen", "logath", "kuga", "beorning", "dunnish",
@@ -34,7 +34,6 @@ total_pops = 0
 total_pops_no_multiplier = 0
 MULTIPLIER = 20
 
-Path(output_folder).mkdir(parents=True, exist_ok=True)
 Pop = namedtuple("Pop", "size breakdown")
 
 
