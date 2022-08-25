@@ -643,7 +643,7 @@ grond = {
 		modifier = {
 			factor = 1
 			any_neighbor_country = {
-				invention = clap_snap_black_crack
+				invention = grond
 			}
 		}
 	}
@@ -728,6 +728,29 @@ lament_for_the_rohirrim = {
 			factor = 1
 			any_neighbor_country = {
 				invention = lament_for_the_rohirrim
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 20 }
+}
+
+houses_of_healing_song = {
+	limit = { culture_4 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			AND = {
+				accepted_culture = men_culture
+				flavor_1 = 1
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = houses_of_healing_song
 			}
 		}
 	}

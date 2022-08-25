@@ -34,52 +34,148 @@ population_5_i = {
 	political_reform_desire = -0.1
 }
 
-magic_1_i = {
+######################
+# MAGIC_1 INVENTIONS #
+######################
+magical_secrets = { # Generic prestige event
 	limit = { magic_1 = 1 }
 	
 	chance = {
-		base = 100
+		base = 1
 	}
 	
-	effect = { shared_prestige = 10 }
+	effect = { shared_prestige = 5 }
 }
 
-magic_2_i = {
+######################
+# MAGIC_2 INVENTIONS #
+######################
+first_lesser_ring = { # Search and find a lesser ring
 	limit = { magic_2 = 1 }
 	
 	chance = {
-		base = 100
+		base = 1
 	}
 	
-	effect = { shared_prestige = 10 }
+	effect = { shared_prestige = 5 }
 }
 
-magic_3_i = {
+palantiri = { # Gaze into the palantiri
+	limit = { magic_2 = 1 }
+	
+	chance = {
+		base = 3
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+######################
+# MAGIC_3 INVENTIONS #
+######################
+blue_wizards = { # Search for the blue wizards
 	limit = { magic_3 = 1 }
 	
 	chance = {
-		base = 100
+		base = 1
 	}
 	
-	effect = { shared_prestige = 10 }
+	effect = { shared_prestige = 5 }
 }
 
-magic_4_i = {
+entwives = { # Search for the entwives
+	limit = { magic_3 = 1 }
+	
+	chance = {
+		base = 1
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+######################
+# MAGIC_4 INVENTIONS #
+######################
+second_lesser_ring = { # Search and find a lesser ring
+	limit = { 
+		magic_4 = 1 
+		invention = first_lesser_ring
+	}
+	
+	chance = {
+		base = 1
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+silmarils = { # Search and find a silmaril
 	limit = { magic_4 = 1 }
 	
 	chance = {
-		base = 100
+		base = 1
 	}
 	
-	effect = { shared_prestige = 10 }
+	effect = { shared_prestige = 5 }
 }
 
-magic_5_i = {
+######################
+# MAGIC_5 INVENTIONS #
+######################
+magical_crafting = { # Creating one's own artefacts
 	limit = { magic_5 = 1 }
 	
 	chance = {
-		base = 100
+		base = 1
 	}
 	
-	effect = { shared_prestige = 10 }
+	effect = { shared_prestige = 5 }
+}
+
+magical_crafting_warriors = {
+	limit = { invention = magical_crafting }
+	
+	chance = {
+		base = 1
+	}
+	
+	effect = {
+        morale = 0.5
+	}
+}
+
+magical_crafting_craftsmen = {
+	limit = { invention = magical_crafting }
+	
+	chance = {
+		base = 1
+	}
+	
+	effect = {
+        factory_input = -0.02
+		factory_output = 0.02
+		factory_throughput = 0.05
+	}
+}
+
+magical_crafting_workers = {
+	limit = { invention = magical_crafting }
+	
+	chance = {
+		base = 1
+	}
+	
+	effect = {
+        rgo_output = 0.05
+	}
+}
+
+third_lesser_ring = { # Search and find a lesser ring
+	limit = { magic_5 = 1 }
+	
+	chance = {
+		base = 1
+	}
+	
+	effect = { shared_prestige = 5 }
 }
