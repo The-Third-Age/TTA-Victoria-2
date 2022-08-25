@@ -628,6 +628,29 @@ arise_riders = {
 	effect = { shared_prestige = 15 }
 }
 
+grond = {
+	limit = { culture_3 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			AND = {
+				accepted_culture = orc_culture
+				artillery_tech_1 = 1
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = clap_snap_black_crack
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 15 }
+}
+
 ########################
 # CULTURE_4 INVENTIONS #
 ########################
