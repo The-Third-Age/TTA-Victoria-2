@@ -121,3 +121,55 @@ country_event = {
 		}
 	}
 }
+
+# The Age of the Uruk Hai
+country_event = {
+	id = 50120
+	picture = lord_of_isengard
+	title = "The Age of the Uruk Hai"
+	desc = "EVTDESC50120"
+
+	trigger = {
+		tag = ISE
+		nationalvalue = saruman
+		good_evil_alignment = evil_alignment
+		has_country_modifier = breeding_uruk_hai
+		NOT = { has_global_flag = bred_uruk_hai }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = "A new power is rising, it's victory is at hand."
+		1055 = {
+			any_pop = {
+				move_pop = 811
+			}
+		}
+		primary_culture = uruk_hai
+		add_accepted_culture = dunnish
+		add_accepted_culture = gondorian
+		remove_country_modifier = breeding_uruk_hai
+		set_global_flag = bred_uruk_hai
+		
+		prestige = 5
+		badboy = 3
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "On second thoughts, no."
+		
+		prestige = 5
+		badboy = -5
+		
+		ai_chance = {
+			factor = 0
+		}
+
+	}
+}
