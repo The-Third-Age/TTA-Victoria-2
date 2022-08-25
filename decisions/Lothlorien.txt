@@ -1,0 +1,24 @@
+# Lothlorien Decisions:
+#	Lembas bread
+political_decisions = {
+    lembas = {
+		picture = "lembas"
+		potential = {
+			owns = 765
+            OR = {
+                is_culture_group = eldar
+                is_culture_group = teleri
+                is_culture_group = avari
+            }
+			NOT = { flavor_6 = 1 }
+		}
+		
+		allow = {
+			farming_tech_1 = 1
+		}
+		
+		effect = {
+			activate_technology = flavor_6
+		}
+	}
+}

@@ -1,4 +1,4 @@
-flavor_1 = {
+flavor_1 = { # Houses of Healing
 	area = flavor_cat_1
 	year = 9999
 	cost = 99999
@@ -40,10 +40,15 @@ flavor_5 = {
 	ai_chance = { factor = 0 }
 }
 
-flavor_6 = {
+flavor_6 = { # Lembas Bread
 	area = flavor_cat_2
 	year = 9999
 	cost = 99999
+	
+	rgo_output = 0.05
+	army_base = {
+		supply_consumption = -0.1
+	}
 	
 	ai_chance = { factor = 0 }
 }
