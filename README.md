@@ -174,6 +174,7 @@ Loremasters:
 	- [Sceith-A](https://www.deviantart.com/sceith-a)
 	- [enmah](https://www.deviantart.com/enmah)
 	- [AntonPo](https://www.deviantart.com/antonpo)
+	- [Mysilvergreen](https://www.deviantart.com/mysilvergreen)
 	- [firith456](http://www.councilofelrond.com/imagegallerycats/firith456/)
 	- [Ubisoft](https://www.wallpaperflare.com/artwork-assassins-creed-concept-art-sailing-ship-shipyard-wallpaper-uteqo)
 	- [DALL·E mini/Craiyon](https://www.craiyon.com/)
