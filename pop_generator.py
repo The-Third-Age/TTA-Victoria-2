@@ -145,7 +145,7 @@ def read_data(infile):
 def process_provinces(province_list):
     for file in files:
         with open(f"{mod_folder}/{pops_folder}/{file}.txt", "w", encoding="ANSI") as wf:
-            wf.write("""# 4 "religions": men, elven, dwarven, orc
+            wf.write("""# "religions": men, elven, dwarven, orc, hobbit, ent, troll, eagle, spider, undead
 
 ### - Population Research
 # - Based on medieval populations, especially from the late ERE
