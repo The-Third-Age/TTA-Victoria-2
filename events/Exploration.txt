@@ -1,0 +1,252 @@
+# Economical Events: {
+#	50700 - 50799 }
+
+########################
+##### Lesser Rings #####
+########################
+
+########################
+###### Palantiri #######
+########################
+
+########################
+###### Ent Wives #######
+########################
+
+########################
+###### Silmarils #######
+########################
+
+#################################
+##### Blue Wizards - Alatar #####
+#################################
+country_event = { # First attempt
+	id =  50750
+
+	trigger = {
+        OR = {
+            not = { has_global_flag = alatar_activated }
+            not = { has_global_flag = pallando_activated }
+        }
+		not = { has_country_flag = searching_for_blue_wizards }
+		not = { has_country_flag = rejected_searching_for_blue_wizards }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Search for the Blue Wizards"
+	desc = "EVTDESC50750"
+	picture = "blue_wizards"
+	
+
+	option = {
+		name = "Support the mission"
+		ai_chance = { factor = 25 }
+		money = -10000
+		set_country_flag = searching_for_blue_wizards
+	}
+	option = {
+		name = "We'll consider this later"
+		ai_chance = { factor = 45 }
+		prestige = -5
+	}
+	option = {
+		name = "Never"
+		ai_chance = { factor = 30 }
+		set_country_flag = rejected_searching_for_blue_wizards
+		prestige = -10
+	}
+}
+
+country_event = { # Found one but not the other
+	id =  50751
+
+	trigger = {
+        OR = {
+            OR = {
+                not = { has_global_flag = alatar_activated }
+                has_global_flag = pallando_activated
+            }
+            OR = {
+                not = { has_global_flag = pallando_activated }
+                has_global_flag = alatar_activated
+            }
+        }
+		not = { has_country_flag = searching_for_blue_wizards }
+		not = { has_country_flag = rejected_searching_for_blue_wizards }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Search for the remaining Blue Wizards"
+	desc = "EVTDESC50751"
+	picture = "blue_wizards"
+	
+
+	option = {
+		name = "Support the mission"
+		ai_chance = { factor = 25 }
+		money = -1000
+		set_country_flag = searching_for_blue_wizards
+	}
+	option = {
+		name = "We'll consider this later"
+		ai_chance = { factor = 45 }
+		prestige = -5
+	}
+	option = {
+		name = "Never"
+		ai_chance = { factor = 30 }
+		set_country_flag = rejected_searching_for_blue_wizards
+		prestige = -10
+	}
+}
+
+country_event = { # Attempt fails, try again?
+	id = 50752
+	
+	trigger = {
+		has_country_flag = searching_for_blue_wizards
+	}
+	
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Failure to find the Blue Wizards"
+	desc = "EVTDESC50752"
+	picture = "blue_wizards"
+
+	option = {
+		name = "Try again" # Fund second attempt
+		ai_chance = { factor = 60 }
+		money = -20000
+	}
+	option = {
+		name = "Forget it" # Reject second attempt
+		ai_chance = { factor = 40 }
+        clr_country_flag = searching_for_blue_wizards
+		set_country_flag = rejected_searching_for_blue_wizards
+		prestige = -25
+	}
+}
+
+country_event = { # Alatar found
+	id = 50753
+
+	trigger = {
+        has_country_flag = searching_for_blue_wizards
+		not = { has_global_flag = alatar_activated }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Alatar has been found"
+	desc = "EVTDESC50753"
+	picture = "blue_wizards"
+
+	option = {
+		name = "And a fine ally he shall make"
+		prestige = 100
+		set_global_flag = alatar_activated
+		clr_country_flag = searching_for_blue_wizards
+        KHA_364 = {
+            secede_province = THIS # Gotta secede to THIS before seceding to ALA because its uncolonised land
+            add_core = ALA
+            secede_province = ALA
+        }
+        THIS = {
+            diplomatic_influence = {
+                who = ALA
+                value = 400
+            }
+            relation = {
+                who = ALA
+                value = 400
+            }
+            create_alliance = ALA
+        }
+        any_country = {
+            limit = {
+                ai = no
+            }
+            country_event = {
+	            id = 50755
+                days = 1
+            }
+        }
+	}
+}
+
+country_event = { # Pallando found
+	id = 50754
+
+	trigger = {
+        has_country_flag = searching_for_blue_wizards
+		not = { has_global_flag = pallando_activated }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Pallando has been found"
+	desc = "EVTDESC50754"
+	picture = "blue_wizards"
+
+	option = {
+		name = "Excellent"
+		prestige = 100
+		set_global_flag = pallando_activated
+		clr_country_flag = searching_for_blue_wizards
+        add_country_modifier = {
+            name = pallando_influence
+            duration = -1
+        }
+        any_country = {
+            limit = {
+                ai = no
+            }
+            country_event = {
+	            id = 50756
+                days = 1
+            }
+        }
+	}
+}
+
+country_event = { # Other country has found Alatar
+	id = 50755
+    is_triggered_only = yes
+
+	title = "Another realm` has found Alatar"
+	desc = "EVTDESC50755"
+	picture = "blue_wizards"
+
+    option = {
+		name = "Interesting"
+	}
+}
+
+country_event = { # Other country has found Pallando
+	id = 50756
+    is_triggered_only = yes
+
+	title = "Another realm has found Pallando"
+	desc = "EVTDESC50756"
+	picture = "blue_wizards"
+
+    option = {
+		name = "Interesting"
+	}
+}

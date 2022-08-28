@@ -87,7 +87,11 @@ entwives = { # Search for the entwives
 	limit = { magic_3 = 1 }
 	
 	chance = {
-		base = 1
+		base = 0
+		modifier = {
+			factor = 1
+			owns = 773
+		}
 	}
 	
 	effect = { shared_prestige = 5 }
@@ -103,7 +107,11 @@ second_lesser_ring = { # Search and find a lesser ring
 	}
 	
 	chance = {
-		base = 1
+		base = 0
+		modifier = {
+			factor = 1
+			invention = first_lesser_ring
+		}
 	}
 	
 	effect = { shared_prestige = 5 }
@@ -133,22 +141,30 @@ magical_crafting = { # Creating one's own artefacts
 }
 
 magical_crafting_warriors = {
-	limit = { invention = magical_crafting }
+	limit = { magic_5 = 1 }
 	
 	chance = {
-		base = 1
+		base = 0
+		modifier = {
+			factor = 1
+			invention = magical_crafting
+		}
 	}
-	
+
 	effect = {
         morale = 0.5
 	}
 }
 
 magical_crafting_craftsmen = {
-	limit = { invention = magical_crafting }
+	limit = { magic_5 = 1 }
 	
 	chance = {
-		base = 1
+		base = 0
+		modifier = {
+			factor = 1
+			invention = magical_crafting
+		}
 	}
 	
 	effect = {
@@ -159,10 +175,14 @@ magical_crafting_craftsmen = {
 }
 
 magical_crafting_workers = {
-	limit = { invention = magical_crafting }
+	limit = { magic_5 = 1 }
 	
 	chance = {
-		base = 1
+		base = 0
+		modifier = {
+			factor = 1
+			invention = magical_crafting
+		}
 	}
 	
 	effect = {
@@ -174,7 +194,11 @@ third_lesser_ring = { # Search and find a lesser ring
 	limit = { magic_5 = 1 }
 	
 	chance = {
-		base = 1
+		base = 0
+		modifier = {
+			factor = 1
+			invention = second_lesser_ring
+		}
 	}
 	
 	effect = { shared_prestige = 5 }
