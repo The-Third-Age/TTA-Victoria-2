@@ -4,6 +4,546 @@
 ########################
 ##### Lesser Rings #####
 ########################
+country_event = { # First attempt
+	id =  50700
+
+	trigger = {
+		not = { has_country_flag = searching_for_lesser_ring }
+		OR = {
+			AND = {
+				invention = first_lesser_ring
+				not = { has_country_flag = found_first_lesser_ring }
+			}
+			AND = {
+				invention = second_lesser_ring
+				not = { has_country_flag = found_second_lesser_ring }
+			}
+			AND = {
+				invention = third_lesser_ring
+				not = { has_country_flag = found_third_lesser_ring }
+			}
+		}
+		not = { has_country_flag = rejected_searching_for_lesser_ring }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Search for a Lesser Ring"
+	desc = "EVTDESC50700"
+	picture = "acquire_ring"
+	
+
+	option = {
+		name = "Support the mission"
+		ai_chance = { factor = 50 }
+		money = -1000
+		set_country_flag = searching_for_lesser_ring
+	}
+	option = {
+		name = "We'll consider this later"
+		ai_chance = { factor = 50 }
+		prestige = -5
+	}
+	option = {
+		name = "Never"
+		ai_chance = { factor = 0 }
+		set_country_flag = rejected_searching_for_lesser_ring
+		prestige = -10
+	}
+}
+
+country_event = { # Attempt fails, try again?
+	id = 50701
+	
+	trigger = {
+		has_country_flag = searching_for_lesser_ring
+	}
+	
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Failure to find a Lesser Ring"
+	desc = "EVTDESC50701"
+	picture = "acquire_ring"
+
+	option = {
+		name = "Try again" # Fund second attempt
+		ai_chance = { factor = 90 }
+		money = -2000
+	}
+	option = {
+		name = "Forget it" # Reject second attempt
+		ai_chance = { factor = 10 }
+        clr_country_flag = searching_for_lesser_ring
+		set_country_flag = rejected_searching_for_lesser_ring
+		prestige = -25
+	}
+}
+
+country_event = { # Lesser Ring of Might
+	id = 50702
+
+	trigger = {
+		has_country_flag = searching_for_lesser_ring
+		OR = {
+			AND = {
+				invention = first_lesser_ring
+				not = { has_country_flag = found_first_lesser_ring }
+			}
+			AND = {
+				invention = second_lesser_ring
+				not = { has_country_flag = found_second_lesser_ring }
+			}
+			AND = {
+				invention = third_lesser_ring
+				not = { has_country_flag = found_third_lesser_ring }
+			}
+		}
+		NOT = { has_country_modifier = lesser_ring_of_might }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Lesser Ring of Might"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
+
+	option = {
+		name = "Excellent"
+		prestige = 10
+		clr_country_flag = searching_for_lesser_ring
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = first_lesser_ring
+					NOT = { has_country_flag = found_first_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_first_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = second_lesser_ring
+					NOT = { has_country_flag = found_second_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_second_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = third_lesser_ring
+					NOT = { has_country_flag = found_third_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_third_lesser_ring
+			}
+		}
+		add_country_modifier = {
+			name = lesser_ring_of_might
+			duration = -1
+		}
+	}
+}
+
+country_event = { # Lesser Ring of Courage
+	id = 50703
+
+	trigger = {
+		has_country_flag = searching_for_lesser_ring
+		OR = {
+			AND = {
+				invention = first_lesser_ring
+				not = { has_country_flag = found_first_lesser_ring }
+			}
+			AND = {
+				invention = second_lesser_ring
+				not = { has_country_flag = found_second_lesser_ring }
+			}
+			AND = {
+				invention = third_lesser_ring
+				not = { has_country_flag = found_third_lesser_ring }
+			}
+		}
+		NOT = { has_country_modifier = lesser_ring_of_courage }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Lesser Ring of Courage"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
+
+	option = {
+		name = "Excellent"
+		prestige = 10
+		clr_country_flag = searching_for_lesser_ring
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = first_lesser_ring
+					NOT = { has_country_flag = found_first_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_first_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = second_lesser_ring
+					NOT = { has_country_flag = found_second_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_second_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = third_lesser_ring
+					NOT = { has_country_flag = found_third_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_third_lesser_ring
+			}
+		}
+		add_country_modifier = {
+			name = lesser_ring_of_courage
+			duration = -1
+		}
+	}
+}
+
+country_event = { # Lesser Ring of Wit
+	id = 50704
+
+	trigger = {
+		has_country_flag = searching_for_lesser_ring
+		OR = {
+			AND = {
+				invention = first_lesser_ring
+				not = { has_country_flag = found_first_lesser_ring }
+			}
+			AND = {
+				invention = second_lesser_ring
+				not = { has_country_flag = found_second_lesser_ring }
+			}
+			AND = {
+				invention = third_lesser_ring
+				not = { has_country_flag = found_third_lesser_ring }
+			}
+		}
+		NOT = { has_country_modifier = lesser_ring_of_wit }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Lesser Ring of Wit"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
+
+	option = {
+		name = "Excellent"
+		prestige = 10
+		clr_country_flag = searching_for_lesser_ring
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = first_lesser_ring
+					NOT = { has_country_flag = found_first_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_first_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = second_lesser_ring
+					NOT = { has_country_flag = found_second_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_second_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = third_lesser_ring
+					NOT = { has_country_flag = found_third_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_third_lesser_ring
+			}
+		}
+		add_country_modifier = {
+			name = lesser_ring_of_wit
+			duration = -1
+		}
+	}
+}
+
+country_event = { # Lesser Ring of Calm
+	id = 50705
+
+	trigger = {
+		has_country_flag = searching_for_lesser_ring
+		OR = {
+			AND = {
+				invention = first_lesser_ring
+				not = { has_country_flag = found_first_lesser_ring }
+			}
+			AND = {
+				invention = second_lesser_ring
+				not = { has_country_flag = found_second_lesser_ring }
+			}
+			AND = {
+				invention = third_lesser_ring
+				not = { has_country_flag = found_third_lesser_ring }
+			}
+		}
+		NOT = { has_country_modifier = lesser_ring_of_calm }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Lesser Ring of Calm"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
+
+	option = {
+		name = "Excellent"
+		prestige = 10
+		clr_country_flag = searching_for_lesser_ring
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = first_lesser_ring
+					NOT = { has_country_flag = found_first_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_first_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = second_lesser_ring
+					NOT = { has_country_flag = found_second_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_second_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = third_lesser_ring
+					NOT = { has_country_flag = found_third_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_third_lesser_ring
+			}
+		}
+		add_country_modifier = {
+			name = lesser_ring_of_calm
+			duration = -1
+		}
+	}
+}
+
+country_event = { # Lesser Ring of Plenty
+	id = 50706
+
+	trigger = {
+		has_country_flag = searching_for_lesser_ring
+		OR = {
+			AND = {
+				invention = first_lesser_ring
+				not = { has_country_flag = found_first_lesser_ring }
+			}
+			AND = {
+				invention = second_lesser_ring
+				not = { has_country_flag = found_second_lesser_ring }
+			}
+			AND = {
+				invention = third_lesser_ring
+				not = { has_country_flag = found_third_lesser_ring }
+			}
+		}
+		NOT = { has_country_modifier = lesser_ring_of_plenty }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Lesser Ring of Plenty"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
+
+	option = {
+		name = "Excellent"
+		prestige = 10
+		clr_country_flag = searching_for_lesser_ring
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = first_lesser_ring
+					NOT = { has_country_flag = found_first_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_first_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = second_lesser_ring
+					NOT = { has_country_flag = found_second_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_second_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = third_lesser_ring
+					NOT = { has_country_flag = found_third_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_third_lesser_ring
+			}
+		}
+		add_country_modifier = {
+			name = lesser_ring_of_plenty
+			duration = -1
+		}
+	}
+}
+
+country_event = { # Lesser Ring of Glory
+	id = 50707
+
+	trigger = {
+		has_country_flag = searching_for_lesser_ring
+		OR = {
+			AND = {
+				invention = first_lesser_ring
+				not = { has_country_flag = found_first_lesser_ring }
+			}
+			AND = {
+				invention = second_lesser_ring
+				not = { has_country_flag = found_second_lesser_ring }
+			}
+			AND = {
+				invention = third_lesser_ring
+				not = { has_country_flag = found_third_lesser_ring }
+			}
+		}
+		NOT = { has_country_modifier = lesser_ring_of_glory }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Lesser Ring of Glory"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
+
+	option = {
+		name = "Excellent"
+		prestige = 10
+		clr_country_flag = searching_for_lesser_ring
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = first_lesser_ring
+					NOT = { has_country_flag = found_first_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_first_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = second_lesser_ring
+					NOT = { has_country_flag = found_second_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_second_lesser_ring
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					tag = THIS
+					invention = third_lesser_ring
+					NOT = { has_country_flag = found_third_lesser_ring }
+				}
+			}
+			owner = {
+				set_country_flag = found_third_lesser_ring
+			}
+		}
+		add_country_modifier = {
+			name = lesser_ring_of_glory
+			duration = -1
+		}
+	}
+}
 
 ########################
 ###### Palantiri #######
@@ -332,9 +872,9 @@ country_event = { # Other country has found Silmaril
 	}
 }
 
-#################################
-##### Blue Wizards - Alatar #####
-#################################
+########################
+##### Blue Wizards #####
+########################
 country_event = { # First attempt
 	id =  50750
 
