@@ -1554,4 +1554,608 @@ political_decisions = {
 			}
 		}
 	}
+	# Tends to vary between Umbar, Harad, Khand and Gondor
+	rename_harad = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# Umbar - Nînzayan
+						AND = {
+							is_culture_group = kingsmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = harnendor_name value = -0.1 } } }
+								FOR = { check_variable = { which = harnendor_name value = 0.1 } }
+							}
+						}
+						# Harad/Khand - Nînzayan
+						AND = {
+							OR = = {
+								is_culture_group = haradrim
+								is_culture_group = khandish
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = harnendor_name value = 0.9 } } }
+								FOR = { check_variable = { which = harnendor_name value = 1.1 } }
+							}
+						}
+						# Gondor - Nînzayan
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = harnendor_name value = 1.9 } } }
+								FOR = { check_variable = { which = harnendor_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 284 owns = 285 owns = 286 owns = 287
+				}
+				AND = {
+					OR = {
+						# Harad/Umbar/Khand - Harwan
+						AND = {
+							OR = {
+								is_culture_group = haradrim
+								is_culture_group = kingsmen
+								is_culture_group = khandish
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = harwan_name value = -0.1 } } }
+								FOR = { check_variable = { which = harwan_name value = 0.1 } }
+							}
+						}
+						# Gondor - Harwan
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = harwan_name value = 0.9 } } }
+								FOR = { check_variable = { which = harwan_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 288 owns = 289 owns 290 owns = 317 owns = 320
+				}
+				AND = {
+					OR = {
+						# Harad/Umbar - Haruzan
+						AND = {
+							OR = {
+								is_culture_group = haradrim
+								is_culture_group = kingsmen
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = haruzan_name value = -0.1 } } }
+								FOR = { check_variable = { which = haruzan_name value = 0.1 } }
+							}
+						}
+						# Gondor - Haruzan
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = haruzan_name value = 0.9 } } }
+								FOR = { check_variable = { which = haruzan_name value = 1.1 } }
+							}
+						}
+						# Khand - Haruzan
+						AND = {
+							is_culture_group = khandish
+							OR = {
+								FOR = { NOT = { check_variable = { which = haruzan_name value = 1.9 } } }
+								FOR = { check_variable = { which = haruzan_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 334 owns = 335 owns 338 owns = 339
+				}
+				AND = {
+					OR = {
+						# Harad/Umbar/Khand - Pezarsan
+						AND = {
+							OR = {
+								is_culture_group = haradrim
+								is_culture_group = kingsmen
+								is_culture_group = khandish
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = pezarsan_name value = -0.1 } } }
+								FOR = { check_variable = { which = pezarsan_name value = 0.1 } }
+							}
+						}
+						# Gondor - Pezarsan
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = pezarsan_name value = 0.9 } } }
+								FOR = { check_variable = { which = pezarsan_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 292 owns = 293 owns = 294 owns = 295 owns = 236 owns = 321 owns = 350 owns = 351
+				}
+				AND = {
+					OR = {
+						# Harad/Umbar/Khand - Kajbah
+						AND = {
+							OR = {
+								is_culture_group = haradrim
+								is_culture_group = kingsmen
+								is_culture_group = khandish
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = kajbah_name value = -0.1 } } }
+								FOR = { check_variable = { which = kajbah_name value = 0.1 } }
+							}
+						}
+						# Gondor - Kajbah
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = kajbah_name value = 0.9 } } }
+								FOR = { check_variable = { which = kajbah_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 337 owns = 346 owns = 347 owns = 348 owns = 353 owns = 373
+				}
+				AND = {
+					OR = {
+						# Harad - Velarith
+						AND = {
+							is_culture_group = haradrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = velarith_name value = -0.1 } } }
+								FOR = { check_variable = { which = velarith_name value = 0.1 } }
+							}
+						}
+						# Khand - Velarith
+						AND = {
+							is_culture_group = khandish
+							OR = {
+								FOR = { NOT = { check_variable = { which = velarith_name value = 0.9 } } }
+								FOR = { check_variable = { which = velarith_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 303 owns = 304 owns = 305 owns = 308 owns = 312 owns = 313
+				}
+				AND = {
+					OR = {
+						# Harad - Siakan
+						AND = {
+							is_culture_group = haradrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = siakan_name value = -0.1 } } }
+								FOR = { check_variable = { which = siakan_name value = 0.1 } }
+							}
+						}
+						# Khand - Siakan
+						AND = {
+							is_culture_group = khandish
+							OR = {
+								FOR = { NOT = { check_variable = { which = siakan_name value = 0.9 } } }
+								FOR = { check_variable = { which = siakan_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 309 owns = 310 owns = 311 owns = 315
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			# Umbar - Nînzayan
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = kingsmen }
+					province_id = 284
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harnendor_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = harnendor_name value = 0.1 } } }
+					}
+				}
+				284 = { change_province_name = "Ausk Parch"
+				286 = { state_scope = { change_region_name = "Nînzayan" } }
+				287 = { change_province_name = "Sûkh Abârrim" }
+				owner = { FOR = { set_variable = { which = harnendor_name value = 0 } } } # Umbar
+			}
+			
+			# Harad/Khand - Nînzayan
+			random_owned = {
+				limit = {
+					owner = { OR = { is_culture_group = haradrim is_culture_group = khandish } }
+					province_id = 284
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harnendor_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = harnendor_name value = 1.1 } } }
+					}
+				}
+				284 = { change_province_name = "Ausk Parch"
+				286 = { state_scope = { change_region_name = "Nînzayan" } }
+				287 = { change_province_name = "Sôk Abârrim" }
+				owner = { FOR = { set_variable = { which = harnendor_name value = 1 } } } # Harad/Khand
+			}
+			
+			# Gondor - Nînzayan
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 284
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harnendor_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = harnendor_name value = 1.1 } } }
+					}
+				}
+				284 = { change_province_name = "Emyn Parch"
+				286 = { state_scope = { change_region_name = "Harnendor" } }
+				owner = { FOR = { set_variable = { which = harnendor_name value = 2 } } } # Gondor
+			}
+			
+			# Harad/Umbar/Khand - Harwan
+			random_owned = {
+				limit = {
+					owner = { OR = { is_culture_group = haradrim is_culture_group = khandish is_culture_group = kingsmen } }
+					province_id = 288
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harwan_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = harwan_name value = 0.1 } } }
+					}
+				}
+				288 = { change_province_name = "Muzdal Ifar" }
+				289 = { state_scope = { change_region_name = "Harwan" } }
+				owner = { FOR = { set_variable = { which = harwan_name value = 0 } } } # Harad/Umbar/Khand
+			}
+			
+			# Gondor - Harwan
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 288
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harwan_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = harwan_name value = 1.1 } } }
+					}
+				}
+				288 = { change_province_name = "Tirith Argon" }
+				289 = { state_scope = { change_region_name = "Nevharad" } }
+				owner = { FOR = { set_variable = { which = harwan_name value = 1 } } } # Gondor
+			}
+			
+			# Harad/Umbar - Haruzan
+			random_owned = {
+				limit = {
+					owner = { OR = { is_culture_group = haradrim is_culture_group = kingsmen } }
+					province_id = 334
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = haruzan_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = haruzan_name value = 0.1 } } }
+					}
+				}
+				334 = { change_province_name = "Korb Taskral" }
+				335 = { state_scope = { change_region_name = "Harûzan" } }
+				339 = { change_province_name = "Velsinir" }
+				owner = { FOR = { set_variable = { which = haruzan_name value = 0 } } } # Harad/Umbar
+			}
+			
+			# Gondor - Haruzan
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 334
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = haruzan_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = haruzan_name value = 1.1 } } }
+					}
+				}
+				334 = { change_province_name = "Amrûn" }
+				335 = { state_scope = { change_region_name = "Al Amrûn" } }
+				339 = { change_province_name = "Iach Ilaz" }
+				owner = { FOR = { set_variable = { which = haruzan_name value = 1 } } } # Gondor
+			}
+			
+			# Khand - Haruzan
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = khandish }
+					province_id = 334
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = haruzan_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = haruzan_name value = 2.1 } } }
+					}
+				}
+				334 = { change_province_name = "Korb Taskral" }
+				335 = { state_scope = { change_region_name = "West Khand" } }
+				339 = { change_province_name = "Velsinir" }
+				owner = { FOR = { set_variable = { which = haruzan_name value = 2 } } } # Khand
+			}
+			
+			# Harad/Umbar/Khand - Kajbah
+			random_owned = {
+				limit = {
+					owner = { OR = { is_culture_group = haradrim is_culture_group = khandish is_culture_group = kingsmen } }
+					province_id = 337
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = kajbah_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = kajbah_name value = 0.1 } } }
+					}
+				}
+				337 = { change_province_name = "Ausk Amrûn" }
+				owner = { FOR = { set_variable = { which = kajbah_name value = 0 } } } # Harad/Umbar/Khand
+			}
+			
+			# Gondor - Kajbah
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 337
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = kajbah_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = kajbah_name value = 1.1 } } }
+					}
+				}
+				337 = { change_province_name = "Emyn Amrûn" }
+				owner = { FOR = { set_variable = { which = kajbah_name value = 1 } } } # Gondor
+			}
+			
+			# Harad/Umbar/Khand - Pezarsan
+			random_owned = {
+				limit = {
+					owner = { OR = { is_culture_group = haradrim is_culture_group = khandish is_culture_group = kingsmen } }
+					province_id = 293
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = pezarsan_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = pezarsan_name value = 0.1 } } }
+					}
+				}
+				293 = { change_province_name = "Upper Nun Gazir" }
+				294 = { change_province_name = "Lower Nun Gazir" }
+				295 = { change_province_name = "Haz Azuhmeda" }
+				owner = { FOR = { set_variable = { which = pezarsan_name value = 0 } } } # Harad/Umbar/Khand
+			}
+			
+			# Gondor - Pezarsan
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 293
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = pezarsan_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = pezarsan_name value = 1.1 } } }
+					}
+				}
+				293 = { change_province_name = "Upper Emyn Gazir" }
+				294 = { change_province_name = "Lower Emyn Gazir" }
+				295 = { change_province_name = "Talath Ulumpër" }
+				owner = { FOR = { set_variable = { which = pezarsan_name value = 1 } } } # Gondor
+			}
+			
+			# Harad - Velarith
+			random_owned = {
+				limit = {
+					owner = { OR = { is_culture_group = haradrim } }
+					province_id = 303
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = velarith_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = velarith_name value = 0.1 } } }
+					}
+				}
+				303 = { state_scope = { change_region_name = "Velarith" } }
+				owner = { FOR = { set_variable = { which = velarith_name value = 0 } } } # Harad
+			}
+			
+			# Khand - Velarith
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = khandish }
+					province_id = 303
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = velarith_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = velarith_name value = 1.1 } } }
+					}
+				}
+				303 = { state_scope = { change_region_name = "Upper Khandu Sâr" } }
+				owner = { FOR = { set_variable = { which = velarith_name value = 1 } } } # Khand
+			}
+			
+			# Harad - Siakan
+			random_owned = {
+				limit = {
+					owner = { OR = { is_culture_group = haradrim } }
+					province_id = 310
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = siakan_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = siakan_name value = 0.1 } } }
+					}
+				}
+				310 = { state_scope = { change_region_name = "Siakan" } }
+				owner = { FOR = { set_variable = { which = siakan_name value = 0 } } } # Harad
+			}
+			
+			# Khand - Siakan
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = khandish }
+					province_id = 310
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = siakan_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = siakan_name value = 1.1 } } }
+					}
+				}
+				310 = { state_scope = { change_region_name = "Lower Khandu Sâr" } }
+				owner = { FOR = { set_variable = { which = siakan_name value = 1 } } } # Khand
+			}
+		}
+	}
+	# 0 - Khand, 1 - Harad/Umber, 2 - Gondor, 3 - Mordor
+	rename_khand = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# Khand - Muzeida Vales
+						AND = {
+							is_culture_group = khandish
+							OR = {
+								FOR = { NOT = { check_variable = { which = mezeida_vale_name value = -0.1 } } }
+								FOR = { check_variable = { which = mezeida_vale_name value = 0.1 } }
+							}
+						}
+						# Harad/Umber - Muzeida Vales
+						AND = {
+							OR = = {
+								is_culture_group = haradrim
+								is_culture_group = kingsmen
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = mezeida_vale_name value = 0.9 } } }
+								FOR = { check_variable = { which = mezeida_vale_name value = 1.1 } }
+							}
+						}
+						# Gondor - Muzeida Vales
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = mezeida_vale_name value = 1.9 } } }
+								FOR = { check_variable = { which = mezeida_vale_name value = 2.1 } }
+							}
+						}
+						# Mordor - Muzeida Vales
+						AND = {
+							is_culture_group = mordorian
+							OR = {
+								FOR = { NOT = { check_variable = { which = mezeida_vale_name value = 2.9 } } }
+								FOR = { check_variable = { which = mezeida_vale_name value = 3.1 } }
+							}
+						}
+					}
+					owns = 254 owns = 340 owns = 341 owns = 342 owns = 343 owns = 345
+				}
+				AND = {
+					OR = {
+						# Khand - Khur
+						AND = {
+							is_culture_group = khandish
+							OR = {
+								FOR = { NOT = { check_variable = { which = khur_name value = -0.1 } } }
+								FOR = { check_variable = { which = khur_name value = 0.1 } }
+							}
+						}
+						# Harad/Umber - Khur
+						AND = {
+							OR = = {
+								is_culture_group = haradrim
+								is_culture_group = kingsmen
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = khur_name value = 0.9 } } }
+								FOR = { check_variable = { which = khur_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 374 owns = 375 owns = 376 owns = 377 owns = 378 owns = 379
+				}
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			# Khand - Muzeida Vales
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = khandish }
+					province_id = 254
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = mezeida_vale_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = mezeida_vale_name value = 0.1 } } }
+					}
+				}
+				254 = { change_province_name = "Kergila" }
+				341 = { change_province_name = "Lugarlûr" }
+				342 = { change_province_name = "Hûk Saromis" }
+				343 = { state_scope = { change_region_name = "Muzeida Vale" } }
+				owner = { FOR = { set_variable = { which = mezeida_vale_name value = 0 } } } # Khand
+			}
+			
+			# Harad/Umbar - Muzeida Vales
+			random_owned = {
+				limit = {
+					owner = { OR = { is_culture_group = haradrim is_culture_group = kingsmen } }
+					province_id = 254
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = mezeida_vale_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = mezeida_vale_name value = 1.1 } } }
+					}
+				}
+				254 = { change_province_name = "Deshgar" }
+				341 = { change_province_name = "Lugarlûr" }
+				342 = { change_province_name = "Kres Lugal" }
+				343 = { state_scope = { change_region_name = "Ode Auchel Vale" } }
+				owner = { FOR = { set_variable = { which = mezeida_vale_name value = 1 } } } # Harad/Umbar
+			}
+			
+			# Gondor - Muzeida Vales
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 254
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = mezeida_vale_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = mezeida_vale_name value = 2.1 } } }
+					}
+				}
+				342 = { change_province_name = "Imlad Fuin" }
+				343 = { state_scope = { change_region_name = "Sirdim Vale" } }
+				owner = { FOR = { set_variable = { which = mezeida_vale_name value = 2 } } } # Gondor
+			}
+			
+			# Mordor - Muzeida Vales
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = mordorian }
+					province_id = 254
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = mezeida_vale_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = mezeida_vale_name value = 2.1 } } }
+					}
+				}
+				341 = { change_province_name = "Kal Nargil" }
+				owner = { FOR = { set_variable = { which = mezeida_vale_name value = 2 } } } # Mordor
+			}
+			
+			# Khand - Khur
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = khandish }
+					province_id = 375
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = khur_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = khur_name value = 0.1 } } }
+					}
+				}
+				375 = { change_province_name = "Kharsûm" }
+				376 = { change_province_name = "Ikh'ahôn" }
+				owner = { FOR = { set_variable = { which = khur_name value = 0 } } } # Khand
+			}
+			
+			# Harad/Umbar - Khur
+			random_owned = {
+				limit = {
+					owner = { OR = { is_culture_group = haradrim is_culture_group = kingsmen } }
+					province_id = 375
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = khur_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = khur_name value = 1.1 } } }
+					}
+				}
+				375 = { change_province_name = "Kas Auchel" }
+				376 = { change_province_name = "Kyzilkûm" }
+				owner = { FOR = { set_variable = { which = khur_name value = 1 } } } # Harad/Umbar
+			}
+		}
 }
