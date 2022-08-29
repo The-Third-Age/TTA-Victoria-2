@@ -12,10 +12,325 @@
 ########################
 ###### Ent Wives #######
 ########################
+country_event = { # First attempt
+	id =  50730
+
+	trigger = {
+		invention = entwives
+		not = { has_global_flag = entwives_found }
+		not = { has_country_flag = searching_for_entwives }
+		not = { has_country_flag = rejected_searching_for_entwives }
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Search for the Entwives"
+	desc = "EVTDESC50730"
+	picture = "entwives"
+	
+
+	option = {
+		name = "Support the mission"
+		ai_chance = { factor = 25 }
+		money = -1000
+		set_country_flag = searching_for_entwives
+	}
+	option = {
+		name = "We'll consider this later"
+		ai_chance = { factor = 45 }
+		prestige = -5
+	}
+	option = {
+		name = "Never"
+		ai_chance = { factor = 30 }
+		set_country_flag = rejected_searching_for_entwives
+		prestige = -10
+	}
+}
+
+country_event = { # Attempt fails, try again?
+	id = 50731
+	
+	trigger = {
+		invention = entwives
+		has_country_flag = searching_for_entwives
+	}
+	
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Failure to find the Entwives"
+	desc = "EVTDESC50731"
+	picture = "entwives"
+
+	option = {
+		name = "Try again" # Fund second attempt
+		ai_chance = { factor = 60 }
+		money = -2000
+	}
+	option = {
+		name = "Forget it" # Reject second attempt
+		ai_chance = { factor = 40 }
+        clr_country_flag = searching_for_entwives
+		set_country_flag = rejected_searching_for_entwives
+		prestige = -25
+	}
+}
+
+country_event = { # Entwives found
+	id = 50732
+
+	trigger = {
+		has_country_flag = searching_for_entwives
+		not = { has_global_flag = entwives_found }
+	}
+
+	mean_time_to_happen =  {
+		months = 36
+	}
+
+	title = "We've found the entwives"
+	desc = "EVTDESC50732"
+	picture = "entwives"
+
+	option = {
+		name = "Excellent"
+		prestige = 100
+		set_global_flag = entwives_found
+		clr_country_flag = searching_for_entwives
+		465 = { # Emyn Muil, referencing the theory that there were Entwives in the Brownlands
+			owner = {
+				relation = {
+					who = THIS
+					value = 25
+				}
+			}
+		}
+		1041 = { # North Moors, referencing the theory that there were Entwives in the north shire
+			owner = {
+				relation = {
+					who = THIS
+					value = 25
+				}
+			}
+		}
+        any_country = {
+            limit = {
+                ai = no
+            }
+            country_event = {
+	            id = 50733
+                days = 1
+            }
+        }
+	}
+}
+
+country_event = { # Other country has found Entwives
+	id = 50733
+    is_triggered_only = yes
+
+	title = "Entwives have been found"
+	desc = "EVTDESC50733"
+	picture = "entwives"
+
+    option = {
+		name = "Interesting"
+		clr_country_flag = searching_for_entwives
+	}
+}
 
 ########################
 ###### Silmarils #######
 ########################
+country_event = { # Helper event to say you can't find a silmaril unless you can dig deep and greedily
+	id =  50740
+
+	trigger = {
+		invention = silmarils
+		not = { has_global_flag = silmarils_found }
+		not = { has_country_flag = searching_for_silmarils }
+		not = { has_country_flag = rejected_searching_for_silmarils }
+
+		NOT = {
+			OR = {
+				owns = 843
+				owns = 660
+			}
+		}
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Where can one find a Silmaril"
+	desc = "EVTDESC50740"
+	picture = "silmarils"
+	
+
+	option = {
+		name = "Hmm, deep and greedily..."
+	}
+}
+
+country_event = { # First attempt
+	id =  50741
+
+	trigger = {
+		invention = silmarils
+		not = { has_global_flag = silmarils_found }
+		not = { has_country_flag = searching_for_silmarils }
+		not = { has_country_flag = rejected_searching_for_silmarils }
+
+		OR = {
+			owns = 843
+			owns = 660
+		}
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Search for a Silmaril"
+	desc = "EVTDESC50741"
+	picture = "silmarils"
+	
+
+	option = {
+		name = "Dig deep and greedily!"
+		ai_chance = { factor = 25 }
+		money = -1000
+		set_country_flag = searching_for_silmarils
+	}
+	option = {
+		name = "We'll consider this later"
+		ai_chance = { factor = 45 }
+		prestige = -5
+	}
+	option = {
+		name = "Never"
+		ai_chance = { factor = 30 }
+		set_country_flag = rejected_searching_for_silmarils
+		prestige = -10
+	}
+}
+
+country_event = { # Attempt fails, try again?
+	id = 50742
+	
+	trigger = {
+		has_country_flag = searching_for_silmaril
+	}
+	
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Failure to find the silmarils"
+	desc = "EVTDESC50742"
+	picture = "silmarils"
+
+	option = {
+		name = "Try again" # Fund second attempt
+		ai_chance = { factor = 60 }
+		money = -2000
+	}
+	option = {
+		name = "Forget it" # Reject second attempt
+		ai_chance = { factor = 40 }
+        clr_country_flag = searching_for_silmaril
+		set_country_flag = rejected_searching_for_silmaril
+		prestige = -25
+	}
+}
+
+country_event = { # Finding Silmaril is now impossible
+	id = 50743
+	
+	trigger = {
+		has_country_flag = searching_for_silmaril
+		NOT = {
+			OR = {
+				owns = 843
+				owns = 660
+			}
+		}
+	}
+	
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Failure to find the silmarils"
+	desc = "EVTDESC50743"
+	picture = "silmarils"
+
+	option = {
+		name = "Forget it"
+        clr_country_flag = searching_for_silmaril
+		set_country_flag = rejected_searching_for_silmaril
+		prestige = -25
+	}
+}
+
+country_event = { # Silmaril found
+	id = 50744
+
+	trigger = {
+        has_country_flag = searching_for_silmarils
+		not = { has_global_flag = silmarils_found }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 120
+	}
+
+	title = "Silmaril has been found"
+	desc = "EVTDESC50754"
+	picture = "silmarils"
+
+	option = {
+		name = "Excellent"
+		prestige = 300
+		set_global_flag = silmarils_found
+		clr_country_flag = searching_for_silmarils
+        add_country_modifier = {
+            name = silmaril
+            duration = -1
+        }
+        any_country = {
+            limit = {
+                ai = no
+            }
+            country_event = {
+	            id = 50745
+                days = 1
+            }
+        }
+	}
+}
+
+country_event = { # Other country has found Silmaril
+	id = 50745
+    is_triggered_only = yes
+
+	title = "Another realm has found a Silmaril"
+	desc = "EVTDESC50756"
+	picture = "silmarils"
+
+    option = {
+		name = "Interesting"
+		clr_country_flag = searching_for_silmarils
+	}
+}
 
 #################################
 ##### Blue Wizards - Alatar #####
@@ -24,6 +339,7 @@ country_event = { # First attempt
 	id =  50750
 
 	trigger = {
+		invention = blue_wizards
         OR = {
             not = { has_global_flag = alatar_activated }
             not = { has_global_flag = pallando_activated }
@@ -65,6 +381,7 @@ country_event = { # Found one but not the other
 	id =  50751
 
 	trigger = {
+		invention = blue_wizards
         OR = {
             OR = {
                 not = { has_global_flag = alatar_activated }
@@ -147,7 +464,7 @@ country_event = { # Alatar found
 	}
 
 	mean_time_to_happen =  {
-		months = 12
+		months = 36
 	}
 
 	title = "Alatar has been found"
@@ -197,7 +514,7 @@ country_event = { # Pallando found
 	}
 
 	mean_time_to_happen =  {
-		months = 12
+		months = 36
 	}
 
 	title = "Pallando has been found"
@@ -235,6 +552,7 @@ country_event = { # Other country has found Alatar
 
     option = {
 		name = "Interesting"
+		clr_country_flag = searching_for_blue_wizards
 	}
 }
 
@@ -248,5 +566,6 @@ country_event = { # Other country has found Pallando
 
     option = {
 		name = "Interesting"
+		clr_country_flag = searching_for_blue_wizards
 	}
 }
