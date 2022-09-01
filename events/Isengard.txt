@@ -19,6 +19,11 @@ country_event = {
 			who = FROM
 			value = -200
 		}
+
+		diplomatic_influence = {
+			who = FROM
+			value = -200
+		}
 		
 		ai_chance = {
 			factor = 90
@@ -171,5 +176,148 @@ country_event = {
 			factor = 0
 		}
 
+	}
+}
+
+# Gaze in the Palantir - Start
+country_event = {
+	id = 50130
+
+	trigger = {
+		nationalvalue = saruman
+		has_country_modifier = orthanc_palantir
+		MOR = {
+			has_country_modifier = ithil_palantir
+		}
+		is_vassal = no
+		war = no
+		NOT = { good_evil_alignment = good_alignment }
+		NOT = { has_country_flag = saruman_has_palantired_with_mordor}
+	}
+
+	mean_time_to_happen =  {
+		months = 6
+	}
+
+	title = "Gaze in to the Palantir"
+	desc = "EVTDESC50130"
+	picture = "palantir_saruman"
+
+    option = {
+		name = "Cast your gaze..."
+		country_event = {
+			id = 50131
+			days = 7
+		}
+		prestige = 5
+		set_country_flag = saruman_has_palantired_with_mordor
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = "It's too dangerous!"
+		prestige = -5
+		set_country_flag = saruman_has_palantired_with_mordor
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Gaze in the Palantir - Offer Alliance
+country_event = {
+	id = 50131
+
+	is_triggered_only = yes
+
+	title = "Gaze in to the Palantir"
+	desc = "EVTDESC50131"
+	picture = "palantir_saruman"
+
+    option = {
+		name = "Yes, an alliance would suit our interests..."
+		MOR = {
+			country_event = {
+				id = 50132
+				days = 1
+			}
+		}
+		prestige = 2
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = "Resist"
+		prestige = 1
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Gaze in the Palantir - Mordor receives an alliance offer from Isengard
+country_event = {
+	id = 50132
+
+	is_triggered_only = yes
+
+	title = "An alliance offer from Isengard"
+	desc = "EVTDESC50132"
+	picture = "palantir"
+
+    option = {
+		name = "All according to plan"
+		FROM = {
+			country_event = {
+				id = 50133
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = "No way"
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Gaze in the Palantir - Alliance Accepted
+country_event = {
+	id = 50133
+
+	is_triggered_only = yes
+
+	title = "Alliance accepted"
+	desc = "EVTDESC50133"
+	picture = "palantir_saruman"
+
+    option = {
+		name = "Excellent"
+		MOR = {
+			relation = {
+				who = THIS
+				value = 200
+			}
+			create_alliance = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = 200
+			}
+		}
+		prestige = 2
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
