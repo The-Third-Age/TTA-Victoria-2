@@ -1427,3 +1427,32 @@ country_event = { # Other country has found a palantir
 		clr_country_flag = searching_for_palantiri
 	}
 }
+
+country_event = { # Gaze into the elostirion_palantir
+	id = 50770
+
+	trigger = {
+		invention = palantiri
+		has_country_modifier = elostirion_palantir
+		owns = 933
+	}
+
+	mean_time_to_happen =  {
+		months = 600
+	}
+
+	title = "Gaze into the Elostirion Palantir"
+	desc = "EVTDESC50770"
+	picture = "palantir"
+
+    option = {
+		name = "How beautiful"
+		prestige = 20
+		any_pop = {
+			consciousness = -3
+			militancy = -3
+		}
+		clr_country_flag = searching_for_palantiri
+	}
+
+}
