@@ -546,10 +546,6 @@ country_event = { # Lesser Ring of Glory
 }
 
 ########################
-###### Palantiri #######
-########################
-
-########################
 ###### Ent Wives #######
 ########################
 country_event = { # First attempt
@@ -863,7 +859,7 @@ country_event = { # Other country has found Silmaril
     is_triggered_only = yes
 
 	title = "Another realm has found a Silmaril"
-	desc = "EVTDESC50756"
+	desc = "EVTDESC50745"
 	picture = "silmarils"
 
     option = {
@@ -1107,5 +1103,327 @@ country_event = { # Other country has found Pallando
     option = {
 		name = "Interesting"
 		clr_country_flag = searching_for_blue_wizards
+	}
+}
+
+########################
+###### Palantiri #######
+########################
+country_event = { # Get anor_palantir
+	id =  50760
+
+	trigger = {
+		invention = palantiri
+		NOT = { has_country_modifier = anor_palantir }
+		owns = 16
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Anor Palantir"
+	desc = "EVTDESC50760"
+	picture = "palantir"
+	
+
+	option = {
+		name = "Excellent"
+		ai_chance = { factor = 100 }
+		add_country_modifier = { 
+			name = anor_palantir
+			duration = -1
+		}
+	}
+}
+
+country_event = { # Get orthanc_palantir
+	id = 50761
+
+	trigger = {
+		invention = palantiri
+		NOT = { has_country_modifier = orthanc_palantir }
+		owns = 811
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Orthanc Palantir"
+	desc = "EVTDESC50761"
+	picture = "palantir"
+	
+
+	option = {
+		name = "Excellent"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = orthanc_palantir
+			duration = -1
+		}
+	}
+}
+
+country_event = { # Get ithil_palantir
+	id =  50762
+
+	trigger = {
+		invention = palantiri
+		NOT = { has_country_modifier = ithil_palantir }
+		owns = 449
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Ithil Palantir"
+	desc = "EVTDESC50762"
+	picture = "palantir"
+	
+
+	option = {
+		name = "Excellent"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = ithil_palantir
+			duration = -1
+		}
+	}
+}
+
+country_event = { # Get elostirion_palantir
+	id =  50763
+
+	trigger = {
+		invention = palantiri
+		NOT = { has_country_modifier = elostirion_palantir }
+		owns = 933
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "The Elostirion Palantir"
+	desc = "EVTDESC50763"
+	picture = "palantir"
+	
+
+	option = {
+		name = "Excellent"
+		ai_chance = { factor = 100 }
+		add_country_modifier = {
+			name = elostirion_palantir
+			duration = -1
+		}
+	}
+}
+
+country_event = { # First attempt
+	id =  50764
+
+	trigger = {
+		invention = palantiri
+        OR = {
+            NOT = { has_global_flag = osgiliath_palantir_activated }
+            NOT = { has_global_flag = amonsul_palantir_activated }
+			NOT = { has_global_flag = annuminas_palantir_activated }
+        }
+		NOT = { has_country_modifier = anor_palantir }
+		NOT = { has_country_modifier = orthanc_palantir }
+		NOT = { has_country_modifier = ithil_palantir }
+		NOT = { has_country_modifier = elostirion_palantir }
+		NOT = { has_country_modifier = osgiliath_palantir }
+		NOT = { has_country_modifier = amonsul_palantir }
+		NOT = { has_country_modifier = annuminas_palantir }
+		NOT = { has_country_flag = searching_for_palantiri }
+		NOT = { has_country_flag = rejected_searching_palantiri }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	title = "Search for a Palantir"
+	desc = "EVTDESC50764"
+	picture = "palantir"
+	
+
+	option = {
+		name = "Support the mission!"
+		ai_chance = { factor = 25 }
+		money = -10000
+		set_country_flag = searching_for_palantiri
+	}
+	option = {
+		name = "We'll consider this later"
+		ai_chance = { factor = 45 }
+		prestige = -5
+	}
+	option = {
+		name = "Never"
+		ai_chance = { factor = 30 }
+		set_country_flag = rejected_searching_palantiri
+		prestige = -10
+	}
+}
+
+country_event = { # Attempt fails, try again?
+	id = 50765
+	
+	trigger = {
+		has_country_flag = searching_for_palantiri
+	}
+	
+	mean_time_to_happen =  {
+		months = 36
+	}
+
+	title = "Failure to find a Palantir"
+	desc = "EVTDESC50765"
+	picture = "palantir"
+
+	option = {
+		name = "Try again" # Fund second attempt
+		ai_chance = { factor = 60 }
+		money = -2000
+	}
+	option = {
+		name = "Forget it" # Reject second attempt
+		ai_chance = { factor = 40 }
+        clr_country_flag = searching_for_palantiri
+		set_country_flag = rejected_searching_palantiri
+		prestige = -25
+	}
+}
+
+country_event = { # Palantir found - osgiliath_palantir
+	id = 50766
+
+	trigger = {
+        has_country_flag = searching_for_palantiri
+		NOT = { has_global_flag = osgiliath_palantir_activated }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 240
+	}
+
+	title = "Palantir has been found"
+	desc = "EVTDESC50766"
+	picture = "palantir"
+
+	option = {
+		name = "Excellent"
+		prestige = 300
+		set_global_flag = osgiliath_palantir_activated
+		clr_country_flag = searching_for_palantiri
+        add_country_modifier = {
+            name = osgiliath_palantir
+            duration = -1
+        }
+        any_country = {
+            limit = {
+                ai = no
+            }
+            country_event = {
+	            id = 50769
+                days = 1
+            }
+        }
+	}
+}
+
+country_event = { # Palantir found - amonsul_palantir
+	id = 50767
+
+	trigger = {
+        has_country_flag = searching_for_palantiri
+		NOT = { has_global_flag = amonsul_palantir_activated }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 240
+	}
+
+	title = "Palantir has been found"
+	desc = "EVTDESC50767"
+	picture = "palantir"
+
+	option = {
+		name = "Excellent"
+		prestige = 300
+		set_global_flag = amonsul_palantir_activated
+		clr_country_flag = searching_for_palantiri
+        add_country_modifier = {
+            name = amonsul_palantir
+            duration = -1
+        }
+        any_country = {
+            limit = {
+                ai = no
+            }
+            country_event = {
+	            id = 50769
+                days = 1
+            }
+        }
+	}
+}
+
+country_event = { # Palantir found - annuminas_palantir
+	id = 50768
+
+	trigger = {
+        has_country_flag = searching_for_palantiri
+		NOT = { has_global_flag = annuminas_palantir_activated }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen =  {
+		months = 240
+	}
+
+	title = "Palantir has been found"
+	desc = "EVTDESC50768"
+	picture = "palantir"
+
+	option = {
+		name = "Excellent"
+		prestige = 300
+		set_global_flag = annuminas_palantir_activated
+		clr_country_flag = searching_for_palantiri
+        add_country_modifier = {
+            name = annuminas_palantir
+            duration = -1
+        }
+        any_country = {
+            limit = {
+                ai = no
+            }
+            country_event = {
+	            id = 50769
+                days = 1
+            }
+        }
+	}
+}
+
+country_event = { # Other country has found a palantir
+	id = 50769
+    is_triggered_only = yes
+
+	title = "Another realm has found a Palantir"
+	desc = "EVTDESC50769"
+	picture = "palantir"
+
+    option = {
+		name = "Interesting"
+		clr_country_flag = searching_for_palantiri
 	}
 }
