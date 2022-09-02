@@ -1454,5 +1454,36 @@ country_event = { # Gaze into the elostirion_palantir
 		}
 		clr_country_flag = searching_for_palantiri
 	}
+}
 
+###################
+###### RANDOM #####
+###################
+country_event = {
+	id = 50799
+
+	trigger = {
+		magic_1 = 1
+	}
+
+	mean_time_to_happen =  {
+		months = 1200
+	}
+
+	title = "Discovery"
+	desc = "EVTDESC50799"
+	picture = "swords"
+
+	option = {
+		name = "Display them somewhere nice"
+		prestige = 10
+		ai_chance = { factor = 50 }
+	}
+
+	option = {
+		name = "Just trinkets and baubles to be sold"
+		prestige = -2
+		money = 10000
+		ai_chance = { factor = 50 }
+	}
 }
