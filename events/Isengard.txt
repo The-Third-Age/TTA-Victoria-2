@@ -153,9 +153,23 @@ country_event = {
 				move_pop = 811
 			}
 		}
+		political_reform = yes_slavery
+		any_owned = {
+			limit = {
+                is_core = THIS
+            }
+			any_pop = { 
+				limit = { 
+					culture = gondorian  
+				} 
+				militancy = 6
+				consciousness = 6
+				pop_type = slaves 
+			}
+		}
 		primary_culture = uruk_hai
 		add_accepted_culture = dunnish
-		add_accepted_culture = gondorian
+		remove_accepted_culture = gondorian
 		remove_country_modifier = breeding_uruk_hai
 		set_global_flag = bred_uruk_hai
 		
