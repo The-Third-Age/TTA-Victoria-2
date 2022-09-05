@@ -1424,6 +1424,7 @@ categories =  {
 	##### MORDOR #####
 	###################
 	
+	# mountain 
 	ash_mountain = {
 		movement_cost = 1.4
 		
@@ -1442,22 +1443,221 @@ categories =  {
 		min_build_railroad = 2
 	}
 	
-	gorgoroth_ashlands = {
-		movement_cost = 1.1
+	# hills 
+	barad_dur = {
+		movement_cost = 1.2
 		
 		defence = 1
-		combat_width = -0.2
+		combat_width = -0.25
 		
 		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
 		
-		farm_rgo_size = -0.45
-		farm_rgo_eff = -0.9
-		mine_rgo_size = 5.0
-		mine_rgo_eff = 0.05
-		
-		supply_limit = 4
+		min_build_railroad = 1
 	}
 	
+	# hills 
+	barad_ungol = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# hills 
+	black_gate = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# hills 
+	carach_angren = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# hills 
+	cirith_ungol = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# hills 
+	durthang = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# mountain 
+	ered_lithui = {
+		movement_cost = 1.4
+		
+		defence = 2
+		combat_width = -0.5
+		
+		color = { 117 108 119 }
+		
+		farm_rgo_size = -0.3
+		farm_rgo_eff = -0.3
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.2
+		
+		supply_limit = 1
+		
+		min_build_railroad = 2
+	}
+	
+	# hills 
+	gorgoroth_ashlands = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# hills 
+	lithlad = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# hills 
+	minas_durlith = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# hills 
+	minas_morgul = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# mountain 
+	mount_doom = {
+		movement_cost = 1.4
+		
+		defence = 2
+		combat_width = -0.5
+		
+		color = { 117 108 119 }
+		
+		farm_rgo_size = -0.3
+		farm_rgo_eff = -0.3
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.2
+		
+		supply_limit = 1
+		
+		min_build_railroad = 2
+	}
+	
+	# plains 
+	nan_ungol = {
+		movement_cost = 1.0
+		
+		defence = -1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
+	}
+	
+	# plains 
 	nurn = {
 		movement_cost = 1.0
 		
@@ -1465,8 +1665,107 @@ categories =  {
 		
 		color = { 241 221 184 }
 		
-		farm_rgo_size = 0.5
-		farm_rgo_eff = 0.6
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
+	}
+	
+	# plains 
+	nurngost = {
+		movement_cost = 1.0
+		
+		defence = -1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
+	}
+	
+	# hills 
+	seregost = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# plains 
+	thaurband = {
+		movement_cost = 1.0
+		
+		defence = -1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
+	}
+	
+	# mountain 
+	torech_ungol = {
+		movement_cost = 1.4
+		
+		defence = 2
+		combat_width = -0.5
+		
+		color = { 117 108 119 }
+		
+		farm_rgo_size = -0.3
+		farm_rgo_eff = -0.3
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.2
+		
+		supply_limit = 1
+		
+		min_build_railroad = 2
+	}
+	
+	# hills 
+	udun = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# plains 
+	valley_of_the_fell_beasts = {
+		movement_cost = 1.0
+		
+		defence = -1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
 		mine_rgo_size = 0.2
 		mine_rgo_eff = 0.1
 		
