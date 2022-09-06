@@ -4,6 +4,22 @@ All notable changes will be documented in this file.
 
 ## [v0.4]() - In Development
 
+### New Tags
+ - Alatar's Realm
+
+### Mechanics/Content
+ - Can now search for and find Lesser Rings, Palantiri, Entwives, Blue Wizards, and Silmarils for various bonuses
+ - Isengard content
+ - Start of Lothlorien, Stoor Hobbit, Rohan content
+ - Arthedain formable
+
+### Graphics
+ - Redone Mordor provinces and special terrains
+ - Redone Harad provinces and special terrains
+ - Redone Khand provinces and special terrains
+ - Finished adding technology pictures
+
+
 ## [v0.3]() - 20 Aug 2022
 ### New Tags
  - In Eriador: Bombadil, Trollshaws, Barrowwights, Lossoth, Eglain, Ost in Edhil, Trollfells, Suduri, Metraith, Forondir, Nadior, Benglaras, Caranthal, Nidada, Eryn Vorn, Arthedain, Khazadbizar, Thorins Halls, Khagolabbad Faraku, Nogrod, Belegost, Old Sylvana, Harvaneth, Reunited Kingdom
