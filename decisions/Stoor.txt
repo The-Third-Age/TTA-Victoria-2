@@ -1,0 +1,24 @@
+# Stoor Hobbit Decisions:
+#	Colonise
+political_decisions = {
+	colonise_langflood = {
+		picture = "druwaith_iaur"
+		potential = {
+			owns = 755
+			owns = 757
+			owns = 758
+			759 = { empty = yes }
+            760 = { empty = yes }
+		}
+		
+		allow = {
+			expansion_1 = 1
+		}
+		
+		effect = {
+			prestige = 5
+			759 = { secede_province = THIS }
+			760 = { secede_province = THIS }
+		}
+	}
+}

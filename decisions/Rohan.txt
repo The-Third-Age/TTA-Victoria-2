@@ -1,0 +1,20 @@
+# Stoor Hobbit Decisions:
+#	Colonise
+political_decisions = {
+	colonise_amon_hen = {
+		picture = "druwaith_iaur"
+		potential = {
+			owns = 782
+		}
+		
+		allow = {
+			expansion_1 = 1
+		}
+		
+		effect = {
+			prestige = 10
+			783 = { secede_province = THIS }
+			784 = { secede_province = THIS }
+		}
+	}
+}

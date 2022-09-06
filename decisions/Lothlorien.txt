@@ -1,5 +1,6 @@
 # Lothlorien Decisions:
 #	Lembas bread
+#	Colonise
 political_decisions = {
     lembas = {
 		picture = "lembas"
@@ -19,6 +20,27 @@ political_decisions = {
 		
 		effect = {
 			activate_technology = flavor_6
+		}
+	}
+	colonise_parth_celebrant = {
+		picture = "druwaith_iaur"
+		potential = {
+			owns = 765
+            OR = {
+                is_culture_group = eldar
+                is_culture_group = teleri
+                is_culture_group = avari
+            }
+			LOR_767 = { empty = yes }
+		}
+		
+		allow = {
+			expansion_1 = 1
+		}
+		
+		effect = {
+			prestige = 10
+			LOR_767 = { secede_province = THIS }
 		}
 	}
 }
