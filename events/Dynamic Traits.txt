@@ -1,5 +1,5 @@
-# Dynamic Traits Events: {
-# 3500 - 3999 }
+# Dynamic Trait Management Events: {
+# 3500 - 3599 }
 
 # New Leader
 country_event = {
@@ -176,54 +176,12 @@ country_event = {
 	}
 }
 
-# Change in strata_support
+# wisdom Modifiers
 country_event = {
 	id = 3503
 	picture = administration
-	title = "The Plight of the Working Folk"
-	desc = "EVTDESC3503"
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		money = -10000
-	}
-	
-	option = {
-		name = "Of Course!"
-		
-		treasury = -10000
-		
-		any_pop = {
-			limit = {
-				strata = poor
-			}
-			militancy = -1
-		}
-		
-		change_variable = { which = strata_support value = 1 }
-	}
-	
-	option = {
-		name = "Why don't they ask their local land and guild owners?"
-		
-		any_pop = {
-			limit = {
-				strata = rich
-			}
-			militancy = -1
-		}
-		
-		change_variable = { which = strata_support value = -1 }
-	}
-}
-
-# wisdom Modifiers
-country_event = {
-	id = 3504
-	picture = administration
 	title = "A Trait Change"
-	desc = "EVTDESC3504"
+	desc = "EVTDESC3503"
 	
 	trigger = {
 		OR = {
@@ -287,63 +245,12 @@ country_event = {
 	}
 }
 
-# Change in wisdom
-country_event = {
-	id = 3505
-	picture = administration
-	title = "A Request for Aid"
-	desc = "EVTDESC3505"
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		money = 15000
-	}
-	
-	option = {
-		name = "Why would we give a non-ally our money?"
-		
-		change_variable = { which = wisdom value = 1 }
-	}
-	
-	option = {
-		name = "Of Course!"
-		
-		treasury = -10000
-		random_country = {
-			limit = {
-				THIS = { good_evil_alignment = good_alignment }
-				NOT = { good_evil_alignment = good_alignment }
-				NOT = { alliance_with = THIS }
-			}
-			treasury = 10000
-		}
-		random_country = {
-			limit = {
-				THIS = { good_evil_alignment = neutral_alignment }
-				NOT = { alliance_with = THIS }
-			}
-			treasury = 10000
-		}
-		random_country = {
-			limit = {
-				THIS = { good_evil_alignment = evil_alignment }
-				NOT = { good_evil_alignment = evil_alignment }
-				NOT = { alliance_with = THIS }
-			}
-			treasury = 10000
-		}
-		
-		change_variable = { which = wisdom value = -1 }
-	}
-}
-
 # work_ethic Modifiers
 country_event = {
-	id = 3506
+	id = 3504
 	picture = administration
 	title = "A Trait Change"
-	desc = "EVTDESC3506"
+	desc = "EVTDESC3504"
 	
 	trigger = {
 		OR = {
@@ -407,41 +314,12 @@ country_event = {
 	}
 }
 
-# Change in work_ethic
-country_event = {
-	id = 3507
-	picture = administration
-	title = "A Game of Golf?"
-	desc = "EVTDESC3507"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Of Course!"
-		
-		any_pop = {
-			limit = {
-				strata = rich
-			}
-			militancy = -1
-		}
-		
-		change_variable = { which = work_ethic value = 1 }
-	}
-	
-	option = {
-		name = "That's too much work"
-		
-		change_variable = { which = work_ethic value = -1 }
-	}
-}
-
 # generosity Modifiers
 country_event = {
-	id = 3508
+	id = 3505
 	picture = administration
 	title = "A Trait Change"
-	desc = "EVTDESC3508"
+	desc = "EVTDESC3505"
 	
 	trigger = {
 		OR = {
@@ -505,47 +383,12 @@ country_event = {
 	}
 }
 
-# Change in generosity
-country_event = {
-	id = 3509
-	picture = administration
-	title = "Gifts to the People?"
-	desc = "EVTDESC3509"
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		money = -10000
-	}
-	
-	option = {
-		name = "Of Course!"
-		
-		treasury = -10000
-		
-		any_pop = {
-			limit = {
-				strata = poor
-			}
-			militancy = -1
-		}
-		
-		change_variable = { which = generosity value = 1 }
-	}
-	
-	option = {
-		name = "They can earn it"
-		
-		change_variable = { which = generosity value = -1 }
-	}
-}
-
 # corruption Modifiers
 country_event = {
-	id = 3510
+	id = 3506
 	picture = administration
 	title = "A Trait Change"
-	desc = "EVTDESC3510"
+	desc = "EVTDESC3506"
 	
 	trigger = {
 		OR = {
@@ -606,29 +449,5 @@ country_event = {
 			}
 			owner = { remove_country_modifier = corrupt }
 		}
-	}
-}
-
-# Change in corruption
-country_event = {
-	id = 3511
-	picture = administration
-	title = "The Trial"
-	desc = "EVTDESC3511"
-	
-	is_triggered_only = yes
-
-	option = {
-		name = "No. This court does not take bribes"
-		
-		change_variable = { which = corruption value = 1 }
-	}
-	
-	option = {
-		name = "I mean, a little money can't hurt..."
-		
-		treasury = 2000
-		
-		change_variable = { which = corruption value = -1 }
 	}
 }

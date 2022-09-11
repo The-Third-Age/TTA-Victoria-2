@@ -1,0 +1,514 @@
+# Random Events:
+#	3600 - 3999
+
+# The Plight of the Working Folk
+country_event = {
+	id = 3600
+	picture = administration
+	title = "The Plight of the Working Folk"
+	desc = "EVTDESC3600"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		money = 10000
+	}
+	
+	option = {
+		name = "Of Course!"
+		
+		treasury = -10000
+		
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = -1
+		}
+		
+		change_variable = { which = strata_support value = 1 }
+	}
+	
+	option = {
+		name = "Why don't they ask their local land and guild owners?"
+		
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			militancy = -1
+		}
+		
+		change_variable = { which = strata_support value = -1 }
+	}
+}
+
+# A Request for Aid
+country_event = {
+	id = 3601
+	picture = administration
+	title = "A Request for Aid"
+	desc = "EVTDESC3601"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		money = 15000
+	}
+	
+	option = {
+		name = "Show them the door"
+
+        prestige = 1
+		
+		change_variable = { which = wisdom value = 1 }
+	}
+	
+	option = {
+		name = "Let them have the aid"
+		
+		treasury = -10000
+		random_country = {
+			limit = {
+				THIS = { good_evil_alignment = good_alignment }
+				NOT = { good_evil_alignment = good_alignment }
+				NOT = { alliance_with = THIS }
+			}
+			treasury = 10000
+		}
+		random_country = {
+			limit = {
+				THIS = { good_evil_alignment = neutral_alignment }
+				NOT = { alliance_with = THIS }
+			}
+			treasury = 10000
+		}
+		random_country = {
+			limit = {
+				THIS = { good_evil_alignment = evil_alignment }
+				NOT = { good_evil_alignment = evil_alignment }
+				NOT = { alliance_with = THIS }
+			}
+			treasury = 10000
+		}
+		
+		change_variable = { which = wisdom value = -1 }
+	}
+}
+
+# A Game of Golf
+country_event = {
+	id = 3602
+	picture = administration
+	title = "A Game of Golf?"
+	desc = "EVTDESC3602"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "I've better things to do than play golf!"
+		
+		prestige = 1
+		
+		change_variable = { which = work_ethic value = 1 }
+	}
+	
+	option = {
+		name = "Enjoy a day of relaxation."
+		
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = 1
+		}
+		
+		change_variable = { which = work_ethic value = -1 }
+	}
+}
+
+# Gifts to the People
+country_event = {
+	id = 3603
+	picture = administration
+	title = "Gifts to the People?"
+	desc = "EVTDESC3603"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		money = 15000
+	}
+	
+	option = {
+		name = "Of Course!"
+		
+		treasury = -10000
+		
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = -1
+		}
+		
+		change_variable = { which = generosity value = 1 }
+	}
+	
+	option = {
+		name = "Forget it."
+
+        prestige = 5
+		
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = 1
+		}
+		
+		change_variable = { which = generosity value = -1 }
+	}
+}
+
+
+# The Trial
+country_event = {
+	id = 3604
+	picture = administration
+	title = "The Trial"
+	desc = "EVTDESC3604"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "No. This court does not take bribes."
+
+        prestige = 5
+		
+		change_variable = { which = corruption value = 1 }
+	}
+	
+	option = {
+		name = "I mean, a little money can't hurt..."
+		
+		treasury = 2000
+		
+		change_variable = { which = corruption value = -1 }
+	}
+}
+
+# Comet Sighted -- Gotta keep the meme alive
+country_event = {
+	id = 3605
+
+	trigger = { 
+		civilized = yes
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+	}
+
+	title = "Comet Sighted!"
+	desc = "EVTDESC3605"
+	picture = "comet"
+
+	option = {
+		name = "It's an omen"
+		any_pop = {
+			militancy = 1
+			consciousness = 1
+		}
+	}
+	
+	option = {
+		name = "The end is nigh!"
+		any_pop = {
+			militancy = 1
+			consciousness = 1
+		}
+	}
+	
+	option = {
+		name = "We need..."
+		any_pop = {
+			militancy = 1
+			consciousness = 1
+		}
+	}
+	
+	option = {
+		name = "...comet sense"
+		any_pop = {
+			militancy = 1
+			consciousness = 1
+		}
+	}
+}
+
+# Temporary insanity
+country_event = {
+	id = 3606
+	picture = administration
+	title = "Temporary insanity"
+	desc = "EVTDESC3606"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = "Surround myself with wise counsel."
+
+        prestige = -1
+
+        any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = -1
+            militancy = -1
+		}
+		
+		change_variable = { which = wisdom value = 1 }
+	}
+	
+	option = {
+		name = "I rule alone!"
+
+        prestige = 5
+		
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = 1
+		}
+		
+		change_variable = { which = wisdom value = -1 }
+	}
+}
+
+# Diplomatic move
+country_event = {
+	id = 3607
+	picture = administration
+	title = "Good diplomats"
+	desc = "EVTDESC3607"
+
+	is_triggered_only = yes
+
+	trigger = {
+        OR = {
+            good_evil_alignment = good_alignment
+            good_evil_alignment = evil_alignment
+        }
+	}
+	
+	option = {
+		name = "Showcase our glory"
+        prestige = 10
+		any_country = {
+			limit = {
+				THIS = { good_evil_alignment = good_alignment }
+				NOT = { good_evil_alignment = good_alignment }
+			}
+			relation = {
+                who = THIS
+                value = -5
+            }
+		}
+		any_country = {
+			limit = {
+				THIS = { good_evil_alignment = evil_alignment }
+				NOT = { good_evil_alignment = evil_alignment }
+			}
+			relation = {
+                who = THIS
+                value = -5
+            }
+		}
+	}	
+	option = {
+		name = "Send them to a friends"
+		any_country = {
+			limit = {
+				THIS = { good_evil_alignment = good_alignment }
+				NOT = { good_evil_alignment = good_alignment }
+			}
+			relation = {
+                who = THIS
+                value = 15
+            }
+		}
+		any_country = {
+			limit = {
+				THIS = { good_evil_alignment = evil_alignment }
+				NOT = { good_evil_alignment = evil_alignment }
+			}
+			relation = {
+                who = THIS
+                value = 15
+            }
+		}
+	}
+}
+
+# Excellent diplomacy
+country_event = {
+	id = 3608
+	picture = administration
+	title = "Excellent diplomacy"
+	desc = "EVTDESC3608"
+
+	is_triggered_only = yes
+
+	trigger = {
+        # % of max infamy
+        badboy = 0.6
+	}
+	
+	option = {
+		name = "Bask in the glory!"
+        prestige = 5
+        badboy = -1
+	}	
+	option = {
+		name = "Improve our reputation."
+        prestige = 1
+        badboy = -3
+	}
+}
+
+# Corruption
+country_event = {
+	id = 3609
+	picture = administration
+	title = "Corruption"
+	desc = "EVTDESC3609"
+
+	is_triggered_only = yes
+
+	trigger = {
+        NOT = { has_country_modifier = just }
+	}
+	
+	option = {
+		name = "Ignore it."
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = -1
+		}
+		change_variable = { which = corruption value = -1 }
+	}	
+	option = {
+		name = "Try to eradicate the problems."
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = -1
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = 1
+		}
+		change_variable = { which = corruption value = 1 }
+	}
+}
+
+# Noble Family Requests Aid
+country_event = {
+	id = 3610
+	picture = administration
+	title = "Noble Family Requests Aid"
+	desc = "EVTDESC3610"
+
+	is_triggered_only = yes
+
+	trigger = {
+        money = 1500
+	}
+	
+	option = {
+		name = "Grant aid."
+        treasury = -1000
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = -1
+		}
+		change_variable = { which = strata_support value = -1 }
+	}	
+	option = {
+		name = "Deny aid."
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = 1
+		}
+		change_variable = { which = strata_support value = 1 }
+	}
+}
+
+# Redress
+country_event = {
+	id = 3611
+	picture = administration
+	title = "Petition for Redress"
+	desc = "EVTDESC3611"
+
+	is_triggered_only = yes
+
+	trigger = {
+        vote_franschise = none_voting
+	}
+	
+	option = {
+		name = "Accept petition."
+		prestige = -2
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = -1
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = 1
+		}
+		change_variable = { which = strata_support value = 1 }
+	}	
+	option = {
+		name = "Deny petition."
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				strata = rich
+			}
+			consciousness = -1
+		}
+		change_variable = { which = strata_support value = -1 }
+	}
+}
