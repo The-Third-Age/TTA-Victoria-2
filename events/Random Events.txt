@@ -309,25 +309,27 @@ country_event = {
 	
 	option = {
 		name = "Showcase our glory"
-        prestige = 10
+        prestige = 5
 		any_country = {
 			limit = {
+                exists = yes
 				THIS = { good_evil_alignment = good_alignment }
-				NOT = { good_evil_alignment = good_alignment }
+				good_evil_alignment = evil_alignment
 			}
 			relation = {
                 who = THIS
-                value = -5
+                value = -15
             }
 		}
 		any_country = {
 			limit = {
+                exists = yes
 				THIS = { good_evil_alignment = evil_alignment }
-				NOT = { good_evil_alignment = evil_alignment }
+				good_evil_alignment = good_alignment
 			}
 			relation = {
                 who = THIS
-                value = -5
+                value = -15
             }
 		}
 	}	
@@ -335,8 +337,9 @@ country_event = {
 		name = "Send them to a friends"
 		any_country = {
 			limit = {
+                exists = yes
 				THIS = { good_evil_alignment = good_alignment }
-				NOT = { good_evil_alignment = good_alignment }
+				good_evil_alignment = good_alignment
 			}
 			relation = {
                 who = THIS
@@ -345,8 +348,9 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+                exists = yes
 				THIS = { good_evil_alignment = evil_alignment }
-				NOT = { good_evil_alignment = evil_alignment }
+				good_evil_alignment = evil_alignment
 			}
 			relation = {
                 who = THIS
@@ -377,7 +381,6 @@ country_event = {
 	}	
 	option = {
 		name = "Improve our reputation."
-        prestige = 1
         badboy = -3
 	}
 }
