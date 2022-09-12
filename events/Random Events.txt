@@ -512,3 +512,252 @@ country_event = {
 		change_variable = { which = strata_support value = -1 }
 	}
 }
+
+# Serfs getting uppity
+country_event = {
+	id = 3612
+	picture = administration
+	title = "Serfs getting uppity"
+	desc = "EVTDESC3612"
+
+	is_triggered_only = yes
+
+	trigger = {
+        serfdom = enforced_serfdom
+	}
+	
+	option = {
+		name = "Improve their conditions."
+		treasury = -500
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = -1
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = -1
+		}
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = "It's time for permanent change."
+		prestige = -15
+		political_reform = discouraged_serfdom
+		change_variable = { which = strata_support value = 1 }
+		ai_chance = { factor = 5 }
+	}
+	option = {
+		name = "Force them back to work."
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = 1
+		}
+		change_variable = { which = strata_support value = -1 }
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Exceptional painter
+country_event = {
+	id = 3613
+	picture = administration
+	title = "Exception Court Painter"
+	desc = "EVTDESC3613"
+
+	is_triggered_only = yes
+
+	trigger = {
+        OR = {
+            accepted_culture = men_culture
+            accepted_culture = elven_culture
+            accepted_culture = dwarven_culture
+            accepted_culture = hobbit_culture            
+        }
+	}
+	
+	option = {
+		name = "Hire them."
+		treasury = -500
+        prestige = 3
+	}
+	option = {
+		name = "Decline their services."
+        prestige = -1
+		change_variable = { which = strata_support value = -1 }
+	}
+}
+
+# Exceptional painter
+country_event = {
+	id = 3613
+	picture = administration
+	title = "Exception Court Painter"
+	desc = "EVTDESC3613"
+
+	is_triggered_only = yes
+
+	trigger = {
+        OR = {
+            accepted_culture = men_culture
+            accepted_culture = elven_culture
+            accepted_culture = dwarven_culture
+            accepted_culture = hobbit_culture            
+        }
+	}
+	
+	option = {
+		name = "Hire them."
+		treasury = -500
+        prestige = 3
+	}
+	option = {
+		name = "Decline their services."
+        prestige = -1
+		change_variable = { which = strata_support value = -1 }
+	}
+}
+
+# Economic Boom
+country_event = {
+	id = 3614
+	picture = "production"
+	title = "Economic Boom"
+	desc = "EVTDESC3614"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		poor_strata_everyday_needs = 0.5
+		NOT = { unemployment = 0.2 }
+	}
+	
+	option = {
+		name = "Excellent"
+		add_country_modifier = {
+			name = economic_boom
+			duration = 365
+		}
+	}
+	
+	option = {
+		name = "Spread the wealth"
+		any_pop = {
+			militancy = -1
+			consciousness = -1
+		}
+	}
+}
+
+# Famine Strikes State!
+country_event = {
+	id = 3615
+	picture = "starving"
+	title = "Famine Strikes State!"
+	desc = "EVTDESC3615"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { poor_strata_life_needs = 0.8 }
+	}
+	
+	option = {
+		name = "Aid those starving!"
+		random_state = {
+			poor_strata = { reduce_pop = 0.96 }
+		}
+		add_tax_relative_income	= -5
+		change_variable = { which = strata_support value = 1 }
+	}
+	
+	option = {
+		name = "Not my issue."
+		random_state = {
+			poor_strata = {
+				reduce_pop = 0.9
+				militancy = 1
+			}
+		}
+		change_variable = { which = strata_support value = -1 }
+	}
+}
+
+# Murder!
+country_event = {
+	id = 3616
+	picture = "murderer"
+	title = "Foul Murder!"
+	desc = "EVTDESC3616"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			poor_strata_life_needs = 0.9
+		}
+	}
+	
+	option = {
+		name = "Find a killer!"
+		random_state = {
+			rich_strata = {
+				militancy = 0.5
+			}
+			poor_strata = {
+				militancy = -0.5
+				consciousness = 0.5
+			}
+		}
+	}
+	
+	option = {
+		name = "Find the right killer"
+		random_state = {
+			poor_strata = {
+				militancy = 0.5
+			}
+			rich_strata = {
+				militancy = -0.5
+				consciousness = 0.5
+			}
+		}
+	}
+}
+
+# Outlaw on The Run
+country_event = {
+	id = 3617
+	picture = "murderer"
+	title = "Wanted!"
+	desc = "EVTDESC3617"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { poor_strata_everyday_needs = 0.8 }
+	}
+	
+	option = {
+		name = "Search high!"
+		rich_strata = { militancy = 2 }
+		change_variable = { which = strata_support value = 1 }
+	}
+	
+	option = {
+		name = "Search low!"
+		poor_strata = { militancy = 1 }
+		change_variable = { which = strata_support value = -1 }
+	}
+}
