@@ -10,7 +10,7 @@ short_bows = {
 		archers = {
 			attack = 1
 		    defence = 1
-			supply_consumption = 0.05
+			supply_consumption = 0.1
 		}
 	}
 }
@@ -23,7 +23,7 @@ recurve_bows = {
 		archers = {
 			attack = 1
 		    defence = 1
-			supply_consumption = 0.05
+			supply_consumption = 0.1
 		}
 	}
 }
@@ -35,7 +35,6 @@ barbed_arrows = {
 	effect = {
 		archers = {
 			support = 1
-			supply_consumption = 0.05
 		}
 	}
 }
@@ -48,10 +47,20 @@ long_bows = {
 		archers = {
 			attack = 1
 		    defence = 1
-			supply_consumption = 0.05
+			supply_consumption = 0.1
 		}
 	}
 }
+competition_archery = {
+	limit = { archer_tech_3 = 1 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		permanent_prestige = 1 
+	}
+}
+
 composite_bows = {
 	limit = { archer_tech_4 = 1 }
 	chance = {
@@ -61,7 +70,7 @@ composite_bows = {
 		archers = {
 			attack = 1
 		    defence = 1
-			supply_consumption = 0.05
+			supply_consumption = 0.2
 		}
 	}
 }
@@ -72,8 +81,7 @@ bodkin_arrows = {
 	}
 	effect = {
 		archers = {
-			support = 1
-			supply_consumption = 0.05
+			support = 2
 		}
 	}
 }
@@ -84,9 +92,20 @@ war_bows = {
 	}
 	effect = {
 		archers = {
-			attack = 1
-		    defence = 1
-			supply_consumption = 0.05
+			attack = 2
+		    defence = 2
+			supply_consumption = 0.4
+		}
+	}
+}
+war_arrows = {
+	limit = { archer_tech_5 = 1 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		archers = {
+			support = 2
 		}
 	}
 }
