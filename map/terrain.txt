@@ -4,7 +4,7 @@ terrain = 64
 categories =  {
 
 	############################
-	##### VANILLA TERRAINS #####
+	##### VANILLA TERRAINS ##### {
 	############################
 
 	ocean = {
@@ -175,8 +175,8 @@ categories =  {
 		mine_rgo_eff = 0.1
 	}	
 	
-	#########################
-	##### AREA TERRAINS #####
+	######################### }
+	##### AREA TERRAINS ##### {
 	#########################
 	
 	# mountains
@@ -234,8 +234,8 @@ categories =  {
 		min_build_railroad = 2
 	}
 	
-	###########################
-	##### GONDOR TERRAINS #####
+	########################### }
+	##### GONDOR TERRAINS ##### {
 	###########################
 	
 	# plains 
@@ -1055,8 +1055,8 @@ categories =  {
 		supply_limit = 7
 	}
 	
-	#################
-	##### HARAD #####
+	################# }
+	##### HARAD ##### {
 	#################
 	
 	# plains 
@@ -1420,8 +1420,8 @@ categories =  {
 		supply_limit = 5
 	}
 	
-	###################
-	##### MORDOR #####
+	################### }
+	##### MORDOR  ##### {
 	###################
 	
 	# mountain 
@@ -1772,7 +1772,110 @@ categories =  {
 		supply_limit = 5
 	}
 	
+	####################### }
+	#####  RHOVANION  ##### {
 	#######################
+	
+	# hills
+	amon_lhaw = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# plains
+	dagorlad = {
+		movement_cost = 1.0
+		
+		defence = -1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
+	}
+	
+	# marsh
+	dead_marshes = {
+		movement_cost = 1.4
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 76 112 105 }
+
+		farm_rgo_size = 0.0
+		farm_rgo_eff = -0.2
+		mine_rgo_size = 0.0
+		mine_rgo_eff = -0.2
+		
+		supply_limit = 1
+		
+		min_build_railroad = 2
+	}
+	
+	# hills
+	emyn_muil = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# plains
+	uvanwaith = {
+		movement_cost = 1.0
+		
+		defence = -1
+		
+		color = { 241 221 184 }
+		
+		farm_rgo_size = 0.2
+		farm_rgo_eff = 0.1
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.1
+		
+		supply_limit = 5
+	}
+	
+	# hills
+	uvanwaith_hills = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	####################### }
 	##### LOTHLORIEN  #####
 	#######################
 	
