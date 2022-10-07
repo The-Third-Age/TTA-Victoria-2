@@ -1,3 +1,15 @@
+############################
+# INFANTRY_TECH INVENTIONS #
+############################
+competition_infantry = {
+	limit = { infantry_tech_3 = 1 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		permanent_prestige = 1 
+	}
+}
 ##########################
 # ARCHER_TECH INVENTIONS #
 ##########################
@@ -8,8 +20,8 @@ short_bows = {
 	}
 	effect = {
 		archers = {
-			attack = 1
-		    defence = 1
+			attack = 0.5
+		    defence = 0.5
 			supply_consumption = 0.1
 		}
 	}
@@ -21,8 +33,8 @@ recurve_bows = {
 	}
 	effect = {
 		archers = {
-			attack = 1
-		    defence = 1
+			attack = 0.5
+		    defence = 0.5
 			supply_consumption = 0.1
 		}
 	}
@@ -45,8 +57,8 @@ long_bows = {
 	}
 	effect = {
 		archers = {
-			attack = 1
-		    defence = 1
+			attack = 0.5
+		    defence = 0.5
 			supply_consumption = 0.1
 		}
 	}
@@ -60,7 +72,6 @@ competition_archery = {
 		permanent_prestige = 1 
 	}
 }
-
 composite_bows = {
 	limit = { archer_tech_4 = 1 }
 	chance = {
@@ -68,8 +79,8 @@ composite_bows = {
 	}
 	effect = {
 		archers = {
-			attack = 1
-		    defence = 1
+			attack = 0.5
+		    defence = 0.5
 			supply_consumption = 0.2
 		}
 	}
@@ -92,8 +103,8 @@ war_bows = {
 	}
 	effect = {
 		archers = {
-			attack = 2
-		    defence = 2
+			attack = 1
+		    defence = 1
 			supply_consumption = 0.4
 		}
 	}
@@ -107,5 +118,29 @@ war_arrows = {
 		archers = {
 			support = 2
 		}
+	}
+}
+###########################
+# CAVALRY_TECH INVENTIONS #
+###########################
+competition_cavalry = {
+	limit = { cavalry_tech_3 = 3 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		permanent_prestige = 1 
+	}
+}
+#############################
+# ARTILLERY_TECH INVENTIONS #
+#############################
+competition_artillery = {
+	limit = { artillery_tech_3 = 3 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		permanent_prestige = 1 
 	}
 }
