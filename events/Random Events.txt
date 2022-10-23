@@ -1,5 +1,6 @@
 # Random Events:
 #	3600 - 3999
+# Add to common/on_actions.txt on_yearly_pulse
 
 # The Plight of the Working Folk
 country_event = {
@@ -170,7 +171,6 @@ country_event = {
 		change_variable = { which = generosity value = -1 }
 	}
 }
-
 
 # The Trial
 country_event = {
@@ -762,5 +762,71 @@ country_event = {
 		name = "Search low!"
 		poor_strata = { militancy = 1 }
 		change_variable = { which = strata_support value = -1 }
+	}
+}
+
+# Sea Monster
+country_event = {
+	id = 3618
+	picture = "sea_monster"
+	title = "Sea Monster"
+	desc = "EVTDESC3618"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			port = yes
+		}
+		money = 1000
+	}
+	
+	option = {
+		name = "Put together a naval force to seek out and quell this monster"
+		money = -500
+		change_variable = { which = work_ethic value = 1 }
+	}
+	
+	option = {
+		name = "Can't the boats just go around this beast?"
+		middle_strata = { militancy = 1 }
+		add_country_modifier = {
+			name = national_economic_downturn
+			duration = 180
+		}
+		change_variable = { which = work_ethic value = -1 }
+	}
+}
+
+# Wolves
+country_event = {
+	id = 3619
+	picture = "wolves"
+	title = "Wolves attacking"
+	desc = "EVTDESC3619"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			is_capital = no
+		}
+		money = 1000
+	}
+	
+	option = {
+		name = "Send some men to root out any wolves' dens"
+		money = -500
+		change_variable = { which = work_ethic value = 1 }
+	}
+	
+	option = {
+		name = "Let someone else deal with it"
+		poor_strata = { militancy = 1 }
+		add_country_modifier = {
+			name = national_economic_downturn
+			duration = 180
+		}
+		change_variable = { which = work_ethic value = -1 }
 	}
 }
