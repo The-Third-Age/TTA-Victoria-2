@@ -7,12 +7,55 @@
 #	Return to South Gondor
 #	Reintegration of Rohan
 #	Generic Political Flavor
-#	Ecthelion II Flavor
-#	Reclaiming Cores Removed Via Flavor }
+#	Ecthelion II Flavor }
 
 # TODO: Add decision to turn into Gondor of GNR wins second Kin-Strife
 # TODO: Add decision to annex GNR if second Kin-Strife is a draw
 # TODO: Make it possible to remove orc_raids(_country)
+
+# TODO: Rework Dol Amroth declaring independence so it doesn't need a global flag to prevent decision spamming
+#			Potentially remove Amrothian from Gondor's accepted cultures
+
+# TODO: For annexing Dol Amroth, check if Gondor leader is Denethor II or Boromir or Faramir. Or perhaps royal marrage for annex_dol_amroth
+#			May need a description update
+#		Also give Ecthelion or Imrahil as a general depending on who is alive
+
+# TODO: Make low_military_recruitment generic
+#			And a way to gain it
+
+# TODO: Rework Expansion to the West to work with the redone Druedain realms
+#			May want to hardcode each decision to a specific druedain realm. Or any Druedain realm in the area that is bordering Gondor
+#			Will want to ensure that annexing any puppets from the region only happen if it's a flavor-related puppet
+#			Will want to add railroaded colonization for the region
+
+# TODO: Make puppet PUK (of Rohan if needed) be renamed to Púkel land
+
+# TODO: Update gondorian_andrast_migration to set variables on the affect provinces so that the On Action event (70001) isn't hard coded
+#			Then update that event
+
+# TODO: Update Druwaith Iaur Rebellion and Drúadan Forest Rebellion end to be handled by the utility tag
+# 			Handle flavor related to the rebellions winning?
+
+# TODO: Update South Gondor expansion (into uncolonized land) province by province - could be province events or decisions
+#			The start and big region-wide expansions would be handled by Gondor
+#				Perhaps Gondor decides on the region to focus, then South Gondor gets province events for annexation
+#			Wars over already owned provinces would still be handled by Gondor
+
+# TODO: Update return_to_south_gondor to not used a country flag
+#			Can be handled by checking if a specific province is empty and if HRD does not exist
+
+# TODO: Update the cores on Rohan to only include Calenardon
+#			Update the_center_of_the_realm to only look at those regions
+#			Remove flag GON_reclaimed_calednardhon. Is not needed
+
+# TODO: Look through country flags and see if any can be made global
+
+# TODO: Make sure that leader switch events remove council_of_gondor modifier and clears leader_visited_tomb_of_elendil flag
+
+# TODO: Update declare_steward_king so that kin_strife_is_coming is not always set (there's a way to avoid the civil war)
+
+# TODO: Update gondorian_coastal_defences so it doesn't show up if Umbar/Harad does not exist or if Gondor own Umbar
+#			Update effect to target the largest settlements and inrease port sizes to 1 higher than max
 
 # Starting Decisions
 political_decisions = {
@@ -386,7 +429,6 @@ political_decisions = {
 	
 	annex_dol_amroth = {
 		picture = "gondor_noimage"
-		# Leader is Denethor II or Boromir or Faramir
 		potential = {
 			tag = GON
 			AMR = {
@@ -1272,7 +1314,6 @@ political_decisions = {
 		allow = {
 			wilderness_1 = 1
 			war = no
-			NOT = { has_country_flag = GON_returned_to_south_gondor }
 		}
 		
 		effect = {
@@ -1801,7 +1842,7 @@ political_decisions = {
 			OR = {
 				good_evil_alignment = evil_alignment
 				AND = {
-					NOT = { good_evil_alignment = evil_alignment }
+					good_evil_alignment = good_alignment
 					ROH = { good_evil_alignment = evil_alignment }
 				}
 			}
@@ -1810,12 +1851,10 @@ political_decisions = {
 		
 		allow = {
 			NOT = { alliance_with = ROH }
-			NOT = { has_country_flag = GON_reclaimed_calednardhon }
 		}
 		
 		effect = {
 			badboy = 15
-			# TODO: Update this to specific regions once Rohan is done
 			ROH = { all_core = { add_core = GON } }
 			set_country_flag = GON_reclaimed_calednardhon
 		}
@@ -1904,7 +1943,6 @@ political_decisions = {
 		}
 		
 		effect = {
-			# TODO: Make it so this can be done once per leader
 			set_country_flag = leader_visited_tomb_of_elendil
 			
 			any_pop = {
@@ -1996,6 +2034,7 @@ political_decisions = {
 			set_country_flag = lit_the_beacons
 		}
 	}
+	
 	clear_lit_the_beacons = {
 		potential = {
 			tag = FOR
@@ -2049,8 +2088,6 @@ political_decisions = {
 			nationalvalue = ecthelion_ii
 			has_country_modifier = thorongil
 			NOT = { has_global_flag = gondor_prepared_coastal_defences }
-			# TODO: Need to fix reqs and effects
-			# TODO: Should not show up if Umbar/Harad does not exist or own Umbar
 		}
 		
 		allow = {
@@ -2059,8 +2096,6 @@ political_decisions = {
 		
 		effect = {
 			treasury = -100000
-			
-			# TODO: Make it so it increases level by 1
 			any_owned = {
 				limit = {
 					port = yes
@@ -2124,55 +2159,3 @@ political_decisions = {
 	}
 }
 
-# Reclaiming Cores Removed Via Flavor
-political_decisions = {
-	reclaim_druadan_forest = {
-		picture = "free_druadan_forest"
-		potential = {
-			tag = GON
-			NOT = { 11 = { is_core = GON } }
-			has_global_flag = GON_lost_druadan_forest
-			NOT = { has_country_modifier = low_military_recruitment }
-			NOT = { truce_with = DRU }
-		}
-		
-		allow = {
-			is_greater_power = yes
-			OR = {
-				owns = 8
-				owns = 9
-				owns = 12
-				owns = 13
-			}
-			war = no
-		}
-		
-		effect = {
-			11 = { add_core = GON }
-			
-			random_country = {
-				limit = {
-					has_country_flag = druadan_forest_freer
-				}
-				clr_country_flag = druadan_forest_freer
-				casus_belli = {
-					target = GON
-					type = humiliate
-					months = 12
-				}
-			}
-			
-			random_country = {
-				limit = {
-					tag = DRU
-				}
-				relation = {
-					who = GON
-					value = -200
-				}
-			}
-			
-			clr_global_flag = GON_lost_druadan_forest
-		}
-	}
-}

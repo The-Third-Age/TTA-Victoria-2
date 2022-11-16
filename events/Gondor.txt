@@ -1,6 +1,34 @@
 # Gondor Events: {
 # 50000 - 50099 }
 
+# TODO: Update event 50001 to remove the trigger
+#			May need to refactor to handle multiple potential wargoals
+#			Or refactor into it's own wargoal
+
+# TODO: Update events 50002/50003 so they don't fire outside of ending the war
+
+# TODO: Update event 50005 to add a general (Gotta figure out which one it would be, Adrahil or Imrahil
+
+# TODO: Group event chains together
+
+# TODO: Update event 50007 to launch event 16 years later to spawn him as a general
+#			Also make sure that the leader of Dol Amroth is of Imrahils' House
+
+# TODO: Update event 50008 to make sure that Dol Amroth's national leader is of the line of Angelimir
+
+# TODO: Update event 50010 to also work if Denethor is leader
+#			Also launch general event 16 years later
+
+# TODO: Remove flags birth_of_faramir, birth_of_imrahil and make events fire only once
+
+# TODO: Have way for Denethor to not become steward, which would make the Boromir and Faramir events spawn for Dol Amroth
+
+# TODO: Update event 50015 to handle Gondor not being good
+
+# TODO: Update event 50016 to have a better system for determining the cores of GNR
+#			May need multiple events
+#			Ensure that certain regions/ares got to GNR and certain regions/areas stay with Gondor
+
 # The Tolfalas Question
 country_event = {
 	id = 50000
@@ -201,7 +229,6 @@ country_event = {
 			aristocrats = { militancy = 2 }
 		}
 		prestige = 15
-		# TODO: Add general (Gotta figure out which one it would be; Adrahil or his father. Potentially Imrahil
 	}
 }
 
@@ -234,8 +261,7 @@ country_event = {
 	picture = birth
 	title = "An Heir Apparant"
 	desc = "EVTDESC50007"
-	
-	# Need to make sure the national leader is of Imrahil's house
+
 	trigger = {
 		year = 2955
 		tag = AMR
@@ -250,7 +276,6 @@ country_event = {
 		name = "The line is secured"
 		
 		prestige = 5
-		# Launch event 16 years later getting Imharil as a general
 		set_global_flag = birth_of_imrahil
 	}
 }
@@ -262,7 +287,6 @@ country_event = {
 	title = "A Royal Wedding"
 	desc = "EVTDESC50008"
 	
-	# Need to make sure DA's national leader is of the line of Angelimir,
 	trigger = {
 		year = 2976
 		tag = GON
@@ -326,7 +350,6 @@ country_event = {
 	trigger = {
 		year = 2978
 		tag = GON
-		# Or Denethor II
 		nationalvalue = ecthelion_ii
 		has_global_flag = wedding_denethor_finduilas
 		NOT = { has_global_flag = birth_of_boromir }
@@ -340,7 +363,6 @@ country_event = {
 		name = "The line is secured"
 		
 		prestige = 5
-		# Launch event 16 years later getting Boromir as a general
 		set_global_flag = birth_of_boromir
 	}
 }
