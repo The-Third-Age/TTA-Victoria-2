@@ -17,7 +17,6 @@ Some are obvious, others are not. Just a smallish list at the moment. It clearly
  - Update country font to include all characters
 
 ## Flavor
- - Event 50005, get the syntax for getting the general correct
  - Add option to force Sindarin renaming of everything (rather than the local name)
 
 ## Others 

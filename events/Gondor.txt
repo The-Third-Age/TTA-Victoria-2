@@ -11,15 +11,19 @@
 
 # TODO: Group event chains together
 
-# TODO: Update event 50007 to launch event 16 years later to spawn him as a general
+# TODO: Update event 50007 to launch event 16 years later to spawn him as a general and set flag stating that he's alive
 #			Also make sure that the leader of Dol Amroth is of Imrahils' House
+#			Make sure that Adrahil is alive for the birth event
 
 # TODO: Update event 50008 to make sure that Dol Amroth's national leader is of the line of Angelimir
 
 # TODO: Update event 50010 to also work if Denethor is leader
-#			Also launch general event 16 years later
+#			Also launch general event 16 years later and set flag stating that he's alive
+#			Make sure that denethor is alive for the birth events
 
 # TODO: Remove flags birth_of_faramir, birth_of_imrahil and make events fire only once
+#			Also launch general eevent 16 years later and set flag stating that he's avlie
+#			Make sure that denethor is alive for the birth events
 
 # TODO: Have way for Denethor to not become steward, which would make the Boromir and Faramir events spawn for Dol Amroth
 
@@ -28,6 +32,8 @@
 # TODO: Update event 50016 to have a better system for determining the cores of GNR
 #			May need multiple events
 #			Ensure that certain regions/ares got to GNR and certain regions/areas stay with Gondor
+
+# TODO: Event description for 50021 - 50023
 
 # The Tolfalas Question
 country_event = {
@@ -377,7 +383,6 @@ country_event = {
 	trigger = {
 		year = 2983
 		tag = GON
-		# Or Denethor II
 		nationalvalue = ecthelion_ii
 		has_global_flag = birth_of_boromir
 		NOT = { has_global_flag = birth_of_faramir }
@@ -391,7 +396,6 @@ country_event = {
 		name = "He isn't Boromir"
 		
 		prestige = 5
-		# Launch event 16 years later getting Faramir as a general
 		set_global_flag = birth_of_faramir
 	}
 }
@@ -805,3 +809,140 @@ country_event = {
 		}
 	}
 }
+
+# The Death of Ecthelion II and Coronation of Denethor II {
+# 	Currently it is assumed that Denethor II will succeed Ecthelion II as there is no way for him to die early or do other things
+# The Death of Ecthelion II
+country_event = {
+	id = 50021
+	title = "The Death of Ecthelion II"
+	desc = "EVTDESC50021"
+	picture = "gondor_leader_death"
+	fire_only_once = yes
+	
+	trigger = {
+		year = 2980
+		nationalvalue = ecthelion_ii
+		NOT = { is_substate = yes }
+	}
+	
+	mean_time_to_happen = {
+		months = 96
+		
+		modifier = {
+			factor = 0.75
+			year = 2982
+			NOT = { year = 2983 }
+		}
+		
+		modifier = {
+			factor = 0.5
+			year = 2983
+			NOT = { year = 2984 }
+		}
+		
+		modifier = {
+			factor = 0.25
+			year = 2984
+		}
+		
+		modifier = {
+			factor = 0.01
+			year = 2985
+		}
+	}
+	
+	option = {
+		name = "He will be missed"
+		
+		# Clears flags and modifiers from Ecthelion II and marks him as dead
+		set_country_flag = knows_next_leader
+		country_event = 3501
+		clr_global_flag = ecthelion_ii_alive
+		
+		# Invites non-puppet allies to the coronation
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = { is_substate = yes }
+			}
+			country_event = { id = 50022 }
+		}
+		
+		# Kills the leader for puppets with this leader
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				nationalvalue = ecthelion_ii
+			}
+			set_country_flag = knows_next_leader
+			set_country_flag = leader_interim
+			country_event = 3501
+		}
+		
+		# Sets flag so that things specific to Ecthelion II cannot be done between his death and Denethor's coronation
+		set_country_flag = leader_interim
+		
+		# Sets up the coronation
+		country_event = { id = 50023 days = 7 }
+	}
+}
+
+# The Death of Ecthelion II - Gondor's allies
+country_event = {
+	id = 50022
+	title = "The Death of Ecthelion II"
+	desc = "EVTDESC50022"
+	picture = "gondor_coronation"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will attend"
+		
+		treasury = -10000
+		prestige = 1
+	}
+	
+	option = {
+		name = "We have other matters to attend"
+		
+		relation = {
+			who = FROM
+			value = -100
+		}
+	}
+}
+
+# The Coronation of Denethor II
+country_event = {
+	id = 50023
+	title = "The Coronation of Denethor II"
+	desc = "EVTDESC50023"
+	picture = "gondor_coronation"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Long live Denethor II!"
+		
+		# Cost of the coronation, but only for the master
+		random_owned = {
+			limit = {
+				owner = { is_vassal = no }
+			}
+			treasury = -50000
+		}
+		
+		nationalvalue = denethor_ii
+		clr_country_flag = leader_interim
+		
+		# Changes the leader for any vassal with ecthelion_ii as the realm leader
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				nationalvalue = ecthelion_ii
+			}
+			country_event = 50023
+		}
+	}
+}
+# }

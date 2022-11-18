@@ -41,14 +41,8 @@
 #				Perhaps Gondor decides on the region to focus, then South Gondor gets province events for annexation
 #			Wars over already owned provinces would still be handled by Gondor
 
-# TODO: Update return_to_south_gondor to not used a country flag
-#			Can be handled by checking if a specific province is empty and if HRD does not exist
-
 # TODO: Update the cores on Rohan to only include Calenardon
 #			Update the_center_of_the_realm to only look at those regions
-#			Remove flag GON_reclaimed_calednardhon. Is not needed
-
-# TODO: Look through country flags and see if any can be made global
 
 # TODO: Make sure that leader switch events remove council_of_gondor modifier and clears leader_visited_tomb_of_elendil flag
 
@@ -56,6 +50,10 @@
 
 # TODO: Update gondorian_coastal_defences so it doesn't show up if Umbar/Harad does not exist or if Gondor own Umbar
 #			Update effect to target the largest settlements and inrease port sizes to 1 higher than max
+
+# TODO: Decisions that allow players to have leaders step down if a replacement is available
+
+# TODO: Make things specific to a leader or once per leader unable to be done while country has leader_interim flag
 
 # Starting Decisions
 political_decisions = {
@@ -123,6 +121,10 @@ political_decisions = {
 			
 			# Setting up the dead tree
 			add_country_modifier = { name = the_dead_tree duration = -1 }
+			
+			# Setting up flags stating that specific leaders are alive
+			set_global_flag = ecthelion_ii_alive
+			set_global_flag = denethor_ii_alive
 		}
 	}
 	
@@ -1314,6 +1316,7 @@ political_decisions = {
 		allow = {
 			wilderness_1 = 1
 			war = no
+			NOT = { has_country_flag = GON_returned_to_south_gondor }
 		}
 		
 		effect = {
@@ -1851,6 +1854,7 @@ political_decisions = {
 		
 		allow = {
 			NOT = { alliance_with = ROH }
+			NOT = { has_country_flag = GON_reclaimed_calednardhon }
 		}
 		
 		effect = {
@@ -1940,6 +1944,7 @@ political_decisions = {
 		allow = {
 			war = no
 			culture_2 = 1
+			NOT = { has_country_flag = leader_visited_tomb_of_elendil }
 		}
 		
 		effect = {

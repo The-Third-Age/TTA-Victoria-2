@@ -103,7 +103,18 @@ country_event = {
 		# Reset flavor specific modifiers
 		remove_country_modifier = council_of_gondor
 		
-		country_event = 3500
+		# Reset flavor specific flags
+		clr_country_flag = leader_visited_tomb_of_elendil
+		
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_country_flag = knows_next_leader } }
+			}
+			country_event = 3500
+		}
+		
+		# Make sure that we do the right thing with the leader the next time a leader dies for this realm
+		clr_country_flag = knows_next_leader
 	}
 }
 

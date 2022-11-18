@@ -2,6 +2,17 @@
 
 [Workflow Graph](https://drive.google.com/file/d/1nMP0vgwSdBK1PY2o1YaHXS6ZTQbiMbjH/view?usp=sharing) - will want to open with diagrams.net
 
+### Possible Leaders
+	Each leader has a flag stating if they are adults. Ecthelion II and Denethor II are alive at the start of the game
+	Boromir II and Faramir II are born about 20 years into the game, and 16 years after their birth, become generals. At this point they are considered alive
+
+	Generic Leader
+	Ecthelion II (starting)
+	Denethor II
+	Boromir II
+	Faramir I
+	Aragorn Elessar II
+
 ### Substate Annexation
 	Starts feudalized
 	Decisions lead down centralization - the AI will not annex Dol Amroth if railroading is enabled
