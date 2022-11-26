@@ -516,7 +516,7 @@ country_event = {
 	}
 }
 
-# Serfs getting uppity
+# Serfs getting uppity - civilised
 country_event = {
 	id = 3612
 	picture = administration
@@ -527,6 +527,7 @@ country_event = {
 
 	trigger = {
         serfdom = enforced_serfdom
+		civilized = yes
 	}
 	
 	option = {
@@ -569,36 +570,6 @@ country_event = {
 		}
 		change_variable = { which = strata_support value = -1 }
 		ai_chance = { factor = 50 }
-	}
-}
-
-# Exceptional painter
-country_event = {
-	id = 3613
-	picture = administration
-	title = "Exception Court Painter"
-	desc = "EVTDESC3613"
-
-	is_triggered_only = yes
-
-	trigger = {
-        OR = {
-            accepted_culture = men_culture
-            accepted_culture = elven_culture
-            accepted_culture = dwarven_culture
-            accepted_culture = hobbit_culture            
-        }
-	}
-	
-	option = {
-		name = "Hire them."
-		treasury = -500
-        prestige = 3
-	}
-	option = {
-		name = "Decline their services."
-        prestige = -1
-		change_variable = { which = strata_support value = -1 }
 	}
 }
 
@@ -828,5 +799,55 @@ country_event = {
 			duration = 180
 		}
 		change_variable = { which = work_ethic value = -1 }
+	}
+}
+
+# Serfs getting uppity - uncivilised
+country_event = {
+	id = 3620
+	picture = administration
+	title = "Serfs getting uppity"
+	desc = "EVTDESC3612"
+
+	is_triggered_only = yes
+
+	trigger = {
+        serfdom = enforced_serfdom
+		civilized = no
+	}
+	
+	option = {
+		name = "Improve their conditions."
+		treasury = -500
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = -1
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = -1
+		}
+		ai_chance = { factor = 45 }
+	}
+	option = {
+		name = "Force them back to work."
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = 1
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = 1
+		}
+		change_variable = { which = strata_support value = -1 }
+		ai_chance = { factor = 50 }
 	}
 }
