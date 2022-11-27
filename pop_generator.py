@@ -115,7 +115,7 @@ class Province:
                             elif culture in UNDEAD:
                                 religion = "undead"
                             else:
-                                print(f"Did not recognize {culture}")
+                                print(f"Did not recognize {culture} in {self.id}: {self.name}")
 
                             wf.write(f"\n\t{pop} = {{")
                             wf.write(f"\n\t\tculture = {culture}")
