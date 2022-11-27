@@ -26,13 +26,15 @@ political_decisions = {
 		potential = {
 			tag = ISE
 			vassal_of = GON
-			NOT = { year = 2955 }
-			NOT = { month = 3 }
 			nationalvalue = saruman
 		}
 		
 		allow = {
-			month = 1
+			NOT = { year = 2955 }
+			OR = {
+				ai = no
+				month = 1
+			}
 		}
 		
 		effect = {
@@ -56,6 +58,11 @@ political_decisions = {
 			tag = ISE
 			is_vassal = no
 			nationalvalue = saruman
+			814 = {
+				owner = {
+					is_vassal = no
+				}
+			}
 		}
 
 		allow = {
