@@ -73,6 +73,7 @@ political_decisions = {
 				limit = {
 					owner = {
 						OR = {
+							primary_culture = sindar
 							primary_culture = silvan
 							primary_culture = galadhrim
 						}
@@ -255,6 +256,46 @@ political_decisions = {
 				}
 				owner = { country_event = { id = 40040 } }
 			}
+
+			# Trolls
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = trolls
+					}
+				}
+				owner = { country_event = { id = 40042 } }
+			}
+
+			# Eagles
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = eagles
+					}
+				}
+				owner = { country_event = { id = 40044 } }
+			}
+
+			# Spiders
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = spiders
+					}
+				}
+				owner = { country_event = { id = 40046 } }
+			}
+
+			# Undead
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = undead
+					}
+				}
+				owner = { country_event = { id = 40048 } }
+			}
 		}
 	}
 	
@@ -329,6 +370,7 @@ political_decisions = {
 				limit = {
 					owner = {
 						OR = {
+							primary_culture = sindar
 							primary_culture = silvan
 							primary_culture = galadhrim
 						}
@@ -510,6 +552,46 @@ political_decisions = {
 					}
 				}
 				owner = { country_event = { id = 40041 } }
+			}
+
+			# Trolls
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = trolls
+					}
+				}
+				owner = { country_event = { id = 40043 } }
+			}
+
+			# Eagles
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = eagles
+					}
+				}
+				owner = { country_event = { id = 40045 } }
+			}
+
+			# Spiders
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = spiders
+					}
+				}
+				owner = { country_event = { id = 40047 } }
+			}
+
+			# Undead
+			random_owned = {
+				limit = {
+					owner = {
+						is_culture_group = undead
+					}
+				}
+				owner = { country_event = { id = 40049 } }
 			}
 		}
 	}
