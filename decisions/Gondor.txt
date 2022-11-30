@@ -28,12 +28,12 @@
 #			Will want to ensure that annexing any puppets from the region only happen if it's a flavor-related puppet
 #			Will want to add railroaded colonization for the region
 
-# TODO: Make puppet PUK (of Rohan if needed) be renamed to Púkel land
+# TODO: Make puppet PUK (of Rohan if needed) be renamed to Pï¿½kel land
 
 # TODO: Update gondorian_andrast_migration to set variables on the affect provinces so that the On Action event (70001) isn't hard coded
 #			Then update that event
 
-# TODO: Update Druwaith Iaur Rebellion and Drúadan Forest Rebellion end to be handled by the utility tag
+# TODO: Update Druwaith Iaur Rebellion and Drï¿½adan Forest Rebellion end to be handled by the utility tag
 # 			Handle flavor related to the rebellions winning?
 
 # TODO: Update South Gondor expansion (into uncolonized land) province by province - could be province events or decisions
@@ -202,7 +202,7 @@ political_decisions = {
 			}
 			prestige = 5
 			define_general = {
-				name = "§BForlong, §MLord of Lossarnach§!"
+				name = "ï¿½BForlong, ï¿½MLord of Lossarnachï¿½!"
 				background = lord_of_lossarnach
 				personality = stalwart
 			}
@@ -258,7 +258,7 @@ political_decisions = {
 			}
 			prestige = 7
 			define_admiral = {
-				name = "§BOrodreth, §MLord of Lebennin§!"
+				name = "ï¿½BOrodreth, ï¿½MLord of Lebenninï¿½!"
 				background = lord_of_lebennin
 				personality = tactical
 			}
@@ -367,18 +367,18 @@ political_decisions = {
 			}
 			prestige = 10
 			define_general = {
-				name = "§BAngbor, §MLord of Lamedon§!"
+				name = "ï¿½BAngbor, ï¿½MLord of Lamedonï¿½!"
 				background = lord_of_lamedon
 				personality = fearless
 			}
 			define_general = {
-				name = "§BDuinhir, §MLord of Blackroot Vale§!"
+				name = "ï¿½BDuinhir, ï¿½MLord of Blackroot Valeï¿½!"
 				background = lord_of_blackroot_vale
 				personality = resolute
 			}
 			define_general = {
 				# Dervorin's Father
-				name = "§BBorhador, §MLord of Ringló Vale§!"
+				name = "ï¿½BBorhador, ï¿½MLord of Ringlï¿½ Valeï¿½!"
 				background = lord_of_ringlo_vale
 				personality = stalwart
 			}
@@ -419,12 +419,12 @@ political_decisions = {
 			}
 			prestige = 12
 			define_general = {
-				name = "§BHirluin, §MLord of Pinnath Gelin§!"
+				name = "ï¿½BHirluin, ï¿½MLord of Pinnath Gelinï¿½!"
 				background = lord_of_pinnath_gelin
 				personality = persistent
 			}
 			define_general = {
-				name = "§BGolasgil, §MLord of Anfalas§!"
+				name = "ï¿½BGolasgil, ï¿½MLord of Anfalasï¿½!"
 				background = lord_of_anfalas
 				personality = stout
 			}
@@ -1547,7 +1547,6 @@ political_decisions = {
 				249 = { empty = yes }
 				250 = { empty = yes }
 				251 = { empty = yes }
-				252 = { empty = yes }
 				253 = { empty = yes }
 				254 = { empty = yes }
 				255 = { empty = yes }
@@ -1650,12 +1649,6 @@ political_decisions = {
 					251 = { empty = yes }
 				}
 				251 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					252 = { empty = yes }
-				}
-				252 = { secede_province = THIS }
 			}
 			random_owned = {
 				limit = {
