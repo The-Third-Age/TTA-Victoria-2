@@ -43,7 +43,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "ßBTo Dol Amrothß!"
+		name = "ßLTo Dol Amrothß!"
 		AMR = {
 			inherit = TOL
 			any_owned = {
@@ -941,6 +941,444 @@ country_event = {
 			}
 			country_event = 50023
 		}
+	}
+}
+# }
+
+# Lords of Gondor Progressing from Father to Son {
+# The Death of Farlang and new Lord of Lossarnach (Forlong)
+country_event = {
+	id = 50024
+	title = "The New Lord of Lossarnach"
+	desc = "EVTDESC50024"
+	picture = "gondor_leader_death"
+	fire_only_once = yes
+	
+	trigger = {
+		year = 2980
+		
+		OR = {
+			tag = LOS
+			AND = {
+				is_culture_group = dunedain
+				NOT = { exists = LOS }
+			}
+		}
+		
+		NOT = { year = 2985 }
+		
+		# Owns both regions of Lossarnach
+		GON_23 = { owned_by = THIS }
+		GON_27 = { owned_by = THIS }
+		
+		NOT = { has_global_flag = forlong_lord_of_lossarnach }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.01
+			year = 2984
+		}
+	}
+	
+	option = {
+		name = "Long live Forlong, Lord of Lossarnach!"
+		
+		define_general = {
+			name = "ßLFarlong, ßMLord of Lossarnachß!"
+			background = lord_of_lossarnach
+			personality = stalwart
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { is_substate = yes }
+			}
+			
+			owner = { overlord = { country_event = 50025 } }
+		}
+		
+		set_global_flag = forlong_lord_of_lossarnach
+	}
+}
+
+# Informing Overlord that Forlong is now the Lord of Lossarnach
+country_event = {
+	id = 50025
+	title = "The New Lord of Lossarnach"
+	desc = "EVTDESC50024"
+	picture = "gondor_leader_death"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Long live Forlong, Lord of Lossarnach!"
+	}
+}
+
+# The Death of Asgon and new Lord of Lamedon
+country_event = {
+	id = 50026
+	title = "The New Lord of Lamedon"
+	desc = "EVTDES50026"
+	picture = "gondor_leader_death"
+	fire_only_once = yes
+	
+	trigger = {
+		year = 2990
+		
+		OR = {
+			tag = LAM
+			AND = {
+				is_culture_group = dunedain
+				NOT = { exists = LAM }
+			}
+		}
+		
+		NOT = { year = 2995 }
+		
+		# Owns all of the regions in Lamedon except the RinglÅÛ Vale
+		GON_81 = { owned_by = THIS }
+		GON_89 = { owned_by = THIS }
+		
+		NOT = { has_global_flag = angbor_lord_of_lamedon }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.01
+			year = 2994
+		}
+	}
+	
+	option = {
+		name = "Long live Angbor, Lord of Lamedon!"
+		
+		define_general = {
+			name = "ßLAngbor, ßMLord of Lamedonß!"
+			background = lord_of_lamedon
+			personality = fearless
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { is_substate = yes }
+			}
+			
+			owner = { overlord = { country_event = 50027 } }
+		}
+		
+		set_global_flag = angbor_lord_of_lamedon
+	}
+}
+
+# Informing Overlord that Angbor is now the Lord of Lamedon
+country_event = {
+	id = 50027
+	title = "The New Lord of Lamedon"
+	desc = "EVTDESC50026"
+	picture = "gondor_leader_death"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Long live Angbor, Lord of Lamedon!"
+	}
+}
+
+# The Death of Borhador and new Lord of the RinglÛ Vale
+country_event = {
+	id = 50028
+	title = "The New Lord of the RinglÛ Vale"
+	desc = "EVTDES50028"
+	picture = "gondor_leader_death"
+	fire_only_once = yes
+	
+	trigger = {
+		year = 2990
+		
+		OR = {
+			tag = LAM
+			AND = {
+				is_culture_group = dunedain
+				NOT = { exists = LAM }
+			}
+		}
+		
+		NOT = { year = 2995 }
+		
+		# Owns the RinglÛ Vale
+		GON_92 = { owned_by = THIS }
+		
+		NOT = { has_global_flag = dervorin_lord_of_the_ringlo_vale }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.01
+			year = 2994
+		}
+	}
+	
+	option = {
+		name = "Long live Dervorin, Lord of the RinglÛ Vale!"
+		
+		define_general = {
+			name = "ßLDervorin, ßMLord of the RinglÛ Valeß!"
+			background = lord_of_ringlo_vale
+			personality = stalwart
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { is_substate = yes }
+			}
+			
+			owner = { overlord = { country_event = 50029 } }
+		}
+		
+		set_global_flag = dervorin_lord_of_the_ringlo_vale
+	}
+}
+
+# Informing Overlord that Dervorin is now the Lord of the RinglÛ Vale
+country_event = {
+	id = 50029
+	title = "The New Lord of the RinglÛ Vale"
+	desc = "EVTDESC50028"
+	picture = "gondor_leader_death"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Long live Dervorin, Lord of the RinglÛ Vale!"
+	}
+}
+
+# The Death of Duinmir and new Lord of the Blackroot Vale
+country_event = {
+	id = 50030
+	title = "The New Lord of the Blackroot Vale"
+	desc = "EVTDES50030"
+	picture = "gondor_leader_death"
+	fire_only_once = yes
+	
+	trigger = {
+		year = 2970
+		
+		OR = {
+			tag = MRN
+			AND = {
+				tag = LAM
+				NOT = { exist = MRN }
+			}
+			AND = {
+				is_culture_group = dunedain
+				NOT = { exists = MRN }
+				NOT = { exists = LAM }
+			}
+		}
+		
+		NOT = { year = 2975 }
+		
+		# Owns the Blackroot Vale
+		GON_98 = { owned_by = THIS }
+		GON_102 = { owned_by = THIS }
+		GON_105 = { owned_by = THIS }
+		GON_114 = { owned_by = THIS }
+		
+		NOT = { has_global_flag = duinhir_lord_of_the_blackroot_vale }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.01
+			year = 2974
+		}
+	}
+	
+	option = {
+		name = "Long live Duinhir, Lord of the RinglÛ Vale!"
+		
+		define_general = {
+			name = "ßLDuinhir, ßMLord of the RinglÛ Valeß!"
+			background = lord_of_ringlo_vale
+			personality = stalwart
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { is_substate = yes }
+			}
+			
+			owner = { overlord = { country_event = 50031 } }
+		}
+		
+		set_global_flag = duinhir_lord_of_the_blackroot_vale
+	}
+}
+
+# Informing Overlord that Duinhir is now the Lord of the RinglÛ Vale
+country_event = {
+	id = 50031
+	title = "The New Lord of the RinglÛ Vale"
+	desc = "EVTDESC50030"
+	picture = "gondor_leader_death"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Long live Duinhir, Lord of the RinglÛ Vale!"
+	}
+}
+
+# The Death of Hirgon and new Lord of Pinnath Gelin
+country_event = {
+	id = 50032
+	title = "The New Lord of Pinnath Gelin"
+	desc = "EVTDES50032"
+	picture = "gondor_leader_death"
+	fire_only_once = yes
+	
+	trigger = {
+		year = 3000
+		
+		OR = {
+			tag = ANF
+			AND = {
+				is_culture_group = dunedain
+				NOT = { exists = ANF }
+			}
+		}
+		
+		NOT = { year = 3005 }
+		
+		# Owns Pinnath Gelin
+		GON_118 = { owned_by = THIS }
+		GON_123 = { owned_by = THIS }
+		GON_154 = { owned_by = THIS }
+		
+		NOT = { has_global_flag = hirluin_lord_of_pinnath_gelin }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.01
+			year = 3004
+		}
+	}
+	
+	option = {
+		name = "Long live Hirluin, Lord of Pinnath Gelin!"
+		
+		define_general = {
+			name = "ßLHirluin, ßMLord of Pinnath Gelinß!"
+			background = lord_of_pinnath_gelin
+			personality = persistent
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { is_substate = yes }
+			}
+			
+			owner = { overlord = { country_event = 50033 } }
+		}
+		
+		set_global_flag = hirluin_lord_of_pinnath_gelin
+	}
+}
+
+# Informing Overlord that Hirluin is now the Lord of Pinnath Gelin
+country_event = {
+	id = 50033
+	title = "The New Lord of the Pinnath Gelin"
+	desc = "EVTDESC50032"
+	picture = "gondor_leader_death"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Long live Hirluin, Lord of Pinnath Gelin!"
+	}
+}
+
+# The Death of Gundor and new Lord of Anfalas
+country_event = {
+	id = 50034
+	title = "The New Lord of Anfalas"
+	desc = "EVTDES50034"
+	picture = "gondor_leader_death"
+	fire_only_once = yes
+	
+	trigger = {
+		year = 2995
+		
+		OR = {
+			tag = ANF
+			AND = {
+				is_culture_group = dunedain
+				NOT = { exists = ANF }
+			}
+		}
+		
+		NOT = { year = 3000 }
+		
+		# Owns Anfalas
+		GON_78 = { owned_by = THIS }
+		GON_133 = { owned_by = THIS }
+		GON_134 = { owned_by = THIS }
+		GON_146 = { owned_by = THIS }
+		
+		NOT = { has_global_flag = golasgil_lord_of_anfalas }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.01
+			year = 2999
+		}
+	}
+	
+	option = {
+		name = "Long live Golasgil, Lord of Anfalas!"
+		
+		define_general = {
+			name = "ßLGolasgil, ßMLord of Anfalasß!"
+			background = lord_of_anfalas
+			personality = stout
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { is_substate = yes }
+			}
+			
+			owner = { overlord = { country_event = 50035 } }
+			owner = { prestige = 1 }
+		}
+		
+		set_global_flag = golasgil_lord_of_anfalas
+	}
+}
+
+# Informing Overlord that Golasgil is now the Lord of Anfalas
+country_event = {
+	id = 50035
+	title = "The New Lord of the Anfalas"
+	desc = "EVTDESC50034"
+	picture = "gondor_leader_death"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Long live Golasgil, Lord of Anfalas!"
 	}
 }
 # }

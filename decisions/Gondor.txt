@@ -55,8 +55,6 @@
 
 # TODO: Make things specific to a leader or once per leader unable to be done while country has leader_interim flag
 
-# TODO: Make annex_lamedon give Asgon if the Angbor is not yet the Lord of Lamedon (2980)
-
 # Starting Decisions
 political_decisions = {
 	gondor_start_decision = {
@@ -201,10 +199,27 @@ political_decisions = {
 				remove_core = LOS
 			}
 			prestige = 5
-			define_general = {
-				name = "§BForlong, §MLord of Lossarnach§!"
-				background = lord_of_lossarnach
-				personality = stalwart
+			
+			random_owned = {
+				limit = {
+					owner = { NOT = { has_global_flag = forlong_lord_of_lossarnach } }
+				}
+				define_general = {
+					name = "§LFarlong, §MLord of Lossarnach§!"
+					background = lord_of_lossarnach
+					personality = stalwart
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = forlong_lord_of_lossarnach }
+				}
+				define_general = {
+					name = "§LForlong, §MLord of Lossarnach§!"
+					background = lord_of_lossarnach
+					personality = stalwart
+				}
 			}
 		}
 	}
@@ -249,6 +264,26 @@ political_decisions = {
 					remove_core = MRN
 					aristocrats = { militancy = 2 }
 				}
+			
+				random_owned = {
+					limit = { owner = { NOT = { has_global_flag = duinhir_lord_of_the_blackroot_vale } } }
+					
+					define_general = {
+						name = "§LBorhador, §MLord of Ringló Vale§!"
+						background = lord_of_ringlo_vale
+						personality = stalwart
+					}
+				}
+				
+				random_owned = {
+					limit = { has_global_flag = duinhir_lord_of_the_blackroot_vale }
+			
+					define_general = {
+						name = "§LDuinhir, §MLord of the Ringló Vale§!"
+						background = lord_of_ringlo_vale
+						personality = stalwart
+					}
+				}
 			}
 			any_owned = {
 				limit = { is_core = LEB }
@@ -258,7 +293,7 @@ political_decisions = {
 			}
 			prestige = 7
 			define_admiral = {
-				name = "§BOrodreth, §MLord of Lebennin§!"
+				name = "§LOrodreth, §MLord of Lebennin§!"
 				background = lord_of_lebennin
 				personality = tactical
 			}
@@ -366,21 +401,65 @@ political_decisions = {
 				aristocrats = { militancy = 2 }
 			}
 			prestige = 10
-			define_general = {
-				name = "§BAngbor, §MLord of Lamedon§!"
-				background = lord_of_lamedon
-				personality = fearless
+			
+			random_owned = {
+				limit = { owner = { NOT = { has_global_flag = angbor_lord_of_lamedon } } }
+			
+				define_general = {
+					name = "§LAsgon, §MLord of Lamedon§!"
+					background = lord_of_lamedon
+					personality = fearless
+				}
 			}
-			define_general = {
-				name = "§BDuinhir, §MLord of Blackroot Vale§!"
-				background = lord_of_blackroot_vale
-				personality = resolute
+			
+			random_owned = {
+				limit = {  has_global_flag = angbor_lord_of_lamedon }
+		
+				define_general = {
+					name = "§LAngbor, §MLord of Lamedon§!"
+					background = lord_of_lamedon
+					personality = fearless
+				}
 			}
-			define_general = {
-				# Dervorin's Father
-				name = "§BBorhador, §MLord of Ringló Vale§!"
-				background = lord_of_ringlo_vale
-				personality = stalwart
+			
+			random_owned = {
+				limit = { owner = { NOT = { has_global_flag = dervorin_lord_of_the_ringlo_vale } } }
+		
+				define_general = {
+					name = "§LDervorin, §MLord of the Blackroot Vale§!"
+					background = lord_of_ringlo_vale
+					personality = stalwart
+				}
+			}
+			
+			random_owned = {
+				limit = { has_global_flag = dervorin_lord_of_the_ringlo_vale }
+				
+				define_general = {
+					name = "§LDuinmir, §MLord of Blackroot Vale§!"
+					background = lord_of_blackroot_vale
+					personality = resolute
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { NOT = { has_global_flag = duinhir_lord_of_the_blackroot_vale } } }
+				
+				define_general = {
+					name = "§LBorhador, §MLord of Ringló Vale§!"
+					background = lord_of_ringlo_vale
+					personality = stalwart
+				}
+			}
+			
+			random_owned = {
+				limit = { has_global_flag = duinhir_lord_of_the_blackroot_vale }
+		
+				define_general = {
+					name = "§LDuinhir, §MLord of the Ringló Vale§!"
+					background = lord_of_ringlo_vale
+					personality = stalwart
+				}
 			}
 		}
 	}
@@ -418,15 +497,45 @@ political_decisions = {
 				aristocrats = { militancy = 2 }
 			}
 			prestige = 12
-			define_general = {
-				name = "§BHirluin, §MLord of Pinnath Gelin§!"
-				background = lord_of_pinnath_gelin
-				personality = persistent
+			
+			random_owned = {
+				limit = { owner = { NOT = { has_global_flag = hirluin_lord_of_pinnath_gelin } } }
+			
+				define_general = {
+					name = "§LHirgon, §MLord of Pinnath Gelin§!"
+					background = lord_of_pinnath_gelin
+					personality = persistent
+				}
 			}
-			define_general = {
-				name = "§BGolasgil, §MLord of Anfalas§!"
-				background = lord_of_anfalas
-				personality = stout
+			
+			random_owned = {
+				limit = { has_global_flag = hirluin_lord_of_pinnath_gelin }
+			
+				define_general = {
+					name = "§LHirluin, §MLord of Pinnath Gelin§!"
+					background = lord_of_pinnath_gelin
+					personality = persistent
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { NOT = { has_global_flag = golasgil_lord_of_anfalas } } }
+			
+				define_general = {
+					name = "§LGundor, §MLord of Anfalas§!"
+					background = lord_of_anfalas
+					personality = stout
+				}
+			}
+			
+			random_owned = {
+				limit = { has_global_flag = golasgil_lord_of_anfalas }
+			
+				define_general = {
+					name = "§LGolasgil, §MLord of Anfalas§!"
+					background = lord_of_anfalas
+					personality = stout
+				}
 			}
 		}
 	}

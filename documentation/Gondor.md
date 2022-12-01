@@ -246,6 +246,35 @@
 	Global Flags:
 		Clears ecthelion_ii_alive, marking him as dead
 	
+	#### The Death of the Lords of Gondor
+	 - Triggered by their old age
+	50024 - The death of Farlang and the New Lord of Lossarnach
+	50025 - 50024 for the overlord (if existing)
+	50026 - The Death of Asgon and the New Lord of Lamedon
+	50027 - 50026 for the overlord (if existing)
+	50028 - The Death of Borhador and the New Lord of the Ringló Vale
+	50029 - 50028 for the overlord (if existing)
+	50030 - The Death of Duinmir and the New Lord of the Blackroot Vale
+	50031 - 50030 for the overlord (if existing)
+	50032 - The Death of Hirgon and the New Lord of Pinnath Gelin
+	50033 - 50032 for the overlord (if existing)
+	50034 - The Death of Gundor and the New Lord of Anfalas
+	50035 - 50034 for the overlord (if existing)
+	
+	Global Flags:
+		Sets forlong_lord_of_lossarnach
+			To determine in annex_lossarnach which general to give Gondor
+		Sets angbor_lord_of_lamedon
+			To determine in annex_lamedon which general to give Gondor
+		Sets dervorin_lord_of_the_ringlo_vale
+			To determine in annex_lamedon which general to give Gondor
+		Sets duinhir_lord_of_the_blackroot_vale
+			To determine in annex_lebennin/annex_lamedon which general to give Lamedon/Gondor
+		Sets hirluin_lord_of_pinnath_gelin
+			To determine in annex_anfalas which general to give Gondor
+		Sets golasgil_lord_of_anfalas
+			To determine in annex_anfalas which general to give Gondor
+	
 	150000 - Starts the Andrast war
 	150001 - Starts Gondor's wars liberating South Gondor's cores
 	150002 - Setups PUK's rebellion
