@@ -1382,3 +1382,77 @@ country_event = {
 	}
 }
 # }
+
+# Noble Houses Fighting
+province_event = {
+	id = 50036
+	title = "An Argument Between Two Noble Houses"
+	desc = "EVTDESC50036"
+	
+	trigger = {
+		owner = {
+			OR = {
+				accepted_culture = gondorian
+				primary_culture = gondorian
+			}
+		}
+		
+		any_neighbor_province = { 
+			owned_by = THIS
+			is_core = THIS
+		}
+		
+		is_core = THIS
+	}
+	
+	mean_time_to_happen = {
+		months = 2400
+	}
+	
+	option = {
+		name = "We agree with §B$PROVINCENAME$"
+		
+		random_neighbor_province = {
+			limit = {
+				owned_by = THIS
+				is_core = THIS
+			}
+			
+			aristocrats = { militancy = 5 }
+		}
+	}
+	
+	option = {
+		name = "We do not agree with §B$PROVINCENAME$"
+		
+		aristocrats = { militancy = 5 }
+	}
+}
+
+# Dallok Game
+province_event = {
+	id = 50037
+	title = "A Game of Dallok"
+	desc = "EVTDESC50037"
+	
+	trigger = {
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
+		
+		owner = { is_culture_group = dunedain }
+	}
+	
+	mean_time_to_happen = {
+		months = 2400
+	}
+	
+	option = {
+		name = "That sounds like fun!"
+		
+		any_pop = {
+			militancy = -3
+		}
+	}
+}

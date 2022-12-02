@@ -275,6 +275,9 @@
 		Sets golasgil_lord_of_anfalas
 			To determine in annex_anfalas which general to give Gondor
 	
+	50036 - Noble Houses Fighting
+	50037 - A Game of Dallok
+	
 	150000 - Starts the Andrast war
 	150001 - Starts Gondor's wars liberating South Gondor's cores
 	150002 - Setups PUK's rebellion
