@@ -1,6 +1,17 @@
 ############################
 # INFANTRY_TECH INVENTIONS #
 ############################
+standardised_infantry_equipment = {
+	limit = { infantry_tech_2 = 1 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		factory_goods_throughput = {
+			melee_gear = 0.10
+		}
+	}
+}
 competition_infantry = {
 	limit = { infantry_tech_3 = 1 }
 	chance = {
@@ -47,6 +58,17 @@ barbed_arrows = {
 	effect = {
 		archers = {
 			support = 1
+		}
+	}
+}
+standardised_archery_equipment = {
+	limit = { archer_tech_2 = 1 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		factory_goods_throughput = {
+			ranged_gear = 0.10
 		}
 	}
 }
@@ -120,9 +142,40 @@ war_arrows = {
 		}
 	}
 }
+fire_arrows = {
+	limit = { archer_tech_5 = 1 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		archers = {
+			siege = 0.25
+		}
+	}
+}
 ###########################
 # CAVALRY_TECH INVENTIONS #
 ###########################
+animal_husbandry = {
+	limit = { cavalry_tech_1 = 1 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		farm_rgo_eff = 0.05
+	}
+}
+standardised_horse_rearing = {
+	limit = { cavalry_tech_2 = 1 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		factory_goods_throughput = {
+			horses = 0.10
+		}
+	}
+}
 competition_cavalry = {
 	limit = { cavalry_tech_3 = 3 }
 	chance = {
@@ -135,6 +188,17 @@ competition_cavalry = {
 #############################
 # ARTILLERY_TECH INVENTIONS #
 #############################
+standardised_artillery_construction = {
+	limit = { cavalry_tech_2 = 1 }
+	chance = {
+		base = 1
+	}
+	effect = {
+		factory_goods_throughput = {
+			artillery = 0.10
+		}
+	}
+}
 competition_artillery = {
 	limit = { artillery_tech_3 = 3 }
 	chance = {
