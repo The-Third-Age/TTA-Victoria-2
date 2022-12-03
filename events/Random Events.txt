@@ -12,6 +12,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		money = 10000
 	}
 	
@@ -54,6 +57,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		money = 15000
 	}
 	
@@ -106,6 +112,12 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
+	}
+	
 	option = {
 		name = "I've better things to do than play golf!"
 		
@@ -138,6 +150,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		money = 15000
 	}
 	
@@ -180,6 +195,12 @@ country_event = {
 	desc = "EVTDESC3604"
 	
 	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
+	}
 
 	option = {
 		name = "No. This court does not take bribes."
@@ -202,7 +223,10 @@ country_event = {
 country_event = {
 	id = 3605
 
-	trigger = { 
+	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		civilized = yes
 	}
 
@@ -257,6 +281,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 	}
 	
 	option = {
@@ -301,6 +328,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
         OR = {
             good_evil_alignment = good_alignment
             good_evil_alignment = evil_alignment
@@ -370,6 +400,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
         # % of max infamy
         badboy = 0.6
 	}
@@ -395,6 +428,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
         NOT = { has_country_modifier = just }
 	}
 	
@@ -442,6 +478,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
         money = 1500
 	}
 	
@@ -478,6 +517,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
         vote_franschise = none_voting
 	}
 	
@@ -526,6 +568,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
         serfdom = enforced_serfdom
 		civilized = yes
 	}
@@ -583,6 +628,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
         OR = {
             accepted_culture = men_culture
             accepted_culture = elven_culture
@@ -613,6 +661,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		poor_strata_everyday_needs = 0.5
 		NOT = { unemployment = 0.2 }
 	}
@@ -644,6 +695,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		NOT = { poor_strata_life_needs = 0.8 }
 	}
 	
@@ -678,6 +732,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		NOT = {
 			poor_strata_life_needs = 0.9
 		}
@@ -720,6 +777,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		NOT = { poor_strata_everyday_needs = 0.8 }
 	}
 	
@@ -746,6 +806,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		any_owned_province = {
 			port = yes
 		}
@@ -779,6 +842,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
 		any_owned_province = {
 			is_capital = no
 		}
@@ -812,6 +878,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
         serfdom = enforced_serfdom
 		civilized = no
 	}
