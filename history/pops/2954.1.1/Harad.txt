@@ -9,13 +9,8 @@
 # ~10-20% urban population ( partly artisans, craftsmen, clerks, soldiers )
 # ~90% rural population ( ~10-30% free peasants, ~30-50% serfs, possibly also slaves )
 
-# Abârloni
+# AbÃ¢rloni
 256 = {
-	aristocrats = {
-		culture = harnendan
-		religion = men
-		size = 1800
-	}
 	aristocrats = {
 		culture = umbarrim
 		religion = men
@@ -26,10 +21,10 @@
 		religion = men
 		size = 4500
 	}
-	artisans = {
+	aristocrats = {
 		culture = harnendan
 		religion = men
-		size = 12000
+		size = 1800
 	}
 	artisans = {
 		culture = umbarrim
@@ -41,10 +36,10 @@
 		religion = men
 		size = 12000
 	}
-	bureaucrats = {
+	artisans = {
 		culture = harnendan
 		religion = men
-		size = 600
+		size = 12000
 	}
 	bureaucrats = {
 		culture = umbarrim
@@ -56,13 +51,13 @@
 		religion = men
 		size = 1500
 	}
+	bureaucrats = {
+		culture = harnendan
+		religion = men
+		size = 600
+	}
 	capitalists = {
 		culture = black_numenorean
-		religion = men
-		size = 300
-	}
-	clergymen = {
-		culture = harnendan
 		religion = men
 		size = 300
 	}
@@ -76,6 +71,11 @@
 		religion = men
 		size = 2400
 	}
+	clergymen = {
+		culture = harnendan
+		religion = men
+		size = 300
+	}
 	craftsmen = {
 		culture = umbarrim
 		religion = men
@@ -86,10 +86,20 @@
 		religion = men
 		size = 150
 	}
-	slaves = {
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 35760
+	}
+	labourers = {
+		culture = black_numenorean
+		religion = men
+		size = 35760
+	}
+	labourers = {
 		culture = harnendan
 		religion = men
-		size = 84000
+		size = 17880
 	}
 	slaves = {
 		culture = umbarrim
@@ -97,48 +107,38 @@
 		size = 24000
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 3600
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 8400
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 3600
+		size = 84000
+	}
+	soldiers = {
+		culture = umbarrim
+		religion = men
+		size = 6000
+	}
+	soldiers = {
+		culture = black_numenorean
+		religion = men
+		size = 6000
 	}
 	soldiers = {
 		culture = harnendan
 		religion = men
 		size = 3000
 	}
-	soldiers = {
-		culture = umbarrim
-		religion = men
-		size = 6000
-	}
-	soldiers = {
-		culture = black_numenorean
-		religion = men
-		size = 6000
-	}
-	labourers = {
-		culture = harnendan
-		religion = men
-		size = 17880
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 35760
-	}
-	labourers = {
-		culture = black_numenorean
-		religion = men
-		size = 35760
-	}
 }
 
-# Sûk Óda
+# SÃ»k Ã“da
 257 = {
 	aristocrats = {
 		culture = umbarrim
@@ -160,10 +160,10 @@
 		religion = men
 		size = 200
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 3200
+		size = 25480
 	}
 	slaves = {
 		culture = umbarrim
@@ -171,28 +171,28 @@
 		size = 1600
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 640
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 2560
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 640
+		size = 3200
 	}
 	soldiers = {
 		culture = umbarrim
 		religion = men
 		size = 1200
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 25480
-	}
 }
 
-# Kás Shafrá
+# KÃ¡s ShafrÃ¡
 258 = {
 	aristocrats = {
 		culture = umbarrim
@@ -214,10 +214,10 @@
 		religion = men
 		size = 300
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 4800
+		size = 38220
 	}
 	slaves = {
 		culture = umbarrim
@@ -225,28 +225,28 @@
 		size = 2400
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 960
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 3840
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 960
+		size = 4800
 	}
 	soldiers = {
 		culture = umbarrim
 		religion = men
 		size = 1800
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 38220
-	}
 }
 
-# Sûkh an-Khôr
+# SÃ»kh an-KhÃ´r
 259 = {
 	aristocrats = {
 		culture = umbarrim
@@ -268,10 +268,10 @@
 		religion = men
 		size = 400
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 3200
+		size = 50960
 	}
 	slaves = {
 		culture = umbarrim
@@ -279,28 +279,28 @@
 		size = 4800
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 1600
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 6400
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 1600
+		size = 3200
 	}
 	soldiers = {
 		culture = umbarrim
 		religion = men
 		size = 2400
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 50960
-	}
 }
 
-# Sûk Asní
+# SÃ»k AsnÃ­
 260 = {
 	aristocrats = {
 		culture = umbarrim
@@ -322,10 +322,10 @@
 		religion = men
 		size = 400
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 3200
+		size = 50960
 	}
 	slaves = {
 		culture = umbarrim
@@ -333,28 +333,28 @@
 		size = 4800
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 1600
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 6400
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 1600
+		size = 3200
 	}
 	soldiers = {
 		culture = umbarrim
 		religion = men
 		size = 2400
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 50960
-	}
 }
 
-# Dibís
+# DibÃ­s
 261 = {
 	aristocrats = {
 		culture = umbarrim
@@ -376,10 +376,10 @@
 		religion = men
 		size = 250
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 2000
+		size = 32100
 	}
 	slaves = {
 		culture = umbarrim
@@ -387,28 +387,28 @@
 		size = 3000
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 1000
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 4000
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 1000
+		size = 2000
 	}
 	soldiers = {
 		culture = umbarrim
 		religion = men
 		size = 1500
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 32100
-	}
 }
 
-# Números
+# NÃºmeros
 262 = {
 	aristocrats = {
 		culture = umbarrim
@@ -430,10 +430,10 @@
 		religion = men
 		size = 250
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 2000
+		size = 32100
 	}
 	slaves = {
 		culture = umbarrim
@@ -441,24 +441,24 @@
 		size = 3000
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 1000
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 4000
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 1000
+		size = 2000
 	}
 	soldiers = {
 		culture = umbarrim
 		religion = men
 		size = 1500
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 32100
 	}
 }
 
@@ -504,10 +504,20 @@
 		religion = men
 		size = 128
 	}
-	slaves = {
-		culture = gondorian
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 20000
+		size = 9088
+	}
+	labourers = {
+		culture = black_numenorean
+		religion = men
+		size = 13632
+	}
+	slaves = {
+		culture = umbarrim
+		religion = men
+		size = 12000
 	}
 	slaves = {
 		culture = amrothian
@@ -515,9 +525,9 @@
 		size = 8000
 	}
 	slaves = {
-		culture = umbarrim
+		culture = gondorian
 		religion = men
-		size = 12000
+		size = 20000
 	}
 	soldiers = {
 		culture = umbarrim
@@ -529,19 +539,9 @@
 		religion = men
 		size = 3840
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 9088
-	}
-	labourers = {
-		culture = black_numenorean
-		religion = men
-		size = 13632
-	}
 }
 
-# Caldûr
+# CaldÃ»r
 264 = {
 	aristocrats = {
 		culture = umbarrim
@@ -578,10 +578,10 @@
 		religion = men
 		size = 80
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 3000
+		size = 67200
 	}
 	slaves = {
 		culture = umbarrim
@@ -589,24 +589,24 @@
 		size = 4500
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 1500
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 6000
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 1500
+		size = 3000
 	}
 	soldiers = {
 		culture = umbarrim
 		religion = men
 		size = 4000
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 67200
 	}
 }
 
@@ -652,10 +652,15 @@
 		religion = men
 		size = 280
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 4200
+		size = 76860
+	}
+	labourers = {
+		culture = black_numenorean
+		religion = men
+		size = 8540
 	}
 	slaves = {
 		culture = umbarrim
@@ -663,14 +668,19 @@
 		size = 6300
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 2100
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 8400
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 2100
+		size = 4200
 	}
 	soldiers = {
 		culture = umbarrim
@@ -682,16 +692,6 @@
 		religion = men
 		size = 560
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 76860
-	}
-	labourers = {
-		culture = black_numenorean
-		religion = men
-		size = 8540
-	}
 }
 
 # Isigir
@@ -699,7 +699,7 @@
 	aristocrats = {
 		culture = umbarrim
 		religion = men
-		size = 3599
+		size = 3600
 	}
 	aristocrats = {
 		culture = black_numenorean
@@ -736,10 +736,15 @@
 		religion = men
 		size = 880
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 6000
+		size = 96480
+	}
+	labourers = {
+		culture = black_numenorean
+		religion = men
+		size = 24120
 	}
 	slaves = {
 		culture = umbarrim
@@ -747,14 +752,19 @@
 		size = 9000
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 3000
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 12000
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 3000
+		size = 6000
 	}
 	soldiers = {
 		culture = umbarrim
@@ -766,19 +776,9 @@
 		religion = men
 		size = 1800
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 96480
-	}
-	labourers = {
-		culture = black_numenorean
-		religion = men
-		size = 24120
-	}
 }
 
-# Barazôn
+# BarazÃ´n
 267 = {
 	aristocrats = {
 		culture = umbarrim
@@ -820,10 +820,15 @@
 		religion = men
 		size = 352
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 4800
+		size = 86784
+	}
+	labourers = {
+		culture = black_numenorean
+		religion = men
+		size = 21696
 	}
 	slaves = {
 		culture = umbarrim
@@ -831,14 +836,19 @@
 		size = 7200
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 2400
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 9600
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 2400
+		size = 4800
 	}
 	soldiers = {
 		culture = umbarrim
@@ -850,19 +860,9 @@
 		religion = men
 		size = 960
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 86784
-	}
-	labourers = {
-		culture = black_numenorean
-		religion = men
-		size = 21696
-	}
 }
 
-# Bûr Anwarmen
+# BÃ»r Anwarmen
 268 = {
 	aristocrats = {
 		culture = umbarrim
@@ -904,10 +904,15 @@
 		religion = men
 		size = 550
 	}
-	slaves = {
-		culture = harnendan
+	labourers = {
+		culture = umbarrim
 		religion = men
-		size = 6600
+		size = 117919
+	}
+	labourers = {
+		culture = black_numenorean
+		religion = men
+		size = 29479
 	}
 	slaves = {
 		culture = umbarrim
@@ -915,14 +920,19 @@
 		size = 9900
 	}
 	slaves = {
+		culture = amrothian
+		religion = men
+		size = 3300
+	}
+	slaves = {
 		culture = gondorian
 		religion = men
 		size = 13200
 	}
 	slaves = {
-		culture = amrothian
+		culture = harnendan
 		religion = men
-		size = 3300
+		size = 6600
 	}
 	soldiers = {
 		culture = umbarrim
@@ -933,16 +943,6 @@
 		culture = black_numenorean
 		religion = men
 		size = 1540
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 117920
-	}
-	labourers = {
-		culture = black_numenorean
-		religion = men
-		size = 29480
 	}
 }
 
@@ -1003,20 +1003,30 @@
 		religion = men
 		size = 400
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 50399
+	}
+	labourers = {
+		culture = black_numenorean
+		religion = men
+		size = 33599
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
 		size = 60000
 	}
 	slaves = {
-		culture = gondorian
-		religion = men
-		size = 100000
-	}
-	slaves = {
 		culture = amrothian
 		religion = men
 		size = 40000
+	}
+	slaves = {
+		culture = gondorian
+		religion = men
+		size = 100000
 	}
 	soldiers = {
 		culture = umbarrim
@@ -1027,16 +1037,6 @@
 		culture = black_numenorean
 		religion = men
 		size = 16000
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 50400
-	}
-	labourers = {
-		culture = black_numenorean
-		religion = men
-		size = 33600
 	}
 }
 
@@ -1082,31 +1082,6 @@
 		religion = men
 		size = 360
 	}
-	slaves = {
-		culture = umbarrim
-		religion = men
-		size = 4800
-	}
-	slaves = {
-		culture = gondorian
-		religion = men
-		size = 6000
-	}
-	slaves = {
-		culture = amrothian
-		religion = men
-		size = 1200
-	}
-	soldiers = {
-		culture = umbarrim
-		religion = men
-		size = 1679
-	}
-	soldiers = {
-		culture = black_numenorean
-		religion = men
-		size = 720
-	}
 	labourers = {
 		culture = umbarrim
 		religion = men
@@ -1117,9 +1092,34 @@
 		religion = men
 		size = 9000
 	}
+	slaves = {
+		culture = umbarrim
+		religion = men
+		size = 4800
+	}
+	slaves = {
+		culture = amrothian
+		religion = men
+		size = 1200
+	}
+	slaves = {
+		culture = gondorian
+		religion = men
+		size = 6000
+	}
+	soldiers = {
+		culture = umbarrim
+		religion = men
+		size = 1680
+	}
+	soldiers = {
+		culture = black_numenorean
+		religion = men
+		size = 720
+	}
 }
 
-# Pellardûr
+# PellardÃ»r
 272 = {
 	aristocrats = {
 		culture = umbarrim
@@ -1154,37 +1154,12 @@
 	clergymen = {
 		culture = umbarrim
 		religion = men
-		size = 899
+		size = 900
 	}
 	clergymen = {
 		culture = black_numenorean
 		religion = men
 		size = 600
-	}
-	slaves = {
-		culture = umbarrim
-		religion = men
-		size = 4500
-	}
-	slaves = {
-		culture = gondorian
-		religion = men
-		size = 7500
-	}
-	slaves = {
-		culture = amrothian
-		religion = men
-		size = 3000
-	}
-	soldiers = {
-		culture = umbarrim
-		religion = men
-		size = 3200
-	}
-	soldiers = {
-		culture = black_numenorean
-		religion = men
-		size = 800
 	}
 	labourers = {
 		culture = umbarrim
@@ -1196,9 +1171,34 @@
 		religion = men
 		size = 11250
 	}
+	slaves = {
+		culture = umbarrim
+		religion = men
+		size = 4500
+	}
+	slaves = {
+		culture = amrothian
+		religion = men
+		size = 3000
+	}
+	slaves = {
+		culture = gondorian
+		religion = men
+		size = 7500
+	}
+	soldiers = {
+		culture = umbarrim
+		religion = men
+		size = 3200
+	}
+	soldiers = {
+		culture = black_numenorean
+		religion = men
+		size = 800
+	}
 }
 
-# Ardûmir
+# ArdÃ»mir
 273 = {
 	aristocrats = {
 		culture = umbarrim
@@ -1240,20 +1240,30 @@
 		religion = men
 		size = 840
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 63000
+	}
+	labourers = {
+		culture = black_numenorean
+		religion = men
+		size = 15750
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
 		size = 6300
 	}
 	slaves = {
-		culture = gondorian
-		religion = men
-		size = 10500
-	}
-	slaves = {
 		culture = amrothian
 		religion = men
 		size = 4200
+	}
+	slaves = {
+		culture = gondorian
+		religion = men
+		size = 10500
 	}
 	soldiers = {
 		culture = umbarrim
@@ -1265,16 +1275,6 @@
 		religion = men
 		size = 1120
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 63000
-	}
-	labourers = {
-		culture = black_numenorean
-		religion = men
-		size = 15750
-	}
 }
 
 # Dol Annabrith
@@ -1282,7 +1282,7 @@
 	aristocrats = {
 		culture = umbarrim
 		religion = men
-		size = 3239
+		size = 3240
 	}
 	aristocrats = {
 		culture = black_numenorean
@@ -1312,12 +1312,22 @@
 	clergymen = {
 		culture = umbarrim
 		religion = men
-		size = 1619
+		size = 1620
 	}
 	clergymen = {
 		culture = black_numenorean
 		religion = men
 		size = 1080
+	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 72359
+	}
+	labourers = {
+		culture = black_numenorean
+		religion = men
+		size = 18089
 	}
 	slaves = {
 		culture = umbarrim
@@ -1325,14 +1335,14 @@
 		size = 14400
 	}
 	slaves = {
-		culture = gondorian
-		religion = men
-		size = 18000
-	}
-	slaves = {
 		culture = amrothian
 		religion = men
 		size = 3600
+	}
+	slaves = {
+		culture = gondorian
+		religion = men
+		size = 18000
 	}
 	soldiers = {
 		culture = umbarrim
@@ -1344,19 +1354,9 @@
 		religion = men
 		size = 1440
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 72360
-	}
-	labourers = {
-		culture = black_numenorean
-		religion = men
-		size = 18090
-	}
 }
 
-# Sarkâna
+# SarkÃ¢na
 275 = {
 	aristocrats = {
 		culture = umbarrim
@@ -1378,6 +1378,11 @@
 		religion = men
 		size = 50
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 8700
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
@@ -1388,14 +1393,9 @@
 		religion = men
 		size = 100
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 8700
-	}
 }
 
-# Nan Salásso
+# Nan SalÃ¡sso
 276 = {
 	aristocrats = {
 		culture = umbarrim
@@ -1417,6 +1417,11 @@
 		religion = men
 		size = 100
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 45600
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
@@ -1426,11 +1431,6 @@
 		culture = umbarrim
 		religion = men
 		size = 500
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 45600
 	}
 }
 
@@ -1456,6 +1456,11 @@
 		religion = men
 		size = 90
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 25020
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
@@ -1465,11 +1470,6 @@
 		culture = umbarrim
 		religion = men
 		size = 600
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 25020
 	}
 }
 
@@ -1495,6 +1495,11 @@
 		religion = men
 		size = 150
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 40550
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
@@ -1509,11 +1514,6 @@
 		culture = umbarrim
 		religion = men
 		size = 1250
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 40550
 	}
 }
 
@@ -1539,6 +1539,11 @@
 		religion = men
 		size = 90
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 24330
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
@@ -1554,14 +1559,9 @@
 		religion = men
 		size = 750
 	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 24330
-	}
 }
 
-# An Zalím
+# An ZalÃ­m
 283 = {
 	aristocrats = {
 		culture = umbarrim
@@ -1583,6 +1583,11 @@
 		religion = men
 		size = 60
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 16219
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
@@ -1597,11 +1602,6 @@
 		culture = umbarrim
 		religion = men
 		size = 500
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 16220
 	}
 }
 
@@ -1627,30 +1627,30 @@
 		religion = men
 		size = 30
 	}
-	slaves = {
-		culture = harnendan
-		religion = men
-		size = 1200
-	}
-	slaves = {
+	labourers = {
 		culture = umbarrim
 		religion = men
-		size = 300
-	}
-	soldiers = {
-		culture = harnendan
-		religion = men
-		size = 600
+		size = 5418
 	}
 	labourers = {
 		culture = harnendan
 		religion = men
 		size = 21672
 	}
-	labourers = {
+	slaves = {
 		culture = umbarrim
 		religion = men
-		size = 5418
+		size = 300
+	}
+	slaves = {
+		culture = harnendan
+		religion = men
+		size = 1200
+	}
+	soldiers = {
+		culture = harnendan
+		religion = men
+		size = 600
 	}
 }
 
@@ -1676,30 +1676,30 @@
 		religion = men
 		size = 100
 	}
-	slaves = {
-		culture = harnendan
-		religion = men
-		size = 8000
-	}
-	slaves = {
+	labourers = {
 		culture = umbarrim
 		religion = men
-		size = 2000
-	}
-	soldiers = {
-		culture = harnendan
-		religion = men
-		size = 3000
+		size = 16160
 	}
 	labourers = {
 		culture = harnendan
 		religion = men
 		size = 64640
 	}
-	labourers = {
+	slaves = {
 		culture = umbarrim
 		religion = men
-		size = 16160
+		size = 2000
+	}
+	slaves = {
+		culture = harnendan
+		religion = men
+		size = 8000
+	}
+	soldiers = {
+		culture = harnendan
+		religion = men
+		size = 3000
 	}
 }
 
@@ -1725,29 +1725,29 @@
 		religion = men
 		size = 2000
 	}
-	slaves = {
+	labourers = {
 		culture = harnendan
 		religion = men
-		size = 112000
+		size = 134000
 	}
 	slaves = {
 		culture = umbarrim
 		religion = men
 		size = 48000
 	}
+	slaves = {
+		culture = harnendan
+		religion = men
+		size = 112000
+	}
 	soldiers = {
 		culture = harnendan
 		religion = men
 		size = 32000
 	}
-	labourers = {
-		culture = harnendan
-		religion = men
-		size = 134000
-	}
 }
 
-# Sôk Abârrim
+# SÃ´k AbÃ¢rrim
 287 = {
 	aristocrats = {
 		culture = harnendan
@@ -1769,30 +1769,30 @@
 		religion = men
 		size = 240
 	}
-	slaves = {
-		culture = harnendan
-		religion = men
-		size = 11200
-	}
-	slaves = {
+	labourers = {
 		culture = haruzani
 		religion = men
-		size = 4800
-	}
-	soldiers = {
-		culture = harnendan
-		religion = men
-		size = 3200
+		size = 10144
 	}
 	labourers = {
 		culture = harnendan
 		religion = men
 		size = 40576
 	}
-	labourers = {
+	slaves = {
 		culture = haruzani
 		religion = men
-		size = 10144
+		size = 4800
+	}
+	slaves = {
+		culture = harnendan
+		religion = men
+		size = 11200
+	}
+	soldiers = {
+		culture = harnendan
+		religion = men
+		size = 3200
 	}
 }
 
@@ -1818,6 +1818,16 @@
 		religion = men
 		size = 1500
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 109200
+	}
+	labourers = {
+		culture = harnendan
+		religion = men
+		size = 27300
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
@@ -1832,16 +1842,6 @@
 		culture = haruzani
 		religion = men
 		size = 18000
-	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 109200
-	}
-	labourers = {
-		culture = harnendan
-		religion = men
-		size = 27300
 	}
 }
 
@@ -1867,6 +1867,11 @@
 		religion = men
 		size = 240
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 37980
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
@@ -1877,14 +1882,9 @@
 		religion = men
 		size = 2400
 	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 37980
-	}
 }
 
-# Abrakhân
+# AbrakhÃ¢n
 290 = {
 	aristocrats = {
 		culture = haruzani
@@ -1906,6 +1906,16 @@
 		religion = men
 		size = 120
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 25024
+	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 6256
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
@@ -1921,19 +1931,9 @@
 		religion = men
 		size = 800
 	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 25024
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 6256
-	}
 }
 
-# Feäh
+# FeÃ¤h
 292 = {
 	aristocrats = {
 		culture = pezarsani
@@ -1955,30 +1955,30 @@
 		religion = men
 		size = 1040
 	}
-	slaves = {
-		culture = pezarsani
-		religion = men
-		size = 20800
-	}
-	slaves = {
+	labourers = {
 		culture = haruzani
 		religion = men
-		size = 5200
-	}
-	soldiers = {
-		culture = pezarsani
-		religion = men
-		size = 10400
+		size = 38376
 	}
 	labourers = {
 		culture = pezarsani
 		religion = men
 		size = 153504
 	}
-	labourers = {
+	slaves = {
 		culture = haruzani
 		religion = men
-		size = 38376
+		size = 5200
+	}
+	slaves = {
+		culture = pezarsani
+		religion = men
+		size = 20800
+	}
+	soldiers = {
+		culture = pezarsani
+		religion = men
+		size = 10400
 	}
 }
 
@@ -2004,30 +2004,30 @@
 		religion = men
 		size = 80
 	}
-	slaves = {
-		culture = pezarsani
-		religion = men
-		size = 1600
-	}
-	slaves = {
+	labourers = {
 		culture = haruzani
 		religion = men
-		size = 400
-	}
-	soldiers = {
-		culture = pezarsani
-		religion = men
-		size = 400
+		size = 7040
 	}
 	labourers = {
 		culture = pezarsani
 		religion = men
 		size = 28160
 	}
-	labourers = {
+	slaves = {
 		culture = haruzani
 		religion = men
-		size = 7040
+		size = 400
+	}
+	slaves = {
+		culture = pezarsani
+		religion = men
+		size = 1600
+	}
+	soldiers = {
+		culture = pezarsani
+		religion = men
+		size = 400
 	}
 }
 
@@ -2053,30 +2053,30 @@
 		religion = men
 		size = 180
 	}
-	slaves = {
-		culture = pezarsani
-		religion = men
-		size = 4800
-	}
-	slaves = {
+	labourers = {
 		culture = lurmsakuni
 		religion = men
-		size = 1200
-	}
-	soldiers = {
-		culture = pezarsani
-		religion = men
-		size = 1200
+		size = 9408
 	}
 	labourers = {
 		culture = pezarsani
 		religion = men
 		size = 37632
 	}
-	labourers = {
+	slaves = {
 		culture = lurmsakuni
 		religion = men
-		size = 9408
+		size = 1200
+	}
+	slaves = {
+		culture = pezarsani
+		religion = men
+		size = 4800
+	}
+	soldiers = {
+		culture = pezarsani
+		religion = men
+		size = 1200
 	}
 }
 
@@ -2102,6 +2102,11 @@
 		religion = men
 		size = 500
 	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 55999
+	}
 	slaves = {
 		culture = pezarsani
 		religion = men
@@ -2111,11 +2116,6 @@
 		culture = pezarsani
 		religion = men
 		size = 6000
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 56000
 	}
 }
 
@@ -2141,6 +2141,16 @@
 		religion = men
 		size = 240
 	}
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 35424
+	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 8856
+	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
@@ -2156,19 +2166,9 @@
 		religion = men
 		size = 2400
 	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 35424
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 8856
-	}
 }
 
-# Ausk Lûrm
+# Ausk LÃ»rm
 298 = {
 	aristocrats = {
 		culture = lurmsakuni
@@ -2190,6 +2190,16 @@
 		religion = men
 		size = 90
 	}
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 20808
+	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 5202
+	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
@@ -2204,16 +2214,6 @@
 		culture = lurmsakuni
 		religion = men
 		size = 600
-	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 20808
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 5202
 	}
 }
 
@@ -2239,6 +2239,11 @@
 		religion = men
 		size = 250
 	}
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 27999
+	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
@@ -2249,14 +2254,9 @@
 		religion = men
 		size = 3000
 	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 28000
-	}
 }
 
-# Alag Rôkhbin
+# Alag RÃ´khbin
 300 = {
 	aristocrats = {
 		culture = lurmsakuni
@@ -2278,6 +2278,11 @@
 		religion = men
 		size = 240
 	}
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 44280
+	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
@@ -2287,11 +2292,6 @@
 		culture = lurmsakuni
 		religion = men
 		size = 2400
-	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 44280
 	}
 }
 
@@ -2317,6 +2317,16 @@
 		religion = men
 		size = 120
 	}
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 27744
+	}
+	labourers = {
+		culture = arysian
+		religion = men
+		size = 6936
+	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
@@ -2331,16 +2341,6 @@
 		culture = lurmsakuni
 		religion = men
 		size = 800
-	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 27744
-	}
-	labourers = {
-		culture = arysian
-		religion = men
-		size = 6936
 	}
 }
 
@@ -2366,25 +2366,10 @@
 		religion = men
 		size = 280
 	}
-	slaves = {
-		culture = lurmsakuni
-		religion = men
-		size = 4200
-	}
-	slaves = {
-		culture = arysian
-		religion = men
-		size = 1400
-	}
-	slaves = {
+	labourers = {
 		culture = variag
 		religion = men
-		size = 1400
-	}
-	soldiers = {
-		culture = lurmsakuni
-		religion = men
-		size = 2800
+		size = 10332
 	}
 	labourers = {
 		culture = lurmsakuni
@@ -2396,14 +2381,29 @@
 		religion = men
 		size = 10332
 	}
-	labourers = {
+	slaves = {
 		culture = variag
 		religion = men
-		size = 10332
+		size = 1400
+	}
+	slaves = {
+		culture = lurmsakuni
+		religion = men
+		size = 4200
+	}
+	slaves = {
+		culture = arysian
+		religion = men
+		size = 1400
+	}
+	soldiers = {
+		culture = lurmsakuni
+		religion = men
+		size = 2800
 	}
 }
 
-# Krûk Azbanna
+# KrÃ»k Azbanna
 303 = {
 	aristocrats = {
 		culture = arysian
@@ -2425,10 +2425,25 @@
 		religion = men
 		size = 350
 	}
-	slaves = {
+	labourers = {
+		culture = variag
+		religion = men
+		size = 7839
+	}
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 7839
+	}
+	labourers = {
 		culture = arysian
 		religion = men
-		size = 8400
+		size = 23519
+	}
+	slaves = {
+		culture = variag
+		religion = men
+		size = 2800
 	}
 	slaves = {
 		culture = lurmsakuni
@@ -2436,33 +2451,18 @@
 		size = 2800
 	}
 	slaves = {
-		culture = variag
+		culture = arysian
 		religion = men
-		size = 2800
+		size = 8400
 	}
 	soldiers = {
 		culture = arysian
 		religion = men
 		size = 4200
 	}
-	labourers = {
-		culture = arysian
-		religion = men
-		size = 23520
-	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 7840
-	}
-	labourers = {
-		culture = variag
-		religion = men
-		size = 7840
-	}
 }
 
-# Ôvatharak
+# Ã”vatharak
 304 = {
 	aristocrats = {
 		culture = arysian
@@ -2484,30 +2484,30 @@
 		religion = men
 		size = 120
 	}
-	slaves = {
-		culture = arysian
-		religion = men
-		size = 2400
-	}
-	slaves = {
+	labourers = {
 		culture = lurmsakuni
 		religion = men
-		size = 600
-	}
-	soldiers = {
-		culture = arysian
-		religion = men
-		size = 1200
+		size = 4428
 	}
 	labourers = {
 		culture = arysian
 		religion = men
 		size = 17712
 	}
-	labourers = {
+	slaves = {
 		culture = lurmsakuni
 		religion = men
-		size = 4428
+		size = 600
+	}
+	slaves = {
+		culture = arysian
+		religion = men
+		size = 2400
+	}
+	soldiers = {
+		culture = arysian
+		religion = men
+		size = 1200
 	}
 }
 
@@ -2533,30 +2533,79 @@
 		religion = men
 		size = 300
 	}
-	slaves = {
-		culture = arysian
-		religion = men
-		size = 9600
-	}
-	slaves = {
+	labourers = {
 		culture = variag
 		religion = men
-		size = 2400
-	}
-	soldiers = {
-		culture = arysian
-		religion = men
-		size = 3600
+		size = 6720
 	}
 	labourers = {
 		culture = arysian
 		religion = men
 		size = 26880
 	}
+	slaves = {
+		culture = variag
+		religion = men
+		size = 2400
+	}
+	slaves = {
+		culture = arysian
+		religion = men
+		size = 9600
+	}
+	soldiers = {
+		culture = arysian
+		religion = men
+		size = 3600
+	}
+}
+
+# Ered Harmal
+306 = {
+	aristocrats = {
+		culture = arysian
+		religion = men
+		size = 0
+	}
+	artisans = {
+		culture = arysian
+		religion = men
+		size = 0
+	}
+	bureaucrats = {
+		culture = arysian
+		religion = men
+		size = 0
+	}
+	clergymen = {
+		culture = arysian
+		religion = men
+		size = 0
+	}
 	labourers = {
 		culture = variag
 		religion = men
-		size = 6720
+		size = 0
+	}
+	labourers = {
+		culture = arysian
+		religion = men
+		size = 0
+	}
+	slaves = {
+		culture = variag
+		religion = men
+		size = 0
+	}
+	slaves = {
+		culture = arysian
+		religion = men
+		size = 0
+	}
+	soldiers = {
+		culture = arysian
+		religion = men
+		size = 0
 	}
 }
 
@@ -2582,30 +2631,30 @@
 		religion = men
 		size = 30
 	}
-	slaves = {
-		culture = arysian
-		religion = men
-		size = 400
-	}
-	slaves = {
+	labourers = {
 		culture = variag
 		religion = men
-		size = 100
-	}
-	soldiers = {
-		culture = arysian
-		religion = men
-		size = 200
+		size = 1734
 	}
 	labourers = {
 		culture = arysian
 		religion = men
 		size = 6936
 	}
-	labourers = {
+	slaves = {
 		culture = variag
 		religion = men
-		size = 1734
+		size = 100
+	}
+	slaves = {
+		culture = arysian
+		religion = men
+		size = 400
+	}
+	soldiers = {
+		culture = arysian
+		religion = men
+		size = 200
 	}
 }
 
@@ -2631,6 +2680,11 @@
 		religion = men
 		size = 120
 	}
+	labourers = {
+		culture = arysian
+		religion = men
+		size = 34680
+	}
 	slaves = {
 		culture = arysian
 		religion = men
@@ -2641,14 +2695,9 @@
 		religion = men
 		size = 800
 	}
-	labourers = {
-		culture = arysian
-		religion = men
-		size = 34680
-	}
 }
 
-# Marêsh
+# MarÃªsh
 310 = {
 	aristocrats = {
 		culture = arysian
@@ -2670,6 +2719,11 @@
 		religion = men
 		size = 1150
 	}
+	labourers = {
+		culture = arysian
+		religion = men
+		size = 128799
+	}
 	slaves = {
 		culture = arysian
 		religion = men
@@ -2679,11 +2733,6 @@
 		culture = arysian
 		religion = men
 		size = 13800
-	}
-	labourers = {
-		culture = arysian
-		religion = men
-		size = 128800
 	}
 }
 
@@ -2709,6 +2758,11 @@
 		religion = men
 		size = 400
 	}
+	labourers = {
+		culture = arysian
+		religion = men
+		size = 73800
+	}
 	slaves = {
 		culture = arysian
 		religion = men
@@ -2718,11 +2772,6 @@
 		culture = arysian
 		religion = men
 		size = 4000
-	}
-	labourers = {
-		culture = arysian
-		religion = men
-		size = 73800
 	}
 }
 
@@ -2748,6 +2797,11 @@
 		religion = men
 		size = 240
 	}
+	labourers = {
+		culture = arysian
+		religion = men
+		size = 44280
+	}
 	slaves = {
 		culture = arysian
 		religion = men
@@ -2757,11 +2811,6 @@
 		culture = arysian
 		religion = men
 		size = 2400
-	}
-	labourers = {
-		culture = arysian
-		religion = men
-		size = 44280
 	}
 }
 
@@ -2787,6 +2836,11 @@
 		religion = men
 		size = 5
 	}
+	labourers = {
+		culture = arysian
+		religion = men
+		size = 4575
+	}
 	slaves = {
 		culture = arysian
 		religion = men
@@ -2796,11 +2850,6 @@
 		culture = arysian
 		religion = men
 		size = 50
-	}
-	labourers = {
-		culture = arysian
-		religion = men
-		size = 4575
 	}
 }
 
@@ -2826,6 +2875,11 @@
 		religion = men
 		size = 5
 	}
+	labourers = {
+		culture = arysian
+		religion = men
+		size = 4575
+	}
 	slaves = {
 		culture = arysian
 		religion = men
@@ -2835,11 +2889,6 @@
 		culture = arysian
 		religion = men
 		size = 50
-	}
-	labourers = {
-		culture = arysian
-		religion = men
-		size = 4575
 	}
 }
 
@@ -2865,6 +2914,11 @@
 		religion = men
 		size = 5
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 4575
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
@@ -2875,14 +2929,9 @@
 		religion = men
 		size = 50
 	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 4575
-	}
 }
 
-# Sicánna
+# SicÃ¡nna
 318 = {
 	aristocrats = {
 		culture = umbarrim
@@ -2904,6 +2953,11 @@
 		religion = men
 		size = 5
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 4575
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
@@ -2913,11 +2967,6 @@
 		culture = umbarrim
 		religion = men
 		size = 50
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 4575
 	}
 }
 
@@ -2943,6 +2992,11 @@
 		religion = men
 		size = 5
 	}
+	labourers = {
+		culture = umbarrim
+		religion = men
+		size = 4575
+	}
 	slaves = {
 		culture = umbarrim
 		religion = men
@@ -2952,11 +3006,6 @@
 		culture = umbarrim
 		religion = men
 		size = 50
-	}
-	labourers = {
-		culture = umbarrim
-		religion = men
-		size = 4575
 	}
 }
 
@@ -2982,6 +3031,11 @@
 		religion = men
 		size = 5
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 4575
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
@@ -2991,11 +3045,6 @@
 		culture = haruzani
 		religion = men
 		size = 50
-	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 4575
 	}
 }
 
@@ -3021,6 +3070,11 @@
 		religion = men
 		size = 5
 	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 4575
+	}
 	slaves = {
 		culture = pezarsani
 		religion = men
@@ -3031,11 +3085,54 @@
 		religion = men
 		size = 50
 	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 4575
-	}
+}
+
+# Haradwaith
+322 = {
+}
+
+# Haradwaith
+323 = {
+}
+
+# Haradwaith
+324 = {
+}
+
+# Haradwaith
+325 = {
+}
+
+# Haradwaith
+326 = {
+}
+
+# Haradwaith
+327 = {
+}
+
+# Haradwaith
+328 = {
+}
+
+# Haradwaith
+329 = {
+}
+
+# Haradwaith
+330 = {
+}
+
+# Haradwaith
+331 = {
+}
+
+# Haradwaith
+332 = {
+}
+
+# Haradwaith
+333 = {
 }
 
 # Korb Traskal
@@ -3060,6 +3157,16 @@
 		religion = men
 		size = 3000
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 220800
+	}
+	labourers = {
+		culture = harnendan
+		religion = men
+		size = 55200
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
@@ -3074,16 +3181,6 @@
 		culture = haruzani
 		religion = men
 		size = 36000
-	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 220800
-	}
-	labourers = {
-		culture = harnendan
-		religion = men
-		size = 55200
 	}
 }
 
@@ -3109,6 +3206,16 @@
 		religion = men
 		size = 400
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 51040
+	}
+	labourers = {
+		culture = harnendan
+		religion = men
+		size = 12760
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
@@ -3123,16 +3230,6 @@
 		culture = haruzani
 		religion = men
 		size = 4000
-	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 51040
-	}
-	labourers = {
-		culture = harnendan
-		religion = men
-		size = 12760
 	}
 }
 
@@ -3158,34 +3255,34 @@
 		religion = men
 		size = 240
 	}
-	slaves = {
-		culture = pezarsani
-		religion = men
-		size = 9600
-	}
-	slaves = {
+	labourers = {
 		culture = haruzani
 		religion = men
-		size = 2400
-	}
-	soldiers = {
-		culture = pezarsani
-		religion = men
-		size = 2400
+		size = 7656
 	}
 	labourers = {
 		culture = pezarsani
 		religion = men
 		size = 30624
 	}
-	labourers = {
+	slaves = {
 		culture = haruzani
 		religion = men
-		size = 7656
+		size = 2400
+	}
+	slaves = {
+		culture = pezarsani
+		religion = men
+		size = 9600
+	}
+	soldiers = {
+		culture = pezarsani
+		religion = men
+		size = 2400
 	}
 }
 
-# Ausk Amrûn
+# Ausk AmrÃ»n
 337 = {
 	aristocrats = {
 		culture = haruzani
@@ -3207,18 +3304,33 @@
 		religion = men
 		size = 40
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 10956
+	}
+	labourers = {
+		culture = chelkiag
+		religion = men
+		size = 3652
+	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 3652
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
 		size = 600
 	}
 	slaves = {
-		culture = pezarsani
+		culture = chelkiag
 		religion = men
 		size = 200
 	}
 	slaves = {
-		culture = chelkiag
+		culture = pezarsani
 		religion = men
 		size = 200
 	}
@@ -3227,24 +3339,9 @@
 		religion = men
 		size = 200
 	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 10956
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 3652
-	}
-	labourers = {
-		culture = chelkiag
-		religion = men
-		size = 3652
-	}
 }
 
-# Talath Amrûn
+# Talath AmrÃ»n
 338 = {
 	aristocrats = {
 		culture = haruzani
@@ -3266,6 +3363,16 @@
 		religion = men
 		size = 400
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 51040
+	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 12760
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
@@ -3280,16 +3387,6 @@
 		culture = haruzani
 		religion = men
 		size = 4000
-	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 51040
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 12760
 	}
 }
 
@@ -3315,6 +3412,21 @@
 		religion = men
 		size = 180
 	}
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 29412
+	}
+	labourers = {
+		culture = chelkiag
+		religion = men
+		size = 9804
+	}
+	labourers = {
+		culture = harnendan
+		religion = men
+		size = 9804
+	}
 	slaves = {
 		culture = haruzani
 		religion = men
@@ -3335,24 +3447,9 @@
 		religion = men
 		size = 1200
 	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 29412
-	}
-	labourers = {
-		culture = chelkiag
-		religion = men
-		size = 9804
-	}
-	labourers = {
-		culture = harnendan
-		religion = men
-		size = 9804
-	}
 }
 
-# Kôrb Chelkar
+# KÃ´rb Chelkar
 340 = {
 	aristocrats = {
 		culture = chelkiag
@@ -3374,34 +3471,34 @@
 		religion = men
 		size = 600
 	}
-	slaves = {
-		culture = chelkiag
-		religion = men
-		size = 16000
-	}
-	slaves = {
+	labourers = {
 		culture = haruzani
 		religion = men
-		size = 4000
-	}
-	soldiers = {
-		culture = chelkiag
-		religion = men
-		size = 4000
+		size = 32680
 	}
 	labourers = {
 		culture = chelkiag
 		religion = men
 		size = 130720
 	}
-	labourers = {
+	slaves = {
 		culture = haruzani
 		religion = men
-		size = 32680
+		size = 4000
+	}
+	slaves = {
+		culture = chelkiag
+		religion = men
+		size = 16000
+	}
+	soldiers = {
+		culture = chelkiag
+		religion = men
+		size = 4000
 	}
 }
 
-# Lugarlûr
+# LugarlÃ»r
 341 = {
 	aristocrats = {
 		culture = chelkiag
@@ -3423,15 +3520,30 @@
 		religion = men
 		size = 80
 	}
-	slaves = {
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 3132
+	}
+	labourers = {
 		culture = chelkiag
 		religion = men
-		size = 1200
+		size = 9395
+	}
+	labourers = {
+		culture = harnendan
+		religion = men
+		size = 3132
 	}
 	slaves = {
 		culture = haruzani
 		religion = men
 		size = 400
+	}
+	slaves = {
+		culture = chelkiag
+		religion = men
+		size = 1200
 	}
 	slaves = {
 		culture = harnendan
@@ -3443,24 +3555,9 @@
 		religion = men
 		size = 400
 	}
-	labourers = {
-		culture = chelkiag
-		religion = men
-		size = 9396
-	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 3132
-	}
-	labourers = {
-		culture = harnendan
-		religion = men
-		size = 3132
-	}
 }
 
-# Hûk Saromis
+# HÃ»k Saromis
 342 = {
 	aristocrats = {
 		culture = chelkiag
@@ -3482,6 +3579,11 @@
 		religion = men
 		size = 200
 	}
+	labourers = {
+		culture = chelkiag
+		religion = men
+		size = 25480
+	}
 	slaves = {
 		culture = chelkiag
 		religion = men
@@ -3491,11 +3593,6 @@
 		culture = chelkiag
 		religion = men
 		size = 1600
-	}
-	labourers = {
-		culture = chelkiag
-		religion = men
-		size = 25480
 	}
 }
 
@@ -3521,6 +3618,11 @@
 		religion = men
 		size = 120
 	}
+	labourers = {
+		culture = chelkiag
+		religion = men
+		size = 23489
+	}
 	slaves = {
 		culture = chelkiag
 		religion = men
@@ -3531,14 +3633,9 @@
 		religion = men
 		size = 600
 	}
-	labourers = {
-		culture = chelkiag
-		religion = men
-		size = 23490
-	}
 }
 
-# Bokhanâz Pass
+# BokhanÃ¢z Pass
 344 = {
 	aristocrats = {
 		culture = variag
@@ -3560,6 +3657,11 @@
 		religion = men
 		size = 60
 	}
+	labourers = {
+		culture = variag
+		religion = men
+		size = 17580
+	}
 	slaves = {
 		culture = variag
 		religion = men
@@ -3569,11 +3671,6 @@
 		culture = variag
 		religion = men
 		size = 200
-	}
-	labourers = {
-		culture = variag
-		religion = men
-		size = 17580
 	}
 }
 
@@ -3599,6 +3696,11 @@
 		religion = men
 		size = 100
 	}
+	labourers = {
+		culture = chelkiag
+		religion = men
+		size = 45650
+	}
 	slaves = {
 		culture = chelkiag
 		religion = men
@@ -3608,11 +3710,6 @@
 		culture = chelkiag
 		religion = men
 		size = 500
-	}
-	labourers = {
-		culture = chelkiag
-		religion = men
-		size = 45650
 	}
 }
 
@@ -3638,15 +3735,30 @@
 		religion = men
 		size = 120
 	}
-	slaves = {
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 7016
+	}
+	labourers = {
 		culture = chelkiag
 		religion = men
-		size = 1200
+		size = 21048
+	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 7016
 	}
 	slaves = {
 		culture = haruzani
 		religion = men
 		size = 400
+	}
+	slaves = {
+		culture = chelkiag
+		religion = men
+		size = 1200
 	}
 	slaves = {
 		culture = pezarsani
@@ -3658,24 +3770,9 @@
 		religion = men
 		size = 400
 	}
-	labourers = {
-		culture = chelkiag
-		religion = men
-		size = 21048
-	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 7016
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 7016
-	}
 }
 
-# Pâzghar
+# PÃ¢zghar
 347 = {
 	aristocrats = {
 		culture = pezarsani
@@ -3697,10 +3794,20 @@
 		religion = men
 		size = 120
 	}
-	slaves = {
+	labourers = {
+		culture = haruzani
+		religion = men
+		size = 7016
+	}
+	labourers = {
+		culture = chelkiag
+		religion = men
+		size = 7016
+	}
+	labourers = {
 		culture = pezarsani
 		religion = men
-		size = 1200
+		size = 21048
 	}
 	slaves = {
 		culture = haruzani
@@ -3711,30 +3818,20 @@
 		culture = chelkiag
 		religion = men
 		size = 400
+	}
+	slaves = {
+		culture = pezarsani
+		religion = men
+		size = 1200
 	}
 	soldiers = {
 		culture = pezarsani
 		religion = men
 		size = 320
 	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 21096
-	}
-	labourers = {
-		culture = haruzani
-		religion = men
-		size = 7032
-	}
-	labourers = {
-		culture = chelkiag
-		religion = men
-		size = 7032
-	}
 }
 
-# Krûk Mahûr
+# KrÃ»k MahÃ»r
 348 = {
 	aristocrats = {
 		culture = pezarsani
@@ -3756,30 +3853,30 @@
 		religion = men
 		size = 120
 	}
-	slaves = {
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 4548
+	}
+	labourers = {
 		culture = pezarsani
 		religion = men
-		size = 2400
+		size = 18192
 	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
 		size = 600
 	}
+	slaves = {
+		culture = pezarsani
+		religion = men
+		size = 2400
+	}
 	soldiers = {
 		culture = pezarsani
 		religion = men
 		size = 480
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 18288
-	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 4572
 	}
 }
 
@@ -3805,6 +3902,11 @@
 		religion = men
 		size = 900
 	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 104400
+	}
 	slaves = {
 		culture = pezarsani
 		religion = men
@@ -3815,14 +3917,9 @@
 		religion = men
 		size = 5760
 	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 105840
-	}
 }
 
-# Parzû
+# ParzÃ»
 351 = {
 	aristocrats = {
 		culture = pezarsani
@@ -3844,30 +3941,30 @@
 		religion = men
 		size = 400
 	}
-	slaves = {
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 15160
+	}
+	labourers = {
 		culture = pezarsani
 		religion = men
-		size = 8000
+		size = 60640
 	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
 		size = 2000
 	}
+	slaves = {
+		culture = pezarsani
+		religion = men
+		size = 8000
+	}
 	soldiers = {
 		culture = pezarsani
 		religion = men
 		size = 1600
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 60960
-	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 15240
 	}
 }
 
@@ -3893,6 +3990,16 @@
 		religion = men
 		size = 560
 	}
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 84896
+	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 21224
+	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
@@ -3907,16 +4014,6 @@
 		culture = lurmsakuni
 		religion = men
 		size = 2800
-	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 84896
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 21224
 	}
 }
 
@@ -3942,6 +4039,16 @@
 		religion = men
 		size = 120
 	}
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 28064
+	}
+	labourers = {
+		culture = pezarsani
+		religion = men
+		size = 7016
+	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
@@ -3956,16 +4063,6 @@
 		culture = lurmsakuni
 		religion = men
 		size = 400
-	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 28064
-	}
-	labourers = {
-		culture = pezarsani
-		religion = men
-		size = 7016
 	}
 }
 
@@ -3991,6 +4088,11 @@
 		religion = men
 		size = 560
 	}
+	labourers = {
+		culture = lurmsakuni
+		religion = men
+		size = 106120
+	}
 	slaves = {
 		culture = lurmsakuni
 		religion = men
@@ -4000,11 +4102,6 @@
 		culture = lurmsakuni
 		religion = men
 		size = 2800
-	}
-	labourers = {
-		culture = lurmsakuni
-		religion = men
-		size = 106120
 	}
 }
 
@@ -4030,30 +4127,30 @@
 		religion = men
 		size = 1150
 	}
-	slaves = {
-		culture = lurmsakuni
-		religion = men
-		size = 36800
-	}
-	slaves = {
+	labourers = {
 		culture = variag
 		religion = men
-		size = 9200
-	}
-	soldiers = {
-		culture = lurmsakuni
-		religion = men
-		size = 9200
+		size = 26680
 	}
 	labourers = {
 		culture = lurmsakuni
 		religion = men
 		size = 106720
 	}
-	labourers = {
+	slaves = {
 		culture = variag
 		religion = men
-		size = 26680
+		size = 9200
+	}
+	slaves = {
+		culture = lurmsakuni
+		religion = men
+		size = 36800
+	}
+	soldiers = {
+		culture = lurmsakuni
+		religion = men
+		size = 9200
 	}
 }
 
@@ -4079,34 +4176,34 @@
 		religion = men
 		size = 320
 	}
-	slaves = {
-		culture = lurmsakuni
-		religion = men
-		size = 6400
-	}
-	slaves = {
+	labourers = {
 		culture = variag
 		religion = men
-		size = 1600
-	}
-	soldiers = {
-		culture = lurmsakuni
-		religion = men
-		size = 1600
+		size = 12128
 	}
 	labourers = {
 		culture = lurmsakuni
 		religion = men
 		size = 48512
 	}
-	labourers = {
+	slaves = {
 		culture = variag
 		religion = men
-		size = 12128
+		size = 1600
+	}
+	slaves = {
+		culture = lurmsakuni
+		religion = men
+		size = 6400
+	}
+	soldiers = {
+		culture = lurmsakuni
+		religion = men
+		size = 1600
 	}
 }
 
-# Hrôn Tûmrakhi
+# HrÃ´n TÃ»mrakhi
 358 = {
 	aristocrats = {
 		culture = variag
@@ -4128,11 +4225,6 @@
 		religion = men
 		size = 2
 	}
-	soldiers = {
-		culture = variag
-		religion = men
-		size = 20
-	}
 	labourers = {
 		culture = variag
 		religion = men
@@ -4143,4 +4235,10 @@
 		religion = men
 		size = 384
 	}
+	soldiers = {
+		culture = variag
+		religion = men
+		size = 20
+	}
 }
+
