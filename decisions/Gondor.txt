@@ -1395,118 +1395,23 @@ political_decisions = {
 		potential = {
 			NOT = { exists = HRD }
 			tag = GON
-			NOT = { has_country_modifier = low_military_recruitment }
 			OR = {
-				AND = {
-					OR = {
-						15 = { empty = yes }
-						226 = { empty = yes }
-					}
-					owns = 50
-				}
-				AND = {
-					OR = {
-						215 = { empty = yes }
-						216 = { empty = yes }
-						219 = { empty = yes }
-					}
-					owns = 212
-				}
-				AND = {
-					OR = {
-						219 = { empty = yes }
-						220 = { empty = yes }
-						225 = { empty = yes }
-					}
-					owns = 214
-				}
+				NOT = { has_country_modifier = low_military_recruitment }
 				any_owned_province = { is_core = HRD }
 			}
-			NOT = { has_country_flag = GON_returned_to_south_gondor }
+			226 = { empty = yes }
 		}
 		
 		allow = {
 			wilderness_1 = 1
 			war = no
-			NOT = { has_country_flag = GON_returned_to_south_gondor }
 		}
 		
 		effect = {
-			random_owned = {
-				limit = {
-					OR = {
-						province_id = 50
-						50 = { owner = { vassal_of = THIS } }
-					}
-					15 = { empty = yes }
-					owner = { wilderness_1 = 1 }
-				}
-				15 = { secede_province = THIS }
-			}
-			
-			random_owned = {
-				limit = {
-					province_id = 212
-					215 = { empty = yes }
-					owner = { wilderness_1 = 1 }
-				}
-				215 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					province_id = 212
-					216 = { empty = yes }
-					owner = { wilderness_1 = 1 }
-				}
-				216 = { secede_province = THIS }
-			}
-			
-			random_owned = {
-				limit = {
-					province_id = 212
-					219 = { empty = yes }
-					owner = { wilderness_1 = 1 }
-				}
-				219 = { secede_province = THIS }
-			}
-			
-			random_owned = {
-				limit = {
-					province_id = 214
-					220 = { empty = yes }
-					owner = { wilderness_1 = 1 }
-				}
-				220 = { secede_province = THIS }
-			}
-			
-			random_owned = {
-				limit = {
-					province_id = 214
-					225 = { empty = yes }
-					owner = { wilderness_1 = 1 }
-				}
-				225 = { secede_province = THIS }
-			}
-			
-			random_owned = {
-				limit = {
-					OR = {
-						province_id = 50
-						50 = { owner = { vassal_of = THIS } }
-					}
-					226 = { empty = yes }
-					owner = { wilderness_1 = 1 }
-				}
-				226 = { secede_province = THIS }
-			}
-			
-			random_country = {
-				limit = {
-					tag = HRD
-				}
-				THIS = { inherit = HRD }
-			}
-			
+			# Colonizes Methir and Benish Armon
+			226 = { secede_province = THIS }
+			15 = { secede_province = THIS }
+		
 			release = HRD
 			create_vassal = HRD
 			create_alliance = HRD
@@ -1514,6 +1419,8 @@ political_decisions = {
 				who = HRD
 				value = 400
 			}
+			
+			# If realm is a GP, put HRD in the sphere
 			random_owned = {
 				limit = {
 					owner = { is_greater_power = yes }
@@ -1524,24 +1431,39 @@ political_decisions = {
 				}
 			}
 			
-			random_country = {
+			# Adds the accepted cultures of the country to HRD
+			random_owned = {
 				limit = {
-					tag = HRD
-					good_evil_alignment = neutral_alignment
+					owner = {
+						OR = {
+							accepted_culture = gondorian
+							primary_culture = gondorian
+						}
+					}
 				}
-				political_reform = good_alignment
-				remove_accepted_culture = neutral_culture
-				add_accepted_culture = good_culture
+				HRD = { add_accepted_culture = gondorian }
 			}
-			
-			random_country = {
+			random_owned = {
 				limit = {
-					tag = HRD
-					good_evil_alignment = evil_alignment
+					owner = {
+						OR = {
+							accepted_culture = dunedain
+							primary_culture = dunedain
+						}
+					}
 				}
-				political_reform = good_alignment
-				remove_accepted_culture = evil_culture
-				add_accepted_culture = good_culture
+				HRD = { add_accepted_culture = dunedain }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							accepted_culture = amrothian
+							primary_culture = amrothian
+						}
+					}
+				}
+				HRD = { add_accepted_culture = amrothian }
 			}
 			
 			HRD = {
@@ -1549,236 +1471,9 @@ political_decisions = {
 				clr_country_flag = attempting_to_neutral
 				clr_country_flag = attempting_to_evil
 				government = fiefdom
-				add_accepted_culture = gondorian
-				capital = 216
+				
+				capital = 226
 			}
-			
-			set_country_flag = GON_returned_to_south_gondor
-		}
-	}
-	
-	south_gondor_coastal_expansion = {
-		picture = "south_gondor_map"
-		potential = {
-			tag = GON
-			HRD = { vassal_of = GON }
-			OR = {
-				227 = { empty = yes }
-				228 = { empty = yes }
-				229 = { empty = yes }
-				231 = { empty = yes }
-				232 = { empty = yes }
-				233 = { empty = yes }
-			}
-			226 = { owned_by = HRD }
-			NOT = { has_country_modifier = low_military_recruitment }
-		}
-		
-		allow = {
-			wilderness_2 = 1
-			war = no
-		}
-		
-		effect = {
-			random_owned = {
-				limit = {
-					229 = { empty = yes }
-				}
-				229 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					227 = { empty = yes }
-				}
-				227 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					228 = { empty = yes }
-				}
-				228 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					231 = { empty = yes }
-				}
-				231 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					233 = { empty = yes }
-				}
-				233 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					232 = { empty = yes }
-				}
-				232 = { secede_province = THIS }
-			}
-			
-			HRD = { country_event = 100006 }
-			HRD = {
-				random_owned = {
-					limit = {
-						province_id = 228
-					}
-					capital = 228
-				}
-				random_owned = {
-					limit = {
-						province_id = 232
-					}
-					capital = 232
-				}
-			}
-		}
-	}
-	
-	south_gondor_steppes = {
-		picture = "south_gondor_map"
-		potential = {
-			tag = GON
-			HRD = { vassal_of = GON }
-			OR = {
-				218 = { empty = yes }
-				221 = { empty = yes }
-				222 = { empty = yes }
-				223 = { empty = yes }
-				230 = { empty = yes }
-				235 = { empty = yes }
-				241 = { empty = yes }
-				243 = { empty = yes }
-				244 = { empty = yes }
-				246 = { empty = yes }
-				247 = { empty = yes }
-				248 = { empty = yes }
-				249 = { empty = yes }
-				250 = { empty = yes }
-				251 = { empty = yes }
-				253 = { empty = yes }
-				254 = { empty = yes }
-				255 = { empty = yes }
-			}
-			NOT = { has_country_modifier = low_military_recruitment }
-		}
-		
-		allow = {
-			wilderness_3 = 1
-			war = no
-		}
-		
-		effect = {
-			random_owned = {
-				limit = {
-					218 = { empty = yes }
-				}
-				218 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					221 = { empty = yes }
-				}
-				221 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					222 = { empty = yes }
-				}
-				222 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					223 = { empty = yes }
-				}
-				223 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					230 = { empty = yes }
-				}
-				230 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					235 = { empty = yes }
-				}
-				235 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					241 = { empty = yes }
-				}
-				241 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					243 = { empty = yes }
-				}
-				243 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					244 = { empty = yes }
-				}
-				244 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					246 = { empty = yes }
-				}
-				246 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					247 = { empty = yes }
-				}
-				247 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					248 = { empty = yes }
-				}
-				248 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					249 = { empty = yes }
-				}
-				249 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					250 = { empty = yes }
-				}
-				250 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					251 = { empty = yes }
-				}
-				251 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					253 = { empty = yes }
-				}
-				253 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					254 = { empty = yes }
-				}
-				254 = { secede_province = THIS }
-			}
-			random_owned = {
-				limit = {
-					255 = { empty = yes }
-				}
-				255 = { secede_province = THIS }
-			}
-			
-			HRD = { country_event = 100006 }
 		}
 	}
 	

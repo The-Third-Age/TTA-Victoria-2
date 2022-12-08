@@ -1459,3 +1459,61 @@ province_event = {
 		}
 	}
 }
+
+# Harondor Puppet Expands
+country_event = {
+	id = 50038
+	title = "Harondor Expands"
+	desc = "EVTDESC50038"
+	picture = "map_of_harad"
+	
+	trigger = {
+		tag = HRD
+		vassal_of = GON
+		any_owned_province = {
+			has_empty_adjacent_province = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "We are reclaiming what is rightfully ours"
+		
+		random_owned = {
+			limit = {
+				has_empty_adjacent_province = yes
+			}
+			
+			random_empty_neighbor_province = {
+				limit = {
+					is_core = HRD
+				}
+				
+				secede_province = THIS
+			}
+		}
+	}
+}
+
+# Give Harondor cores to Harondor
+country_event = {
+	id = 50039
+	title = "Harondor Expands"
+	desc = "EVTDESC50039"
+	picture = "map_of_harad"
+	
+	trigger = {
+		any_owned_province = {
+			is_core = HRD
+		}
+	}
+	
+	option = {
+		name = "We are reclaiming what is rightfully ours"
+		
+		HRD = { country_event = 100006 }
+	}
+}

@@ -124,11 +124,13 @@
 			Gets cleared after the war ends
 
 
-### Expansion to the West
+### Expansion to the South
 	Handles Gondor's flavor for expanding into Harondor
 	Gondor must have solved it's recruitment issues
 	
-	Expansion is handled in steps, with South Gondor (Harondor) getting the northernmost provinces (bordering Gondor), until all provinces in Harondor are owned
+	Gondor's Harondor puppet starts in Benish Armon and Methir
+		Harondor can start annexing adjacent empty provinces by event 50038
+		Any Harondor core owned by Gondor will be given to Harondor by event 50039
 	Gondor will get a free cb on any realm that holds Harondor provinces
 		Event 150001 starts the wars
 	
@@ -137,10 +139,6 @@
 	When a tech level is reached, can improve farming output of the region
 	
 	Country Flags:
-		GON_returned_to_south_gondor
-			Gets set when Gondor first creates South Gondor
-			Used to make sure that the decision isn't spammed
-			
 		south_gondor_gondorification
 			Gets set when Gondor annexes HRD
 			Used to remove cores when stating
@@ -277,6 +275,10 @@
 	
 	50036 - Noble Houses Fighting
 	50037 - A Game of Dallok
+	
+	#### Expansion in Harondor
+	50038 - Allows Harondor to claim a neighboring empty province
+	50039 - Gives all Harondor cores owned by Gondor to HRD
 	
 	150000 - Starts the Andrast war
 	150001 - Starts Gondor's wars liberating South Gondor's cores
