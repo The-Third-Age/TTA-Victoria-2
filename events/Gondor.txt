@@ -33,6 +33,9 @@
 #			May need multiple events
 #			Ensure that certain regions/ares got to GNR and certain regions/areas stay with Gondor
 
+# TODO: Update 50036 to target only region capitals
+#			And then target the capitals of adjacent regions
+
 # The Tolfalas Question
 country_event = {
 	id = 50000
@@ -1386,7 +1389,7 @@ country_event = {
 # Noble Houses Fighting
 province_event = {
 	id = 50036
-	title = "An Argument Between Two Noble Houses"
+	title = "An Argument Between Two Houses"
 	desc = "EVTDESC50036"
 	
 	trigger = {
@@ -1406,7 +1409,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2400
+		months = 4800
 	}
 	
 	option = {
