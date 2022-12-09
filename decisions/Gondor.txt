@@ -848,6 +848,20 @@ political_decisions = {
 				}
 				NOT = { has_province_modifier = the_mesta }
 			}
+			
+			FOR = {
+				any_neighbor_country = {
+					any_owned_province = {
+						has_province_modifier = the_mesta
+						owner = {
+							OR = {
+								tag = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		allow = {
