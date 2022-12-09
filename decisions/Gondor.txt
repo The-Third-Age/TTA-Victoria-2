@@ -833,6 +833,41 @@ political_decisions = {
 			treasury = -50000
 		}
 	}
+	
+	expand_the_mesta = {
+		picture = "pinnath_gelin"
+		
+		potential = {
+			is_culture_group = dunedain
+			has_global_flag = the_mesta_covers_anfalas
+			
+			any_owned_province = {
+				OR = {
+					trade_goods = horses
+					trade_goods = wool
+				}
+				NOT = { has_province_modifier = the_mesta }
+			}
+		}
+		
+		allow = {
+			money = 500000
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					OR = {
+						trade_goods = horses
+						trade_goods = wool
+					}
+					NOT = { has_province_modifier = the_mesta }
+				}
+				add_province_modifier = { name = the_mesta duration = -1 }
+				owner = { treasury = -10000 }
+			}
+		}
+	}
 }
 
 # Military Build Up

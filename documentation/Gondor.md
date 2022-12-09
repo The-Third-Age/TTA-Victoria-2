@@ -58,6 +58,8 @@
 	East Osgiliath (198): Rebuild Osgiliath
 	
 	Ithilien: Repopulate Ithilien
+	
+	Wool and Horse provinces: Expand the Mesta
 
 
 ### Military Build Up
@@ -280,6 +282,8 @@
 	50038 - Allows Harondor to claim a neighboring empty province
 	50039 - Gives all Harondor cores owned by Gondor to HRD
 	
+	50040 - Emergence of the Mesta
+	
 	150000 - Starts the Andrast war
 	150001 - Starts Gondor's wars liberating South Gondor's cores
 	150002 - Setups PUK's rebellion
@@ -292,3 +296,4 @@
 		wedding_denethor_finduilas
 		birth_of_boromir
 		birth_of_faramir
+		the_mesta_covers_anfalas

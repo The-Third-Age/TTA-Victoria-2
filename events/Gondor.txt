@@ -1460,6 +1460,7 @@ province_event = {
 	}
 }
 
+# { Expansion of the Harondor Puppet
 # Harondor Puppet Expands
 country_event = {
 	id = 50038
@@ -1515,5 +1516,101 @@ country_event = {
 		name = "We are reclaiming what is rightfully ours"
 		
 		HRD = { country_event = 100006 }
+	}
+}
+# }
+
+# Emergence of the Mesta
+country_event = {
+	id = 50040
+	title = "Emergence of the Mesta"
+	desc = "EVTDESC50040"
+	picture = "pinnath_gelin"
+	fire_only_once = yes
+	
+	trigger = {
+		is_culture_group = dunedain
+		guilds_2 = 1
+		is_vassal = no
+		OR = {
+			GON_118 = { owned_by = THIS }
+			GON_118 = { owner = { vassal_of = THIS } }
+		}
+		OR = {
+			GON_133 = { owned_by = THIS }
+			GON_133 = { owner = { vassal_of = THIS } }
+		}
+		OR = {
+			GON_134 = { owned_by = THIS }
+			GON_134 = { owner = { vassal_of = THIS } }
+		}
+		OR = {
+			GON_146 = { owned_by = THIS }
+			GON_146 = { owner = { vassal_of = THIS } }
+		}
+		OR = {
+			GON_123 = { owned_by = THIS }
+			GON_123 = { owner = { vassal_of = THIS } }
+		}
+		OR = {
+			GON_154 = { owned_by = THIS }
+			GON_154 = { owner = { vassal_of = THIS } }
+		}
+		OR = {
+			GON_78 = { owned_by = THIS }
+			GON_78 = { owner = { vassal_of = THIS } }
+		}
+	}
+	
+	option = {
+		name = "Good for the shepherds"
+		
+		# Add the Mesta to any horse or wool province in Anfalas that you own
+		any_owned = {
+			limit = {
+				OR = {
+					region = GON_118
+					region = GON_133
+					region = GON_134
+					region = GON_146
+					region = GON_123
+					region = GON_154
+					region = GON_78
+				}
+				OR = {
+					trade_goods = horses
+					trade_goods = wool
+				}
+			}			
+			add_province_modifier = { name = the_mesta duration = -1 }
+		}
+		
+		# Add the Mesta to any horse or woll province in Anfalas any puppet owns
+		any_country = {
+			limit = {
+				vassal_of = THIS
+			}
+			
+			any_owned = {
+				limit = {
+					OR = {
+						region = GON_118
+						region = GON_133
+						region = GON_134
+						region = GON_146
+						region = GON_123
+						region = GON_154
+						region = GON_78
+					}
+					OR = {
+						trade_goods = horses
+						trade_goods = wool
+					}
+				}			
+				add_province_modifier = { name = the_mesta duration = -1 }
+			}
+		}
+		
+		set_global_flag = the_mesta_covers_anfalas
 	}
 }
