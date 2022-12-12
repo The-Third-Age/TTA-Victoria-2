@@ -1,0 +1,143 @@
+# Small Mechanics Decisions:
+#	Wild Goblins
+
+# Wild Goblins
+political_decisions = {	
+	hunt_for_wild_goblins = {
+		potential = {
+			any_owned_province = {
+				OR = {
+					has_province_modifier = wild_goblin_hold
+					has_province_modifier = wild_goblin_outpost
+				}
+			}
+			
+			NOT = { has_country_flag = looking_for_goblin_settlement }
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					any_owned_province = {
+						has_province_modifier = wild_goblin_outpost
+						has_building = fort
+					}
+					army_tactics_1 = 1
+					money = 30000
+				}
+				AND = {
+					any_owned_province = {
+						has_province_modifier = wild_goblin_hold
+						has_building = fort
+					}
+					army_tactics_3 = 1
+					money = 50000
+				}
+			}
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					has_province_modifier = wild_goblin_outpost
+					has_building = fort
+				}
+				random_list = {
+					3 = { province_event = { id = 5001 days = 90 } }
+					1 = { province_event = { id = 5002 days = 90 } }
+				}
+				owner = { 
+					set_country_flag = looking_for_goblin_settlement
+					money = -30000
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					has_province_modifier = wild_goblin_hold
+					has_building = fort
+					owner = { NOT = { has_country_flag = looking_for_goblin_settlement } }
+				}
+				random_list = {
+					3 = { province_event = { id = 5001 days = 90 } }
+					1 = { province_event = { id = 5002 days = 90 } }
+				}
+				owner = { 
+					set_country_flag = looking_for_goblin_settlement
+					money = -50000
+				}
+			}
+		}
+	}
+	
+	enslave_wild_goblins = {
+		potential = {
+			OR = {
+				slavery = yes_slavery
+				slavery = non_accepted_slavery
+			}
+			any_owned_province = {
+				OR = {
+					has_province_modifier = wild_goblin_hold
+					has_province_modifier = wild_goblin_outpost
+				}
+			}
+			
+			NOT = { has_country_flag = looking_for_goblin_settlement }
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					any_owned_province = {
+						has_province_modifier = wild_goblin_outpost
+						has_building = fort
+					}
+					army_tactics_1 = 1
+					money = 30000
+				}
+				AND = {
+					any_owned_province = {
+						has_province_modifier = wild_goblin_hold
+						has_building = fort
+					}
+					army_tactics_3 = 1
+					money = 50000
+				}
+			}
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					has_province_modifier = wild_goblin_outpost
+					has_building = fort
+				}
+				random_list = {
+					3 = { province_event = { id = 5003 days = 90 } }
+					1 = { province_event = { id = 5002 days = 90 } }
+				}
+				owner = { 
+					set_country_flag = looking_for_goblin_settlement
+					money = -30000
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					has_province_modifier = wild_goblin_hold
+					has_building = fort
+					owner = { NOT = { has_country_flag = looking_for_goblin_settlement } }
+				}
+				random_list = {
+					3 = { province_event = { id = 5003 days = 90 } }
+					1 = { province_event = { id = 5002 days = 90 } }
+				}
+				owner = { 
+					set_country_flag = looking_for_goblin_settlement
+					money = -50000
+				}
+			}
+		}
+	}
+}

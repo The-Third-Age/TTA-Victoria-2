@@ -1,0 +1,187 @@
+# Small Mechanics Events {
+#	5000 - 5999 }
+
+# Wild Goblin Raid
+province_event = {
+	id = 5000
+	title = "Wild Goblin Raid"
+	desc = "EVTDESC5000"
+	
+	trigger = {
+		NOT = { owner = { has_country_modifier = observer_mode } }
+		OR = {
+			has_province_modifier = wild_goblin_hold
+			has_province_modifier = wild_goblin_outpost
+		}
+		any_neighbor_province = {
+			owner = { tag = THIS }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "Drat."
+		
+		# Goblins killed in the raid
+		any_pop = {
+			limit = {
+				is_culture_group = wild_goblins
+			}
+			reduce_pop = 0.95
+		}
+		
+		# Raid on an owned neighbor province
+		random_neighbor_province = {
+			limit = {
+				owner = { tag = THIS }
+			}
+			any_pop = {
+				limit = {
+					NOT = { type = soldiers }
+					NOT = { is_culture_group = wild_goblins }
+				}
+				militancy = 2
+				reduce_pop = 0.98
+			}
+			
+			any_pop = {
+				limit = {
+					type = soldiers
+					NOT = { is_culture_group = wild_goblins }
+				}
+				militancy = 2
+				reduce_pop = 0.9
+			}
+			
+			remove_province_modifier = recent_raid # Reset the timer
+			add_province_modifier = { name = recent_raid duration = 365 }
+		}
+	}
+}
+
+# Goblin Settlement Found and Eliminated
+province_event = {
+	id = 5001
+	title = "Goblin Settlement Found"
+	desc = "EVTDESC5001"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		
+		# Kill all of the goblins
+		any_pop = {
+			limit = {
+				is_culture_group = wild_goblins
+			}
+			
+			reduce_pop = 0
+		}
+		
+		soldiers = {
+			reduce_pop = 0.8
+		}
+		
+		any_pop = {
+			militancy = -1
+		}
+		
+		remove_province_modifier = wild_goblin_hold
+		remove_province_modifier = wild_goblin_outpost
+		remove_province_modifier = recent_raid
+		
+		random_list = {
+			5 = { treasury = 5000 }
+			10 = { treasury = 10000 }
+			4 = { treasury = 15000 }
+			1 = { years_of_research = 0.10 }
+		}
+		
+		owner = { clr_country_flag = looking_for_goblin_settlement }
+	}
+}
+
+# Abandoned Goblin Settlement Found
+province_event = {
+	id = 5002
+	title = "Abandoned Settlement Found"
+	desc = "EVTDESC5002"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "How are they one step ahead of us?"
+		
+		random_list = {
+			5 = { treasury = 2500 }
+			10 = { treasury = 5000 }
+			4 = { treasury = 7500 }
+			1 = { years_of_research = 0.05 }
+		}
+		
+		owner = { clr_country_flag = looking_for_goblin_settlement }
+	}
+}
+
+# Goblin Settlement Found and Enslaved
+province_event = {
+	id = 5003
+	title = "Goblin Settlement Found"
+	desc = "EVTDESC5003"
+	
+	is_triggered_only = yes
+	
+	
+	
+	option = {
+		name = "Good"
+		
+		# Kill those who resist
+		any_pop = {
+			limit = {
+				is_culture_group = wild_goblins
+			}
+			
+			reduce_pop = 0.9
+		}
+		
+		# Enslave the remaining goblins
+		any_pop = {
+			limit = {
+				is_culture_group = wild_goblins
+			}
+			pop_type = slaves
+		}
+		
+		# Some of the militia died
+		any_pop = {
+			limit = {
+				NOT = { is_culture_group = wild_goblins }
+				type = soldiers
+			}
+			
+			reduce_pop = 0.98
+		}
+		
+		any_pop = {
+			militancy = -1
+		}
+		
+		remove_province_modifier = wild_goblin_hold
+		remove_province_modifier = wild_goblin_outpost
+		remove_province_modifier = recent_raid
+		
+		random_list = {
+			5 = { treasury = 5000 }
+			10 = { treasury = 10000 }
+			4 = { treasury = 15000 }
+			1 = { years_of_research = 0.10 }
+		}
+		
+		owner = { clr_country_flag = looking_for_goblin_settlement }
+	}
+}		

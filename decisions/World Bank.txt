@@ -216,6 +216,7 @@ political_decisions = {
 				any_state = { is_slave = yes }
 			}
 			
+			# Setting up Administrative Services in capitals
 			any_country = {
 				limit = {
 					is_substate = no
@@ -225,6 +226,27 @@ political_decisions = {
 						is_capital = yes
 					}
 					trade_goods = administrative_services
+				}
+			}
+			
+			# Setting up Wild Goblin Holds
+			random_owned = {
+				any_neighbor_province = {
+					limit = {
+						culture = white_mountain_goblin
+					}
+					add_province_modifier = { name = wild_goblin_hold duration = -1 }
+				}
+			}
+			
+			# Setting up Wild Goblin Outposts
+			random_owned = {
+				any_neighbor_province = {
+					limit = {
+						NOT = { culture = white_mountain_goblin }
+						has_pop_culture = white_mountain_goblin
+					}
+					add_province_modifier = { name = wild_goblin_outpost duration = -1 }
 				}
 			}
 			
@@ -817,6 +839,86 @@ political_decisions = {
 					NOT = { has_country_flag = existing_country }
 				}
 				set_country_flag = existing_country
+			}
+		}
+	}
+}
+
+# Wild Goblins
+political_decisions = {
+	update_wild_goblin_modifiers = {
+		potential = {
+			tag = FOR
+			any_owned_province = {
+				any_neighbor_province = {
+					OR = {
+						# Majority is wild goblin but doesn't have wild_goblin_hold
+						AND = {
+							culture = white_mountain_goblin
+							NOT = { has_province_modifier = wild_goblin_hold }
+							NOT = { any_pop = { type = slaves is_culture_group = wild_goblins } }
+						}
+						# Minority is wild goblin doesn't have wild_goblin_outpost
+						AND = {
+							NOT = { culture = white_mountain_goblin }
+							has_pop_culture = white_mountain_goblin
+							NOT = { has_province_modifier = wild_goblin_outpost }
+							NOT = { any_pop = { type = slaves is_culture_group = wild_goblins } }
+						}
+						# Doesn't have any wild goblins, but has a modifier
+						AND = {
+							NOT = { has_pop_culture = white_mountain_goblin }
+							OR = {
+								has_province_modifier = wild_goblin_hold
+								has_province_modifier = wild_goblin_outpost
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {}
+		
+		effect = {
+			# Setting up Wild Goblin Holds
+			random_owned = {
+				any_neighbor_province = {
+					limit = {
+						culture = white_mountain_goblin
+						NOT = { any_pop = { type = slaves is_culture_group = wild_goblins } }
+					}
+					add_province_modifier = { name = wild_goblin_hold duration = -1 }
+					remove_province_modifier = wild_goblin_outpost
+				}
+			}
+			
+			# Setting up Wild Goblin Outposts
+			random_owned = {
+				any_neighbor_province = {
+					limit = {
+						NOT = { culture = white_mountain_goblin }
+						has_pop_culture = white_mountain_goblin
+						NOT = { any_pop = { type = slaves is_culture_group = wild_goblins } }
+					}
+					add_province_modifier = { name = wild_goblin_outpost duration = -1 }
+					remove_province_modifier = wild_goblin_hold
+				}
+			}
+			
+			# Removing modifiers from provinces without Wild Goblins
+			random_owned = [
+				any_neighbor_province = {
+					limit = {
+						NOT = { has_pop_culture = white_mountain_goblin }
+						OR = {
+							has_province_modifier = wild_goblin_hold
+							has_province_modifier = wild_goblin_outpost
+						}
+					}
+					remove_province_modifier = wild_goblin_hold
+					remove_province_modifier = wild_goblin_outpost
+				}
 			}
 		}
 	}
