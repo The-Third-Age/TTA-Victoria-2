@@ -1038,6 +1038,44 @@ country_event = { # Alatar found
                 days = 1
             }
         }
+		random_country = {
+			any_country = {
+				limit = {
+					tag = THIS
+					good_evil_alignment = good_alignment
+				}
+				ALA = {
+					political_reform = good_alignment
+					add_accepted_culture = good_culture
+					remove_accepted_culture = evil_culture
+					remove_accepted_culture = neutral_culture
+				}
+			}
+			any_country = {
+				limit = {
+					tag = THIS
+					good_evil_alignment = evil_alignment
+				}
+				ALA = {
+					political_reform = evil_alignment
+					add_accepted_culture = evil_culture
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = neutral_culture
+				}
+			}
+			any_country = {
+				limit = {
+					tag = THIS
+					good_evil_alignment = neutral_alignment
+				}
+				ALA = {
+					political_reform = neutral_alignment
+					add_accepted_culture = neutral_culture
+					remove_accepted_culture = good_culture
+					remove_accepted_culture = evil_culture
+				}
+			}
+		}
 	}
 }
 
