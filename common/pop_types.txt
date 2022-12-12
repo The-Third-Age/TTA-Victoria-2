@@ -105,6 +105,10 @@ promotion_chance = {
 		factor = -100
 		location = { NOT = { controlled_by = owner } }
 	}
+	modifier = {
+		factor = -100
+		is_culture_group = wild_goblins
+	}
 }
 
 demotion_chance = {
@@ -273,6 +277,10 @@ demotion_chance = {
 		factor = -100
 		location = { NOT = { controlled_by = owner } }
 	}
+	modifier = {
+		factor = -100
+		is_culture_group = wild_goblins
+	}
 }
 
 #general migration chance mtth, same for all pops
@@ -367,6 +375,10 @@ migration_chance = {
 			}
 		}
 	}
+	modifier = {
+		factor = -100
+		is_culture_group = wild_goblins
+	}
 }
 
 #general colonial migration mtth, same for all pops
@@ -435,6 +447,10 @@ colonialmigration_chance = {
 			NOT = { location = { total_pops = 5000 } }
 			NOT = { location = { controlled_by = owner } }
 		}
+	}
+	modifier = {
+		factor = -100
+		is_culture_group = wild_goblins
 	}
 }
 
@@ -559,6 +575,10 @@ emigration_chance = {
 	modifier = {
 		factor = -2.0
 		state_scope = { is_colonial = yes }
+	}
+	modifier = {
+		factor = -100
+		is_culture_group = wild_goblins
 	}
 }
 
@@ -688,9 +708,14 @@ assimilation_chance = {
 		factor = -20
 		country = { civilized = no }
 	}
+	modifier = {
+		factor = -100
+		is_culture_group = wild_goblins
+	}
 }
 
 #general conversion mtth, same for all pops
+# A pop's race cannot change
 conversion_chance = { 
 	factor = 0 # conversion 
 }
