@@ -12,7 +12,6 @@
 		Those around Ethir Anduin are the remnants of the Ethir Folk
 		Those in the steppes of Harondor are the remnants of the Dônan
 	Harnendan represents those who of a mixed blood between Gondorian and Haradrim, but are not the descendents of the followers of Castamir
-	Broadbeams are the small amount of Dwarves that live in the White Mountains
 
 
 ### Possible Leaders
