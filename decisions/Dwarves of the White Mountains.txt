@@ -1,0 +1,78 @@
+# Dwarves of the White Mountains Decisions {
+# Expansion }
+
+# Expansion
+political_decisions = {
+	claim_white_mountains = {
+		potential = {
+			tag = DWM
+			NOT = { has_global_flag = DWM_claimed_white_mountains }
+		}
+		
+		allow = {
+			OR = {
+				is_greater_power = yes
+				is_secondary_power = yes
+			}
+			expansion_1 = 1
+		}
+		
+		effect = {
+			FOR = {
+				random_owned = {
+					any_neighbor_province = {
+						limit = {
+							terrain = white_mountains
+							NOT = { core = DWM }
+						}
+						add_core = DWM
+					}
+				}
+			}
+			
+			# Making sure that DWM gets cores on land originally uncolonized
+			FOR = {
+				random_owned = {
+					random_empty_neighbor_province = {
+						limit = {
+							province_id = 191
+							NOT = { is_core = DWM }
+						}
+						add_core = DWM
+					}
+				}
+			}
+			
+			FOR = {
+				random_owned = {
+					random_empty_neighbor_province = {
+						limit = {
+							province_id = 193
+							NOT = { is_core = DWM }
+						}
+						add_core = DWM
+					}
+				}
+			}
+			
+			
+			set_global_flag = DWM_claimed_white_mountains
+		}
+	}
+	
+	forcibly_rename_white_mountains_province = {
+		picture = "renaming"
+		potential = {
+			tag = DWM
+			NOT = { has_global_flag = DWM_renamed_white_mountains }
+		}
+		
+		allow = { }
+		
+		effect = {
+			116 = { change_province_name = "Forbidden Halls" }
+			
+			set_global_flag = DWM_renamed_white_mountains
+		}
+	}
+}
