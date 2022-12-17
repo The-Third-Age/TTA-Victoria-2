@@ -2,6 +2,18 @@
 
 [Workflow Graph](https://drive.google.com/file/d/1nMP0vgwSdBK1PY2o1YaHXS6ZTQbiMbjH/view?usp=sharing) - will want to open with diagrams.net
 
+### Pops
+	Dúnedain represents the direct descendents of Númenor, those individuals with little-to-no blood of lesser men in their familial history
+	Gondorian/Amrothian represents those who identify as Gondorians but are mixed blood of the Daen and Númenoreans
+		Amrothian is it's own culture as Dol Amroth will have a path that allows them to secede from Gondor (and lose Gondorian as accepted)
+	Drúedain represents the Drúedain in Gondor - most are in Drúedan Forest or Drúwaith Iaur
+	Dunir represents the Wild Men of Andrast and Anfalas who have not assimilated into Gondorian society
+	Wildmen represents the other Wild Men in Gondor that have not assimilated into Gondorian society. They purposefully don't have a tag to promote assimilation
+		Those around Ethir Anduin are the remnants of the Ethir Folk
+		Those in the steppes of Harondor are the remnants of the Dônan
+	Harnendan represents those who of a mixed blood between Gondorian and Haradrim, but are not the descendents of the followers of Castamir
+
+
 ### Possible Leaders
 	Each leader has a flag stating if they are adults. Ecthelion II and Denethor II are alive at the start of the game
 	Boromir II and Faramir II are born about 20 years into the game, and 16 years after their birth, become generals. At this point they are considered alive
@@ -12,6 +24,7 @@
 	Boromir II
 	Faramir I
 	Aragorn Elessar II
+
 
 ### Substate Annexation
 	Starts feudalized
