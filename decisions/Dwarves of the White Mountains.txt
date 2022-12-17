@@ -3,6 +3,40 @@
 
 # Expansion
 political_decisions = {
+	clear_cores_from_DWM = {
+		picture = "claim_white_mountains"
+		potential = {
+			tag = DWM
+			NOT = { year = 2955 }
+			NOT = { has_global_flag = DWM_cores_cleared }
+		}
+		
+		allow = { 
+			NOT = { year = 2955 }
+		}
+		
+		effect = {
+			112 = {
+				remove_core = GON
+				remove_core = MRN
+			}
+			115 = {
+				remove_core = GON
+				remove_core = ANF
+			}
+			116 = {
+				remove_core = GON
+				remove_core = ANF
+			}
+			117 = {
+				remove_core = GON
+				remove_core = ANF
+			}
+			
+			set_global_flag = DWM_cores_cleared
+		}
+	}
+	
 	claim_white_mountains = {
 		potential = {
 			tag = DWM
