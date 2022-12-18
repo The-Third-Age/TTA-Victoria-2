@@ -1614,3 +1614,114 @@ country_event = {
 		set_global_flag = the_mesta_covers_anfalas
 	}
 }
+
+# The Borders of Anfalas
+country_event = {
+	id = 50041
+	title = "The Borders of Anfalas"
+	desc = "EVTDESC50041"
+	picture = "andrast_war"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_culture_group = dunedain
+		is_vassal = no
+		war = no
+		
+		ANF = {
+			all_core = {
+				owner = {
+					OR = {
+						tag = THIS
+						vassal_of = THIS
+					}
+				}
+			}
+		}
+		
+		ADR = {
+			all_core = {
+				owner = {
+					OR = {
+						tag = THIS
+						vassal_of = THIS
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "§LAndrast is a separate province!§!"
+		
+		ADR = {
+			all_core = {
+				remove_core = ANF
+			}
+		}
+		
+		FOR = {
+			any_neighbor_country = {
+				release = ADR
+			}
+		}
+		
+		ADR = { capital = 165 }
+		ADR = { annex_to = THIS }
+		release_vassal = ADR
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_greater_power = yes
+				}
+			}
+			owner = {
+				relation = {
+					who = ADR
+					value = 400
+				}
+				diplomatic_influence = {
+					who = ADR
+					value = 400
+				}
+				create_alliance = ADR
+			}
+		}
+	}
+	
+	option = {
+		name = "Andrast is part of Anfalas"
+		
+		FOR = {
+			any_neighbor_country = {
+				release = ADR
+			}
+		}
+		
+		ADR = {
+			all_core = {
+				remove_core = ADR
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ANF
+				}
+			}
+			owner = { ADR = { annex_to = ANF } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ANF }
+				}
+			}
+			owner = { ADR = annex_to = THIS } }
+		}
+	}
+}
