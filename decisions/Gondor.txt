@@ -923,59 +923,36 @@ political_decisions = {
 			tag = GON
 			NOT = { has_country_modifier = low_military_recruitment }
 			NOT = { has_global_flag = GON_andrast_war }
+			ADR = {
+				any_core = {
+					empty = no
+					owner = {
+						NOT = { tag = THIS }
+						NOT = { vassal_of = THIS }
+					}
+				}
+			}
 		}
 		
 		allow = {
-			NOT = { has_country_modifier = low_military_recruitment }
 			war = no
-			162 = {
-				OR = {
-					owner = {
-						civilized = no
-						NOT = { truce_with = GON }
-					}
-					owner = {
-						tag = GON
-					}
-				}
-			}
-			165 = {
-				OR = {
-					owner = {
-						civilized = no
-						NOT = { truce_with = GON }
-					}
-					owner = {
-						tag = GON
-					}
-				}
-			}
-			180 = {
-				OR = {
-					owner = {
-						civilized = no
-						NOT = { truce_with = GON }
-					}
-					owner = {
-						tag = GON
-					}
-				}
-			}
 			is_vassal = no
 		}
 		
 		effect = {
 			badboy = 5
 			
-			random_country = {
+			any_country = {
 				limit = { 
 					any_owned_province {
 						is_core = ADR
 					}
+					NOT = { tag = ADR }
+					NOT = { vassal_of = THIS }
 				 }
 				add_casus_belli = {
 					target = GON
-					type = conquest
+					type = andrast_war_cb
 					months = 12
 				}
 				country_event = 150000
@@ -990,7 +967,8 @@ political_decisions = {
 		
 		potential = {
 			tag = GON
-			has_global_flag = GON_andrast_war
+			exists = ADR
+			ADR = { vassal_of = THIS }
 		}
 		
 		allow = {
@@ -1003,6 +981,17 @@ political_decisions = {
 				city_jurisdiction = royal_cities
 			}
 			war = no
+			owns = 133
+			ADR = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = GON
+							tag = ADR
+						}
+					}
+				}
+			}
 		}
 		
 		effect = {
