@@ -90,7 +90,7 @@
 	Gondor must have solved it's recruitment issues
 	
 	Andrast:
-		Event 150000 starts the first war
+		Event 150000 starts the war(s)
 	
 	After Gondor annexes the region, if a Drúedain majority province gets made enough that is a PUK core, Drúwaith Iaur can rebel
 		Event 150002 sets it up to begin
@@ -103,12 +103,13 @@
 		If Gondor wins, it starts working on Gondorification, removing DRU cores once complete
 	
 	Drúwaith Iaur:
-		Is hardcoded to target PUK
+		War to make PUK a puppet
+		Also has other wars to free PUK land held by other realms
+			Event 150009 starts these wars
 
 	Global Flags:
 		GON_andrast_war
 			Functions as a stopgap to prevent the AI from spamming the decision
-			Is needed to annex puppet Andrast
 		
 		GON_puppet_druwaith_iaur
 			Functions as a stopgap to prevent the AI from spamming the decision
@@ -297,12 +298,13 @@
 	
 	50040 - Emergence of the Mesta
 	
-	150000 - Starts the Andrast war
+	150000 - Starts the Andrast Wars
 	150001 - Starts Gondor's wars liberating South Gondor's cores
 	150002 - Setups PUK's rebellion
 	150003 - Starts PUK's rebellion
 	150007 - Setups DRU's rebellion
 	150008 - Starts DRU's rebellion
+	150009 - Starts the Drúwaith Wars
 	
 	Global Flags:
 		birth_of_imrahil
