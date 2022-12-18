@@ -45,13 +45,17 @@ country_event = {
 				tag = GON
 				any_owned_province = {
 					OR = {
-						region = GON_162
+						region = GON_160
 						region = GON_165
 						region = GON_169
 						region = GON_175
 						region = GON_183
 					}
-					is_core = PUK
+					OR = {
+						is_core = PUK
+						is_core = DRA
+						is_core =  DRH
+					}
 					is_colonial = no
 				}
 				has_country_flag = andrast_gondorification
@@ -85,13 +89,17 @@ country_event = {
 					has_country_flag = andrast_gondorification
 					any_owned_province = {
 						OR = {
-							region = GON_162
+							region = GON_160
 							region = GON_165
 							region = GON_169
 							region = GON_175
 							region = GON_183
 						}
-						is_core = PUK
+						OR = {
+							is_core = PUK
+							is_core = DRA
+							is_core =  DRH
+						}
 						is_colonial = no
 					}
 				}
@@ -100,16 +108,22 @@ country_event = {
 				any_owned = {
 					limit = {
 						OR = {
-							region = GON_162
+							region = GON_160
 							region = GON_165
 							region = GON_169
 							region = GON_175
 							region = GON_183
 						}
-						is_core = PUK
+						OR = {
+							is_core = PUK
+							is_core = DRA
+							is_core =  DRH
+						}
 						is_colonial = no
 					}
 					remove_core = PUK
+					remove_core = DRA
+					remove_core = DRH
 				}
 			}
 		}
