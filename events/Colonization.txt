@@ -1,0 +1,79 @@
+# Colonization Events: {
+#	98000 - 98999 }
+
+# Andrast/Drúwaith Iaur Colonization
+province_event = {
+	id = 98000
+	title = "The Expansion of $COUNTRY$"
+	desc = "EVTDESC98000"
+	
+	trigger = {
+		owner = {
+			OR = {
+				tag = PUK
+				tag = DRA
+				tag = DRH
+			}
+		}
+		
+		has_empty_adjacent_province = yes
+		
+		# Owner has core provinces that are uncolonized
+		owner = {
+			any_core = {
+				empty = yes
+				any_neighbor_province = {
+					owner = {
+						tag = THIS
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 144
+	}
+	
+	option = {
+		name = "Allow them"
+		
+		owner = {
+			# Adds a modifier to all owned provinces with adjacent uncolonized cores
+			all_core = {
+				limit = {
+					empty = yes
+				}
+				
+				any_neighbor_province = {
+					limit = {
+						owner = { tag = THIS }
+					}
+					
+					add_province_modifier = { name = colonization_target duration = -1 }
+				}
+			}
+			
+			# Randomly grabs one of the marked provinces and annexes a random neighbor uncolonized core
+			random_owned = {
+				limit = {
+					has_empty_adjacent_province = yes
+					has_province_modifier = colonization_target
+				}
+				
+				random_empty_neighbor_province = {
+					limit = {
+						is_core = THIS
+					}
+					
+					secede_province = THIS
+				}
+			}
+			
+			# Clears the targeting modifiers to clear the path for the next time this event fires
+			any_owned = {
+				remove_province_modifier = colonization_target
+			}
+		}
+	}
+}
