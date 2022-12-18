@@ -298,3 +298,32 @@ country_event = {
 		set_global_flag = DRU_rebellion
 	}
 }
+
+# Start Drúwaith Iaur Puppeting
+country_event = {
+	id = 150009
+	picture = druedain_rebellion
+	title = "The Drúwaith Iaur War"
+	desc = "EVTDESC150009"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They shall not take our lands!"
+		
+		casus_belli = {
+			target = GON
+			type = humiliate
+			months = 12
+		}
+		
+		GON = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = druwaith_iaur_war_cb country = PUK }
+				defender_goal = { casus_belli = humiliate }
+				call_ally = yes
+			}
+		}
+	}
+}

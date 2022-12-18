@@ -969,6 +969,7 @@ political_decisions = {
 			tag = GON
 			exists = ADR
 			ADR = { vassal_of = THIS }
+			owns = 133
 		}
 		
 		allow = {
@@ -981,7 +982,6 @@ political_decisions = {
 				city_jurisdiction = royal_cities
 			}
 			war = no
-			owns = 133
 			ADR = {
 				all_core = {
 					owner = {
@@ -1010,46 +1010,68 @@ political_decisions = {
 		picture = "druwaith_iaur"
 		potential = {
 			tag = GON
+			NOT = { has_country_modifier = low_military_recruitment }
+			NOT = { has_country_flag = GON_puppet_druwaith_iaur }
 			OR = {
 				is_our_vassal = ADR
 				owns = 162
 			}
 			PUK = {
-				civilized = no
 				any_core = {
+					empty = no
 					owner = {
-						OR = {
-							tag = GON
-							tag = PUK
+						NOT = {
+							tag = THIS
 							vassal_of = THIS
 						}
 					}
 				}
-				exists = yes
-				is_vassal = no
 			}
-			NOT = { has_country_modifier = low_military_recruitment }
-			NOT = { has_country_flag = GON_puppet_druwaith_iaur }
 		}
 		
 		allow = {
 			war = no
-			NOT = { truce_with = PUK }
-			NOT = { has_country_flag = GON_puppet_druwaith_iaur }
 		}
 		
 		effect = {
-			casus_belli = {
-				target = PUK
-				type = make_puppet
-				duration = 12
+			random_country = {
+				limit = {
+					tag = PUK
+				}
+				THIS = {
+					casus_belli = {
+						target = PUK
+						type = make_puppet
+						duration = 12
+					}
+					war = {
+						target = PUK
+						attacker_goal = { casus_belli = make_puppet }
+						defender_goal = { casus_belli = status_quo }
+						call_ally = yes
+					}
+				}
 			}
 			
-			war = {
-				target = PUK
-				attacker_goal = { casus_belli = make_puppet }
-				defender_goal = { casus_belli = status_quo }
-				call_ally = yes
+			any_country = {
+				limit = {
+					NOT = {
+						tag = PUK
+						tag = THIS
+						vassal_of = THIS
+					}
+					any_owned_province = {
+						is_core = PUK
+					}
+				}
+				
+				add_casus_belli = {
+					target = GON
+					type = druwaith_iaur_war_cb
+					duration = 12
+				}
+				
+				country_event = 150009
 			}
 			
 			badboy = 3
