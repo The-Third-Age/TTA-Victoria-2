@@ -918,8 +918,18 @@ political_decisions = {
 			OR = {
 				soldiers = 0.027
 				has_country_modifier = encouraging_outside_military_recruitment
+				AND = {
+					flavor_11 = 1
+					soldiers = 0.025
+				}
 			}
-			military_score = 50
+			OR = {
+				military_score = 50
+				AND = {
+					flavor_11 = 1
+					military_score = 45
+				}
+			}
 		}
 		
 		effect = {
@@ -933,6 +943,23 @@ political_decisions = {
 				remove_country_modifier = low_military_recruitment
 				clr_country_flag = low_military_recruitment
 			}
+		}
+	}
+	
+	expand_minasdirath = {
+		potential = {
+			tag = GON
+			NOT = { training_1 = 1 }
+		}
+		
+		allow = {
+			money = 50000
+			training_1 = 1
+		}
+		
+		effect = {
+			treasury = -50000
+			activate_technology = flavor_11
 		}
 	}
 }
