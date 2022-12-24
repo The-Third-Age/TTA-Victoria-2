@@ -882,6 +882,28 @@ political_decisions = {
 			}
 		}
 	}
+	
+	recognize_college_of_spoken_word = {
+		potential = {
+			is_culture_group = dunedain
+			owns = 16
+			16 = { NOT = { has_province_modifier = college_of_spoken_word } }
+		}
+		
+		allow = {
+			culture_3 = 1
+			education_3 = 1
+		}
+		
+		effect = {
+			16 = {
+				add_province_modifier = {
+					name = college_of_spoken_word
+					duration = -1
+				}
+			}
+		}
+	}
 }
 
 # Military Build Up
