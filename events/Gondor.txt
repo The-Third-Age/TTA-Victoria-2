@@ -1721,7 +1721,34 @@ country_event = {
 					NOT = { exists = ANF }
 				}
 			}
-			owner = { ADR = annex_to = THIS } }
+			owner = { ADR = annex_to = THIS }
 		}
+	}
+}
+
+# Eärcaraxë
+province_event = {
+	id = 50042
+	title = "A Sighting of Eärcaraxë"
+	desc = "EVTDESC50042"
+	fire_only_once = yes
+	
+	trigger = {
+		owner = { ai = no }
+		province_id = 169
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Unlikely"
+		
+		labourers = {
+			militancy = 0.1
+		}
+		
+		owner = { prestige = 1 }
 	}
 }
