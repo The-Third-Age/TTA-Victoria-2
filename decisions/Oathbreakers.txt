@@ -1,0 +1,58 @@
+# Oathbreakers' Decisions {
+# Expansion }
+
+# Expansion
+political_decisions = {
+	haunt_mornan_vale = {
+		potential = {
+			tag = OBS
+			NOT = { has_global_flag = OBS_cores_claimed }
+		}
+		
+		allow = {
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+		
+		effect = {
+			94 = { add_core = OBS }
+			96 = { add_core = OBS }
+			104 = { add_core = OBS }
+			105 = { add_core = OBS }
+			107 = { add_core = OBS }
+			110 = { add_core = OBS }
+			112 = { add_core = OBS }
+			113 = { add_core = OBS }
+			
+			set_global_flag = OBS_cores_claimed
+		}
+	}
+	
+	expand_the_haunt = {
+		potential = {
+			tag = OBS
+			has_global_flag = OBS_cores_claimed
+			NOT = { has_global_flag = OBS_expanded_haunt }
+		}
+		
+		allow = {
+			all_core = { owned_by = THIS }
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+		
+		effect = {
+			91 = { add_core = OBS }
+			115 = { add_core = OBS }
+			116 = { add_core = OBS }
+			117 = { add_core = OBS }
+			157 = { add_core = OBS }
+			
+			set_global_flag = OBS_expanded_haunt
+		}
+	}
+}
