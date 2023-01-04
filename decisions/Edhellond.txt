@@ -1,0 +1,53 @@
+# Edhellond Decisions: {
+#	Expansion
+#	Elves have left
+# }
+
+# Expansion
+political_decisions = {
+	claim_dor_en_edhel = {
+		picture = "edhellond"
+		potential = {
+			tag = EDH
+			NOT = { has_global_flag = EDH_claimed_dor_en_edhel }
+		}
+		
+		allow = {
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+		
+		effect = {
+			GON_78 = { add_core = EDH }
+			
+			set_global_flag = EDH_claimed_dor_en_edhel
+		}
+	}
+}
+
+# Elves have left
+political_decisions = {
+	edhellond_no_more_elves = {
+		picture = "edhellond"
+		potential = {
+			owns = 78
+			NOT = { has_global_flag = EDH_no_more }
+			NOT = { accepted_culture = galadhrim }
+			NOT = { primary_culture = galadhrim }
+			NOT = { accepted_culture = elven_culture }
+		}
+		
+		allow = {
+			NOT = { EDH = { any_core = { has_pop_religion = elven } } }
+			NOT = { exists = EDH }
+		}
+		
+		effect = {
+			EDH = { all_core = { remove_core = EDH } }
+			
+			set_global_flag = EDH_no_more
+		}
+	}
+}
