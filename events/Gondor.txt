@@ -1723,6 +1723,8 @@ country_event = {
 			}
 			owner = { ADR = annex_to = THIS }
 		}
+		
+		set_global_flag = ADR_part_of_ANF
 	}
 }
 
@@ -1750,5 +1752,210 @@ province_event = {
 		}
 		
 		owner = { prestige = 1 }
+	}
+}
+
+# The Andrast-Druwaith Iaur Border
+country_event = {
+	id = 50043
+	title = "The Andrast - Drúwaith Iaur Border"
+	desc = "EVTDESC50043"
+	picture = "andrast_war"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_culture_group = dunedain
+		is_vassal = no
+		war = no
+		
+		PUK = {
+			all_core = {
+				OR = {
+					owned_by = THIS
+					owner = { vassal_of = THIS }
+				}
+			}
+		}
+		
+		OR = {
+			AND = {
+				has_global_flag = ADR_part_of_ANF
+				ANF = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = { vassal_of = THIS }
+						}
+					}
+				}
+			}
+			AND = {
+				NOT = { has_global_flag = ADR_part_of_ANF }
+				ANF = {
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = { vassal_of = THIS }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "The Ahasirith is the border"
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = ADR_part_of_ANF } } }
+		
+			GON_186 = { remove_core = ADR }
+			GON_188 = { remove_core = ADR }
+			GON_194 = { remove_core = ADR }
+		
+			ADR = { all_core = { remove_core = PUK } }
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = ADR_part_of_ANF } }
+			
+			GON_186 = { remove_core = ANF }
+			GON_188 = { remove_core = ANF }
+			GON_194 = { remove_core = ANF }
+		
+			ANF = { all_core = { remove_core = PUK } }
+		}
+		
+		random_country = {
+			limit = {
+				tag = PUK
+				OR = {
+					exists = ADR
+					exists = ANF
+				}
+			}
+			release = ADR
+			release = ANF
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					tag = ADR
+					tag = ANF
+				}
+				exists = PUK
+			}
+			release = PUK
+		}
+	}
+	
+	option = {
+		name = "The Ahasirith is the border, but Haerawreigion is in Drúwaith Iaur"
+		
+		GON_183 = { add_core = PUK }
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = ADR_part_of_ANF } } }
+		
+			GON_183 = { remove_core = ADR }
+			GON_186 = { remove_core = ADR }
+			GON_188 = { remove_core = ADR }
+			GON_194 = { remove_core = ADR }
+		
+			ADR = { all_core = { remove_core = PUK } }
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = ADR_part_of_ANF } }
+			
+			GON_183 = { remove_core = ANF }
+			GON_186 = { remove_core = ANF }
+			GON_188 = { remove_core = ANF }
+			GON_194 = { remove_core = ANF }
+		
+			ANF = { all_core = { remove_core = PUK } }
+		}
+		
+		random_country = {
+			limit = {
+				tag = PUK
+				OR = {
+					exists = ADR
+					exists = ANF
+				}
+			}
+			release = ADR
+			release = ANF
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					tag = ADR
+					tag = ANF
+				}
+				exists = PUK
+			}
+			release = PUK
+		}
+	}
+	
+	option = {
+		name = "The Lûrolló is the border"
+		
+		GON_183 = { add_core = PUK }
+		GON_160 = { add_core = PUK }
+		GON_175 = { add_core = PUK }
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = ADR_part_of_ANF } } }
+		
+			GON_160 = { remove_core = ADR }
+			GON_175 = { remove_core = ADR }
+			GON_183 = { remove_core = ADR }
+			GON_186 = { remove_core = ADR }
+			GON_188 = { remove_core = ADR }
+			GON_194 = { remove_core = ADR }
+		
+			ADR = { all_core = { remove_core = PUK } }
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = ADR_part_of_ANF } }
+		
+			GON_160 = { remove_core = ANF }
+			GON_175 = { remove_core = ANF }
+			GON_183 = { remove_core = ANF }
+			GON_186 = { remove_core = ANF }
+			GON_188 = { remove_core = ANF }
+			GON_194 = { remove_core = ANF }
+		
+			ANF = { all_core = { remove_core = PUK } }
+		}
+		
+		random_country = {
+			limit = {
+				tag = PUK
+				OR = {
+					exists = ADR
+					exists = ANF
+				}
+			}
+			release = ADR
+			release = ANF
+		}
+		
+		any_country = {
+			limit = {
+				OR = {
+					tag = ADR
+					tag = ANF
+				}
+				exists = PUK
+			}
+			release = PUK
+		}
 	}
 }
