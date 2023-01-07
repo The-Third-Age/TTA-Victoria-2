@@ -25,6 +25,30 @@ political_decisions = {
 			set_global_flag = EDH_claimed_dor_en_edhel
 		}
 	}
+	
+	reclaim_tirith_aear = {
+		picture = "edhellond"
+		potential = {
+			tag = EDH
+			has_global_flag = EDH_claimed_dor_en_edhel
+			NOT = { has_global_flag = EDH_claimed_tirith_aear }
+		}
+		
+		allow = {
+			OR = {
+				is_secondary_power = yes
+				is_greater_power = yes
+			}
+		}
+		
+		effect = {
+			GON_77 = { add_core = EDH }
+			70 = { add_core = EDH }
+			71 = { add_core = EDH }
+			
+			set_global_flag = EDH_claimed_tirith_aear
+		}
+	}
 }
 
 # Elves have left
