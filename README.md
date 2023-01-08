@@ -12,9 +12,9 @@ This is the GitHub Repo of the best Lord of the Rings mod for Victoria 2. Starti
 
 ## Development Credits
 Modders: 
- - SirRunner - Lead
- - DerpAnarchist/Glariamn
- - Cheese/s-williams
+ - SirRunner
+ - DerpAnarchist (Glariamn)
+ - Cheese (s-williams)
 
 Loremasters:
  - Jorde
@@ -24,6 +24,7 @@ Loremasters:
  - Radsterman
  - MoskauMaster
  - Jman
+ - Wyrms (joelAVS)
  
 ### Integrated Graphics Mods
  - Mish Mash Map Mod
