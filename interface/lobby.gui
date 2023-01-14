@@ -266,17 +266,6 @@
 				}
 				
 				### RANKINGS
-				#instantTextBoxType = {
-				#	name = "selected_score_label"
-				#	position = { x = 150 y = 93 }
-				#	textureFile = ""
-				#	font = "vic_18"
-				#	borderSize = {x = 0 y = 4}
-				#	text = "FE_SCORE"	
-				#	maxWidth = 50
-				#	maxHeight = 20	
-				#	format = left
-				#}
 				instantTextBoxType = {
 					name = "selected_rank_label"
 					position = { x = 192 y = 93 }
@@ -307,17 +296,6 @@
 					maxHeight = 20	
 					format = left
 				}
-				#instantTextBoxType = {
-				#	name = "selected_prestige_amount"
-				#	position = { x = 150 y = 113 }
-				#	textureFile = ""
-				#	font = "Arial12_black"
-				#	borderSize = {x = 0 y = 4}
-				#	text = "487"	
-				#	maxWidth = 40
-				#	maxHeight = 30	
-				#	format = left
-				#}
 				instantTextBoxType = {
 					name = "selected_prestige_rank"
 					position = { x = 194 y = 113 }
@@ -348,17 +326,6 @@
 					maxHeight = 20	
 					format = left
 				}
-				#instantTextBoxType = {
-				#	name = "selected_industry_amount"
-				#	position = { x = 150 y = 131 }
-				#	textureFile = ""
-				#	font = "Arial12_black"
-				#	borderSize = {x = 0 y = 4}
-				#	text = "436"	
-				#	maxWidth = 40
-				#	maxHeight = 20	
-				#	format = left
-				#}
 				instantTextBoxType = {
 					name = "selected_industry_rank"
 					position = { x = 194 y = 131 }
@@ -389,17 +356,6 @@
 					maxHeight = 20	
 					format = left
 				}
-				#instantTextBoxType = {
-				#	name = "selected_military_amount"
-				#	position = { x = 150 y = 149 }
-				#	textureFile = ""
-				#	font = "Arial12_black"
-				#	borderSize = {x = 0 y = 4}
-				#	text = "2671"	
-				#	maxWidth = 40
-				#	maxHeight = 20	
-				#	format = left
-				#}
 				instantTextBoxType = {
 					name = "selected_military_rank"
 					position = { x = 194 y = 149 }
@@ -412,31 +368,6 @@
 					format = right
 				}
 				
-				## ideology
-				# instantTextBoxType = {
-					# name = "selected_ideology_label"
-					# position = { x = 37 y = 175 }
-					# textureFile = ""
-					# font = "vic_18"
-					# borderSize = {x = 0 y = 4}
-					# text = "FE_IDEOLOGY"	
-					# maxWidth = 100
-					# maxHeight = 20	
-					# format = centre
-				# }
-				# iconType = {
-					# name = "selected_ideology_chart"
-					# spriteType = "GFX_selected_chart"
-					# position = { x= 90 y = 203 }
-					# Orientation = "UPPER_LEFT"
-				# }
-					# iconType = {
-					# name = "selected_ideology_chart_overlay"
-					# spriteType = "GFX_chart_overlay_small"
-					# position = { x= 59 y = 196 }
-					# Orientation = "UPPER_LEFT"
-				
-				# }
 				### population
 				instantTextBoxType = {
 					name = "selected_population_label"
@@ -535,8 +466,48 @@
 				}
 						
 			}
+			
+			### Interesting Countries Window ###
+			windowType = {
+				name = "interesting_countries"
+				backGround = ""
+				position = { x = 140 y = 10 }	
+				size = { x=110 y =768}
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				upsound = ""
+				downsound = ""
+				fullscreen=no
+			
+				instantTextBoxType = {
+					name = "interesting_countries_title"
+					position = { x = 106 y = 0 }
+					textureFile = ""
+					font = "vic_18_black"
+					borderSize = {x = 0 y = 4}
+					text = "INTERESTING_COUNTRIES_TITLE"	
+					maxWidth = 150
+					maxHeight = 20	
+					format = centre
+				}
+			
+				instantTextBoxType = {
+					name = "interesting_countries"
+					position = { x = 100 y = 15 }
+					textureFile = ""
+					font = "vic_18_black"
+					borderSize = {x = 0 y = 4}
+					text = "INTERESTING_COUNTRIES"	
+					maxWidth = 150
+					maxHeight = 20	
+					format = left
+				}
+			}
+			
 
-			### SAVE GAMES ####  <---MAKE SAVE GAMES/BOOKMARKS in same listbox.
+			### SAVE GAMES ####
 			
 			windowType = {
 				name ="save_games"
@@ -699,7 +670,7 @@
 				name ="chatlog"
 				position = { x = -250 y = -173 }
 				backGround=""
-				size = { x= 490 y =130 }
+				size = { x= 490 y =120 }
 				Orientation = "CENTER_DOWN"
 				spacing = 0
 				scrollbartype = "standardlistbox_slider"
