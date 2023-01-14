@@ -7,7 +7,8 @@
 #	Return to South Gondor
 #	Reintegration of Rohan
 #	Generic Political Flavor
-#	Ecthelion II Flavor }
+#	Ecthelion II Flavor
+#	Aragorn Elessar Flavor }
 
 # TODO: Add decision to turn into Gondor of GNR wins second Kin-Strife
 # TODO: Add decision to annex GNR if second Kin-Strife is a draw
@@ -2069,6 +2070,50 @@ political_decisions = {
 				}
 				add_province_modifier = { name = ithilien_rangers_province duration = -1 }
 			}
+		}
+	}
+}
+
+# Aragorn Elessar Flavor
+political_decisions = {
+	# Also for Imrahil I
+	restore_bar_iaur_dinen = {
+		potential = {
+			NOT = { has_global_flag = bar_iaur_dinen_restored }
+			OR = {
+				nationalvalue = aragorn_elessar
+				nationalvalue = imrahil_1
+			}
+			OR = {
+				owns = 54
+				54 = { owner = { vassal_of = THIS } }
+			}
+			OR = {
+				is_vassal = no
+				overlord = { NOT = { is_culture_group = dunedain } }
+			}
+		}
+		
+		allow = {
+			54 = { has_building = fort }
+			money = 25000
+			OR = {
+				UMB = { exists = no }
+				is_our_vassal = UMB
+			}
+			270 = {
+				owner = {
+					NOT = { is_culture_group = kingsmen }
+					NOT = { is_culture_group = haradrim }
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			treasury = -25000
+			
+			set_global_flag = bar_iaur_dinen_restored
 		}
 	}
 }

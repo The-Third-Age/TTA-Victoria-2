@@ -219,7 +219,7 @@ political_decisions = {
 				AND = {
 					good_evil_alignment = evil_alignment
 					OR = {
-						NOT = { exists = DAL }
+						DAL = { exists = no }
 						DAL = { 
 							exists = yes
 							OR = {
@@ -229,7 +229,7 @@ political_decisions = {
 						}
 					}
 					OR = {
-						NOT = { exists = DOR }
+						DOR = { exists = no }
 						DOR = { 
 							exists = yes
 							OR = {
@@ -239,7 +239,7 @@ political_decisions = {
 						}
 					}
 					OR = {
-						NOT = { exists = EHW }
+						EHW = { exists = no }
 						EHW = { 
 							exists = yes
 							OR = {
@@ -252,7 +252,7 @@ political_decisions = {
 				AND = {
 					good_evil_alignment = good_alignment
 					OR = {
-						NOT = { exists = DAL }
+						DAL = { exists = no }
 						DAL = { 
 							exists = yes
 							OR = {
@@ -262,7 +262,7 @@ political_decisions = {
 						}
 					}
 					OR = {
-						NOT = { exists = DOR }
+						DOR = { exists = no }
 						DOR = { 
 							exists = yes
 							OR = {
@@ -272,7 +272,7 @@ political_decisions = {
 						}
 					}
 					OR = {
-						NOT = { exists = EHW }
+						EHW = { exists = no }
 						EHW = { 
 							exists = yes
 							OR = {
