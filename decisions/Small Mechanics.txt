@@ -1,5 +1,6 @@
 # Small Mechanics Decisions:
 #	Wild Goblins
+#	Outlaws
 
 # Wild Goblins
 political_decisions = {	
@@ -140,6 +141,45 @@ political_decisions = {
 					money = -50000
 				}
 			}
+		}
+	}
+}
+
+# Outlaws
+political_decisions = {
+	hunt_for_outlaws = {
+		potential = {
+			any_owned_province = { 
+				has_province_modifier = outlaw_hold
+				NOT = { has_province_modifier = military_hunting_outlaws }
+			}
+		}
+		
+		allow = {
+			any_owned_province = {
+				has_province_modifier = outlaw_hold
+				NOT = { has_province_modifier = military_hunting_outlaws }
+				has_building = fort
+			}
+			army_training_1 = 1
+			money = 10000
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					has_province_modifier = outlaw_hold
+					NOT = { has_province_modifier = military_hunting_outlaws }
+					has_building = fort
+				}
+				add_province_modifier = { name = military_hunting_outlaws duration = 30 }
+				random_list = {
+					3 = { province_event = { id = 5006 days = 30 } }
+					1 = { province_event = { id = 5007 days = 30 } }
+				}
+			}
+			
+			treasury = -10000
 		}
 	}
 }

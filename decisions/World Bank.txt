@@ -3,7 +3,10 @@
 #	Good/Evil Clean Up
 #	Leave FOR Alone 
 #	Government Flags Clean Up 
-#	Realm Leaders }
+#	Realm Leaders 
+#	Wild Goblins 
+#	Outlaw Holds 
+#	Debug }
 
 # Starting Decision
 political_decisions = {
@@ -45,7 +48,7 @@ political_decisions = {
 						is_culture_group = eagles
 						is_culture_group = rohirrim
 						is_culture_group = lossoth
-						primary_culture = druedain
+						primary_culture = dunedain
 						primary_culture = gondorian
 						primary_culture = amrothian
 						primary_culture = longbeard
@@ -63,9 +66,7 @@ political_decisions = {
 					OR = {
 						is_culture_group = breelander
 						is_culture_group = hobbits
-						is_culture_group = trolls
-						primary_culture = dunnish
-						primary_culture = enedwaithrim
+						is_culture_group = wildmen
 						primary_culture = kingsmen
 						primary_culture = ironfist
 						primary_culture = arnorian
@@ -91,6 +92,7 @@ political_decisions = {
 						is_culture_group = wild_goblins
 						is_culture_group = angmarrim
 						primary_culture = wight
+						is_culture_group = trolls
 					}
 				}
 				add_accepted_culture = evil_culture
@@ -127,6 +129,10 @@ political_decisions = {
 						is_culture_group = uruk_hai
 						is_culture_group = northern_goblins
 						is_culture_group = angmarrim
+						is_culture_group = trolls
+						is_culture_group = undead
+						is_culture_group = eagles
+						is_culture_group = spiders
 					}
 				}
 				set_country_flag = infantry_focused
@@ -149,7 +155,7 @@ political_decisions = {
 							tag = STO
 						}
 						
-						is_culture_group = shirelings
+						is_culture_group = hobbits
 					}
 				}
 				set_country_flag = ranged_focused
@@ -249,6 +255,16 @@ political_decisions = {
 						has_pop_culture = white_mountain_goblin
 					}
 					add_province_modifier = { name = wild_goblin_outpost duration = -1 }
+				}
+			}
+			
+			# Setting up Outlaw Holds
+			random_owned = {
+				any_neighbor_province = {
+					limit = {
+						is_core = OUT
+					}
+					add_province_modifier = { name = outlaw_hold duration = -1 }
 				}
 			}
 			
@@ -929,6 +945,81 @@ political_decisions = {
 					remove_province_modifier = wild_goblin_hold
 					remove_province_modifier = wild_goblin_outpost
 				}
+			}
+		}
+	}
+}
+
+# Outlaw Hold
+political_decisions = {
+	update_outlaw_holds = {
+		potential = {
+			tag = FOR
+		}
+		
+		allow = {
+			any_owned_province = {
+				any_neighbor_province = {
+					OR = {
+						AND = {
+							is_core = OUT
+							NOT = { has_province_modifier = outlaw_hold }
+						}
+						AND = {
+							NOT = { is_core = OUT }
+							has_province_modifier = outlaw_hold
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = {
+						is_core = OUT
+						NOT = { has_province_modifier = outlaw_hold }
+					}
+					add_province_modifier = { name = outlaw_hold duration = -1 }
+				}
+				any_neighbor_province = {
+					limit = {
+						NOT = { is_core = OUT }
+						has_province_modifier = outlaw_hold
+					}
+					remove_province_modifier = outlaw_hold
+				}
+			}
+		}
+	}
+}
+
+# Debug
+political_decisions = {
+	debug_research_flags = {
+		potential = {
+			tag = FOR
+			ai = no
+			
+			any_neighbor_country = {
+				NOT = { has_country_flag = infantry_focused }
+				NOT = { has_country_flag = ranged_focused }
+				NOT = { has_country_flag = cavalry_focused }
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			any_neighbor_country = {
+				limit = {
+					NOT = { has_country_flag = infantry_focused }
+					NOT = { has_country_flag = ranged_focused }
+					NOT = { has_country_flag = cavalry_focused }
+				}
+				treasury = 1
 			}
 		}
 	}
