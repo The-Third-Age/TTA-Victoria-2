@@ -1,5 +1,6 @@
 # Oathbreakers' Decisions {
-# Expansion }
+#	Expansion 
+#	Haunting }
 
 # Expansion
 political_decisions = {
@@ -53,6 +54,47 @@ political_decisions = {
 			157 = { add_core = OBS }
 			
 			set_global_flag = OBS_expanded_haunt
+		}
+	}
+}
+
+# Haunting
+political_decisions = {
+	fix_haunting_mismatch = {
+		potential = {
+			tag = FOR
+			OR = {
+				OBS = { any_core = { NOT = { has_province_modifier = haunted_by_oathbreakers } } }
+				any_owned_province = {
+					any_neighbor_province = {
+						has_province_modifier = haunted_by_oathbreakers
+						NOT = { is_core = OBS }
+					}
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			OBS = {
+				all_core = {
+					limit = {
+						NOT = { has_province_modifier = haunted_by_oathbreakers }
+					}
+					add_province_modifier = { name = haunted_by_oathbreakers duration = -1 }
+				}
+			}
+			
+			random_owned = {
+				any_neighbor_province = {
+					limit = {
+						has_province_modifier = haunted_by_oathbreakers
+						NOT = { is_core = OBS }
+					}
+					remove_province_modifier = haunted_by_oathbreakers
+				}
+			}
 		}
 	}
 }
