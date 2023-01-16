@@ -12,9 +12,9 @@ political_decisions = {
 					has_province_modifier = wild_goblin_hold
 					has_province_modifier = wild_goblin_outpost
 				}
+				NOT = { has_province_modifier = military_hunting_wild_goblins }
+				NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 			}
-			
-			NOT = { has_country_flag = looking_for_goblin_settlement }
 		}
 		
 		allow = {
@@ -23,6 +23,8 @@ political_decisions = {
 					any_owned_province = {
 						has_province_modifier = wild_goblin_outpost
 						has_building = fort
+						NOT = { has_province_modifier = military_hunting_wild_goblins }
+						NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 					}
 					army_tactics_1 = 1
 					money = 30000
@@ -31,6 +33,8 @@ political_decisions = {
 					any_owned_province = {
 						has_province_modifier = wild_goblin_hold
 						has_building = fort
+						NOT = { has_province_modifier = military_hunting_wild_goblins }
+						NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 					}
 					army_tactics_3 = 1
 					money = 50000
@@ -43,31 +47,26 @@ political_decisions = {
 				limit = {
 					has_province_modifier = wild_goblin_outpost
 					has_building = fort
+					owner = { money = 30000 }
+					NOT = { has_province_modifier = military_hunting_wild_goblins }
+					NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 				}
-				random_list = {
-					3 = { province_event = { id = 5001 days = 90 } }
-					1 = { province_event = { id = 5002 days = 90 } }
-				}
-				owner = { 
-					set_country_flag = looking_for_goblin_settlement
-					money = -30000
-				}
+				
+				add_province_modifier = { name = military_hunting_wild_goblins duration = -1 }
+				THIS = { treasury = -30000 }
 			}
 			
 			random_owned = {
 				limit = {
 					has_province_modifier = wild_goblin_hold
 					has_building = fort
-					owner = { NOT = { has_country_flag = looking_for_goblin_settlement } }
+					owner = { money = 50000 }
+					NOT = { has_province_modifier = military_hunting_wild_goblins }
+					NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 				}
-				random_list = {
-					3 = { province_event = { id = 5001 days = 90 } }
-					1 = { province_event = { id = 5002 days = 90 } }
-				}
-				owner = { 
-					set_country_flag = looking_for_goblin_settlement
-					money = -50000
-				}
+				
+				add_province_modifier = { name = military_hunting_wild_goblins duration = -1 }
+				THIS = { treasury = -50000 }
 			}
 		}
 	}
@@ -84,9 +83,9 @@ political_decisions = {
 					has_province_modifier = wild_goblin_hold
 					has_province_modifier = wild_goblin_outpost
 				}
+				NOT = { has_province_modifier = military_hunting_wild_goblins }
+				NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 			}
-			
-			NOT = { has_country_flag = looking_for_goblin_settlement }
 		}
 		
 		allow = {
@@ -95,6 +94,8 @@ political_decisions = {
 					any_owned_province = {
 						has_province_modifier = wild_goblin_outpost
 						has_building = fort
+						NOT = { has_province_modifier = military_hunting_wild_goblins }
+						NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 					}
 					army_tactics_1 = 1
 					money = 30000
@@ -103,6 +104,8 @@ political_decisions = {
 					any_owned_province = {
 						has_province_modifier = wild_goblin_hold
 						has_building = fort
+						NOT = { has_province_modifier = military_hunting_wild_goblins }
+						NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 					}
 					army_tactics_3 = 1
 					money = 50000
@@ -115,31 +118,28 @@ political_decisions = {
 				limit = {
 					has_province_modifier = wild_goblin_outpost
 					has_building = fort
+					owner = { money = 30000 }
+					owner = { army_tactics_1 = 1 }
+					NOT = { has_province_modifier = military_hunting_wild_goblins }
+					NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 				}
-				random_list = {
-					3 = { province_event = { id = 5003 days = 90 } }
-					1 = { province_event = { id = 5002 days = 90 } }
-				}
-				owner = { 
-					set_country_flag = looking_for_goblin_settlement
-					money = -30000
-				}
+				
+				add_province_modifier = { name = military_hunting_wild_goblins_slavery duration = -1 }
+				owner = { treasury = -30000 }
 			}
 			
 			random_owned = {
 				limit = {
 					has_province_modifier = wild_goblin_hold
 					has_building = fort
-					owner = { NOT = { has_country_flag = looking_for_goblin_settlement } }
+					owner = { money = 50000 }
+					owner = { army_tactics_3 = 1 }
+					NOT = { has_province_modifier = military_hunting_wild_goblins }
+					NOT = { has_province_modifier = military_hunting_wild_goblins_slavery }
 				}
-				random_list = {
-					3 = { province_event = { id = 5003 days = 90 } }
-					1 = { province_event = { id = 5002 days = 90 } }
-				}
-				owner = { 
-					set_country_flag = looking_for_goblin_settlement
-					money = -50000
-				}
+				
+				add_province_modifier = { name = military_hunting_wild_goblins_slavery duration = -1 }
+				owner = { treasury = -50000 }
 			}
 		}
 	}
@@ -161,7 +161,7 @@ political_decisions = {
 				NOT = { has_province_modifier = military_hunting_outlaws }
 				has_building = fort
 			}
-			army_training_1 = 1
+			training_1 = 1
 			money = 10000
 		}
 		
@@ -172,11 +172,7 @@ political_decisions = {
 					NOT = { has_province_modifier = military_hunting_outlaws }
 					has_building = fort
 				}
-				add_province_modifier = { name = military_hunting_outlaws duration = 30 }
-				random_list = {
-					3 = { province_event = { id = 5006 days = 30 } }
-					1 = { province_event = { id = 5007 days = 30 } }
-				}
+				add_province_modifier = { name = military_hunting_outlaws duration = -1 }
 			}
 			
 			treasury = -10000

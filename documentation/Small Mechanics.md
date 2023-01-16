@@ -17,10 +17,6 @@
 		5002 - Unsuccessful hunt
 		5003 - Successful hunt against the settlement (enslavement)
 	
-	Country Flags:
-		looking_for_goblin_settlement - used to ensure that only one search can happen at the same time
-									  - also ensures that no settlement has multiple searches at once
-	
 	Modifiers:
 		recent_raid - applied for a year after a province gets raided
 		wild_goblin_outpost - applied by FOR for any province with wild goblins (but not a majority)

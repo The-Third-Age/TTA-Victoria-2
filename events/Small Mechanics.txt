@@ -70,7 +70,18 @@ province_event = {
 	title = "Goblin Settlement Found"
 	desc = "EVTDESC5001"
 	
-	is_triggered_only = yes
+	trigger = {
+		has_province_modifier = military_hunting_wild_goblins
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+	}
 	
 	option = {
 		name = "Good"
@@ -85,7 +96,7 @@ province_event = {
 		}
 		
 		soldiers = {
-			reduce_pop = 0.8
+			reduce_pop = 0.98
 		}
 		
 		any_pop = {
@@ -94,7 +105,7 @@ province_event = {
 		
 		remove_province_modifier = wild_goblin_hold
 		remove_province_modifier = wild_goblin_outpost
-		remove_province_modifier = recent_raid
+		remove_province_modifier = military_hunting_wild_goblins
 		
 		owner = {
 			random_list = {
@@ -104,8 +115,6 @@ province_event = {
 				1 = { years_of_research = 0.10 }
 			}
 		}
-		
-		owner = { clr_country_flag = looking_for_goblin_settlement }
 	}
 }
 
@@ -128,8 +137,6 @@ province_event = {
 				1 = { years_of_research = 0.05 }
 			}
 		}
-		
-		owner = { clr_country_flag = looking_for_goblin_settlement }
 	}
 }
 
@@ -139,7 +146,18 @@ province_event = {
 	title = "Goblin Settlement Found"
 	desc = "EVTDESC5003"
 	
-	is_triggered_only = yes
+	trigger = {
+		has_province_modifier = military_hunting_wild_goblins_slavery
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+	}
 	
 	option = {
 		name = "Good"
@@ -177,7 +195,7 @@ province_event = {
 		
 		remove_province_modifier = wild_goblin_hold
 		remove_province_modifier = wild_goblin_outpost
-		remove_province_modifier = recent_raid
+		remove_province_modifier = military_hunting_wild_goblins_slavery
 		
 		owner = {
 			random_list = {
@@ -187,8 +205,6 @@ province_event = {
 				1 = { years_of_research = 0.10 }
 			}
 		}
-		
-		owner = { clr_country_flag = looking_for_goblin_settlement }
 	}
 }
 # }
@@ -230,6 +246,7 @@ province_event = {
 	desc = "EVTDESC5005"
 	
 	trigger = {
+		NOT = { owner = { has_country_modifier = observer_mode } }
 		NOT = { has_province_modifier = outlaw_hold }
 		OR = {
 			NOT = { life_needs = 0.99 }
@@ -262,11 +279,13 @@ province_event = {
 	desc = "EVTDESC5006"
 	
 	trigger = {
+		NOT = { owner = { has_country_modifier = observer_mode } }
 		has_province_modifier = outlaw_hold
-		NOT = { has_province_modifier = military_hunting_outlaws }
+		
 		OR = {
 			owner = { crime_fighting = 0.99 }
 			units_in_province = 1
+			has_province_modifier = military_hunting_outlaws
 		}
 	}
 	
@@ -292,6 +311,11 @@ province_event = {
 			factor = 0.9
 			units_in_province = 10
 		}
+		
+		modifier = {
+			factor = 0.75
+			has_province_modifier = military_hunting_outlaws
+		}
 	}
 	
 	option = {
@@ -299,6 +323,16 @@ province_event = {
 		
 		remove_core = OUT
 		remove_province_modifier = outlaw_hold
+		
+		# Some of the militia died
+		any_pop = {
+			limit = {
+				NOT = { is_culture_group = wild_goblins }
+				type = soldiers
+			}
+			
+			reduce_pop = 0.99
+		}
 		
 		owner = {
 			random_list = {
@@ -316,10 +350,13 @@ province_event = {
 	desc = "EVTDESC5007"
 	
 	trigger = {
+		NOT = { owner = { has_country_modifier = observer_mode } }
 		has_province_modifier = outlaw_hold
-		NOT = { has_province_modifier = military_hunting_outlaws }
 		
-		units_in_province = 1
+		OR = {
+			units_in_province = 1
+			has_province_modifier = military_hunting_outlaws
+		}
 		
 		any_neighbor_province = {
 			owned_by = THIS
@@ -344,6 +381,11 @@ province_event = {
 			factor = 0.9
 			units_in_province = 10
 		}
+		
+		modifier = {
+			factor = 0.75
+			has_province_modifier = military_hunting_outlaws
+		}
 	}
 	
 	option = {
@@ -351,6 +393,16 @@ province_event = {
 		
 		remove_core = OUT
 		remove_province_modifier = outlaw_hold
+		
+		# Some of the militia died
+		any_pop = {
+			limit = {
+				NOT = { is_culture_group = wild_goblins }
+				type = soldiers
+			}
+			
+			reduce_pop = 0.995
+		}
 		
 		owner = {
 			random_list = {
