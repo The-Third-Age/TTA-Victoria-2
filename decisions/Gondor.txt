@@ -8,6 +8,7 @@
 #	Reintegration of Rohan
 #	Generic Political Flavor
 #	Ecthelion II Flavor
+#	Denethor II Flavor
 #	Aragorn Elessar Flavor }
 
 # TODO: Add decision to turn into Gondor of GNR wins second Kin-Strife
@@ -215,6 +216,14 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = low_military_recruitment
+			}
+		}
 	}
 	
 	annex_lebennin = {
@@ -291,6 +300,14 @@ political_decisions = {
 				personality = tactical
 			}
 		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = low_military_recruitment
+			}
+		}
 	}
 	
 	tolfalas_question = {
@@ -321,6 +338,14 @@ political_decisions = {
 		
 		effect = {
 			country_event = 50000
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = low_military_recruitment
+			}
 		}
 	}
 	
@@ -455,6 +480,14 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = low_military_recruitment
+			}
+		}
 	}
 	
 	annex_anfalas = {
@@ -531,6 +564,14 @@ political_decisions = {
 				}
 			}
 		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = low_military_recruitment
+			}
+		}
 	}
 	
 	annex_dol_amroth = {
@@ -563,7 +604,10 @@ political_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				has_global_flag = railroading_enabled
+				OR = {
+					has_global_flag = railroading_enabled
+					has_country_modifier = low_military_recruitment
+				}
 			}
 		}
 	}
@@ -2064,6 +2108,10 @@ political_decisions = {
 			}
 		}
 	}
+}
+
+# Denethor II Flavor
+political_decisions = {
 }
 
 # Aragorn Elessar Flavor
