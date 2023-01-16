@@ -422,3 +422,348 @@ province_event = {
 	}
 }
 # }
+
+# Palantíri Events {
+# 5008 - 5016
+# Saw Dissent
+country_event = {
+	id = 5008
+	title = "Foresight of Dissent"
+	desc = "EVTDESC5008"
+	picture = "palantir"
+	
+	trigger = {
+		has_country_flag = using_palantiri
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "Placate them"
+		
+		treasury = -5000
+		any_pop = {
+			militancy = -1
+			consciousness = -1
+		}
+	}
+}
+
+# Saw Diplomatic Opportunities
+country_event = {
+	id = 5009
+	title = "Foresight of Diplomacy"
+	desc = "EVTDESC5009"
+	picture = "palantir"
+	
+	trigger = {
+		has_country_flag = using_palantiri
+		
+		FOR = {
+			any_neighbor_country = {
+				NOT = { war_with = THIS }
+				NOT = { alliance_with = THIS }
+				OR = {
+					AND = {
+						THIS = { good_evil_alignment = evil_alignment }
+						OR = {
+							good_evil_alignment = neutral_alignment
+							good_evil_alignment = evil_alignment
+						}
+					}
+					AND = {
+						THIS = { good_evil_alignment = good_alignment }
+						OR = {
+							good_evil_alignment = neutral_alignment
+							good_evil_alignment = good_alignment
+						}
+					}
+					THIS = { good_evil_alignment = neutral_alignment }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "Sieze it"
+		
+		random_country = {
+			limit = {
+				NOT = { war_with = THIS }
+				NOT = { alliance_with = THIS }
+				OR = {
+					AND = {
+						THIS = { good_evil_alignment = evil_alignment }
+						OR = {
+							good_evil_alignment = neutral_alignment
+							good_evil_alignment = evil_alignment
+						}
+					}
+					AND = {
+						THIS = { good_evil_alignment = good_alignment }
+						OR = {
+							good_evil_alignment = neutral_alignment
+							good_evil_alignment = good_alignment
+						}
+					}
+					THIS = { good_evil_alignment = neutral_alignment }
+				}
+			}
+			alliance_with = THIS
+		}
+		
+		treasury = -10000
+		prestige = 2
+	}
+	
+	option = {
+		name = "Ignore it"
+	}
+}
+
+# Saw Betrayal
+country_event = {
+	id = 5010
+	title = "Foresight of Betrayal"
+	desc = "EVTDESC5010"
+	picture = "palantir"
+	
+	trigger = {
+		has_country_flag = using_palantiri
+		
+		FOR = { 
+			any_neighbor_country = { 
+				alliance_with = THIS
+				NOT = { vassal_of = THIS }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "Strike first"
+		
+		random_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = { vassal_of = THIS }
+			}
+			leave_alliance = THIS
+			THIS = { badboy = 1 }
+			add_casus_belli = { type = humiliate months = 24 }
+		}
+	}
+	
+	option = {
+		name = "Expose them"
+		
+		random_country = {
+			limit = {
+				alliance_with = THIS
+			}
+			leave_alliance = THIS
+			prestige = -5
+		}
+	}
+}
+
+# Saw Economic Opportunities
+country_event = {
+	id = 5011
+	title = "Foresight of Economic Opportunity"
+	desc = "EVTDESC5011"
+	picture = "palantir"
+	
+	trigger = {
+		has_country_flag = using_palantiri
+		NOT = { has_country_modifier = economic_boom }
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "Sieze it"
+		
+		add_country_modifier = { name = economic_boom duration = 365 }
+	}
+}
+
+# Saw New Knowledge
+country_event = {
+	id = 5012
+	title = "Foresight of Knowledge"
+	desc = "EVTDESC5012"
+	picture = "palantir"
+	
+	trigger = {
+		has_country_flag = using_palantiri
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = "Use it"
+		
+		treasury = -5000
+		years_of_research = 0.1
+	}
+}
+
+# Saw the Eye
+country_event = {
+	id = 5013
+	title = "Palantir Madness"
+	desc = "EVTDESC5013"
+	picture = "palantir"
+	
+	trigger = {
+		has_country_flag = using_palantiri
+		NOT = { nationalvalue = sauron }
+		MOR = { nationalvalue = sauron }
+	}
+	
+	mean_time_to_happen = {
+		months = 108
+	}
+	
+	option = {
+		name = "A contest of wills"
+		
+		random_owned = {
+			limit = {
+				OR = {
+					AND = {
+						owner = { nationalvalue = denethor_ii }
+						has_global_flag = railroading_enabled
+					}
+					is_greater_power = yes
+				}
+			}
+			owner = { add_country_modifier = { name = palantir_madness duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				NOT = {
+					owner = { nationalvalue = denethor_ii }
+					has_global_flag = railroading_enabled
+				}
+				is_greater_power = no
+			}
+			random_list = {
+				1 = { owner = { add_country_modifier = { name = palantir_madness duration = -1 } } }
+				1 = {
+					owner = {
+						add_country_modifier = { name = palantir_madness duration = -1 }
+						set_country_flag = lost_contest_of_wills_to_sauron
+					}
+				}
+			}
+		}
+	}
+}
+
+# Madness Inflicted Relation with Sauron
+country_event = {
+	id = 5014
+	title = "Palantir Madness"
+	desc = "EVTDESC5014"
+	picture = "eye_of_sauron"
+	
+	trigger = {
+		has_country_flag = lost_contest_of_wills_to_sauron
+		MOR = { nationalvalue = sauron }
+		NOT = { in_sphere = MOR }
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "Sauron is our friend"
+		
+		relation = {
+			WHO = MOR
+			value = 50
+		}
+		
+		prestige = -50
+		
+		random_owned = {
+			limit = {
+				owner = { is_greater_power = no }
+				MOR = { is_greater_power = yes }
+			}
+			MOR = { diplomatic_influence = { who = THIS value = 100 } }
+		}
+	}
+}
+
+# Madness Inflicted Puppeting by Sauron
+country_event = {
+	id = 5015
+	title = "Palantir Madness"
+	desc = "EVTDESC5015"
+	picture = "eye_of_sauron"
+	
+	trigger = {
+		has_country_flag = lost_contest_of_wills_to_sauron
+		MOR = { nationalvalue = sauron }
+		in_sphere = MOR
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "We serve the Lord Sauron"
+		
+		MOR = { create_vassal = THIS }
+		political_reform = evil_alignment
+		clr_country_flag = lost_contest_of_wills_to_sauron
+	}
+}
+
+# Madness Inflicted Relationship Reduction
+country_event = {
+	id = 5016
+	title = "Palantir Madness"
+	desc = "EVTDESC5016"
+	picture = "administration"
+	
+	trigger = {
+		has_country_modifier = palantir_madness
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		FOR = { any_neighbor_country = { alliance_with = THIS } }
+	}
+	
+	option = {
+		name = "They are plotting against me!"
+		
+		random_country = {
+			limit = {
+				alliance_with = THIS
+			}
+			relation = { who = THIS value = -200 }
+		}
+	}
+}
+# }

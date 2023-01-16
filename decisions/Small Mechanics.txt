@@ -1,6 +1,7 @@
-# Small Mechanics Decisions:
+# Small Mechanics Decisions: {
 #	Wild Goblins
 #	Outlaws
+#	Palantiri }
 
 # Wild Goblins
 political_decisions = {	
@@ -176,6 +177,41 @@ political_decisions = {
 			}
 			
 			treasury = -10000
+		}
+	}
+}
+
+# Palantiri
+political_decisions = {
+	use_the_palantir = {
+		potential = {
+			OR = {
+				has_country_modifier = anor_palantir
+				has_country_modifier = orthanc_palantir
+				has_country_modifier = ithil_palantir
+				has_country_modifier = elostirion_palantir
+				has_country_modifier = osgiliath_palantir
+				has_country_modifier = amonsul_palantir
+				has_country_modifier = annuminas_palantir
+			}
+			NOT = { has_country_flag = using_palantiri }
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			set_country_flag = using_palantiri
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				nationalvalue = ecthelion_ii
+				has_global_flag = railroading_enabled
+			}
 		}
 	}
 }
