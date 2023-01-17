@@ -68,13 +68,16 @@ country_event = {
 					region = GON_14
 					region = GON_16
 				}
-				OR = {
-					terrain = anorien
-					terrain = anorien_woods
-					terrain = minas_tirith
-					terrain = pelennor_fields
-					terrain = harlond_gondor
-				}
+				# OR = {
+					# terrain = anorien
+					# terrain = anorien_woods
+					# terrain = minas_tirith
+					# terrain = pelennor_fields
+					# terrain = harlond_gondor
+				# }
+				life_rating = 30 # Would like to use terrain, but the descriptions are too long
+				NOT = { province_id = 10 }
+				NOT = { province_id = 14 }
 			}
 			add_province_modifier = { name = ithilien_immigrants duration = 3650 }
 		}

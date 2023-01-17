@@ -1754,10 +1754,18 @@ political_decisions = {
 			HRD = { all_core = { owned_by = GON } }
 			any_owned_province = {
 				OR = {
-					terrain = barad_harn
-					terrain = gobel_mirlond
-					terrain = harondor_plains
+					# terrain = barad_harn
+					# terrain = gobel_mirlond
+					# terrain = harondor_plains
+					region = GON_216
+					region = GON_226
+					region = GON_228
+					region = GON_232
+					region = GON_238
+					region = GON_249
+					region = GON_253
 				}
+				life_rating = 30 # Would like to use terrain, but the descriptions are too long
 				NOT = { has_province_modifier = harondor_farm_expansions }
 			}
 		}
@@ -1770,10 +1778,15 @@ political_decisions = {
 		effect = {
 			any_owned = {
 				limit = {
+					life_rating = 30
 					OR = {
-						terrain = barad_harn
-						terrain = gobel_mirlond
-						terrain = harondor_plains
+						region = GON_216
+						region = GON_226
+						region = GON_228
+						region = GON_232
+						region = GON_238
+						region = GON_249
+						region = GON_253
 					}
 				}
 				add_province_modifier = { name = harondor_farm_expansions duration = -1 }
