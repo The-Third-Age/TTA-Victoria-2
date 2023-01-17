@@ -2075,6 +2075,49 @@ country_event = {
 		name = "Drat"
 		
 		remove_country_modifier = constructing_river_defenses
-		clr_countrY_flag = GON_strengthening_river_crossings
+		clr_country_flag = GON_strengthening_river_crossings
+	}
+}
+
+# Rammas Echor Built
+province_event = {
+	id = 50046
+	title = "Rammas Echor Built"
+	desc = "EVTDESC50046"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		province_id = 17
+		owner = { has_country_flag = GON_building_rammas_echor }
+		NOT = { has_province_modifier = building_rammas_echor }
+	}
+	
+	option = {
+		name = "The towns are well protected"
+		
+		fort = 6
+		owner = { clr_country_flag = GON_building_rammas_echor }
+	}
+}
+
+# Rammas Echor Construction Abandoned
+country_event = {
+	id = 50047
+	title = "Rammas Echor Construction Abandoned"
+	desc = "EVTDESC50047"
+	picture = "gondor_river_crossings"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = GON_building_rammas_echor
+		NOT = { owns = 17 }
+	}
+	
+	option = {
+		name = "Drat"
+		
+		clr_country_flag = GON_building_rammas_echor
 	}
 }

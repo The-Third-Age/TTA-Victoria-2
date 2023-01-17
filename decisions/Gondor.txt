@@ -2051,7 +2051,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			fortifications_2 = 1
+			fortifications_1 = 1
 			OR = {
 				owns = 10 # Cair Andros
 				owns = 14 # West Osgiliath
@@ -2065,10 +2065,32 @@ political_decisions = {
 		}
 		
 		effect = {
-			
 			add_country_modifier = { name = constructing_river_defenses duration = 3650 }
 			set_country_flag = GON_strengthening_river_crossings
 			set_global_flag = GON_strengthened_river_crossings
+		}
+	}
+	
+	# Also available for Denethor II
+	build_rammas_echor = {
+		potential = {
+			tag = GON
+			OR = {
+				nationalvalue = ecthelion_ii
+				nationalvalue = denethor_ii
+			}
+			NOT = { has_global_flag = GON_built_rammas_echor }
+			has_global_flag = GON_strengthened_river_crossings
+		}
+		
+		allow = {
+			fortifications_2 = 1
+		}
+		
+		effect = {
+			17 = { add_province_modifier = { name = building_rammas_echor duration = 1825 } }
+			set_country_flag = GON_building_rammas_echor
+			set_global_flag = GON_built_rammas_echor
 		}
 	}
 	
