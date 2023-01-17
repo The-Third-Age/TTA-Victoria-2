@@ -2033,6 +2033,45 @@ political_decisions = {
 		}
 	}
 	
+	# Also available for Denethor II
+	strengthen_anduin_river_crossings = {
+		picture = "coastal_fortifications"
+		potential = {
+			tag = GON
+			OR = {
+				nationalvalue = ecthelion_ii
+				nationalvalue = denethor_ii
+			}
+			NOT = { has_global_flag = GON_strengthened_river_crossings }
+			OR = {
+				NOT = { owns = 198 }
+				NOT = { 198 = { owner = { vassal_of = THIS } } }
+				198 = { has_province_modifier = orc_raids }
+			}
+		}
+		
+		allow = {
+			fortifications_2 = 1
+			OR = {
+				owns = 10 # Cair Andros
+				owns = 14 # West Osgiliath
+				owns = 50 # Tor Forethir
+				owns = 15 # Benish Armon
+				10 = { owner = { vassal_of = THIS } }
+				14 = { owner = { vassal_of = THIS } }
+				50 = { owner = { vassal_of = THIS } }
+				15 = { owner = { vassal_of = THIS } }
+			}
+		}
+		
+		effect = {
+			
+			add_country_modifier = { name = constructing_river_defenses duration = 3650 }
+			set_country_flag = GON_strengthening_river_crossings
+			set_global_flag = GON_strengthened_river_crossings
+		}
+	}
+	
 	gondorian_coastal_defences = {
 		picture = "coastal_fortifications"
 		potential = {

@@ -1960,3 +1960,121 @@ country_event = {
 		}
 	}
 }
+
+# River Defenses Constructed
+country_event = {
+	id = 50044
+	desc = "EVTDESC50044"
+	title = "River Defenses Reinforced"
+	picture = "gondor_river_crossings"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = GON_strengthening_river_crossings
+		NOT = { has_country_modifier = constructing_river_defenses }
+	}
+	
+	option = {
+		name = "The defenses are complete"
+		
+		10 = {
+			owner = {
+				random_owned = {
+					limit = {
+						province_id = 10
+						owner = {
+							OR = {
+								tag = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+					fort = 6
+				}
+			}
+		}
+		14 = {
+			owner = {
+				random_owned = {
+					limit = {
+						province_id = 14
+						owner = {
+							OR = {
+								tag = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+					fort = 6
+				}
+			}
+		}
+		50 = {
+			owner = {
+				random_owned = {
+					limit = {
+						province_id = 50
+						owner = {
+							OR = {
+								tag = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+					fort = 6
+				}
+			}
+		}
+		15 = {
+			owner = {
+				random_owned = {
+					limit = {
+						province_id = 15
+						owner = {
+							OR = {
+								tag = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+					fort = 6
+				}
+			}
+		}
+		
+		clr_country_flag = GON_strengthening_river_crossings
+	}
+}
+
+# River Defense Construction Abandoned
+country_event = {
+	id = 50045
+	title = "River Defense Construction Abandoned"
+	desc = "EVTDESC50045"
+	picture = "gondor_river_crossings"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = GON_strengthening_river_crossings
+		has_country_modifier = constructing_river_defenses
+		NOT = {
+			owns = 10 # Cair Andros
+			owns = 14 # West Osgiliath
+			owns = 50 # Tor Forethir
+			owns = 15 # Benish Armon
+			10 = { owner = { vassal_of = THIS } }
+			14 = { owner = { vassal_of = THIS } }
+			50 = { owner = { vassal_of = THIS } }
+			15 = { owner = { vassal_of = THIS } }
+		}
+	}
+	
+	option = {
+		name = "Drat"
+		
+		remove_country_modifier = constructing_river_defenses
+		clr_countrY_flag = GON_strengthening_river_crossings
+	}
+}
