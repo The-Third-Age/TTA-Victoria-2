@@ -13,6 +13,8 @@ country_event = {
 	option = {
 		name = "Let's see what our new leader has..."
 		
+		nationalvalue = generic_leader
+		
 		random = {
 			chance = 20
 			add_country_modifier = { name = kind duration = -1 }
@@ -115,7 +117,7 @@ country_event = {
 			limit = {
 				owner = { NOT = { has_country_flag = knows_next_leader } }
 			}
-			country_event = 3500
+			owner = { country_event = 3500 }
 		}
 		
 		# Make sure that we do the right thing with the leader the next time a leader dies for this realm
@@ -464,6 +466,31 @@ country_event = {
 				}
 			}
 			owner = { remove_country_modifier = corrupt }
+		}
+	}
+}
+
+# The Death of Another Realm's Ruler
+country_event = {
+	id = 3507
+	title = "The Death of $FROMCOUNTRY$'s Ruler"
+	desc = "EVTDESC50022"
+	picture = "gondor_coronation"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will attend"
+		
+		treasury = -10000
+		prestige = 1
+	}
+	
+	option = {
+		name = "We have other matters to attend"
+		
+		relation = {
+			who = FROM
+			value = -100
 		}
 	}
 }

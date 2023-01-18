@@ -246,14 +246,13 @@
 	#### Switch from Ecthelion II to Denethor II
 	 - Triggered by Ecthelion II's old age in the 2980s
 	50021 - The Death of Ecthelion II
-	50022 - Invite's allies and puppets to Ecthelion II's funeral and Denethor II's coronation
-	50023 - The Coronation of Denethor II
+	50022 - Invite's allies and puppets to Ecthelion II's funeral and Denethor II's coronation (Depricated)
+	50023 - The Coronation of Denethor II (Depricated)
 	
 	Country Flags:
 		Sets knows_next_leader to ensure the system doesn't set the leader as generic_leader
 			Also sets it for all substates with Ecthelion II as leader
 			All get cleared when the leader has died event fires (3501)
-		Sets leader_interim so that things that can be done once per leader cannot be done twice for Denethor II
 			Also sets it for all substates with Ecthelion II as leader
 			Gets cleared when Denethor II becomes the leader
 	

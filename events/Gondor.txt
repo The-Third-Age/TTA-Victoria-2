@@ -856,9 +856,52 @@ country_event = {
 	option = {
 		name = "He will be missed"
 		
-		# Clears flags and modifiers from Ecthelion II and marks him as dead
-		set_country_flag = knows_next_leader
+		# If Denethor II is alive, we know the next leader
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = denethor_ii_alive }
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				
+				any_country = {
+					limit = {
+						exists = yes
+						nationalvalue = ecthelion_ii
+					}
+					set_country_flag = knows_next_leader
+				}
+			}
+		}
+		
+		# Kills Ecthelion II and coronates the new leader
 		country_event = 3501
+		
+		any_country = {
+			limit = {
+				exists = yes
+				nationalvalue = ecthelion_ii
+			}
+			country_event = 3501
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = denethor_ii_alive }
+			}
+			owner = {
+				nationalvalue = denethor_ii
+				
+				any_country = {
+					limit = {
+						exists = yes
+						nationalvalue = ecthelion_ii
+					}
+					nationalvalue = denethor_ii
+				}
+			}
+		}
+		
 		clr_global_flag = ecthelion_ii_alive
 		
 		# Invites non-puppet allies to the coronation
@@ -867,85 +910,69 @@ country_event = {
 				alliance_with = THIS
 				NOT = { is_substate = yes }
 			}
-			country_event = { id = 50022 }
-		}
-		
-		# Kills the leader for puppets with this leader
-		any_country = {
-			limit = {
-				vassal_of = THIS
-				nationalvalue = ecthelion_ii
-			}
-			set_country_flag = knows_next_leader
-			set_country_flag = leader_interim
-			country_event = 3501
-		}
-		
-		# Sets flag so that things specific to Ecthelion II cannot be done between his death and Denethor's coronation
-		set_country_flag = leader_interim
-		
-		# Sets up the coronation
-		country_event = { id = 50023 days = 7 }
-	}
-}
-
-# The Death of Ecthelion II - Gondor's allies
-country_event = {
-	id = 50022
-	title = "The Death of Ecthelion II"
-	desc = "EVTDESC50022"
-	picture = "gondor_coronation"
-	is_triggered_only = yes
-	
-	option = {
-		name = "We will attend"
-		
-		treasury = -10000
-		prestige = 1
-	}
-	
-	option = {
-		name = "We have other matters to attend"
-		
-		relation = {
-			who = FROM
-			value = -100
+			country_event = { id = 3507 }
 		}
 	}
 }
 
+##### DEPRICATED ##### - now event 3507 in Dynamic Traits.txt
+# Coronation of the Next Leader
+# country_event = {
+	# id = 50022
+	# title = "The Death of $FROMCOUNTRY$'s Ruler"
+	# desc = "EVTDESC50022"
+	# picture = "gondor_coronation"
+	# is_triggered_only = yes
+	
+	# option = {
+		# name = "We will attend"
+		
+		# treasury = -10000
+		# prestige = 1
+	# }
+	
+	# option = {
+		# name = "We have other matters to attend"
+		
+		# relation = {
+			# who = FROM
+			# value = -100
+		# }
+	# }
+# }
+
+##### DEPRICATED #####
 # The Coronation of Denethor II
-country_event = {
-	id = 50023
-	title = "The Coronation of Denethor II"
-	desc = "EVTDESC50023"
-	picture = "gondor_coronation"
-	is_triggered_only = yes
+# country_event = {
+	# id = 50023
+	# title = "The Coronation of Denethor II"
+	# desc = "EVTDESC50023"
+	# picture = "gondor_coronation"
+	# is_triggered_only = yes
 	
-	option = {
-		name = "Long live Denethor II!"
+	# option = {
+		# name = "Long live Denethor II!"
 		
 		# Cost of the coronation, but only for the master
-		random_owned = {
-			limit = {
-				owner = { is_vassal = no }
-			}
-			treasury = -50000
-		}
+		# random_owned = {
+			# limit = {
+				# owner = { is_vassal = no }
+			# }
+			# treasury = -50000
+		# }
 		
-		nationalvalue = denethor_ii
-		clr_country_flag = leader_interim
+		# nationalvalue = denethor_ii
 		
 		# Changes the leader for any vassal with ecthelion_ii as the realm leader
-		any_country = {
-			limit = {
-				vassal_of = THIS
-				nationalvalue = ecthelion_ii
-			}
-			country_event = 50023
-		}
-	}
-}
+		# any_country = {
+			# limit = {
+				# vassal_of = THIS
+				# nationalvalue = ecthelion_ii
+			# }
+			# country_event = 50023
+		# }
+	# }
+# }
 # }
 
 # Lords of Gondor Progressing from Father to Son {
@@ -1616,6 +1643,7 @@ country_event = {
 	}
 }
 
+# Andrast Flavor {
 # The Borders of Anfalas
 country_event = {
 	id = 50041
@@ -1960,7 +1988,9 @@ country_event = {
 		}
 	}
 }
+# }
 
+# River Constructions {
 # River Defenses Constructed
 country_event = {
 	id = 50044
@@ -2078,7 +2108,9 @@ country_event = {
 		clr_country_flag = GON_strengthening_river_crossings
 	}
 }
+# }
 
+# Rammas Echor {
 # Rammas Echor Built
 province_event = {
 	id = 50046
@@ -2121,3 +2153,166 @@ country_event = {
 		clr_country_flag = GON_building_rammas_echor
 	}
 }
+# }
+
+# The Death of Denethor and Crowning of his Successor
+#	Can be Boromir, Faramir or Aragorn
+# The Pyre of Denethor
+country_event = {
+	id = 50048
+	title = "The Pyre of Denethor"
+	desc = "EVTDESC50048"
+	picture = "pyre_of_denethor"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		nationalvalue = denethor_ii
+		# TODO: OR about Boromir being killed (don't want it to fire before he comes of age)
+		has_country_modifier = palantir_madness
+		NOT = { controls = 16 }
+		war = yes
+		NOT = { is_substate = yes }
+	}
+	
+	option = {
+		name = "So passes Lord Denethor, son of Ecthelion"
+		
+		country_event = 50049
+	}
+}
+
+# The Death of Denethor II
+country_event = {
+	id = 50049
+	title = "The Passing of Denethor II"
+	desc = "EVTDESC50049"
+	picture = "gondor_leader_death"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 3025
+		nationalvalue = denethor_ii
+		NOT = { is_substate = yes }
+	}
+	
+	mean_time_to_happen = {
+		months = 96
+		
+		modifier = {
+			factor = 0.75
+			year = 3027
+			NOT = { year = 3028 }
+		}
+		
+		modifier = {
+			factor = 0.5
+			year = 3028
+			NOT = { year = 3029 }
+		}
+		
+		modifier = {
+			factor = 0.25
+			year = 3029
+		}
+		
+		modifier = {
+			factor = 0.01
+			year = 3030
+		}
+	}
+	
+	option = {
+		name = "He will be missed"
+		
+		# If one of Denethor II's successors is alive, we know the next leader
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = boromir_ii_alive
+						has_global_flag = faramir_i_alive
+						# TODO: global flag about Aragorn coming to Gondor (being available to be King)
+					}
+				}
+			}
+			owner = { 
+				set_country_flag = knows_next_leader
+				
+				any_country = {
+					limit = {
+						exists = yes
+						nationalvalue = denethor_ii
+					}
+					set_country_flag = knows_next_leader
+				}
+			}
+		}
+		
+		# Kills Denethor II and coronates the new leader
+		country_event = 3501
+		
+		any_country = {
+			limit = {
+				exists = yes
+				nationalvalue = denethor_ii
+			}
+			country_event = 3501
+		}
+		
+		# Boromir II highest priority
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = boromir_ii_alive }
+			}
+			owner = {
+				nationalvalue = boromir_ii
+				
+				any_country = {
+					limit = {
+						exists = yes
+						nationalvalue = denethor_ii
+					}
+					nationalvalue = boromir_ii
+				}
+			}
+		}
+		
+		# Faramir I next
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = boromor_ii_alive }
+					has_global_flag = faramir_i_alive
+				}
+			}
+			owner = {
+				nationalvalue = faramir_i
+				
+				any_country = {
+					limit = {
+						exists = yes
+						nationalvalue = denethor_ii
+					}
+					nationalvalue = faramir_i
+				}
+			}
+		}
+		
+		# Aragorn Elessar last
+		# TODO: Setup the check for Aragorn
+		
+		clr_country_flag = denethor_ii_alive
+		
+		# Invites non-puppet allies to the coronation
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = { is_substate = yes }
+			}
+			country_event = { id = 3507 }
+		}
+	}
+}
+# }
