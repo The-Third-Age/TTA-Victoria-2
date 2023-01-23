@@ -2,30 +2,75 @@ generic_leader = {
 }
 
 ecthelion_ii = {
+	# Of the House of Hurin
+	global_pop_consciousness_modifier = -0.01
+	# Intelligent
+	research_points = 0.01
+	# Defensive Focused
+	cb_generation_speed_modifier = -0.25
+	min_military_spending = 0.25
+	# Wise Ruler
+	global_pop_militancy_modifier = -0.01
+	political_reform_desire = -0.1
 }
 
 denethor_ii = {
+	# Of the House of Hurin
+	global_pop_consciousness_modifier = -0.01
+	# Intelligent
+	research_points = 0.01
+	# Strong Ruler
+	global_pop_militancy_modifier = -0.02
+	# Fortification Focused
+	min_military_spending = 0.25
+	tax_efficiency = -0.01
 }
 
 boromir_ii = {
+	# Of the House of Hurin
+		# Cancelled by Impulsive global_pop_consciousness_modifier = -0.01
+	# Great General
+	min_military_spending = 0.5
+	org_regain = 0.25
+	# Impulsive
+	global_pop_militancy_modifier = 0.01
+	# Cancelled by Of the House of Hurin global_pop_consciousness_modifier = 0.01
 }
 
 faramir_i = {
+	# Of the House of Hurin
+	global_pop_consciousness_modifier = -0.01
+	# Wise Ruler
+		# Compounded by Gentle global_pop_militancy_modifier = -0.01
+	political_reform_desire = -0.1
+	# Gentle
+		# Compounded by Wise Ruler global_pop_militancy_modifier = -0.01
+	tax_efficiency = -0.02
+	
+	# Additive effects
+	global_pop_militancy_modifier = -0.02
 }
 
 aragorn_elessar = {
 }
 
 angelimir = {
+	# Of the House of Dol Amroth
+	global_pop_consciousness_modifier = -0.01
 }
 
 sauron = {
 }
 
 hegon_koldana = {
+	# Of the House of Koldana
+	global_pop_consciousness_modifier = -0.01
 }
 
 bard_i = {
+	# Savior of the People
+	global_pop_consciousness_modifier = -0.01
+	global_pop_militancy_modifier = -0.01
 }
 
 dain_ironfoot_ii = {
