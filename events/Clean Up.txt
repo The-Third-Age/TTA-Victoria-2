@@ -344,3 +344,112 @@ country_event = {
 		government = lord_monarchy
 	}
 }
+
+# GON get leaders back on track
+country_event = {
+	id = 100008
+	title = "Emergence of a New Leader"
+	desc = "EVTDESC100008"
+	picture = administration
+	
+	trigger = {
+		tag = GON
+		nationalvalue = generic_leader
+		OR = {
+			has_global_flag = ecthelion_ii_alive
+			has_global_flag = denethor_ii_alive
+			has_global_flag = boromir_ii_alive
+			has_global_flag = faramir_i_alive
+			# TODO: Some check about Aragorn
+		}
+	}
+	
+	option = {
+		name = "Good"
+		set_country_flag = knows_next_leader
+		
+		# Kills the generic leader
+		country_event = 3501
+		
+		any_country = {
+			limit = {
+				exists = yes
+				substate_of = THIS
+			}
+			set_country_flag = knows_next_leader
+			country_event = 3501
+		}
+		
+		# Do the checks in reverse order of priority to reduce the number of checks in the limits
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = faramir_i_alive }
+			}
+			owner = {
+				nationalvalue = faramir_i
+		
+				any_country = {
+					limit = {
+						exists = yes
+						substate_of = THIS
+					}
+					nationalvalue = faramir_i
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = boromir_ii_alive }
+			}
+			owner = {
+				nationalvalue = boromir_ii
+		
+				any_country = {
+					limit = {
+						exists = yes
+						substate_of = THIS
+					}
+					nationalvalue = boromir_ii
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { 
+					has_global_flag = denethor_ii_alive }
+			}
+			owner = {
+				nationalvalue = denethor_ii
+		
+				any_country = {
+					limit = {
+						exists = yes
+						substate_of = THIS
+					}
+					nationalvalue = denethor_ii
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = ecthelion_ii_alive }
+			}
+			owner = {
+				nationalvalue = ecthelion_ii
+		
+				any_country = {
+					limit = {
+						exists = yes
+						substate_of = THIS
+					}
+					nationalvalue = ecthelion_ii
+				}
+			}
+		}
+		
+		# TODO: Something about Aragorn
+	}
+}
