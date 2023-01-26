@@ -9,7 +9,8 @@
 #	Generic Political Flavor
 #	Ecthelion II Flavor
 #	Denethor II Flavor
-#	Aragorn Elessar Flavor }
+#	Aragorn Elessar Flavor
+#	Debug }
 
 # TODO: Add decision to turn into Gondor of GNR wins second Kin-Strife
 # TODO: Add decision to annex GNR if second Kin-Strife is a draw
@@ -29,11 +30,6 @@
 
 # TODO: Update Druwaith Iaur Rebellion and Drúadan Forest Rebellion end to be handled by the utility tag
 # 			Handle flavor related to the rebellions winning?
-
-# TODO: Update South Gondor expansion (into uncolonized land) province by province - could be province events or decisions
-#			The start and big region-wide expansions would be handled by Gondor
-#				Perhaps Gondor decides on the region to focus, then South Gondor gets province events for annexation
-#			Wars over already owned provinces would still be handled by Gondor
 
 # TODO: Update the cores on Rohan to only include Calenardon
 #			Update the_center_of_the_realm to only look at those regions
@@ -2242,3 +2238,60 @@ political_decisions = {
 	}
 }
 
+# Debug
+political_decisions = {
+	become_gondor = {
+		picture = "kingdom_of_gondor"
+		potential = {
+			tag = GNR
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			any_country = {
+				limit = {
+					vassal_of = GON
+					exists = yes
+				}
+				set_country_flag = vassal_of_gondor
+			}
+			
+			random_country = {
+				limit = {
+					tag = GON
+					exists = yes
+				}
+				annex_to = THIS
+			}
+			
+			change_tag = GON
+			
+			# Cores cause half of land owned by vassals with GON cores to be annexed in the create_vassal call in 2510
+			# No clue why
+			all_core = {
+				remove_core = THIS
+				add_province_modifier = { name = colonization_target duration = -1 }
+			}
+			
+			any_country = {
+				limit = {
+					has_country_flag = vassal_of_gondor
+				}
+				country_event = 2510
+				clr_country_flag = vassal_of_gondor
+			}
+			
+			FOR = {
+				any_neighbor_province = {
+					limit = {
+						has_province_modifier = colonization_target
+					}
+					add_core = THIS
+				}
+			}
+		}
+	}
+}
