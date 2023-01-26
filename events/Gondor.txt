@@ -2316,3 +2316,56 @@ country_event = {
 	}
 }
 # }
+
+# Fortifying the Port of Pelargir {
+# Pelargir Port Built
+country_event = {
+	id = 50050
+	title = "Pelargir Port Fortifications Complete"
+	desc = "EVTDESC50050"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			owns = 44
+			44 = { owner = { vassal_of = THIS } }
+		}
+		has_country_flag = GON_building_pelargir_port
+		NOT = { has_country_modifier = building_pelargir_fortifications }
+	}
+	
+	option = {
+		name = "Gondor rules the Anduin"
+		
+		44 = { 
+			naval_base = 6
+			fort = 6
+		}
+		owner = { clr_country_flag = GON_building_pelargir_port }
+	}
+}
+
+# Pelargir Port Fortifications Abandoned
+country_event = {
+	id = 50051
+	title = "Pelargir Port Fortifications Abandoned"
+	desc = "EVTDESC50051"
+	picture = "pelargir"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = GON_building_pelargir_port
+		NOT = { owns = 44 }
+		NOT = { 44 = { owner = { vassal_of = THIS } } }
+	}
+	
+	option = {
+		name = "Drat"
+		
+		remove_country_modifier = building_pelargir_fortifications
+		clr_country_flag = GON_building_pelargir_port
+	}
+}
+# }
