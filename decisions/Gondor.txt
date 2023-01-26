@@ -38,14 +38,11 @@
 # TODO: Update the cores on Rohan to only include Calenardon
 #			Update the_center_of_the_realm to only look at those regions
 
-# TODO: Make sure that leader switch events remove council_of_gondor modifier and clears leader_visited_tomb_of_elendil flag
-
 # TODO: Update declare_steward_king so that kin_strife_is_coming is not always set (there's a way to avoid the civil war)
 
-# TODO: Update gondorian_coastal_defences so it doesn't show up if Umbar/Harad does not exist or if Gondor own Umbar
-#			Update effect to target the largest settlements and inrease port sizes to 1 higher than max
-
 # TODO: Decisions that allow players to have leaders step down if a replacement is available
+
+# TODO: Decision allowing Gondor after taking thorongils_advice (and still having thorongil) to raid and destroy Umbar's port
 
 # Starting Decisions
 political_decisions = {
@@ -2118,42 +2115,44 @@ political_decisions = {
 		}
 	}
 	
-	gondorian_coastal_defences = {
+	thorongils_advice = {
 		picture = "coastal_fortifications"
 		potential = {
+			tag = GON
 			nationalvalue = ecthelion_ii
 			has_country_modifier = thorongil
-			NOT = { has_global_flag = gondor_prepared_coastal_defences }
+			NOT = { has_global_flag = GON_took_thorongils_advice }
+			OR = {
+				AND = {
+					exists = UMB
+					NOT = { UMB = { vassal_of = THIS } }
+				}
+				AND = {
+					exists = HAR
+					NOT = { HAR = { vassal_of = THIS } }
+				}
+			}
+			NOT = { owns = 270 } # Umbar
 		}
 		
 		allow = {
-			money = 100000
+			money = 50000
 		}
 		
 		effect = {
-			treasury = -100000
+			treasury = -50000
+			
+			add_country_modifier = { name = GON_increased_naval_concern duration = -1 }
+			
 			any_owned = {
 				limit = {
 					port = yes
+					NOT = { has_building = naval_base }
 				}
-				naval_base = -6
-				naval_base = 4
+				naval_base = 1
 			}
 			
-			any_country = {
-				limit = {
-					vassal_of = GON
-				}
-				any_owned = {
-					limit = {
-						port = yes
-					}
-					naval_base = -6
-					naval_base = 4
-				}
-			}
-			
-			set_global_flag = gondor_prepared_coastal_defences
+			set_global_flag = GON_took_thorongils_advice
 		}
 	}
 	

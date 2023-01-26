@@ -453,3 +453,25 @@ country_event = {
 		# TODO: Something about Aragorn
 	}
 }
+
+# Bonuses from Thorongil go away after he has left
+country_event = {
+	id = 100009
+	title = "The Thorongil Departs"
+	desc = "EVTDESC100009"
+	picture = "thorongil"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GON
+		has_country_modifier = GON_increased_naval_concern
+		NOT = { has_country_modifier = thorongil }
+	}
+	
+	option = {
+		name = "Drat"
+		
+		remove_country_modifier = GON_increased_naval_concern
+	}
+}
