@@ -2295,6 +2295,87 @@ political_decisions = {
 					add_core = THIS
 				}
 			}
+			
+			random_owned = {
+				limit = {
+					owner = { LOS = { exists = no } }
+				}
+				owner = { release_vassal = LOS }
+				LOS = { set_country_flag = vassal_of_gondor }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { LEB = { exists = no } }
+				}
+				owner = { release_vassal = LEB }
+				LEB = { set_country_flag = vassal_of_gondor }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { AMR = { exists = no } }
+				}
+				owner = { release_vassal = AMR }
+				AMR = { set_country_flag = vassal_of_gondor }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { LAM = { exists = no } }
+				}
+				owner = { release_vassal = LAM }
+				LAM = { set_country_flag = vassal_of_gondor }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { ANF = { exists = no } }
+				}
+				owner = { release_vassal = ANF }
+				ANF = { set_country_flag = vassal_of_gondor }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { TOL = { exists = no } }
+				}
+				owner = { release_vassal = TOL }
+				TOL = { set_country_flag = vassal_of_gondor }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { MRN = { exists = no } }
+				}
+				owner = { release_vassal = MRN }
+				MRN = { set_country_flag = vassal_of_gondor }
+			}
+			
+			any_country = {
+				limit = {
+					OR = {
+						tag = LOS
+						tag = LEB
+						tag = AMR
+						tag = LAM
+						tag = ANF
+						tag = TOL
+						tag = MRN
+					}
+					vassal_of = THIS
+					has_country_flag = vassal_of_gondor
+				}
+				country_event = 2510
+			}
+			
+			# There shouldn't be any realms with the vassal_of_gondor country flag at this point, but just as a failsafe, clear the flag from all countries
+			any_country = {
+				limit = {
+					has_country_flag = vassal_of_gondor
+				}
+				clr_country_flag = vassal_of_gondor
+			}
 		}
 	}
 }
