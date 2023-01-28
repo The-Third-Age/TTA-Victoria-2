@@ -27,7 +27,7 @@
 # The Tolfalas Question
 country_event = {
 	id = 50000
-	picture = tolfalas_map
+	picture = "gondor/tolfalas_map"
 	title = "The Tolfalas Question"
 	desc = "EVTDESC50000"
 	
@@ -85,7 +85,7 @@ country_event = {
 # Dol Amroth Independence War
 country_event = {
 	id = 50001
-	picture = dol_amroth
+	picture = "gondor/dol_amroth"
 	title = "Succession!"
 	desc = "EVTDESC50001"
 	
@@ -113,7 +113,7 @@ country_event = {
 # Dol Amroth wins
 country_event = {
 	id = 50002
-	picture = dol_amroth
+	picture = "gondor/dol_amroth"
 	title = "We are Victorious!"
 	desc = "EVTDESC50002"
 	
@@ -141,7 +141,7 @@ country_event = {
 # Gondor Wins
 country_event = {
 	id = 50003
-	picture = dol_amroth
+	picture = "gondor/dol_amroth"
 	title = "We are Victorious!"
 	desc = "EVTDESC50003"
 	
@@ -172,7 +172,7 @@ country_event = {
 # Dol Amroth gets Annexed?
 country_event = {
 	id = 50004
-	picture = gondor_map
+	picture = "gondor/map"
 	title = "Gondor is Annexing Us!"
 	desc = "EVTDESC50004"
 	
@@ -208,7 +208,7 @@ country_event = {
 # Dol Amroth accepts annexation
 country_event = {
 	id = 50005
-	picture = gondor_map
+	picture = "gondor/map"
 	title = "They Accept!"
 	desc = "EVTDESC50005"
 	
@@ -230,7 +230,7 @@ country_event = {
 # Dol Amroth refuses annexation
 country_event = {
 	id = 50006
-	picture = dol_amroth
+	picture = "gondor/dol_amroth"
 	title = "They Refuse!"
 	desc = "EVTDESC50006"
 	
@@ -406,7 +406,7 @@ country_event = {
 # Service of Thorongil
 country_event = {
 	id = 50012
-	picture = thorongil
+	picture = "gondor/thorongil"
 	title = "The Service of Thorongil"
 	desc = "EVTDESC50012"
 	fire_only_once = yes
@@ -505,7 +505,7 @@ country_event = {
 	id = 50015
 	title = "An Ambush"
 	desc = "EVTDESC50015"
-	picture = ithilien_ambush
+	picture = "gondor/ithilien_ambush"
 	
 	trigger = {
 		has_country_modifier = ithilien_rangers
@@ -539,7 +539,7 @@ country_event = {
 	id = 50016
 	title = "Movement in the Shadows"
 	desc = "EVTDESC50016"
-	picture = second_kinstrife
+	picture = "gondor/second_kinstrife"
 	fire_only_once = yes
 	
 	trigger = {
@@ -600,7 +600,7 @@ country_event = {
 	id = 50017
 	title = "The Council of Gondor"
 	desc = "EVTDESC50017"
-	picture = second_kinstrife
+	picture = "gondor/second_kinstrife"
 	is_triggered_only = yes
 	
 	option = {
@@ -679,7 +679,7 @@ country_event = {
 	id = 50019
 	title = "A Diplomatic Feast"
 	desc = "EVTDESC50019"
-	picture = the_merethrond
+	picture = "gondor/merethrond"
 	
 	trigger = {
 		is_culture_group = dunedain
@@ -775,7 +775,7 @@ country_event = {
 	id = 50020
 	title = "The Beacons of Gondor are Lit..."
 	desc = "EVTDESC50020"
-	picture = "light_the_beacons"
+	picture = "gondor/light_the_beacons"
 	is_triggered_only = yes
 	
 	option = {
@@ -820,7 +820,7 @@ country_event = {
 	id = 50021
 	title = "The Death of Ecthelion II"
 	desc = "EVTDESC50021"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	fire_only_once = yes
 	
 	trigger = {
@@ -920,73 +920,13 @@ country_event = {
 	}
 }
 
-##### DEPRICATED ##### - now event 3507 in Dynamic Traits.txt
-# Coronation of the Next Leader
-# country_event = {
-	# id = 50022
-	# title = "The Death of $FROMCOUNTRY$'s Ruler"
-	# desc = "EVTDESC50022"
-	# picture = "gondor_coronation"
-	# is_triggered_only = yes
-	
-	# option = {
-		# name = "We will attend"
-		
-		# treasury = -10000
-		# prestige = 1
-	# }
-	
-	# option = {
-		# name = "We have other matters to attend"
-		
-		# relation = {
-			# who = FROM
-			# value = -100
-		# }
-	# }
-# }
-
-##### DEPRICATED #####
-# The Coronation of Denethor II
-# country_event = {
-	# id = 50023
-	# title = "The Coronation of Denethor II"
-	# desc = "EVTDESC50023"
-	# picture = "gondor_coronation"
-	# is_triggered_only = yes
-	
-	# option = {
-		# name = "Long live Denethor II!"
-		
-		# Cost of the coronation, but only for the master
-		# random_owned = {
-			# limit = {
-				# owner = { is_vassal = no }
-			# }
-			# treasury = -50000
-		# }
-		
-		# nationalvalue = denethor_ii
-		
-		# Changes the leader for any vassal with ecthelion_ii as the realm leader
-		# any_country = {
-			# limit = {
-				# vassal_of = THIS
-				# nationalvalue = ecthelion_ii
-			# }
-			# country_event = 50023
-		# }
-	# }
-# }
-# }
-
 # Lords of Gondor Progressing from Father to Son {
 # The Death of Farlang and new Lord of Lossarnach (Forlong)
 country_event = {
 	id = 50024
 	title = "The New Lord of Lossarnach"
 	desc = "EVTDESC50024"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	fire_only_once = yes
 	
 	trigger = {
@@ -1044,7 +984,7 @@ country_event = {
 	id = 50025
 	title = "The New Lord of Lossarnach"
 	desc = "EVTDESC50024"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	is_triggered_only = yes
 	
 	option = {
@@ -1057,7 +997,7 @@ country_event = {
 	id = 50026
 	title = "The New Lord of Lamedon"
 	desc = "EVTDES50026"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	fire_only_once = yes
 	
 	trigger = {
@@ -1115,7 +1055,7 @@ country_event = {
 	id = 50027
 	title = "The New Lord of Lamedon"
 	desc = "EVTDESC50026"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	is_triggered_only = yes
 	
 	option = {
@@ -1128,7 +1068,7 @@ country_event = {
 	id = 50028
 	title = "The New Lord of the Ringló Vale"
 	desc = "EVTDES50028"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	fire_only_once = yes
 	
 	trigger = {
@@ -1185,7 +1125,7 @@ country_event = {
 	id = 50029
 	title = "The New Lord of the Ringló Vale"
 	desc = "EVTDESC50028"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	is_triggered_only = yes
 	
 	option = {
@@ -1198,7 +1138,7 @@ country_event = {
 	id = 50030
 	title = "The New Lord of the Blackroot Vale"
 	desc = "EVTDES50030"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	fire_only_once = yes
 	
 	trigger = {
@@ -1263,7 +1203,7 @@ country_event = {
 	id = 50031
 	title = "The New Lord of the Ringló Vale"
 	desc = "EVTDESC50030"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	is_triggered_only = yes
 	
 	option = {
@@ -1276,7 +1216,7 @@ country_event = {
 	id = 50032
 	title = "The New Lord of Pinnath Gelin"
 	desc = "EVTDES50032"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	fire_only_once = yes
 	
 	trigger = {
@@ -1335,7 +1275,7 @@ country_event = {
 	id = 50033
 	title = "The New Lord of the Pinnath Gelin"
 	desc = "EVTDESC50032"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	is_triggered_only = yes
 	
 	option = {
@@ -1348,7 +1288,7 @@ country_event = {
 	id = 50034
 	title = "The New Lord of Anfalas"
 	desc = "EVTDES50034"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	fire_only_once = yes
 	
 	trigger = {
@@ -1409,7 +1349,7 @@ country_event = {
 	id = 50035
 	title = "The New Lord of the Anfalas"
 	desc = "EVTDESC50034"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	is_triggered_only = yes
 	
 	option = {
@@ -1498,7 +1438,7 @@ country_event = {
 	id = 50038
 	title = "Harondor Expands"
 	desc = "EVTDESC50038"
-	picture = "map_of_harad"
+	picture = "harad/map"
 	
 	trigger = {
 		tag = HRD
@@ -1536,7 +1476,7 @@ country_event = {
 	id = 50039
 	title = "Harondor Expands"
 	desc = "EVTDESC50039"
-	picture = "map_of_harad"
+	picture = "harad/map"
 	
 	trigger = {
 		is_our_vassal = HRD
@@ -1558,7 +1498,7 @@ country_event = {
 	id = 50040
 	title = "Emergence of the Mesta"
 	desc = "EVTDESC50040"
-	picture = "pinnath_gelin"
+	picture = "gondor/pinnath_gelin"
 	fire_only_once = yes
 	
 	trigger = {
@@ -1654,7 +1594,7 @@ country_event = {
 	id = 50041
 	title = "The Borders of Anfalas"
 	desc = "EVTDESC50041"
-	picture = "andrast_war"
+	picture = "gondor/andrast_map"
 	
 	fire_only_once = yes
 	
@@ -1794,7 +1734,7 @@ country_event = {
 	id = 50043
 	title = "The Andrast - Drúwaith Iaur Border"
 	desc = "EVTDESC50043"
-	picture = "andrast_war"
+	picture = "gondor/andrast_map"
 	
 	fire_only_once = yes
 	
@@ -2001,7 +1941,7 @@ country_event = {
 	id = 50044
 	desc = "EVTDESC50044"
 	title = "River Defenses Reinforced"
-	picture = "gondor_river_crossings"
+	picture = "gondor/river_crossings"
 	
 	fire_only_once = yes
 	
@@ -2087,7 +2027,7 @@ country_event = {
 	id = 50045
 	title = "River Defense Construction Abandoned"
 	desc = "EVTDESC50045"
-	picture = "gondor_river_crossings"
+	picture = "gondor/river_crossings"
 	
 	fire_only_once = yes
 	
@@ -2143,7 +2083,7 @@ country_event = {
 	id = 50047
 	title = "Rammas Echor Construction Abandoned"
 	desc = "EVTDESC50047"
-	picture = "gondor_river_crossings"
+	picture = "gondor/river_crossings"
 	
 	fire_only_once = yes
 	
@@ -2167,7 +2107,7 @@ country_event = {
 	id = 50048
 	title = "The Pyre of Denethor"
 	desc = "EVTDESC50048"
-	picture = "pyre_of_denethor"
+	picture = "gondor/pyre_of_denethor"
 	
 	fire_only_once = yes
 	
@@ -2192,7 +2132,7 @@ country_event = {
 	id = 50049
 	title = "The Passing of Denethor II"
 	desc = "EVTDESC50049"
-	picture = "gondor_leader_death"
+	picture = "gondor/leader_death"
 	
 	fire_only_once = yes
 	
@@ -2328,6 +2268,7 @@ country_event = {
 	id = 50050
 	title = "Pelargir Port Fortifications Complete"
 	desc = "EVTDESC50050"
+	picture = "gondor/pelargir"
 	
 	fire_only_once = yes
 	
@@ -2356,7 +2297,7 @@ country_event = {
 	id = 50051
 	title = "Pelargir Port Fortifications Abandoned"
 	desc = "EVTDESC50051"
-	picture = "pelargir"
+	picture = "gondor/pelargir"
 	
 	fire_only_once = yes
 	
