@@ -9,23 +9,11 @@
 
 # TODO: Update event 50005 to add a general (Gotta figure out which one it would be, Adrahil or Imrahil
 
-# TODO: Group event chains together
-
-# TODO: Update event 50007 to launch event 16 years later to spawn him as a general and set flag stating that he's alive
-#			Also make sure that the leader of Dol Amroth is of Imrahils' House
-#			Make sure that Adrahil is alive for the birth event
-
 # TODO: Update event 50008 to make sure that Dol Amroth's national leader is of the line of Angelimir
 
 # TODO: Update event 50010 to also work if Denethor is leader
 #			Also launch general event 16 years later and set flag stating that he's alive
 #			Make sure that denethor is alive for the birth events
-
-# TODO: Remove flags birth_of_faramir, birth_of_imrahil and make events fire only once
-#			Also launch general eevent 16 years later and set flag stating that he's avlie
-#			Make sure that denethor is alive for the birth events
-
-# TODO: Have way for Denethor to not become steward, which would make the Boromir and Faramir events spawn for Dol Amroth
 
 # TODO: Update event 50015 to handle Gondor not being good
 
@@ -268,11 +256,20 @@ country_event = {
 	picture = birth
 	title = "An Heir Apparant"
 	desc = "EVTDESC50007"
+	
+	
 
 	trigger = {
 		year = 2955
-		tag = AMR
-		NOT = { has_global_flag = birth_of_imrahil }
+		OR = {
+			tag = AMR
+			AND = {
+				tag = GON
+				NOT = { exists = AMR }
+				owns = 71
+			}
+		}
+		has_global_flag = adrahil_ii_alive
 	}
 	
 	mean_time_to_happen = {
@@ -283,7 +280,8 @@ country_event = {
 		name = "The line is secured"
 		
 		prestige = 5
-		set_global_flag = birth_of_imrahil
+		
+		country_event = { id = 50054 days = 5840 } # 16 years
 	}
 }
 
@@ -357,7 +355,7 @@ country_event = {
 	trigger = {
 		year = 2978
 		tag = GON
-		nationalvalue = ecthelion_ii
+		has_global_flag = denethor_ii_alive
 		has_global_flag = wedding_denethor_finduilas
 		NOT = { has_global_flag = birth_of_boromir }
 	}
@@ -371,6 +369,8 @@ country_event = {
 		
 		prestige = 5
 		set_global_flag = birth_of_boromir
+		
+		country_event = { id = 50052 days = 5840 } # 16 years
 	}
 }
 
@@ -381,12 +381,13 @@ country_event = {
 	title = "A Second Son!"
 	desc = "EVTDESC50011"
 	
+	fire_only_once = yes
+	
 	trigger = {
 		year = 2983
 		tag = GON
-		nationalvalue = ecthelion_ii
+		has_global_flag = denethor_ii_alive
 		has_global_flag = birth_of_boromir
-		NOT = { has_global_flag = birth_of_faramir }
 	}
 	
 	mean_time_to_happen = {
@@ -397,7 +398,8 @@ country_event = {
 		name = "He isn't Boromir"
 		
 		prestige = 5
-		set_global_flag = birth_of_faramir
+		
+		country_event = { id = 50053 days = 5840 } # 16 years
 	}
 }
 
@@ -2286,7 +2288,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { has_global_flag = boromor_ii_alive }
+					NOT = { has_global_flag = boromir_ii_alive }
 					has_global_flag = faramir_i_alive
 				}
 			}
@@ -2372,3 +2374,69 @@ country_event = {
 	}
 }
 # }
+
+# Coming of Age of Boromir
+country_event = {
+	id = 50052
+	title = "Boromir's Coming of Age"
+	desc = "EVTDESC50052"
+	picture = "gondor/coming_of_age"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		
+		define_general = {
+			name = "§LBoromir, §MWarden of the White Tower§!"
+			background = warden_of_white_tower
+			personality = heroic
+		}
+		
+		set_global_flag = boromir_ii_alive
+	}
+}
+
+# Coming of Age of Faramir
+country_event = {
+	id = 50053
+	title = "Faramir's Coming of Age"
+	desc = "EVTDESC50053"
+	picture = "gondor/coming_of_age"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		
+		define_general = {
+			name = "§LFaramir, §MCaptain of Gondor§!"
+			background = captain_of_gondor
+			personality = heroic
+		}
+		
+		set_global_flag = faramir_i_alive
+	}
+}
+
+# Coming of Age of Imrahil
+country_event = {
+	id = 50054
+	title = "Imrahil's Coming of Age"
+	desc = "EVTDESC50054"
+	picture = "gondor/coming_of_age"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		
+		define_general = {
+			name = "§LImrahil, §MPrince of Belfalas§!"
+			background = prince_of_belfalas
+			personality = tactical
+		}
+		
+		set_global_flag = imrahil_i_alive
+	}
+}
