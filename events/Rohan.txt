@@ -1,0 +1,85 @@
+# Rohan Events: {
+# 50800 - 50899 }
+
+# The Marriage of Anbar Cilgar and Róse (Meril), daughter of Thengel
+country_event = {
+	id = 50800
+	title = "Marriage of Anbar Cilgar and Róse"
+	desc = "EVTDESC50800"
+	picture = "wedding"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 2960
+		NOT = { year = 2965 }
+		nationalvalue = thengel
+		10 = {
+			owner = { is_culture_group = dunedain }
+			OR = {
+				THIS = { good_evil_alignment = neutral_alignment }
+				AND = {
+					THIS = { good_evil_alignment = good_alignment }
+					NOT = { owner = { good_evil_alignment = evil_alignment } }
+				}
+				AND = {
+					THIS = { good_evil_alignment = evil_alignment }
+					NOT = { owner = { good_evil_alignment = good_alignment } }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		
+		modifier = {
+			factor = 0.9
+			year = 2961
+		}
+		
+		modifier = {
+			factor = 0.8
+			year = 2962
+		}
+		
+		modifier = {
+			factor = 0.65
+			year = 2963
+		}
+		
+		modifier = {
+			factor = 0.5
+			year = 2964
+		}
+	}
+	
+	option = {
+		name = "To the Lord and Lady of Cair Andros!"
+		
+		prestige = 5
+		
+		10 = { 
+			owner = { 
+				relation = { who = THIS value = 25 }
+				country_event = 50801
+			} 
+		}
+	}
+}
+
+# The Marriage of Anbar Cilgar and Meril, Daughter of Thengel
+country_event = {
+	id = 50801
+	title = "Marraige of Anbar Cilgar and Meril"
+	desc = "EVTDESC50800"
+	picture = "wedding"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "To the Lord and Lady of Cair Andros!"
+		
+		prestige = 5
+	}
+}
