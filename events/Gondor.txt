@@ -500,7 +500,7 @@ province_event = {
 	}
 }
 
-# An Ambush in Ithlien
+# An Ambush in Ithilien
 country_event = {
 	id = 50015
 	title = "An Ambush"
@@ -2389,3 +2389,121 @@ country_event = {
 		set_global_flag = imrahil_i_alive
 	}
 }
+
+# A Promising Ranger
+country_event = {
+	id = 50055
+	title = "A Promising Ranger"
+	desc = "EVTDESC50055"
+	picture = "gondor/promising_ranger"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_modifier = ithilien_rangers
+		year = 2990
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "The Rangers protect Ithilien"
+		
+		primary_culture = madril_culture
+		
+		define_general = {
+			name = "§LMadril, §MRanger of Ithilien§!"
+			background = ranger_of_ithilien
+			personality = persistent
+		}
+		
+		primary_culture = dunedain
+	}
+}
+
+# New Member of the Citadel Guard
+country_event = {
+	id = 50056
+	title = "New Member of the Citadel Guard"
+	desc = "EVTDESC50056"
+	picture = "gondor/citadel_guard"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 3000
+		owns = 16
+		is_culture_group = dunedain
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "Good"
+		
+		define_general = {
+			name = "§LBeregond, §MCitadel Guard§!"
+			background = citadel_guard
+			personality = resolute
+		}
+	}
+}
+
+# Appoint a Captain of Ships
+country_event = {
+	id = 50057
+	title = "Appoint a Captain of Ships"
+	desc = "EVTDESC50057"
+	picture = "gondor/pelargir"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		year = 3000
+		is_culture_group = dunedain
+		OR = {
+			AND = {
+				owns = 44
+				is_vassal = no
+			}
+			44 = { owner = { vassal_of = THIS } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "We want faster ships"
+		
+		define_admiral = {
+			name = "§LBaranor, §MCaptain of Ships§!"
+			background = captain_of_ships
+			personality = tactical
+		}
+	}
+	
+	option = {
+		name = "We want higher organization"
+		
+		define_admiral = {
+			name = "§LFingon, §MCaptain of Ships§!"
+			background = captain_of_ships
+			personality = stalwart
+		}
+	}
+	
+	option = {
+		name = "We want better morale"
+		
+		define_admiral = {
+			name = "§LMalvegil, §MCaptain of Ships§!"
+			background = captain_of_ships
+			personality = heroic
+		}
+	}
