@@ -9,12 +9,6 @@
 
 # TODO: Update event 50005 to add a general (Gotta figure out which one it would be, Adrahil or Imrahil
 
-# TODO: Update event 50008 to make sure that Dol Amroth's national leader is of the line of Angelimir
-
-# TODO: Update event 50010 to also work if Denethor is leader
-#			Also launch general event 16 years later and set flag stating that he's alive
-#			Make sure that denethor is alive for the birth events
-
 # TODO: Update event 50015 to handle Gondor not being good
 
 # TODO: Update event 50016 to have a better system for determining the cores of GNR
@@ -301,6 +295,17 @@ country_event = {
 			AMR = {
 				exists = yes
 				owns = 71
+				OR = {
+					THIS = { good_evil_alignment = neutral_alignment }
+					AND = {
+						THIS = { good_evil_alignment = good_alignment }
+						good_evil_alignment = evil_alignment
+					}
+					AND = {
+						THIS = { good_evil_alignment = evil_alignment }
+						good_evil_alignment = good_alignment
+					}
+				}
 			}
 		}
 		NOT = { has_global_flag = wedding_denethor_finduilas }

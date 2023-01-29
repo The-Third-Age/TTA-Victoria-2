@@ -12,16 +12,10 @@
 #	Aragorn Elessar Flavor
 #	Debug }
 
-# TODO: Add decision to turn into Gondor of GNR wins second Kin-Strife
-# TODO: Add decision to annex GNR if second Kin-Strife is a draw
 # TODO: Make it possible to remove orc_raids(_country)
 
 # TODO: Rework Dol Amroth declaring independence so it doesn't need a global flag to prevent decision spamming
 #			Potentially remove Amrothian from Gondor's accepted cultures
-
-# TODO: For annexing Dol Amroth, check if Gondor leader is Denethor II or Boromir or Faramir. Or perhaps royal marrage for annex_dol_amroth
-#			May need a description update
-#		Also give Ecthelion or Imrahil as a general depending on who is alive
 
 # TODO: Make puppet PUK (of Rohan if needed) be renamed to Púkel land
 
@@ -35,8 +29,6 @@
 #			Update the_center_of_the_realm to only look at those regions
 
 # TODO: Update declare_steward_king so that kin_strife_is_coming is not always set (there's a way to avoid the civil war)
-
-# TODO: Decisions that allow players to have leaders step down if a replacement is available
 
 # TODO: Decision allowing Gondor after taking thorongils_advice (and still having thorongil) to raid and destroy Umbar's port
 
@@ -563,6 +555,11 @@ political_decisions = {
 			}
 			owns = 133
 			NOT = { has_global_flag = da_independence_war }
+			OR = {
+				nationalvalue = denethor_ii
+				nationalvalue = boromir_ii
+				nationalvalue = faramir_i
+			}
 		}
 		
 		allow = { 
