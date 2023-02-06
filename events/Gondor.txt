@@ -291,7 +291,10 @@ country_event = {
 		tag = GON
 		nationalvalue = ecthelion_ii
 		OR = {
-			owns = 71
+			AND = {
+				owns = 71
+				AMR = { exists = no }
+			}
 			AMR = {
 				exists = yes
 				owns = 71
@@ -305,6 +308,7 @@ country_event = {
 						THIS = { good_evil_alignment = evil_alignment }
 						good_evil_alignment = good_alignment
 					}
+					vassal_of = THIS
 				}
 			}
 		}
