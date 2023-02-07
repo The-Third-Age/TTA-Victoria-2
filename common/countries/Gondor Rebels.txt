@@ -2,7 +2,7 @@ graphical_culture = UsGC
 color = { 0 51 124 }
 
 party = {
-	name = "generic_servants"
+	name = "GON_servants"
 	start_date = 2954.1.1
 	end_date = 4000.1.1
 	
@@ -16,9 +16,39 @@ party = {
 	good_evil_alignment_fake = no_alignment
 }
 
-party = {
+party = { # Under Ecthelion II
 	name = "GON_high_nobility"
 	start_date = 2954.1.1
+	end_date = 2984.1.1
+	
+	ideology = high_nobility
+	
+	guild_autonomy_policy = controlled_guilds
+	racial_policy = non_orc
+	language_policy = minority_toleration
+	diplomatic_policy = proactive
+	war_policy = pro_military
+	good_evil_alignment_fake = no_alignment
+}
+
+party = { # Under Denethor II
+	name = "GON_high_nobility"
+	start_date = 2984.1.2
+	end_date = 3019.3.13
+	
+	ideology = high_nobility
+	
+	guild_autonomy_policy = controlled_guilds
+	racial_policy = non_orc
+	language_policy = official_only
+	diplomatic_policy = isolationist
+	war_policy = pro_military
+	good_evil_alignment_fake = no_alignment
+}
+
+party = { # Since the leader after Denethor II can be variable, use the generic high nobility
+	name = "GON_high_nobility"
+	start_date = 3019.3.14
 	end_date = 4000.1.1
 	
 	ideology = high_nobility
@@ -31,9 +61,24 @@ party = {
 	good_evil_alignment_fake = no_alignment
 }
 
-party = {
+party = { # Under Ecthelion II
 	name = "GON_low_nobility"
 	start_date = 2954.1.1
+	end_date = 2984.1.1
+	
+	ideology = high_nobility
+	
+	guild_autonomy_policy = oversight_guilds
+	racial_policy = non_orc
+	language_policy = regional_autonomy
+	diplomatic_policy = proactive
+	war_policy = pro_military
+	good_evil_alignment_fake = no_alignment
+}
+
+party = { # Since the leader after Denethor II can be variable, use the generic low nobility. Also the low nobility under Denethor II is the same as the generic low nobility
+	name = "GON_low_nobility"
+	start_date = 2984.1.2
 	end_date = 4000.1.1
 	
 	ideology = low_nobility
@@ -47,7 +92,7 @@ party = {
 }
 
 party = {
-	name = "generic_burgher"
+	name = "GON_burgher"
 	start_date = 2954.1.1
 	end_date = 4000.1.1
 	
@@ -62,7 +107,7 @@ party = {
 }
 
 party = {
-	name = "generic_loremaster"
+	name = "GON_loremaster"
 	start_date = 2954.1.1
 	end_date = 4000.1.1
 	
