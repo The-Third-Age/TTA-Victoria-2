@@ -359,7 +359,7 @@ province_event = {
 		}
 		OR = {
 			all_peoples = 10
-			non_orc = 10
+			alignment_acceptance = 10
 		}
 	}
 	
@@ -369,7 +369,7 @@ province_event = {
 			factor = 0.9
 			OR = {
 				all_peoples = 0.15
-				non_orc = 0.15
+				alignment_acceptance = 0.15
 			}
 		}
 		modifier = {
@@ -397,7 +397,7 @@ province_event = {
 		state_scope = {
 			any_pop = {
 				dominant_issue = {
-					value = non_orc
+					value = alignment_acceptance
 					factor = 0.2
 				}
 			}
@@ -561,7 +561,7 @@ province_event = {
 			civilized = yes
 			OR = {
 				racial_policy = all_peoples
-				racial_policy = non_orc
+				racial_policy = alignment_acceptance
 			}
 		}
 	}
