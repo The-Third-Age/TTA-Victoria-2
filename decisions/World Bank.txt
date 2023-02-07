@@ -812,6 +812,10 @@ political_decisions = {
 					any_neighbor_country = { NOT = { border_policy = closed_borders } }
 				}
 				AND = {
+					has_global_flag = borders_alignment
+					any_neighbor_country = { NOT = { border_policy = alignment_borders } }
+				}
+				AND = {
 					has_global_flag = borders_race
 					any_neighbor_country = { NOT = { border_policy = race_borders } }
 				}
@@ -828,6 +832,10 @@ political_decisions = {
 			any_neighbor_country = {
 				limit = { has_global_flag = borders_closed }
 				political_reform = closed_borders
+			}
+			any_neighbor_country = {
+				limit = { has_global_flag = borders_alignment }
+				political_reform = alignment_borders
 			}
 			any_neighbor_country = {
 				limit = { has_global_flag = borders_race }

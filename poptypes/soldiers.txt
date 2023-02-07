@@ -107,7 +107,6 @@ country_migration_target = {
 		factor = 1000
 		THIS = { has_pop_religion = elven }
 		accepted_culture = elven_culture
-		primary_culture = falathrim
 		border_policy = race_borders
 	}
 	modifier = {
@@ -133,6 +132,58 @@ country_migration_target = {
 		THIS = { has_pop_religion = ent }
 		accepted_culture = ent_culture
 		border_policy = race_borders
+	}
+	modifier = {
+		factor = 1000
+		THIS = { has_pop_religion = troll }
+		accepted_culture = troll_culture
+		border_policy = race_borders
+	}
+	modifier = {
+		factor = 1000
+		THIS = { has_pop_religion = eagle }
+		accepted_culture = eagle_culture
+		border_policy = race_borders
+	}
+	modifier = {
+		factor = 1000
+		THIS = { has_pop_religion = spider }
+		accepted_culture = spider_culture
+		border_policy = race_borders
+	}
+	modifier = {
+		factor = 1000
+		THIS = { has_pop_religion = undead }
+		accepted_culture = undead_culture
+		border_policy = race_borders
+	}
+	modifier = {
+		factor = 1000
+		THIS = { country = { good_evil_alignment = good_alignment } }
+		OR = {
+			good_evil_alignment = good_alignment
+			good_evil_alignment = neutral_alignment
+		}
+		border_policy = alignment_borders
+	}
+	modifier = {
+		factor = 1000
+		THIS = { country = { good_evil_alignment = neutral_alignment } }
+		OR = {
+			good_evil_alignment = good_alignment
+			good_evil_alignment = neutral_alignment
+			good_evil_alignment = evil_alignment
+		}
+		border_policy = alignment_borders
+	}
+	modifier = {
+		factor = 1000
+		THIS = { country = { good_evil_alignment = evil_alignment } }
+		OR = {
+			good_evil_alignment = neutral_alignment
+			good_evil_alignment = evil_alignment
+		}
+		border_policy = alignment_borders
 	}
 	modifier = {
 		factor = 0.1

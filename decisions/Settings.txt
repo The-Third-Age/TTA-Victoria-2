@@ -156,6 +156,24 @@ political_decisions = {
 		
 		effect = {
 			set_global_flag = borders_closed
+			clr_global_flag = borders_alignment
+			clr_global_flag = borders_race
+			clr_global_flag = borders_open
+		}
+	}
+	
+	borders_alignment = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = borders_alignment }
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = borders_closed
+			set_global_flag = borders_alignment
 			clr_global_flag = borders_race
 			clr_global_flag = borders_open
 		}
@@ -172,6 +190,7 @@ political_decisions = {
 		
 		effect = {
 			clr_global_flag = borders_closed
+			clr_global_flag = borders_alignment
 			set_global_flag = borders_race
 			clr_global_flag = borders_open
 		}
@@ -188,6 +207,7 @@ political_decisions = {
 		
 		effect = {
 			clr_global_flag = borders_closed
+			clr_global_flag = borders_alignment
 			clr_global_flag = borders_race
 			set_global_flag = borders_open
 		}
