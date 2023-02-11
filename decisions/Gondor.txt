@@ -78,7 +78,6 @@ political_decisions = {
 			}
 			
 			# Setting Orc Raids
-			add_country_modifier = { name = orc_raids_country duration = -1 }
 			any_owned = {
 				limit = {
 					OR = {
@@ -2033,8 +2032,10 @@ political_decisions = {
 			}
 			NOT = { has_global_flag = GON_strengthened_river_crossings }
 			OR = {
-				NOT = { owns = 198 }
-				NOT = { 198 = { owner = { vassal_of = THIS } } }
+				AND = {
+					NOT = { owns = 198 }
+					NOT = { 198 = { owner = { vassal_of = THIS } } }
+				}
 				198 = { has_province_modifier = orc_raids }
 			}
 		}
@@ -2156,7 +2157,6 @@ political_decisions = {
 		potential = {
 			nationalvalue = ecthelion_ii
 			NOT = { has_country_modifier = ithilien_rangers }
-			has_country_modifier = orc_raids_country
 			any_owned_province = {
 				OR = {
 					region = GON_198
