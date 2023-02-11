@@ -476,3 +476,23 @@ country_event = {
 		remove_country_modifier = GON_increased_naval_concern
 	}
 }
+
+# No longer a Fiefdom of Gondor/Reunited Kingdom
+country_event = {
+	id = 100010
+	title = "Our New Government"
+	desc = "EVTDESC100010"
+	picture = administration
+	
+	trigger = {
+		government = sauron_dictatorship
+		NOT = { tag = MOR }
+		NOT = { vassal_of = MOR }
+	}
+	
+	option = {
+		name = "Our new Lord!"
+		
+		government = dark_realm
+	}
+}
