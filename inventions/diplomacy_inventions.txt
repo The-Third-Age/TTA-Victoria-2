@@ -521,6 +521,26 @@ under_mountain = {
 	effect = { shared_prestige = 10 }
 }
 
+the_green_dragon = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			owns = 1040 # Hobbiton, or Bywater
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = green_dragon
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
 ########################
 # CULTURE_3 INVENTIONS #
 ########################
@@ -751,6 +771,26 @@ houses_of_healing_song = {
 			factor = 1
 			any_neighbor_country = {
 				invention = houses_of_healing_song
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 20 }
+}
+
+naughty_little_fly = {
+	limit = { culture_4 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = evil_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = naughty_little_fly
 			}
 		}
 	}
