@@ -2,7 +2,6 @@
 # these are checked for each countries once/month and then applied.
 #
 # Effects are fully scriptable here.
-
 no_infamy = {
 	trigger = {
 		has_global_flag = removed_infamy
@@ -20,4 +19,72 @@ vassal_nation = {
     }
     icon = 1
     prestige = -0.1
+}
+# Race effects
+men_culture_nation = {
+    trigger = {
+        accepted_culture = men_culture
+    }
+    icon = 1
+    cb_generation_speed_modifier 0.1
+}
+elven_culture_nation = {
+    trigger = {
+        accepted_culture = elven_culture
+    }
+    icon = 1
+	prestige = 0.01
+    cb_generation_speed_modifier -0.3
+}
+dwarven_culture_nation = {
+    trigger = {
+        accepted_culture = dwarven_culture
+    }
+    icon = 1
+}
+orc_culture_nation = {
+    trigger = {
+        accepted_culture = orc_culture
+    }
+    icon = 1
+}
+hobbit_culture_nation = {
+    trigger = {
+        accepted_culture = hobbit_culture
+    }
+    icon = 1
+    cb_generation_speed_modifier -0.3
+}
+ent_culture_nation = {
+    trigger = {
+        accepted_culture = ent_culture
+    }
+    icon = 1
+    cb_generation_speed_modifier -0.5
+}
+troll_culture_nation = {
+    trigger = {
+        accepted_culture = troll_culture
+    }
+    icon = 1
+}
+eagle_culture_nation = {
+    trigger = {
+        accepted_culture = eagle_culture
+    }
+    icon = 1
+    cb_generation_speed_modifier -0.5
+}
+spider_culture_nation = {
+    trigger = {
+        accepted_culture = spider_culture
+    }
+    icon = 1
+}
+undead_culture_nation = {
+    trigger = {
+        accepted_culture = undead_culture
+    }
+    icon = 1
+    cb_generation_speed_modifier -0.3
 }
