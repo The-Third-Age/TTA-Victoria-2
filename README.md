@@ -34,6 +34,8 @@ Loremasters:
 ### Graphic Assets
 - Terrain textures
 	- [HFME](https://github.com/Historical-Expansion-Mod/Greater-Flavor-Mod)
+- Province building icons
+	- TheGloriousBrit
 - Terrains
 	- [Anórien](https://lotr.fandom.com/wiki/An%C3%B3rien?file=Anorienwide.jpg)
 	- [Drúadan Forest](http://tolkiengateway.net/wiki/File:Gail_McIntosh_-_Dr%C3%BAadan_Forest.jpg)
