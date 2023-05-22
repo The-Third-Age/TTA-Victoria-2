@@ -145,6 +145,7 @@ Loremasters:
 	- [Thengel](https://www.wesleygardner.com/projects/e0vlO3)
 - Technology art
 	- [John Howe](https://www.john-howe.com/portfolio/gallery/categories.php?cat_id=66)
+	- [Ted Nasmith](https://www.tednasmith.com/)
 	- [Alan Lee](https://www.iamag.co/the-art-of-alan-lee/)
 	- [Daniel Falconer](https://www.artstation.com/artwork/GaNGx4)
 	- [Nick Keller](http://www.nickkellerart.com/)

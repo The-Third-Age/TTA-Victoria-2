@@ -1,7 +1,8 @@
 # Small Mechanics Decisions: {
 #	Wild Goblins
 #	Outlaws
-#	Palantiri }
+#	Palantiri 
+#   Aerial Support (Eagles & Fellbeasts)}
 
 # Wild Goblins
 political_decisions = {	
@@ -212,6 +213,137 @@ political_decisions = {
 				nationalvalue = ecthelion_ii
 				has_global_flag = railroading_enabled
 			}
+		}
+	}
+}
+
+# Aerial Support (Eagles & Fellbeasts)
+political_decisions = {
+	acquire_eagles_desperate = {
+		picture = "eagles"
+		potential = {
+			good_evil_alignment = good_alignment
+			civilized = yes
+			NOT = {
+				primary_culture = great_eagle
+			}
+			NOT = {				
+				flavor_19 = 1
+			}
+		}
+		allow = {
+			war = yes
+			OR = {
+				AND = {
+					war_exhaustion = 5
+					relation = {
+						who = EAG
+						value = 200
+					}
+				}
+				AND = {
+					war_exhaustion = 10
+					relation = {
+						who = EAG
+						value = 190
+					}
+				}
+				AND = {
+					war_exhaustion = 15
+					relation = {
+						who = EAG
+						value = 180
+					}
+				}
+				AND = {
+					war_exhaustion = 20
+					relation = {
+						who = EAG
+						value = 170
+					}
+				}
+				AND = {
+					war_exhaustion = 25
+					relation = {
+						who = EAG
+						value = 160
+					}
+				}
+				AND = {
+					war_exhaustion = 30
+					relation = {
+						who = EAG
+						value = 150
+					}
+				}
+			}
+			war_countries = {
+				flavor_20 = 1
+			}
+		}
+		effect = {
+			activate_technology = flavor_19
+		}		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	acquire_eagles_eag = {
+		picture = "eagles"
+		potential = {
+			primary_culture = great_eagle
+			NOT = {				
+				flavor_19 = 1
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					army_tactics_4 = 1
+					training_4 = 1
+				}
+				AND = {
+					expansion_4 = 1
+					diplomacy_4 = 1
+				}
+			}
+		}
+		effect = {
+			activate_technology = flavor_19
+		}		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	acquire_fellbeasts = {
+		picture = "fellbeast"
+		potential = {
+			good_evil_alignment = evil_alignment
+			NOT = {				
+				flavor_20 = 1
+			}
+		}
+		allow = {
+			owns = 381
+
+			OR = {
+				AND = {
+					army_tactics_4 = 1
+					training_4 = 1
+				}
+				AND = {
+					expansion_4 = 1
+					diplomacy_4 = 1
+				}
+			}
+		}
+		effect = {
+			activate_technology = flavor_20
+		}		
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }
