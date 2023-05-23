@@ -6,12 +6,17 @@ All notable changes will be documented in this file.
 
 ### New Tags
  - Alatar's Realm
+ - White Mountains Goblins
+ - Dwarves of the White Mountains
+ - Spiders of Tol Fuin
 
 ### Mechanics/Content
  - Can now search for and find Lesser Rings, Palantiri, Entwives, Blue Wizards, and Silmarils for various bonuses
  - Isengard content
  - Start of Lothlorien, Stoor Hobbit, Rohan content
  - Arthedain formable
+ - Eagles and Fellbeasts - Gas Attack reworked as Aerial Support
+ - Bunch of new inventions
 
 ### Graphics
  - Redone Mordor provinces and special terrains
