@@ -958,51 +958,6 @@ political_decisions = {
 	}
 }
 
-# Outlaw Hold
-political_decisions = {
-	update_outlaw_holds = {
-		potential = {
-			tag = FOR
-		}
-		
-		allow = {
-			any_owned_province = {
-				any_neighbor_province = {
-					OR = {
-						AND = {
-							is_core = OUT
-							NOT = { has_province_modifier = outlaw_hold }
-						}
-						AND = {
-							NOT = { is_core = OUT }
-							has_province_modifier = outlaw_hold
-						}
-					}
-				}
-			}
-		}
-		
-		effect = {
-			random_owned = {
-				any_neighbor_province = {
-					limit = {
-						is_core = OUT
-						NOT = { has_province_modifier = outlaw_hold }
-					}
-					add_province_modifier = { name = outlaw_hold duration = -1 }
-				}
-				any_neighbor_province = {
-					limit = {
-						NOT = { is_core = OUT }
-						has_province_modifier = outlaw_hold
-					}
-					remove_province_modifier = outlaw_hold
-				}
-			}
-		}
-	}
-}
-
 # Debug
 political_decisions = {
 	debug_research_flags = {

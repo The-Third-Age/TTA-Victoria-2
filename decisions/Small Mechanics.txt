@@ -147,41 +147,6 @@ political_decisions = {
 	}
 }
 
-# Outlaws
-political_decisions = {
-	hunt_for_outlaws = {
-		potential = {
-			any_owned_province = { 
-				has_province_modifier = outlaw_hold
-				NOT = { has_province_modifier = military_hunting_outlaws }
-			}
-		}
-		
-		allow = {
-			any_owned_province = {
-				has_province_modifier = outlaw_hold
-				NOT = { has_province_modifier = military_hunting_outlaws }
-				has_building = fort
-			}
-			training_1 = 1
-			money = 10000
-		}
-		
-		effect = {
-			random_owned = {
-				limit = {
-					has_province_modifier = outlaw_hold
-					NOT = { has_province_modifier = military_hunting_outlaws }
-					has_building = fort
-				}
-				add_province_modifier = { name = military_hunting_outlaws duration = -1 }
-			}
-			
-			treasury = -10000
-		}
-	}
-}
-
 # Palantiri
 political_decisions = {
 	use_the_palantir = {
