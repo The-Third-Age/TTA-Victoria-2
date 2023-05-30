@@ -1,5 +1,4 @@
 # Changelog
-
 All notable changes will be documented in this file.
 
 ## [v0.4]() - In Development
@@ -9,21 +8,25 @@ All notable changes will be documented in this file.
  - White Mountains Goblins
  - Dwarves of the White Mountains
  - Spiders of Tol Fuin
+ - Buckland
+ - Maur Tulhau
+ - Oathbreakers
 
 ### Mechanics/Content
+ - More Mordor, Gondor content - occupied Ithilien, Boromir & Faramir, building of Rammas Echor, Oathbreakers, Eärcaraxë
  - Can now search for and find Lesser Rings, Palantiri, Entwives, Blue Wizards, and Silmarils for various bonuses
- - Isengard content
- - Start of Lothlorien, Stoor Hobbit, Rohan content
+ - Start of Isengard, Lothlorien, Stoor Hobbit, Rohan content
  - Arthedain formable
  - Eagles and Fellbeasts - Gas Attack reworked as Aerial Support
  - Bunch of new inventions
+ - Wild Goblins framework for minorities to cause issues in realms
 
 ### Graphics
  - Redone Mordor provinces and special terrains
  - Redone Harad provinces and special terrains
  - Redone Khand provinces and special terrains
+ - Redone Eriador, Angmar, Dunland provinces
  - Finished adding technology pictures
-
 
 ## [v0.3]() - 20 Aug 2022
 ### New Tags
@@ -45,7 +48,6 @@ All notable changes will be documented in this file.
  - Umbar special terrains
  - Reworked Misty Mountains
  - More technology pictures
-
 
 ## [v0.2](https://github.com/The-Third-Age/TTA-Victoria-2/releases/tag/v0.2) - 06 Sep 2021
 ### New Mechanics

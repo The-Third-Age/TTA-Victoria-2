@@ -34,8 +34,6 @@ Loremasters:
 ### Graphic Assets
 - Terrain textures
 	- [HFME](https://github.com/Historical-Expansion-Mod/Greater-Flavor-Mod)
-- Province building icons
-	- TheGloriousBrit
 - Terrains
 	- [Anórien](https://lotr.fandom.com/wiki/An%C3%B3rien?file=Anorienwide.jpg)
 	- [Drúadan Forest](http://tolkiengateway.net/wiki/File:Gail_McIntosh_-_Dr%C3%BAadan_Forest.jpg)
@@ -63,6 +61,7 @@ Loremasters:
 	- [Icons of Crusader Kings 3](https://ck3.paradoxwikis.com/Category:Icons)
 	- [Icons of Imperator: Rome](https://imperator.paradoxwikis.com/Category:Icons)
 	- [Icons of March of the Eagles](https://store.steampowered.com/app/227760/March_of_the_Eagles/)
+	- TheGloriousBrit (Province building icons)
 - General/Admiral portraits
 	- [Medieval 2 TW: Divide and Conquer](https://www.moddb.com/mods/divide-and-conquer)
 - Loading Screen Paintings
