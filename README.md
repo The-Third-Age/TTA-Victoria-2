@@ -3,6 +3,8 @@
 # Victoria 2: The Third Age
 This is the GitHub Repo of the best Lord of the Rings mod for Victoria 2. Starting in the year 2954 of the Third Age, ~70 years before the events of Return of the King, revolutionise your nation in Middle Earth, join the coalition to defend the Free Peoples, or align with Sauron and use the One Ring to conquer all.
 
+Join the [Victoria 2: The Third Age Discord](https://discord.gg/t98UUdHETw)! Join the [Victoria 2 Modding Discord](https://discord.gg/EbY7qaA)!
+
 ## Installation Instructions
 1. Download the mod by clicking [here](https://github.com/The-Third-Age/TTA-Victoria-2/archive/main.zip) or click the the green Code button, then Download ZIP.
 2. Extract the folder to your game directory. If you use Steam, the folder is mostly likely `C:\Program Files (x86)\Steam\steamapps\commmon\Victoria 2\mod`
