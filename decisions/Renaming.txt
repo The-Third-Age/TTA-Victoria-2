@@ -138,20 +138,12 @@ political_decisions = {
 								FOR = { check_variable = { which = upper_marches_name value = 0.1 } }
 							}
 						}
-						# [easterlings] - Upper Marches
-						AND = {
-							is_culture_group = easterlings
-							OR = {
-								FOR = { NOT = { check_variable = { which = upper_marches_name value = 0.9 } } }
-								FOR = { check_variable = { which = upper_marches_name value = 1.1 } }
-							}
-						}
 						# [dunedain] - Upper Marches
 						AND = {
 							is_culture_group = dunedain
 							OR = {
-								FOR = { NOT = { check_variable = { which = upper_marches_name value = 1.9 } } }
-								FOR = { check_variable = { which = upper_marches_name value = 2.1 } }
+								FOR = { NOT = { check_variable = { which = upper_marches_name value = 0.9 } } }
+								FOR = { check_variable = { which = upper_marches_name value = 1.1 } }
 							}
 						}
 					}
@@ -234,6 +226,7 @@ political_decisions = {
 				}
 				643 = { change_province_name = "Naertheiaborg" }
 				644 = { change_province_name = "Myrrborg" }
+				478 = { change_province_name = "Kleinibriost" }
 				owner = { FOR = { set_variable = { which = nether_marches_name value = 0 } } }
 			}
 			# [anduinrim] - Nether Marches
@@ -248,6 +241,7 @@ political_decisions = {
 				}
 				643 = { change_province_name = "Naertheiabaurg" }
 				644 = { change_province_name = "Myrrbaurg" }
+				478 = { change_province_name = "Kleinibriost" }
 				owner = { FOR = { set_variable = { which = nether_marches_name value = 1 } } }
 			}
 			# [easterlings] - Nether Marches
@@ -262,6 +256,7 @@ political_decisions = {
 				}
 				643 = { change_province_name = "Burh Nerathis" }
 				644 = { change_province_name = "Burh Maridais" }
+				478 = { change_province_name = "Kleinibreusta" }
 				owner = { FOR = { set_variable = { which = nether_marches_name value = 2 } } }
 			}
 			# [rohirrim] - Nether Marches
@@ -276,6 +271,7 @@ political_decisions = {
 				}
 				643 = { change_province_name = "Naertheiaburg" }
 				644 = { change_province_name = "Myrrburg" }
+				478 = { change_province_name = "Kleinibriost" }
 				owner = { FOR = { set_variable = { which = nether_marches_name value = 3 } } }
 			}
 			# [northmen, anduinrim, rohirrim] - Nan Carnen
@@ -405,21 +401,7 @@ political_decisions = {
 					}
 				}
 				640 = { change_province_name = "Grasgarda" }
-				641 = { change_province_name = "Kleinibriost" }
 				owner = { FOR = { set_variable = { which = upper_marches_name value = 0 } } }
-			}
-			# [easterlings] - Upper Marches
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = easterlings }
-					province_id = 355
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = upper_marches_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = upper_marches_name value = 1.1 } } }
-					}
-				}
-				641 = { change_province_name = "Kleinibreusta" }
-				owner = { FOR = { set_variable = { which = upper_marches_name value = 1 } } }
 			}
 			# [dunedain] - Upper Marches
 			random_owned = {
@@ -427,12 +409,12 @@ political_decisions = {
 					owner = { is_culture_group = dunedain }
 					province_id = 355
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = upper_marches_name value = 1.9 } } } }
-						owner = { FOR = { check_variable = { which = upper_marches_name value = 2.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = upper_marches_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = upper_marches_name value = 1.1 } } }
 					}
 				}
 				640 = { change_province_name = "Grasgard" }
-				owner = { FOR = { set_variable = { which = upper_marches_name value = 2 } } }
+				owner = { FOR = { set_variable = { which = upper_marches_name value = 1 } } }
 			}
 			# [northmen] - Nan Annen
 			random_owned = {
