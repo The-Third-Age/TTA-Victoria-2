@@ -5,12 +5,9 @@ All notable changes will be documented in this file.
 
 ### New Tags
  - Alatar's Realm
- - White Mountains Goblins
- - Dwarves of the White Mountains
- - Spiders of Tol Fuin
- - Buckland
- - Maur Tulhau
- - Oathbreakers
+ - In Gondor: White Mountains Goblins, Dwarves of the White Mountains, Oathbreakers
+ - In Eriador: Buckland, Spiders of Tol Fuin, Maur Tulhau
+ - In Dale: Marsh-wights, Riverrun, Kaupaborg, Myrrborg, Naetheiaborg, Amov
 
 ### Mechanics/Content
  - More Mordor, Gondor content - occupied Ithilien, Boromir & Faramir, building of Rammas Echor, Oathbreakers, Eärcaraxë
@@ -25,7 +22,7 @@ All notable changes will be documented in this file.
  - Redone Mordor provinces and special terrains
  - Redone Harad provinces and special terrains
  - Redone Khand provinces and special terrains
- - Redone Eriador, Angmar, Dunland provinces
+ - Redone Eriador, Angmar, Dunland, Dale provinces
  - Finished adding technology pictures
 
 ## [v0.3]() - 20 Aug 2022
