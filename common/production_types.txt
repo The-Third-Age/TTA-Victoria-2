@@ -363,6 +363,19 @@ dye_factory = {
 	}
 }
 
+horse_abattoir = {       
+	template = factory_template
+	input_goods = {            
+		horses = 2
+	}
+	output_goods = food
+	value = 11 # Balance this?
+	bonus = {
+		trigger = { trade_goods_in_state = horses }
+		value = 0.25
+	}
+}
+
 ### RGOs #####################################################################################
 
 RGO_template_farmers = {
