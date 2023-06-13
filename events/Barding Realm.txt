@@ -1,0 +1,209 @@
+# Barding Realm Events
+# 50900 - 50999
+
+# The Integration of Odriksdun
+province_event = {
+	id = 50900
+	title = "The Integration of Odriksdún"
+	desc = "EVTDESC50900"
+	fire_only_once = yes
+	
+	trigger = {
+		owner = { tag = DAL }
+		province_id = 652 # Dale
+		650 = { empty = yes } # Odriksdun
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "Another village joins the realm"
+		
+		650 = { secede_province = THIS } # Odriksdun
+	}
+}
+
+# Bard's Ultimatum to the Rivermen
+country_event = {
+	id = 50901
+	title = "An Ultimatum From $FROMCOUNTRY$"
+	desc = "EVTDESC50901"
+	picture = "gramavuld/bard_war"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will join"
+		
+		FROM = { country_event = 50902 }
+		
+		ai_chance = {
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				NOT = { tag = DA1 }
+				NOT = { has_global_flag = protected_the_rivermen }
+			}
+		}
+	}
+	
+	option = {
+		name = "To war!"
+		
+		FROM = { country_event = 50903 }
+		
+		capital_scope = {
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = pikemen value = current }
+			sub_unit = { type = scouts value = current }
+			sub_unit = { type = artillery value = current }
+		}
+		
+		treasury = 100000
+		
+		ai_chance = {
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				tag = DA1
+				has_global_flag = protected_the_rivermen
+			}
+		}
+	}
+}
+
+# The Rivermen Accept
+country_event = {
+	id = 50902
+	title = "$FROMCOUNTRY$ Accepts the Ultimatum"
+	desc = "EVTDESC50902"
+	picture = "gramavuld/bard_war"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Welcome to $COUNTRY$!"
+		
+		FROM = {
+			all_core = {
+				add_core = THIS
+			}
+		}
+		
+		inherit = FROM
+	}
+}
+
+# The Rivermen Refuse
+country_event = {
+	id = 50903
+	title = "$FROMCOUNTRY$ Refuses the Ultimatum"
+	desc = "EVTDESC50903"
+	picture = "gramavuld/bard_war"
+	is_triggered_only = yes
+	
+	option = {
+		name = "They made their choice"
+		
+		badboy = 3
+		
+		casus_belli = {
+			target = FROM
+			type = conquest
+			months = 12
+		}
+		
+		add_casus_belli = {
+			target = FROM
+			type = humiliate
+			months = 12
+		}
+		
+		end_war = FROM
+		
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = humiliate }
+			call_ally = yes
+		}
+	}
+}
+
+province_event = {
+	id = 50904
+	title = "The Integration of the Grammas"
+	desc = "EVTDESC50904"
+	
+	trigger = {
+		owner = {
+			tag = DAL
+			has_global_flag = invited_the_grammas
+			
+			# Owner has core provinces that are uncolonized
+			any_core = {
+				empty = yes
+				any_neighbor_province = {
+					owner = {
+						tag = THIS
+					}
+				}
+			}
+		}
+		province_id = 652 # Dale
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "We welcome our brothers"
+		
+		owner = {
+			# Adds a modifier to all owned provinces with adjacent uncolonized cores
+			all_core = {
+				limit = {
+					empty = yes
+				}
+				
+				any_neighbor_province = {
+					limit = {
+						owner = { tag = THIS }
+					}
+					
+					add_province_modifier = { name = colonization_target duration = -1 }
+				}
+			}
+			
+			# Randomly grabs one of the marked provinces and annexes a random neighbor uncolonized core
+			random_owned = {
+				limit = {
+					has_empty_adjacent_province = yes
+					has_province_modifier = colonization_target
+				}
+				
+				random_empty_neighbor_province = {
+					limit = {
+						is_core = THIS
+					}
+					
+					secede_province = THIS
+				}
+			}
+			
+			# Clears the targeting modifiers to clear the path for the next time this event fires
+			any_owned = {
+				remove_province_modifier = colonization_target
+			}
+		}
+	}
+}

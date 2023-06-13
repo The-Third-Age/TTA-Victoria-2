@@ -1,0 +1,370 @@
+# World Bank Decisions: {
+#	Starting Decision (Unseen)
+#	Gramavuld Consolidation }
+
+# Starting Decision (Unseen) {
+political_decisions = {
+	DAL_start_decision = {
+		potential = {
+			tag = DAL
+			always = no
+		}
+		
+		allow = {}
+		
+		effect = {
+			# Setting up Gramavuld Expansion
+			add_country_modifier = {
+				name = king_of_lakemen
+				duration = -1
+			}
+			
+			add_country_modifier = {
+				name = king_of_adhalling
+				duration = -1
+			}
+		}
+	}
+}
+
+# Gramavuld Consolidation
+political_decisions = {
+	invite_the_grammas = {
+		picture = "barding_diplomats"
+		potential = {
+			tag = DAL
+			nationalvalue = bard_i
+			NOT = { has_global_flag = invited_the_grammas }
+		}
+		
+		allow = {
+			OR = {
+				owns = 650
+				diplomacy_1 = 1
+				wilderness_1 = 1
+			}
+		}
+		
+		effect = {
+			badboy = 2
+			
+			set_global_flag = invited_the_grammas
+		}
+	}
+
+	proclaim_lordship_over_the_grammas = {
+		picture = "barding_diplomats"
+		
+		potential = {
+			tag = DAL
+			nationalvalue = bard_i
+			has_global_flag = invited_the_grammas
+			NOT = { has_global_flag = proclaimed_lordship_over_the_gramas }
+		}
+		
+		allow = {
+			owns = 650 # Odriksdun
+			owns = 640 # Grasgard
+			owns = 641 # Klofnakot
+			owns = 478 # Kleinibriost
+			owns = 349 # Hatherbold
+			owns = 446 # Erland's Ferry
+			owns = 642 # Austriborg
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = king_of_grammas
+				duration = -1
+			}
+			
+			prestige = 5
+			
+			set_global_flag = proclaimed_lordship_over_the_gramas
+		}
+	}
+	
+	invite_the_rivermen = {
+		picture = "barding_diplomats"
+		
+		potential = {
+			tag = DAL
+			nationalvalue = bard_i
+			NOT = { has_global_flag = invited_the_rivermen }
+			OR = {
+				exists = DA1
+				exists = DA2
+				exists = DA3
+				exists = DA4
+			}
+		}
+		
+		allow = {
+			OR = {
+				has_country_modifier = king_of_grammas
+				diplomacy_1 = 2
+				wilderness_1 = 2
+			}
+		}
+		
+		effect = {
+			# Riverrun
+			random_country = {
+				limit = {
+					tag = DA1
+				}
+				
+				country_event = {
+					id = 50901
+					days = 30
+				}
+			}
+			
+			# Kaupaborg
+			random_country = {
+				limit = {
+					tag = DA2
+				}
+				
+				country_event = {
+					id = 50901
+					days = 45
+				}
+			}
+			
+			# Myrrborg
+			random_country = {
+				limit = {
+					tag = DA3
+				}
+				
+				country_event = {
+					id = 50901
+					days = 60
+				}
+			}
+			
+			# Naetheiaborg
+			random_country = {
+				limit = {
+					tag = DA4
+				}
+				
+				country_event = {
+					id = 50901
+					days = 75
+				}
+			}
+			
+			set_global_flag = invited_the_rivermen
+		}
+	}
+	
+	protect_the_rivermen = {
+		picture=  "barding_diplomats"
+		
+		potential = {
+			tag = DAL
+			nationalvalue = bard_i
+			OR = {
+				DA1 = {
+					any_core = {
+						NOT = {
+							OR = {
+								owned_by = DAL
+								owned_by = DA1
+								owned_by = DA2
+								owned_by = DA3
+								owned_by = DA4
+							}
+						}
+						NOT = { is_core = DAL }
+					}
+				}
+				DA2 = {
+					any_core = {
+						NOT = {
+							OR = {
+								owned_by = DAL
+								owned_by = DA1
+								owned_by = DA2
+								owned_by = DA3
+								owned_by = DA4
+							}
+						}
+						NOT = { is_core = DAL }
+					}
+				}
+				DA3 = {
+					any_core = {
+						NOT = {
+							OR = {
+								owned_by = DAL
+								owned_by = DA1
+								owned_by = DA2
+								owned_by = DA3
+								owned_by = DA4
+							}
+						}
+						NOT = { is_core = DAL }
+					}
+				}
+				DA4 = {
+					any_core = {
+						NOT = {
+							OR = {
+								owned_by = DAL
+								owned_by = DA1
+								owned_by = DA2
+								owned_by = DA3
+								owned_by = DA4
+							}
+						}
+						NOT = { is_core = DAL }
+					}
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			DA1 = {
+				all_core = {
+					limit = {
+						NOT = {
+							OR = {
+								owned_by = DAL
+								owned_by = DA1
+								owned_by = DA2
+								owned_by = DA3
+								owned_by = DA4
+							}
+						}
+						NOT = { is_core = DAL }
+					}
+					add_core = DAL
+				}
+			}
+			
+			DA2 = {
+				all_core = {
+					limit = {
+						NOT = {
+							OR = {
+								owned_by = DAL
+								owned_by = DA1
+								owned_by = DA2
+								owned_by = DA3
+								owned_by = DA4
+							}
+						}
+						NOT = { is_core = DAL }
+					}
+					add_core = DAL
+				}
+			}
+			
+			DA3 = {
+				all_core = {
+					limit = {
+						NOT = {
+							OR = {
+								owned_by = DAL
+								owned_by = DA1
+								owned_by = DA2
+								owned_by = DA3
+								owned_by = DA4
+							}
+						NOT = { is_core = DAL }
+						}
+					}
+					add_core = DAL
+				}
+			}
+			
+			DA4 = {
+				all_core = {
+					limit = {
+						NOT = {
+							OR = {
+								owned_by = DAL
+								owned_by = DA1
+								owned_by = DA2
+								owned_by = DA3
+								owned_by = DA4
+							}
+						}
+						NOT = { is_core = DAL }
+					}
+					add_core = DAL
+				}
+			}
+			
+			set_global_flag = protected_the_rivermen
+		}
+	}
+	
+	proclaim_lordship_over_the_rivermen = {
+		picture = "barding_diplomats"
+		
+		potential = {
+			tag = DAL
+			nationalvalue = bard_i
+			OR = {
+				has_global_flag = invited_the_rivermen
+				has_global_flag = protect_the_rivermen
+			}
+			NOT = { has_global_flag = proclaimed_lordship_over_the_rivermen }
+		}
+		
+		allow = {
+			war = no
+			DA1 = { all_core = { owned_by = THIS } }
+			DA2 = { all_core = { owned_by = THIS } }
+			DA3 = { all_core = { owned_by = THIS } }
+			DA4 = { all_core = { owned_by = THIS } }
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = king_of_rivermen
+				duration = -1
+			}
+			
+			DA1 = {
+				all_core = {
+					add_core = THIS
+					remove_core = DA1
+				}
+			}
+			
+			DA2 = {
+				all_core = {
+					add_core = THIS
+					remove_core = DA2
+				}
+			}
+			
+			DA3 = {
+				all_core = {
+					add_core = THIS
+					remove_core = DA3
+				}
+			}
+			
+			DA4 = {
+				all_core = {
+					add_core = THIS
+					remove_core = DA4
+				}
+			}
+			
+			prestige = 5
+			
+			set_global_flag = proclaimed_lordship_over_the_rivermen
+		}
+	}
+}
