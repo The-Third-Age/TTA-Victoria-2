@@ -207,3 +207,85 @@ province_event = {
 		}
 	}
 }
+
+country_event = {
+	id = 50905
+	title = "The Desolation of Smaug"
+	desc = "EVTDESC50905"
+	picture = "gramavuld/smaug"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Smaug's legacy continues"
+		
+		141 = { add_province_modifier = { name = smaugs_desolation duration = -1 } }
+		652 = { add_province_modifier = { name = reconstruction_started_smaugs_desolation duration = -1 } }
+		653 = { add_province_modifier = { name = smaugs_desolation duration = -1 } }
+		654 = { add_province_modifier = { name = reconstruction_started_smaugs_desolation duration = -1 } }
+		655 = { add_province_modifier = { name = smaugs_desolation duration = -1 } }
+		656 = { add_province_modifier = { name = smaugs_desolation duration = -1 } }
+	}
+}
+
+province_event = {
+	id = 50906
+	title = "Reconstruction from Smaug's Destruction"
+	desc = "EVTDESC50906"
+	
+	trigger = {
+		has_province_modifier = smaugs_desolation
+		owner = { money = 25000 }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		
+		modifier = {
+			factor = 0.5
+			owner = { money = 100000 }
+		}
+		
+		modifier = {
+			factor = 0.5
+			owner = { money = 250000 }
+		}
+	}
+	
+	option = {
+		name = "It is time"
+		
+		owner = { treasury = -25000 }
+		remove_province_modifier = smaugs_desolation
+		add_province_modifier = { name = reconstruction_started_smaugs_desolation duration = -1 }
+	}
+	
+	option = {
+		name = "We have other matters to attend"
+	}
+}
+
+province_event = {
+	id = 50907
+	title = "Reconstruction from Smaug's Destruction"
+	desc = "EVTDESC50907"
+	
+	trigger = {
+		has_province_modifier = reconstruction_started_smaugs_desolation
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.75
+			guilds_3 = 1
+		}
+	}
+	
+	option = {
+		name = "We are removing a stain from the land and memory"
+		
+		remove_province_modifier = reconstruction_started_smaugs_desolation
+		add_province_modifier = { name = reconstruction_finished_smaugs_desolation duration = 730 }
+	}
+}
