@@ -1858,6 +1858,177 @@ establish_protectorate_casus_belli = {
 	}
 }
 
+take_capital = {
+    sprite_index = 6
+    is_triggered_only = yes
+    months = 12
+    construction_speed = 0.5
+
+    badboy_factor = 15
+    prestige_factor = 2
+    peace_cost_factor = 0.5
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 2
+    break_truce_militancy_factor = 2
+    truce_months = 36
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+    can_use = {
+        OR = {
+            war_with = THIS
+            THIS = { total_amount_of_divisions = 1 }
+        }
+        NOT = {
+            is_our_vassal = THIS
+        }
+        number_of_states = 2 # annex if you want their last state
+        any_owned_province = {
+            NOT = { is_core = THIS }
+            is_colonial = no
+        }
+        OR = {
+            neighbour = THIS
+			AND = { OR = { any_neighbor_country = { substate_of = THIS } any_neighbor_country = { vassal_of = THIS } } THIS = { ai = no } }
+            AND = {
+                THIS = { any_owned_province = { port = yes } }
+                THIS = { total_amount_of_ships = 5 }
+                any_owned_province = { port = yes }
+            }
+        }
+        OR = {
+            AND = {
+                civilized = yes
+                THIS = {
+                    civilized = yes
+                }
+            }
+            AND = {
+                civilized = no
+                THIS = {
+                    civilized = no
+                }
+            }
+        }
+        is_vassal = no
+    }
+
+    allowed_states = {
+        is_colonial = no
+        any_owned_province = {
+            NOT = { is_core = THIS }
+            is_colonial = no
+        }
+        any_owned_province = { is_capital = yes }
+    }
+
+    allowed_states_in_crisis = {
+        any_owned_province = {
+            any_neighbor_province = {
+                owner = { tag = THIS }
+            }
+        }
+    }
+
+    po_demand_state = yes
+
+    war_name = WAR_TAKE_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+}
+
+demand_concession_capital = {
+    sprite_index = 7
+    is_triggered_only = yes
+    months = 12
+    construction_speed = 1
+
+    badboy_factor = 9.5
+    prestige_factor = 0.2
+    peace_cost_factor = 0.6
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 1
+    break_truce_militancy_factor = 1
+    truce_months = 12
+
+    good_relation_prestige_factor = 0
+    good_relation_infamy_factor = 0
+    good_relation_militancy_factor = 0
+
+    can_use = {
+        civilized = no
+        THIS = {
+			civilized = yes
+        }
+        NOT = { is_our_vassal = THIS }
+        number_of_states = 2 # annex if you want their last state
+        any_owned_province = {
+            NOT = { is_core = THIS }
+            is_colonial = no
+        }
+    }
+
+    allowed_states = {
+        any_owned_province = { is_colonial = no }
+        any_owned_province = { is_capital = yes }
+        OR = {
+            any_owned_province = { any_neighbor_province = { owned_by = THIS } }
+            AND = {
+                THIS = { ai = no }
+                owner = { war_with = THIS }
+            }
+            AND = {
+                any_owned_province = { port = yes }
+                THIS = { any_owned_province = { port = yes } }
+            }
+        }
+        OR = {
+            any_owned_province = {
+                NOT = {
+                    any_core = {
+                        exists = yes
+                        alliance_with = THIS
+                    }
+                }
+            }
+            THIS = { ai = no }
+        }
+    }
+
+
+    allowed_states_in_crisis = {
+        any_owned_province = {
+            any_neighbor_province = {
+                owner = { tag = THIS }
+            }
+        }
+    }
+
+    po_demand_state = yes
+
+    war_name = WAR_CONCESSION_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.25
+        }
+    }
+}
+
 rude_boy = {
 	sprite_index = 11
 	is_triggered_only = no
