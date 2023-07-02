@@ -1,5 +1,7 @@
 # Shire Decisions: {
-#	Starting Decision }
+#	Starting Decision
+#	Expansion
+#	Accepting other Hobbits }
 
 # Starting Decision
 political_decisions = {
@@ -15,8 +17,36 @@ political_decisions = {
 		}
 	}
 }
+# Expansion
+political_decisions = {
+	annex_buckland = {
+		picture = "brandy_hall"
+		potential = {
+			tag = SHI
+			is_our_vassal = BCK
+		}
+		
+		allow = {
+			BCK = { 
+				all_core = {
+					OR = {
+						owned_by = SHI
+						owned_by = BCK
+					} 
+				} 
+			}
+			expansion_2 = 1
+			war = no
+		}
+		
+		effect = {
+			inherit = BCK
+		}
+	}
 
-#Accepting Bree and Buck Hobbits
+}
+
+# Accepting other Hobbits
 political_decisions = {
 	accept_bre_hobbit = {
 		picture = "free_peoples_of_breeland"
