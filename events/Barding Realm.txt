@@ -213,7 +213,12 @@ country_event = {
 	title = "The Desolation of Smaug"
 	desc = "EVTDESC50905"
 	picture = "gramavuld/smaug"
-	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = DAL
+	}
 	
 	option = {
 		name = "Smaug's legacy continues"
