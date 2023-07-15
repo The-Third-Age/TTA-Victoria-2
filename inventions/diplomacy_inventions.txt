@@ -671,6 +671,26 @@ grond = {
 	effect = { shared_prestige = 15 }
 }
 
+where_theres_a_whip = {
+	limit = { culture_3 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			slavery = yes_slavery
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = where_theres_a_whip
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 15 }
+}
+
 ########################
 # CULTURE_4 INVENTIONS #
 ########################
