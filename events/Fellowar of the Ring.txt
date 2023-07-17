@@ -1644,6 +1644,14 @@ country_event = {
 			}
 			country_event = 50326
 		}
+
+		# Start of the Fourth Age
+		set_global_flag = fourth_age_flag
+		FOR = {
+			set_variable = { which = year_of_fourth_age value = 1 }
+			country_event = 99900
+			country_event = 99901
+		}
 	}
 }
 
