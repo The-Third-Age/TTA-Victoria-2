@@ -186,6 +186,7 @@ political_decisions = {
 					OR = {
 						government = democracy
 						government = hobbit_realm
+						government = northmen_democracy
 					}
 				}
 				set_country_flag = democratic
@@ -544,6 +545,7 @@ political_decisions = {
 					NOT = {
 						government = hobbit_realm
 						government = democracy
+						government = northmen_democracy
 					}
 				}
 				# A democracy without democratic flag
@@ -552,6 +554,7 @@ political_decisions = {
 					OR = {
 						government = hobbit_realm
 						government = democracy
+						government = northmen_democracy
 					}
 				}
 			}
@@ -570,8 +573,13 @@ political_decisions = {
 							is_culture_group = hobbits
 						}
 						AND = {
+							NOT = { government = northmen_democracy }
+							is_culture_group = northmen
+						}
+						AND = {
 							NOT = { government = democracy }
 							NOT = { is_culture_group = hobbits }
+							NOT = { is_culture_group = northmen }
 						}
 					}
 				}
@@ -583,6 +591,7 @@ political_decisions = {
 					OR = {
 						government = hobbit_realm
 						government = democracy
+						government = northmen_democracy
 					}
 				}
 				set_country_flag = democratic
@@ -600,6 +609,7 @@ political_decisions = {
 					OR = {
 						government = hobbit_realm
 						government = democracy
+						government = northmen_democracy
 					}
 				}
 			}
@@ -624,7 +634,20 @@ political_decisions = {
 				limit = {
 					has_country_flag = attempting_to_democratic
 					vote_franschise = landed_voting
+					is_culture_group = northmen
+					NOT = { government = northmen_democracy }
+				}
+				clr_country_flag = attempting_to_democratic
+				set_country_flag = democratic
+				government = northmen_democracy
+				election = yes
+			}
+			any_neighbor_country = {
+				limit = {
+					has_country_flag = attempting_to_democratic
+					vote_franschise = landed_voting
 					NOT = { is_culture_group = hobbits }
+					NOT = { is_culture_group = northmen }
 					NOT = { government = democracy }
 				}
 				clr_country_flag = attempting_to_democratic

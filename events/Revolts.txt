@@ -19,6 +19,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hobbit_realm
+						government = northmen_democracy
 					}
 					vote_franschise = universal_weighted_voting
 				}
@@ -31,6 +32,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hobbit_realm
+						government = northmen_democracy
 					}
 					vote_franschise = wealth_voting
 				}
@@ -44,6 +46,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hobbit_realm
+						government = northmen_democracy
 					}
 					vote_franschise = wealth_weighted_voting
 				}
@@ -57,6 +60,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hobbit_realm
+						government = northmen_democracy
 					}
 					vote_franschise = landed_voting
 				}
@@ -77,10 +81,27 @@ country_event = {
 				election = yes
 			}
 		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_culture_group = northmen
+					NOT = { government = northmen_democracy }
+				}
+			}
+			owner = {
+				government = northmen_democracy
+				political_reform = landed_voting
+				set_country_flag = democracy
+				election = yes
+			}
+		}
+		
 		random_owned = {
 			limit = {
 				owner = {
 					NOT = { is_culture_group = hobbits }
+					NOT = { is_culture_group = northmen }
 					NOT = { government = democracy }
 				}
 			}
@@ -144,6 +165,7 @@ country_event = {
 					OR = {
 						government = democracy
 						government = hobbit_realm
+						government = northmen_democracy
 					}
 				}
 			}
