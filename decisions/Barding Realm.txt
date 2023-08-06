@@ -79,6 +79,7 @@ political_decisions = {
 			}
 			
 			prestige = 5
+			add_accepted_culture = grammas
 			
 			set_global_flag = proclaimed_lordship_over_the_gramas
 		}
@@ -303,6 +304,7 @@ political_decisions = {
 				}
 			}
 			
+			add_accepted_culture = rivermen
 			set_global_flag = protected_the_rivermen
 		}
 	}
@@ -363,6 +365,13 @@ political_decisions = {
 			}
 			
 			prestige = 5
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { accepted_culture = rivermen } }
+				}
+				owner = { add_accepted_culture = rivermen }
+			}
 			
 			set_global_flag = proclaimed_lordship_over_the_rivermen
 		}
