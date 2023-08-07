@@ -294,3 +294,37 @@ province_event = {
 		add_province_modifier = { name = reconstruction_finished_smaugs_desolation duration = 730 }
 	}
 }
+
+# Trussel-Day
+province_event = {
+	id = 50908
+	title = "Trussell-Day"
+	desc = "EVTDESC50908"
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 2
+			
+			war = yes
+		}
+	}
+	
+	trigger = {
+		owner = { is_culture_group = northmen }
+		province_id = 652 # Dale
+	}
+	
+	option = {
+		name = "Thrushes are always our friends"
+		
+		owner = { 
+			prestige = 1
+			any_pop = {
+				militancy = -0.5
+				consciousness = -0.5
+			}
+		}
+	}
+}

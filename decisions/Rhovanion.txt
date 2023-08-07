@@ -450,7 +450,16 @@ political_decisions = {
 		}
 		
 		effect = {
-			militancy = -1
+			any_pop = {
+				limit = {
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				militancy = -1
+			}
+			
 			add_country_modifier = { name = northmen_council duration = 1825 }
 		}
 	}
