@@ -1,7 +1,8 @@
 # Dale Decisions: {
 #	Starting Decisions (Unseen)
 #	Forming Rhovanion
-#	Core Adding/Removal }
+#	Core Adding/Removal
+#	Generic Decisions (for all Northmen cultures) }
 
 # Starting Decisions
 political_decisions = {
@@ -427,6 +428,30 @@ political_decisions = {
 				add_province_modifier = { name = cultural_core_integration duration = -1 }
 				remove_province_modifier = core_integration
 			}
+		}
+	}
+}
+
+# Generic Decisions (for all Northmen cultures)
+political_decisions = {
+	call_the_attathrain = {
+		picture = "laketown"
+		potential = {
+			is_culture_group = northmen
+			NOT = { has_country_modifier = northmen_council }
+		}
+		
+		allow = {
+			OR = {
+				militancy = 3
+				government = northmen_democracy
+				government = northmen_tribe
+			}
+		}
+		
+		effect = {
+			militancy = -1
+			add_country_modifier = { name = northmen_council duration = 1825 }
 		}
 	}
 }
