@@ -348,3 +348,71 @@ country_event = {
 		653 = { add_province_modifier = { name = meres_end_increased_trade duration = -1 } }
 		654 = { add_province_modifier = { name = meres_end_increased_trade duration = -1 } }
 	}
+}
+
+# Dragon Gold
+province_event = {
+	id = 50910
+	title = "Gold in Long Lake!"
+	desc = "EVTDESC50910"
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.5
+			owns = 649
+		}
+		modifier = {
+			factor = 0.5
+			owns = 653
+		}
+		modifier = {
+			factor = 0.5
+			owns = 654
+		}
+		modifier = {
+			factor = 2
+			
+			year = 2960
+		}
+		modifier = {
+			factor = 2
+			year = 2970
+		}
+		modifier = {
+			factor = 2
+			year = 2980
+		}
+		modifier = {
+			factor = 2
+			year = 2990
+		}
+		modifier = {
+			factor = 2
+			year = 3000
+		}
+		modifier = {
+			factor = 2
+			year = 3010
+		}
+		modifier = {
+			factor = 2
+			year = 3020
+		}
+	}
+	
+	trigger = {
+		OR = {
+			province_id = 649
+			province_id = 653
+			province_id = 654
+		}
+	}
+	
+	option = {
+		name = "A mightly find indeed"
+		
+		owner = { treasury = 8000 }
+	}
+}
