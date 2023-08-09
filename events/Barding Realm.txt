@@ -243,7 +243,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 24
+		months = 60
 		
 		modifier = {
 			factor = 0.5
@@ -279,7 +279,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 180
 		
 		modifier = {
 			factor = 0.75
@@ -328,3 +328,23 @@ province_event = {
 		}
 	}
 }
+
+# Completion of the Mere's End (Lindal) Boat Lift
+country_event = {
+	id = 50909
+	title = "The Mere's End Boat Lift"
+	desc = "EVTDESC50909"
+	picture = "production"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Now trade can flow more easily"
+		
+		remove_country_modifier = meres_end_constructing_boat_lift
+		set_global_flag = meres_end_boat_lift_constructed
+		
+		649 = { add_province_modifier = { name = meres_end_increased_trade duration = -1 } }
+		653 = { add_province_modifier = { name = meres_end_increased_trade duration = -1 } }
+		654 = { add_province_modifier = { name = meres_end_increased_trade duration = -1 } }
+	}

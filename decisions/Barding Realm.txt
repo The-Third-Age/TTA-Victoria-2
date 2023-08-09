@@ -1,6 +1,7 @@
 # World Bank Decisions: {
 #	Starting Decision (Unseen)
-#	Gramavuld Consolidation }
+#	Gramavuld Consolidation
+#	Province Flavor }
 
 # Starting Decision (Unseen) {
 political_decisions = {
@@ -376,4 +377,50 @@ political_decisions = {
 			set_global_flag = proclaimed_lordship_over_the_rivermen
 		}
 	}
+}
+
+# Province Flavor
+political_decisions = {
+	build_meres_end_boatlift = {
+		picture = "long_lake"
+		potential = {
+			owns = 648
+			NOT = { has_global_flag = meres_end_boat_lift_constructing }
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					merchant_marine_3 = 1
+					naval_construction_3 = 1
+				}
+				AND = {
+					is_culture_group = northmen
+					ERE = {
+						owns = 660
+						merchant_marine_3 = 1
+						naval_construction_3 = 1
+					}
+					alliance_with = ERE
+				}
+				money = 50000
+			}
+		}
+		
+		effect = {
+			add_country_modifier = { name = meres_end_constructing_boat_lift duration = -1 }
+			treasury = -50000
+			country_event = { id = 50909 days = 1095 }
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { merchant_marine_3 = 1 } }
+					NOT = { owner = { naval_construction_3 = 1 } }
+				}
+				owner = { ERE = { treasury = 50000 } }
+				owner = { treasury = -50000 }
+			}
+			
+			set_global_flag = meres_end_boat_lift_constructing
+		}
 }
