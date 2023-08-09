@@ -238,6 +238,89 @@ misty_mountains = {
 	effect = { shared_prestige = 5 }
 }
 
+the_king_beneath_the_mountains = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			OR = {
+				accepted_culture = dwarven_culture
+				owns = 654 # Esgaroth/Lake-town
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = the_king_beneath_the_mountains
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+o_what_are_you_doing = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = elven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = o_what_are_you_doing
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+roll_roll_roll_roll = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = elven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = roll_roll_roll_roll
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+the_wind_was_on_the_withered_heath = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = eagle_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = the_wind_was_on_the_withered_heath
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
 clap_snap_black_crack = {
 	limit = { culture_1 = 1 }
 	
@@ -251,6 +334,29 @@ clap_snap_black_crack = {
 			factor = 1
 			any_neighbor_country = {
 				invention = clap_snap_black_crack
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 5 }
+}
+
+old_fat_spider = {
+	limit = { culture_1 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			OR = {
+				accepted_culture = hobbit_culture
+				accepted_culture = spider_culture
+			}
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = old_fat_spider
 			}
 		}
 	}
@@ -534,6 +640,26 @@ the_green_dragon = {
 			factor = 1
 			any_neighbor_country = {
 				invention = green_dragon
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 10 }
+}
+
+dragon_is_withered = {
+	limit = { culture_2 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = elven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = dragon_is_withered
 			}
 		}
 	}
