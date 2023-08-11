@@ -416,3 +416,129 @@ province_event = {
 		owner = { treasury = 8000 }
 	}
 }
+
+# Frithalf, Lord of Riding
+country_event = {
+	id = 50911
+	title = "Frithalf, Lord of Riding"
+	desc = "EVTDESC50911"
+	picture = "gramavuld/bard_war"
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		month = 60
+	}
+	
+	trigger = {
+		tag = DAL
+		OR = {
+			has_global_flag = invited_the_grammas
+			accepted_culture = grammas
+		}
+	}
+	
+	option = {
+		name = "A new general is always welcome"
+		
+		define_general = {
+			name = "§LFrithalf, §MLord of Riding§!"
+			background = lord_of_riding
+			personality = persistent
+		}
+	}
+}
+
+# Eynar, Lord of Riding
+country_event = {
+	id = 50912
+	title = "Eynar, Lord of Riding"
+	desc = "EVTDESC50911"
+	picture = "gramavuld/bard_war"
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	trigger = {
+		tag = DAL
+		OR = {
+			has_global_flag = invited_the_grammas
+			accepted_culture = grammas
+		}
+		year = 2970
+		owns = 640 # Grasgarda
+	}
+	
+	option = {
+		name = "A new general is always welcome"
+		
+		define_general = {
+			name = "§LEynar, §MLord of Riding§!"
+			background = lord_of_riding
+			personality = ballsy
+		}
+	}
+}
+
+# Oyvind, Captain of Erland's Ferry
+country_event = {
+	id = 50913
+	title = "Oyvind, Master of Erland's Ferry"
+	desc = "EVTDESC50913"
+	picture = "gramavuld/bard_war"
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	trigger = {
+		tag = DAL
+		OR = {
+			has_global_flag = invited_the_grammas
+			accepted_culture = grammas
+		}
+		year = 2990
+		owns = 446 # Erland's Ferry
+	}
+	
+	option = {
+		name = "A new general is always welcome"
+		
+		define_general = {
+			name = "§LOyvind, §MCaptain of Erland's Ferry§!"
+			background = captain_of_erlands_ferry
+			personality = resolute
+		}
+	}
+}
+
+# Lodin, Captain of Royal Archers
+country_event = {
+	id = 50914
+	title = "Lodin, Captain of the Royal Archers"
+	desc = "EVTDESC50914"
+	picture = "gramavuld/bard_war"
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	trigger = {
+		tag = DAL
+		owns = 652 # Dale
+		year = 3005
+	}
+	
+	option = {
+		name = "A new general is always welcome"
+		
+		define_general = {
+			name = "§LLodin, §MCaptain of the Royal Archers§!"
+			background = captain_of_royal_archers
+			personality = aggressive
+		}
+	}
+}
