@@ -900,7 +900,7 @@ country_event = {
 			}
 			militancy = -1
 		}
-		ai_chance = { factor = 45 }
+		ai_chance = { factor = 50 }
 	}
 	option = {
 		name = "Force them back to work."
@@ -918,5 +918,51 @@ country_event = {
 		}
 		change_variable = { which = strata_support value = -1 }
 		ai_chance = { factor = 50 }
+	}
+}
+
+# Diplomacy - eagles
+country_event = {
+	id = 3621
+	picture = "eagle"
+	title = "Diplomacy with Eagles of Manwë"
+	desc = "EVTDESC3621"
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
+		diplomacy_3 = 1
+		flavor_19 = 0 # Eagles
+		civilized = yes
+		good_evil_alignment = good_alignment
+		EAG = {
+			exists = yes
+			civilized = yes
+			good_evil_alignment = good_alignment
+		}
+		relation = {
+			who = EAG
+			value = -50
+		}
+	}
+
+	option = {
+		name = "May wind under our wings bear us where sun sails and moon walks."
+		relation = {
+			who = EAG
+			value = 15
+		}
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = "May they be blown off course."
+		relation = {
+			who = EAG
+			value = -5
+		}
+		ai_chance = { factor = 0 }
 	}
 }
