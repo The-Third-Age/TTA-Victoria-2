@@ -1,7 +1,8 @@
 # World Bank Decisions: {
 #	Starting Decision (Unseen)
 #	Gramavuld Consolidation
-#	Province Flavor }
+#	Province Flavor
+#	Bard I Flavor }
 
 # Starting Decision (Unseen) {
 political_decisions = {
@@ -423,4 +424,48 @@ political_decisions = {
 			
 			set_global_flag = meres_end_boat_lift_constructing
 		}
+	}
+}
+
+# Bard I Flavor
+political_decisions = {
+	appoint_lifstan_the_chancellor = {
+		picture = "barding_diplomats"
+		potential = {
+			tag = DAL
+			NOT = { has_global_flag = DAL_appointed_lifstan }
+			nationalvalue = bard_i
+		}
+		
+		allow = {
+			population_2 = 1
+		}
+		
+		effect = {
+			remove_country_modifier = great_advisor
+			add_country_modifier = { name = lifstan_great_advisor duration = 3650 }
+			
+			set_global_flag = DAL_appointed_lifstan
+		}
+	}
+	
+	appoint_erland_of_esgaroth = {
+		picture = "barding_diplomats"
+		potential = {
+			tag = DAL
+			NOT = { has_global_flag = DAL_appointed_erland }
+			nationalvalue = bard_i
+		}
+		
+		allow = {
+			diplomacy_3 = 1
+		}
+		
+		effect = {
+			remove_country_modifier = great_diplomat
+			add_country_modifier = { name = erland_great_diplomat duration = 3650 }
+			
+			set_global_flag = DAL_appointed_erland
+		}
+	}
 }
