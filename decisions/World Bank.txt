@@ -463,7 +463,15 @@ political_decisions = {
 			NOT = { has_country_modifier = good_evil_relations_cleanup_timer }
 		}
 
-		allow = {}
+		allow = {
+			OR = {
+				year = 2955
+				AND = {
+					NOT = { year = 2955 }
+					month = 1
+				}
+			}
+		}
 
 		effect = {
 			country_event = 100011
