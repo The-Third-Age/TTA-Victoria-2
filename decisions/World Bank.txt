@@ -455,6 +455,25 @@ political_decisions = {
 			}
 		}
 	}
+
+	good_evil_relations_cleanup = {
+		potential = {
+			tag = FOR
+			NOT = { has_global_flag = railroading_disabled }
+			NOT = { has_country_modifier = good_evil_relations_cleanup_timer }
+		}
+
+		allow = {}
+
+		effect = {
+			country_event = 100011
+			add_country_modifier = {
+				name = good_evil_relations_cleanup_timer
+				duration = 30
+			}
+		}
+
+	}
 }
 
 # Leave FOR Alone
