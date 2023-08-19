@@ -68,17 +68,17 @@ political_decisions = {
 				AND = {
 					good_evil_alignment = good_alignment
 					NOT = { sphere_owner = { good_evil_alignment = good_alignment } }
-					NOT = { has_global_flag = railroading_enabled }
+					has_global_flag = railroading_disabled
 				}
 				AND = {
 					good_evil_alignment = evil_alignment
 					NOT = { sphere_owner = { good_evil_alignment = evil_alignment } }
-					NOT = { has_global_flag = railroading_enabled }
+					has_global_flag = railroading_disabled
 				}
 				AND = {
 					good_evil_alignment = neutral_alignment
 					NOT = { sphere_owner = { good_evil_alignment = neutral_alignment } }
-					NOT = { has_global_flag = railroading_enabled }
+					has_global_flag = railroading_disabled
 				}
 			}
 		}
@@ -171,11 +171,11 @@ political_decisions = {
 			NOT = { good_evil_alignment = good_alignment }
 			OR = {
 				AND = {
-					has_global_flag = railroading_enabled
+					NOT = { has_global_flag = railroading_disabled }
 					accepted_culture = men_culture
 					ai = no
 				}
-				NOT = { has_global_flag = railroading_enabled }
+				has_global_flag = railroading_disabled
 			}
 		}
 		
@@ -218,11 +218,11 @@ political_decisions = {
 			NOT = { good_evil_alignment = neutral_alignment }
 			OR = {
 				AND = {
-					has_global_flag = railroading_enabled
+					NOT = { has_global_flag = railroading_disabled }
 					accepted_culture = men_culture
 					ai = no
 				}
-				NOT = { has_global_flag = railroading_enabled }
+				has_global_flag = railroading_disabled
 			}
 		}
 		
@@ -265,11 +265,11 @@ political_decisions = {
 			NOT = { good_evil_alignment = evil_alignment }
 			OR = {
 				AND = {
-					has_global_flag = railroading_enabled
+					NOT = { has_global_flag = railroading_disabled }
 					accepted_culture = men_culture
 					ai = no
 				}
-				NOT = { has_global_flag = railroading_enabled }
+				has_global_flag = railroading_disabled
 			}
 		}
 		
@@ -437,10 +437,10 @@ political_decisions = {
 			NOT = { good_evil_alignment = good_alignment }
 			OR = {
 				AND = {
-					has_global_flag = railroading_enabled
+					NOT = { has_global_flag = railroading_disabled }
 					accepted_culture = men_culture
 				}
-				NOT = { has_global_flag = railroading_enabled }
+				has_global_flag = railroading_disabled
 			}
 		}
 		
@@ -462,10 +462,10 @@ political_decisions = {
 			NOT = { good_evil_alignment = neutral_alignment }
 			OR = {
 				AND = {
-					has_global_flag = railroading_enabled
+					NOT = { has_global_flag = railroading_disabled }
 					accepted_culture = men_culture
 				}
-				NOT = { has_global_flag = railroading_enabled }
+				has_global_flag = railroading_disabled
 			}
 		}
 		
@@ -487,10 +487,10 @@ political_decisions = {
 			NOT = { good_evil_alignment = evil_alignment }
 			OR = {
 				AND = {
-					has_global_flag = railroading_enabled
+					NOT = { has_global_flag = railroading_disabled }
 					accepted_culture = men_culture
 				}
-				NOT = { has_global_flag = railroading_enabled }
+				has_global_flag = railroading_disabled
 			}
 		}
 		

@@ -61,7 +61,7 @@ political_decisions = {
 			# Railroading ensures that Frodo flees the Shire
 			random_owned = {
 				limit = {
-					owner = { has_global_flag = railroading_enabled }
+					owner = { NOT = { has_global_flag = railroading_disabled } }
 				}
 				owner = { country_event = { id = 50202 days = 10 } }
 			}
@@ -69,7 +69,7 @@ political_decisions = {
 			# No Railroading, 1% chance of finding the Ring
 			random_owned = {
 				limit = {
-					owner = { NOT = { has_global_flag = railroading_enabled } }
+					owner = { has_global_flag = railroading_disabled }
 				}
 				owner = {
 					random_list = {
@@ -106,7 +106,7 @@ political_decisions = {
 			# No Railroading, 0.25% chance of finding the Ring
 			random_owned = {
 				limit = {
-					owner = { NOT = { has_global_flag = railroading_enabled } }
+					owner = { has_global_flag = railroading_disabled }
 				}
 				owner = {
 					random_list = {
@@ -145,7 +145,7 @@ political_decisions = {
 			# No Railroading, 0.25% chance of finding the Ring
 			random_owned = {
 				limit = {
-					owner = { NOT = { has_global_flag = railroading_enabled } }
+					owner = { has_global_flag = railroading_disabled }
 				}
 				owner = {
 					random_list = {
@@ -438,7 +438,7 @@ political_decisions = {
 		potential = {
 			has_country_flag = fellowship_in_our_lands
 			has_country_modifier = fellowship_member
-			NOT = { has_global_flag = railroading_enabled }
+			has_global_flag = railroading_disabled
 		}
 		
 		allow = {	
@@ -478,7 +478,7 @@ political_decisions = {
 			NOT = { has_country_modifier = ring_hunters }
 			OR = {
 				good_evil_alignment = evil_alignment
-				NOT = { has_global_flag = railroading_enabled }
+				has_global_flag = railroading_disabled
 			}
 		}
 		

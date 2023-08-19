@@ -479,7 +479,7 @@ country_event = {
 		owns = 1010
 		FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 		FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
-		NOT = { has_global_flag = railroading_enabled }
+		has_global_flag = railroading_disabled
 	}
 	
 	mean_time_to_happen = {
@@ -627,7 +627,7 @@ country_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { has_global_flag = railroading_enabled }
+				has_global_flag = railroading_disabled
 				any_core = { owner = { tag = FROM } }
 			}
 		}
@@ -640,7 +640,7 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				has_global_flag = railroading_enabled
+				NOT = { has_global_flag = railroading_disabled }
 			}
 		}
 	}
@@ -783,7 +783,7 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				has_global_flag = railroading_enabled
+				NOT = { has_global_flag = railroading_disabled }
 				FOR = { any_neighbor_country = { has_country_modifier = fellowship_member } }
 			}
 		}
@@ -1222,7 +1222,7 @@ country_event = {
 			factor = 0.1
 			modifier = {
 				factor = 0
-				has_global_flag = railroading_enabled
+				NOT = { has_global_flag = railroading_disabled }
 			}
 		}
 	}
@@ -1242,7 +1242,7 @@ country_event = {
 		
 		random_owned = {
 			limit = {
-				owner = { has_global_flag = railroading_enabled }
+				owner = { NOT = { has_global_flag = railroading_disabled } }
 				owner = { GON = { has_country_modifier = fellowship_member } }
 			}
 			owner = { GON = { country_event = 50300 } }
@@ -1251,7 +1251,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				OR = {
-					NOT = { owner = { has_global_flag = railroading_enabled } }
+					NOT = { owner = { NOT = { has_global_flag = railroading_disabled } } }
 					NOT = { owner = { GON = { has_country_modifier = fellowship_member } } }
 				}
 			}
@@ -1850,7 +1850,7 @@ country_event = {
 			factor = 5
 			modifier = {
 				factor = 0
-				has_global_flag = railroading_enabled
+				NOT = { has_global_flag = railroading_disabled }
 				NOT = { tag = ISE }
 				NOT = { nationalvalue = saruman }
 			}

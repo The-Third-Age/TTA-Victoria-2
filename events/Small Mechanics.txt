@@ -481,7 +481,7 @@ country_event = {
 				OR = {
 					AND = {
 						owner = { nationalvalue = denethor_ii }
-						has_global_flag = railroading_enabled
+						NOT = { has_global_flag = railroading_disabled }
 					}
 					is_greater_power = yes
 				}
@@ -493,7 +493,7 @@ country_event = {
 			limit = {
 				NOT = {
 					owner = { nationalvalue = denethor_ii }
-					has_global_flag = railroading_enabled
+					NOT = { has_global_flag = railroading_disabled }
 				}
 				is_greater_power = no
 			}

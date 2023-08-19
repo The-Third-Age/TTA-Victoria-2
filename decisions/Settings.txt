@@ -44,19 +44,17 @@ political_decisions = {
 		}
 	}
 	
-	enable_railroading = {
+	disable_railroading = {
 		potential = {
 			ai = no
 			has_global_flag = viewing_settings
-			NOT = { has_global_flag = railroading_enabled }
+			NOT = { has_global_flag = railroading_disabled }
 		}
 		
 		allow = {}
 		
 		effect = {
-			set_global_flag = railroading_enabled
-			
-			FOR = { country_event = 100011 }
+			set_global_flag = railroading_disabled
 		}
 	}
 	
