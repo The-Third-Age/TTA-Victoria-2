@@ -209,6 +209,54 @@ province_event = {
 }
 # }
 
+# Great People {
+# Events 5004 - 5005
+# Great Advisor
+country_event = {
+	id = 5004
+	title = "A New Great Advisor"
+	desc = "EVTDESC5004"
+	picture = "administration"
+	
+	trigger = {
+		NOT = { has_country_modifier = great_advisor }
+		NOT = { has_country_modifier = lifstan_great_advisor }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	option = {
+		name = "Huzzah!"
+		
+		add_country_modifier = { name = great_advisor duration = 1825 }
+	}
+}
+
+# Great Diplomat
+country_event = {
+	id = 5005
+	title = "A New Great Diplomat"
+	desc = "EVTDESC5005"
+	picture = "administration"
+	
+	trigger = {
+		NOT = { has_country_modifier = great_diplomat }
+		NOT = { has_country_modifier = erland_great_diplomat }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	option = {
+		name = "Huzzah!"
+		
+		add_country_modifier = { name = great_diplomat duration = 1825 }
+	}
+}
+
 # Palantíri Events {
 # 5008 - 5016
 # Saw Dissent
