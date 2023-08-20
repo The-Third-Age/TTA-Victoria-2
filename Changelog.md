@@ -29,6 +29,7 @@ All notable changes will be documented in this file.
  - Redone sea provinces and colourmap
  - Technology pictures
  - Better RGO icons for melee gear, ranged gear, cut stone, administrative services
+ - Event interface rework
 
 ## [v0.3]() - 20 Aug 2022
 ### New Tags
