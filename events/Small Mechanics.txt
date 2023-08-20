@@ -601,3 +601,109 @@ country_event = {
 	}
 }
 # }
+
+# Ravens of Erebor Events {
+# 5050 - 5053
+# Raven infestation
+country_event = {
+	id = 5050
+	title = "Raven Infestation"
+	desc = "EVTDESC5050"
+	picture = "raven"
+	
+	trigger = {
+		good_evil_alignment = evil_alignment
+		NOT = { has_country_modifier = bad_raven_influence }
+		any_owned_province = {
+			has_pop_culture = raven
+		}
+		owns = 660 # Erebor
+	}
+	
+	mean_time_to_happen = { months = 12 }
+	
+	option = {
+		name = "Dark wings, dark words"
+
+		add_country_modifier = {
+			name = bad_raven_influence
+			duration = -1
+		}
+	}
+}
+# Raven infestation resolved - no longer evil
+country_event = {
+	id = 5051
+	title = "Ravens begone!"
+	desc = "EVTDESC5051"
+	picture = "raven"
+	
+	trigger = {
+		NOT = { good_evil_alignment = evil_alignment }
+		has_country_modifier = bad_raven_influence
+		any_owned_province = {
+			has_pop_culture = raven
+		}
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "Thank goodness"
+
+		remove_country_modifier = bad_raven_influence
+	}
+}
+# Raven infestation resolved - no longer ravens
+country_event = {
+	id = 5052
+	title = "Ravens begone!"
+	desc = "EVTDESC5052"
+	picture = "raven"
+	
+	trigger = {
+		has_country_modifier = bad_raven_influence
+		NOT = {
+			any_owned_province = {
+				has_pop_culture = raven
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "They won't be missed"
+
+		remove_country_modifier = bad_raven_influence
+	}
+}
+# Raven infestation local troubles
+province_event = {
+	id = 5053
+	title = "Raven Infestation"
+	desc = "EVTDESC5053"
+
+	trigger = {
+		is_core = RAV
+		owner = {
+			has_country_modifier = bad_raven_influence
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = "Damn these birds!"
+		any_pop = {
+			limit = {
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			consciousness = 5
+			militancy = 5
+		}
+	}
+}
