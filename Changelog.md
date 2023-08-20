@@ -4,26 +4,31 @@ All notable changes will be documented in this file.
 ## [v0.4]() - In Development
 
 ### New Tags
- - Alatar's Realm
- - In Gondor: White Mountains Goblins, Dwarves of the White Mountains, Oathbreakers
+ - In Gondor: White Mountains Goblins, Dwarves of the White Mountains, Oathbreakers, Edhellond
  - In Eriador: Buckland, Spiders of Tol Fuin, Maur Tulhau
- - In Dale: Marsh-wights, Riverrun, Kaupaborg, Myrrborg, Naetheiaborg, Amov
+ - In Dale: Marsh-wights, Riverrun, Kaupaborg, Myrrborg, Naetheiaborg, Amov, Ravens of Erebor
+ - Alatar's Realm
 
 ### Mechanics/Content
- - More Mordor, Gondor content - occupied Ithilien, Boromir & Faramir, building of Rammas Echor, Oathbreakers, Eärcaraxë
- - Can now search for and find Lesser Rings, Palantiri, Entwives, Blue Wizards, and Silmarils for various bonuses
- - Start of Isengard, Lothlorien, Stoor Hobbit, Rohan content
+ - More Mordor, Gondor content - occupied Ithilien, Boromir & Faramir, building of Rammas Echor, river defences, Bar Iaru Dínen, Oathbreakers, Eärcaraxë, Minasdirath, College of the Spoken Word
+ - Lots of Dale & Northmen content - reunification of the kingdom, reconstruction of Dale/Esgaroth, dragon gold, Thrush-Day, Attathrain, Mere's End boat-lift
+ - Start of Isengard, Lothlorien, Stoor Hobbit, Rohan, Erebor content
+ - Can now search for and find Lesser Rings, Palantiri, Entwives, Blue Wizards, and Silmarils for various bonuses. Palantir usage can give you powerful bonuses or madness
  - Arthedain formable
  - Eagles and Fellbeasts - Gas Attack reworked as Aerial Support
  - Bunch of new inventions
  - Wild Goblins framework for minorities to cause issues in realms
+ - Shire Reckoning and Fourth Age (when applicable) date converters
+ - Observer mode
 
 ### Graphics
  - Redone Mordor provinces and special terrains
  - Redone Harad provinces and special terrains
  - Redone Khand provinces and special terrains
  - Redone Eriador, Angmar, Dunland, Dale provinces
- - Finished adding technology pictures
+ - Redone sea provinces and colourmap
+ - Technology pictures
+ - Better RGO icons for melee gear, ranged gear, cut stone, administrative services
 
 ## [v0.3]() - 20 Aug 2022
 ### New Tags
@@ -37,7 +42,7 @@ All notable changes will be documented in this file.
  - Start of Isengard content
  - Start of Dunedain of the North / Arnor content
  - Arnor, Cardolan, and Reunited Kingdom formable
- - New population map with more detail pretty much everywhere. 
+ - New population map with more detail pretty much everywhere
  - Added Trolls, Spiders, Eagles, Wights, Anduinmen
 
 ### Graphics
