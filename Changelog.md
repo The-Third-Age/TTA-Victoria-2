@@ -1,7 +1,11 @@
 # Changelog
 All notable changes will be documented in this file.
 
-## [v0.4]() - In Development
+## [v0.5]() - In Development
+
+!
+
+## [v0.4](https://github.com/The-Third-Age/TTA-Victoria-2/releases/tag/v0.4) - 20 Aug 2023
 
 ### New Tags
  - In Gondor: White Mountains Goblins, Dwarves of the White Mountains, Oathbreakers, Edhellond
@@ -31,7 +35,7 @@ All notable changes will be documented in this file.
  - Better RGO icons for melee gear, ranged gear, cut stone, administrative services
  - Event interface rework
 
-## [v0.3]() - 20 Aug 2022
+## [v0.3](https://github.com/The-Third-Age/TTA-Victoria-2/releases/tag/v0.3) - 20 Aug 2022
 ### New Tags
  - In Eriador: Bombadil, Trollshaws, Barrowwights, Lossoth, Eglain, Ost in Edhil, Trollfells, Suduri, Metraith, Forondir, Nadior, Benglaras, Caranthal, Nidada, Eryn Vorn, Arthedain, Khazadbizar, Thorins Halls, Khagolabbad Faraku, Nogrod, Belegost, Old Sylvana, Harvaneth, Reunited Kingdom
  - In Enedwaith: Caru Luth, Draig Luth, Hebog Luth, Turch Luth, Uch Luth, Haerawreigion, Andrast, Algraig, Gwathirim

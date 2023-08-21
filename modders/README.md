@@ -4,7 +4,7 @@
  - As with any project that multiple people are working on, it is likely that each person has their own beliefs for how things should be done. This document is meant to solve those disagreements.
  - This can cause many unindended issues (especially localization issues), which comes from duplicated event ids, decision names and localisations.
  - Additionally, many Vic II mods end up with file systems looking like the following image; hundreds of files, many with just a couple of lines of code. This is rather poor organization and can actually make modding harder!\
-	![Poor File Structure](modders/bad_file_structure.png)\
+	![Poor File Structure](bad_file_structure.png)\
 	Not to pick on GFM, but it's the only other mod I have installed and the file structure is rather poorly organized. This is a combination of merging in many mods, many modders working on the mod and the lack of set rules to keep this from happening. This is just my estimation, but if one were to run the application that notifies the user of duplicated localisations, I would guess about 10% of their localisation lines would be duplicates.
  - Finally, these rules ensure that the code is standardized and readable, ensuring that debugging is done as quickly as possible.
 	
@@ -28,15 +28,15 @@ They can essentially be boiled down to the following:
 	
 2. So I know what file to use, but where in the file should it go?
    - At the top of the file, there should be a short breakdown of what's in the file:\
-     ![Decision Top](modders/decision_top.png)\
+     ![Decision Top](decision_top.png)\
      The first line is just another reminder of what file you are in. The following lines are what is of interest. Each line after that first line is a section within the file. If your decision fits within one of the already defined sections, add it to that section (preferably at the bottom of the section). Otherwise, create a new section, and remember to put it in the list of sections at the top of the file (and move the closing bracket in the block comment).
 	
 3. What are these decision sections?\
-   ![Decision Sections](modders/decision_section.png)
+   ![Decision Sections](decision_section.png)
    - All they are are `political_decision` blocks within the file. Because of how the engine parses decision files, it is completely fine looking at multiple `political_decision` blocks within the same file, allowing for greater organization to be done in the decision files. Above each block is a comment with a name either matching or closely matching a name in the top of the decision file. Additionally, they are in *the same order* as stated at the top of the file. 
   
 4. What syntax should be used when making decisions?\
-   ![Good Decision](modders/good_decision.png)
+   ![Good Decision](good_decision.png)
    - Have the opening bracket on the same line as the "=".
    - After an opening bracket, tab over one more time than the previous line.
    - Have the closing bracket start on the same tab level as the line with the corresponding opening bracket.
@@ -57,13 +57,13 @@ They can essentially be boiled down to the following:
 	 
 2. What is the file structure?
    - Like decisions, there is a short description top section of the file:\
-     ![Event Top](modders/event_top.png)
+     ![Event Top](event_top.png)
 	 - The first line is another reminder of what file you are in. The second line is the event ids that are reserved for this file. It is likely that there are some ids in that range that are not used.\
-	 ![Event Structure](modders/event_structure.png)
+	 ![Event Structure](event_structure.png)
 	 - Generally, the events are in order of their ids. The exception is where an event directly related to another event (such as getting called by the second event) is added. For instance, if there were to be an event called by `Dol Amroth Refuses Annexation` (id 50006), the new event (id 50012), it would be placed after `Dol Amroth Refuses Annexation`, rather than after `Birth of Faramir`. Prior to the definition of each event, there is a comment with the title or the general idea of the event. 
 	 
 3. What syntax should be used when making events?\
-   ![Good Event](modders/good_event.png)
+   ![Good Event](good_event.png)
    - The same rules as used when making decisions (see point 5 in the `Decisions` section).
    
 4. Anything else that should be done before committing the event?
@@ -73,7 +73,7 @@ They can essentially be boiled down to the following:
 
 ### Modifiers
 1. What is up with all of these comments having an obnoxious amount of `#`'s?\
-   ![Modifiers](modders/modifiers.png)
+   ![Modifiers](modifiers.png)
    - There are two types: the three-line category headers. There are only two: `Vanilla Modifiers` and `TTA Modifiers`. They just let one know if the modifier comes from vanilla or if it was added by TTA. The other is the section headers, such as `##### RGO MODIFIERS #####`. This section defines the general idea of the modifiers in the section. In the `RGO MODIFIERS` section, I would expect general modifiers that only affect rgos be placed in there. However, if a modifier was meant for one nation, such as Gondor, it would be in the `##### GONDOR #####` section.
    
 2. What syntax should be used?
@@ -88,7 +88,7 @@ They can essentially be boiled down to the following:
 
 ### Localisation
 1. Why are there an obnoxious amount of comments again?\
-   ![Localisation](modders/localisation.png)
+   ![Localisation](localisation.png)
    - Each of these groups of three lines tells of a new section in that localisation file. For example, in the above image, the Country Information Events localisation is collapsed, line 1023 is the Military Leader event text, and all the lines after 1026 are for Gondor events. 
    
 2. Is there any order to the localisation?
