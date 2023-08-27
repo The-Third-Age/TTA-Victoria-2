@@ -9,9 +9,10 @@ country_event = {
 	picture = "supportwar" 
 	
 	trigger = {
-		NOT = { involved_in_crisis = yes }
 		constructing_cb_progress = 10
+		NOT = { involved_in_crisis = yes }
 		NOT = {	has_country_modifier = CB_gen_plus }
+		NOT = {	has_country_modifier = CB_gen_minus }
 	}
 	
 	mean_time_to_happen = {
@@ -22,6 +23,35 @@ country_event = {
 		name = "They're coming right for us!"
 		add_country_modifier = {
 			name = CB_gen_plus
+			duration = 50
+		}
+	}
+}
+
+# Ents - malus
+country_event = {
+	id = 90001
+	title = "Entmoot on the $CB_TARGET_NAME_ADJ$"
+	desc = "EVTDESC90001"
+	picture = "entmoot" 
+	
+	trigger = {
+		constructing_cb_progress = 10
+		NOT = { involved_in_crisis = yes }
+		NOT = {	has_country_modifier = CB_gen_plus }
+		NOT = {	has_country_modifier = CB_gen_minus }
+
+		accepted_culture = ent_culture
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "Good morning, indeed"
+		add_country_modifier = {
+			name = CB_gen_minus
 			duration = 50
 		}
 	}
