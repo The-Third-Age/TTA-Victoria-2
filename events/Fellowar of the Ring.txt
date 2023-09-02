@@ -1648,6 +1648,14 @@ country_event = {
 			country_event = 50326
 		}
 
+		# Death to Nazguls
+		any_country = {
+			limit = {
+				government = nazgul_dictatorship
+			}
+			country_event = 50331
+		}
+
 		# Start of the Fourth Age
 		set_global_flag = fourth_age_flag
 		FOR = {
@@ -1793,6 +1801,74 @@ country_event = {
 				owner = { government = sauron_dictatorship }
 			}
 			owner = { government = goblin_tribe }
+		}
+		any_pop = {
+			militancy = 4
+			consciousness = 4
+		}
+	}
+}
+
+# The Ring is Destroyed - Nazguls 
+country_event = {
+	id = 50331
+	picture = ring_is_destroyed
+	title = "The One Ring is Destroyed"
+	desc = "EVTDESC50331"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Peace"
+		# Return cores to existing realms
+		any_country = {
+			limit = {
+				exists = yes
+				any_core = { owned_by = THIS }
+			}
+			country_event = 50328
+		}		
+		# Releases any vassal
+		any_country = {
+			limit = { vassal_of = THIS }
+			leave_alliance = THIS
+			country_event = 50329
+		}		
+		# Releases non-existing realms
+		any_country = {
+			limit = {
+				exists = no
+				any_core = { owned_by = THIS }
+			}
+			country_event = 50327
+		}
+		# Orckish realms: Dol Guldur, Weathertop(?)
+		random_owned = {
+			limit = {
+				owner = {
+					accepted_culture = orc_culture
+				}
+			}
+			owner = {
+				government = goblin_tribe
+			}
+		}
+		# Mannish Nazgul realms: Angmar
+		random_owned = {
+			limit = {
+				owner = {
+					accepted_culture = men_culture
+				}
+			}
+			owner = {
+				government = man_tribe
+			}
+		}
+		prestige = -25
+		nationalvalue = generic_leader
+		any_pop = {
+			militancy = 4
+			consciousness = 4
 		}
 	}
 }
