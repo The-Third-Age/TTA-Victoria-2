@@ -1,3 +1,6 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
 # War of the Ring Events: {
 # 50200 - 50399 }
 
@@ -628,7 +631,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_global_flag = railroading_disabled
-				any_core = { owner = { tag = FROM } }
+				have_core_in = FROM
 			}
 		}
 	}

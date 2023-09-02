@@ -20,7 +20,25 @@ nationalist_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
-
+		democracy = democracy
+		hobbit_realm = hobbit_realm
+		northmen_democracy = northmen_democracy
+		monarchy = monarchy
+		principality = principality
+		lord_monarchy = lord_monarchy
+		stewardship = stewardship
+		fiefdom = fiefdom
+		galadhrim_monarchy = galadhrim_monarchy
+		dark_realm = dark_realm
+		sauron_dictatorship = sauron_dictatorship
+		sauron_puppet = sauron_puppet
+		nazgul_dictatorship = nazgul_dictatorship
+		istari_kingdom = istari_kingdom
+		goblin_tribe = goblin_tribe
+		man_tribe = man_tribe
+		northmen_tribe = northmen_tribe
+		cosmetic_1_govt = cosmetic_1_govt
+		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
 	
@@ -177,6 +195,8 @@ nationalist_rebels = {
 	}
 	demands_enforced_effect = {
 		release_vassal = REB
+		# IDK why this is here. Tis from vanilla
+		# Audax Validator "." Ignore_1007
 		modify_relation = {
 			tag = REB
 			relation = -150
@@ -194,7 +214,25 @@ patriot_rebels = {
 
     # <this is the governement in the country> = <this is what the rebels want>
 	government = {
-
+		democracy = democracy
+		hobbit_realm = hobbit_realm
+		northmen_democracy = northmen_democracy
+		monarchy = monarchy
+		principality = principality
+		lord_monarchy = lord_monarchy
+		stewardship = stewardship
+		fiefdom = fiefdom
+		galadhrim_monarchy = galadhrim_monarchy
+		dark_realm = dark_realm
+		sauron_dictatorship = sauron_dictatorship
+		sauron_puppet = sauron_puppet
+		nazgul_dictatorship = nazgul_dictatorship
+		istari_kingdom = istari_kingdom
+		goblin_tribe = goblin_tribe
+		man_tribe = man_tribe
+		northmen_tribe = northmen_tribe
+		cosmetic_1_govt = cosmetic_1_govt
+		cosmetic_2_govt = cosmetic_2_govt
 	}
 
 
@@ -269,11 +307,17 @@ patriot_rebels = {
             factor = 0
             NOT = {
                 AND = {
-                    country = { any_neighbor_country = { have_core_in = THIS } }
+					country = { 
+						any_neighbor_country = { 
+							# Audax Validator "." Ignore_1007
+							have_core_in = THIS
+						}
+					}
                     location = {
                         any_core = {
 							OR = {
 								is_primary_culture = THIS
+								# Audax Validator "." Ignore_1007
 								is_accepted_culture = THIS
 							}
                             exists = yes
@@ -284,11 +328,17 @@ patriot_rebels = {
         }
         modifier = {
             factor = 1.3
-            country = { any_neighbor_country = { have_core_in = THIS } }
+            country = { 
+				any_neighbor_country = { 
+					# Audax Validator "." Ignore_1007
+					have_core_in = THIS
+				}
+			}
             location = {
                 any_core = {
 					OR = {
 						is_primary_culture = THIS
+						# Audax Validator "." Ignore_1007
 						is_accepted_culture = THIS
 					}
                     exists = yes
@@ -389,7 +439,25 @@ slave_revolt = {
 
     # <this is the government in the country> = <this is what the rebels want>
     government = {
-
+		democracy = democracy
+		hobbit_realm = hobbit_realm
+		northmen_democracy = northmen_democracy
+		monarchy = monarchy
+		principality = principality
+		lord_monarchy = lord_monarchy
+		stewardship = stewardship
+		fiefdom = fiefdom
+		galadhrim_monarchy = galadhrim_monarchy
+		dark_realm = dark_realm
+		sauron_dictatorship = sauron_dictatorship
+		sauron_puppet = sauron_puppet
+		nazgul_dictatorship = nazgul_dictatorship
+		istari_kingdom = istari_kingdom
+		goblin_tribe = goblin_tribe
+		man_tribe = man_tribe
+		northmen_tribe = northmen_tribe
+		cosmetic_1_govt = cosmetic_1_govt
+		cosmetic_2_govt = cosmetic_2_govt
     }
 
     defection = none                    # Will defect to the "best" alternative.
@@ -530,7 +598,25 @@ democratic_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
-
+		democracy = democracy
+		hobbit_realm = hobbit_realm
+		northmen_democracy = northmen_democracy
+		monarchy = democracy
+		principality = democracy
+		lord_monarchy = democracy
+		stewardship = democracy
+		fiefdom = democracy
+		galadhrim_monarchy = democracy
+		dark_realm = democracy
+		sauron_dictatorship = democracy
+		sauron_puppet = democracy
+		nazgul_dictatorship = democracy
+		istari_kingdom = democracy
+		goblin_tribe = democracy
+		man_tribe = democracy
+		northmen_tribe = democracy
+		cosmetic_1_govt = democracy
+		cosmetic_2_govt = democracy
 	}
 	
 	
@@ -680,6 +766,25 @@ fundamentalist_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
+		democracy = monarchy
+		hobbit_realm = hobbit_realm
+		northmen_democracy = northmen_democracy
+		monarchy = monarchy
+		principality = principality
+		lord_monarchy = lord_monarchy
+		stewardship = stewardship
+		fiefdom = fiefdom
+		galadhrim_monarchy = galadhrim_monarchy
+		dark_realm = dark_realm
+		sauron_dictatorship = sauron_dictatorship
+		sauron_puppet = sauron_puppet
+		nazgul_dictatorship = nazgul_dictatorship
+		istari_kingdom = istari_kingdom
+		goblin_tribe = goblin_tribe
+		man_tribe = man_tribe
+		northmen_tribe = northmen_tribe
+		cosmetic_1_govt = cosmetic_1_govt
+		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
 	ideology = fundamentalist
@@ -760,10 +865,6 @@ fundamentalist_rebels = {
 				pop_majority_ideology = low_nobility
 			}
 		}
-		modifier = {
-			factor = 0.25
-			NOT = { revanchism = 0.25 }
-		}
 	}
  
  	#This is checked for EACH province in the Area of Operations
@@ -827,6 +928,25 @@ noble_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
+		democracy = monarchy
+		hobbit_realm = hobbit_realm
+		northmen_democracy = northmen_democracy
+		monarchy = monarchy
+		principality = principality
+		lord_monarchy = lord_monarchy
+		stewardship = stewardship
+		fiefdom = fiefdom
+		galadhrim_monarchy = galadhrim_monarchy
+		dark_realm = dark_realm
+		sauron_dictatorship = sauron_dictatorship
+		sauron_puppet = sauron_puppet
+		nazgul_dictatorship = nazgul_dictatorship
+		istari_kingdom = istari_kingdom
+		goblin_tribe = goblin_tribe
+		man_tribe = man_tribe
+		northmen_tribe = northmen_tribe
+		cosmetic_1_govt = cosmetic_1_govt
+		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
 	defection = none                    # Will defect to the "best" alternative.
@@ -1003,6 +1123,25 @@ serf_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
+		democracy = democracy
+		hobbit_realm = hobbit_realm
+		northmen_democracy = northmen_democracy
+		monarchy = monarchy
+		principality = principality
+		lord_monarchy = lord_monarchy
+		stewardship = stewardship
+		fiefdom = fiefdom
+		galadhrim_monarchy = galadhrim_monarchy
+		dark_realm = dark_realm
+		sauron_dictatorship = sauron_dictatorship
+		sauron_puppet = sauron_puppet
+		nazgul_dictatorship = nazgul_dictatorship
+		istari_kingdom = istari_kingdom
+		goblin_tribe = goblin_tribe
+		man_tribe = man_tribe
+		northmen_tribe = northmen_tribe
+		cosmetic_1_govt = cosmetic_1_govt
+		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
 	defection = none                    # Will defect to the "best" alternative.
@@ -1138,6 +1277,25 @@ good_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
+		democracy = democracy
+		hobbit_realm = hobbit_realm
+		northmen_democracy = northmen_democracy
+		monarchy = monarchy
+		principality = principality
+		lord_monarchy = lord_monarchy
+		stewardship = stewardship
+		fiefdom = fiefdom
+		galadhrim_monarchy = galadhrim_monarchy
+		dark_realm = monarchy
+		sauron_dictatorship = monarchy
+		sauron_puppet = monarchy
+		nazgul_dictatorship = monarchy
+		istari_kingdom = istari_kingdom
+		goblin_tribe = goblin_tribe
+		man_tribe = man_tribe
+		northmen_tribe = northmen_tribe
+		cosmetic_1_govt = cosmetic_1_govt
+		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
 	defection = none                    # Will defect to the "best" alternative.
@@ -1311,6 +1469,25 @@ evil_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
+		democracy = dark_realm
+		hobbit_realm = dark_realm
+		northmen_democracy = dark_realm
+		monarchy = dark_realm
+		principality = dark_realm
+		lord_monarchy = dark_realm
+		stewardship = dark_realm
+		fiefdom = dark_realm
+		galadhrim_monarchy = dark_realm
+		dark_realm = dark_realm
+		sauron_dictatorship = sauron_dictatorship
+		sauron_puppet = sauron_puppet
+		nazgul_dictatorship = nazgul_dictatorship
+		istari_kingdom = istari_kingdom
+		goblin_tribe = dark_realm
+		man_tribe = dark_realm
+		northmen_tribe = dark_realm
+		cosmetic_1_govt = dark_realm
+		cosmetic_2_govt = dark_realm
 	}
 	
 	defection = none                    # Will defect to the "best" alternative.
@@ -1484,6 +1661,25 @@ neutral_rebels = {
 	
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
+		democracy = democracy
+		hobbit_realm = hobbit_realm
+		northmen_democracy = northmen_democracy
+		monarchy = monarchy
+		principality = principality
+		lord_monarchy = lord_monarchy
+		stewardship = stewardship
+		fiefdom = fiefdom
+		galadhrim_monarchy = galadhrim_monarchy
+		dark_realm = dark_realm
+		sauron_dictatorship = sauron_dictatorship
+		sauron_puppet = sauron_puppet
+		nazgul_dictatorship = nazgul_dictatorship
+		istari_kingdom = istari_kingdom
+		goblin_tribe = goblin_tribe
+		man_tribe = man_tribe
+		northmen_tribe = northmen_tribe
+		cosmetic_1_govt = cosmetic_1_govt
+		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
 	defection = none                    # Will defect to the "best" alternative.

@@ -1,3 +1,6 @@
+# Remove this line to have the claim get that interior arguments are correct
+# Audax Validator "!" Ignore_1009
+
 # World Bank Decisions: {
 #	Starting Decision (unseen) 
 #	Good/Evil Clean Up
@@ -10,6 +13,7 @@
 
 # Starting Decision
 political_decisions = {
+	# Audax Validator "." Ignore_1004
 	FOR_start_decision = {
 		potential = {
 			always = no
@@ -256,16 +260,6 @@ political_decisions = {
 						has_pop_culture = white_mountain_goblin
 					}
 					add_province_modifier = { name = wild_goblin_outpost duration = -1 }
-				}
-			}
-			
-			# Setting up Outlaw Holds
-			random_owned = {
-				any_neighbor_province = {
-					limit = {
-						is_core = OUT
-					}
-					add_province_modifier = { name = outlaw_hold duration = -1 }
 				}
 			}
 

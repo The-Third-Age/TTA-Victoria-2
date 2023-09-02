@@ -51,6 +51,7 @@ building_focus =
 production_focus = 
 {
 	artisan_prod_focus = {
+		# Audax Validator "!" Ignore_1007
 		local_artisan_output = 0.25
 		pop_militancy_modifier = 0.03
 		limit = { 
@@ -60,6 +61,7 @@ production_focus =
 	}
 	
 	artisan_prod_colony_focus = {
+		# Audax Validator "!" Ignore_1007
 		local_artisan_output = 0.5
 		pop_militancy_modifier = 0.05
 		limit = { 
@@ -128,7 +130,7 @@ diplomatic_focus =
 
 		limit = {
 			is_colonial = no
-			any_core = { NOT = { is_core = THIS } }
+			any_core = { NOT = { tag = THIS } }
 		}
 	}
 }

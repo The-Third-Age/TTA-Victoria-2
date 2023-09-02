@@ -1,3 +1,6 @@
+# Remove this line to have the claim get that interior arguments are correct
+# Audax Validator "!" Ignore_1009
+
 # Political Decisions: {
 # 	Political
 #	Government Reform }
@@ -191,14 +194,14 @@ political_decisions = {
 				limit = {
 					owner = { accepted_culture = neutral_culture }
 				}
-				remove_accepted_culture = neutral_culture
+				owner = { remove_accepted_culture = neutral_culture }
 			}
 			
 			random_owned = {
 				limit = {
 					owner = { accepted_culture = evil_culture }
 				}
-				remove_accepted_culture = evil_culture
+				owner = { remove_accepted_culture = evil_culture }
 			}
 			
 			clr_country_flag = attempting_to_good
@@ -238,14 +241,14 @@ political_decisions = {
 				limit = {
 					owner = { accepted_culture = good_culture }
 				}
-				remove_accepted_culture = good_culture
+				owner = { remove_accepted_culture = good_culture }
 			}
 			
 			random_owned = {
 				limit = {
 					owner = { accepted_culture = evil_culture }
 				}
-				remove_accepted_culture = evil_culture
+				owner = { remove_accepted_culture = evil_culture }
 			}
 			
 			clr_country_flag = attempting_to_good
@@ -285,14 +288,14 @@ political_decisions = {
 				limit = {
 					owner = { accepted_culture = good_culture }
 				}
-				remove_accepted_culture = good_culture
+				owner = { remove_accepted_culture = good_culture }
 			}
 			
 			random_owned = {
 				limit = {
 					owner = { accepted_culture = neutral_culture }
 				}
-				remove_accepted_culture = neutral_culture
+				owner = { remove_accepted_culture = neutral_culture }
 			}
 			
 			clr_country_flag = attempting_to_good

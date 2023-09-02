@@ -4,6 +4,51 @@
 MODIFIER_ADDED;$WHERE$ gets §Y$WHAT$§! until §Y$DATE$§!, giving the following effects:\n$EFFECT$\n\n;x
 TRIGMODLOST_HEADER;$MONARCHTITLE$ reports that;$;x
 TRIGMOD_HEADER;$MONARCHTITLE$ reports that;;x
+############################;x }
+##### STATIC MODIFIERS #####;x {
+############################;x
+very_easy_player;Very Easy Difficulty;x
+easy_player;Easy Difficulty;x
+hard_player;Hard Difficulty;x
+very_hard_player;Very Hard Difficulty;x
+very_easy_ai;Very Easy Difficulty;x
+easy_ai;Easy Difficulty;x
+hard_ai;Hard Difficulty;x
+very_hard_ai;Very Hard Difficulty;x
+overseas;No land connection to capital;x
+coastal;Coastal;x
+non_coastal;Non Coastal;x
+coastal_sea;Coastal Sea;x
+tropical;Tropical;x
+sea_zone;Sea Zone;x
+land_province;Land Province;x
+blockaded;Blockaded;x
+no_adjacent_controlled;x
+core;Core;x
+has_siege;Has Siege;x
+occupied;Occupied;x
+nationalism;x
+infrastructure;x
+base_values;Base Value;x
+war;War;x
+war_exhaustion;War Exhaustion;x
+peace;Peace;x
+disarming;Forced to Disarm;x
+badboy;Infamy;x
+debt_default_to;Debt Default To;x
+bad_debter;Bad debter;x
+bad_debter_desc;Due to your countries history of flaky economy banks will demand a higher interest on your loans;x
+great_power;Great Power;x
+second_power;Secondary Power;x
+civ_nation;Centralized Country;Nation civilisee;Zivilisierte Nation;;Nacion civilizada;;;;;;;;;x;
+unciv_nation;Uncentralized Country;Nation non civilisee;Unzivilisierte Nation;;Nacion sin civilizar;;;;;;;;;x;
+average_literacy;Literacy;x
+plurality;Plurality;x
+generalised_debt_default;Generalised Debt Default;x
+total_occupation;Occupied Home Provinces;x
+total_blockaded;Blockaded Home Ports;x
+in_bankrupcy;In bankruptcy;x
+in_bankrupcy_desc;We are bankrupt!;x
 ###############################;x }
 ##### TRIGGERED MODIFIERS #####;x {
 ###############################;x
@@ -64,6 +109,7 @@ dryzymalas_wagon;Dryzymala's Wagon;Le chariot de Drzyma?a;;x
 dryzymalas_wagon_desc;Old man Dryzymala avoids the building ban by living in a wagon;;x
 discriminatory_school_system;Discriminatory School System;;x
 discriminatory_school_system_desc;Our school system discriminates against citizens who are not of our national culture.;;x
+nationalist_agitation;Nationalist Agitation;x
 flying_university;Flying University;;x
 flying_university_desc;An underground organisation provides higher education in a minority language;;x
 patriot_uprising;Patriot Uprising;x
@@ -78,6 +124,8 @@ CB_gen_plus_desc;Justifying wars can be done faster;x
 bank_cheats;Bank Cheats;x
 no_points_for_you;No Points For You;x
 no_points_for_you_desc;The World Bank, tag FOR, needs to be at the bottom of the list in terms of points. Otherwise, everyone below them is absolutely screwed.;x
+good_evil_relations_cleanup_timer;Good-Evil Relations Cleanup Timer;x
+good_evil_relations_cleanup_timer_desc;Timer before the next event cycle gets fired;x
 ##############################;x }
 ##### OBSERVER MODIFIERS #####;x {
 ##############################;x
@@ -155,6 +203,8 @@ palantir_madness;Palantír Madness;x
 palantir_madness_desc;Who knows what our leader saw in the Palantír. All we know is that they are changed ever since the experience.;x
 pallando_influence;Pallando;x
 pallando_influence_desc;The Blue Wizard Pallando is at our court providing us with a myriad of benefits;x
+silmaril;Silmaril;x
+silmaril_desc;We have acquired one of the jewels that captured the light of the Two Trees of Valinor.;x
 anor_palantir;Anor Palantir;x
 anor_palantir_desc;One of the great Seeing Stones, the Anor Palantir is housed in Minas Anor, now called Minas Tirith.;x
 orthanc_palantir;Orthanc Palantir;
@@ -206,6 +256,7 @@ ithilien_rangers;Ithilien Rangers;x
 ithilien_rangers_desc;With the Orc raids occurring in Ithilien, many of the people have taken up arms. We have supplied them, turning them into a true fighting force.;x
 ithilien_rangers_province;Ithilien Rangers;x
 ithilien_rangers_enemy_province;Ithilien Rangers;x
+council_of_gondor;Council of Gondor;x
 crossroads_fallen_king;The Crossroads of the Fallen King;x
 flowers_expedition;Flowers Expedition from Minas Tirith;x
 resettle_ithilien;Resettle Ithilien;x

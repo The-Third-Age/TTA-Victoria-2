@@ -1,3 +1,6 @@
+# Remove this line to have the claim get that interior arguments are correct
+# Audax Validator "!" Ignore_1009
+
 # Isengard Decisions:
 #	Starting Decision (Unseen)
 #   Dunland Shenanigans
@@ -5,6 +8,7 @@
 
 # Starting Decision
 political_decisions = {
+	# Audax Validator "." Ignore_1004
 	isengard_start_decision = {
 		potential = {
 			tag = ISE
@@ -42,7 +46,6 @@ political_decisions = {
 				country_event = 50100
 			}
 			political_reform = neutral_alignment
-			any_pop = { dominant_issue = { value = good_alignment_fake factor = -0.4 } }
 			any_pop = { dominant_issue = { value = neutral_alignment_fake factor = 0.4 } }
 		}
 	}

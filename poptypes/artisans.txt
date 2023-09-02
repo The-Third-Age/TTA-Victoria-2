@@ -77,6 +77,7 @@ country_migration_target = {
 	}
 	modifier = {
 		factor = 2
+		# Audax Validator "." Ignore_NEXT
 		is_culture_group = THIS
 	}
 	modifier = {
@@ -215,10 +216,8 @@ migration_target = {
 	}
 	modifier = {
 		factor = 0
-		AND = {
-			state_scope = { has_factories = no }
-			can_build_factory = no
-		}
+		state_scope = { has_factories = no }
+		can_build_factory = no
 		unemployment_by_type = { type = labourers value = 0.1 }
 	}
 	modifier = {
@@ -274,7 +273,7 @@ promote_to = {
 			factor = -100 
 			NOT = { is_accepted_culture = yes }
 			NOT = { is_primary_culture = yes }
-		}	
+		}
 		group = {
 			modifier = {
 				factor =  0.25
@@ -564,21 +563,13 @@ promote_to = {
 		}
 		modifier = {
 			factor = -40
-			AND = {
-				state_scope = {
-					has_factories = no
-				}
-				can_build_factory = no
-			}
+			state_scope = { has_factories = no }
+			can_build_factory = no
 		}
 		modifier = {
 			factor = 10
-			AND = {
-				state_scope = {
-					has_factories = no
-				}
-				can_build_factory = yes
-			}
+			state_scope = { has_factories = no }
+			can_build_factory = yes
 		}
 		group = {
 			modifier = {
@@ -692,12 +683,8 @@ promote_to = {
 		}
 		modifier = {
 			factor = -40
-			AND = {
-				state_scope = {
-					has_factories = no
-				}
-				can_build_factory = no
-			}
+			state_scope = { has_factories = no }
+			can_build_factory = no
 		}
 		modifier = {
 			factor = -100

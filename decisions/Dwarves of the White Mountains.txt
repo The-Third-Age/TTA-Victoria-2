@@ -57,7 +57,7 @@ political_decisions = {
 					any_neighbor_province = {
 						limit = {
 							terrain = white_mountains # Don't like it, but using terrain to target is unavoidable without metaregions
-							NOT = { core = DWM }
+							NOT = { is_core = DWM }
 						}
 						add_core = DWM
 					}

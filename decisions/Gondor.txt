@@ -1,3 +1,6 @@
+# Remove this line to have the claim get that interior arguments are correct
+# Audax Validator "!" Ignore_1009
+
 # Gondor decisions: {
 #	Starting Decisions (Unseen)
 #	Substate Annexation
@@ -27,6 +30,7 @@
 
 # Starting Decisions
 political_decisions = {
+	# Audax Validator "." Ignore_1004
 	gondor_start_decision = {
 		potential = {
 			tag = GON
@@ -91,6 +95,7 @@ political_decisions = {
 		}
 	}
 	
+	# Audax Validator "." Ignore_1004
 	dol_amroth_start_decision = {
 		potential = {
 			tag = AMR
@@ -161,6 +166,7 @@ political_decisions = {
 				limit = {
 					owner = { NOT = { has_global_flag = forlong_lord_of_lossarnach } }
 				}
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LFarlong, §MLord of Lossarnach§!"
 					background = lord_of_lossarnach
@@ -172,6 +178,7 @@ political_decisions = {
 				limit = {
 					owner = { has_global_flag = forlong_lord_of_lossarnach }
 				}
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LForlong, §MLord of Lossarnach§!"
 					background = lord_of_lossarnach
@@ -233,6 +240,7 @@ political_decisions = {
 				random_owned = {
 					limit = { owner = { NOT = { has_global_flag = duinhir_lord_of_the_blackroot_vale } } }
 					
+					# Audax Validator "." Ignore_1007
 					define_general = {
 						name = "§LBorhador, §MLord of Ringló Vale§!"
 						background = lord_of_ringlo_vale
@@ -243,6 +251,7 @@ political_decisions = {
 				random_owned = {
 					limit = { has_global_flag = duinhir_lord_of_the_blackroot_vale }
 			
+					# Audax Validator "." Ignore_1007
 					define_general = {
 						name = "§LDuinhir, §MLord of the Ringló Vale§!"
 						background = lord_of_ringlo_vale
@@ -257,6 +266,8 @@ political_decisions = {
 				aristocrats = { militancy = 2 }
 			}
 			prestige = 7
+			
+			# Audax Validator "." Ignore_1007
 			define_admiral = {
 				name = "§LOrodreth, §MLord of Lebennin§!"
 				background = lord_of_lebennin
@@ -386,6 +397,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { NOT = { has_global_flag = angbor_lord_of_lamedon } } }
 			
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LAsgon, §MLord of Lamedon§!"
 					background = lord_of_lamedon
@@ -396,6 +408,7 @@ political_decisions = {
 			random_owned = {
 				limit = {  has_global_flag = angbor_lord_of_lamedon }
 		
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LAngbor, §MLord of Lamedon§!"
 					background = lord_of_lamedon
@@ -406,6 +419,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { NOT = { has_global_flag = dervorin_lord_of_the_ringlo_vale } } }
 		
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LDervorin, §MLord of the Blackroot Vale§!"
 					background = lord_of_ringlo_vale
@@ -416,6 +430,7 @@ political_decisions = {
 			random_owned = {
 				limit = { has_global_flag = dervorin_lord_of_the_ringlo_vale }
 				
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LDuinmir, §MLord of Blackroot Vale§!"
 					background = lord_of_blackroot_vale
@@ -426,6 +441,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { NOT = { has_global_flag = duinhir_lord_of_the_blackroot_vale } } }
 				
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LBorhador, §MLord of Ringló Vale§!"
 					background = lord_of_ringlo_vale
@@ -436,6 +452,7 @@ political_decisions = {
 			random_owned = {
 				limit = { has_global_flag = duinhir_lord_of_the_blackroot_vale }
 		
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LDuinhir, §MLord of the Ringló Vale§!"
 					background = lord_of_ringlo_vale
@@ -490,6 +507,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { NOT = { has_global_flag = hirluin_lord_of_pinnath_gelin } } }
 			
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LHirgon, §MLord of Pinnath Gelin§!"
 					background = lord_of_pinnath_gelin
@@ -500,6 +518,7 @@ political_decisions = {
 			random_owned = {
 				limit = { has_global_flag = hirluin_lord_of_pinnath_gelin }
 			
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LHirluin, §MLord of Pinnath Gelin§!"
 					background = lord_of_pinnath_gelin
@@ -510,6 +529,7 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { NOT = { has_global_flag = golasgil_lord_of_anfalas } } }
 			
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LGundor, §MLord of Anfalas§!"
 					background = lord_of_anfalas
@@ -520,6 +540,7 @@ political_decisions = {
 			random_owned = {
 				limit = { has_global_flag = golasgil_lord_of_anfalas }
 			
+				# Audax Validator "." Ignore_1007
 				define_general = {
 					name = "§LGolasgil, §MLord of Anfalas§!"
 					background = lord_of_anfalas
@@ -652,9 +673,10 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			badboy = 2
-			204 = { owner = { prestige = -5 } }
-			
-			remove_province_modifier = crossroads_fallen_king
+			204 = {
+				owner = { prestige = -5 }
+				remove_province_modifier = crossroads_fallen_king
+			}
 		}
 		
 		ai_will_do = {
@@ -864,11 +886,13 @@ political_decisions = {
 		}
 		
 		effect = {
-			any_owned_province = {
+			any_owned = {
 				limit = {
-					region = GON_198
-					region = GON_205
-                    region = GON_212
+					OR = {
+						region = GON_198
+						region = GON_205
+						region = GON_212
+					}
 				}
 				add_province_modifier = { name = resettle_ithilien duration = -1 }
 			}
@@ -980,7 +1004,7 @@ political_decisions = {
 			
 			any_country = {
 				limit = {
-					is_vassal = GON
+					vassal_of = GON
 				}
 				remove_country_modifier = low_military_recruitment
 				clr_country_flag = low_military_recruitment
@@ -1048,9 +1072,9 @@ political_decisions = {
 				}
 				country_event = 150000
 			}
+			
+			set_global_flag = GON_andrast_war
 		}
-		
-		set_global_flag = GON_andrast_war
 	}
 	
 	annex_andrast = {
@@ -1133,7 +1157,7 @@ political_decisions = {
 					casus_belli = {
 						target = PUK
 						type = make_puppet
-						duration = 12
+						months = 12
 					}
 					war = {
 						target = PUK
@@ -1159,7 +1183,7 @@ political_decisions = {
 				add_casus_belli = {
 					target = GON
 					type = druwaith_iaur_war_cb
-					duration = 12
+					months = 12
 				}
 				
 				country_event = 150009
@@ -1403,7 +1427,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			any_owned_province = {
+			any_owned = {
 				limit = {
 					has_province_modifier = gondorification
 					is_core = PUK
@@ -1576,6 +1600,7 @@ political_decisions = {
 				limit = {
 					owner = { is_greater_power = yes }
 				}
+				# Audax Validator "." Ignore_1007
 				diplomatic_influence = {
 					who = HRD
 					value = 400
@@ -1776,7 +1801,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			farming_3 = 1
+			farming_tech_3 = 1
 			owns = 44
 		}
 		
@@ -1869,7 +1894,9 @@ political_decisions = {
 		}
 		
 		effect = {
-			militancy = -1
+			any_pop = {
+				militancy = -1
+			}
 			add_country_modifier = { name = council_of_gondor duration = -1 }
 		}
 	}
@@ -1886,7 +1913,9 @@ political_decisions = {
 		}
 		
 		effect = {
-			militancy = 5
+			any_pop = {
+				militancy = 5
+			}
 			prestige = 10
 			government = monarchy
 			set_country_flag = kin_strife_is_coming
@@ -2249,7 +2278,8 @@ political_decisions = {
 			NOT = { has_global_flag = bar_iaur_dinen_restored }
 			OR = {
 				nationalvalue = aragorn_elessar
-				nationalvalue = imrahil_1
+				# # Audax Validator "." Ignore_NEXT
+				nationalvalue = imrahil_1 # Has not yet been created
 			}
 			OR = {
 				owns = 54
@@ -2332,11 +2362,13 @@ political_decisions = {
 			}
 			
 			FOR = {
-				any_neighbor_province = {
-					limit = {
-						has_province_modifier = colonization_target
+				random_owned = {
+					any_neighbor_province = {
+						limit = {
+							has_province_modifier = colonization_target
+						}
+						add_core = THIS
 					}
-					add_core = THIS
 				}
 			}
 			

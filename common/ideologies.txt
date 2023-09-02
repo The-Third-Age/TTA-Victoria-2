@@ -1,3 +1,6 @@
+# Audax Validator "!" Ignore_1007
+# Audax Validator "!" Ignore_1009
+
 # If you add types, and use those tags, do not change them without changing everywhere they are used.	
 
 # cosmetic. Does nothing in game except define slaves for pop_types
@@ -18,6 +21,14 @@ slave_group = {
 		}
 		
 		remove_social_reform = {
+			base = 1
+		}
+		
+		add_military_reform = {
+			base = 1
+		}
+		
+		add_economic_reform = {
 			base = 1
 		}
 	}
@@ -46,6 +57,14 @@ prosauron_group = {
 		remove_social_reform = {
 			base = 1
 		}
+		
+		add_military_reform = {
+			base = 1
+		}
+		
+		add_economic_reform = {
+			base = 1
+		}
 	}
 }
 		
@@ -68,14 +87,16 @@ nobility_group = {
 		}
 		add_social_reform = {
 			base = 0
-			modifier = {
-					factor = 0.2
-					OR = { 
-						militancy = 1
-						political_movement_strength = 0.1
-						ai = yes
+			
+			group = {
+				modifier = {
+						factor = 0.2
+						OR = { 
+							militancy = 1
+							political_movement_strength = 0.1
+							ai = yes
+						}
 					}
-				}
 				modifier = {
 					factor = 0.2
 					OR = { 
@@ -117,6 +138,7 @@ nobility_group = {
 						}
 					}
 				}
+			}
 		}
 		remove_social_reform = {
 			base = 1
@@ -138,7 +160,8 @@ nobility_group = {
 		
 		add_political_reform = {
 			base = 0
-			modifier = {
+			group = {
+				modifier = {
 					factor = 0.2
 					OR = { 
 						militancy = 1
@@ -187,6 +210,7 @@ nobility_group = {
 						}
 					}
 				}
+			}
 		}
 		remove_political_reform = {
 			base = 0
@@ -194,7 +218,8 @@ nobility_group = {
 		add_social_reform = {
 			base = 0
 			
-			modifier = {
+			group = {
+				modifier = {
 					factor = 0.2
 					OR = { 
 						militancy = 1
@@ -243,7 +268,7 @@ nobility_group = {
 						}
 					}
 				}
-			
+			}
 		}
 		remove_social_reform = {
 			base = 0
@@ -268,52 +293,54 @@ burgher_group = {
 		add_political_reform = {
 			base = 0
 			
-			modifier = {
-				factor = 0.2
-				OR = { 
-					militancy = 1
-					political_movement_strength = 0.1
-					ai = yes
-				}
-			}
-			modifier = {
-				factor = 0.2
-				OR = { 
-					militancy = 2
-					political_movement_strength = 0.2
-					ai = yes
-				}
-			}
-			modifier = {
-				factor = 0.2
-				OR = { 
-					militancy = 3
-					political_movement_strength = 0.3
-					AND = {
+			group = {
+				modifier = {
+					factor = 0.2
+					OR = { 
 						militancy = 1
+						political_movement_strength = 0.1
 						ai = yes
 					}
 				}
-			}
-			modifier = {
-				factor = 0.2
-				OR = { 
-					militancy = 4
-					political_movement_strength = 0.4
-					AND = {
+				modifier = {
+					factor = 0.2
+					OR = { 
 						militancy = 2
+						political_movement_strength = 0.2
 						ai = yes
 					}
 				}
-			}
-			modifier = {
-				factor = 0.2
-				OR = { 
-					militancy = 5
-					political_movement_strength = 0.5
-					AND = {
+				modifier = {
+					factor = 0.2
+					OR = { 
 						militancy = 3
-						ai = yes
+						political_movement_strength = 0.3
+						AND = {
+							militancy = 1
+							ai = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.2
+					OR = { 
+						militancy = 4
+						political_movement_strength = 0.4
+						AND = {
+							militancy = 2
+							ai = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.2
+					OR = { 
+						militancy = 5
+						political_movement_strength = 0.5
+						AND = {
+							militancy = 3
+							ai = yes
+						}
 					}
 				}
 			}
