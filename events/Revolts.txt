@@ -157,11 +157,11 @@ country_event = {
 			}
 			owner = { political_reform = no_slavery clr_country_flag = has_all_slavery }
 		}
-		political_reform = granted_exclusive_tr
-		political_reform = privileged_state_supplies
-		political_reform = independent_cities
-		political_reform = no_pensions
-		political_reform = hereditary
+		social_reform = granted_exclusive_tr
+		social_reform = privileged_state_supplies
+		social_reform = independent_cities
+		social_reform = no_pensions
+		social_reform = hereditary
 		random_owned = {
 			limit = {
 				owner = {
@@ -240,9 +240,11 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					government = dark_realm
-					government = sauron_dictatorship
-					government = nazgul_dictatorship
+					OR = {
+						government = dark_realm
+						government = sauron_dictatorship
+						government = nazgul_dictatorship
+					}
 				}
 			}
 			owner = { government = monarchy }
@@ -295,9 +297,11 @@ country_event = {
 			limit = {
 				NOT = {
 					owner = {
-						government = dark_realm
-						government = sauron_dictatorship
-						government = nazgul_dictatorship
+						OR = {
+							government = dark_realm
+							government = sauron_dictatorship
+							government = nazgul_dictatorship
+						}
 					}
 				}
 			}
@@ -346,9 +350,11 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					government = dark_realm
-					government = sauron_dictatorship
-					government = nazgul_dictatorship
+					OR = {
+						government = dark_realm
+						government = sauron_dictatorship
+						government = nazgul_dictatorship
+					}
 				}
 			}
 			owner = { government = monarchy }
@@ -388,7 +394,7 @@ country_event = {
             }
             casus_belli = {
                 target = THIS
-                type = acquire_any_state
+                type = acquire_state
                 months = 36
             }
             any_state = {

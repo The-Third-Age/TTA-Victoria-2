@@ -15,7 +15,7 @@ province_event = {
 			trade_goods = coal
 			trade_goods = iron
 			trade_goods = rock
-			trade_goods = precious_metals
+			trade_goods = precious_metal
 		}
 		NOT = { has_province_modifier = repairing_mine }
 	}
@@ -2667,7 +2667,7 @@ province_event = {
 
 # High Quality Goods (Horses)
 province_event = {
-	id = 12049
+	id = 12050
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
 		
@@ -2736,7 +2736,7 @@ province_event = {
 			trade_goods = coal
 			trade_goods = iron
 			trade_goods = rock
-			trade_goods = precious_metals
+			trade_goods = precious_metal
 		}
 		NOT = { has_province_modifier = new_vein }
 	}
@@ -2764,9 +2764,6 @@ province_event = {
 		NOT = { has_province_modifier = high_production }
 		NOT = { has_province_modifier = repairing_mine }
 		NOT = { has_province_modifier = local_economic_downturn }
-		NOT = { has_province_modifier = looted_light }
-		NOT = { has_province_modifier = looted_medium }
-		NOT = { has_province_modifier = looted_heavy }
 		NOT = {
 			unemployment_by_type = {
 				type = labourers

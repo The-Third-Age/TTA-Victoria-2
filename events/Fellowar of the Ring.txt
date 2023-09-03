@@ -304,6 +304,7 @@ country_event = {
 		
 		any_pop = {
 			limit = {
+				# Audax Validator "." Ignore_1007
 				pop_majority_issue = good_alignment_fake
 			}
 			dominant_issue = {
@@ -314,6 +315,7 @@ country_event = {
 		
 		any_pop = {
 			limit = {
+				# Audax Validator "." Ignore_1007
 				pop_majority_issue = neutral_alignment_fake
 			}
 			dominant_issue = {
@@ -631,7 +633,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_global_flag = railroading_disabled
-				have_core_in = FROM
+				any_core = { owner = { tag = FROM } }
 			}
 		}
 	}

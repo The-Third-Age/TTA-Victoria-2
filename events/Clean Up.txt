@@ -1,6 +1,9 @@
 # Remove this line to have the validator check for strings in localisation
 # Audax Validator "!" Ignore_1004
 
+# Remove this line to have the validator check this file
+# Audax Validator "!" Ignore_NEXT
+
 # Clean Up Events: {
 # 100000 - 149999 }
 
@@ -268,7 +271,7 @@ country_event = {
 		name = "Never!"
 		
 		add_casus_belli = {
-			tag = FROM
+			target = FROM
 			type = make_puppet
 			months = 24
 		}
@@ -325,8 +328,8 @@ country_event = {
 	trigger = {
 		government = fiefdom
 		NOT = {
-			OR = { vassal_of = GON }
-			OR = { vassal_of = RUN }
+			vassal_of = GON
+			vassal_of = RUN
 		}
 	}
 	
@@ -748,7 +751,7 @@ country_event = {
 						}
 						OR = {
 							government = man_tribe
-							government = nothmen_tribe
+							government = northmen_tribe
 						}
 					}
 					AND = {
@@ -1051,11 +1054,11 @@ country_event = {
 					}
 					OR = {
 						government = man_tribe
-						government = nothmen_tribe
+						government = northmen_tribe
 					}
 				}
 			}
-			government = goblin_tribe
+			owner = { government = goblin_tribe }
 		}
 		
 		# Northmen Tribes
@@ -1069,7 +1072,7 @@ country_event = {
 					}
 				}
 			}
-			government = northmen_tribe
+			owner = { government = northmen_tribe }
 		}
 		
 		# Everyone else
@@ -1085,7 +1088,7 @@ country_event = {
 					}
 				}
 			}
-			government = man_tribe
+			owner = { government = man_tribe }
 		}
 	}
 }

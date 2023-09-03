@@ -127,7 +127,18 @@ province_event = {
 	title = "Abandoned Settlement Found"
 	desc = "EVTDESC5002"
 	
-	is_triggered_only = yes
+	trigger = {
+		has_province_modifier = military_hunting_wild_goblins
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+	}
 	
 	option = {
 		name = "How are they one step ahead of us?"
@@ -140,6 +151,8 @@ province_event = {
 				1 = { years_of_research = 0.05 }
 			}
 		}
+		
+		remove_province_modifier = military_hunting_wild_goblins
 	}
 }
 
@@ -352,7 +365,7 @@ country_event = {
 					THIS = { good_evil_alignment = neutral_alignment }
 				}
 			}
-			alliance_with = THIS
+			create_alliance = THIS
 		}
 		
 		treasury = -10000
@@ -396,7 +409,7 @@ country_event = {
 			}
 			leave_alliance = THIS
 			THIS = { badboy = 1 }
-			add_casus_belli = { type = humiliate months = 24 }
+			add_casus_belli = { type = humiliate months = 24 target = THIS }
 		}
 	}
 	
@@ -534,7 +547,7 @@ country_event = {
 		name = "Sauron is our friend"
 		
 		relation = {
-			WHO = MOR
+			who = MOR
 			value = 50
 		}
 		
@@ -585,11 +598,11 @@ country_event = {
 	
 	trigger = {
 		has_country_modifier = palantir_madness
+		FOR = { any_neighbor_country = { alliance_with = THIS } }
 	}
 	
 	mean_time_to_happen = {
 		months = 12
-		FOR = { any_neighbor_country = { alliance_with = THIS } }
 	}
 	
 	option = {

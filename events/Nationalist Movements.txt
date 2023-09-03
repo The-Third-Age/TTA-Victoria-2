@@ -1241,8 +1241,8 @@ province_event = {
 	option = {
 		name = "Arrrgh!"
 		owner = {
-			ammunition = -10
-			small_arms = -15
+			ranged_gear = -10
+			melee_gear = -15
 			artillery = -1
 		}
 		state_scope = {
@@ -1860,7 +1860,6 @@ province_event = {
 		}
 		any_greater_power = {
 			NOT = { tag = THIS }
-			press_rights = free_press
 			public_meetings = yes_meeting
 		}
 		controlled_by = owner
@@ -1928,7 +1927,6 @@ province_event = {
 			limit = {
 				is_greater_power = yes
 				civilized = yes
-				press_rights = free_press
 				public_meetings = yes_meeting
 				NOT = {
 					tag = THIS
@@ -2174,7 +2172,6 @@ province_event = {
 		is_colonial = no
 		owner = {
 			civilized = yes
-			nationalvalue = nv_order
 			NOT = {
 				has_country_modifier = minority_building_restrictions
 				racial_policy = all_peoples

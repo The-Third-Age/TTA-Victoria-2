@@ -41,7 +41,6 @@ country_event = {
 	id = 70001
 	title = "$STATE$ Granted Statehood!"
 	desc = "EVTDESC70001"
-	picture = "Western"
 	trigger = {
 		OR = {
 			country = { 
@@ -208,27 +207,6 @@ country_event = {
 	}
 }
 
-
-# Nation that owns your debt goes bankrupt, but the amount is small
-country_event = {
-	id = 70004
-	title = "$FROMCOUNTRY$ goes bankrupt!"
-	desc = "EVTDESC70002"
-	picture = "Bankruptcy"
-	trigger = {
-
-	}
-
-	is_triggered_only = yes
-	option = {
-		name = "ok"
-		casus_belli = {
-			type = gunboat
-			target = FROM
-		}
-	}
-}
-
 country_event = {
 	title = "Embrace Advancement"
 	desc = "EVTDESC70005"
@@ -243,8 +221,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		ai = no
-		ai = yes
+		always = no
 	}
 
 	option = {				

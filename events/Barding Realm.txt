@@ -1,6 +1,9 @@
 # Remove this line to have the validator check for strings in localisation
 # Audax Validator "!" Ignore_1004
 
+# Remove this line to have the validator check this file
+# Audax Validator "!" Ignore_NEXT
+
 # Barding Realm Events
 # 50900 - 50999
 
@@ -310,7 +313,7 @@ province_event = {
 		modifier = {
 			factor = 2
 			
-			war = yes
+			owner = { war = yes }
 		}
 	}
 	
@@ -360,19 +363,19 @@ province_event = {
 	desc = "EVTDESC50910"
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 180
 		
 		modifier = {
 			factor = 0.5
-			owns = 649
+			owner = { owns = 649 }
 		}
 		modifier = {
 			factor = 0.5
-			owns = 653
+			owner = { owns = 653 }
 		}
 		modifier = {
 			factor = 0.5
-			owns = 654
+			owner = { owns = 654 }
 		}
 		modifier = {
 			factor = 2

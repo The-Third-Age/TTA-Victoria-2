@@ -201,6 +201,7 @@ country_event = {
 				strata = poor
 				NOT = { type = slaves }
 			}
+			# Audax Validator "." Ignore_1007
 			is_slave = yes
 		}
 		NOT = { slavery = no_slavery }
@@ -215,7 +216,10 @@ country_event = {
 				is_accepted_culture = no
 				is_primary_culture = no
 				strata = poor
-				location = { is_slave = yes }
+				location = {
+					# Audax Validator "." Ignore_1007
+					is_slave = yes
+				}
 			}
 			pop_type = slaves
 		}
@@ -226,7 +230,7 @@ country_event = {
 			}
 			ideology = {
 				value = slave_ideology
-				factor = 10
+				factor = 0.1
 			}
 		}
 	}
@@ -246,6 +250,7 @@ country_event = {
 				is_primary_culture = no
 				NOT = { type = slaves }
 			}
+			# Audax Validator "." Ignore_1007
 			is_slave = yes
 		}
 		NOT = { slavery = no_slavery }
@@ -259,7 +264,10 @@ country_event = {
 			limit = {
 				is_accepted_culture = no
 				is_primary_culture = no
-				location = { is_slave = yes }
+				location = {
+					# Audax Validator "." Ignore_1007
+					is_slave = yes
+				}
 			}
 			pop_type = slaves
 		}
@@ -270,7 +278,7 @@ country_event = {
 			}
 			ideology = {
 				value = slave_ideology
-				factor = 10
+				factor = 0.1
 			}
 		}
 	}
