@@ -87,6 +87,7 @@ political_decisions = {
 	}
 	
 	release_the_nine = {
+		picture = "release_the_nine"
 		potential = {
 			tag = MOR
 			NOT = { has_country_modifier = ring_hunters }
@@ -335,6 +336,7 @@ political_decisions = {
 	}
 	
 	the_test = {
+		picture = "the_test"
 		potential = {
 			tag = LOR
 			has_global_flag = fellowship_passed_through_lothlorien
@@ -360,6 +362,7 @@ political_decisions = {
 	}
 	
 	galadriels_fellowship_gifts = {
+		picture = "galadriels_fellowship_gifts"
 		potential = {
 			tag = LOR
 			has_global_flag = fellowship_passed_through_lothlorien
@@ -387,6 +390,7 @@ political_decisions = {
 	}
 	
 	unleash_uruk_hai_raiders = {
+		picture = "unleash_uruk_hai_raiders"
 		potential = {
 			tag = ISE
 			has_global_flag = fellowship_passed_through_lothlorien
@@ -416,6 +420,7 @@ political_decisions = {
 	}
 	
 	supply_the_fellowship = {
+		picture = "supply_the_fellowship"
 		potential = {
 			has_country_flag = fellowship_in_our_lands
 			OR = {
@@ -438,6 +443,7 @@ political_decisions = {
 	}
 	
 	order_member_to_steal_the_ring = {
+		picture = "order_member_to_steal_the_ring"
 		potential = {
 			has_country_flag = fellowship_in_our_lands
 			has_country_modifier = fellowship_member
@@ -494,6 +500,7 @@ political_decisions = {
 	}
 	
 	hunt_for_gollum = {
+		picture = "hunt_for_gollum"
 		potential = {
 			FOR = { check_variable = { which = ring_controller value = 3.9 } } # Gollum
 			FOR = { NOT = { check_variable = { which = ring_controller value = 4.1 } } } # Gollum
