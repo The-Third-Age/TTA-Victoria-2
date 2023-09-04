@@ -417,20 +417,23 @@ political_reforms = {
 		administrative = yes
 		
 		five_land_ownership = {
-			rgo_output = -0.15
-			factory_throughput = 0.15
-			tax_efficiency = -0.03
+			rich_income_modifier = 0.05
+			middle_income_modifier = 0.01
+			poor_income_modifier = 0.05
+			tax_efficiency = -0.05
 			administrative_efficiency_modifier = -0.06
 		}
 		ten_land_ownership = {
-			rgo_output = -0.10
-			factory_throughput = 0.10
-			tax_efficiency = -0.02
+			rich_income_modifier = 0.03
+			middle_income_modifier = 0.03
+			poor_income_modifier = 0.03
+			tax_efficiency = -0.03
 			administrative_efficiency_modifier = -0.04
 		}
 		thirty_land_ownership = {
-			rgo_output = -0.05
-			factory_throughput = 0.05
+			rich_income_modifier = 0.01
+			middle_income_modifier = 0.01
+			poor_income_modifier = 0.01
 			tax_efficiency = -0.01
 			administrative_efficiency_modifier = -0.02
 		}
@@ -438,16 +441,16 @@ political_reforms = {
 			prestige = 0.01
 		}
 		seventy_land_ownership = {
-			prestige = 0.03
-			rgo_output = 0.05
-			factory_throughput = -0.05
+			rich_income_modifier = -0.01
+			middle_income_modifier = -0.01
+			poor_income_modifier = -0.01
 			tax_efficiency = 0.01
 			administrative_efficiency_modifier = 0.02
 		}
 		all_land_ownership = {
-			prestige = 0.05
-			rgo_output = 0.1
-			factory_throughput = -0.1
+			rich_income_modifier = -0.03
+			middle_income_modifier = -0.03
+			poor_income_modifier = -0.03
 			tax_efficiency = 0.02
 			administrative_efficiency_modifier = 0.04
 		}
