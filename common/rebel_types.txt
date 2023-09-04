@@ -291,11 +291,6 @@ patriot_rebels = {
             is_accepted_culture = yes
         }
         modifier = {
-            factor = 1.05
-            pop_majority_ideology = fundamentalist
-        }
-		
-        modifier = {
             factor = 0.75
             country = { plurality = 70 }
         }
@@ -672,10 +667,6 @@ democratic_rebels = {
 			}
 		}
 		modifier = {
-			factor = 0.5
-			pop_majority_ideology = fundamentalist
-		}
-		modifier = {
 			factor = 0.75
 			country = { good_evil_alignment = evil_alignment }
 		}
@@ -750,168 +741,6 @@ democratic_rebels = {
 	}
 	demands_enforced_effect = {
 		country_event = 3000
-        prestige_factor = -0.1
-        war_exhaustion = 50
-	}
-}
-
-###################################
-# Fundamentalist Rebels
-###################################
-fundamentalist_rebels = {
-	icon = 4
-	
-	area = nation 				  # Stays within the nation
-	break_alliance_on_win = no
-	
-	# <this is the governement in the country> = <this is what the rebels want>
-	government = {
-		democracy = monarchy
-		hobbit_realm = hobbit_realm
-		northmen_democracy = northmen_democracy
-		monarchy = monarchy
-		principality = principality
-		lord_monarchy = lord_monarchy
-		stewardship = stewardship
-		fiefdom = fiefdom
-		galadhrim_monarchy = galadhrim_monarchy
-		dark_realm = dark_realm
-		sauron_dictatorship = sauron_dictatorship
-		sauron_puppet = sauron_puppet
-		nazgul_dictatorship = nazgul_dictatorship
-		istari_kingdom = istari_kingdom
-		goblin_tribe = goblin_tribe
-		man_tribe = man_tribe
-		northmen_tribe = northmen_tribe
-		cosmetic_1_govt = cosmetic_1_govt
-		cosmetic_2_govt = cosmetic_2_govt
-	}
-	
-	ideology = fundamentalist
-	
-	defection = none                    # Will defect to the "best" alternative.
-    independence = none                # Does not strive for independence
-    defect_delay = 18
-	
-	allow_all_cultures = yes
-	allow_all_religions = yes
-	allow_all_ideologies = yes
-	
-	resilient = yes                    # Does not disband on retreat
-    reinforcing = yes                # Receives reinforcements
-    general = yes                    # Uses generals
-    smart = yes                    # Assaults forts, tactically withdraws from battle, etc.
-    unit_transfer = no                # Units remain after enforcing demands.
-
-    occupation_mult = 1.0            # The amount of strength this rebel gains from taking provinces
-
-	# triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
-    will_rise = {
-        factor = 1
-
-        modifier = {
-            war = yes
-            factor = 0.8
-        }
-        modifier = {
-            war_exhaustion = 40
-            factor = 0.95
-        }
-        modifier = {
-            war_exhaustion = 60
-            factor = 0.95
-        }
-        modifier = {
-            war_exhaustion = 80
-            factor = 0.95
-        }
-    }
-	
-	# The rebel type with the highest modifier for this pop gets picked
-	spawn_chance = {
-		factor = 1.05
-		
-		modifier = {
-			factor = 0
-			OR = {
-				type = slaves
-				country = { civilized = no }
-				pop_majority_ideology = servants
-				pop_majority_ideology = loremaster
-				pop_majority_ideology = burgher
-				AND = {
-					is_primary_culture = no
-					is_accepted_culture = no
-				}
-				NOT = { location = { is_core = THIS } }
-			}
-		}
-		modifier = {
-			factor = 2
-			pop_majority_ideology = fundamentalist
-		}
-		modifier = {
-			factor = 1.5
-			is_primary_culture = yes
-		}
-		modifier = {
-			factor = 1.15
-			country = { has_unclaimed_cores = yes }
-		}
-		modifier = {
-			factor = 1.05
-			OR = {
-				pop_majority_ideology = high_nobility
-				pop_majority_ideology = low_nobility
-			}
-		}
-	}
- 
- 	#This is checked for EACH province in the Area of Operations
-	movement_evaluation = {
-		factor = 1
-		modifier = {
-			factor = 0.1
-			units_in_province = 1
-		}
-		modifier = {
-			factor = 0.001
-			controlled_by = REB
-		}
-		modifier = {
-			factor = 1.5
-			average_militancy = 4
-		}
-		modifier = {
-			factor = 1.5
-			average_militancy = 6
-		}
-		modifier = {
-			factor = 1.5
-			average_militancy = 8
-		}
-		modifier = {
-			factor = 2.0
-			is_capital = yes
-		}
-	}
-	
- 	# Province Scope
- 	#siege_won_trigger = {
- 	#}
-	
-	#siege_won_effect = {
-	#}
-	
-	# Country scope
-	demands_enforced_trigger = {
-		capital_scope = {
-            controlled_by = REB
-            province_control_days = 90
-        }
-	}
-	demands_enforced_effect = {
-		country_event = 3001
         prestige_factor = -0.1
         war_exhaustion = 50
 	}
@@ -1007,10 +836,6 @@ noble_rebels = {
 					country = { knighting_rights = allowed_knighting_rights }
 				}
 			}
-		}
-		modifier = {
-			factor = 2
-			pop_majority_ideology = fundamentalist
 		}
 		modifier = {
 			factor = 1.5

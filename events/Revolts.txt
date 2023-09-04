@@ -118,65 +118,6 @@ country_event = {
 	}
 }
 
-# Fundamentalist Rebel Win
-country_event = {
-	id = 3001
-	picture = administration
-	title = "Fundamentalist Rebel Victory"
-	desc = "EVTDESC3001"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Damn"
-		
-		set_country_flag = na_large
-		clr_country_flag = na_medium
-		clr_country_flag = na_small
-		
-		political_reform = none_voting
-		political_reform = first_past_the_post
-		political_reform = no_meeting
-		political_reform = large_noble_autonomy
-		political_reform = large_levy_contribution
-		political_reform = small_tax_contribution
-		political_reform = allowed_knighting_rights
-		political_reform = enforced_serfdom
-		political_reform = five_land_ownership
-		political_reform = capital_punishment
-		political_reform = primary_voting
-		random_owned = {
-			limit = {
-				owner = { good_evil_alignment = evil_alignment }
-			}
-			owner = { political_reform = yes_slavery set_country_flag = has_all_slavery }
-		}
-		random_owned = {
-			limit = {
-				owner = { good_evil_alignment = good_alignment }
-			}
-			owner = { political_reform = no_slavery clr_country_flag = has_all_slavery }
-		}
-		social_reform = granted_exclusive_tr
-		social_reform = privileged_state_supplies
-		social_reform = independent_cities
-		social_reform = no_pensions
-		social_reform = hereditary
-		random_owned = {
-			limit = {
-				owner = {
-					OR = {
-						government = democracy
-						government = hobbit_realm
-						government = northmen_democracy
-					}
-				}
-			}
-			owner = { government = monarchy }
-		}
-	}
-}
-
 # Noble Rebel Win
 country_event = {
 	id = 3002

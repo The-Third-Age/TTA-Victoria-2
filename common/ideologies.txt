@@ -393,32 +393,3 @@ loremaster_group = {
 		}
 	}
 }
-
-fundamentalist_group = {
-	# always opposes political reform. Always want to remove them
-	# always opposes social reform. Always want to remove them
-	fundamentalist = {
-		color = { 0 0 0 }
-		
-		add_political_reform = {
-			base = 0
-		}
-		remove_political_reform = {
-			base = 1
-		}
-		add_social_reform = {
-			base = 0
-		}
-		remove_social_reform = {
-			base = 1
-		}
-		
-		add_military_reform = {
-			base = -1
-		}
-		
-		add_economic_reform = {
-			base = -1
-		}
-	}
-}
