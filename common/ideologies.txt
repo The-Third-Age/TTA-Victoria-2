@@ -40,8 +40,6 @@ prosauron_group = {
 	servants = {
 		color = { 30 144 255  }
 		
-		can_reduce_militancy = yes
-		
 		add_political_reform = {
 			base = 1
 		}
@@ -157,6 +155,8 @@ nobility_group = {
 	# normally opposes social reform, supports with high militancy. Never want to remove them
 	low_nobility = {
 		color = { 147 112 219 }
+		
+		can_reduce_militancy = yes
 		
 		add_political_reform = {
 			base = 0
