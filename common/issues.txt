@@ -332,14 +332,16 @@ political_reforms = {
 		next_step_only = yes
 		
 		large_noble_autonomy = {
-			suppression_points_modifier = -0.25
-			tax_efficiency = -0.05
-			rgo_output = -0.1
+			suppression_points_modifier = -0.5
+			global_pop_militancy_modifier = -0.03
+			prestige = -0.05
+			administrative_efficiency_modifier = -0.05
 		}
 		medium_noble_autonomy = {
-			suppression_points_modifier = -0.1
-			tax_efficiency = -0.025
-			rgo_output = -0.05
+			suppression_points_modifier = -0.25
+			global_pop_militancy_modifier = -0.01
+			prestige = -0.025
+			administrative_efficiency_modifier = -0.02
 		}
 		small_noble_autonomy = {
 		}
@@ -350,12 +352,12 @@ political_reforms = {
 		large_levy_contribution = {
 			mobilisation_size = 0.05
 			global_pop_militancy_modifier = 0.01
-			supply_consumption = 0.1
+			supply_consumption = -0.1
 			prestige = -0.05
 		}
 		medium_levy_contribution = {
 			mobilisation_size = 0.02
-			supply_consumption = 0.05
+			supply_consumption = -0.05
 			prestige = -0.025
 			allow = { NOT = { nobility_autonomy = large_noble_autonomy } }
 		}
@@ -368,11 +370,13 @@ political_reforms = {
 		next_step_only = yes
 		
 		small_tax_contribution = {
-			tax_efficiency = -0.03
+			tax_efficiency = -0.05
+			global_pop_militancy_modifier = -0.03
 		}
 		medium_tax_contribution = {
-			tax_efficiency = -0.01
+			tax_efficiency = -0.03
 			allow = { NOT = { nobility_autonomy = large_noble_autonomy } }
+			global_pop_militancy_modifier = -0.01
 		}
 		large_tax_contribution = {
 			allow = { nobility_autonomy = small_noble_autonomy }
@@ -383,12 +387,14 @@ political_reforms = {
 		
 		allowed_knighting_rights = {
 			prestige = -0.05
+			global_pop_consciousness_modifier = -0.03
 		}
 		restricted_knighting_rights = {
 			allow = { NOT = { nobility_autonomy = large_noble_autonomy } }
 		}
 		royal_knighting_rights = {
 			prestige = 0.05
+			global_pop_consciousness_modifier = 0.03
 			allow = { nobility_autonomy = small_noble_autonomy }
 		}
 	}
@@ -397,9 +403,11 @@ political_reforms = {
 		
 		enforced_serfdom = {
 			rgo_output = 0.1
+			global_pop_militancy_modifier = 0.03
 		}
 		discouraged_serfdom = {
 			rgo_output = 0.05
+			global_pop_militancy_modifier = 0.01
 		}
 		banned_serfdom = {
 		}
@@ -410,21 +418,21 @@ political_reforms = {
 		
 		five_land_ownership = {
 			rgo_output = -0.15
-			factory_throughput = -0.15
+			factory_throughput = 0.15
 			tax_efficiency = -0.03
-			administrative_efficiency_modifier = -0.03
+			administrative_efficiency_modifier = -0.06
 		}
 		ten_land_ownership = {
 			rgo_output = -0.10
-			factory_throughput = -0.10
+			factory_throughput = 0.10
 			tax_efficiency = -0.02
-			administrative_efficiency_modifier = -0.02
+			administrative_efficiency_modifier = -0.04
 		}
 		thirty_land_ownership = {
 			rgo_output = -0.05
-			factory_throughput = -0.05
+			factory_throughput = 0.05
 			tax_efficiency = -0.01
-			administrative_efficiency_modifier = -0.01
+			administrative_efficiency_modifier = -0.02
 		}
 		half_land_ownership = {
 			prestige = 0.01
@@ -432,16 +440,16 @@ political_reforms = {
 		seventy_land_ownership = {
 			prestige = 0.03
 			rgo_output = 0.05
-			factory_throughput = 0.05
+			factory_throughput = -0.05
 			tax_efficiency = 0.01
-			administrative_efficiency_modifier = 0.01
+			administrative_efficiency_modifier = 0.02
 		}
 		all_land_ownership = {
 			prestige = 0.05
 			rgo_output = 0.1
-			factory_throughput = 0.1
+			factory_throughput = -0.1
 			tax_efficiency = 0.02
-			administrative_efficiency_modifier = 0.02
+			administrative_efficiency_modifier = 0.04
 		}
 	}
 	slavery = {
@@ -517,9 +525,13 @@ social_reforms = {
 		
 		privileged_state_supplies = {
 			supply_consumption = 0.5
+			rich_income_modifier = 0.25
+			poor_income_modifier = -0.1
 		}
 		allowed_state_supplies = {
 			supply_consumption = 0.25
+			rich_income_modifier = 0.1
+			poor_income_modifier = -0.05
 		}
 		restricted_state_supplies = {
 		}
@@ -530,7 +542,7 @@ social_reforms = {
 		
 		independent_cities = {
 			global_pop_militancy_modifier = 0.03
-			global_pop_consciousness_modifier = 0.03
+			global_pop_consciousness_modifier = -0.06
 			administrative_efficiency_modifier = -0.03
 			tax_efficiency = -0.03
 			suppression_points_modifier = -0.2
@@ -538,7 +550,7 @@ social_reforms = {
 		}
 		chartered_cities = {
 			global_pop_militancy_modifier = 0.02
-			global_pop_consciousness_modifier = 0.02
+			global_pop_consciousness_modifier = -0.04
 			administrative_efficiency_modifier = -0.02
 			tax_efficiency = -0.02
 			suppression_points_modifier = -0.1
@@ -546,7 +558,7 @@ social_reforms = {
 		}
 		territorial_cities = {
 			global_pop_militancy_modifier = 0.01
-			global_pop_consciousness_modifier = 0.01
+			global_pop_consciousness_modifier = -0.02
 			administrative_efficiency_modifier = -0.01
 			tax_efficiency = -0.01
 		}

@@ -13,35 +13,35 @@ promotion_chance = {
 			literacy = 0.1 
 		}
 		modifier = {
-			factor = 0.02
+			factor = 0.04
 			literacy = 0.2
 		}
 		modifier = {
-			factor = 0.02
+			factor = 0.04
 			literacy = 0.3
 		}
 		modifier = {
-			factor = 0.02
+			factor = 0.04
 			literacy = 0.4
 		}
 		modifier = {
-			factor = 0.02
+			factor = 0.04
 			literacy = 0.5
 		}
 		modifier = {
-			factor = 0.02
+			factor = 0.1
 			literacy = 0.6
 		}
 		modifier = {
-			factor = 0.02
+			factor = 0.1
 			literacy = 0.7
 		}
 		modifier = {
-			factor = 0.02
+			factor = 0.2
 			literacy = 0.8
 		}
 		modifier = {
-			factor = 0.02
+			factor = 0.2
 			literacy = 0.9
 		}
 	}
@@ -51,32 +51,39 @@ promotion_chance = {
 	}
 	group = {
 		modifier = {
-			factor = -0.05
-			militancy = 9
+			factor = -0.1
+			militancy = 7
 		}
 		modifier = {
-			factor = -0.05
+			factor = -0.1
 			militancy = 8
 		}
 		modifier = {
-			factor = -0.05
-			militancy = 7
+			factor = -0.1
+			militancy = 9
 		}
 	}
 	group = {
 		modifier = {
-			factor = 0.1
-			life_needs = 0.9
-	
-		}
-		modifier = {
-			factor = 0.1
-			life_needs = 0.8 
-		}
-		modifier = {
-			factor = 0.1
+			factor = 0.2
 			life_needs = 0.7
+		}
+		modifier = {
+			factor = 0.2
+			life_needs = 0.8
+		}
+		modifier = {
+			factor = 0.2
+			life_needs = 0.9
 			strata = poor
+		}
+		modifier = {
+			factor = 0.2
+			everyday_needs = 0.9
+		}
+		modifier = {
+			factor = 0.2
+			luxury_needs = 0.9
 		}
 	}
 	modifier = {
@@ -91,18 +98,21 @@ promotion_chance = {
 		factor = -0.1
 		not = { culture = this }
 	}
-	modifier = {
-		factor = -0.1
-		country = { slavery = yes_slavery }
+	group = {
+		modifier = {
+			factor = -0.5
+			OR = {
+				country = { serfdom = discouraged_serfdom }
+				country = { serfdom = enforced_serfdom }
+			}
+			strata = poor
+		}
+		modifier = {
+			factor = -0.5
+			country = { serfdom = enforced_serfdom }
+			strata = poor
+		}
 	}
-	modifier = {
-		factor = -0.05
-		country = { serfdom = enforced_serfdom }
-	}
-	modifier = {
-		factor = -0.05
-		state_scope = { is_slave = yes }
-	}	
 	modifier = {
 		factor = -100
 		location = { NOT = { controlled_by = owner } }
@@ -126,66 +136,71 @@ demotion_chance = {
 		strata = poor
 	}
 	modifier = {
-		factor = -0.05
-		country = { serfdom = enforced_serfdom }
-	}
-	modifier = {
-		factor = -0.1
-		country = { slavery = yes_slavery }
-	}
-	modifier = {
-		factor = -0.05
-		state_scope = { is_slave = yes }
-	}
-	modifier = {
 		factor = -0.1
 		not = { culture = this }
 		strata = poor
 	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.1 }
+	group = {
+		modifier = {
+			factor = -0.5
+			OR = {
+				country = { serfdom = discouraged_serfdom }
+				country = { serfdom = enforced_serfdom }
+			}
+			strata = poor
+		}
+		modifier = {
+			factor = -0.5
+			country = { serfdom = enforced_serfdom }
+			strata = poor
+		}
 	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.15 }
-	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.2 }
-	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.3 }
-	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.4 }
-	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.5 }
-	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.6 }
-	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.7 }
-	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.8 }
-	}
-	modifier = {
-		factor = -0.02
-		not = { literacy = 0.9 }
+		group = {
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.1 }
+		}
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.15 }
+		}
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.2 }
+		}
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.3 }
+		}
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.4 }
+		}
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.5 }
+		}
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.6 }
+		}
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.7 }
+		}
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.8 }
+		}
+		modifier = {
+			factor = -0.02
+			not = { literacy = 0.9 }
+		}
 	}
 	group = {
 		modifier = {
 			factor = 0.1
-			not = { life_needs = 0.9 }
+			not = { life_needs = 0.7 }
 		}
 		modifier = {
 			factor = 0.1
@@ -193,7 +208,7 @@ demotion_chance = {
 		}
 		modifier = {
 			factor = 0.1
-			not = { life_needs = 0.7 }
+			not = { life_needs = 0.9 }
 		}
 	}
 	modifier = {
@@ -204,11 +219,11 @@ demotion_chance = {
 	group = {
 		modifier = {
 			factor = 0.1
-			not = { luxury_needs = 1 }
+			not = { luxury_needs = 0.9 }
 		}
 		modifier = {
 			factor = 0.1
-			not = { luxury_needs = 0.9 }
+			not = { luxury_needs = 1 }
 		}
 	}
 		modifier = {
