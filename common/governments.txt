@@ -3,7 +3,6 @@
 #######################
 # Lord (generic republic)
 democracy = {
-	servants = yes
 	high_nobility = yes
 	low_nobility = yes
 	burgher = yes
@@ -30,7 +29,6 @@ hobbit_realm = {
 
 # Master (Special republic for Northmen)
 northmen_democracy = {
-	servants = yes
 	high_nobility = yes
 	low_nobility = yes
 	burgher = yes
@@ -122,7 +120,10 @@ galadhrim_monarchy = {
 #########################
 # Lord (generic evil realm)
 dark_realm = {
-	servants = yes
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	loremaster = yes
 	
 	election = no
 	appoint_ruling_party = yes
@@ -154,10 +155,7 @@ nazgul_dictatorship = {
 
 # Lord (Special government for realms lead by a Wizard)
 istari_kingdom = {
-	high_nobility = yes
-	low_nobility = yes
-	burgher = yes
-	loremaster = yes
+	servants = yes
 	
 	election = no
 	appoint_ruling_party = yes
@@ -168,7 +166,10 @@ istari_kingdom = {
 ##################
 # Chieftain
 goblin_tribe = {
-	servants = yes
+	high_nobility = yes
+	low_nobility = yes
+	burgher = yes
+	loremaster = yes
 	
 	election = no
 	appoint_ruling_party = yes
