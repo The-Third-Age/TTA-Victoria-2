@@ -1,0 +1,42 @@
+# Men of Angmar decisions {
+# Witch-Kingdom
+# }
+political_decisions = {
+	invite_witch_king_of_angmar = {
+		picture = "witch_king_of_angmar"
+		potential = {
+            tag = MAN
+            NOT = {
+                government = nazgul_dictatorship
+            }
+            good_evil_alignment = evil_alignment
+		}
+		
+		allow = {
+            civilized = yes
+            OR = {
+                is_secondary_power = yes
+                is_greater_power = yes                
+            }
+            is_vassal = no
+            war = no
+		}
+		
+		effect = {
+			prestige = 5
+            nationalvalue = witch_king_of_angmar
+            government = nazgul_dictatorship
+
+            any_country = {
+                limit = {
+                    OR = {
+                        government = nazgul_dictatorship
+                        government = sauron_dictatorship
+                    }
+                    is_vassal = no
+                }
+                create_alliance = THIS
+            }
+		}
+	}
+}
