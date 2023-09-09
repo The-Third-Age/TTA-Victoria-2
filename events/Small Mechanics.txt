@@ -293,10 +293,19 @@ country_event = {
 	option = {
 		name = "Placate them"
 		
-		treasury = -5000
+		add_tax_relative_income = -180
 		any_pop = {
 			militancy = -1
 			consciousness = -1
+		}
+	}
+
+	option = {
+		name = "Ignore them"
+		
+		any_pop = {
+			militancy = 1
+			consciousness = 1
 		}
 	}
 }
