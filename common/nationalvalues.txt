@@ -52,6 +52,11 @@ faramir_i = {
 }
 
 aragorn_elessar = {
+	# Great General
+	min_military_spending = 0.5
+	org_regain = 0.25
+	# Ranger
+	supply_consumption = -0.2
 }
 
 angelimir = {
@@ -60,6 +65,11 @@ angelimir = {
 }
 
 sauron = {
+	# Great General
+	min_military_spending = 0.5
+	org_regain = 0.25
+	# Intelligent
+	research_points = 0.01
 }
 
 hegon_koldana = {
@@ -77,15 +87,24 @@ dain_ironfoot_ii = {
 }
 
 thranduil = {
+	# Erratic
+	global_pop_consciousness_modifier = 0.01
 }
 
 khamul = {
+	# Scary
+	non_accepted_pop_consciousness_modifier = 0.01
+	global_pop_militancy_modifier = -0.01
+	suppression_points_modifier = 0.1
+	badboy = 0.02
 }
 
 beorn = {
 }
 
 celeborn_n_galadriel = {
+	# Intelligent
+	research_points = 0.01
 }
 
 treebeard = {
@@ -95,21 +114,42 @@ thengel = {
 }
 
 saruman = {
+	# Intelligent
+	research_points = 0.01
+
+	# Spy master
+	suppression_points_modifier = 0.2
 }
 
 aragorn = {
+	# Intelligent
+	research_points = 0.01
+
+	# Ranger
+	supply_consumption = -0.2
 }
 
 elrond = {
+	# Intelligent
+	research_points = 0.01
 }
 
 cirdan = {
+	# Intelligent
+	research_points = 0.01
 }
 
 king_of_the_dead = {
+	# Scary
+	non_accepted_pop_consciousness_modifier = 0.01
+	global_pop_militancy_modifier = -0.01
+	suppression_points_modifier = 0.1
+	badboy = 0.02
 }
 
 radagast = {
+	# Intelligent
+	research_points = 0.01
 }
 
 roac = {
@@ -120,5 +160,17 @@ roac = {
 gwaihir = {	
 }
 
-witch_king_of_angmar = {	
+witch_king_of_angmar = {
+	# Intelligent
+	research_points = 0.01
+	
+	# Great General
+	min_military_spending = 0.5
+	org_regain = 0.25
+
+	# Scary
+	non_accepted_pop_consciousness_modifier = 0.01
+	global_pop_militancy_modifier = -0.01
+	suppression_points_modifier = 0.1
+	badboy = 0.02
 }
