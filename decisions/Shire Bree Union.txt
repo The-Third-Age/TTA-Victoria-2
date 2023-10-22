@@ -12,15 +12,13 @@ political_decisions = {
 		allow = {
 			war = no
 			OR = {
-				THIS = {
-					tag = BRE
-				}
+				tag = BRE
 				BRE = {
 					in_sphere = THIS
 					war = no
 				}
 				BRE = {
-						vassal_of = THIS
+					vassal_of = THIS
 				}
 				BRE = {
 					all_core = {
@@ -29,9 +27,7 @@ political_decisions = {
 				}
 			}
 			OR = {
-				THIS = {
-					tag = SHI
-				}
+				tag = SHI
 				SHI = {
 					in_sphere = THIS
 					war = no
@@ -50,8 +46,8 @@ political_decisions = {
 			change_tag = SBU
 			BRE = { all_core = { add_core = SBU} }
 			SHI = { all_core = { add_core = SBU} }
-			THIS = { inherit = BRE }
-			THIS = { inherit = SHI }
+			inherit = BRE
+			inherit = SHI
 			add_accepted_culture = breelander
 			add_accepted_culture = breeland_hobbit
 			add_accepted_culture = shire_hobbit
