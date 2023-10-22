@@ -1,9 +1,3 @@
-# Remove this line to have the validator check for strings in localisation
-# Audax Validator "!" Ignore_1004
-
-# Remove this line to have the validator check this file
-# Audax Validator "!" Ignore_NEXT
-
 # Shire-Breeland Union Events: {
 # 60000 - 60099 }
 
@@ -44,11 +38,19 @@ country_event = {
 		name = "We should bring Buckland into our fold"
 		prestige = 5
 		badboy = 1
-		inherit = BCK
 		BCK = { all_core = { add_core = SBU} }
 		add_accepted_culture = buckland_hobbit
-		ai_chance = {
-			factor = 70
+		random_owned = {
+			limit = {
+				owner = { 
+					exists = BCK
+					OR = {
+					BCK = { is_vassal = no }
+					is_our_vassal = BCK
+					}
+				}
+			}
+			inherit = BCK
 		}
 	}
 }
