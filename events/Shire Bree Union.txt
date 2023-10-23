@@ -1,0 +1,56 @@
+# Shire-Breeland Union Events: {
+# 60000 - 60099 }
+
+country_event = {
+	id = 60000
+	picture = "map_of_eriador"
+	title = "The Buckland Question"
+	desc = "EVTDESC60000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We should let Buckland be independent"
+		prestige = -5
+		badboy = -1
+		release_vassal = BCK
+		BCK = {
+			prestige = 5
+		}
+		relation = {
+			who = BCK
+			value = 50
+		}
+		ai_chance = {
+			factor = 3
+		}
+	}
+	
+	option = {
+		name = "We should leave Buckland as it was before the unification - an autonomous colony"
+		create_vassal = BCK
+		ai_chance = {
+			factor = 27
+		}
+	}
+	
+	option = {
+		name = "We should bring Buckland into our fold"
+		prestige = 5
+		badboy = 1
+		BCK = { all_core = { add_core = SBU} }
+		add_accepted_culture = buckland_hobbit
+		random_owned = {
+			limit = {
+				owner = { 
+					exists = BCK
+					OR = {
+					BCK = { is_vassal = no }
+					is_our_vassal = BCK
+					}
+				}
+			}
+			inherit = BCK
+		}
+	}
+}
