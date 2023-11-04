@@ -504,4 +504,18 @@ political_decisions = {
 			dominant_issue = { value = evil_alignment_fake factor = 0.1 }
 		}
 	}
+
+	abandon_neutrality = {
+		potential = {
+			ai = no
+			has_country_modifier = political_neutrality
+			has_global_flag = viewing_government_decisions
+		}
+
+		allow = {}
+
+		effect = {
+			remove_country_modifier = political_neutrality
+		}
+	}
 }
