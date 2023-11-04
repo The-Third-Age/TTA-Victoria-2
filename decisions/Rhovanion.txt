@@ -45,6 +45,28 @@ political_decisions = {
 					}
 				}
 			}
+			DAL_643 = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = northmen } }
+						empty = yes
+					}
+				}
+			}
+			DAL_645 = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = northmen } }
+						empty = yes
+					}
+				}
+			}
 			DOR = {
 				all_core = {
 					OR = {
@@ -99,6 +121,42 @@ political_decisions = {
 					}
 				}
 				owner = { add_accepted_culture = barding }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = grammas
+							accepted_culture = grammas
+						}
+					}
+				}
+				owner = { add_accepted_culture = grammas }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = rivermen
+							accepted_culture = rivermen
+						}
+					}
+				}
+				owner = { add_accepted_culture = rivermen }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = adhalling
+							accepted_culture = adhalling
+						}
+					}
+				}
+				owner = { add_accepted_culture = adhalling }
 			}
 			
 			random_owned = {
