@@ -1,4 +1,3 @@
-# Audax Validator "!" Ignore_NEXT
 # Rhovanion
 political_decisions = {
 	rename_barding_realm = {
@@ -127,24 +126,43 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [northmen, anduinrim, rohirrim] - Upper Marches
+						# [northmen] - Upper Marches
 						AND = {
-							OR = {
-								is_culture_group = northmen
-								is_culture_group = anduinrim
-								is_culture_group = rohirrim
-							}
+							is_culture_group = northmen
 							OR = {
 								FOR = { NOT = { check_variable = { which = upper_marches_name value = -0.1 } } }
 								FOR = { check_variable = { which = upper_marches_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Upper Marches
+						# [easterlings] - Upper Marches
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = easterlings
 							OR = {
 								FOR = { NOT = { check_variable = { which = upper_marches_name value = 0.9 } } }
 								FOR = { check_variable = { which = upper_marches_name value = 1.1 } }
+							}
+						}
+						# [anduinrim, rohirrim] - Upper Marches
+						AND = {
+							OR = {
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = upper_marches_name value = 1.9 } } }
+								FOR = { check_variable = { which = upper_marches_name value = 2.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Upper Marches
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = upper_marches_name value = 2.9 } } }
+								FOR = { check_variable = { which = upper_marches_name value = 3.1 } }
 							}
 						}
 					}
@@ -225,6 +243,7 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = nether_marches_name value = 0.1 } } }
 					}
 				}
+				643 = { state_scope = { change_region_name = "Nether Marches" } }
 				643 = { change_province_name = "Naertheiaborg" }
 				644 = { change_province_name = "Myrrborg" }
 				478 = { change_province_name = "Kleinibriost" }
@@ -255,6 +274,7 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = nether_marches_name value = 2.1 } } }
 					}
 				}
+				643 = { state_scope = { change_region_name = "Lower Gazar Hunshahad" } }
 				643 = { change_province_name = "Burh Nerathis" }
 				644 = { change_province_name = "Burh Maridais" }
 				478 = { change_province_name = "Kleinibreusta" }
@@ -385,37 +405,69 @@ political_decisions = {
 				442 = { change_province_name = "Wagnahallo" }
 				owner = { FOR = { set_variable = { which = nan_celduin_name value = 4 } } }
 			}
-			# [northmen, anduinrim, rohirrim] - Upper Marches
+			# [northmen] - Upper Marches
 			random_owned = {
 				limit = {
-					owner = {
-						OR = {
-							is_culture_group = northmen
-							is_culture_group = anduinrim
-							is_culture_group = rohirrim
-						}
-					}
+					owner = { is_culture_group = northmen }
 					province_id = 355
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = upper_marches_name value = -0.1 } } } }
 						owner = { FOR = { check_variable = { which = upper_marches_name value = 0.1 } } }
 					}
 				}
+				640 = { state_scope = { change_region_name = "Upper Marches" } }
 				640 = { change_province_name = "Grasgarda" }
 				owner = { FOR = { set_variable = { which = upper_marches_name value = 0 } } }
 			}
-			# [dunedain] - Upper Marches
+			# [easterlings] - Upper Marches
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = { is_culture_group = easterlings }
 					province_id = 355
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = upper_marches_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = upper_marches_name value = 1.1 } } }
 					}
 				}
-				640 = { change_province_name = "Grasgard" }
+				640 = { state_scope = { change_region_name = "Upper Gazar Hunshahad" } }
 				owner = { FOR = { set_variable = { which = upper_marches_name value = 1 } } }
+			}
+			# [anduinrim, rohirrim] - Upper Marches
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 355
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = upper_marches_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = upper_marches_name value = 2.1 } } }
+					}
+				}
+				640 = { change_province_name = "Grasgarda" }
+				owner = { FOR = { set_variable = { which = upper_marches_name value = 2 } } }
+			}
+			# [teleri, dunedain, eldar] - Upper Marches
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 355
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = upper_marches_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = upper_marches_name value = 3.1 } } }
+					}
+				}
+				640 = { change_province_name = "Grasgard" }
+				owner = { FOR = { set_variable = { which = upper_marches_name value = 3 } } }
 			}
 			# [northmen] - Nan Annen
 			random_owned = {
@@ -567,17 +619,21 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [dunedain] - Thark Kûfnaz
+						# [mordorian] - Thark Kûfnaz
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = thark_kufnaz_name value = -0.1 } } }
 								FOR = { check_variable = { which = thark_kufnaz_name value = 0.1 } }
 							}
 						}
-						# [mordorian] - Thark Kûfnaz
+						# [teleri, dunedain, eldar] - Thark Kûfnaz
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = thark_kufnaz_name value = 0.9 } } }
 								FOR = { check_variable = { which = thark_kufnaz_name value = 1.1 } }
@@ -591,17 +647,21 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Lithlad
+						# [mordorian] - Lithlad
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = lithlad_name value = -0.1 } } }
 								FOR = { check_variable = { which = lithlad_name value = 0.1 } }
 							}
 						}
-						# [mordorian] - Lithlad
+						# [teleri, dunedain, eldar] - Lithlad
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = lithlad_name value = 0.9 } } }
 								FOR = { check_variable = { which = lithlad_name value = 1.1 } }
@@ -616,25 +676,29 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Gap of Nurza-Shûk
+						# [khandish] - Gap of Nurza-Shûk
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = khandish
 							OR = {
 								FOR = { NOT = { check_variable = { which = gap_of_nurza-shuk_name value = -0.1 } } }
 								FOR = { check_variable = { which = gap_of_nurza-shuk_name value = 0.1 } }
 							}
 						}
-						# [khandish] - Gap of Nurza-Shûk
+						# [mordorian] - Gap of Nurza-Shûk
 						AND = {
-							is_culture_group = khandish
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = gap_of_nurza-shuk_name value = 0.9 } } }
 								FOR = { check_variable = { which = gap_of_nurza-shuk_name value = 1.1 } }
 							}
 						}
-						# [mordorian] - Gap of Nurza-Shûk
+						# [teleri, dunedain, eldar] - Gap of Nurza-Shûk
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = gap_of_nurza-shuk_name value = 1.9 } } }
 								FOR = { check_variable = { which = gap_of_nurza-shuk_name value = 2.1 } }
@@ -646,17 +710,21 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Bauglith-en-Sauron
+						# [mordorian] - Bauglith-en-Sauron
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = bauglith-en-sauron_name value = -0.1 } } }
 								FOR = { check_variable = { which = bauglith-en-sauron_name value = 0.1 } }
 							}
 						}
-						# [mordorian] - Bauglith-en-Sauron
+						# [teleri, dunedain, eldar] - Bauglith-en-Sauron
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = bauglith-en-sauron_name value = 0.9 } } }
 								FOR = { check_variable = { which = bauglith-en-sauron_name value = 1.1 } }
@@ -671,17 +739,21 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Morgai
+						# [mordorian] - Morgai
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = morgai_name value = -0.1 } } }
 								FOR = { check_variable = { which = morgai_name value = 0.1 } }
 							}
 						}
-						# [mordorian] - Morgai
+						# [teleri, dunedain, eldar] - Morgai
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = morgai_name value = 0.9 } } }
 								FOR = { check_variable = { which = morgai_name value = 1.1 } }
@@ -694,17 +766,21 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Imlad Morgûl
+						# [mordorian] - Imlad Morgûl
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = imlad_morgul_name value = -0.1 } } }
 								FOR = { check_variable = { which = imlad_morgul_name value = 0.1 } }
 							}
 						}
-						# [mordorian] - Imlad Morgûl
+						# [teleri, dunedain, eldar] - Imlad Morgûl
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = imlad_morgul_name value = 0.9 } } }
 								FOR = { check_variable = { which = imlad_morgul_name value = 1.1 } }
@@ -718,17 +794,21 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Udûn
+						# [mordorian] - Udûn
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = udun_name value = -0.1 } } }
 								FOR = { check_variable = { which = udun_name value = 0.1 } }
 							}
 						}
-						# [mordorian] - Udûn
+						# [teleri, dunedain, eldar] - Udûn
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = udun_name value = 0.9 } } }
 								FOR = { check_variable = { which = udun_name value = 1.1 } }
@@ -745,45 +825,37 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			# [dunedain] - Thark Kûfnaz
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 428
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = thark_kufnaz_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = thark_kufnaz_name value = 0.1 } } }
-					}
-				}
-				439 = { state_scope = { change_region_name = "Parth Ulmon" } }
-				owner = { FOR = { set_variable = { which = thark_kufnaz_name value = 0 } } }
-			}
 			# [mordorian] - Thark Kûfnaz
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = mordorian }
 					province_id = 428
 					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = thark_kufnaz_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = thark_kufnaz_name value = 0.1 } } }
+					}
+				}
+				439 = { state_scope = { change_region_name = "Thark Kûfnaz" } }
+				owner = { FOR = { set_variable = { which = thark_kufnaz_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Thark Kûfnaz
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 428
+					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = thark_kufnaz_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = thark_kufnaz_name value = 1.1 } } }
 					}
 				}
-				439 = { state_scope = { change_region_name = "Thark Kûfnaz" } }
+				439 = { state_scope = { change_region_name = "Parth Ulmon" } }
 				owner = { FOR = { set_variable = { which = thark_kufnaz_name value = 1 } } }
-			}
-			# [dunedain] - Lithlad
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 422
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = lithlad_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = lithlad_name value = 0.1 } } }
-					}
-				}
-				422 = { change_province_name = "Ost-i-gurth" }
-				427 = { change_province_name = "Gaer Dûrlith" }
-				owner = { FOR = { set_variable = { which = lithlad_name value = 0 } } }
 			}
 			# [mordorian] - Lithlad
 			random_owned = {
@@ -791,27 +863,33 @@ political_decisions = {
 					owner = { is_culture_group = mordorian }
 					province_id = 422
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = lithlad_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = lithlad_name value = 1.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = lithlad_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = lithlad_name value = 0.1 } } }
 					}
 				}
 				422 = { change_province_name = "Kûtot Vâdôk" }
 				427 = { change_province_name = "Kirithgal" }
-				owner = { FOR = { set_variable = { which = lithlad_name value = 1 } } }
+				owner = { FOR = { set_variable = { which = lithlad_name value = 0 } } }
 			}
-			# [dunedain] - Gap of Nurza-Shûk
+			# [teleri, dunedain, eldar] - Lithlad
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 421
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 422
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = gap_of_nurza-shuk_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = gap_of_nurza-shuk_name value = 0.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = lithlad_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = lithlad_name value = 1.1 } } }
 					}
 				}
-				421 = { state_scope = { change_region_name = "Gap of Núrn" } }
-				421 = { change_province_name = "Barad-wath" }
-				owner = { FOR = { set_variable = { which = gap_of_nurza-shuk_name value = 0 } } }
+				422 = { change_province_name = "Ost-i-gurth" }
+				427 = { change_province_name = "Gaer Dûrlith" }
+				owner = { FOR = { set_variable = { which = lithlad_name value = 1 } } }
 			}
 			# [khandish] - Gap of Nurza-Shûk
 			random_owned = {
@@ -819,12 +897,12 @@ political_decisions = {
 					owner = { is_culture_group = khandish }
 					province_id = 421
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = gap_of_nurza-shuk_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = gap_of_nurza-shuk_name value = 1.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = gap_of_nurza-shuk_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = gap_of_nurza-shuk_name value = 0.1 } } }
 					}
 				}
 				421 = { state_scope = { change_region_name = "Gap of Núrn" } }
-				owner = { FOR = { set_variable = { which = gap_of_nurza-shuk_name value = 1 } } }
+				owner = { FOR = { set_variable = { which = gap_of_nurza-shuk_name value = 0 } } }
 			}
 			# [mordorian] - Gap of Nurza-Shûk
 			random_owned = {
@@ -832,26 +910,33 @@ political_decisions = {
 					owner = { is_culture_group = mordorian }
 					province_id = 421
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = gap_of_nurza-shuk_name value = 1.9 } } } }
-						owner = { FOR = { check_variable = { which = gap_of_nurza-shuk_name value = 2.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = gap_of_nurza-shuk_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = gap_of_nurza-shuk_name value = 1.1 } } }
 					}
 				}
 				421 = { state_scope = { change_region_name = "Gap of Nurza-Shûk" } }
 				421 = { change_province_name = "Morigost" }
-				owner = { FOR = { set_variable = { which = gap_of_nurza-shuk_name value = 2 } } }
+				owner = { FOR = { set_variable = { which = gap_of_nurza-shuk_name value = 1 } } }
 			}
-			# [dunedain] - Bauglith-en-Sauron
+			# [teleri, dunedain, eldar] - Gap of Nurza-Shûk
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 441
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 421
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = bauglith-en-sauron_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = bauglith-en-sauron_name value = 0.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = gap_of_nurza-shuk_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = gap_of_nurza-shuk_name value = 2.1 } } }
 					}
 				}
-				448 = { state_scope = { change_region_name = "Arandor" } }
-				owner = { FOR = { set_variable = { which = bauglith-en-sauron_name value = 0 } } }
+				421 = { state_scope = { change_region_name = "Gap of Núrn" } }
+				421 = { change_province_name = "Barad-wath" }
+				owner = { FOR = { set_variable = { which = gap_of_nurza-shuk_name value = 2 } } }
 			}
 			# [mordorian] - Bauglith-en-Sauron
 			random_owned = {
@@ -859,25 +944,31 @@ political_decisions = {
 					owner = { is_culture_group = mordorian }
 					province_id = 441
 					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = bauglith-en-sauron_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = bauglith-en-sauron_name value = 0.1 } } }
+					}
+				}
+				448 = { state_scope = { change_region_name = "Bauglith-en-Sauron" } }
+				owner = { FOR = { set_variable = { which = bauglith-en-sauron_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Bauglith-en-Sauron
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 441
+					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = bauglith-en-sauron_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = bauglith-en-sauron_name value = 1.1 } } }
 					}
 				}
-				448 = { state_scope = { change_region_name = "Bauglith-en-Sauron" } }
+				448 = { state_scope = { change_region_name = "Arandor" } }
 				owner = { FOR = { set_variable = { which = bauglith-en-sauron_name value = 1 } } }
-			}
-			# [dunedain] - Morgai
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 436
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = morgai_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = morgai_name value = 0.1 } } }
-					}
-				}
-				440 = { change_province_name = "Durthang" }
-				owner = { FOR = { set_variable = { which = morgai_name value = 0 } } }
 			}
 			# [mordorian] - Morgai
 			random_owned = {
@@ -885,26 +976,31 @@ political_decisions = {
 					owner = { is_culture_group = mordorian }
 					province_id = 436
 					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = morgai_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = morgai_name value = 0.1 } } }
+					}
+				}
+				440 = { change_province_name = "Durshatîgum" }
+				owner = { FOR = { set_variable = { which = morgai_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Morgai
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 436
+					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = morgai_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = morgai_name value = 1.1 } } }
 					}
 				}
-				440 = { change_province_name = "Durshatîgum" }
+				440 = { change_province_name = "Durthang" }
 				owner = { FOR = { set_variable = { which = morgai_name value = 1 } } }
-			}
-			# [dunedain] - Imlad Morgûl
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 433
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = imlad_morgul_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = imlad_morgul_name value = 0.1 } } }
-					}
-				}
-				433 = { state_scope = { change_region_name = "Imlad Ithil" } }
-				433 = { change_province_name = "Minas Ithil" }
-				owner = { FOR = { set_variable = { which = imlad_morgul_name value = 0 } } }
 			}
 			# [mordorian] - Imlad Morgûl
 			random_owned = {
@@ -912,26 +1008,33 @@ political_decisions = {
 					owner = { is_culture_group = mordorian }
 					province_id = 433
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = imlad_morgul_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = imlad_morgul_name value = 1.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = imlad_morgul_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = imlad_morgul_name value = 0.1 } } }
 					}
 				}
 				433 = { state_scope = { change_region_name = "Imlad Morgûl" } }
 				433 = { change_province_name = "Minas Morgul" }
-				owner = { FOR = { set_variable = { which = imlad_morgul_name value = 1 } } }
+				owner = { FOR = { set_variable = { which = imlad_morgul_name value = 0 } } }
 			}
-			# [dunedain] - Udûn
+			# [teleri, dunedain, eldar] - Imlad Morgûl
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 452
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 433
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = udun_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = udun_name value = 0.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = imlad_morgul_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = imlad_morgul_name value = 1.1 } } }
 					}
 				}
-				454 = { change_province_name = "Rustrond" }
-				owner = { FOR = { set_variable = { which = udun_name value = 0 } } }
+				433 = { state_scope = { change_region_name = "Imlad Ithil" } }
+				433 = { change_province_name = "Minas Ithil" }
+				owner = { FOR = { set_variable = { which = imlad_morgul_name value = 1 } } }
 			}
 			# [mordorian] - Udûn
 			random_owned = {
@@ -939,11 +1042,30 @@ political_decisions = {
 					owner = { is_culture_group = mordorian }
 					province_id = 452
 					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = udun_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = udun_name value = 0.1 } } }
+					}
+				}
+				454 = { change_province_name = "Hayat-taim" }
+				owner = { FOR = { set_variable = { which = udun_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Udûn
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 452
+					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = udun_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = udun_name value = 1.1 } } }
 					}
 				}
-				454 = { change_province_name = "Hayat-taim" }
+				454 = { change_province_name = "Rustrond" }
 				owner = { FOR = { set_variable = { which = udun_name value = 1 } } }
 			}
 		}
@@ -954,25 +1076,29 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [dunedain] - Northern Nurza-Shukh
+						# [khandish] - Northern Nurza-Shukh
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = khandish
 							OR = {
 								FOR = { NOT = { check_variable = { which = northern_nurza-shukh_name value = -0.1 } } }
 								FOR = { check_variable = { which = northern_nurza-shukh_name value = 0.1 } }
 							}
 						}
-						# [khandish] - Northern Nurza-Shukh
+						# [mordorian] - Northern Nurza-Shukh
 						AND = {
-							is_culture_group = khandish
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = northern_nurza-shukh_name value = 0.9 } } }
 								FOR = { check_variable = { which = northern_nurza-shukh_name value = 1.1 } }
 							}
 						}
-						# [mordorian] - Northern Nurza-Shukh
+						# [teleri, dunedain, eldar] - Northern Nurza-Shukh
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = northern_nurza-shukh_name value = 1.9 } } }
 								FOR = { check_variable = { which = northern_nurza-shukh_name value = 2.1 } }
@@ -997,25 +1123,29 @@ political_decisions = {
 								FOR = { check_variable = { which = southern_nurza-shukh_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Southern Nurza-Shukh
+						# [mordorian] - Southern Nurza-Shukh
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = southern_nurza-shukh_name value = 0.9 } } }
 								FOR = { check_variable = { which = southern_nurza-shukh_name value = 1.1 } }
 							}
 						}
-						# [mordorian] - Southern Nurza-Shukh
+						# [khandish] - Southern Nurza-Shukh
 						AND = {
-							is_culture_group = mordorian
+							is_culture_group = khandish
 							OR = {
 								FOR = { NOT = { check_variable = { which = southern_nurza-shukh_name value = 1.9 } } }
 								FOR = { check_variable = { which = southern_nurza-shukh_name value = 2.1 } }
 							}
 						}
-						# [khandish] - Southern Nurza-Shukh
+						# [teleri, dunedain, eldar] - Southern Nurza-Shukh
 						AND = {
-							is_culture_group = khandish
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = southern_nurza-shukh_name value = 2.9 } } }
 								FOR = { check_variable = { which = southern_nurza-shukh_name value = 3.1 } }
@@ -1035,32 +1165,18 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			# [dunedain] - Northern Nurza-Shukh
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 417
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = northern_nurza-shukh_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = northern_nurza-shukh_name value = 0.1 } } }
-					}
-				}
-				417 = { state_scope = { change_region_name = "Fornúrn" } }
-				419 = { change_province_name = "Demon Angren" }
-				owner = { FOR = { set_variable = { which = northern_nurza-shukh_name value = 0 } } }
-			}
 			# [khandish] - Northern Nurza-Shukh
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = khandish }
 					province_id = 417
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = northern_nurza-shukh_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = northern_nurza-shukh_name value = 1.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = northern_nurza-shukh_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = northern_nurza-shukh_name value = 0.1 } } }
 					}
 				}
 				417 = { state_scope = { change_region_name = "Northern Núrn" } }
-				owner = { FOR = { set_variable = { which = northern_nurza-shukh_name value = 1 } } }
+				owner = { FOR = { set_variable = { which = northern_nurza-shukh_name value = 0 } } }
 			}
 			# [mordorian] - Northern Nurza-Shukh
 			random_owned = {
@@ -1068,12 +1184,32 @@ political_decisions = {
 					owner = { is_culture_group = mordorian }
 					province_id = 417
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = northern_nurza-shukh_name value = 1.9 } } } }
-						owner = { FOR = { check_variable = { which = northern_nurza-shukh_name value = 2.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = northern_nurza-shukh_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = northern_nurza-shukh_name value = 1.1 } } }
 					}
 				}
 				417 = { state_scope = { change_region_name = "Northern Nurza-Shukh" } }
 				419 = { change_province_name = "Ongrog" }
+				owner = { FOR = { set_variable = { which = northern_nurza-shukh_name value = 1 } } }
+			}
+			# [teleri, dunedain, eldar] - Northern Nurza-Shukh
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 417
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = northern_nurza-shukh_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = northern_nurza-shukh_name value = 2.1 } } }
+					}
+				}
+				417 = { state_scope = { change_region_name = "Fornúrn" } }
+				419 = { change_province_name = "Demon Angren" }
 				owner = { FOR = { set_variable = { which = northern_nurza-shukh_name value = 2 } } }
 			}
 			# [kingsmen, haradrim] - Southern Nurza-Shukh
@@ -1094,33 +1230,19 @@ political_decisions = {
 				406 = { change_province_name = "Rukay Nûrn" }
 				owner = { FOR = { set_variable = { which = southern_nurza-shukh_name value = 0 } } }
 			}
-			# [dunedain] - Southern Nurza-Shukh
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 382
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = southern_nurza-shukh_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = southern_nurza-shukh_name value = 1.1 } } }
-					}
-				}
-				401 = { state_scope = { change_region_name = "Harnúrn" } }
-				406 = { change_province_name = "Cirith Núrn" }
-				owner = { FOR = { set_variable = { which = southern_nurza-shukh_name value = 1 } } }
-			}
 			# [mordorian] - Southern Nurza-Shukh
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = mordorian }
 					province_id = 382
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = southern_nurza-shukh_name value = 1.9 } } } }
-						owner = { FOR = { check_variable = { which = southern_nurza-shukh_name value = 2.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = southern_nurza-shukh_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = southern_nurza-shukh_name value = 1.1 } } }
 					}
 				}
 				401 = { state_scope = { change_region_name = "Southern Nurza-Shukh" } }
 				406 = { change_province_name = "Cirith Nuraz-Shukh" }
-				owner = { FOR = { set_variable = { which = southern_nurza-shukh_name value = 2 } } }
+				owner = { FOR = { set_variable = { which = southern_nurza-shukh_name value = 1 } } }
 			}
 			# [khandish] - Southern Nurza-Shukh
 			random_owned = {
@@ -1128,12 +1250,32 @@ political_decisions = {
 					owner = { is_culture_group = khandish }
 					province_id = 382
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = southern_nurza-shukh_name value = 2.9 } } } }
-						owner = { FOR = { check_variable = { which = southern_nurza-shukh_name value = 3.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = southern_nurza-shukh_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = southern_nurza-shukh_name value = 2.1 } } }
 					}
 				}
 				401 = { state_scope = { change_region_name = "Southern Núrn" } }
 				406 = { change_province_name = "Rukay Nûrn" }
+				owner = { FOR = { set_variable = { which = southern_nurza-shukh_name value = 2 } } }
+			}
+			# [teleri, dunedain, eldar] - Southern Nurza-Shukh
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 382
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = southern_nurza-shukh_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = southern_nurza-shukh_name value = 3.1 } } }
+					}
+				}
+				401 = { state_scope = { change_region_name = "Harnúrn" } }
+				406 = { change_province_name = "Cirith Núrn" }
 				owner = { FOR = { set_variable = { which = southern_nurza-shukh_name value = 3 } } }
 			}
 		}
@@ -1147,9 +1289,13 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [dunedain] - Lossarnach
+						# [teleri, dunedain, eldar] - Lossarnach
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = lossarnach_name value = -0.1 } } }
 								FOR = { check_variable = { which = lossarnach_name value = 0.1 } }
@@ -1177,10 +1323,16 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			# [dunedain] - Lossarnach
+			# [teleri, dunedain, eldar] - Lossarnach
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 22
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = lossarnach_name value = -0.1 } } } }
@@ -1211,9 +1363,13 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [dunedain] - Lamedon
+						# [teleri, dunedain, eldar] - Lamedon
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = lamedon_name value = -0.1 } } }
 								FOR = { check_variable = { which = lamedon_name value = 0.1 } }
@@ -1238,10 +1394,16 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			# [dunedain] - Lamedon
+			# [teleri, dunedain, eldar] - Lamedon
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 91
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = lamedon_name value = -0.1 } } } }
@@ -1280,17 +1442,21 @@ political_decisions = {
 								FOR = { check_variable = { which = old_anorien_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Old Anórien
+						# [rohirrim] - Old Anórien
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = rohirrim
 							OR = {
 								FOR = { NOT = { check_variable = { which = old_anorien_name value = 0.9 } } }
 								FOR = { check_variable = { which = old_anorien_name value = 1.1 } }
 							}
 						}
-						# [rohirrim] - Old Anórien
+						# [teleri, dunedain, eldar] - Old Anórien
 						AND = {
-							is_culture_group = rohirrim
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = old_anorien_name value = 1.9 } } }
 								FOR = { check_variable = { which = old_anorien_name value = 2.1 } }
@@ -1304,17 +1470,21 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Talath Anór
+						# [rohirrim] - Talath Anór
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = rohirrim
 							OR = {
 								FOR = { NOT = { check_variable = { which = talath_anor_name value = -0.1 } } }
 								FOR = { check_variable = { which = talath_anor_name value = 0.1 } }
 							}
 						}
-						# [rohirrim] - Talath Anór
+						# [teleri, dunedain, eldar] - Talath Anór
 						AND = {
-							is_culture_group = rohirrim
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = talath_anor_name value = 0.9 } } }
 								FOR = { check_variable = { which = talath_anor_name value = 1.1 } }
@@ -1339,17 +1509,21 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Far Anórien
+						# [rohirrim] - Far Anórien
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = rohirrim
 							OR = {
 								FOR = { NOT = { check_variable = { which = far_anorien_name value = -0.1 } } }
 								FOR = { check_variable = { which = far_anorien_name value = 0.1 } }
 							}
 						}
-						# [rohirrim] - Far Anórien
+						# [teleri, dunedain, eldar] - Far Anórien
 						AND = {
-							is_culture_group = rohirrim
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = far_anorien_name value = 0.9 } } }
 								FOR = { check_variable = { which = far_anorien_name value = 1.1 } }
@@ -1391,49 +1565,40 @@ political_decisions = {
 				19 = { change_province_name = "Hyallondië" }
 				owner = { FOR = { set_variable = { which = old_anorien_name value = 0 } } }
 			}
-			# [dunedain] - Old Anórien
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 16
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = old_anorien_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = old_anorien_name value = 1.1 } } }
-					}
-				}
-				16 = { state_scope = { change_region_name = "Old Anórien" } }
-				16 = { change_province_name = "Minas Tirith" }
-				19 = { change_province_name = "Harlond" }
-				owner = { FOR = { set_variable = { which = old_anorien_name value = 1 } } }
-			}
 			# [rohirrim] - Old Anórien
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = rohirrim }
 					province_id = 16
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = old_anorien_name value = 1.9 } } } }
-						owner = { FOR = { check_variable = { which = old_anorien_name value = 2.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = old_anorien_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = old_anorien_name value = 1.1 } } }
 					}
 				}
 				16 = { state_scope = { change_region_name = "Old Sunlending" } }
 				16 = { change_province_name = "Mundberg" }
-				owner = { FOR = { set_variable = { which = old_anorien_name value = 2 } } }
+				owner = { FOR = { set_variable = { which = old_anorien_name value = 1 } } }
 			}
-			# [dunedain] - Talath Anór
+			# [teleri, dunedain, eldar] - Old Anórien
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 8
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 16
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = talath_anor_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = talath_anor_name value = 0.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = old_anorien_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = old_anorien_name value = 2.1 } } }
 					}
 				}
-				8 = { state_scope = { change_region_name = "Talath Anór" } }
-				8 = { change_province_name = "Parth Lisc" }
-				13 = { change_province_name = "Parth Forant" }
-				owner = { FOR = { set_variable = { which = talath_anor_name value = 0 } } }
+				16 = { state_scope = { change_region_name = "Old Anórien" } }
+				16 = { change_province_name = "Minas Tirith" }
+				19 = { change_province_name = "Harlond" }
+				owner = { FOR = { set_variable = { which = old_anorien_name value = 2 } } }
 			}
 			# [rohirrim] - Talath Anór
 			random_owned = {
@@ -1441,11 +1606,33 @@ political_decisions = {
 					owner = { is_culture_group = rohirrim }
 					province_id = 8
 					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = talath_anor_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = talath_anor_name value = 0.1 } } }
+					}
+				}
+				8 = { state_scope = { change_region_name = "Sun Plains" } }
+				owner = { FOR = { set_variable = { which = talath_anor_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Talath Anór
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 8
+					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = talath_anor_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = talath_anor_name value = 1.1 } } }
 					}
 				}
-				8 = { state_scope = { change_region_name = "Sun Plains" } }
+				8 = { state_scope = { change_region_name = "Talath Anór" } }
+				8 = { change_province_name = "Parth Lisc" }
+				11 = { change_province_name = "Tawar-in-Drúedain" }
+				13 = { change_province_name = "Parth Forant" }
 				owner = { FOR = { set_variable = { which = talath_anor_name value = 1 } } }
 			}
 			# [wildmen] - Talath Anór
@@ -1459,23 +1646,9 @@ political_decisions = {
 					}
 				}
 				8 = { change_province_name = "Perth Lisc" }
+				11 = { change_province_name = "Drúadan Forest" }
 				13 = { change_province_name = "Perth Forant" }
 				owner = { FOR = { set_variable = { which = talath_anor_name value = 2 } } }
-			}
-			# [dunedain] - Far Anórien
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 1
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = far_anorien_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = far_anorien_name value = 0.1 } } }
-					}
-				}
-				1 = { state_scope = { change_region_name = "Far Anórien" } }
-				1 = { change_province_name = "Amon Anwar" }
-				2 = { change_province_name = "Eryn Anwar Rhúnen" }
-				owner = { FOR = { set_variable = { which = far_anorien_name value = 0 } } }
 			}
 			# [rohirrim] - Far Anórien
 			random_owned = {
@@ -1483,13 +1656,36 @@ political_decisions = {
 					owner = { is_culture_group = rohirrim }
 					province_id = 1
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = far_anorien_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = far_anorien_name value = 1.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = far_anorien_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = far_anorien_name value = 0.1 } } }
 					}
 				}
 				1 = { state_scope = { change_region_name = "Sunlending" } }
 				1 = { change_province_name = "Halifirien" }
 				2 = { change_province_name = "Eastern Firienholt" }
+				3 = { change_province_name = "Mering Steps" }
+				owner = { FOR = { set_variable = { which = far_anorien_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Far Anórien
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 1
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = far_anorien_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = far_anorien_name value = 1.1 } } }
+					}
+				}
+				1 = { state_scope = { change_region_name = "Far Anórien" } }
+				1 = { change_province_name = "Amon Anwar" }
+				2 = { change_province_name = "Eryn Anwar Rhúnen" }
+				3 = { change_province_name = "Imardhath" }
 				owner = { FOR = { set_variable = { which = far_anorien_name value = 1 } } }
 			}
 			# [wildmen] - Far Anórien
@@ -1513,9 +1709,13 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [dunedain] - Perth Iaur
+						# [teleri, dunedain, eldar] - Perth Iaur
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = perth_iaur_name value = -0.1 } } }
 								FOR = { check_variable = { which = perth_iaur_name value = 0.1 } }
@@ -1539,9 +1739,13 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Haerawreigion
+						# [teleri, dunedain, eldar] - Haerawreigion
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = haerawreigion_name value = -0.1 } } }
 								FOR = { check_variable = { which = haerawreigion_name value = 0.1 } }
@@ -1563,16 +1767,50 @@ political_decisions = {
 					owns = 182
 					owns = 183
 				}
+				AND = {
+					OR = {
+						# [teleri, dunedain, eldar] - Drúwaith Iaur
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = druwaith_iaur_name value = -0.1 } } }
+								FOR = { check_variable = { which = druwaith_iaur_name value = 0.1 } }
+							}
+						}
+						# [wildmen] - Drúwaith Iaur
+						AND = {
+							is_culture_group = wildmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = druwaith_iaur_name value = 0.9 } } }
+								FOR = { check_variable = { which = druwaith_iaur_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 193
+					owns = 99
+					owns = 188
+					owns = 189
+				}
 			}
 		}
 		allow = {
 			war = no
 		}
 		effect = {
-			# [dunedain] - Perth Iaur
+			# [teleri, dunedain, eldar] - Perth Iaur
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 172
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = perth_iaur_name value = -0.1 } } } }
@@ -1601,10 +1839,16 @@ political_decisions = {
 				174 = { change_province_name = "Ñynd" }
 				owner = { FOR = { set_variable = { which = perth_iaur_name value = 1 } } }
 			}
-			# [dunedain] - Haerawreigion
+			# [teleri, dunedain, eldar] - Haerawreigion
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 178
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = haerawreigion_name value = -0.1 } } } }
@@ -1631,6 +1875,40 @@ political_decisions = {
 				183 = { change_province_name = "Annogwain" }
 				owner = { FOR = { set_variable = { which = haerawreigion_name value = 1 } } }
 			}
+			# [teleri, dunedain, eldar] - Drúwaith Iaur
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 99
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = druwaith_iaur_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = druwaith_iaur_name value = 0.1 } } }
+					}
+				}
+				193 = { change_province_name = "Rhas Drúath" }
+				189 = { change_province_name = "Parth Pûkel" }
+				owner = { FOR = { set_variable = { which = druwaith_iaur_name value = 0 } } }
+			}
+			# [wildmen] - Drúwaith Iaur
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = wildmen }
+					province_id = 99
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = druwaith_iaur_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = druwaith_iaur_name value = 1.1 } } }
+					}
+				}
+				193 = { change_province_name = "Pûkelhyrne" }
+				189 = { change_province_name = "Perth Pûkel" }
+				owner = { FOR = { set_variable = { which = druwaith_iaur_name value = 1 } } }
+			}
 		}
 	}
 	rename_ithilien = {
@@ -1639,9 +1917,13 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [dunedain] - Harithilien
+						# [teleri, dunedain, eldar] - Harithilien
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = harithilien_name value = -0.1 } } }
 								FOR = { check_variable = { which = harithilien_name value = 0.1 } }
@@ -1664,9 +1946,13 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Emyn Arnen
+						# [teleri, dunedain, eldar] - Emyn Arnen
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = emyn_arnen_name value = -0.1 } } }
 								FOR = { check_variable = { which = emyn_arnen_name value = 0.1 } }
@@ -1689,17 +1975,21 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Forithilien
+						# [mordorian] - Forithilien
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = forithilien_name value = -0.1 } } }
 								FOR = { check_variable = { which = forithilien_name value = 0.1 } }
 							}
 						}
-						# [mordorian] - Forithilien
+						# [teleri, dunedain, eldar] - Forithilien
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = forithilien_name value = 0.9 } } }
 								FOR = { check_variable = { which = forithilien_name value = 1.1 } }
@@ -1728,10 +2018,16 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			# [dunedain] - Harithilien
+			# [teleri, dunedain, eldar] - Harithilien
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 210
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = harithilien_name value = -0.1 } } } }
@@ -1754,10 +2050,16 @@ political_decisions = {
 				210 = { state_scope = { change_region_name = "Hararnen" } }
 				owner = { FOR = { set_variable = { which = harithilien_name value = 1 } } }
 			}
-			# [dunedain] - Emyn Arnen
+			# [teleri, dunedain, eldar] - Emyn Arnen
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 205
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = emyn_arnen_name value = -0.1 } } } }
@@ -1780,32 +2082,38 @@ political_decisions = {
 				207 = { change_province_name = "Ostarnen" }
 				owner = { FOR = { set_variable = { which = emyn_arnen_name value = 1 } } }
 			}
-			# [dunedain] - Forithilien
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 198
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = forithilien_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = forithilien_name value = 0.1 } } }
-					}
-				}
-				198 = { state_scope = { change_region_name = "Forithilien" } }
-				199 = { change_province_name = "Taur Ithilien" }
-				204 = { change_province_name = "Ithilduin" }
-				owner = { FOR = { set_variable = { which = forithilien_name value = 0 } } }
-			}
 			# [mordorian] - Forithilien
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = mordorian }
 					province_id = 198
 					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = forithilien_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = forithilien_name value = 0.1 } } }
+					}
+				}
+				204 = { change_province_name = "Morgulduin" }
+				owner = { FOR = { set_variable = { which = forithilien_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Forithilien
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 198
+					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = forithilien_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = forithilien_name value = 1.1 } } }
 					}
 				}
-				204 = { change_province_name = "Morgulduin" }
+				198 = { state_scope = { change_region_name = "Forithilien" } }
+				199 = { change_province_name = "Taur Ithilien" }
+				204 = { change_province_name = "Ithilduin" }
 				owner = { FOR = { set_variable = { which = forithilien_name value = 1 } } }
 			}
 			# [wildmen] - Forithilien
@@ -1831,9 +2139,13 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [dunedain] - Lower Lebennin
+						# [teleri, dunedain, eldar] - Lower Lebennin
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = lower_lebennin_name value = -0.1 } } }
 								FOR = { check_variable = { which = lower_lebennin_name value = 0.1 } }
@@ -1855,9 +2167,13 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Methed Lebennin
+						# [teleri, dunedain, eldar] - Methed Lebennin
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = methed_lebennin_name value = -0.1 } } }
 								FOR = { check_variable = { which = methed_lebennin_name value = 0.1 } }
@@ -1884,10 +2200,16 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			# [dunedain] - Lower Lebennin
+			# [teleri, dunedain, eldar] - Lower Lebennin
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 45
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = lower_lebennin_name value = -0.1 } } } }
@@ -1910,10 +2232,16 @@ political_decisions = {
 				47 = { change_province_name = "Balimur" }
 				owner = { FOR = { set_variable = { which = lower_lebennin_name value = 1 } } }
 			}
-			# [dunedain] - Methed Lebennin
+			# [teleri, dunedain, eldar] - Methed Lebennin
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 49
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = methed_lebennin_name value = -0.1 } } } }
@@ -1957,9 +2285,13 @@ political_decisions = {
 								FOR = { check_variable = { which = eredtir_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Eredtir
+						# [teleri, dunedain, eldar] - Eredtir
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = eredtir_name value = 0.9 } } }
 								FOR = { check_variable = { which = eredtir_name value = 1.1 } }
@@ -1981,9 +2313,13 @@ political_decisions = {
 								FOR = { check_variable = { which = forethir_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Forethir
+						# [teleri, dunedain, eldar] - Forethir
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = forethir_name value = 0.9 } } }
 								FOR = { check_variable = { which = forethir_name value = 1.1 } }
@@ -2017,9 +2353,13 @@ political_decisions = {
 								FOR = { check_variable = { which = rhuntir_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Rhuntir
+						# [teleri, dunedain, eldar] - Rhuntir
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = rhuntir_name value = 0.9 } } }
 								FOR = { check_variable = { which = rhuntir_name value = 1.1 } }
@@ -2042,9 +2382,13 @@ political_decisions = {
 								FOR = { check_variable = { which = laergaladrin_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Laergaladrín
+						# [teleri, dunedain, eldar] - Laergaladrín
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = laergaladrin_name value = 0.9 } } }
 								FOR = { check_variable = { which = laergaladrin_name value = 1.1 } }
@@ -2056,6 +2400,14 @@ political_decisions = {
 							OR = {
 								FOR = { NOT = { check_variable = { which = laergaladrin_name value = 1.9 } } }
 								FOR = { check_variable = { which = laergaladrin_name value = 2.1 } }
+							}
+						}
+						# [wildmen] - Laergaladrín
+						AND = {
+							is_culture_group = wildmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = laergaladrin_name value = 2.9 } } }
+								FOR = { check_variable = { which = laergaladrin_name value = 3.1 } }
 							}
 						}
 					}
@@ -2077,9 +2429,13 @@ political_decisions = {
 								FOR = { check_variable = { which = harfalas_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Harfalas
+						# [teleri, dunedain, eldar] - Harfalas
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = harfalas_name value = 0.9 } } }
 								FOR = { check_variable = { which = harfalas_name value = 1.1 } }
@@ -2113,9 +2469,13 @@ political_decisions = {
 								FOR = { check_variable = { which = carnentir_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Carnentir
+						# [teleri, dunedain, eldar] - Carnentir
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = carnentir_name value = 0.9 } } }
 								FOR = { check_variable = { which = carnentir_name value = 1.1 } }
@@ -2142,9 +2502,13 @@ political_decisions = {
 								FOR = { check_variable = { which = eraguk_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Eraguk
+						# [teleri, dunedain, eldar] - Eraguk
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = eraguk_name value = 0.9 } } }
 								FOR = { check_variable = { which = eraguk_name value = 1.1 } }
@@ -2180,10 +2544,16 @@ political_decisions = {
 				219 = { change_province_name = "Andâ-Kadar" }
 				owner = { FOR = { set_variable = { which = eredtir_name value = 0 } } }
 			}
-			# [dunedain] - Eredtir
+			# [teleri, dunedain, eldar] - Eredtir
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 215
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = eredtir_name value = 0.9 } } } }
@@ -2206,10 +2576,16 @@ political_decisions = {
 				232 = { change_province_name = "Zimralôni" }
 				owner = { FOR = { set_variable = { which = forethir_name value = 0 } } }
 			}
-			# [dunedain] - Forethir
+			# [teleri, dunedain, eldar] - Forethir
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 232
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = forethir_name value = 0.9 } } } }
@@ -2250,10 +2626,16 @@ political_decisions = {
 				241 = { change_province_name = "Ausk Harmaka" }
 				owner = { FOR = { set_variable = { which = rhuntir_name value = 0 } } }
 			}
-			# [dunedain] - Rhuntir
+			# [teleri, dunedain, eldar] - Rhuntir
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 238
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = rhuntir_name value = 0.9 } } } }
@@ -2276,10 +2658,16 @@ political_decisions = {
 				221 = { change_province_name = "Ausk Laer" }
 				owner = { FOR = { set_variable = { which = laergaladrin_name value = 0 } } }
 			}
-			# [dunedain] - Laergaladrín
+			# [teleri, dunedain, eldar] - Laergaladrín
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 15
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = laergaladrin_name value = 0.9 } } } }
@@ -2304,6 +2692,19 @@ political_decisions = {
 				15 = { change_province_name = "Benish Armon" }
 				owner = { FOR = { set_variable = { which = laergaladrin_name value = 2 } } }
 			}
+			# [wildmen] - Laergaladrín
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = wildmen }
+					province_id = 15
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = laergaladrin_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = laergaladrin_name value = 3.1 } } }
+					}
+				}
+				15 = { change_province_name = "Benish Armon" }
+				owner = { FOR = { set_variable = { which = laergaladrin_name value = 3 } } }
+			}
 			# [kingsmen] - Harfalas
 			random_owned = {
 				limit = {
@@ -2318,10 +2719,16 @@ political_decisions = {
 				231 = { change_province_name = "Has Adûnê" }
 				owner = { FOR = { set_variable = { which = harfalas_name value = 0 } } }
 			}
-			# [dunedain] - Harfalas
+			# [teleri, dunedain, eldar] - Harfalas
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 227
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = harfalas_name value = 0.9 } } } }
@@ -2365,10 +2772,16 @@ political_decisions = {
 				253 = { change_province_name = "Imlad Burús" }
 				owner = { FOR = { set_variable = { which = carnentir_name value = 0 } } }
 			}
-			# [dunedain] - Carnentir
+			# [teleri, dunedain, eldar] - Carnentir
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 243
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = carnentir_name value = 0.9 } } } }
@@ -2397,10 +2810,16 @@ political_decisions = {
 				246 = { state_scope = { change_region_name = "Eraguk" } }
 				owner = { FOR = { set_variable = { which = eraguk_name value = 0 } } }
 			}
-			# [dunedain] - Eraguk
+			# [teleri, dunedain, eldar] - Eraguk
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 246
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = eraguk_name value = 0.9 } } } }
@@ -2418,10 +2837,12 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [dunedain, wildmen] - Nan Lefnui
+						# [teleri, dunedain, eldar, wildmen] - Nan Lefnui
 						AND = {
 							OR = {
+								is_culture_group = teleri
 								is_culture_group = dunedain
+								is_culture_group = eldar
 								is_culture_group = wildmen
 							}
 							OR = {
@@ -2437,9 +2858,13 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Angast
+						# [teleri, dunedain, eldar] - Angast
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = angast_name value = -0.1 } } }
 								FOR = { check_variable = { which = angast_name value = 0.1 } }
@@ -2463,9 +2888,13 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Ras Morthil
+						# [teleri, dunedain, eldar] - Ras Morthil
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = ras_morthil_name value = -0.1 } } }
 								FOR = { check_variable = { which = ras_morthil_name value = 0.1 } }
@@ -2492,12 +2921,14 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			# [dunedain, wildmen] - Nan Lefnui
+			# [teleri, dunedain, eldar, wildmen] - Nan Lefnui
 			random_owned = {
 				limit = {
 					owner = {
 						OR = {
+							is_culture_group = teleri
 							is_culture_group = dunedain
+							is_culture_group = eldar
 							is_culture_group = wildmen
 						}
 					}
@@ -2510,10 +2941,16 @@ political_decisions = {
 				159 = { change_province_name = "Tum-na-Ceryn" }
 				owner = { FOR = { set_variable = { which = nan_lefnui_name value = 0 } } }
 			}
-			# [dunedain] - Angast
+			# [teleri, dunedain, eldar] - Angast
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 20
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = angast_name value = -0.1 } } } }
@@ -2538,10 +2975,16 @@ political_decisions = {
 				20 = { change_province_name = "Bar Enqui" }
 				owner = { FOR = { set_variable = { which = angast_name value = 1 } } }
 			}
-			# [dunedain] - Ras Morthil
+			# [teleri, dunedain, eldar] - Ras Morthil
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 167
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = ras_morthil_name value = -0.1 } } } }
@@ -2574,17 +3017,21 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [dunedain] - Upper Morthond Vale
+						# [dwarves] - Upper Morthond Vale
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = dwarves
 							OR = {
 								FOR = { NOT = { check_variable = { which = upper_morthond_vale_name value = -0.1 } } }
 								FOR = { check_variable = { which = upper_morthond_vale_name value = 0.1 } }
 							}
 						}
-						# [dwarves] - Upper Morthond Vale
+						# [teleri, dunedain, eldar] - Upper Morthond Vale
 						AND = {
-							is_culture_group = dwarves
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = upper_morthond_vale_name value = 0.9 } } }
 								FOR = { check_variable = { which = upper_morthond_vale_name value = 1.1 } }
@@ -2599,9 +3046,13 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Lower Morthond Vale
+						# [teleri, dunedain, eldar] - Lower Morthond Vale
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = lower_morthond_vale_name value = -0.1 } } }
 								FOR = { check_variable = { which = lower_morthond_vale_name value = 0.1 } }
@@ -2631,36 +3082,48 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			# [dunedain] - Upper Morthond Vale
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 109
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = upper_morthond_vale_name value = -0.1 } } } }
-						owner = { FOR = { check_variable = { which = upper_morthond_vale_name value = 0.1 } } }
-					}
-				}
-				112 = { change_province_name = "Cabed Angren" }
-				owner = { FOR = { set_variable = { which = upper_morthond_vale_name value = 0 } } }
-			}
 			# [dwarves] - Upper Morthond Vale
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = dwarves }
 					province_id = 109
 					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = upper_morthond_vale_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = upper_morthond_vale_name value = 0.1 } } }
+					}
+				}
+				112 = { change_province_name = "Kechel" }
+				owner = { FOR = { set_variable = { which = upper_morthond_vale_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Upper Morthond Vale
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 109
+					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = upper_morthond_vale_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = upper_morthond_vale_name value = 1.1 } } }
 					}
 				}
-				112 = { change_province_name = "Kechel" }
+				112 = { change_province_name = "Cabed Angren" }
 				owner = { FOR = { set_variable = { which = upper_morthond_vale_name value = 1 } } }
 			}
-			# [dunedain] - Lower Morthond Vale
+			# [teleri, dunedain, eldar] - Lower Morthond Vale
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 94
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = lower_morthond_vale_name value = -0.1 } } } }
@@ -2704,20 +3167,31 @@ political_decisions = {
 								FOR = { check_variable = { which = taerdorath_rhunen_name value = 0.1 } }
 							}
 						}
+						# [teleri, eldar] - Taerdôrath Rhúnen
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = taerdorath_rhunen_name value = 0.9 } } }
+								FOR = { check_variable = { which = taerdorath_rhunen_name value = 1.1 } }
+							}
+						}
 						# [dunedain] - Taerdôrath Rhúnen
 						AND = {
 							is_culture_group = dunedain
 							OR = {
-								FOR = { NOT = { check_variable = { which = taerdorath_rhunen_name value = 0.9 } } }
-								FOR = { check_variable = { which = taerdorath_rhunen_name value = 1.1 } }
+								FOR = { NOT = { check_variable = { which = taerdorath_rhunen_name value = 1.9 } } }
+								FOR = { check_variable = { which = taerdorath_rhunen_name value = 2.1 } }
 							}
 						}
 						# [dwarves] - Taerdôrath Rhúnen
 						AND = {
 							is_culture_group = dwarves
 							OR = {
-								FOR = { NOT = { check_variable = { which = taerdorath_rhunen_name value = 1.9 } } }
-								FOR = { check_variable = { which = taerdorath_rhunen_name value = 2.1 } }
+								FOR = { NOT = { check_variable = { which = taerdorath_rhunen_name value = 2.9 } } }
+								FOR = { check_variable = { which = taerdorath_rhunen_name value = 3.1 } }
 							}
 						}
 					}
@@ -2730,9 +3204,13 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [dunedain] - Anfalas
+						# [teleri, dunedain, eldar] - Anfalas
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = anfalas_name value = -0.1 } } }
 								FOR = { check_variable = { which = anfalas_name value = 0.1 } }
@@ -2770,19 +3248,38 @@ political_decisions = {
 				117 = { change_province_name = "Emyn Gost" }
 				owner = { FOR = { set_variable = { which = taerdorath_rhunen_name value = 0 } } }
 			}
-			# [dunedain] - Taerdôrath Rhúnen
+			# [teleri, eldar] - Taerdôrath Rhúnen
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = eldar
+						}
+					}
 					province_id = 115
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = taerdorath_rhunen_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = taerdorath_rhunen_name value = 1.1 } } }
 					}
 				}
-				116 = { change_province_name = "White Mountains" }
+				116 = { change_province_name = "Ered Nimrais" }
 				117 = { change_province_name = "Umb Estelwain" }
 				owner = { FOR = { set_variable = { which = taerdorath_rhunen_name value = 1 } } }
+			}
+			# [dunedain] - Taerdôrath Rhúnen
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 115
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = taerdorath_rhunen_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = taerdorath_rhunen_name value = 2.1 } } }
+					}
+				}
+				116 = { change_province_name = "White Mountains" }
+				117 = { change_province_name = "Umb Estelwain" }
+				owner = { FOR = { set_variable = { which = taerdorath_rhunen_name value = 2 } } }
 			}
 			# [dwarves] - Taerdôrath Rhúnen
 			random_owned = {
@@ -2790,18 +3287,24 @@ political_decisions = {
 					owner = { is_culture_group = dwarves }
 					province_id = 115
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = taerdorath_rhunen_name value = 1.9 } } } }
-						owner = { FOR = { check_variable = { which = taerdorath_rhunen_name value = 2.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = taerdorath_rhunen_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = taerdorath_rhunen_name value = 3.1 } } }
 					}
 				}
 				116 = { change_province_name = "Forbidden Halls" }
 				117 = { change_province_name = "Zigil Jabâl" }
-				owner = { FOR = { set_variable = { which = taerdorath_rhunen_name value = 2 } } }
+				owner = { FOR = { set_variable = { which = taerdorath_rhunen_name value = 3 } } }
 			}
-			# [dunedain] - Anfalas
+			# [teleri, dunedain, eldar] - Anfalas
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 130
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = anfalas_name value = -0.1 } } } }
@@ -2834,16 +3337,23 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
-						# [teleri, avari, eldar] - Dor-en-Ernil
+						# [teleri, eldar] - Dor-en-Ernil
 						AND = {
 							OR = {
 								is_culture_group = teleri
-								is_culture_group = avari
 								is_culture_group = eldar
 							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = dor-en-ernil_name value = -0.1 } } }
 								FOR = { check_variable = { which = dor-en-ernil_name value = 0.1 } }
+							}
+						}
+						# [dunedain] - Dor-en-Ernil
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = dor-en-ernil_name value = 0.9 } } }
+								FOR = { check_variable = { which = dor-en-ernil_name value = 1.1 } }
 							}
 						}
 					}
@@ -2857,13 +3367,12 @@ political_decisions = {
 			war = no
 		}
 		effect = {
-			# [teleri, avari, eldar] - Dor-en-Ernil
+			# [teleri, eldar] - Dor-en-Ernil
 			random_owned = {
 				limit = {
 					owner = {
 						OR = {
 							is_culture_group = teleri
-							is_culture_group = avari
 							is_culture_group = eldar
 						}
 					}
@@ -2875,6 +3384,19 @@ political_decisions = {
 				}
 				71 = { change_province_name = "Tirith Aear" }
 				owner = { FOR = { set_variable = { which = dor-en-ernil_name value = 0 } } }
+			}
+			# [dunedain] - Dor-en-Ernil
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 69
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = dor-en-ernil_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = dor-en-ernil_name value = 1.1 } } }
+					}
+				}
+				71 = { change_province_name = "Dol Amroth" }
+				owner = { FOR = { set_variable = { which = dor-en-ernil_name value = 1 } } }
 			}
 		}
 	}
@@ -2927,25 +3449,29 @@ political_decisions = {
 								FOR = { check_variable = { which = muzeida_vale_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Muzeida Vale
+						# [khandish] - Muzeida Vale
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = khandish
 							OR = {
 								FOR = { NOT = { check_variable = { which = muzeida_vale_name value = 0.9 } } }
 								FOR = { check_variable = { which = muzeida_vale_name value = 1.1 } }
 							}
 						}
-						# [khandish] - Muzeida Vale
+						# [mordorian] - Muzeida Vale
 						AND = {
-							is_culture_group = khandish
+							is_culture_group = mordorian
 							OR = {
 								FOR = { NOT = { check_variable = { which = muzeida_vale_name value = 1.9 } } }
 								FOR = { check_variable = { which = muzeida_vale_name value = 2.1 } }
 							}
 						}
-						# [mordorian] - Muzeida Vale
+						# [teleri, dunedain, eldar] - Muzeida Vale
 						AND = {
-							is_culture_group = mordorian
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = muzeida_vale_name value = 2.9 } } }
 								FOR = { check_variable = { which = muzeida_vale_name value = 3.1 } }
@@ -2961,12 +3487,14 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [kingsmen, dunedain, khandish, haradrim] - Kajbah
+						# [teleri, kingsmen, dunedain, khandish, eldar, haradrim] - Kajbah
 						AND = {
 							OR = {
+								is_culture_group = teleri
 								is_culture_group = kingsmen
 								is_culture_group = dunedain
 								is_culture_group = khandish
+								is_culture_group = eldar
 								is_culture_group = haradrim
 							}
 							OR = {
@@ -3042,35 +3570,21 @@ political_decisions = {
 				254 = { change_province_name = "Deshgar" }
 				owner = { FOR = { set_variable = { which = muzeida_vale_name value = 0 } } }
 			}
-			# [dunedain] - Muzeida Vale
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 254
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = muzeida_vale_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = muzeida_vale_name value = 1.1 } } }
-					}
-				}
-				340 = { state_scope = { change_region_name = "Sirdim Vale" } }
-				342 = { change_province_name = "Imlad Fuin" }
-				owner = { FOR = { set_variable = { which = muzeida_vale_name value = 1 } } }
-			}
 			# [khandish] - Muzeida Vale
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = khandish }
 					province_id = 254
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = muzeida_vale_name value = 1.9 } } } }
-						owner = { FOR = { check_variable = { which = muzeida_vale_name value = 2.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = muzeida_vale_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = muzeida_vale_name value = 1.1 } } }
 					}
 				}
 				340 = { state_scope = { change_region_name = "Muzeida Vale" } }
 				341 = { change_province_name = "Lugarlûr" }
 				342 = { change_province_name = "Hûk Saromis" }
 				254 = { change_province_name = "Kerghila" }
-				owner = { FOR = { set_variable = { which = muzeida_vale_name value = 2 } } }
+				owner = { FOR = { set_variable = { which = muzeida_vale_name value = 1 } } }
 			}
 			# [mordorian] - Muzeida Vale
 			random_owned = {
@@ -3078,21 +3592,43 @@ political_decisions = {
 					owner = { is_culture_group = mordorian }
 					province_id = 254
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = muzeida_vale_name value = 2.9 } } } }
-						owner = { FOR = { check_variable = { which = muzeida_vale_name value = 3.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = muzeida_vale_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = muzeida_vale_name value = 2.1 } } }
 					}
 				}
 				341 = { change_province_name = "Kal Nargil" }
-				owner = { FOR = { set_variable = { which = muzeida_vale_name value = 3 } } }
+				owner = { FOR = { set_variable = { which = muzeida_vale_name value = 2 } } }
 			}
-			# [kingsmen, dunedain, khandish, haradrim] - Kajbah
+			# [teleri, dunedain, eldar] - Muzeida Vale
 			random_owned = {
 				limit = {
 					owner = {
 						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 254
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = muzeida_vale_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = muzeida_vale_name value = 3.1 } } }
+					}
+				}
+				340 = { state_scope = { change_region_name = "Nan Sirdim" } }
+				342 = { change_province_name = "Imlad Fuin" }
+				owner = { FOR = { set_variable = { which = muzeida_vale_name value = 3 } } }
+			}
+			# [teleri, kingsmen, dunedain, khandish, eldar, haradrim] - Kajbah
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
 							is_culture_group = kingsmen
 							is_culture_group = dunedain
 							is_culture_group = khandish
+							is_culture_group = eldar
 							is_culture_group = haradrim
 						}
 					}
@@ -3124,17 +3660,21 @@ political_decisions = {
 								FOR = { check_variable = { which = haruzan_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Harûzan
+						# [khandish] - Harûzan
 						AND = {
-							is_culture_group = dunedain
+							is_culture_group = khandish
 							OR = {
 								FOR = { NOT = { check_variable = { which = haruzan_name value = 0.9 } } }
 								FOR = { check_variable = { which = haruzan_name value = 1.1 } }
 							}
 						}
-						# [khandish] - Harûzan
+						# [teleri, dunedain, eldar] - Harûzan
 						AND = {
-							is_culture_group = khandish
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = haruzan_name value = 1.9 } } }
 								FOR = { check_variable = { which = haruzan_name value = 2.1 } }
@@ -3160,9 +3700,13 @@ political_decisions = {
 								FOR = { check_variable = { which = pezarsan_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Pezarsan
+						# [teleri, dunedain, eldar] - Pezarsan
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = pezarsan_name value = 0.9 } } }
 								FOR = { check_variable = { which = pezarsan_name value = 1.1 } }
@@ -3255,9 +3799,13 @@ political_decisions = {
 								FOR = { check_variable = { which = ninzayan_name value = 1.1 } }
 							}
 						}
-						# [dunedain] - Nînzayan
+						# [teleri, dunedain, eldar] - Nînzayan
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = ninzayan_name value = 1.9 } } }
 								FOR = { check_variable = { which = ninzayan_name value = 2.1 } }
@@ -3283,9 +3831,13 @@ political_decisions = {
 								FOR = { check_variable = { which = harwan_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Harwan
+						# [teleri, dunedain, eldar] - Harwan
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = harwan_name value = 0.9 } } }
 								FOR = { check_variable = { which = harwan_name value = 1.1 } }
@@ -3324,34 +3876,40 @@ political_decisions = {
 				334 = { change_province_name = "Korb Traskal" }
 				owner = { FOR = { set_variable = { which = haruzan_name value = 0 } } }
 			}
-			# [dunedain] - Harûzan
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = dunedain }
-					province_id = 334
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = haruzan_name value = 0.9 } } } }
-						owner = { FOR = { check_variable = { which = haruzan_name value = 1.1 } } }
-					}
-				}
-				338 = { state_scope = { change_region_name = "Al Amrûn" } }
-				339 = { change_province_name = "Iach Ilaz" }
-				334 = { change_province_name = "Amrûn" }
-				owner = { FOR = { set_variable = { which = haruzan_name value = 1 } } }
-			}
 			# [khandish] - Harûzan
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = khandish }
 					province_id = 334
 					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = haruzan_name value = 1.9 } } } }
-						owner = { FOR = { check_variable = { which = haruzan_name value = 2.1 } } }
+						owner = { FOR = { NOT = { check_variable = { which = haruzan_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = haruzan_name value = 1.1 } } }
 					}
 				}
 				338 = { state_scope = { change_region_name = "West Khand" } }
 				339 = { change_province_name = "Velsinir" }
 				334 = { change_province_name = "Korb Traskal" }
+				owner = { FOR = { set_variable = { which = haruzan_name value = 1 } } }
+			}
+			# [teleri, dunedain, eldar] - Harûzan
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 334
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = haruzan_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = haruzan_name value = 2.1 } } }
+					}
+				}
+				338 = { state_scope = { change_region_name = "Al Amrûn" } }
+				339 = { change_province_name = "Iach Ilaz" }
+				334 = { change_province_name = "Amrûn" }
 				owner = { FOR = { set_variable = { which = haruzan_name value = 2 } } }
 			}
 			# [kingsmen, khandish, haradrim] - Pezarsan
@@ -3375,10 +3933,16 @@ political_decisions = {
 				295 = { change_province_name = "Haz Azuhmeda" }
 				owner = { FOR = { set_variable = { which = pezarsan_name value = 0 } } }
 			}
-			# [dunedain] - Pezarsan
+			# [teleri, dunedain, eldar] - Pezarsan
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 292
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = pezarsan_name value = 0.9 } } } }
@@ -3487,10 +4051,16 @@ political_decisions = {
 				287 = { change_province_name = "Sûkh Abârrim" }
 				owner = { FOR = { set_variable = { which = ninzayan_name value = 1 } } }
 			}
-			# [dunedain] - Nînzayan
+			# [teleri, dunedain, eldar] - Nînzayan
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 284
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = ninzayan_name value = 1.9 } } } }
@@ -3521,10 +4091,16 @@ political_decisions = {
 				288 = { change_province_name = "Muzdal Ifar" }
 				owner = { FOR = { set_variable = { which = harwan_name value = 0 } } }
 			}
-			# [dunedain] - Harwan
+			# [teleri, dunedain, eldar] - Harwan
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 288
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = harwan_name value = 0.9 } } } }
@@ -3551,9 +4127,13 @@ political_decisions = {
 								FOR = { check_variable = { which = sakal_an-khar_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Sakal an-Khar
+						# [teleri, dunedain, eldar] - Sakal an-Khar
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = sakal_an-khar_name value = 0.9 } } }
 								FOR = { check_variable = { which = sakal_an-khar_name value = 1.1 } }
@@ -3585,9 +4165,13 @@ political_decisions = {
 								FOR = { check_variable = { which = sakal-pharaz_name value = 0.1 } }
 							}
 						}
-						# [dunedain] - Sakal-Pharaz
+						# [teleri, dunedain, eldar] - Sakal-Pharaz
 						AND = {
-							is_culture_group = dunedain
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = sakal-pharaz_name value = 0.9 } } }
 								FOR = { check_variable = { which = sakal-pharaz_name value = 1.1 } }
@@ -3649,10 +4233,16 @@ political_decisions = {
 				282 = { change_province_name = "An Ruilin" }
 				owner = { FOR = { set_variable = { which = sakal_an-khar_name value = 0 } } }
 			}
-			# [dunedain] - Sakal an-Khar
+			# [teleri, dunedain, eldar] - Sakal an-Khar
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 256
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = sakal_an-khar_name value = 0.9 } } } }
@@ -3695,10 +4285,16 @@ political_decisions = {
 				275 = { change_province_name = "Sarkâna" }
 				owner = { FOR = { set_variable = { which = sakal-pharaz_name value = 0 } } }
 			}
-			# [dunedain] - Sakal-Pharaz
+			# [teleri, dunedain, eldar] - Sakal-Pharaz
 			random_owned = {
 				limit = {
-					owner = { is_culture_group = dunedain }
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
 					province_id = 271
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = sakal-pharaz_name value = 0.9 } } } }
@@ -3742,6 +4338,653 @@ political_decisions = {
 				}
 				261 = { state_scope = { change_region_name = "Sakal an-Khar" } }
 				owner = { FOR = { set_variable = { which = glinfalas_name value = 0 } } }
+			}
+		}
+	}
+}
+# Eriador
+political_decisions = {
+	rename_lindon = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# [teleri, eldar] - Dânwaith
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = danwaith_name value = -0.1 } } }
+								FOR = { check_variable = { which = danwaith_name value = 0.1 } }
+							}
+						}
+						# [dunedain] - Dânwaith
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = danwaith_name value = 0.9 } } }
+								FOR = { check_variable = { which = danwaith_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 67
+					owns = 921
+					owns = 185
+					owns = 922
+					owns = 924
+				}
+				AND = {
+					OR = {
+						# [spiders] - Forlindon
+						AND = {
+							is_culture_group = spiders
+							OR = {
+								FOR = { NOT = { check_variable = { which = forlindon_name value = -0.1 } } }
+								FOR = { check_variable = { which = forlindon_name value = 0.1 } }
+							}
+						}
+					}
+					owns = 224
+					owns = 950
+					owns = 951
+					owns = 952
+					owns = 237
+					owns = 111
+				}
+				AND = {
+					OR = {
+						# [teleri, dunedain, eldar] - Western Islands
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = western_islands_name value = -0.1 } } }
+								FOR = { check_variable = { which = western_islands_name value = 0.1 } }
+							}
+						}
+					}
+					owns = 961
+					owns = 962
+					owns = 963
+				}
+				AND = {
+					OR = {
+						# [northmen, breelander, anduinrim, hobbits, dunedain, rohirrim, wildmen] - Dor Leithan
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = breelander
+								is_culture_group = anduinrim
+								is_culture_group = hobbits
+								is_culture_group = dunedain
+								is_culture_group = rohirrim
+								is_culture_group = wildmen
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = dor_leithan_name value = -0.1 } } }
+								FOR = { check_variable = { which = dor_leithan_name value = 0.1 } }
+							}
+						}
+						# [teleri, eldar] - Dor Leithan
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = dor_leithan_name value = 0.9 } } }
+								FOR = { check_variable = { which = dor_leithan_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 920
+					owns = 137
+					owns = 923
+				}
+				AND = {
+					OR = {
+						# [northmen, breelander, anduinrim, hobbits, rohirrim, wildmen] - Emyn Beraid
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = breelander
+								is_culture_group = anduinrim
+								is_culture_group = hobbits
+								is_culture_group = rohirrim
+								is_culture_group = wildmen
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = emyn_beraid_name value = -0.1 } } }
+								FOR = { check_variable = { which = emyn_beraid_name value = 0.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Emyn Beraid
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = emyn_beraid_name value = 0.9 } } }
+								FOR = { check_variable = { which = emyn_beraid_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 64
+					owns = 932
+					owns = 933
+					owns = 934
+					owns = 106
+				}
+				AND = {
+					OR = {
+						# [breelander, hobbits] - Rhûlindon
+						AND = {
+							OR = {
+								is_culture_group = breelander
+								is_culture_group = hobbits
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = rhulindon_name value = -0.1 } } }
+								FOR = { check_variable = { which = rhulindon_name value = 0.1 } }
+							}
+						}
+						# [kingsmen] - Rhûlindon
+						AND = {
+							is_culture_group = kingsmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = rhulindon_name value = 0.9 } } }
+								FOR = { check_variable = { which = rhulindon_name value = 1.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Rhûlindon
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = rhulindon_name value = 1.9 } } }
+								FOR = { check_variable = { which = rhulindon_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 930
+					owns = 948
+					owns = 935
+					owns = 936
+					owns = 937
+					owns = 95
+				}
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			# [teleri, eldar] - Dânwaith
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = eldar
+						}
+					}
+					province_id = 67
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = danwaith_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = danwaith_name value = 0.1 } } }
+					}
+				}
+				922 = { change_province_name = "Amon Dior" }
+				owner = { FOR = { set_variable = { which = danwaith_name value = 0 } } }
+			}
+			# [dunedain] - Dânwaith
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 67
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = danwaith_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = danwaith_name value = 1.1 } } }
+					}
+				}
+				922 = { change_province_name = "Ost Denethor" }
+				owner = { FOR = { set_variable = { which = danwaith_name value = 1 } } }
+			}
+			# [spiders] - Forlindon
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = spiders }
+					province_id = 111
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = forlindon_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = forlindon_name value = 0.1 } } }
+					}
+				}
+				224 = { state_scope = { change_region_name = "Western Islands" } }
+				owner = { FOR = { set_variable = { which = forlindon_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Western Islands
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 961
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = western_islands_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = western_islands_name value = 0.1 } } }
+					}
+				}
+				961 = { state_scope = { change_region_name = "Dor Maedhros" } }
+				owner = { FOR = { set_variable = { which = western_islands_name value = 0 } } }
+			}
+			# [northmen, breelander, anduinrim, hobbits, dunedain, rohirrim, wildmen] - Dor Leithan
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = breelander
+							is_culture_group = anduinrim
+							is_culture_group = hobbits
+							is_culture_group = dunedain
+							is_culture_group = rohirrim
+							is_culture_group = wildmen
+						}
+					}
+					province_id = 137
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = dor_leithan_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = dor_leithan_name value = 0.1 } } }
+					}
+				}
+				920 = { state_scope = { change_region_name = "Luthany" } }
+				owner = { FOR = { set_variable = { which = dor_leithan_name value = 0 } } }
+			}
+			# [teleri, eldar] - Dor Leithan
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = eldar
+						}
+					}
+					province_id = 137
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = dor_leithan_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = dor_leithan_name value = 1.1 } } }
+					}
+				}
+				920 = { state_scope = { change_region_name = "Dor Leithan" } }
+				owner = { FOR = { set_variable = { which = dor_leithan_name value = 1 } } }
+			}
+			# [northmen, breelander, anduinrim, hobbits, rohirrim, wildmen] - Emyn Beraid
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = breelander
+							is_culture_group = anduinrim
+							is_culture_group = hobbits
+							is_culture_group = rohirrim
+							is_culture_group = wildmen
+						}
+					}
+					province_id = 64
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = emyn_beraid_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = emyn_beraid_name value = 0.1 } } }
+					}
+				}
+				64 = { state_scope = { change_region_name = "Tower Hills" } }
+				owner = { FOR = { set_variable = { which = emyn_beraid_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Emyn Beraid
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 64
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = emyn_beraid_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = emyn_beraid_name value = 1.1 } } }
+					}
+				}
+				64 = { state_scope = { change_region_name = "Emyn Beraid" } }
+				owner = { FOR = { set_variable = { which = emyn_beraid_name value = 1 } } }
+			}
+			# [breelander, hobbits] - Rhûlindon
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = breelander
+							is_culture_group = hobbits
+						}
+					}
+					province_id = 95
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = rhulindon_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = rhulindon_name value = 0.1 } } }
+					}
+				}
+				935 = { change_province_name = "East Grey Havens" }
+				936 = { change_province_name = "Grey Havens" }
+				owner = { FOR = { set_variable = { which = rhulindon_name value = 0 } } }
+			}
+			# [kingsmen] - Rhûlindon
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = kingsmen }
+					province_id = 95
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = rhulindon_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = rhulindon_name value = 1.1 } } }
+					}
+				}
+				935 = { change_province_name = "Azûl-Nilazrakadar" }
+				936 = { change_province_name = "Nilazrakadar" }
+				owner = { FOR = { set_variable = { which = rhulindon_name value = 1 } } }
+			}
+			# [teleri, dunedain, eldar] - Rhûlindon
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 95
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = rhulindon_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = rhulindon_name value = 2.1 } } }
+					}
+				}
+				935 = { change_province_name = "Mithrûnlond" }
+				936 = { change_province_name = "Mithlond" }
+				owner = { FOR = { set_variable = { which = rhulindon_name value = 2 } } }
+			}
+		}
+	}
+	rename_ered_luin = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# [teleri, eldar] - Old Sylvana
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = old_sylvana_name value = -0.1 } } }
+								FOR = { check_variable = { which = old_sylvana_name value = 0.1 } }
+							}
+						}
+						# [dunedain] - Old Sylvana
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = old_sylvana_name value = 0.9 } } }
+								FOR = { check_variable = { which = old_sylvana_name value = 1.1 } }
+							}
+						}
+						# [dwarves] - Old Sylvana
+						AND = {
+							is_culture_group = dwarves
+							OR = {
+								FOR = { NOT = { check_variable = { which = old_sylvana_name value = 1.9 } } }
+								FOR = { check_variable = { which = old_sylvana_name value = 2.1 } }
+							}
+						}
+						# [wildmen] - Old Sylvana
+						AND = {
+							is_culture_group = wildmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = old_sylvana_name value = 2.9 } } }
+								FOR = { check_variable = { which = old_sylvana_name value = 3.1 } }
+							}
+						}
+					}
+					owns = 915
+					owns = 916
+					owns = 296
+					owns = 314
+				}
+				AND = {
+					OR = {
+						# [teleri, eldar] - Harvaneth
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = harvaneth_name value = -0.1 } } }
+								FOR = { check_variable = { which = harvaneth_name value = 0.1 } }
+							}
+						}
+						# [dunedain] - Harvaneth
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = harvaneth_name value = 0.9 } } }
+								FOR = { check_variable = { which = harvaneth_name value = 1.1 } }
+							}
+						}
+						# [wildmen] - Harvaneth
+						AND = {
+							is_culture_group = wildmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = harvaneth_name value = 1.9 } } }
+								FOR = { check_variable = { which = harvaneth_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 914
+					owns = 136
+					owns = 316
+					owns = 445
+				}
+				AND = {
+					OR = {
+						# [dwarves] - Southern Ered Luin
+						AND = {
+							is_culture_group = dwarves
+							OR = {
+								FOR = { NOT = { check_variable = { which = southern_ered_luin_name value = -0.1 } } }
+								FOR = { check_variable = { which = southern_ered_luin_name value = 0.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Southern Ered Luin
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = southern_ered_luin_name value = 0.9 } } }
+								FOR = { check_variable = { which = southern_ered_luin_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 913
+					owns = 931
+					owns = 917
+					owns = 918
+					owns = 919
+				}
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			# [teleri, eldar] - Old Sylvana
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = eldar
+						}
+					}
+					province_id = 296
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = old_sylvana_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = old_sylvana_name value = 0.1 } } }
+					}
+				}
+				915 = { state_scope = { change_region_name = "Sírranwaith" } }
+				915 = { change_province_name = "Bar Airlossiel" }
+				owner = { FOR = { set_variable = { which = old_sylvana_name value = 0 } } }
+			}
+			# [dunedain] - Old Sylvana
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 296
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = old_sylvana_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = old_sylvana_name value = 1.1 } } }
+					}
+				}
+				915 = { state_scope = { change_region_name = "Old Sylvana" } }
+				915 = { change_province_name = "Ost Dínen" }
+				owner = { FOR = { set_variable = { which = old_sylvana_name value = 1 } } }
+			}
+			# [dwarves] - Old Sylvana
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dwarves }
+					province_id = 296
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = old_sylvana_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = old_sylvana_name value = 2.1 } } }
+					}
+				}
+				915 = { state_scope = { change_region_name = "Zahar-Gamil" } }
+				owner = { FOR = { set_variable = { which = old_sylvana_name value = 2 } } }
+			}
+			# [wildmen] - Old Sylvana
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = wildmen }
+					province_id = 296
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = old_sylvana_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = old_sylvana_name value = 3.1 } } }
+					}
+				}
+				915 = { state_scope = { change_region_name = "North Ysgarguydhyl" } }
+				owner = { FOR = { set_variable = { which = old_sylvana_name value = 3 } } }
+			}
+			# [teleri, eldar] - Harvaneth
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = eldar
+						}
+					}
+					province_id = 136
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harvaneth_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = harvaneth_name value = 0.1 } } }
+					}
+				}
+				914 = { state_scope = { change_region_name = "Tawar Norndor" } }
+				owner = { FOR = { set_variable = { which = harvaneth_name value = 0 } } }
+			}
+			# [dunedain] - Harvaneth
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 136
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harvaneth_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = harvaneth_name value = 1.1 } } }
+					}
+				}
+				914 = { state_scope = { change_region_name = "Harvaneth" } }
+				owner = { FOR = { set_variable = { which = harvaneth_name value = 1 } } }
+			}
+			# [wildmen] - Harvaneth
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = wildmen }
+					province_id = 136
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harvaneth_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = harvaneth_name value = 2.1 } } }
+					}
+				}
+				914 = { state_scope = { change_region_name = "South Ysgarguydhyl" } }
+				owner = { FOR = { set_variable = { which = harvaneth_name value = 2 } } }
+			}
+			# [dwarves] - Southern Ered Luin
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dwarves }
+					province_id = 913
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = southern_ered_luin_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = southern_ered_luin_name value = 0.1 } } }
+					}
+				}
+				913 = { state_scope = { change_region_name = "Southern Ered Luin" } }
+				917 = { change_province_name = "Khazad-zahar" }
+				918 = { change_province_name = "Nogothîr Vale" }
+				owner = { FOR = { set_variable = { which = southern_ered_luin_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Southern Ered Luin
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 913
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = southern_ered_luin_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = southern_ered_luin_name value = 1.1 } } }
+					}
+				}
+				913 = { state_scope = { change_region_name = "Harered Luin" } }
+				917 = { change_province_name = "Nornhabar" }
+				918 = { change_province_name = "Nan Nogothîr" }
+				owner = { FOR = { set_variable = { which = southern_ered_luin_name value = 1 } } }
 			}
 		}
 	}
