@@ -6,117 +6,117 @@
 
 # Choose capital - Fornost Erain is owned
 country_event = {
-    id = 50610
-    title = "A new capital for the Kingdom"
-    desc = "EVTDESC50610"
-    picture = "annuminas"
+	id = 50610
+	title = "A new capital for the Kingdom"
+	desc = "EVTDESC50610"
+	picture = "annuminas"
 
-    trigger = {
-        tag = ARN
-        war = no
-        owns = 1026
-        owns = 1015
-        NOT = { has_country_flag = arnor_chosen_capital }
-    }
+	trigger = {
+		tag = ARN
+		war = no
+		owns = 1026
+		owns = 1015
+		NOT = { has_country_flag = arnor_chosen_capital }
+	}
 
-    mean_time_to_happen = { days = 180 }
+	mean_time_to_happen = { days = 180 }
 
-    option = {
-        name = "Annuminas shall be our capital"
-        prestige = 10
-        capital = 1026
-        1026 = {
-            any_pop = {
-                consciousness = -1
-                militancy = -1
-            }
-        }
-        set_country_flag = arnor_chosen_capital
-    }
+	option = {
+		name = "Annuminas shall be our capital"
+		prestige = 10
+		capital = 1026
+		1026 = {
+			any_pop = {
+				consciousness = -1
+				militancy = -1
+			}
+		}
+		set_country_flag = arnor_chosen_capital
+	}
 
-    option = {
-        name = "Fornost Erain shall be our capital"
-        prestige = 10
-        capital = 1015
-        1015 = {
-            any_pop = {
-                consciousness = -1
-                militancy = -1
-            }
-        }
-        set_country_flag = arnor_chosen_capital
-    }
+	option = {
+		name = "Fornost Erain shall be our capital"
+		prestige = 10
+		capital = 1015
+		1015 = {
+			any_pop = {
+				consciousness = -1
+				militancy = -1
+			}
+		}
+		set_country_flag = arnor_chosen_capital
+	}
 
-    option = {
-        name = "Our current capital is fine"
-        prestige = 10
-        capital_scope = {
-            any_pop = {
-                consciousness = -1
-                militancy = -1
-            }
-        }
-        set_country_flag = arnor_chosen_capital
-    }
+	option = {
+		name = "Our current capital is fine"
+		prestige = 10
+		capital_scope = {
+			any_pop = {
+				consciousness = -1
+				militancy = -1
+			}
+		}
+		set_country_flag = arnor_chosen_capital
+	}
 }
 
 # Choose capital - Fornost Erain is still uncolonised
 country_event = {
-    id = 50611
-    title = "A new capital for the Kingdom"
-    desc = "EVTDESC50610"
-    picture = "annuminas"
+	id = 50611
+	title = "A new capital for the Kingdom"
+	desc = "EVTDESC50610"
+	picture = "annuminas"
 
-    trigger = {
-        tag = ARN
-        war = no
-        owns = 1026
-        1015 = {
-            empty = yes
-        }
-        NOT = { has_country_flag = arnor_chosen_capital }
-    }
+	trigger = {
+		tag = ARN
+		war = no
+		owns = 1026
+		1015 = {
+			empty = yes
+		}
+		NOT = { has_country_flag = arnor_chosen_capital }
+	}
 
-    mean_time_to_happen = { days = 180 }
+	mean_time_to_happen = { days = 180 }
 
-    option = {
-        name = "Annuminas shall be our capital"
-        prestige = 10
-        capital = 1026
-        1026 = {
-            any_pop = {
-                consciousness = -1
-                militancy = -1
-            }
-        }
-        set_country_flag = arnor_chosen_capital
-    }
+	option = {
+		name = "Annuminas shall be our capital"
+		prestige = 10
+		capital = 1026
+		1026 = {
+			any_pop = {
+				consciousness = -1
+				militancy = -1
+			}
+		}
+		set_country_flag = arnor_chosen_capital
+	}
 
-    option = {
-        name = "Fornost Erain shall be our capital"
-        prestige = 10
-        capital = 1015
-        1015 = {
-            secede_province = ARN
-            any_pop = {
-                consciousness = -1
-                militancy = -1
-            }
-        }
-        set_country_flag = arnor_chosen_capital
-    }
+	option = {
+		name = "Fornost Erain shall be our capital"
+		prestige = 10
+		capital = 1015
+		1015 = {
+			secede_province = ARN
+			any_pop = {
+				consciousness = -1
+				militancy = -1
+			}
+		}
+		set_country_flag = arnor_chosen_capital
+	}
 
-    option = {
-        name = "Our current capital is fine"
-        prestige = 10
-        capital_scope = {
-            any_pop = {
-                consciousness = -1
-                militancy = -1
-            }
-        }
-        set_country_flag = arnor_chosen_capital
-    }
+	option = {
+		name = "Our current capital is fine"
+		prestige = 10
+		capital_scope = {
+			any_pop = {
+				consciousness = -1
+				militancy = -1
+			}
+		}
+		set_country_flag = arnor_chosen_capital
+	}
 }
 
 # Fate of the Shire - Start
@@ -126,38 +126,38 @@ country_event = {
 	title = "The Fate of the Shire!"
 	desc = "EVTDESC50620"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "They shall be fully annexed into the Kingdom"
-        prestige = 5
-        SHI_1031 = { add_core = THIS }
-        SHI_1036 = { add_core = THIS }
-        SHI_1040 = { add_core = THIS }
-        SHI = {
-            country_event = 50621
-        }
-        ai_chance = { factor = 45 }
-    }
+	option = {
+		name = "They shall be fully annexed into the Kingdom"
+		prestige = 5
+		SHI_1031 = { add_core = THIS }
+		SHI_1036 = { add_core = THIS }
+		SHI_1040 = { add_core = THIS }
+		SHI = {
+			country_event = 50621
+		}
+		ai_chance = { factor = 45 }
+	}
 
-    option = {
-        name = "They shall be a Free Land within the Kingdom"
-        prestige = 10
-        SHI = {
-            country_event = 50624
-        }
-        ai_chance = { factor = 45 }
-    }
+	option = {
+		name = "They shall be a Free Land within the Kingdom"
+		prestige = 10
+		SHI = {
+			country_event = 50624
+		}
+		ai_chance = { factor = 45 }
+	}
 
-    option = {
-        name = "We shall let the Hobbits be"
-        prestige = 5
-        relation = {
-            who = SHI
-            value = 100
-        }
-        ai_chance = { factor = 10 }
-    }
+	option = {
+		name = "We shall let the Hobbits be"
+		prestige = 5
+		relation = {
+			who = SHI
+			value = 100
+		}
+		ai_chance = { factor = 10 }
+	}
 }
 
 # Fate of the Shire - do the Hobbits accept annexation?
@@ -167,23 +167,23 @@ country_event = {
 	title = "Annexation demanded"
 	desc = "EVTDESC50621"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "We accept"
-        FROM = {
-            country_event = 50622
-        }
-        ai_chance = { factor = 20 }
-    }
+	option = {
+		name = "We accept"
+		FROM = {
+			country_event = 50622
+		}
+		ai_chance = { factor = 20 }
+	}
 
-    option = {
-        name = "We refuse"
-        FROM = {
-            country_event = 50623
-        }
-        ai_chance = { factor = 80 }
-    }
+	option = {
+		name = "We refuse"
+		FROM = {
+			country_event = 50623
+		}
+		ai_chance = { factor = 80 }
+	}
 }
 
 # Fate of the Shire - Hobbits accept annexation
@@ -193,15 +193,15 @@ country_event = {
 	title = "Annexation accepted"
 	desc = "EVTDESC50622"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "Fabulous"
-        prestige = 50
-        SHI = {
-            annex_to = ARN
-        }
-    }
+	option = {
+		name = "Fabulous"
+		prestige = 50
+		SHI = {
+			annex_to = ARN
+		}
+	}
 }
 
 # Fate of the Shire - Hobbits reject annexation
@@ -211,38 +211,38 @@ country_event = {
 	title = "Annexation rejected"
 	desc = "EVTDESC50623"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "We will force them to accept"
-        relation = {
-            who = SHI
-            value = -200
-        }
-        SHI = {
-            add_casus_belli = {
-                target = ARN
-                type = annex_core_country
-                months = 24
-            }
-        }
-        badboy = 5
-        leave_alliance = SHI
-        diplomatic_influence = {
-            who = SHI
-            value = -400
-        }
-        ai_chance = { factor = 66 }
-    }
+	option = {
+		name = "We will force them to accept"
+		relation = {
+			who = SHI
+			value = -200
+		}
+		SHI = {
+			add_casus_belli = {
+				target = ARN
+				type = annex_core_country
+				months = 24
+			}
+		}
+		badboy = 5
+		leave_alliance = SHI
+		diplomatic_influence = {
+			who = SHI
+			value = -400
+		}
+		ai_chance = { factor = 66 }
+	}
 
-    option = {
-        name = "Stand down"
-        prestige = -20
-        SHI_1031 = { remove_core = THIS }
-        SHI_1036 = { remove_core = THIS }
-        SHI_1040 = { remove_core = THIS }
-        ai_chance = { factor = 33 }
-    }
+	option = {
+		name = "Stand down"
+		prestige = -20
+		SHI_1031 = { remove_core = THIS }
+		SHI_1036 = { remove_core = THIS }
+		SHI_1040 = { remove_core = THIS }
+		ai_chance = { factor = 33 }
+	}
 }
 
 # Fate of the Shire - do the Hobbits accept puppet status?
@@ -252,23 +252,23 @@ country_event = {
 	title = "Suzerainty demanded"
 	desc = "EVTDESC50624"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "We accept"
-        FROM = {
-            country_event = 50625
-        }
-        ai_chance = { factor = 95 }
-    }
+	option = {
+		name = "We accept"
+		FROM = {
+			country_event = 50625
+		}
+		ai_chance = { factor = 95 }
+	}
 
-    option = {
-        name = "We refuse"
-        FROM = {
-            country_event = 50626
-        }
-        ai_chance = { factor = 5 }
-    }
+	option = {
+		name = "We refuse"
+		FROM = {
+			country_event = 50626
+		}
+		ai_chance = { factor = 5 }
+	}
 }
 
 # Fate of the Shire - Hobbits accept puppet status
@@ -278,17 +278,17 @@ country_event = {
 	title = "Suzerainty accepted"
 	desc = "EVTDESC50625"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "Excellent"
-        prestige = 20
-        create_vassal = SHI
-        relation = {
-            who = SHI
-            value = 100
-        }
-    }
+	option = {
+		name = "Excellent"
+		prestige = 20
+		create_vassal = SHI
+		relation = {
+			who = SHI
+			value = 100
+		}
+	}
 }
 
 # Fate of the Shire - Hobbits reject puppet status
@@ -298,32 +298,32 @@ country_event = {
 	title = "Suzerainty rejected"
 	desc = "EVTDESC50626"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "We will force them to accept"
-        relation = {
-            who = SHI
-            value = -200
-        }
-        SHI = {
-            add_casus_belli = {
-                target = ARN
-                type = make_puppet
-                months = 24
-            }
-        }
-        diplomatic_influence = {
-            who = SHI
-            value = -400
-        }
-        badboy = 2
-        ai_chance = { factor = 66 }
-    }
+	option = {
+		name = "We will force them to accept"
+		relation = {
+			who = SHI
+			value = -200
+		}
+		SHI = {
+			add_casus_belli = {
+				target = ARN
+				type = make_puppet
+				months = 24
+			}
+		}
+		diplomatic_influence = {
+			who = SHI
+			value = -400
+		}
+		badboy = 2
+		ai_chance = { factor = 66 }
+	}
 
-    option = {
-        name = "Stand down"
-        prestige = -20
-        ai_chance = { factor = 66 }
-    }
+	option = {
+		name = "Stand down"
+		prestige = -20
+		ai_chance = { factor = 66 }
+	}
 }

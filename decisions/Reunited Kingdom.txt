@@ -2,74 +2,74 @@
 # Form Reunited Kingdom
 #  }
 political_decisions = {
-    unify_arnor_and_gondor = {
+	unify_arnor_and_gondor = {
 		picture = "reunited_kingdom"
-        potential = {
-            OR = {
-                tag = ARN
-                tag = GON
-            }
-        }
-        allow = {
-            civilized = yes
-            is_independant = yes
-            is_greater_power = yes
-            war = no
-            OR = {
-                THIS = {
-                    tag = GON
-                }
-                GON = {
-                    in_sphere = THIS
-                    OR = {
-                        is_vassal = no
-                        vassal_of = THIS
-                    }
-                    war = no
-                    is_greater_power = no
-                }
+		potential = {
+			OR = {
+				tag = ARN
+				tag = GON
+			}
+		}
+		allow = {
+			civilized = yes
+			is_independant = yes
+			is_greater_power = yes
+			war = no
+			OR = {
+				THIS = {
+					tag = GON
+				}
+				GON = {
+					in_sphere = THIS
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+					war = no
+					is_greater_power = no
+				}
 				GON = {
 					all_core = {
 						owned_by = THIS
 					}
 				}
-            }
-            OR = {
-                THIS = {
-                    tag = ARN
-                }
-                ARN = {
-                    in_sphere = THIS
-                    OR = {
-                        is_vassal = no
-                        vassal_of = THIS
-                    }
-                    war = no
-                    is_greater_power = no
-                }
+			}
+			OR = {
+				THIS = {
+					tag = ARN
+				}
+				ARN = {
+					in_sphere = THIS
+					OR = {
+						is_vassal = no
+						vassal_of = THIS
+					}
+					war = no
+					is_greater_power = no
+				}
 				ARN = {
 					all_core = {
 						owned_by = THIS
 					}
 				}
-            }
-        }
-        effect = {
-            change_tag = RUN
-            prestige = 100
-            badboy = -5
-            ARN = { all_core = { add_core = RUN } }
-            GON = { all_core = { add_core = RUN } }
+			}
+		}
+		effect = {
+			change_tag = RUN
+			prestige = 100
+			badboy = -5
+			ARN = { all_core = { add_core = RUN } }
+			GON = { all_core = { add_core = RUN } }
 
-            THIS = { inherit = GON }
-            THIS = { inherit = ARN }
-            
-            add_accepted_culture = arnorian
-            add_accepted_culture = gondorian
-            add_accepted_culture = amrothian
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+			THIS = { inherit = GON }
+			THIS = { inherit = ARN }
+			
+			add_accepted_culture = arnorian
+			add_accepted_culture = gondorian
+			add_accepted_culture = amrothian
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

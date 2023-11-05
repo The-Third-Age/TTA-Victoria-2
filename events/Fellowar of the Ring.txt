@@ -1694,16 +1694,16 @@ country_event = {
 	option = {
 		name = "Good"
 		MOR = {
-            any_state = {
-                limit = {
-                    any_owned_province = { is_core = THIS }
-                }
-                any_owned = {
-                    limit = { is_core = THIS }
-                    secede_province = THIS
-                }
-            }
-        }
+			any_state = {
+				limit = {
+					any_owned_province = { is_core = THIS }
+				}
+				any_owned = {
+					limit = { is_core = THIS }
+					secede_province = THIS
+				}
+			}
+		}
 	}
 }
 
@@ -1719,19 +1719,19 @@ country_event = {
 	option = {
 		name = "They are rightfully ours"
 		MOR = {
-            any_state = {
-                limit = {
-                    any_owned_province = { is_core = THIS }
-                }
-                any_owned = {
-                    limit = {
-                        is_core = THIS
-                        is_capital = no
-                    }
-                    secede_province = THIS
-                }
-            }
-        }
+			any_state = {
+				limit = {
+					any_owned_province = { is_core = THIS }
+				}
+				any_owned = {
+					limit = {
+						is_core = THIS
+						is_capital = no
+					}
+					secede_province = THIS
+				}
+			}
+		}
 	}
 }
 

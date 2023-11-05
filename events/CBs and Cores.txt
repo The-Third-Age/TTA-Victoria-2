@@ -400,89 +400,89 @@ country_event = {
 
 # Return Cores Starter (take core)
 country_event = {
-    id = 2506
-    title = "$FROMCOUNTRY_ADJ$ Lands" #Territory Lost
-    desc = "EVTDESC2506"
+	id = 2506
+	title = "$FROMCOUNTRY_ADJ$ Lands" #Territory Lost
+	desc = "EVTDESC2506"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "Damn"
-        FROM = {
-            country_event = 2508
-        }
-    }
+	option = {
+		name = "Damn"
+		FROM = {
+			country_event = 2508
+		}
+	}
 }
 
 # Return Cores Starter (Liberate Country/Free Peoples)
 country_event = {
-    id = 2507
-    title = "The $FROMCOUNTRY_ADJ$ Demand" #Territory Lost
-    desc = "EVTDESC2507"
+	id = 2507
+	title = "The $FROMCOUNTRY_ADJ$ Demand" #Territory Lost
+	desc = "EVTDESC2507"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "Damn"
-        any_country = {
-            limit = {
-                NOT = { tag = THIS }
-                NOT = { tag = FROM }
-                any_owned_province = {
-                    is_core = THIS
-                    OR = {
-                        NOT = { province_control_days = 30 }
-                        AND = {
-                            has_pop_type = labourers
-                            unemployment_by_type = { value = 1 type = labourers }
-                        }
-                    }
-                }
-            }
-            country_event = 2508
-        }
-    }
+	option = {
+		name = "Damn"
+		any_country = {
+			limit = {
+				NOT = { tag = THIS }
+				NOT = { tag = FROM }
+				any_owned_province = {
+					is_core = THIS
+					OR = {
+						NOT = { province_control_days = 30 }
+						AND = {
+							has_pop_type = labourers
+							unemployment_by_type = { value = 1 type = labourers }
+						}
+					}
+				}
+			}
+			country_event = 2508
+		}
+	}
 }
 
 # Territorial Gain
 country_event = {
-    id = 2508
-    title = "Our Lands Returned"
-    desc = "EVTDESC2508"
+	id = 2508
+	title = "Our Lands Returned"
+	desc = "EVTDESC2508"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "Only keep territories with our cores. Return the rest."
-        any_owned = {
-            limit = {
-                is_core = FROM
-                NOT = { is_core = THIS }
-                OR = {
-                    NOT = { province_control_days = 30 }
-                    AND = {
-                        has_pop_type = labourers
-                        unemployment_by_type = { value = 1 type = labourers }
-                    }
-                }
-            }
-            state_scope = {
-                any_owned = {
-                    limit = {
-                        is_core = FROM
-                        NOT = { is_core = THIS }
-                    }
-                secede_province = FROM
-                }
-            }
-        }
-        ai_chance = { factor = 100 }
-    }
+	option = {
+		name = "Only keep territories with our cores. Return the rest."
+		any_owned = {
+			limit = {
+				is_core = FROM
+				NOT = { is_core = THIS }
+				OR = {
+					NOT = { province_control_days = 30 }
+					AND = {
+						has_pop_type = labourers
+						unemployment_by_type = { value = 1 type = labourers }
+					}
+				}
+			}
+			state_scope = {
+				any_owned = {
+					limit = {
+						is_core = FROM
+						NOT = { is_core = THIS }
+					}
+				secede_province = FROM
+				}
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
 
-    option = {
-        name = "We will keep everything we've gained."
-        ai_chance = { factor = 0 }
-    }
+	option = {
+		name = "We will keep everything we've gained."
+		ai_chance = { factor = 0 }
+	}
 }
 # }
 
@@ -601,71 +601,71 @@ country_event = {
 
 # Territorial Loss
 country_event = {
-    id = 2511
-    title = "The $FROMCOUNTRY_ADJ$ Demand"
-    desc = "EVTDESC2651"
+	id = 2511
+	title = "The $FROMCOUNTRY_ADJ$ Demand"
+	desc = "EVTDESC2651"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "Damn."
-        any_country = {
-            limit = {
-                NOT = { tag = THIS }
-                NOT = { tag = FROM }
-                any_owned_province = {
-                    is_core = THIS
-                    OR = {
-                        NOT = { province_control_days = 30 }
-                        AND = {
-                            has_pop_type = labourers
-                            unemployment_by_type = { value = 1 type = labourers }
-                        }
-                    }
-                }
-            }
-            country_event = 2512
-        }
-    }
+	option = {
+		name = "Damn."
+		any_country = {
+			limit = {
+				NOT = { tag = THIS }
+				NOT = { tag = FROM }
+				any_owned_province = {
+					is_core = THIS
+					OR = {
+						NOT = { province_control_days = 30 }
+						AND = {
+							has_pop_type = labourers
+							unemployment_by_type = { value = 1 type = labourers }
+						}
+					}
+				}
+			}
+			country_event = 2512
+		}
+	}
 }
 
 # Territorial Gain
 country_event = {
-    id = 2512
-    title = "Our Lands Returned"
-    desc = "EVTDESC2660"
+	id = 2512
+	title = "Our Lands Returned"
+	desc = "EVTDESC2660"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = {
-        name = "Only keep territories with our cores. Return the rest."
-        any_owned = {
-            limit = {
-                is_core = FROM
-                NOT = { is_core = THIS }
-                OR = {
-                    NOT = { province_control_days = 30 }
-                    AND = {
-                        has_pop_type = labourers
-                        unemployment_by_type = { value = 1 type = labourers }
-                    }
-                }
-            }
-            state_scope = {
-                any_owned = {
-                    limit = {
-                        is_core = FROM
-                        NOT = { is_core = THIS }
-                    }
-                	secede_province = FROM
-                }
-            }
-        }
-        ai_chance = { factor = 100 }
-    }
+	option = {
+		name = "Only keep territories with our cores. Return the rest."
+		any_owned = {
+			limit = {
+				is_core = FROM
+				NOT = { is_core = THIS }
+				OR = {
+					NOT = { province_control_days = 30 }
+					AND = {
+						has_pop_type = labourers
+						unemployment_by_type = { value = 1 type = labourers }
+					}
+				}
+			}
+			state_scope = {
+				any_owned = {
+					limit = {
+						is_core = FROM
+						NOT = { is_core = THIS }
+					}
+					secede_province = FROM
+				}
+			}
+		}
+		ai_chance = { factor = 100 }
+	}
 
-    option = {
-        name = "We will keep everything we've gained."
-        ai_chance = { factor = 0 }
-    }
+	option = {
+		name = "We will keep everything we've gained."
+		ai_chance = { factor = 0 }
+	}
 }
