@@ -28,7 +28,7 @@ Loremasters (researchers and contributers):
  - Jman
  - Wyrms (joelAVS)
  - IsaacHhyphenR [mod leader of Ride for Ruin: A Lord of the Rings mod for HOI4](https://steamcommunity.com/sharedfiles/filedetails/?id=2853663729)
- - Dean200027, Lord Saruman of Many Colors [modders of Dawnless Day](TBD) a submod to [Lord of the Rings mod for HOI4](https://steamcommunity.com/sharedfiles/filedetails/?id=1314446921)
+ - Dean200027, Equan [modders of Chronicles of the Third Age](TBD) a submod to [Lord of the Rings mod for HOI4](https://steamcommunity.com/sharedfiles/filedetails/?id=1314446921)
  
 ### Integrated Graphics Mods
  - Mish Mash Map Mod
