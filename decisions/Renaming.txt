@@ -4554,6 +4554,34 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
+						# [teleri] - Harlindon
+						AND = {
+							is_culture_group = teleri
+							OR = {
+								FOR = { NOT = { check_variable = { which = harlindon_name value = -0.1 } } }
+								FOR = { check_variable = { which = harlindon_name value = 0.1 } }
+							}
+						}
+						# [dunedain, eldar] - Harlindon
+						AND = {
+							OR = {
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = harlindon_name value = 0.9 } } }
+								FOR = { check_variable = { which = harlindon_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 928
+					owns = 929
+					owns = 131
+					owns = 61
+					owns = 927
+				}
+				AND = {
+					OR = {
 						# [spiders] - Forlindon
 						AND = {
 							is_culture_group = spiders
@@ -4772,6 +4800,37 @@ political_decisions = {
 				}
 				922 = { change_province_name = "Ost Denethor" }
 				owner = { FOR = { set_variable = { which = danwaith_name value = 1 } } }
+			}
+			# [teleri] - Harlindon
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = teleri }
+					province_id = 61
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harlindon_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = harlindon_name value = 0.1 } } }
+					}
+				}
+				61 = { change_province_name = "Gwaelad" }
+				owner = { FOR = { set_variable = { which = harlindon_name value = 0 } } }
+			}
+			# [dunedain, eldar] - Harlindon
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 61
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = harlindon_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = harlindon_name value = 1.1 } } }
+					}
+				}
+				61 = { change_province_name = "Bar Gwae" }
+				owner = { FOR = { set_variable = { which = harlindon_name value = 1 } } }
 			}
 			# [spiders] - Forlindon
 			random_owned = {
@@ -5101,7 +5160,6 @@ political_decisions = {
 					}
 					owns = 915
 					owns = 916
-					owns = 296
 					owns = 314
 				}
 				AND = {
@@ -5167,6 +5225,7 @@ political_decisions = {
 					owns = 917
 					owns = 918
 					owns = 919
+					owns = 296
 				}
 			}
 		}
@@ -5277,7 +5336,7 @@ political_decisions = {
 							is_culture_group = eldar
 						}
 					}
-					province_id = 296
+					province_id = 314
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = old_sylvana_name value = -0.1 } } } }
 						owner = { FOR = { check_variable = { which = old_sylvana_name value = 0.1 } } }
@@ -5291,7 +5350,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = dunedain }
-					province_id = 296
+					province_id = 314
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = old_sylvana_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = old_sylvana_name value = 1.1 } } }
@@ -5305,7 +5364,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = dwarves }
-					province_id = 296
+					province_id = 314
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = old_sylvana_name value = 1.9 } } } }
 						owner = { FOR = { check_variable = { which = old_sylvana_name value = 2.1 } } }
@@ -5318,7 +5377,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = wildmen }
-					province_id = 296
+					province_id = 314
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = old_sylvana_name value = 2.9 } } } }
 						owner = { FOR = { check_variable = { which = old_sylvana_name value = 3.1 } } }
@@ -5375,7 +5434,7 @@ political_decisions = {
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = dwarves }
-					province_id = 913
+					province_id = 296
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = southern_ered_luin_name value = -0.1 } } } }
 						owner = { FOR = { check_variable = { which = southern_ered_luin_name value = 0.1 } } }
@@ -5396,7 +5455,7 @@ political_decisions = {
 							is_culture_group = eldar
 						}
 					}
-					province_id = 913
+					province_id = 296
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = southern_ered_luin_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = southern_ered_luin_name value = 1.1 } } }
