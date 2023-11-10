@@ -195,6 +195,7 @@ Loremasters:
 	- [Thorin's Halls](https://www.mcmiddleearth.com/community/attachments/thorins-halls-project-post-pdf.22822/)
 	- [Nogrod](https://www.deviantart.com/hurin63/art/Banner-of-Nogrod-820456648)
 	- [Belegost](https://www.deviantart.com/hurin63/art/Banner-of-Belegost-820455390)
+	- [Windan Elves](https://www.deviantart.com/ivanalekseich/art/flags-houses-of-Gondolin-1-517397790)
 
 ### Music & Sound Assets
 - Main Theme: [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
