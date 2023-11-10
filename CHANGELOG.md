@@ -3,6 +3,15 @@ All notable changes will be documented in this file.
 
 ## [v0.5]() - In Development
 
+### New Tags
+ - In Eriador: House of the Wind, Windan Elves, Dourhands of Ered Luin, Emyn Beriad, Eagles of the Eerie
+
+### New Cultures
+ - In Eriador: Dourhands, Blue Mountain Goblins, Siredain
+
+### Graphics
+ - Reworked Lindon and Ered Luin provinces
+ - New terrain icons for Lindon and Ered Luin
 !
 
 ## [v0.4](https://github.com/The-Third-Age/TTA-Victoria-2/releases/tag/v0.4) - 20 Aug 2023
