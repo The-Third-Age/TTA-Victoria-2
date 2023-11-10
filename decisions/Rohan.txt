@@ -1,4 +1,4 @@
-# Stoor Hobbit Decisions:
+# Rohan Decisions:
 #	Colonise
 political_decisions = {
 	colonise_amon_hen = {
@@ -17,6 +17,49 @@ political_decisions = {
 			prestige = 10
 			783 = { secede_province = THIS }
 			784 = { secede_province = THIS }
+		}
+	}
+}
+# Reform Rohan
+political_decisions = {
+	reform_rohan = {
+		picture = "kingdom_of_rohan"
+		potential = {
+			has_global_flag = memes_enabled
+			is_culture_group = rohirrim
+			NOT = { exists = ROH }
+			NOT = { has_global_flag = railroading_disabled }
+		}
+		
+		allow = {
+			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
+			# Otherwise, it isn't counted
+			ROH = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						owner = { NOT = { is_culture_group = rohirrim } }
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 15
+			change_tag = ROH
+			any_country = {
+				limit = {
+					is_culture_group = rohirrim
+					in_sphere = THIS
+				}
+				country_event = 100003
+				all_core = { add_core = ROH }
+			}
+			primary_culture = rohirrim
+			add_accepted_culture = anduinmen
 		}
 	}
 }

@@ -80,7 +80,7 @@ country_event = { # Attempt fails, try again?
 	option = {
 		name = "Forget it" # Reject second attempt
 		ai_chance = { factor = 10 }
-        clr_country_flag = searching_for_lesser_ring
+		clr_country_flag = searching_for_lesser_ring
 		set_country_flag = rejected_searching_for_lesser_ring
 		prestige = -25
 	}
@@ -613,7 +613,7 @@ country_event = { # Attempt fails, try again?
 	option = {
 		name = "Forget it" # Reject second attempt
 		ai_chance = { factor = 40 }
-        clr_country_flag = searching_for_entwives
+		clr_country_flag = searching_for_entwives
 		set_country_flag = rejected_searching_for_entwives
 		prestige = -25
 	}
@@ -656,27 +656,27 @@ country_event = { # Entwives found
 				}
 			}
 		}
-        any_country = {
-            limit = {
-                ai = no
-            }
-            country_event = {
-	            id = 50733
-                days = 1
-            }
-        }
+		any_country = {
+			limit = {
+				ai = no
+			}
+			country_event = {
+				id = 50733
+				days = 1
+			}
+		}
 	}
 }
 
 country_event = { # Other country has found Entwives
 	id = 50733
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	title = "Entwives have been found"
 	desc = "EVTDESC50733"
 	picture = "entwives"
 
-    option = {
+	option = {
 		name = "Interesting"
 		clr_country_flag = searching_for_entwives
 	}
@@ -784,7 +784,7 @@ country_event = { # Attempt fails, try again?
 	option = {
 		name = "Forget it" # Reject second attempt
 		ai_chance = { factor = 40 }
-        clr_country_flag = searching_for_silmaril
+		clr_country_flag = searching_for_silmaril
 		set_country_flag = rejected_searching_for_silmaril
 		prestige = -25
 	}
@@ -813,7 +813,7 @@ country_event = { # Finding Silmaril is now impossible
 
 	option = {
 		name = "Forget it"
-        clr_country_flag = searching_for_silmaril
+		clr_country_flag = searching_for_silmaril
 		set_country_flag = rejected_searching_for_silmaril
 		prestige = -25
 	}
@@ -823,7 +823,7 @@ country_event = { # Silmaril found
 	id = 50744
 
 	trigger = {
-        has_country_flag = searching_for_silmarils
+		has_country_flag = searching_for_silmarils
 		not = { has_global_flag = silmarils_found }
 		is_greater_power = yes
 	}
@@ -841,31 +841,31 @@ country_event = { # Silmaril found
 		prestige = 300
 		set_global_flag = silmarils_found
 		clr_country_flag = searching_for_silmarils
-        add_country_modifier = {
-            name = silmaril
-            duration = -1
-        }
-        any_country = {
-            limit = {
-                ai = no
-            }
-            country_event = {
-	            id = 50745
-                days = 1
-            }
-        }
+		add_country_modifier = {
+			name = silmaril
+			duration = -1
+		}
+		any_country = {
+			limit = {
+				ai = no
+			}
+			country_event = {
+				id = 50745
+				days = 1
+			}
+		}
 	}
 }
 
 country_event = { # Other country has found Silmaril
 	id = 50745
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	title = "Another realm has found a Silmaril"
 	desc = "EVTDESC50745"
 	picture = "silmarils"
 
-    option = {
+	option = {
 		name = "Interesting"
 		clr_country_flag = searching_for_silmarils
 	}
@@ -879,10 +879,10 @@ country_event = { # First attempt
 
 	trigger = {
 		invention = blue_wizards
-        OR = {
-            not = { has_global_flag = alatar_activated }
-            not = { has_global_flag = pallando_activated }
-        }
+		OR = {
+			not = { has_global_flag = alatar_activated }
+			not = { has_global_flag = pallando_activated }
+		}
 		not = { has_country_flag = searching_for_blue_wizards }
 		not = { has_country_flag = rejected_searching_for_blue_wizards }
 		is_greater_power = yes
@@ -921,16 +921,16 @@ country_event = { # Found one but not the other
 
 	trigger = {
 		invention = blue_wizards
-        OR = {
-            OR = {
-                not = { has_global_flag = alatar_activated }
-                has_global_flag = pallando_activated
-            }
-            OR = {
-                not = { has_global_flag = pallando_activated }
-                has_global_flag = alatar_activated
-            }
-        }
+		OR = {
+			OR = {
+				not = { has_global_flag = alatar_activated }
+				has_global_flag = pallando_activated
+			}
+			OR = {
+				not = { has_global_flag = pallando_activated }
+				has_global_flag = alatar_activated
+			}
+		}
 		not = { has_country_flag = searching_for_blue_wizards }
 		not = { has_country_flag = rejected_searching_for_blue_wizards }
 		is_greater_power = yes
@@ -987,7 +987,7 @@ country_event = { # Attempt fails, try again?
 	option = {
 		name = "Forget it" # Reject second attempt
 		ai_chance = { factor = 40 }
-        clr_country_flag = searching_for_blue_wizards
+		clr_country_flag = searching_for_blue_wizards
 		set_country_flag = rejected_searching_for_blue_wizards
 		prestige = -25
 	}
@@ -997,7 +997,7 @@ country_event = { # Alatar found
 	id = 50753
 
 	trigger = {
-        has_country_flag = searching_for_blue_wizards
+		has_country_flag = searching_for_blue_wizards
 		not = { has_global_flag = alatar_activated }
 		is_greater_power = yes
 	}
@@ -1017,32 +1017,32 @@ country_event = { # Alatar found
 		clr_country_flag = searching_for_blue_wizards
 		
 		# Audax Validator "." Ignore_NEXT
-        KHA_364 = {
-            secede_province = THIS # Gotta secede to THIS before seceding to ALA because its uncolonised land
-            add_core = ALA
-            secede_province = ALA
+		KHA_364 = {
+			secede_province = THIS # Gotta secede to THIS before seceding to ALA because its uncolonised land
+			add_core = ALA
+			secede_province = ALA
 			life_rating = 25
-        }
-        THIS = {
-            diplomatic_influence = {
-                who = ALA
-                value = 400
-            }
-            relation = {
-                who = ALA
-                value = 400
-            }
-            create_alliance = ALA
-        }
-        any_country = {
-            limit = {
-                ai = no
-            }
-            country_event = {
-	            id = 50755
-                days = 1
-            }
-        }
+		}
+		THIS = {
+			diplomatic_influence = {
+				who = ALA
+				value = 400
+			}
+			relation = {
+				who = ALA
+				value = 400
+			}
+			create_alliance = ALA
+		}
+		any_country = {
+			limit = {
+				ai = no
+			}
+			country_event = {
+				id = 50755
+				days = 1
+			}
+		}
 		random_country = {
 			any_country = {
 				limit = {
@@ -1088,7 +1088,7 @@ country_event = { # Pallando found
 	id = 50754
 
 	trigger = {
-        has_country_flag = searching_for_blue_wizards
+		has_country_flag = searching_for_blue_wizards
 		not = { has_global_flag = pallando_activated }
 		is_greater_power = yes
 	}
@@ -1106,31 +1106,31 @@ country_event = { # Pallando found
 		prestige = 100
 		set_global_flag = pallando_activated
 		clr_country_flag = searching_for_blue_wizards
-        add_country_modifier = {
-            name = pallando_influence
-            duration = -1
-        }
-        any_country = {
-            limit = {
-                ai = no
-            }
-            country_event = {
-	            id = 50756
-                days = 1
-            }
-        }
+		add_country_modifier = {
+			name = pallando_influence
+			duration = -1
+		}
+		any_country = {
+			limit = {
+				ai = no
+			}
+			country_event = {
+				id = 50756
+				days = 1
+			}
+		}
 	}
 }
 
 country_event = { # Other country has found Alatar
 	id = 50755
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	title = "Another realm` has found Alatar"
 	desc = "EVTDESC50755"
 	picture = "blue_wizards"
 
-    option = {
+	option = {
 		name = "Interesting"
 		clr_country_flag = searching_for_blue_wizards
 	}
@@ -1138,13 +1138,13 @@ country_event = { # Other country has found Alatar
 
 country_event = { # Other country has found Pallando
 	id = 50756
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	title = "Another realm has found Pallando"
 	desc = "EVTDESC50756"
 	picture = "blue_wizards"
 
-    option = {
+	option = {
 		name = "Interesting"
 		clr_country_flag = searching_for_blue_wizards
 	}
@@ -1270,11 +1270,11 @@ country_event = { # First attempt
 
 	trigger = {
 		invention = palantiri
-        OR = {
-            NOT = { has_global_flag = osgiliath_palantir_activated }
-            NOT = { has_global_flag = amonsul_palantir_activated }
+		OR = {
+			NOT = { has_global_flag = osgiliath_palantir_activated }
+			NOT = { has_global_flag = amonsul_palantir_activated }
 			NOT = { has_global_flag = annuminas_palantir_activated }
-        }
+		}
 		NOT = { has_country_modifier = anor_palantir }
 		NOT = { has_country_modifier = orthanc_palantir }
 		NOT = { has_country_modifier = ithil_palantir }
@@ -1338,7 +1338,7 @@ country_event = { # Attempt fails, try again?
 	option = {
 		name = "Forget it" # Reject second attempt
 		ai_chance = { factor = 40 }
-        clr_country_flag = searching_for_palantiri
+		clr_country_flag = searching_for_palantiri
 		set_country_flag = rejected_searching_palantiri
 		prestige = -25
 	}
@@ -1348,7 +1348,7 @@ country_event = { # Palantir found - osgiliath_palantir
 	id = 50766
 
 	trigger = {
-        has_country_flag = searching_for_palantiri
+		has_country_flag = searching_for_palantiri
 		NOT = { has_global_flag = osgiliath_palantir_activated }
 		is_greater_power = yes
 	}
@@ -1366,19 +1366,19 @@ country_event = { # Palantir found - osgiliath_palantir
 		prestige = 300
 		set_global_flag = osgiliath_palantir_activated
 		clr_country_flag = searching_for_palantiri
-        add_country_modifier = {
-            name = osgiliath_palantir
-            duration = -1
-        }
-        any_country = {
-            limit = {
-                ai = no
-            }
-            country_event = {
-	            id = 50769
-                days = 1
-            }
-        }
+		add_country_modifier = {
+			name = osgiliath_palantir
+			duration = -1
+		}
+		any_country = {
+			limit = {
+				ai = no
+			}
+			country_event = {
+				id = 50769
+				days = 1
+			}
+		}
 	}
 }
 
@@ -1386,7 +1386,7 @@ country_event = { # Palantir found - amonsul_palantir
 	id = 50767
 
 	trigger = {
-        has_country_flag = searching_for_palantiri
+		has_country_flag = searching_for_palantiri
 		NOT = { has_global_flag = amonsul_palantir_activated }
 		is_greater_power = yes
 	}
@@ -1404,19 +1404,19 @@ country_event = { # Palantir found - amonsul_palantir
 		prestige = 300
 		set_global_flag = amonsul_palantir_activated
 		clr_country_flag = searching_for_palantiri
-        add_country_modifier = {
-            name = amonsul_palantir
-            duration = -1
-        }
-        any_country = {
-            limit = {
-                ai = no
-            }
-            country_event = {
-	            id = 50769
-                days = 1
-            }
-        }
+		add_country_modifier = {
+			name = amonsul_palantir
+			duration = -1
+		}
+		any_country = {
+			limit = {
+				ai = no
+			}
+			country_event = {
+				id = 50769
+				days = 1
+			}
+		}
 	}
 }
 
@@ -1424,7 +1424,7 @@ country_event = { # Palantir found - annuminas_palantir
 	id = 50768
 
 	trigger = {
-        has_country_flag = searching_for_palantiri
+		has_country_flag = searching_for_palantiri
 		NOT = { has_global_flag = annuminas_palantir_activated }
 		is_greater_power = yes
 	}
@@ -1442,31 +1442,31 @@ country_event = { # Palantir found - annuminas_palantir
 		prestige = 300
 		set_global_flag = annuminas_palantir_activated
 		clr_country_flag = searching_for_palantiri
-        add_country_modifier = {
-            name = annuminas_palantir
-            duration = -1
-        }
-        any_country = {
-            limit = {
-                ai = no
-            }
-            country_event = {
-	            id = 50769
-                days = 1
-            }
-        }
+		add_country_modifier = {
+			name = annuminas_palantir
+			duration = -1
+		}
+		any_country = {
+			limit = {
+				ai = no
+			}
+			country_event = {
+				id = 50769
+				days = 1
+			}
+		}
 	}
 }
 
 country_event = { # Other country has found a palantir
 	id = 50769
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	title = "Another realm has found a Palantir"
 	desc = "EVTDESC50769"
 	picture = "palantir"
 
-    option = {
+	option = {
 		name = "Interesting"
 		clr_country_flag = searching_for_palantiri
 	}
@@ -1489,7 +1489,7 @@ country_event = { # Gaze into the elostirion_palantir
 	desc = "EVTDESC50770"
 	picture = "palantir"
 
-    option = {
+	option = {
 		name = "How beautiful"
 		prestige = 20
 		any_pop = {

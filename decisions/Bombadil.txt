@@ -1,0 +1,21 @@
+# Bombadil Decisions: {
+#	Destroy the world (meme) }
+political_decisions = {
+	destroy_the_world = {
+		picture = "bombadil"
+		alert = no
+		potential = {
+			tag = BOM
+			has_global_flag = memes_enabled
+		}		
+		allow = {
+		}		
+		effect = {
+			# Cause a game crash by referencing a non-existent region
+			any_owned = {
+				limit = { region = destroy_the_world }
+			}
+		}		
+		ai_will_do = { factor = 0 }
+	}
+}

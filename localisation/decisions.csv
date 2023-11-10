@@ -35,6 +35,8 @@ attempt_to_neutral_title;§GEncourage Neutral Alignment§!;x
 attempt_to_neutral_desc;If we wish to become a Neutral Realm, the best way is to make the people want to be in a Neutral Realm.;x
 attempt_to_evil_title;§GEncourage Evil Alignment§!;x
 attempt_to_evil_desc;If we wish to become an Evil Realm, the best way is to make the people want to be in an Evil Realm.;x
+abandon_neutrality_title;§GAbandon Neutrality§!;x
+abandon_neutrality_desc;Our realm is considered politically neutral and unable to take part in wars or be attacked. We can choose to abandon this neutrality.;x
 ##################################;x }
 ##### INTRODUCTION DECISIONS #####;x {
 ##################################;x
@@ -243,7 +245,7 @@ extend_old_forest_road_iron_hills_title;Extend the Old Forest Road;x
 extend_old_forest_road_iron_hills_desc;With the nearby sections of the Old Forest Road being maintained, we can repair our sections of the Old Forest Road that have fallen into disrepair.;x
 road_destruction_title;Destroy Infrastructure;x
 road_destruction_desc;We have occupied some land with large amounts of infrastructure. If we so choose, we can strip the roads of anything of use.;x
-repair_road_title;Reuild Infrastructure;x
+repair_road_title;Rebuild Infrastructure;x
 repair_road_desc;During one of our latest wars, some of our larger roads were damaged and destroyed. We can choose to rebuild them, but it may be expensive.;x
 fund_ethring_lumber_camp_title;Fund the Ethring Lumber Camp;x
 fund_ethring_lumber_camp_desc;Like settlements close to Ered Nimrais, Ethring has an abundent number trees along the foothills of the mountains. Primarily a market town, Ethring has had no use to harvest these natural resources. If we so choose, we can fund a lumber camp to use these forests for our realm.;x
@@ -334,7 +336,7 @@ the_center_of_the_realm_desc;With our reconquest of Calednardhon, Halifirien can
 call_the_council_of_gondor_title;Call the Council of Gondor;x
 call_the_council_of_gondor_desc;With rising unrest in the realm, it may be prudent to call the Council of Gondor - a meeting of all major nobles in the realm.\n\n§RThis decision can be taken once per leader§!;x
 declare_steward_king_title;Crown the Steward 'King of Gondor';x
-declare_steward_king_desc;It has been centuries since the "Kingdom" of Gondor was ruled by a King. In the past, Stewards have not been considered royal enough to be crowned king, and the memory of the Kin-Strife has deterred those who would install a King from a different bloodline. No longer is this the case. Today, our Steward will become King!\n\n§RThis may cause a second Kin-Strike§!!;x
+declare_steward_king_desc;It has been centuries since the "Kingdom" of Gondor was ruled by a King. In the past, Stewards have not been considered royal enough to be crowned king, and the memory of the Kin-Strife has deterred those who would install a King from a different bloodline. No longer is this the case. Today, our Steward will become King!\n\n§RThis may cause a second Kin-Strife§!!;x
 visit_tomb_of_elendil_title;Visit the Tomb of Elendil;x
 visit_tomb_of_elendil_desc;One of the traditions of the leaders of Gondor is to visit the tomb of her founder, Elendil the Tall. When the northern half of the realm was given to the Éothéod, turning it into the Kingdom of Rohan, the Steward Cirion removed the casket and was placed in the Hallows of Minas Tirith. Despite this, the tomb still remained a memorial and place of reverence for the people of Gondor.\n\n§RThis decision can be taken once per leader§!.;x
 restore_haudh_in_gwanur_title;Restore the Haudh in Gwanûr;x
@@ -367,8 +369,10 @@ invite_witch_king_of_angmar_desc;Since the Angmar War ended some one thousand ye
 ###########################;x }
 ##### ARNOR DECISIONS #####;x {
 ###########################;x
-accept_bre_hobbit_title;The hobbits of Breeland;x
-accept_bre_hobbit_desc;Breeland is inhabited by men and hobbit minority. By accepting that minority as part of our folk we can strenghten our country.;x
+shire_bree_unification_title;The unification of Breeland and Shire;x
+shire_bree_unification_desc;Now that we have asserted dominance over these land in the heartland of Eriador, we can unify them.;x
+the_buckland_question_title;The Buckland question;x
+the_buckland_question_desc;Now that we have unified Bree and Shire, we should decide our policy regarding Buckland - an autonomous hobbit colony.;x
 accept_bck_hobbit_title;The hobbits of Buckland;x
 accept_bck_hobbit_desc;Buckland is a mostly self-sufficient colony of the Shire inhabited by the curiously more adventurous Bucklander minority. By accepting that minority as part of our folk we can strenghten our country.;x
 annex_buckland_title;Annex Buckland;x
@@ -465,6 +469,11 @@ appoint_lifstan_the_chancellor_desc;Lifstan was one of the first advisors to Kin
 appoint_erland_of_esgaroth_title;Appoint Erland of Esgaroth as Diplomat;x
 appoint_erland_of_esgaroth_desc;King Bard I appointed Erland to be one of our diplomats. Erland would go on to help bring the Grammas under the sovereignty of Dale, and would live to be a Barding representative at the Council of Elrond.\n\n§RThis decision can only be taken while Bard I is your leader. It will also remove the generic "Great Diplomat" modifier should you have it§!;x
 ##############################;x }
+##### BOMBADIL DECISIONS #####;x {
+##############################;x
+destroy_the_world_title;Destroy Arda;x
+destroy_the_world_desc;Tom Bombadil is one of the most powerful beings, more powerful than the greatest realms of Middle Earth, more powerful than the Maiar: Wizards, Balrogs, or otherwise, and more powerful than even the Valar. Tom is an aspect of Eru himself, the representation of his love and of the imperishability of goodness in the world. Middle Earth is but Tom's playground. Because of this awesome power, Tom Bombadil can choose to end Arda at any time. He wouldn't, of course, but he could. §RMousing over this decision ends the game§!.;x
+##############################;x }
 ##### ISENGARD DECISIONS #####;x {
 ##############################;x
 lord_of_isengard_title;Saruman, the Lord of Isengard;x
@@ -498,6 +507,8 @@ call_the_attathrain_desc;The Attathráin originally was the council of the Elders
 ###########################;x
 colonise_amon_hen_title;Colonise Amon Hen;x
 colonise_amon_hen_desc;Amon Hen is a peak on the west bank of the Anduin, home to the ancient throne: the Seat of Seeing. It has long been abandoned, and remains mostly unpopulated. The territory rightfully belongs to $COUNTRY$ and we should claim it for ourselves.;x
+reform_rohan_title;Reform Rohan;x
+reform_rohan_desc;We have reconquered Rohan, and now it's time to restore it.;x
 ##########################;x }
 ##### RHUN DECISIONS #####;x {
 ##########################;x
@@ -511,6 +522,8 @@ RHU_core_removal_title;Tribal Core Removal;x
 RHU_core_removal_desc;Despite completely integrating one of the tribes, they still have recognized claims. Let us fix that.;x
 RHU_core_addition_title;An Extension of the Easterling Realm;x
 RHU_core_addition_desc;There is some land that we own that is claimed by one of our tribes, but not by us. Let us fix that.;x
+legacy_of_the_wainriders_title;Legacy of the Wainriders;x
+legacy_of_the_wainriders_desc;The Wainriders were a legendary confederacy of Easterlings who travelled and waged war using great wagons and chariots. Some one thousand years ago, they brutally sacked Gondor and brought that realm to its knees. It is our privilege to embrace this legacy.;x
 #####################################;x }
 ##### SMALL MECHANICS DECISIONS #####;x {
 #####################################;x

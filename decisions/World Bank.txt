@@ -270,7 +270,12 @@ political_decisions = {
 			country_event = 100100
 			
 			# Start Flavor Cleanup event loop
-			country_event  = 99001
+			country_event = 99001
+			
+			# Making sure special tags can't start wars (either as the aggressor or the defender)
+			BOM = { add_country_modifier = { name = political_neutrality duration = -1 } }
+			EAG = { add_country_modifier = { name = political_neutrality duration = -1 } }
+			FOR = { add_country_modifier = { name = political_neutrality duration = -1 } }
 			
 			# Province/State Renaming variables
 			set_variable = { which = khandu_khur_name value = 1 }

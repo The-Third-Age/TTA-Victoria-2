@@ -52,7 +52,7 @@ construction_good_factory_template = {
 	workforce = 10000 
 }
 
-will_never_be_unlocked = {       
+will_never_be_unlocked = {	   
 	template = factory_template
 	input_goods = { }
 	output_goods = food 
@@ -61,7 +61,7 @@ will_never_be_unlocked = {
 
 ##### MILITARY FACTORIES #####
 
-artillery_factory = {       
+artillery_factory = {	   
 	template = factory_template
 	input_goods = { 
 		steel = 8	# 37.6
@@ -87,7 +87,7 @@ artillery_factory = {
 	}
 }
 
-melee_gear_factory = {       
+melee_gear_factory = {	   
 	template = factory_template
 	input_goods = { 
 		steel = 8	# 37.6	
@@ -107,7 +107,7 @@ melee_gear_factory = {
 	}
 }
 
-ranged_gear_factory = {       
+ranged_gear_factory = {	   
 	template = factory_template
 	input_goods = { 
 		timber = 5	# 9
@@ -127,9 +127,9 @@ ranged_gear_factory = {
 	}
 }
 
-clipper_shipyard = {       
+clipper_shipyard = {	   
 	template = factory_template
-	input_goods = {         
+	input_goods = {		 
 		fabric = 25	# 45
 		lumber = 50 # 50
 	}		# Total   95 + 0.635 = 95.635
@@ -156,7 +156,7 @@ clipper_shipyard = {
 
 ##### CONSTRUCTION GOODS FACTORIES #####
 
-cut_stone_factory = {       
+cut_stone_factory = {	   
 	template = construction_good_factory_template
 	input_goods = { 
 		rock = 25	# 60
@@ -171,9 +171,9 @@ cut_stone_factory = {
 	}
 }
 
-lumber_mill = {       
+lumber_mill = {	   
 	template = construction_good_factory_template
-	input_goods = {       
+	input_goods = {	   
 		timber = 50	# 90
 	}			# Total   90 + 0.33 = 90.33
 	
@@ -186,7 +186,7 @@ lumber_mill = {
 	}
 }
 
-steel_factory = {       
+steel_factory = {	   
 	template = factory_template
 	input_goods = { 
 		iron = 20		#70
@@ -223,7 +223,7 @@ charcoal_factory = {
 
 ##### CONSUMER GOODS FACTORIES #####
 
-furniture_factory = {       
+furniture_factory = {	   
 	template = factory_template
 	input_goods = { 
 		lumber = 20	# 20
@@ -248,7 +248,7 @@ furniture_factory = {
 	}
 }
 
-paper_mill = {       
+paper_mill = {	   
 	template = factory_template
 	input_goods = { 
 		timber = 25	#45
@@ -263,7 +263,7 @@ paper_mill = {
 	}
 }
 
-clothes_factory = {       
+clothes_factory = {	   
 	template = factory_template
 	input_goods = {  
 		fabric = 40	# 72
@@ -278,9 +278,9 @@ clothes_factory = {
 	}
 }
 
-liquor_distillery = {       
+liquor_distillery = {	   
 	template = factory_template
-	input_goods = {        
+	input_goods = {		
 		food = 5	# 10
 		glass = 4	# 11.6
 	}		# Total   21.6 + 0.635 = 22.235
@@ -298,9 +298,9 @@ liquor_distillery = {
 	}
 }
 
-fabric_factory = {       
+fabric_factory = {	   
 	template = factory_template
-	input_goods = {     
+	input_goods = {	 
 		cotton = 9	# 18	
 		dye = 1		# 12	
 	}		# Total   30 + 0.635 = 30.635
@@ -318,9 +318,9 @@ fabric_factory = {
 	}
 }
 
-fabric_factory_wool = {       
+fabric_factory_wool = {	   
 	template = factory_template
-	input_goods = {     
+	input_goods = {	 
 		wool = 25	# 17.5	
 		dye = 1		# 12	
 	}		# Total   29.5 + 0.635 = 30.135
@@ -337,9 +337,9 @@ fabric_factory_wool = {
 	}
 }
 
-glass_factory = {       
+glass_factory = {	   
 	template = factory_template
-	input_goods = {            
+	input_goods = {			
 		coal = 14	# 32.2
 	}		# Total   32.2 + 0.635 = 32.835
 	output_goods = glass 
@@ -350,9 +350,9 @@ glass_factory = {
 	}
 }
 
-dye_factory = {       
+dye_factory = {	   
 	template = factory_template
-	input_goods = {            
+	input_goods = {			
 		food = 5	# 10
 	}		# Total   10 + 0.635 = 10.835
 	output_goods = dye 
@@ -363,9 +363,9 @@ dye_factory = {
 	}
 }
 
-horse_abattoir = {       
+horse_abattoir = {	   
 	template = factory_template
-	input_goods = {            
+	input_goods = {			
 		horses = 2
 	}
 	output_goods = food
@@ -553,7 +553,7 @@ tobacco_plantation = {
 
 ##### MILITARY FACTORIES #####
 
-artisan_artillery = {       
+artisan_artillery = {	   
 	input_goods = { 
 		steel = 8	# 37.6
 		lumber = 30 # 30
@@ -572,7 +572,7 @@ artisan_artillery = {
 	workforce = 10000
 }
 
-artisan_melee_gear = {       
+artisan_melee_gear = {	   
 	template = factory_template
 	input_goods = { 
 		steel = 8	# 37.6	
@@ -590,7 +590,7 @@ artisan_melee_gear = {
 	workforce = 10000
 }
 
-artisan_ranged_gear = {       
+artisan_ranged_gear = {	   
 	template = factory_template
 	input_goods = { 
 		timber = 5	# 9
@@ -608,8 +608,8 @@ artisan_ranged_gear = {
 	workforce = 10000
 }
 
-artisan_clipper = {       
-	input_goods = {         
+artisan_clipper = {	   
+	input_goods = {		 
 		fabric = 25	# 45
 		lumber = 50 # 50
 	}
@@ -630,7 +630,7 @@ artisan_clipper = {
 
 ##### CONSTRUCTION GOODS FACTORIES #####
 
-artisan_cut_stone = {       
+artisan_cut_stone = {	   
 	template = factory_template
 	input_goods = { 
 		rock = 25	# 60
@@ -648,8 +648,8 @@ artisan_cut_stone = {
 	workforce = 10000
 }
 
-artisan_lumber = {       
-	input_goods = {       
+artisan_lumber = {	   
+	input_goods = {	   
 		timber = 50	# 90
 	}
 	output_goods = lumber 
@@ -666,7 +666,7 @@ artisan_lumber = {
 	workforce = 10000
 }
 
-artisan_steel = {       
+artisan_steel = {	   
 	input_goods = { 
 		iron = 20		#70
 		coal = 5		#11.5
@@ -708,7 +708,7 @@ artisan_charcoal = {
 
 ##### CONSUMER GOODS FACTORIES #####
 
-artisan_furniture = {       
+artisan_furniture = {	   
 	input_goods = { 
 		lumber = 20	# 20
 		fabric = 4	#  7.2
@@ -726,7 +726,7 @@ artisan_furniture = {
 	workforce = 10000
 }
 
-artisan_paper = {       
+artisan_paper = {	   
 	input_goods = { 
 		timber = 25	#45
 	}
@@ -743,7 +743,7 @@ artisan_paper = {
 	workforce = 10000
 }
 
-artisan_clothes = {       
+artisan_clothes = {	   
 	input_goods = {  
 		fabric = 40	# 72
 	}
@@ -760,8 +760,8 @@ artisan_clothes = {
 	workforce = 10000
 }
 
-artisan_liquor = {       
-	input_goods = {        
+artisan_liquor = {	   
+	input_goods = {		
 		food = 5	# 10
 		glass = 4	# 11.6
 	}
@@ -778,8 +778,8 @@ artisan_liquor = {
 	workforce = 10000
 }
 
-artisan_fabric = {       
-	input_goods = {     
+artisan_fabric = {	   
+	input_goods = {	 
 		cotton = 9	# 18	
 		dye = 1		# 12		
 	}
@@ -795,8 +795,8 @@ artisan_fabric = {
 	workforce = 10000
 }
 
-artisan_fabric_wool = {       
-	input_goods = {     
+artisan_fabric_wool = {	   
+	input_goods = {	 
 		wool = 25	# 17.5	
 		dye = 1		# 12		
 	}
@@ -812,8 +812,8 @@ artisan_fabric_wool = {
 	workforce = 10000
 }
 
-artisan_glass = {       
-	input_goods = {            
+artisan_glass = {	   
+	input_goods = {			
 		coal = 14	# 32.2
 	}
 	output_goods = glass 
@@ -829,8 +829,8 @@ artisan_glass = {
 	workforce = 10000
 }
 
-artisan_dye = {       
-	input_goods = {            
+artisan_dye = {	   
+	input_goods = {			
 		food = 5	# 10
 	}
 	output_goods = dye 

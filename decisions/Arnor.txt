@@ -7,50 +7,50 @@
 # Claim Angmar
 # }
 political_decisions = {
-    form_arnor = {
+	form_arnor = {
 		picture = "arnor"
-        potential = {
-            OR = {
-                primary_culture = dunedain
-                primary_culture = arnorian
-            }
-            capital_scope = { continent = eriador }
-            NOT = {
-                tag = RUN
-                tag = GON
-                tag = ARN
-            }
-        }
-        allow = {
-            civilized = yes
-            is_independant = yes
-            is_greater_power = yes
-            war = no
+		potential = {
+			OR = {
+				primary_culture = dunedain
+				primary_culture = arnorian
+			}
+			capital_scope = { continent = eriador }
+			NOT = {
+				tag = RUN
+				tag = GON
+				tag = ARN
+			}
+		}
+		allow = {
+			civilized = yes
+			is_independant = yes
+			is_greater_power = yes
+			war = no
 			ARN = {
 				all_core = {
 					OR = {
 						owned_by = THIS
 						owner = {
 							in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
 						}
 					}
 				}
 			}
-        }
-        effect = {
-            change_tag = ARN
-            prestige = 20
-            badboy = -5
+		}
+		effect = {
+			change_tag = ARN
+			prestige = 20
+			badboy = -5
 
-            DND_1026 = { add_core = ARN }
-            DND_1015 = { add_core = ARN }
-            DND_1007 = { add_core = ARN }
+			DND_1026 = { add_core = ARN }
+			DND_1015 = { add_core = ARN }
+			DND_1007 = { add_core = ARN }
 
-            any_country = {
+			any_country = {
 				limit = {
 					in_sphere = THIS
 				}
@@ -63,59 +63,59 @@ political_decisions = {
 				}
 
 			}
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 form_arthedain = {
 		picture = "arthedain"
-        potential = {
-            OR = {
-                primary_culture = dunedain
-                primary_culture = arnorian
-            }
-            capital_scope = { continent = eriador }
-            NOT = {
-                tag = RUN
-                tag = GON
-                tag = ARN
-                tag = CAR
-                tag = DND
-                tag = CRN
-                tag = EGL
-                tag = NAD
-                tag = NID
-                tag = MET
-                tag = FRN
-            }
-        }
-        allow = {
-            civilized = yes
-            is_independant = yes
-            war = no
+		potential = {
+			OR = {
+				primary_culture = dunedain
+				primary_culture = arnorian
+			}
+			capital_scope = { continent = eriador }
+			NOT = {
+				tag = RUN
+				tag = GON
+				tag = ARN
+				tag = CAR
+				tag = DND
+				tag = CRN
+				tag = EGL
+				tag = NAD
+				tag = NID
+				tag = MET
+				tag = FRN
+			}
+		}
+		allow = {
+			civilized = yes
+			is_independant = yes
+			war = no
 			ART = {
 				all_core = {
 					OR = {
 						owned_by = THIS
 						owner = {
 							in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
 						}
 					}
 				}
 			}
-        }
-        effect = {
-            change_tag = ART
-            prestige = 7
-            badboy = -2
-            primary_culture = dunedain
-            add_accepted_culture = arnorian
-            any_country = {
+		}
+		effect = {
+			change_tag = ART
+			prestige = 7
+			badboy = -2
+			primary_culture = dunedain
+			add_accepted_culture = arnorian
+			any_country = {
 				limit = {
 					in_sphere = THIS
 				}
@@ -128,56 +128,56 @@ form_arthedain = {
 				}
 
 			}
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
-    form_cardolan = {
+	form_cardolan = {
 		picture = "cardolan"
-        potential = {
-            OR = {
-                primary_culture = dunedain
-                primary_culture = arnorian
-            }
-            capital_scope = { continent = eriador }
-            NOT = {
-                tag = RUN
-                tag = GON
-                tag = ARN
-                tag = CAR
-                tag = DND
-                tag = SYL
-                tag = HRV
-            }
-        }
-        allow = {
-            civilized = yes
-            is_independant = yes
-            war = no
+		potential = {
+			OR = {
+				primary_culture = dunedain
+				primary_culture = arnorian
+			}
+			capital_scope = { continent = eriador }
+			NOT = {
+				tag = RUN
+				tag = GON
+				tag = ARN
+				tag = CAR
+				tag = DND
+				tag = SYL
+				tag = HRV
+			}
+		}
+		allow = {
+			civilized = yes
+			is_independant = yes
+			war = no
 			CAR = {
 				all_core = {
 					OR = {
 						owned_by = THIS
 						owner = {
 							in_sphere = THIS
-                            OR = {
-                                is_vassal = no
-                                vassal_of = THIS
-                            }
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
 						}
 					}
 				}
 			}
-        }
-        effect = {
-            change_tag = CAR
-            prestige = 7
-            badboy = -2
-            primary_culture = dunedain
-            add_accepted_culture = arnorian
-            any_country = {
+		}
+		effect = {
+			change_tag = CAR
+			prestige = 7
+			badboy = -2
+			primary_culture = dunedain
+			add_accepted_culture = arnorian
+			any_country = {
 				limit = {
 					in_sphere = THIS
 				}
@@ -190,93 +190,93 @@ form_arthedain = {
 				}
 
 			}
-        }
-        ai_will_do = {
-            factor = 1
-        }
-    }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
-    fate_of_the_shire = {
+	fate_of_the_shire = {
 		picture = "arnor"
-        potential = {
-            OR = {
-                tag = RUN
-                tag = ARN
-            }
-            SHI = {
-                exists = yes
-            }
-            NOT = { has_country_flag = fate_of_the_shire }
-        }
-        allow = {
-            SHI = {
-                OR = {
-                    vassal_of = THIS
-                    in_sphere = THIS
-                }
-            }
-            is_independant = yes
-            is_greater_power = yes
-            war = no
-            # Annuminas
-            owns = 1026
-            # Bree
-            owns = 1013
-        }
-        effect = {
-            country_event = 50620
-            set_country_flag = fate_of_the_shire
-        }
-    }
+		potential = {
+			OR = {
+				tag = RUN
+				tag = ARN
+			}
+			SHI = {
+				exists = yes
+			}
+			NOT = { has_country_flag = fate_of_the_shire }
+		}
+		allow = {
+			SHI = {
+				OR = {
+					vassal_of = THIS
+					in_sphere = THIS
+				}
+			}
+			is_independant = yes
+			is_greater_power = yes
+			war = no
+			# Annuminas
+			owns = 1026
+			# Bree
+			owns = 1013
+		}
+		effect = {
+			country_event = 50620
+			set_country_flag = fate_of_the_shire
+		}
+	}
 
-    northern_expansion = {
+	northern_expansion = {
 		picture = "arnor"
-        potential = {
-            OR = {
-                tag = RUN
-                tag = ARN
-            }
-            NOT = { has_country_flag = northern_expansion }
-        }
-        allow = {
-            civilized = yes
-            is_independant = yes
-            is_greater_power = yes
-            war = no
-            all_core = { owned_by = THIS }
-        }
-        effect = {
-            prestige = 5
-            set_country_flag = northern_expansion
-            DND_1020 = { add_core = THIS }
-            DND_1004 = { add_core = THIS }
-        }
-    }
+		potential = {
+			OR = {
+				tag = RUN
+				tag = ARN
+			}
+			NOT = { has_country_flag = northern_expansion }
+		}
+		allow = {
+			civilized = yes
+			is_independant = yes
+			is_greater_power = yes
+			war = no
+			all_core = { owned_by = THIS }
+		}
+		effect = {
+			prestige = 5
+			set_country_flag = northern_expansion
+			DND_1020 = { add_core = THIS }
+			DND_1004 = { add_core = THIS }
+		}
+	}
 
-    claim_angmar = {
+	claim_angmar = {
 		picture = "arnor"
-        potential = {
-            OR = {
-                tag = RUN
-                tag = ARN
-            }
-            has_country_flag = northern_expansion
-            NOT = { has_country_flag = claim_angmar }
-        }
-        allow = {
-            civilized = yes
-            is_independant = yes
-            is_greater_power = yes
-            war = no
-            all_core = { owned_by = THIS }
-        }
-        effect = {
-            prestige = 5
-            set_country_flag = claim_angmar
-            ANG_976 = { add_core = THIS }
-            ANG_979 = { add_core = THIS }
-            ANG_987 = { add_core = THIS }
-            ANG_999 = { add_core = THIS }
-        }
-    }
+		potential = {
+			OR = {
+				tag = RUN
+				tag = ARN
+			}
+			has_country_flag = northern_expansion
+			NOT = { has_country_flag = claim_angmar }
+		}
+		allow = {
+			civilized = yes
+			is_independant = yes
+			is_greater_power = yes
+			war = no
+			all_core = { owned_by = THIS }
+		}
+		effect = {
+			prestige = 5
+			set_country_flag = claim_angmar
+			ANG_976 = { add_core = THIS }
+			ANG_979 = { add_core = THIS }
+			ANG_987 = { add_core = THIS }
+			ANG_999 = { add_core = THIS }
+		}
+	}
 }

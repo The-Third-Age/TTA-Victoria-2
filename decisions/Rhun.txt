@@ -3,7 +3,8 @@
 
 # Rhun Decisions: {
 #	Forming Rhun 
-#	Core Adding/Removal }
+#	Core Adding/Removal
+#   Flavour }
 
 # Forming Rhun
 political_decisions = {
@@ -594,6 +595,36 @@ political_decisions = {
 				}
 				add_province_modifier = { name = cultural_core_integration duration = -1 }
 				remove_province_modifier = core_integration
+			}
+		}
+	}
+}
+
+# Flavour
+political_decisions = {
+	legacy_of_the_wainriders = {
+		picture = "wainriders"
+		potential = {
+			is_culture_group = easterlings
+			NOT = {
+				has_country_modifier = legacy_of_the_wainriders
+			}
+		}
+
+		allow = {
+			army_tactics_3 = 1
+			cavalry_tech_3 = 1
+		}
+
+		effect = {
+			prestige = 15
+			add_country_modifier = {
+				name = legacy_of_the_wainriders
+				duration = -1
+			}
+			relation = {
+				who = GON
+				value = -50
 			}
 		}
 	}

@@ -64,7 +64,7 @@
 ### Province Flavor
 	Handles decisions related to specific provinces that don't fall nicely into other categories
 	
-	Minas Tirith (16): Houses of Healing, Collage of the Spoken Word
+	Minas Tirith (16): Houses of Healing, College of the Spoken Word
 	Ithilduin (204): Restore/Destroy Crossroads of the Fallen King
 	Drúedain Forest (7): Share/Hide Stonewain Valley
 	West Osgiliath (14): Rebuild Osgiliath, Rebuild Dome of Stars

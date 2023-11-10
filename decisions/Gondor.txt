@@ -806,6 +806,10 @@ political_decisions = {
 		picture = "osgiliath"
 		potential = {
 			is_culture_group = dunedain
+			OR = {
+				owns = 14
+				owns = 198
+			}
 			198 = { NOT = { has_province_modifier = orc_raids } }
 			14 = { NOT = { has_province_modifier = rebuilt_city } }
 			198 = { NOT = { has_province_modifier = rebuilt_city } }
@@ -858,9 +862,10 @@ political_decisions = {
 				OR = {
 					region = GON_198
 					region = GON_205
-                    region = GON_212
+					region = GON_212
 				}
 				NOT = { has_province_modifier = resettle_ithilien }
+				NOT = { has_province_modifier = orc_raids }
 			}
 		}
 		

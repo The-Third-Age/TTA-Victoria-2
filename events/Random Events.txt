@@ -69,7 +69,7 @@ country_event = {
 	option = {
 		name = "Show them the door"
 
-        prestige = 1
+		prestige = 1
 		
 		change_variable = { which = wisdom value = 1 }
 	}
@@ -177,7 +177,7 @@ country_event = {
 	option = {
 		name = "Forget it."
 
-        prestige = 5
+		prestige = 5
 		
 		any_pop = {
 			limit = {
@@ -208,7 +208,7 @@ country_event = {
 	option = {
 		name = "No. This court does not take bribes."
 
-        prestige = 5
+		prestige = 5
 		
 		change_variable = { which = corruption value = 1 }
 	}
@@ -292,14 +292,14 @@ country_event = {
 	option = {
 		name = "Surround myself with wise counsel."
 
-        prestige = -1
+		prestige = -1
 
-        any_pop = {
+		any_pop = {
 			limit = {
 				strata = rich
 			}
 			consciousness = -1
-            militancy = -1
+			militancy = -1
 		}
 		
 		change_variable = { which = wisdom value = 1 }
@@ -308,7 +308,7 @@ country_event = {
 	option = {
 		name = "I rule alone!"
 
-        prestige = 5
+		prestige = 5
 		
 		any_pop = {
 			limit = {
@@ -334,61 +334,61 @@ country_event = {
 		NOT = {
 			has_country_modifier = observer_mode
 		}
-        OR = {
-            good_evil_alignment = good_alignment
-            good_evil_alignment = evil_alignment
-        }
+		OR = {
+			good_evil_alignment = good_alignment
+			good_evil_alignment = evil_alignment
+		}
 	}
 	
 	option = {
 		name = "Showcase our glory"
-        prestige = 5
+		prestige = 5
 		any_country = {
 			limit = {
-                exists = yes
+				exists = yes
 				THIS = { good_evil_alignment = good_alignment }
 				good_evil_alignment = evil_alignment
 			}
 			relation = {
-                who = THIS
-                value = -15
-            }
+				who = THIS
+				value = -15
+			}
 		}
 		any_country = {
 			limit = {
-                exists = yes
+				exists = yes
 				THIS = { good_evil_alignment = evil_alignment }
 				good_evil_alignment = good_alignment
 			}
 			relation = {
-                who = THIS
-                value = -15
-            }
+				who = THIS
+				value = -15
+			}
 		}
 	}	
 	option = {
 		name = "Send them to a friends"
 		any_country = {
 			limit = {
-                exists = yes
+				exists = yes
 				THIS = { good_evil_alignment = good_alignment }
 				good_evil_alignment = good_alignment
 			}
 			relation = {
-                who = THIS
-                value = 15
-            }
+				who = THIS
+				value = 15
+			}
 		}
 		any_country = {
 			limit = {
-                exists = yes
+				exists = yes
 				THIS = { good_evil_alignment = evil_alignment }
 				good_evil_alignment = evil_alignment
 			}
 			relation = {
-                who = THIS
-                value = 15
-            }
+				who = THIS
+				value = 15
+			}
 		}
 	}
 }
@@ -406,18 +406,18 @@ country_event = {
 		NOT = {
 			has_country_modifier = observer_mode
 		}
-        # % of max infamy
-        badboy = 0.6
+		# % of max infamy
+		badboy = 0.6
 	}
 	
 	option = {
 		name = "Bask in the glory!"
-        prestige = 5
-        badboy = -1
+		prestige = 5
+		badboy = -1
 	}	
 	option = {
 		name = "Improve our reputation."
-        badboy = -3
+		badboy = -3
 	}
 }
 
@@ -434,7 +434,7 @@ country_event = {
 		NOT = {
 			has_country_modifier = observer_mode
 		}
-        NOT = { has_country_modifier = just }
+		NOT = { has_country_modifier = just }
 	}
 	
 	option = {
@@ -484,12 +484,12 @@ country_event = {
 		NOT = {
 			has_country_modifier = observer_mode
 		}
-        money = 1500
+		money = 1500
 	}
 	
 	option = {
 		name = "Grant aid."
-        treasury = -1000
+		treasury = -1000
 		any_pop = {
 			limit = {
 				strata = rich
@@ -523,7 +523,7 @@ country_event = {
 		NOT = {
 			has_country_modifier = observer_mode
 		}
-        vote_franschise = none_voting
+		vote_franschise = none_voting
 	}
 	
 	option = {
@@ -574,7 +574,7 @@ country_event = {
 		NOT = {
 			has_country_modifier = observer_mode
 		}
-        serfdom = enforced_serfdom
+		serfdom = enforced_serfdom
 		civilized = yes
 	}
 	
@@ -634,22 +634,22 @@ country_event = {
 		NOT = {
 			has_country_modifier = observer_mode
 		}
-        OR = {
-            accepted_culture = men_culture
-            accepted_culture = elven_culture
-            accepted_culture = dwarven_culture
-            accepted_culture = hobbit_culture            
-        }
+		OR = {
+			accepted_culture = men_culture
+			accepted_culture = elven_culture
+			accepted_culture = dwarven_culture
+			accepted_culture = hobbit_culture			
+		}
 	}
 	
 	option = {
 		name = "Hire them."
 		treasury = -500
-        prestige = 3
+		prestige = 3
 	}
 	option = {
 		name = "Decline their services."
-        prestige = -1
+		prestige = -1
 		change_variable = { which = strata_support value = -1 }
 	}
 }
@@ -884,7 +884,7 @@ country_event = {
 		NOT = {
 			has_country_modifier = observer_mode
 		}
-        serfdom = enforced_serfdom
+		serfdom = enforced_serfdom
 		civilized = no
 	}
 

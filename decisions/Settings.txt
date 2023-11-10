@@ -65,6 +65,7 @@ political_decisions = {
 	}
 	
 	enable_memes = {
+		picture = "memes"
 		potential = {
 			ai = no
 			has_global_flag = viewing_settings
@@ -303,29 +304,30 @@ political_decisions = {
 	}
 
 	annex_all = {
-        alert = no
-        potential = {
-            ai = no
+		alert = no
+		potential = {
+			ai = no
 			has_global_flag = viewing_settings
-        }
+		}
 
-        allow = {}
+		allow = {}
 
-        effect = {
-            any_country = {
+		effect = {
+			any_country = {
 				limit = {
 					NOT = {
 						tag = FOR
 					}
 				}
-                annex_to = THIS
-            }
-            
+				annex_to = THIS
+			}
 			DND_1015 = { secede_province = THIS }
 			DND_1020 = { secede_province = THIS }
 			DND_1026 = { secede_province = THIS }
 			DND_1004 = { secede_province = THIS }
 			DND_1007 = { secede_province = THIS }
+			BRE_1014 = { secede_province = THIS }
+			BRE_1013 = { secede_province = THIS }
 			LIN_962 = { secede_province = THIS }
 			LIN_964 = { secede_province = THIS }
 			IML_865 = { secede_province = THIS }
@@ -344,12 +346,17 @@ political_decisions = {
 			ROH_780 = { secede_province = THIS }
 			AND_749 = { secede_province = THIS }
 			AND_759 = { secede_province = THIS }
+			DAL_640 = { secede_province = THIS }
+			DAL_642 = { secede_province = THIS }
+			DAL_643 = { secede_province = THIS }
 			RHO_458 = { secede_province = THIS }
 			RHO_462 = { secede_province = THIS }
 			RHO_467 = { secede_province = THIS }
 			RHO_472 = { secede_province = THIS }
 			KHA_362 = { secede_province = THIS }
 			KHA_366 = { secede_province = THIS }
+			KHA_364 = { secede_province = THIS }
+			KHA_348 = { secede_province = THIS }
 			GON_216 = { secede_province = THIS }
 			GON_226 = { secede_province = THIS }
 			GON_228 = { secede_province = THIS }
@@ -360,32 +367,33 @@ political_decisions = {
 			GON_175 = { secede_province = THIS }
 			GON_186 = { secede_province = THIS }
 			GON_188 = { secede_province = THIS }
-        }
-        ai_will_do = { factor = 0 }
-    }
+			GON_160 = { secede_province = THIS }
+		}
+		ai_will_do = { factor = 0 }
+	}
 
 	# aka spectator mode
 	activate_observer_mode = {
-        alert = no
-        potential = {
-            ai = no
+		alert = no
+		potential = {
+			ai = no
 			has_global_flag = viewing_settings
 			NOT = {
 				has_country_modifier = observer_mode
 			}
-        }
+		}
 
-        allow = {}
+		allow = {}
 
-        effect = {
+		effect = {
 			add_country_modifier = {
 				name = observer_mode
 				duration = -1
 			}
 			treasury = 2147483
-        }
-        ai_will_do = { factor = 0 }
-    }
+		}
+		ai_will_do = { factor = 0 }
+	}
 }
 
 # Play As
