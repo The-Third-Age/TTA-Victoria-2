@@ -197,6 +197,7 @@ Loremasters (researchers and contributers):
 	- [Thorin's Halls](https://www.mcmiddleearth.com/community/attachments/thorins-halls-project-post-pdf.22822/)
 	- [Nogrod](https://www.deviantart.com/hurin63/art/Banner-of-Nogrod-820456648)
 	- [Belegost](https://www.deviantart.com/hurin63/art/Banner-of-Belegost-820455390)
+	- [Windan Elves](https://www.deviantart.com/ivanalekseich/art/flags-houses-of-Gondolin-1-517397790)
 	- Many Fiefdom flags + Dark Realm Umbar -- Dean200027, Lord Saruman of Many Colors, Dawnless Day [submod to one of the HOI4 LOTR mods](https://steamcommunity.com/sharedfiles/filedetails/?id=1314446921)
 
 ### Music & Sound Assets
