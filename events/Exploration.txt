@@ -690,9 +690,10 @@ country_event = { # Helper event to say you can't find a silmaril unless you can
 
 	trigger = {
 		invention = silmarils
-		not = { has_global_flag = silmarils_found }
-		not = { has_country_flag = searching_for_silmarils }
-		not = { has_country_flag = rejected_searching_for_silmarils }
+		NOT = { has_global_flag = silmarils_found }
+		NOT = { has_country_flag = searching_for_silmarils }
+		NOT = { has_country_flag = rejected_searching_for_silmarils }
+		NOT = { has_country_flag = silmaril_deep_and_greedily }
 
 		NOT = {
 			OR = {
@@ -714,6 +715,7 @@ country_event = { # Helper event to say you can't find a silmaril unless you can
 
 	option = {
 		name = "Hmm, deep and greedily..."
+		set_country_flag = silmaril_deep_and_greedily
 	}
 }
 
@@ -722,9 +724,9 @@ country_event = { # First attempt
 
 	trigger = {
 		invention = silmarils
-		not = { has_global_flag = silmarils_found }
-		not = { has_country_flag = searching_for_silmarils }
-		not = { has_country_flag = rejected_searching_for_silmarils }
+		NOT = { has_global_flag = silmarils_found }
+		NOT = { has_country_flag = searching_for_silmarils }
+		NOT = { has_country_flag = rejected_searching_for_silmarils }
 
 		OR = {
 			owns = 843
