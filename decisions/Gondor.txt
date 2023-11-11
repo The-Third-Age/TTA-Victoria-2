@@ -1766,6 +1766,33 @@ political_decisions = {
 		}
 	}
 	
+	claim_harnendor = {
+        picture = "harnendor_map"
+        potential = {
+            tag = GON
+			HRD = { all_core = { owned_by = GON } }
+			NOT = {
+				has_global_flag = harnendor_claimed_GON
+				has_country_modifier = low_military_recruitment
+			}
+        }
+        
+        allow = {
+            war = no
+        }
+        
+        effect = {
+            prestige = 10
+            badboy = 3
+            HAR_286 = { add_core = GON }
+            random_owned = {
+                limit = { province_id = 249 }
+                owner = { HAR_286 = { add_core = HRD } }
+            }
+            set_global_flag = harnendor_claimed_GON
+        }
+    }
+	
 	accept_harnedan = {
 		picture = "south_gondor_military"
 		potential = {
