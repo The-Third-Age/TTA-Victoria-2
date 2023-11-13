@@ -46,25 +46,21 @@ political_decisions = {
 				}
 			}
 			DAL_643 = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = northmen } }
-						empty = yes
-					}
+				OR = {
+					owner = { tag = THIS }
+					owner = { vassal_of = THIS }
+					owner = { in_sphere = THIS }
+					owner = { NOT = { is_culture_group = northmen } }
+					empty = yes
 				}
 			}
 			DAL_645 = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = northmen } }
-						empty = yes
-					}
+				OR = {
+					owner = { tag = THIS }
+					owner = { vassal_of = THIS }
+					owner = { in_sphere = THIS }
+					owner = { NOT = { is_culture_group = northmen } }
+					empty = yes
 				}
 			}
 			DOR = {
@@ -201,6 +197,20 @@ political_decisions = {
 						}
 					}
 				}
+				DAL_643 = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+					}
+				}
+				DAL_645 = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+					}
+				}
 				DOR = {
 					any_core = {
 						OR = {
@@ -235,6 +245,20 @@ political_decisions = {
 					}
 				}
 			}
+			DAL_643 = {
+				OR = {
+					owner = { tag = THIS }
+					owner = { vassal_of = THIS }
+					owner = { in_sphere = THIS }
+				}
+			}
+			DAL_645 = {
+				OR = {
+					owner = { tag = THIS }
+					owner = { vassal_of = THIS }
+					owner = { in_sphere = THIS }
+				}
+			}
 			DOR = {
 				all_core = {
 					OR = {
@@ -262,6 +286,46 @@ political_decisions = {
 					OR = {
 						DAL = { exists = no }
 						DAL = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						DA1 = { exists = no }
+						DA1 = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						DA2 = { exists = no }
+						DA2 = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						DA3 = { exists = no }
+						DA3 = { 
+							exists = yes
+							OR = {
+								good_evil_alignment = neutral_alignment
+								good_evil_alignment = evil_alignment
+							}
+						}
+					}
+					OR = {
+						DA4 = { exists = no }
+						DA4 = { 
 							exists = yes
 							OR = {
 								good_evil_alignment = neutral_alignment
@@ -334,13 +398,17 @@ political_decisions = {
 				limit = {
 					OR = {
 						tag = DAL
+						tag = DA1
+						tag = DA2
+						tag = DA3
+						tag = DA4
 						tag = DOR
 						tag = EHW
 					}
 				}
 				annex_to = RHO
 				
-				all_core = { add_core = RHO remove_core = DAL remove_core = DOR remove_core = EHW }
+				all_core = { add_core = RHO remove_core = DAL remove_core = DA1 remove_core = DA2 remove_core = DA3 remove_core = DA4 remove_core = DOR remove_core = EHW }
 			}
 			
 			any_owned = {
