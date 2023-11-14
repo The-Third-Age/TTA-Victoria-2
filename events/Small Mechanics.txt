@@ -272,6 +272,7 @@ country_event = {
 		add_country_modifier = { name = great_diplomat duration = 1825 }
 	}
 }
+# }
 
 # Palantíri Events {
 # 5008 - 5016
@@ -732,3 +733,99 @@ province_event = {
 		}
 	}
 }
+
+# Outlaws {
+# Events 5054 - 5055
+# Outlaws Attack Caravan
+province_event = {
+	id = 5054
+	title = "Outlaws Attack Caravan!"
+	desc = "EVTDESC5054"
+
+	trigger = {
+		NOT = { owner = { has_country_modifier = observer_mode } }
+		OR = {
+			has_crime = outlaws
+			any_neighbor_province = { has_crime = outlaws }
+		}
+		owner = { money = 1000 }
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	option = {
+		name = "Drat."
+
+		# Goods stolen from the caravan
+		owner = { money = -1000 }
+
+		# Long-term effects of the attack
+		remove_province_modifier = recent_raid # Reset the timer
+		add_province_modifier = { name = recent_raid duration = 365 }
+	}
+}
+
+# Outlaws Cleared
+province_event = {
+	id = 5055
+	title = "Outlaws Handled by Local Authorities"
+	desc = "EVTDESC5055"
+
+	trigger = {
+		NOT = { owner = { has_country_modifier = observer_mode } }
+		has_crime = hunting_outlaws
+	}
+
+	mean_time_to_happen = {
+		months = 60
+
+		modifier = {
+			factor = 0.9
+			units_in_province = 1
+		}
+
+		modifier = {
+			factor = 0.9
+			units_in_province = 3
+		}
+
+		modifier = {
+			factor = 0.9
+			units_in_province = 5
+		}
+
+		modifier = {
+			factor = 0.9
+			units_in_province = 10
+		}
+	}
+
+	option = {
+		name = "Good"
+		
+		add_crime = no_crime
+		
+		outlaws_cleared_loc = {}
+
+		# Some of the militia died
+		any_pop = {
+			limit = {
+				NOT = { is_culture_group = wild_goblins }
+				type = soldiers
+			}
+
+			reduce_pop = 0.99
+		}
+
+		# Recovered some loot
+		owner = {
+			random_list = {
+				4 = { treasury = 2500 }
+				1 = { treasury = 5000 }
+			}
+		}
+	}
+}
+# }

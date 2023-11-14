@@ -150,6 +150,43 @@ political_decisions = {
 	}
 }
 
+# Outlaws
+political_decisions = {
+	hunt_for_outlaws = {
+		potential = {
+			any_owned_province = { has_crime = outlaws }
+		}
+
+		allow = {
+			any_owned_province = {
+				has_crime = outlaws
+				OR = {
+					has_building = fort
+					country_units_in_province = THIS
+				}
+			}
+			money = 10000
+		}
+
+		effect = {
+			random_owned = {
+				limit = {
+					has_crime = outlaws
+					OR = {
+						has_building = fort
+						country_units_in_province = THIS
+					}
+				}
+				add_crime = hunting_outlaws
+			}
+			
+			hunting_outlaws_loc = {}
+
+			treasury = -10000
+		}
+	}
+}
+
 # Palantiri
 political_decisions = {
 	use_the_palantir = {
