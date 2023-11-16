@@ -8,6 +8,7 @@
 #	Military Buildup
 #	Expansion to the West
 #	Return to South Gondor
+#	Retake Umbar
 #	Reintegration of Rohan
 #	Generic Political Flavor
 #	Ecthelion II Flavor
@@ -1779,6 +1780,7 @@ political_decisions = {
         
         allow = {
             war = no
+			expansion_2 = 1
         }
         
         effect = {
@@ -1792,6 +1794,57 @@ political_decisions = {
             set_global_flag = harnendor_claimed_GON
         }
     }
+	
+	rekindle_the_kin_strife_GON = {
+		picture = "corsairs_of_umbar"
+		potential = {
+			tag = GON
+			HAR_286 = { owned_by = GON }
+			NOT = {
+				has_global_flag = kin_strife_reignited_GON
+				has_country_modifier = low_military_recruitment
+			}
+		}
+		
+		allow = {
+			war = no
+			expansion_3 = 1
+		}
+		
+		effect = {
+			prestige = 30
+			badboy = 10
+			
+			random_owned = {
+				limit = { owner = { UMB = { exists = no } } }
+				owner = {
+					UMB_256 = { add_core = GON }
+					UMB_260 = { add_core = GON }
+					UMB_263 = { add_core = GON }
+					UMB_270 = { add_core = GON }
+					UMB_273 = { add_core = GON }
+					HAR_277 = { add_core = GON }
+				}
+			}
+			random_owned = {
+				limit = { owner = { UMB = { exists = yes } } }
+				owner = {
+					war = {
+						target = UMB
+						attacker_goal = {
+							casus_belli = civil_war
+						}
+						defender_goal = {
+							casus_belli = status_quo
+						}
+						call_ally = yes
+					}
+				}
+			}
+			set_global_flag = kin_strife_reignited_GON
+		}
+	}
+	
 	
 	accept_harnedan = {
 		picture = "south_gondor_military"
