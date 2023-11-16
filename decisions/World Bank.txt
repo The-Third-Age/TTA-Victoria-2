@@ -229,19 +229,6 @@ political_decisions = {
 				any_state = { is_slave = yes }
 			}
 			
-			# Setting up Administrative Services in capitals
-			any_country = {
-				limit = {
-					is_substate = no
-				}
-				random_owned = {
-					limit = {
-						is_capital = yes
-					}
-					trade_goods = administrative_services
-				}
-			}
-			
 			# Setting up Wild Goblin Holds
 			random_owned = {
 				any_neighbor_province = {

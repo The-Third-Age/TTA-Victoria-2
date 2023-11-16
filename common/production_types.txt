@@ -6,7 +6,8 @@ factory_template = {
 		cut_stone = 0.2 # 0.3
 		iron = 0.05 	# 0.235
 		lumber = 0.1	# 0.1
-	}			# Total   0.635
+		horses = 0.05	# 0.4
+	}			# Total   1.035
 	
 	owner =
 	{
@@ -31,7 +32,8 @@ construction_good_factory_template = {
 	efficiency = {
 		rock = 0.1		# 0.24
 		timber = 0.1	# 0.09
-	}			# Total	  0.33
+		horses = 0.05	# 0.4
+	}			# Total	  0.73
 	
 	owner =
 	{
@@ -51,6 +53,8 @@ construction_good_factory_template = {
 	type = factory
 	workforce = 10000 
 }
+
+##### WILL NEVER BE UNLOCKED #####
 
 will_never_be_unlocked = {	   
 	template = factory_template
@@ -479,9 +483,9 @@ stables = {
 	farm = yes
 }
 
-administrative_offices = {
+artisinal_workshop = {
 	template = RGO_template_clerks
-	output_goods = administrative_services
+	output_goods = artisinal_goods
 	value = 1
 	farm = yes
 }
