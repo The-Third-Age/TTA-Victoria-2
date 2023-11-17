@@ -146,21 +146,24 @@ country_event = {
 
 province_event = {
 	id = 50904
-	title = "The Integration of the Grammas"
+	title = "The Integration of the Grammas" 
 	desc = "EVTDESC50904"
 	
 	trigger = {
 		owner = {
 			tag = DAL
-			has_global_flag = invited_the_grammas
+			has_global_flag = DAL_invited_the_grammas
 			
-			# Owner has core provinces that are uncolonized
-			any_core = {
-				empty = yes
-				any_neighbor_province = {
-					owner = {
-						tag = THIS
+			# Grammas has core provinces that are uncolonized
+			GRA = {
+				any_core = {
+					empty = yes
+					OR = {
+						region = DAL_643
+						region = DAL_642
+						region = DAL_640
 					}
+					any_neighbor_province = { owned_by = THIS }
 				}
 			}
 		}
@@ -175,41 +178,36 @@ province_event = {
 		name = "We welcome our brothers"
 		
 		owner = {
-			# Adds a modifier to all owned provinces with adjacent uncolonized cores
-			all_core = {
-				limit = {
-					empty = yes
-				}
-				
-				any_neighbor_province = {
+			# Adds a targetting modifier to all eligible provinces
+			GRA = {
+				all_core = {
 					limit = {
-						owner = { tag = THIS }
+						empty = yes
+						OR = {
+							region = DAL_643
+							region = DAL_642
+							region = DAL_640
+						}
+						any_neighbor_province = { owned_by = THIS }
 					}
-					
 					add_province_modifier = { name = colonization_target duration = -1 }
 				}
 			}
 			
 			# Randomly grabs one of the marked provinces and annexes a random neighbor uncolonized core
-			random_owned = {
-				limit = {
-					has_empty_adjacent_province = yes
-					has_province_modifier = colonization_target
-				}
-				
-				random_empty_neighbor_province = {
-					limit = {
-						is_core = THIS
+			FOR = { 
+				random_owned = { 
+					random_empty_neighbor_province = { 
+						limit = { has_province_modifier = colonization_target }
+						secede_province = THIS
 					}
-					
-					secede_province = THIS
 				}
 			}
 			
 			# Clears the targeting modifiers to clear the path for the next time this event fires
-			any_owned = {
-				remove_province_modifier = colonization_target
-			}
+			GRA = { all_core = { remove_province_modifier = colonization_target } }
+			
+			DAL_colonize_grammas_province_loc = {}
 		}
 	}
 }
@@ -426,7 +424,7 @@ country_event = {
 	trigger = {
 		tag = DAL
 		OR = {
-			has_global_flag = invited_the_grammas
+			has_global_flag = DAL_invited_the_grammas
 			accepted_culture = grammas
 		}
 	}
@@ -457,7 +455,7 @@ country_event = {
 	trigger = {
 		tag = DAL
 		OR = {
-			has_global_flag = invited_the_grammas
+			has_global_flag = DAL_invited_the_grammas
 			accepted_culture = grammas
 		}
 		year = 2970
@@ -490,7 +488,7 @@ country_event = {
 	trigger = {
 		tag = DAL
 		OR = {
-			has_global_flag = invited_the_grammas
+			has_global_flag = DAL_invited_the_grammas
 			accepted_culture = grammas
 		}
 		year = 2990

@@ -40,7 +40,7 @@ political_decisions = {
 		potential = {
 			tag = DAL
 			nationalvalue = bard_i
-			NOT = { has_global_flag = invited_the_grammas }
+			NOT = { has_global_flag = DAL_invited_the_grammas }
 		}
 		
 		allow = {
@@ -54,7 +54,9 @@ political_decisions = {
 		effect = {
 			badboy = 2
 			
-			set_global_flag = invited_the_grammas
+			set_global_flag = DAL_invited_the_grammas
+			
+			DAL_invite_grammas_loc = {}
 		}
 	}
 
@@ -64,24 +66,37 @@ political_decisions = {
 		potential = {
 			tag = DAL
 			nationalvalue = bard_i
-			has_global_flag = invited_the_grammas
+			has_global_flag = DAL_invited_the_grammas
 			NOT = { has_global_flag = proclaimed_lordship_over_the_gramas }
 		}
 		
 		allow = {
-			owns = 650 # Odriksdun
-			owns = 640 # Grasgard
-			owns = 641 # Klofnakot
-			owns = 478 # Kleinibriost
-			owns = 349 # Hatherbold
-			owns = 446 # Erland's Ferry
-			owns = 642 # Austriborg
+			GRA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						AND = {
+							region = DAL_642
+							owned_by = AMO
+						}
+					}
+				}
+			}
 		}
 		
 		effect = {
 			add_country_modifier = {
 				name = king_of_grammas
 				duration = -1
+			}
+			
+			GRA = {
+				all_core = {
+					limit = {
+						owned_by = THIS
+					}
+					add_core = THIS
+				}
 			}
 			
 			prestige = 5
