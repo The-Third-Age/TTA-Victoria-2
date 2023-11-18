@@ -582,42 +582,66 @@ country_event = {
 	}
 }
 
-# Kingdom of Dale
+# Kingdom of Dale (Barding Realm) {
 country_event = {
 	id = 35017
 	picture = "kingdom_of_dale"
 	title = "EVTNAME35000"
 	desc = "EVTDESC35017"
 
-	is_triggered_only = yes
+	fire_only_once = yes
 	major = yes
+	
+	trigger = {
+		tag = DAL
+	}
 
 	option = {
 		name = "EVTOPTA35000"
 		country_event = 35017
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 
 	option = {
 		name = "EVTOPTB35000"
 		country_event = 35018
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 
 	option = {
 		name = "EVTOPTC35000"
 		country_event = 35019
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 
 	option = {
 		name = "EVTOPTD35000"
 		country_event = 35020
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 
 	option = {
 		name = "EVTOPTE35000"
+		
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 
-# Kingdom of Dale - Flavor
+# Kingdom of Dale (Barding Realm) - Flavor
 country_event = {
 	id = 35018
 	picture = "kingdom_of_dale"
@@ -652,7 +676,7 @@ country_event = {
 	}
 }
 
-# Kingdom of Dale - Government
+# Kingdom of Dale (Barding Realm) - Government
 country_event = {
 	id = 35019
 	picture = "kingdom_of_dale"
@@ -687,7 +711,7 @@ country_event = {
 	}
 }
 
-# Kingdom of Dale - Bonuses
+# Kingdom of Dale (Barding Realm) - Bonuses
 country_event = {
 	id = 35020
 	picture = "kingdom_of_dale"
@@ -721,6 +745,7 @@ country_event = {
 		name = "EVTOPTE35000"
 	}
 }
+# }
 
 # Kingdom of Erebor
 country_event = {
