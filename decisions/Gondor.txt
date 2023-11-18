@@ -1812,12 +1812,22 @@ political_decisions = {
 		}
 		
 		effect = {
-			prestige = 30
-			badboy = 10
-			
 			random_owned = {
-				limit = { owner = { UMB = { exists = no } } }
+				limit = {
+					owner = {
+						NOT = {
+							UMB_256 = { owned_by = UMB }
+							UMB_260 = { owned_by = UMB }
+							UMB_263 = { owned_by = UMB }
+							UMB_270 = { owned_by = UMB }
+							UMB_273 = { owned_by = UMB }
+							HAR_277 = { owned_by = UMB }
+						}
+					}
+				}
 				owner = {
+					prestige = 40
+					badboy = 13
 					UMB_256 = { add_core = GON }
 					UMB_260 = { add_core = GON }
 					UMB_263 = { add_core = GON }
@@ -1827,8 +1837,21 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = { owner = { UMB = { exists = yes } } }
+				limit = { 
+					owner = {
+						OR = {
+							UMB_256 = { owned_by = UMB }
+							UMB_260 = { owned_by = UMB }
+							UMB_263 = { owned_by = UMB }
+							UMB_270 = { owned_by = UMB }
+							UMB_273 = { owned_by = UMB }
+							HAR_277 = { owned_by = UMB }
+						}
+					}
+				}
 				owner = {
+					prestige = 30
+					badboy = 10
 					war = {
 						target = UMB
 						attacker_goal = {
@@ -1845,6 +1868,77 @@ political_decisions = {
 		}
 	}
 	
+	claim_umbar_GON = {
+		picture = "umbar_map"
+		potential = {
+			tag = GON
+			OR = {
+				AND = {
+					UMB_256 = { owned_by = GON }
+					UMB_260 = { owned_by = GON }
+					UMB_263 = { owned_by = GON }
+					UMB_270 = { owned_by = GON }
+					UMB_273 = { owned_by = GON }
+					HAR_277 = { owned_by = GON }
+				}
+				AND = {
+					OR = {
+						UMB_256 = { owned_by = GON }
+						UMB_260 = { owned_by = GON }
+						UMB_263 = { owned_by = GON }
+						UMB_270 = { owned_by = GON }
+						UMB_273 = { owned_by = GON }
+						HAR_277 = { owned_by = GON }
+					}
+					UMB = { exists = no }
+				}
+			}
+			NOT = {
+				has_country_modifier = low_military_recruitment
+				is_core = 256
+				is_core = 257
+				is_core = 258
+				is_core = 259
+				is_core = 260
+				is_core = 282
+				is_core = 264
+				is_core = 261
+				is_core = 262
+				is_core = 265
+				is_core = 266
+				is_core = 263
+				is_core = 270
+				is_core = 267
+				is_core = 268
+				is_core = 273
+				is_core = 271
+				is_core = 272
+				is_core = 274
+				is_core = 275
+				is_core = 276
+				is_core = 278
+				is_core = 280
+				is_core = 283
+				is_core = 318
+				is_core = 319
+			}
+		}
+		allow = {
+			war = no
+			population_4 = 1
+			
+		}
+		effect = {
+			prestige = 10
+			badboy = 3
+			UMB_256 = { add_core = GON }
+			UMB_260 = { add_core = GON }
+			UMB_263 = { add_core = GON }
+			UMB_270 = { add_core = GON }
+			UMB_273 = { add_core = GON }
+			HAR_277 = { add_core = GON }
+		}
+	}
 	
 	accept_harnedan = {
 		picture = "south_gondor_military"
