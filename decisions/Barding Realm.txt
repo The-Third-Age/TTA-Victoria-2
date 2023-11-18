@@ -29,6 +29,19 @@ political_decisions = {
 				name = king_of_adhalling
 				duration = -1
 			}
+			
+			# Setting up the Rivermen Minors
+			any_country = {
+				limit = {
+					OR = {
+						tag = DA1
+						tag = DA2
+						tag = DA3
+						tag = DA4
+					}
+				}
+				add_country_modifier = { name = rivermen_minor duration = -1 }
+			}
 		}
 	}
 }
@@ -130,6 +143,7 @@ political_decisions = {
 		}
 		
 		effect = {
+			badboy = 5
 			# Riverrun
 			random_country = {
 				limit = {
@@ -179,6 +193,8 @@ political_decisions = {
 			}
 			
 			set_global_flag = invited_the_rivermen
+			
+			DAL_send_ultimatum_to_rivermen_loc = {}
 		}
 	}
 	
@@ -189,63 +205,23 @@ political_decisions = {
 			tag = DAL
 			nationalvalue = bard_i
 			OR = {
-				DA1 = {
+				RIV = {
 					any_core = {
 						NOT = {
 							OR = {
-								owned_by = DAL
+								owned_by = THIS
 								owned_by = DA1
 								owned_by = DA2
 								owned_by = DA3
 								owned_by = DA4
+								owned_by = RIV
 							}
 						}
-						NOT = { is_core = DAL }
-					}
-				}
-				DA2 = {
-					any_core = {
-						NOT = {
-							OR = {
-								owned_by = DAL
-								owned_by = DA1
-								owned_by = DA2
-								owned_by = DA3
-								owned_by = DA4
-							}
-						}
-						NOT = { is_core = DAL }
-					}
-				}
-				DA3 = {
-					any_core = {
-						NOT = {
-							OR = {
-								owned_by = DAL
-								owned_by = DA1
-								owned_by = DA2
-								owned_by = DA3
-								owned_by = DA4
-							}
-						}
-						NOT = { is_core = DAL }
-					}
-				}
-				DA4 = {
-					any_core = {
-						NOT = {
-							OR = {
-								owned_by = DAL
-								owned_by = DA1
-								owned_by = DA2
-								owned_by = DA3
-								owned_by = DA4
-							}
-						}
-						NOT = { is_core = DAL }
+						NOT = { is_core = THIS }
 					}
 				}
 			}
+			NOT = { has_global_flag = DAL_proclaimed_lordship_over_the_rivermen }
 		}
 		
 		allow = {
@@ -253,80 +229,40 @@ political_decisions = {
 		}
 		
 		effect = {
-			DA1 = {
+			RIV = {
 				all_core = {
 					limit = {
 						NOT = {
 							OR = {
-								owned_by = DAL
+								owned_by = THIS
 								owned_by = DA1
 								owned_by = DA2
 								owned_by = DA3
 								owned_by = DA4
+								owned_by = RIV
 							}
+							is_core = THIS
 						}
-						NOT = { is_core = DAL }
 					}
-					add_core = DAL
+					add_core = THIS
 				}
 			}
 			
-			DA2 = {
-				all_core = {
-					limit = {
-						NOT = {
-							OR = {
-								owned_by = DAL
-								owned_by = DA1
-								owned_by = DA2
-								owned_by = DA3
-								owned_by = DA4
-							}
-						}
-						NOT = { is_core = DAL }
+			any_country = {
+				limit = {
+					OR = {
+						tag = DA1
+						tag = DA2
+						tag = DA3
+						tag = DA4
+						tag = RIV
 					}
-					add_core = DAL
+					exists = yes
 				}
+				create_alliance = THIS
 			}
 			
-			DA3 = {
-				all_core = {
-					limit = {
-						NOT = {
-							OR = {
-								owned_by = DAL
-								owned_by = DA1
-								owned_by = DA2
-								owned_by = DA3
-								owned_by = DA4
-							}
-						NOT = { is_core = DAL }
-						}
-					}
-					add_core = DAL
-				}
-			}
-			
-			DA4 = {
-				all_core = {
-					limit = {
-						NOT = {
-							OR = {
-								owned_by = DAL
-								owned_by = DA1
-								owned_by = DA2
-								owned_by = DA3
-								owned_by = DA4
-							}
-						}
-						NOT = { is_core = DAL }
-					}
-					add_core = DAL
-				}
-			}
-			
-			add_accepted_culture = rivermen
-			set_global_flag = protected_the_rivermen
+			set_global_flag = DAL_protected_the_rivermen
 		}
 	}
 	
@@ -340,15 +276,29 @@ political_decisions = {
 				has_global_flag = invited_the_rivermen
 				has_global_flag = protect_the_rivermen
 			}
-			NOT = { has_global_flag = proclaimed_lordship_over_the_rivermen }
+			NOT = { has_global_flag = DAL_proclaimed_lordship_over_the_rivermen }
 		}
 		
 		allow = {
 			war = no
-			DA1 = { all_core = { owned_by = THIS } }
-			DA2 = { all_core = { owned_by = THIS } }
-			DA3 = { all_core = { owned_by = THIS } }
-			DA4 = { all_core = { owned_by = THIS } }
+			RIV = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = { vassal_of = THIS }
+						owner = {
+							has_global_flag = DAL_protected_the_rivermen
+							OR = {
+								tag = DA1
+								tag = DA2
+								tag = DA3
+								tag = DA4
+								tag = RIV
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		effect = {
@@ -385,16 +335,85 @@ political_decisions = {
 				}
 			}
 			
-			prestige = 5
+			random_owned = {
+				limit = {
+					exists = DA1
+					DA1 = { vassal_of = THIS }
+				}
+				owner = {
+					inherit = DA1
+					define_general = {
+						name = "§LAridain, §MThegan of Riverrun§!"
+						background = reserved
+						personality = rivermen_thegan
+					}
+				}
+			}
 			
 			random_owned = {
 				limit = {
-					NOT = { owner = { accepted_culture = rivermen } }
+					exists = DA2
+					DA2 = { vassal_of = THIS }
 				}
-				owner = { add_accepted_culture = rivermen }
+				owner = {
+					inherit = DA2
+					define_general = {
+						name = "§LKynodin, §MThegan of Kaupaborg§!"
+						background = reserved
+						personality = rivermen_thegan
+					}
+				}
 			}
 			
-			set_global_flag = proclaimed_lordship_over_the_rivermen
+			random_owned = {
+				limit = {
+					exists = DA3
+					DA3 = { vassal_of = THIS }
+				}
+				owner = {
+					inherit = DA3
+					define_general = {
+						name = "§LNomrel, §MThegan of Myrrborg§!"
+						background = reserved
+						personality = rivermen_thegan
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					exists = DA4
+					DA4 = { vassal_of = THIS }
+				}
+				owner = {
+					inherit = DA4
+					define_general = {
+						name = "§LGeirmund, §MThegan of Naertheiaborg§!"
+						background = reserved
+						personality = rivermen_thegan
+					}
+				}
+			}
+			
+			any_country = {
+				limit = {
+					has_global_flag = DAL_protected_the_rivermen
+					OR = {
+						tag = RIV
+						tag = DA1
+						tag = DA2
+						tag = DA3
+						tag = DA4
+					}
+					exists = yes
+				}
+				annex_to = THIS
+			}
+			
+			prestige = 5
+			add_accepted_culture = rivermen
+			set_global_flag = DAL_proclaimed_lordship_over_the_rivermen
+			DAL_proclaim_lord_of_rivermen_loc = {}
 		}
 	}
 }
@@ -465,7 +484,6 @@ political_decisions = {
 			add_country_modifier = { name = great_advisor duration = 3650 }
 			
 			set_global_flag = DAL_appointed_lifstan
-			DAL_lifstan_appointed_loc = {}
 		}
 	}
 	
@@ -486,7 +504,6 @@ political_decisions = {
 			add_country_modifier = { name = great_diplomat duration = 3650 }
 			
 			set_global_flag = DAL_appointed_erland
-			DAL_erland_appointed_loc = {}
 		}
 	}
 }

@@ -45,12 +45,15 @@ country_event = {
 		FROM = { country_event = 50902 }
 		
 		ai_chance = {
-			factor = 100
-			
+			factor = 25
 			modifier = {
 				factor = 0
-				NOT = { tag = DA1 }
-				NOT = { has_global_flag = protected_the_rivermen }
+				tag = DA3
+			}
+			modifier = {
+				factor = 2
+				# alliance_with = FROM
+				alliance_with = DAL
 			}
 		}
 	}
@@ -59,29 +62,19 @@ country_event = {
 		name = "To war!"
 		
 		FROM = { country_event = 50903 }
+		all_core = { add_core = FROM } # To make sure that should DAL fail, they can attempt to do it again
 		
-		capital_scope = {
-			sub_unit = { type = archers value = current }
-			sub_unit = { type = archers value = current }
-			sub_unit = { type = archers value = current }
-			sub_unit = { type = archers value = current }
-			sub_unit = { type = pikemen value = current }
-			sub_unit = { type = pikemen value = current }
-			sub_unit = { type = pikemen value = current }
-			sub_unit = { type = pikemen value = current }
-			sub_unit = { type = scouts value = current }
-			sub_unit = { type = artillery value = current }
-		}
-		
+		# Actually be able to afford their army (at first)
 		treasury = 100000
 		
 		ai_chance = {
-			factor = 100
-			
+			factor = 50
 			modifier = {
 				factor = 0
-				tag = DA1
-				has_global_flag = protected_the_rivermen
+				OR = {
+					tag = DA1
+					has_global_flag = DAL_protected_the_rivermen
+				}
 			}
 		}
 	}
@@ -98,13 +91,15 @@ country_event = {
 	option = {
 		name = "Welcome to $COUNTRY$!"
 		
-		FROM = {
-			all_core = {
-				add_core = THIS
-			}
-		}
+		create_vassal = FROM
+		relation = { who = FROM value = 400 }
+		create_alliance = FROM
 		
-		inherit = FROM
+		# If we are a GP, sphere the minor
+		random_owned = {
+			limit = { owner = { is_greater_power = yes } }
+			owner = { diplomatic_influence = { who = FROM value = 400 } }
+		}
 	}
 }
 
@@ -118,8 +113,6 @@ country_event = {
 	
 	option = {
 		name = "They made their choice"
-		
-		badboy = 3
 		
 		casus_belli = {
 			target = FROM
