@@ -8,7 +8,7 @@
 country_event = {
 	id = 99001
 	picture = "production"
-	title = "Flavor Cleanup"
+	title = "DAL Flavor Cleanup"
 	desc = "EVTDESC99001"
 	
 	is_triggered_only = yes
@@ -19,20 +19,20 @@ country_event = {
 		# build_meres_end_boatlift (decisions/Barding Realm.txt)
 		random_country = { # Boat lift started building, then province switched hands
 			limit = {
-				has_global_flag = meres_end_boat_lift_constructing
+				has_global_flag = DAL_meres_end_boat_lift_constructing
 				owns = 648
-				NOT = { has_global_flag = meres_end_boat_lift_constructed }
+				NOT = { has_global_flag = DAL_meres_end_boat_lift_constructed }
 				NOT = { has_country_modifier = meres_end_constructing_boat_lift }
 			}
 			add_country_modifier = { name = meres_end_constructing_boat_lift duration = -1 }
 		}
 		random_country = { # Lost the province since it started building or it finished building
 			limit = {
-				has_global_flag = meres_end_boat_lift_constructing
+				has_global_flag = DAL_meres_end_boat_lift_constructing
 				has_country_modifier = meres_end_constructing_boat_lift
 				OR = {
 					NOT = { owns = 648 }
-					has_global_flag = meres_end_boat_lift_constructed
+					has_global_flag = DAL_meres_end_boat_lift_constructed
 				}
 			}
 			remove_country_modifier = meres_end_constructing_boat_lift
@@ -40,7 +40,7 @@ country_event = {
 		random_owned = { # Finished building, but one of the affected provinces is missing the modifier
 			any_neighbor_province = {
 				limit = {
-					owner = { has_global_flag = meres_end_boat_lift_constructed }
+					owner = { has_global_flag = DAL_meres_end_boat_lift_constructed }
 					OR = {
 						province_id = 649
 						province_id = 653

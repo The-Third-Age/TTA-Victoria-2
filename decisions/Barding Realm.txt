@@ -344,8 +344,8 @@ political_decisions = {
 					inherit = DA1
 					define_general = {
 						name = "§LAridain, §MThegan of Riverrun§!"
-						background = reserved
-						personality = rivermen_thegan
+						background = rivermen_thegan
+						personality = reserved
 					}
 				}
 			}
@@ -359,8 +359,8 @@ political_decisions = {
 					inherit = DA2
 					define_general = {
 						name = "§LKynodin, §MThegan of Kaupaborg§!"
-						background = reserved
-						personality = rivermen_thegan
+						background = rivermen_thegan
+						personality = reserved
 					}
 				}
 			}
@@ -374,8 +374,8 @@ political_decisions = {
 					inherit = DA3
 					define_general = {
 						name = "§LNomrel, §MThegan of Myrrborg§!"
-						background = reserved
-						personality = rivermen_thegan
+						background = rivermen_thegan
+						personality = reserved
 					}
 				}
 			}
@@ -389,8 +389,8 @@ political_decisions = {
 					inherit = DA4
 					define_general = {
 						name = "§LGeirmund, §MThegan of Naertheiaborg§!"
-						background = reserved
-						personality = rivermen_thegan
+						background = rivermen_thegan
+						personality = reserved
 					}
 				}
 			}
@@ -424,7 +424,7 @@ political_decisions = {
 		picture = "long_lake"
 		potential = {
 			owns = 648
-			NOT = { has_global_flag = meres_end_boat_lift_constructing }
+			NOT = { has_global_flag = DAL_meres_end_boat_lift_constructing }
 		}
 		
 		allow = {
@@ -460,7 +460,8 @@ political_decisions = {
 				owner = { treasury = -50000 }
 			}
 			
-			set_global_flag = meres_end_boat_lift_constructing
+			set_global_flag = DAL_meres_end_boat_lift_constructing
+			DAL_constructing_meres_end_boat_lift_loc = {}
 		}
 	}
 }
