@@ -212,21 +212,19 @@ political_decisions = {
 		potential = {
 			tag = DAL
 			nationalvalue = bard_i
-			OR = {
-				RIV = {
-					any_core = {
-						NOT = {
-							OR = {
-								owned_by = THIS
-								owned_by = DA1
-								owned_by = DA2
-								owned_by = DA3
-								owned_by = DA4
-								owned_by = RIV
-							}
+			RIV = {
+				any_core = {
+					NOT = {
+						OR = {
+							owned_by = THIS
+							owned_by = DA1
+							owned_by = DA2
+							owned_by = DA3
+							owned_by = DA4
+							owned_by = RIV
 						}
-						NOT = { is_core = THIS }
 					}
+					NOT = { is_core = THIS }
 				}
 			}
 			NOT = { has_global_flag = DAL_proclaimed_lordship_over_the_rivermen }
@@ -470,6 +468,29 @@ political_decisions = {
 			
 			set_global_flag = DAL_meres_end_boat_lift_constructing
 			DAL_constructing_meres_end_boat_lift_loc = {}
+		}
+	}
+	
+	rebuild_dale_toy_market = {
+		picture = "DAL_dale"
+		potential = {
+			is_culture_group = northmen
+			owns = 652 # Dale
+			NOT = { 652 = { has_province_modifier = wonder_of_the_north } }
+		}
+		
+		allow = {
+			OR = {
+				owns = 660 # Erebor
+				660 = { owner = { alliance_with = THIS } }
+			}
+			guilds_3 = 1
+			money = 50000
+		}
+		
+		effect = {
+			treasury = -50000
+			652 = { add_province_modifier = { name = wonder_of_the_north duration = -1 } }
 		}
 	}
 }
