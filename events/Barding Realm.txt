@@ -47,12 +47,7 @@ country_event = {
 		ai_chance = {
 			factor = 25
 			modifier = {
-				factor = 0
-				tag = DA3
-			}
-			modifier = {
 				factor = 2
-				# alliance_with = FROM
 				alliance_with = DAL
 			}
 		}
@@ -62,7 +57,10 @@ country_event = {
 		name = "To war!"
 		
 		FROM = { country_event = 50903 }
-		all_core = { add_core = FROM } # To make sure that should DAL fail, they can attempt to do it again
+		any_owned = {
+			limit = { is_core = RIV }
+			add_core = DAL # To make sure that should DAL fail, they can attempt to do it again
+		}
 		
 		# Actually be able to afford their army (at first)
 		treasury = 100000
@@ -71,10 +69,7 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 0
-				OR = {
-					tag = DA1
-					has_global_flag = DAL_protected_the_rivermen
-				}
+				has_global_flag = DAL_protected_the_rivermen
 			}
 		}
 	}
@@ -208,7 +203,7 @@ province_event = {
 province_event = {
 	id = 50905
 	title = "Reconstruction from Smaug's Destruction"
-	desc = "EVTDESC50905"
+	desc = "EVTDESC50906"
 	
 	trigger = {
 		has_province_modifier = smaugs_desolation
