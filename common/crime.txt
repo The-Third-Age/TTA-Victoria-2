@@ -1,5 +1,4 @@
 no_crime = {
-	icon = 1
 	trigger = {}
 }
 
@@ -9,8 +8,6 @@ outlaws = {
 	local_artisan_output = -0.1
 	local_factory_output = -0.1
 	
-	icon = 2
-	
 	trigger = {}
 }
 
@@ -18,8 +15,6 @@ hunting_outlaws = {
 	local_RGO_output = -0.05
 	local_artisan_output = -0.05
 	local_factory_output = -0.05
-	
-	icon = 3
 	
 	trigger = {}
 }
@@ -29,7 +24,31 @@ swashbucklers = {
 	local_artisan_output = -0.1
 	local_factory_output = -0.1
 	
-	icon = 4
+	trigger = {}
+}
 
+smaugs_desolation = {
+	immigrant_attract = -0.5
+	life_rating = -0.5
+	# Audax Validator "." Ignore_1007
+	local_artisan_output = -0.5
+	local_factory_output = -0.1
+	local_RGO_output = -0.5
+	farm_rgo_size = -0.25
+	mine_rgo_size = -0.25
+	
+	trigger = {}
+}
+
+reconstruction_started_smaugs_desolation = {
+	immigrant_attract = -0.25
+	life_rating = -0.25
+	# Audax Validator "." Ignore_1007
+	local_artisan_output = -0.25
+	local_factory_output = -0.05
+	local_RGO_output = -0.25
+	farm_rgo_size = -0.10
+	mine_rgo_size = -0.10
+	
 	trigger = {}
 }

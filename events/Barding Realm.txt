@@ -206,7 +206,7 @@ province_event = {
 	desc = "EVTDESC50906"
 	
 	trigger = {
-		has_province_modifier = smaugs_desolation
+		has_crime = smaugs_desolation
 	}
 	
 	mean_time_to_happen = {
@@ -216,8 +216,7 @@ province_event = {
 	option = {
 		name = "It is time"
 		
-		remove_province_modifier = smaugs_desolation
-		add_province_modifier = { name = reconstruction_started_smaugs_desolation duration = -1 }
+		add_crime = reconstruction_started_smaugs_desolation
 	}
 }
 
@@ -227,7 +226,7 @@ province_event = {
 	desc = "EVTDESC50906"
 	
 	trigger = {
-		has_province_modifier = smaugs_desolation
+		has_crime = smaugs_desolation
 		owner = { money = 25000 }
 	}
 	
@@ -249,8 +248,8 @@ province_event = {
 		name = "It is time"
 		
 		owner = { treasury = -25000 }
-		remove_province_modifier = smaugs_desolation
-		add_province_modifier = { name = reconstruction_started_smaugs_desolation duration = -1 }
+		
+		add_crime = reconstruction_started_smaugs_desolation
 	}
 	
 	option = {
@@ -264,7 +263,7 @@ province_event = {
 	desc = "EVTDESC50907"
 	
 	trigger = {
-		has_province_modifier = reconstruction_started_smaugs_desolation
+		has_crime = reconstruction_started_smaugs_desolation
 	}
 	
 	mean_time_to_happen = {
@@ -279,7 +278,7 @@ province_event = {
 	option = {
 		name = "We are removing a stain from the land and memory"
 		
-		remove_province_modifier = reconstruction_started_smaugs_desolation
+		add_crime = no_crime
 		add_province_modifier = { name = reconstruction_finished_smaugs_desolation duration = 730 }
 	}
 }
