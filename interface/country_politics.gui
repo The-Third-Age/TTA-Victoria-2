@@ -1740,41 +1740,42 @@ guiTypes = {
 			fixedsize = yes
 			format = left
 		}
-		iconType = {
-			name ="decision_image"
-			spriteType = "GFX_no_decision_image"
-			position = { x= 12 y = 27 }
-			Orientation = "UPPER_LEFT"
-		}
 		
 		instantTextBoxType = { 
 			name = "decision_desc"
 			position = { x = 114 y = 27 }
 			font = "Arial12_black"
 			text = "lorem ipsum"	
-			maxWidth = 435
-			maxHeight = 130
+			maxWidth = 415
+			maxHeight = 160
 			fixedsize = yes
+		}
+		
+		iconType = {
+			name ="decision_image"
+			spriteType = "GFX_no_decision_image"
+			position = { x= 7 y = 23 }
+			Orientation = "UPPER_LEFT"
 		}
 		
 		iconType = {
 			name ="requirements"
 			spriteType = "GFX_decision_info"
-			position = { x= 462 y = 102 }
+			position = { x= 462 y = 4 }
 			Orientation = "UPPER_LEFT"
 		}
 	
 		guiButtonType = {
 			name = "ignore_checkbox"
 			quadTextureSprite ="GFX_checkbox_square"
-			position = { x = 480 y = 95 }
+			position = { x = 480 y = -3 }
 			Orientation = "UPPER_LEFT"
 		}
 	
 		guiButtonType = {
 			name = "make_decision"
 			quadTextureSprite ="GFX_decision_confirm"
-			position = { x = 509 y = 103 }
+			position = { x = 509 y = 5 }
 			Orientation = "UPPER_LEFT"
 		}
 	}
