@@ -50,6 +50,15 @@ political_decisions = {
 				}
 				add_country_modifier = { name = rivermen_minor duration = -1 }
 			}
+			
+			# Setting up Leaders (-1 = unborn)
+			FOR = { set_variable = { which = bard_i_age value = 55 } }
+			FOR = { set_variable = { which = bain_i_age value = 25 } }
+			FOR = { set_variable = { which = brand_i_age value = -1 } }
+			FOR = { set_variable = { which = bard_ii_age value = -1 } }
+			
+			FOR = { country_event = { id = 33000 days = 152 } } # June 1
+			FOR = { country_event = { id = 33001 days = 182 } } # June 1
 		}
 	}
 }
