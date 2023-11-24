@@ -267,7 +267,7 @@ political_decisions = {
 	}
 	
 	protect_the_rivermen = {
-		picture=  "barding_diplomats"
+		picture=  "DAL_barding_diplomats"
 		
 		potential = {
 			tag = DAL
@@ -558,7 +558,7 @@ political_decisions = {
 # Bard I Flavor
 political_decisions = {
 	appoint_lifstan_the_chancellor = {
-		picture = "DAL_barding_diplomats"
+		picture = "DAL_minor_barding_diplomats"
 		potential = {
 			tag = DAL
 			NOT = { has_global_flag = DAL_appointed_lifstan }
@@ -578,7 +578,7 @@ political_decisions = {
 	}
 	
 	appoint_erland_of_esgaroth = {
-		picture = "DAL_barding_diplomats"
+		picture = "DAL_minor_barding_diplomats"
 		potential = {
 			tag = DAL
 			NOT = { has_global_flag = DAL_appointed_erland }
@@ -594,6 +594,42 @@ political_decisions = {
 			add_country_modifier = { name = great_diplomat duration = 3650 }
 			
 			set_global_flag = DAL_appointed_erland
+		}
+	}
+	
+	appoint_tilda_to_erebor = {
+		picture = "DAL_minor_barding_diplomats"
+		potential = {
+			tag = DAL
+			NOT = { has_global_flag = DAL_appointed_tilda }
+			nationalvalue = bard_i
+			exists = ERE
+		}
+		
+		allow = {
+			diplomacy_2 = 1
+			war = no
+		}
+		
+		effect = {
+			relation = { who = ERE value = 200 }
+			random_owned = {
+				limit = {
+					owner = {
+						is_greater_power = yes
+						ERE = { is_greater_power = no }
+					}
+				}
+				owner = { diplomatic_influence  = { who = ERE value = 200 } }
+			}
+			any_pop = {
+				limit = {
+					has_pop_religion = dwarven
+				}
+				militancy = -4
+				consciousness = -4
+			}
+			set_global_flag = DAL_appointed_tilda
 		}
 	}
 }
