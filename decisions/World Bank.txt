@@ -8,7 +8,6 @@
 #	Government Flags Clean Up 
 #	Realm Leaders 
 #	Wild Goblins 
-#	Outlaw Holds 
 #	Debug }
 
 # Starting Decision
@@ -255,9 +254,6 @@ political_decisions = {
 			
 			# Start Government Type Cleanup event loop
 			country_event = 100100
-			
-			# Start Flavor Cleanup event loop
-			country_event = 99001
 			
 			# Making sure special tags can't start wars (either as the aggressor or the defender)
 			BOM = { add_country_modifier = { name = political_neutrality duration = -1 } }

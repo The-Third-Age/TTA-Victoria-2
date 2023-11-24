@@ -43,12 +43,25 @@ country_event = {
 		name = "We will join"
 		
 		FROM = { country_event = 50902 }
+		any_owned = {
+			limit = { is_core = RIV }
+			add_core = DAL # To make sure that should DAL fail, they can attempt to do it again
+		}
 		
 		ai_chance = {
 			factor = 25
 			modifier = {
+				factor = 0
+				tag = DA4 # The current Lord of Naertheiaborg has no interest in joining Dale
+				NOT = { vassal_of = DAL }
+				NOT = { has_global_flag = railroading_disabled }
+			}
+			modifier = {
 				factor = 2
-				alliance_with = DAL
+				OR = {
+					alliance_with = DAL
+					in_sphere = DAL
+				}
 			}
 		}
 	}
@@ -69,7 +82,14 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 0
-				has_global_flag = DAL_protected_the_rivermen
+				OR = {
+					has_global_flag = DAL_protected_the_rivermen
+					vassal_of = DAL
+					AND = {
+						tag = DA1 # Historically Riverrun had close ties with the Lakemen
+						NOT = { has_global_flag = railroading_disabled }
+					}
+				}
 			}
 		}
 	}
@@ -516,5 +536,78 @@ country_event = {
 			background = captain_of_royal_archers
 			personality = aggressive
 		}
+	}
+}
+
+# Alerting for Celduin Pirates
+country_event = {
+	id = 50915
+	title = "Activation of Celduin Pirates"
+	desc = "EVTDESC50915"
+	picture = "gramavuld/celduin_river"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Understood"
+	}
+}
+
+# Celduin Pirate Raid
+province_event = {
+	id = 50916
+	title = "Pirate Raid"
+	desc = "EVTDESC50916"
+	
+	trigger = {
+		has_crime = celduin_pirates
+		owner = { money = 5000 }
+	}
+	
+	mean_time_to_happen = {
+		months = 75
+		
+		modifier = {
+			factor = 0.25
+			owner = { war = yes }
+		}
+	}
+	
+	option = {
+		name = "We ought to do something"
+		
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			reduce_pop = 0.999
+		}
+		any_pop = {
+			militancy = 4
+			consciousness = 2
+		}
+		owner = {
+			treasury = -5000
+			
+			random_country = {
+				limit = { has_country_modifier = funding_celduin_pirates }
+				country_event = 50917
+				relation = { who = THIS value = -50 }
+			}
+		}
+	}
+}
+
+# Celduin Pirate Raid, Raid Support
+country_event = {
+	id = 50917
+	title = "Successful raid in $FROMPROVINCE$"
+	desc = "EVTDESC50917"
+	picture = "gramavuld/celduin_river"
+	is_triggered_only = yes
+	
+	option = {
+		name = "A toast to the victors!"
+		
+		treasury = 2500
 	}
 }

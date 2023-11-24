@@ -3,6 +3,7 @@
 
 # World Bank Decisions: {
 #	Starting Decision (Unseen)
+#	Rivermen Minors
 #	Gramavuld Consolidation
 #	Province Flavor
 #	Bard I Flavor }
@@ -59,6 +60,56 @@ political_decisions = {
 			
 			FOR = { country_event = { id = 33000 days = 152 } } # June 1
 			FOR = { country_event = { id = 33001 days = 182 } } # June 1
+			
+			# Start Flavor Cleanup event loop
+			FOR = { country_event = 99001 }
+		}
+	}
+}
+
+# Rivermen Minors
+political_decisions = {
+	fund_celduin_pirates = {
+		picture = "DAL_celduin_river"
+		potential = {
+			primary_culture = rivermen
+			NOT = { has_country_modifier = funding_celduin_pirates }
+		}
+		allow = {
+			OR = {
+				money = 25000
+				AND = {
+					year = 2960
+					tag = DA4 # The current Lord of Naertheiaborg has no interest in joining Dale, and actively looks for ways to prevent Dale's reach from extending to his city
+					NOT = { has_global_flag = railroading_disabled }
+				}
+			}
+			NOT = { alliance_with = DAL }
+			NOT = { vassal_of = DAL }
+			NOT = { in_sphere = DAL }
+			war = no
+		}
+		effect = {
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							NOT = { year = 2960 }
+							NOT = { tag = DA4 }
+							has_global_flag = railroading_disabled
+						}
+					}
+				}
+				owner = { treasury = -25000 }
+			}
+			relation = { who = DAL value = -200 }
+			add_country_modifier = { name = funding_celduin_pirates duration = -1 }
+			define_general = {
+				name = "§LSviatobal, §MCelduin Pirate§!"
+				personality = ballsy
+				background = celduin_pirate
+			}
+			DAL_activate_celduin_pirates = {}
 		}
 	}
 }

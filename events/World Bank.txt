@@ -16,7 +16,7 @@ country_event = {
 	option = {
 		name = "Fix it please"
 		
-		# build_meres_end_boatlift (decisions/Barding Realm.txt)
+		# Building Mere's End Boat Life {
 		random_country = { # Boat lift started building, then province switched hands
 			limit = {
 				has_global_flag = DAL_meres_end_boat_lift_constructing
@@ -51,7 +51,59 @@ country_event = {
 				add_province_modifier = { name = meres_end_increased_trade duration = -1 }
 			}
 		}
+		# }
 		
+		# Celduin Pirates {
+		random_owned = {
+			limit = {
+				owner = { any_neighbor_country = { has_country_modifier = funding_celduin_pirates } }
+			}
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						province_id = 140 # Holmgierstadur
+						province_id = 526 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 527 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 528 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 530 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 531 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 532 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 537 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 538 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 540 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 543 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 544 # TODO: MAKE SURE TO UPDATE WHEN RHOVANION PROVINCE REWORK HAPPENS
+						province_id = 622 # TODO: MAKE SURE TO UPDATE WHEN RHUN PROVINCE REWORK HAPPENS
+						province_id = 626 # TODO: MAKE SURE TO UPDATE WHEN RHUN PROVINCE REWORK HAPPENS
+						province_id = 628 # TODO: MAKE SURE TO UPDATE WHEN RHUN PROVINCE REWORK HAPPENS
+						province_id = 629 # TODO: MAKE SURE TO UPDATE WHEN RHUN PROVINCE REWORK HAPPENS
+						province_id = 643 # Naertheiaborg
+						province_id = 644 # Myrrborg
+						province_id = 645 # Kaupaborg
+						province_id = 646 # Iach Celduin
+						province_id = 647 # Riverrun
+						province_id = 648 # Londaroth
+						province_id = 701 # TODO: MAKE SURE TO UPDATE WHEN MIRKWOOD PROVINCE REWORK HAPPENS
+						province_id = 702 # TODO: MAKE SURE TO UPDATE WHEN MIRKWOOD PROVINCE REWORK HAPPENS
+					}
+					NOT = { has_crime = celduin_pirates }
+					NOT = { owner = { primary_culture = rivermen } }
+				}
+				add_crime = celduin_pirates
+			}
+		}
+		
+		any_country = {
+			limit = {
+				any_owned_province = { has_crime = celduin_pirates }
+				NOT = { has_country_flag = DAL_alerted_about_pirates }
+			}
+			country_event = 50915
+			set_country_flag = DAL_alerted_about_pirates
+		}
+		# }
+		
+		# Refire the cleanup event next month
 		country_event = { id = 99001 days = 30 }
 	}
 }
