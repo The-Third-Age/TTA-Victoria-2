@@ -2,41 +2,10 @@
 # Audax Validator "!" Ignore_1009
 
 # Harad Decisions: {
-#	Starting Decisions
 #	Forming Harad 
 #	Tribal Incorporation
 #	Core Adding/Removal
 #	Province Flavor }
-
-# Starting Decisions
-political_decisions = {
-	# Audax Validator "." Ignore_1004
-	umbar_start_decision = {
-		potential = {
-			tag = UMB
-			always = no
-		}
-		
-		allow = {}
-		
-		effect = {
-			# Literacy boosts
-			any_pop = {
-				limit = {
-					type = slaves
-				}
-				literacy = -0.15
-			}
-			
-			any_pop = {
-				limit = {
-					has_pop_culture = black_numenorean
-				}
-				literacy = 0.05
-			}
-		}
-	}
-}
 
 # Forming Harad
 political_decisions = {
@@ -248,134 +217,6 @@ political_decisions = {
 		}
 	}
 
-	form_harad_UMB = {
-		picture = "form_harad"
-		potential = {
-			tag = UMB
-			NOT = { exists = HAR }
-			# TODO: NOT some tag about greater Umbar
-		}
-		
-		allow = {
-			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
-			# Otherwise, it isn't counted
-			has_unclaimed_cores = no
-			HRN = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = haradrim } }
-						empty = yes
-					}
-				}
-			}
-			HRU = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = haradrim } }
-						empty = yes
-					}
-				}
-			}
-			PEZ = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = haradrim } }
-						empty = yes
-					}
-				}
-			}
-			LUR = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = haradrim } }
-						empty = yes
-					}
-				}
-			}
-			ARY = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = haradrim } }
-						empty = yes
-					}
-				}
-			}
-		}
-		
-		effect = {
-			prestige = 15
-			
-			all_core = { remove_core = THIS add_core = HAR }
-			
-			change_tag = HAR
-			
-			any_country = {
-				limit = {
-					OR = {
-						tag = HRN
-						tag = HRU
-						tag = PEZ
-						tag = LUR
-						tag = ARY
-					}
-				}
-				country_event = 100003
-				
-				all_core = { add_core = HAR }
-			}
-			
-			random_owned = {
-				limit = {
-					owner = { NOT = { accepted_culture = harnendan } }
-				}
-				owner = { add_accepted_culture = harnendan }
-			}
-			
-			random_owned = {
-				limit = {
-					owner = { NOT = { accepted_culture = haruzani } }
-				}
-				owner = { add_accepted_culture = haruzani }
-			}
-			
-			random_owned = {
-				limit = {
-					owner = { NOT = { accepted_culture = pezarsani } }
-				}
-				owner = { add_accepted_culture = pezarsani }
-			}
-			
-			random_owned = {
-				limit = {
-					owner = { NOT = { accepted_culture = lurmsakuni } }
-				}
-				owner = { add_accepted_culture = lurmsakuni }
-			}
-			
-			random_owned = {
-				limit = {
-					owner = { NOT = { accepted_culture = arysian } }
-				}
-				owner = { add_accepted_culture = arysian }
-			}
-		}
-	}
-	
 	form_harad_khandish = {
 		picture = "form_harad"
 		potential = {
