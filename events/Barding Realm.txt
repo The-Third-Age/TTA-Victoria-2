@@ -713,11 +713,19 @@ country_event = {
 			release = GRA
 			remove_country_modifier = king_of_grammas
 			remove_accepted_culture = grammas
+			
+			release = ADH
+			remove_country_modifier = king_of_adhalling
+			remove_accepted_culture = adhalling
 		}
 		
-		# TODO: Release Adhalling tag + removal of Adhalling stuff for DAL
-		
-		GRA = {
+		any_country = {
+			limit = {
+				OR = {
+					tag = GRA
+					tag = ADH
+				}
+			}
 			country_event = 2509
 			country_event = 2510
 			
@@ -727,6 +735,7 @@ country_event = {
 		all_core = {
 			remove_core = DAL
 			remove_core = GRA
+			remove_core = ADH
 		}
 	}
 }
