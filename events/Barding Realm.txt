@@ -48,11 +48,16 @@ country_event = {
 			add_core = DAL # To make sure that should DAL fail, they can attempt to do it again
 		}
 		
+		set_country_flag = DAL_accepted_bard_ultimatum
+		
 		ai_chance = {
 			factor = 25
 			modifier = {
 				factor = 0
-				tag = DA4 # The current Lord of Naertheiaborg has no interest in joining Dale
+				OR = {
+					tag = DA4 # The current Lord of Naertheiaborg has no interest in joining Dale
+					tag = RIV # If United Rivermen has formed, they will NOT be willing to join the Barding Realm
+				}
 				NOT = { vassal_of = DAL }
 				NOT = { has_global_flag = railroading_disabled }
 			}
@@ -611,3 +616,118 @@ country_event = {
 		treasury = 2500
 	}
 }
+
+# Rivermen Join Dale (prior to Bard's Ultimatum)
+country_event = {
+	id = 50918
+	title = "$FROMCOUNTRY$ Petitions to Join the $COUNTRY$"
+	desc = "EVTDESC50918"
+	picture = "gramavuld/bard_war"
+	is_triggered_only = yes
+	
+	option = {
+		name = "They finally see reason"
+		
+		prestige = 5
+		
+		FROM = {
+			all_core = {
+				add_core = THIS
+				remove_core = DA1
+				remove_core = DA2
+				remove_core = DA3
+				remove_core = DA4
+			}
+		}
+		
+		inherit = FROM
+		
+		random_owned = {
+			limit = {
+				owner = { NOT = { accepted_culture = rivermen } }
+			}
+			owner = { add_accepted_culture = rivermen }
+		}
+	}
+}
+
+# Rivermen are attempting to break Dale's Hegemony
+country_event = {
+	id = 50919
+	title = "War with $FROMCOUNTRY$!"
+	desc = "EVTDESC50919"
+	picture = "gramavuld/bard_war"
+	is_triggered_only = yes
+	
+	option = {
+		name = "This war will decide the fate of Gramavuld"
+	}
+}
+
+# RIV-DAL Hegemony War Results {
+# DAL victory
+country_event = {
+	id = 50920
+	title = "The Results of the War"
+	desc = "EVTDESC50920"
+	picture = "gramavuld/bard_war"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		has_global_flag = RIV_break_DAL_hegemony
+		war = no
+		NOT = { vassal_of = RIV }
+	}
+	
+	option = {
+		name = "The consequences have arrived"
+		
+		set_global_flag = invited_the_rivermen # In case Bard I is still the leader, DAL will be able to complete his expansion flavor
+		clr_global_flag = RIV_break_DAL_hegemony
+		
+		RIV = { all_core = { add_core = THIS } }
+		inherit = RIV
+	}
+}
+
+# RIV victory
+country_event = {
+	id = 50921
+	title = "The Results of the War"
+	desc = "EVTDESC50921"
+	picture = "gramavuld/bard_war"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RIV
+		has_global_flag = RIV_break_DAL_hegemony
+		war = no
+		DAL = { vassal_of = THIS }
+	}
+	
+	option = {
+		name = "As it is meant to be"
+		
+		DAL = {
+			release = GRA
+			remove_country_modifier = king_of_grammas
+			remove_accepted_culture = grammas
+		}
+		
+		# TODO: Release Adhalling tag + removal of Adhalling stuff for DAL
+		
+		GRA = {
+			country_event = 2509
+			country_event = 2510
+			
+			all_core = { remove_core = DAL }
+		}
+		
+		all_core = {
+			remove_core = DAL
+			remove_core = GRA
+		}
+	}
+}
+# }

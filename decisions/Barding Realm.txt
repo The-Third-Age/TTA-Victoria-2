@@ -112,12 +112,154 @@ political_decisions = {
 			DAL_activate_celduin_pirates = {}
 		}
 	}
+	
+	rivermen_join_DAL = {
+		picture = "RIV_rivermen_dale"
+		potential = {
+			primary_culture = rivermen
+			ai = yes
+		}
+		allow = {
+			OR = {
+				vassal_of = DAL
+				in_sphere = DAL
+			}
+			NOT = { has_country_flag = DAL_accepted_bard_ultimatum }
+			
+		}
+		effect = {
+			DAL = { country_event = 50918 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				tag = DA4
+			}
+		}
+	}
+	
+	form_rivermen = {
+		picture = "RIV_rivermen_unite"
+		potential = {
+			primary_culture = rivermen
+			NOT = { tag = RIV }
+			NOT = { exists = RIV }
+		}
+		
+		allow = {
+			RIV = {
+				all_core = {
+					owner = {
+						OR = {
+							tag = THIS
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 25
+			
+			RIV = {
+				all_core = {
+					secede_province = THIS
+				}
+			}
+			
+			any_country = {
+				limit = {
+					primary_culture = rivermen
+					OR = {
+						vassal_of = THIS
+						in_sphere = THIS
+					}
+				}
+				annex_to = THIS
+			}
+			
+			change_tag = RIV
+			
+			all_core = {
+				remove_core = DA1
+				remove_core = DA2
+				remove_core = DA3
+				remove_core = DA4
+			}
+		}
+	}
+	
+	claim_nether_marches = {
+		picture = "RIV_claim_nether_marches"
+		potential = {
+			tag = RIV
+			NOT = { has_global_flag = DAL_rivermen_claimed_nether_marches }
+		}
+		
+		allow = { }
+		
+		effect = {
+			DAL_643 = { add_core = THIS }
+			badboy = 3
+			set_global_flag = DAL_rivermen_claimed_nether_marches
+		}
+	}
+	
+	break_DAL_hegemony = {
+		picture = "RIV_break_DAL_hegemony"
+		potential = {
+			tag = RIV
+			has_global_flag = DAL_rivermen_claimed_nether_marches
+			NOT = { has_global_flag = RIV_break_DAL_hegemony }
+			NOT = { has_country_flag = RIV_attempt_to_break_DAL_hegemony }
+		}
+		
+		allow = {
+			has_unclaimed_cores = no
+			war = no
+			NOT = { truce_with = DAL }
+		}
+		
+		effect = {
+			badboy = 5
+			casus_belli = {
+				target = DAL
+				type = make_puppet
+				months = 12
+			}
+			
+			add_casus_belli = {
+				target = DAL
+				type = make_puppet
+				months = 12
+			}
+			
+			war = {
+				target = DAL
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = make_puppet }
+				call_ally = yes
+			}
+			
+			DAL = { country_event = 50919 }
+			
+			set_global_flag = RIV_break_DAL_hegemony
+			set_country_flag = RIV_attempt_to_break_DAL_hegemony
+			
+			RIV_break_dal_hegemony_loc = {}
+		}
+	}
 }
 
 # Gramavuld Consolidation
 political_decisions = {
 	invite_the_grammas = {
-		picture = "DAL_map_of_gramavuld"
+		picture = "DAL_map_of_gramavuld_grammas"
 		potential = {
 			tag = DAL
 			nationalvalue = bard_i
@@ -130,6 +272,8 @@ political_decisions = {
 				diplomacy_1 = 1
 				wilderness_1 = 1
 			}
+			war = no
+			has_unclaimed_cores = no
 		}
 		
 		effect = {
@@ -142,13 +286,13 @@ political_decisions = {
 	}
 
 	proclaim_lordship_over_the_grammas = {
-		picture = "DAL_barding_diplomats"
+		picture = "DAL_barding_diplomats_grammas"
 		
 		potential = {
 			tag = DAL
 			nationalvalue = bard_i
 			has_global_flag = DAL_invited_the_grammas
-			NOT = { has_global_flag = proclaimed_lordship_over_the_gramas }
+			NOT = { has_global_flag = DAL_proclaimed_lordship_over_the_gramas }
 		}
 		
 		allow = {
@@ -183,12 +327,12 @@ political_decisions = {
 			prestige = 5
 			add_accepted_culture = grammas
 			
-			set_global_flag = proclaimed_lordship_over_the_gramas
+			set_global_flag = DAL_proclaimed_lordship_over_the_gramas
 		}
 	}
 	
 	invite_the_rivermen = {
-		picture = "DAL_map_of_gramavuld"
+		picture = "DAL_map_of_gramavuld_rivermen"
 		
 		potential = {
 			tag = DAL
@@ -199,6 +343,7 @@ political_decisions = {
 				exists = DA2
 				exists = DA3
 				exists = DA4
+				exists = RIV
 			}
 		}
 		
@@ -208,10 +353,24 @@ political_decisions = {
 				diplomacy_1 = 1
 				wilderness_1 = 1
 			}
+			war = no
+			has_unclaimed_cores = no
 		}
 		
 		effect = {
 			badboy = 5
+			
+			# United Rivermen
+			random_country = {
+				limit = {
+					tag = RIV
+				}
+				
+				country_event = {
+					id = 50901
+					days = 30
+				}
+			}
 			# Riverrun
 			random_country = {
 				limit = {
@@ -267,7 +426,7 @@ political_decisions = {
 	}
 	
 	protect_the_rivermen = {
-		picture=  "DAL_barding_diplomats"
+		picture=  "DAL_barding_diplomats_rivermen"
 		
 		potential = {
 			tag = DAL
@@ -282,6 +441,7 @@ political_decisions = {
 							owned_by = DA3
 							owned_by = DA4
 							owned_by = RIV
+							empty = yes
 						}
 					}
 					NOT = { is_core = THIS }
