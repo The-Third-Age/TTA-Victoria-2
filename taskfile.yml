@@ -1,0 +1,49 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: release
+  release:
+    cmds:
+      - task: copyReadMe
+      - task: copyChangelog
+      - task: copyDotMod
+      - task: copyStatic
+      - task: zip
+
+  copyReadMe:
+    cmds:
+      - powershell copy README.md .\\out\\README.md
+    sources:
+      - README.md
+    generates:
+      - out/README.md
+  copyChangelog:
+    cmds:
+      - powershell copy CHANGELOG.md .\\out\\CHANGELOG.md
+    sources:
+      - CHANGELOG.md
+    generates:
+      - out/CHANGELOG.md
+  copyDotMod:
+    cmds:
+      - powershell copy TTA.mod .\\out\\TTA.mod
+    sources:
+      - TTA.mod
+    generates:
+      - out/TTA.mod
+  copyStatic:
+    cmds:
+      - powershell xcopy .\\static\\* .\\out\\TTA\\* /s /e /q /d
+    sources:
+      - static/*
+    generates:
+      - out/TTA/*
+  zip:
+    cmds:
+      - powershell Compress-Archive out TTA.zip -Update
+    sources:
+      - out/**
+    generates:
+      - TTA.zip
