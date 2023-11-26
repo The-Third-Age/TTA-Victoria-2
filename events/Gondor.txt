@@ -1469,9 +1469,13 @@ country_event = {
 	
 	trigger = {
 		tag = HRD
-		vassal_of = GON
+		OR = {
+			vassal_of = GON
+			vassal_of = MOR
+		}
 		any_owned_province = {
 			has_empty_adjacent_province = yes
+			is_core = HRD
 		}
 	}
 	
@@ -1485,6 +1489,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				has_empty_adjacent_province = yes
+				is_core = HRD
 			}
 			
 			random_empty_neighbor_province = {
