@@ -1785,6 +1785,23 @@ political_decisions = {
         effect = {
             prestige = 10
             badboy = 3
+			random_owned = {
+				limit = {
+					owner = {
+						HAR = {
+							exists = yes
+							vassal_of = GON
+						}
+					}
+				}
+				owner = {
+					HAR_286 = { add_core = HRN }
+					HAR = { release = HRN }
+					GON = {	inherit = HRN }
+					HAR_286 = { remove_core = HRN }
+					HAR_286 = { remove_core = HAR }
+				}
+			}
             HAR_286 = { add_core = GON }
             random_owned = {
                 limit = { province_id = 249 }
