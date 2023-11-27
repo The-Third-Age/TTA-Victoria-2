@@ -4,6 +4,7 @@
 # World Bank Decisions: {
 #	Starting Decision (Unseen)
 #	Rivermen Minors
+#	Marsh Wights
 #	Gramavuld Consolidation
 #	Province Flavor
 #	Bard I Flavor }
@@ -51,6 +52,9 @@ political_decisions = {
 				}
 				add_country_modifier = { name = rivermen_minor duration = -1 }
 			}
+			
+			# Setting up Marsh Wights
+			451 = { add_crime = marsh_wights }
 			
 			# Setting up Leaders (-1 = unborn)
 			FOR = { set_variable = { which = bard_i_age value = 55 } }
@@ -252,6 +256,86 @@ political_decisions = {
 			set_country_flag = RIV_attempt_to_break_DAL_hegemony
 			
 			RIV_break_dal_hegemony_loc = {}
+		}
+	}
+}
+
+# Marsh Wights
+political_decisions = {
+	awaken_the_marsh_wights = {
+		picture = "DAL_marsh_wights"
+		potential = {
+			OR = {
+				nationalvalue = sauron
+				nationalvalue = witch_king_of_angmar
+				nationalvalue = khamul
+			}
+			LMW = {
+				any_core = {
+					owner = { war_with = THIS }
+					OR = {
+						has_crime = marsh_wights
+						has_crime = hunting_marsh_wights
+					}
+				}
+			}
+			NOT = { has_global_flag = DAL_marsh_wights_risen }
+		}
+		
+		allow = {
+			money = 50000
+			good_evil_alignment = evil_alignment
+		}
+		
+		effect = {
+			LMW = {
+				all_core = {
+					limit = {
+						owner = { war_with = THIS }
+						OR = {
+							has_crime = marsh_wights
+							has_crime = hunting_marsh_wights
+						}
+					}
+					owner = { country_event = 50924 }
+				}
+			}
+			treasury = -50000
+			badboy = 2
+		}
+	}
+	
+	exterminate_the_wights = {
+		picture = "DAL_marsh_wights"
+		potential = {
+			has_global_flag = DAL_marsh_wights_risen
+			LMW = {
+				any_core = {
+					owned_by = THIS
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+			LMW = { exists = no }
+		}
+		
+		effect = {
+			LMW = {
+				all_core = {
+					remove_core = LMW
+					any_pop = {
+						limit = {
+							has_pop_culture = wight
+						}
+						reduce_pop = 0
+					}
+				}
+			}
+			
+			prestige = 15
+			badboy = 2
 		}
 	}
 }

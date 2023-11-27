@@ -740,3 +740,221 @@ country_event = {
 	}
 }
 # }
+
+# Marsh-wight Attack
+province_event = {
+	id = 50922
+	title = "Marsh-wight Attack"
+	desc = "EVTDESC50922"
+	
+	trigger = {
+		has_crime = marsh_wights
+		NOT = { owner = { tag = LMW } }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "That is unacceptable!"
+		
+		any_pop = {
+			limit = {
+				has_pop_religion = undead
+			}
+			reduce_pop = 0.99
+			militancy = 5
+			consciousness = 5
+		}
+		
+		any_pop = {
+			limit = {
+				NOT = { has_pop_religion = undead }
+			}
+			reduce_pop = 0.95
+			militancy = 2
+			consciousness = 2
+		}
+	}
+	
+	option = {
+		name = "We should start hunting them"
+		
+		any_pop = {
+			limit = {
+				has_pop_religion = undead
+			}
+			reduce_pop = 0.99
+			militancy = 5
+			consciousness = 5
+		}
+		
+		any_pop = {
+			limit = {
+				NOT = { has_pop_religion = undead }
+			}
+			reduce_pop = 0.95
+			militancy = 2
+			consciousness = 2
+		}
+		
+		owner = { treasury = -100000 }
+		
+		add_crime = hunting_marsh_wights
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = { owner = { money = 100000 } }
+			}
+		}
+	}
+}
+
+# Marsh-wight Attack
+province_event = {
+	id = 50923
+	title = "Marsh-wight Attack"
+	desc = "EVTDESC50923"
+	
+	trigger = {
+		has_crime = hunting_marsh_wights
+		NOT = { owner = { tag = LMW } }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "That is unacceptable!"
+		
+		any_pop = {
+			limit = {
+				has_pop_religion = undead
+			}
+			reduce_pop = 0.90
+			militancy = 5
+			consciousness = 5
+		}
+		
+		any_pop = {
+			limit = {
+				NOT = { has_pop_religion = undead }
+				NOT = { type = soldiers }
+			}
+			reduce_pop = 0.98
+			militancy = 2
+			consciousness = 2
+		}
+		
+		any_pop = {
+			limit = {
+				NOT = { has_pop_religion = undead }
+				type = soldiers
+			}
+			reduce_pop = 0.95
+			militancy = 2
+			consciousness = 2
+		}
+	}
+}
+
+# The Wight Infestation
+country_event = {
+	id = 50924
+	title = "The Wights Rise"
+	desc = "EVTDESD50924"
+	picture = "gramavuld/wight_rising"
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_global_flag = DAL_marsh_wights_risen }
+		LMW = {
+			any_core = {
+				owned_by = THIS
+				OR = {
+					has_crime = marsh_wights
+					has_crime = hunting_marsh_wights
+				}
+				OR = {
+					pop_majority_culture = wight
+					AND = {
+						has_pop_culture = wight
+						militancy = 9
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "The day has come"
+		
+		release = LMW
+		
+		casus_belli = {
+			target = LMW
+			type = conquest_tiny
+			months = 12
+		}
+		
+		war = {
+			target = LMW
+			attacker_goal = { casus_belli = conquest_tiny }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		
+		LMW = {
+			any_pop = {
+				limit = {
+					has_pop_religion = undead
+				}
+				reduce_pop = 2
+				militancy = -10
+				consciousness = -10
+				pop_type = soldiers
+			}
+			
+			any_pop = {
+				limit = {
+					NOT = { has_pop_religion = undead }
+				}
+				reduce_pop = 0.50
+				militancy = 10
+				consciousness = 10
+			}
+			
+			any_pop = {
+				limit = {
+					NOT = { has_pop_religion = undead }
+					pop_type = soldiers
+				}
+				pop_type = labourers
+			}
+			
+			capital_scope = {
+				sub_unit = { type = archers value = current }
+				sub_unit = { type = archers value = current }
+				sub_unit = { type = archers value = current }
+				sub_unit = { type = archers value = current }
+				sub_unit = { type = pikemen value = current }
+				sub_unit = { type = pikemen value = current }
+				sub_unit = { type = pikemen value = current }
+				sub_unit = { type = pikemen value = current }
+				sub_unit = { type = scouts value = current }
+				sub_unit = { type = artillery value = current }
+			}
+		}
+		
+		set_global_flag = DAL_marsh_wights_risen
+	}
+}
