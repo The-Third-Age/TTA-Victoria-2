@@ -157,6 +157,7 @@ country_event = {
 	}
 }
 
+# The Integration of the Grammas
 province_event = {
 	id = 50904
 	title = "The Integration of the Grammas" 
@@ -958,3 +959,211 @@ country_event = {
 		set_global_flag = DAL_marsh_wights_risen
 	}
 }
+
+# Esgaroth Trade Mechanic {
+# Open Trade with the Barding Realm?
+country_event = {
+	id = 50925
+	title = "Trade With the $FROMCOUNTRY$?"
+	desc = "EVTDESC50925"
+	picture = "gramavuld/market"
+	is_triggered_only = yes
+	
+	option = {
+		name = "An offer graciously accepted"
+		
+		add_country_modifier = { name = trading_with_DAL duration = -1 }
+		FROM = { country_event = 50926 }
+		
+		ai_chance = {
+			factor = 80
+			
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { relation = { who = FROM value = 0 } }
+					AND = {
+						NOT = { has_global_flag = railroading_disabled }
+						OR = {
+							tag = DA2
+							tag = DA3
+							tag = DA4
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "An offer graciously rejected"
+		
+		set_country_flag = rejected_trade_with_DAL
+		FROM = { country_event = 50927 }
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				OR = {
+					in_sphere = FROM
+					AND = {
+						NOT = { has_global_flag = railroading_disabled }
+						tag = DA1
+					}
+				}
+			}
+		}
+	}
+}
+
+# Accepted
+country_event = {
+	id = 50926
+	title = "Trade with the $FROMCOUNTRY$ Accepted"
+	desc = "EVTDESC50926"
+	picture = "gramavuld/market"
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "Good"
+		
+		prestige = 5
+	}
+}
+
+# Rejected
+country_event = {
+	id = 50927
+	title = "Trade with the $FROMCOUNTRY$ Rejected"
+	desc = "EVTDESC50927"
+	picture = "gramavuld/market"
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "No"
+		
+		prestige = -5
+	}
+}
+
+# Esgaroth Trade Level Update
+province_event = {
+	id = 50928
+	title = "A Change in Trade"
+	desc = "EVTDESC50928"
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+		
+		# Not trading with anyone
+		owner = {
+			random_country = {
+				limit = {
+					tag = FOR
+					NOT = { check_variable = { name = esgaroth_trading value = 0.1 } }
+				}
+				654 = { # Esgaroth
+					remove_province_modifier = esgaroth_trade_i
+					remove_province_modifier = esgaroth_trade_ii
+					remove_province_modifier = esgaroth_trade_iii
+					remove_province_modifier = esgaroth_trade_iv
+					remove_province_modifier = esgaroth_trade_v
+				}
+			}
+		}
+		
+		# Trading with one realm
+		owner = {
+			random_country = {
+				limit = {
+					tag = FOR
+					check_variable = { which = esgaroth_trading value = 0.9 }
+					NOT = { check_variable = { which = esgaroth_trading value = 1.1 } }
+				}
+				654 = { # Esgaroth
+					add_province_modifier = { name = esgaroth_trade_i duration = -1 }
+					remove_province_modifier = esgaroth_trade_ii
+					remove_province_modifier = esgaroth_trade_iii
+					remove_province_modifier = esgaroth_trade_iv
+					remove_province_modifier = esgaroth_trade_v
+				}
+			}
+		}
+		
+		# Trading with 2-3 realms
+		owner = {
+			random_country = {
+				limit = {
+					tag = FOR
+					check_variable = { which = esgaroth_trading value = 1.9 }
+					NOT = { check_variable = { which = esgaroth_trading value = 3.1 } }
+				}
+				654 = { # Esgaroth
+					remove_province_modifier = esgaroth_trade_i
+					add_province_modifier = { name = esgaroth_trade_ii duration = -1 }
+					remove_province_modifier = esgaroth_trade_iii
+					remove_province_modifier = esgaroth_trade_iv
+					remove_province_modifier = esgaroth_trade_v
+				}
+			}
+		}
+		# Trading with 4-5 realms
+		owner = {
+			random_country = {
+				limit = {
+					tag = FOR
+					check_variable = { which = esgaroth_trading value = 3.9 }
+					NOT = { check_variable = { which = esgaroth_trading value = 5.1 } }
+				}
+				654 = { # Esgaroth
+					remove_province_modifier = esgaroth_trade_i
+					remove_province_modifier = esgaroth_trade_ii
+					add_province_modifier = { name = esgaroth_trade_iii duration = -1 }
+					remove_province_modifier = esgaroth_trade_iv
+					remove_province_modifier = esgaroth_trade_v
+				}
+			}
+		}
+		
+		# Trading with 6-9 realms
+		owner = {
+			random_country = {
+				limit = {
+					tag = FOR
+					check_variable = { which = esgaroth_trading value = 5.9 }
+					NOT = { check_variable = { which = esgaroth_trading value = 9.1 } }
+				}
+				654 = { # Esgaroth
+					remove_province_modifier = esgaroth_trade_i
+					remove_province_modifier = esgaroth_trade_ii
+					remove_province_modifier = esgaroth_trade_iii
+					add_province_modifier = { name = esgaroth_trade_iv duration = -1 }
+					remove_province_modifier = esgaroth_trade_v
+				}
+			}
+		}
+		
+		# Trading with 10+ realms
+		owner = {
+			random_country = {
+				limit = {
+					tag = FOR
+					check_variable = { which = esgaroth_trading value = 9.9 }
+				}
+				654 = { # Esgaroth
+					remove_province_modifier = esgaroth_trade_i
+					remove_province_modifier = esgaroth_trade_ii
+					remove_province_modifier = esgaroth_trade_iii
+					remove_province_modifier = esgaroth_trade_iv
+					add_province_modifier = { name = esgaroth_trade_v duration = -1 }
+				}
+			}
+		}
+	}
+}
+# }

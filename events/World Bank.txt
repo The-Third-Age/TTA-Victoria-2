@@ -132,6 +132,139 @@ country_event = {
 			}
 		}
 		
+		# Trading Mechanic Modifier Changes {
+		# Remove trading modifiers and flags if DAL doesn't exist or it doesn't own Esgaroth
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						NOT = { exists = DAL }
+						NOT = { DAL = { owns = 654 } }
+					}
+				}
+			}
+			owner = {
+				any_country = {
+					remove_country_modifier = trading_with_DAL
+					clr_country_flag = rejected_trade_with_DAL
+				}
+			}
+		}
+		
+		# Remove trading modifiers and flags from nonexistant countries
+		any_country = {
+			limit = {
+				exists = no
+				OR = {
+					has_country_modifier = trading_with_DAL
+					has_country_flag = rejected_trade_with_DAL
+				}
+			}
+			remove_country_modifier = trading_with_DAL
+			clr_country_flag = rejected_trade_with_DAL
+		}
+		
+		# Remove trading modifiers and flags from existing realms that no longer fit the requirements
+		any_country = {
+			limit = {
+				has_country_modifier = trading_with_DAL
+				OR = {
+					is_vassal = yes
+					war_with = DAL
+					AND = {
+						DAL = { good_evil_alignment = good_alignment }
+						good_evil_alignment = evil_alignment
+					}
+					AND = {
+						DAL = { good_evil_alignment = evil_alignment }
+						good_evil_alignment = good_alignment
+					}
+				}
+			}
+			remove_country_modifier = trading_with_DAL
+		}
+		
+		# Recalculate the number of realms trading
+		set_variable = { which = esgaroth_trading value = 0 }
+		
+		any_country = { # Do not have to worry about erroneous realms having the modifier. The modifier will have already been removed
+			limit = {
+				has_country_modifier = trading_with_DAL
+			}
+			FOR = { change_variable = { which = esgaroth_trading value = 1 } }
+		}
+		
+		random_owned = {
+			random_neighbor_province = {
+				limit = {
+					province_id = 654 # Esgaroth
+					OR = {
+						AND = { # Not trading with anyone
+							OR = {
+								has_province_modifier = esgaroth_trade_i
+								has_province_modifier = esgaroth_trade_ii
+								has_province_modifier = esgaroth_trade_iii
+								has_province_modifier = esgaroth_trade_iv
+								has_province_modifier = esgaroth_trade_v
+							}
+							NOT = { owner = { FOR = { check_variable = { which = esgaroth_trading value = 0.1 } } } }
+						}
+						AND = { # Doesn't have the level 1 modifier when trading with only 1 realm
+							NOT = { has_province_modifier = esgaroth_trade_i }
+							owner = {
+								FOR = {
+									check_variable = { which = esgaroth_trading value = 0.9 }
+									NOT = { check_variable = { which = esgaroth_trading value = 1.1 } }
+								}
+							}
+						}
+						AND = { # Doesn't have the level 2 modifier when trading with 2-3 realms
+							NOT = { has_province_modifier = esgaroth_trade_ii }
+							owner = {
+								FOR = {
+									check_variable = { which = esgaroth_trading value = 1.9 }
+									NOT = { check_variable = { which = esgaroth_trading value = 3.1 } }
+								}
+							}
+						}
+						AND = { # Doesn't have the level 3 modifier when trading with 4-5 realms
+							NOT = { has_province_modifier = esgaroth_trade_iii }
+							owner = {
+								FOR = {
+									check_variable = { which = esgaroth_trading value = 3.9 }
+									NOT = { check_variable = { which = esgaroth_trading value = 5.1 } }
+								}
+							}
+						}
+						AND = { # Doesn't have the level 4 modifier when trading with 6-9 realms
+							NOT = { has_province_modifier = esgaroth_trade_iv }
+							owner = {
+								FOR = {
+									check_variable = { which = esgaroth_trading value = 5.9 }
+									NOT = { check_variable = { which = esgaroth_trading value = 9.1 } }
+								}
+							}
+						}
+						AND = { # Doesn't have the level 5 modifier when trading with 10+ realms
+							NOT = { has_province_modifier = esgaroth_trade_v }
+							owner = {
+								FOR = { check_variable = { which = esgaroth_trading value = 9.9 } }
+							}
+						}
+					}
+				}
+				# Audax Validator "." Ignore_1009
+				province_event = {
+					# Audax Validator "." Ignore_1006
+					id = 50928
+				}
+			}
+		}
+		
+		# Now that the counting variable is updated, update the dynamic text
+		country_event = 200000
+		# }
+		
 		# Refire the cleanup event next month
 		country_event = { id = 99001 days = 30 }
 	}

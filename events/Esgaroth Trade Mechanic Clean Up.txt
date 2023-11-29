@@ -1,0 +1,5536 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+country_event = {
+	id = 200000
+	title = "Updating Trading Count Text"
+	desc = ""
+	is_triggered_only = yes
+	option = {
+		name = "Update please"
+		1068 = { secede_province = THIS }
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						NOT = { check_variable = { which = esgaroth_trading value = 0.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y0§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 0.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 1.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y1§! realm" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 1.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 2.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y2§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 2.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 3.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y3§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 3.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 4.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y4§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 4.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 5.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y5§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 5.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 6.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y6§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 6.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 7.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y7§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 7.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 8.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y8§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 8.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 9.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y9§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 9.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 10.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y10§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 10.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 11.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y11§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 11.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 12.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y12§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 12.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 13.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y13§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 13.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 14.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y14§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 14.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 15.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y15§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 15.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 16.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y16§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 16.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 17.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y17§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 17.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 18.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y18§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 18.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 19.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y19§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 19.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 20.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y20§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 20.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 21.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y21§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 21.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 22.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y22§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 22.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 23.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y23§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 23.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 24.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y24§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 24.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 25.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y25§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 25.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 26.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y26§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 26.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 27.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y27§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 27.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 28.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y28§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 28.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 29.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y29§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 29.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 30.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y30§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 30.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 31.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y31§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 31.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 32.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y32§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 32.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 33.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y33§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 33.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 34.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y34§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 34.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 35.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y35§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 35.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 36.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y36§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 36.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 37.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y37§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 37.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 38.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y38§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 38.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 39.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y39§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 39.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 40.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y40§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 40.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 41.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y41§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 41.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 42.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y42§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 42.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 43.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y43§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 43.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 44.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y44§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 44.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 45.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y45§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 45.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 46.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y46§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 46.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 47.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y47§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 47.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 48.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y48§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 48.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 49.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y49§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 49.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 50.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y50§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 50.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 51.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y51§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 51.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 52.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y52§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 52.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 53.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y53§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 53.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 54.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y54§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 54.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 55.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y55§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 55.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 56.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y56§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 56.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 57.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y57§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 57.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 58.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y58§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 58.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 59.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y59§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 59.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 60.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y60§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 60.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 61.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y61§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 61.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 62.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y62§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 62.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 63.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y63§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 63.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 64.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y64§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 64.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 65.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y65§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 65.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 66.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y66§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 66.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 67.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y67§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 67.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 68.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y68§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 68.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 69.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y69§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 69.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 70.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y70§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 70.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 71.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y71§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 71.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 72.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y72§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 72.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 73.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y73§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 73.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 74.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y74§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 74.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 75.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y75§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 75.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 76.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y76§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 76.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 77.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y77§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 77.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 78.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y78§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 78.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 79.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y79§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 79.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 80.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y80§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 80.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 81.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y81§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 81.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 82.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y82§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 82.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 83.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y83§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 83.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 84.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y84§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 84.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 85.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y85§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 85.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 86.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y86§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 86.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 87.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y87§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 87.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 88.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y88§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 88.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 89.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y89§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 89.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 90.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y90§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 90.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 91.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y91§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 91.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 92.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y92§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 92.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 93.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y93§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 93.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 94.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y94§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 94.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 95.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y95§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 95.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 96.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y96§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 96.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 97.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y97§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 97.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 98.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y98§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 98.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 99.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y99§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 99.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 100.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y100§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 100.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 101.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y101§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 101.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 102.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y102§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 102.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 103.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y103§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 103.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 104.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y104§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 104.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 105.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y105§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 105.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 106.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y106§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 106.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 107.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y107§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 107.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 108.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y108§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 108.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 109.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y109§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 109.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 110.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y110§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 110.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 111.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y111§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 111.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 112.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y112§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 112.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 113.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y113§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 113.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 114.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y114§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 114.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 115.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y115§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 115.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 116.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y116§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 116.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 117.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y117§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 117.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 118.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y118§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 118.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 119.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y119§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 119.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 120.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y120§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 120.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 121.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y121§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 121.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 122.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y122§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 122.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 123.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y123§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 123.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 124.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y124§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 124.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 125.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y125§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 125.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 126.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y126§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 126.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 127.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y127§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 127.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 128.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y128§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 128.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 129.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y129§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 129.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 130.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y130§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 130.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 131.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y131§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 131.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 132.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y132§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 132.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 133.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y133§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 133.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 134.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y134§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 134.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 135.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y135§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 135.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 136.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y136§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 136.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 137.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y137§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 137.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 138.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y138§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 138.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 139.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y139§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 139.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 140.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y140§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 140.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 141.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y141§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 141.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 142.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y142§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 142.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 143.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y143§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 143.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 144.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y144§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 144.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 145.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y145§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 145.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 146.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y146§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 146.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 147.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y147§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 147.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 148.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y148§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 148.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 149.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y149§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 149.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 150.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y150§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 150.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 151.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y151§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 151.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 152.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y152§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 152.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 153.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y153§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 153.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 154.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y154§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 154.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 155.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y155§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 155.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 156.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y156§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 156.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 157.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y157§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 157.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 158.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y158§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 158.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 159.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y159§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 159.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 160.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y160§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 160.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 161.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y161§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 161.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 162.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y162§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 162.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 163.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y163§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 163.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 164.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y164§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 164.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 165.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y165§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 165.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 166.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y166§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 166.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 167.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y167§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 167.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 168.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y168§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 168.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 169.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y169§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 169.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 170.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y170§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 170.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 171.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y171§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 171.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 172.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y172§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 172.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 173.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y173§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 173.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 174.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y174§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 174.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 175.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y175§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 175.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 176.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y176§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 176.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 177.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y177§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 177.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 178.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y178§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 178.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 179.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y179§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 179.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 180.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y180§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 180.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 181.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y181§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 181.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 182.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y182§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 182.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 183.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y183§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 183.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 184.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y184§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 184.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 185.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y185§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 185.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 186.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y186§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 186.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 187.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y187§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 187.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 188.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y188§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 188.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 189.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y189§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 189.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 190.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y190§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 190.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 191.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y191§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 191.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 192.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y192§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 192.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 193.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y193§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 193.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 194.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y194§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 194.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 195.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y195§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 195.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 196.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y196§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 196.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 197.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y197§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 197.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 198.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y198§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 198.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 199.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y199§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 199.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 200.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y200§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 200.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 201.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y201§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 201.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 202.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y202§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 202.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 203.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y203§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 203.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 204.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y204§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 204.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 205.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y205§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 205.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 206.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y206§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 206.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 207.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y207§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 207.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 208.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y208§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 208.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 209.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y209§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 209.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 210.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y210§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 210.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 211.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y211§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 211.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 212.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y212§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 212.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 213.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y213§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 213.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 214.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y214§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 214.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 215.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y215§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 215.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 216.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y216§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 216.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 217.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y217§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 217.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 218.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y218§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 218.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 219.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y219§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 219.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 220.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y220§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 220.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 221.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y221§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 221.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 222.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y222§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 222.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 223.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y223§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 223.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 224.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y224§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 224.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 225.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y225§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 225.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 226.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y226§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 226.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 227.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y227§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 227.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 228.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y228§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 228.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 229.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y229§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 229.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 230.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y230§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 230.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 231.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y231§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 231.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 232.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y232§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 232.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 233.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y233§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 233.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 234.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y234§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 234.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 235.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y235§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 235.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 236.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y236§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 236.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 237.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y237§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 237.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 238.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y238§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 238.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 239.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y239§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 239.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 240.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y240§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 240.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 241.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y241§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 241.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 242.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y242§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 242.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 243.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y243§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 243.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 244.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y244§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 244.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 245.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y245§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 245.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 246.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y246§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 246.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 247.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y247§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 247.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 248.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y248§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 248.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 249.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y249§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 249.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 250.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y250§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 250.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 251.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y251§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 251.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 252.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y252§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 252.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 253.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y253§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 253.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 254.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y254§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 254.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 255.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y255§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 255.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 256.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y256§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 256.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 257.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y257§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 257.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 258.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y258§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 258.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 259.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y259§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 259.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 260.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y260§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 260.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 261.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y261§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 261.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 262.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y262§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 262.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 263.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y263§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 263.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 264.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y264§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 264.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 265.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y265§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 265.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 266.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y266§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 266.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 267.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y267§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 267.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 268.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y268§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 268.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 269.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y269§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 269.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 270.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y270§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 270.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 271.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y271§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 271.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 272.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y272§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 272.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 273.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y273§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 273.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 274.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y274§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 274.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 275.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y275§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 275.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 276.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y276§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 276.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 277.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y277§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 277.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 278.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y278§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 278.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 279.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y279§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 279.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 280.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y280§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 280.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 281.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y281§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 281.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 282.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y282§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 282.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 283.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y283§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 283.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 284.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y284§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 284.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 285.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y285§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 285.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 286.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y286§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 286.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 287.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y287§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 287.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 288.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y288§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 288.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 289.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y289§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 289.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 290.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y290§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 290.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 291.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y291§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 291.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 292.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y292§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 292.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 293.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y293§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 293.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 294.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y294§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 294.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 295.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y295§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 295.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 296.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y296§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 296.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 297.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y297§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 297.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 298.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y298§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 298.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 299.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y299§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 299.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 300.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y300§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 300.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 301.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y301§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 301.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 302.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y302§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 302.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 303.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y303§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 303.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 304.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y304§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 304.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 305.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y305§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 305.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 306.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y306§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 306.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 307.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y307§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 307.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 308.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y308§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 308.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 309.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y309§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 309.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 310.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y310§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 310.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 311.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y311§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 311.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 312.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y312§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 312.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 313.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y313§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 313.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 314.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y314§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 314.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 315.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y315§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 315.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 316.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y316§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 316.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 317.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y317§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 317.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 318.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y318§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 318.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 319.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y319§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 319.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 320.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y320§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 320.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 321.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y321§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 321.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 322.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y322§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 322.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 323.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y323§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 323.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 324.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y324§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 324.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 325.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y325§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 325.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 326.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y326§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 326.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 327.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y327§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 327.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 328.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y328§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 328.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 329.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y329§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 329.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 330.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y330§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 330.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 331.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y331§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 331.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 332.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y332§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 332.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 333.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y333§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 333.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 334.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y334§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 334.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 335.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y335§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 335.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 336.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y336§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 336.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 337.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y337§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 337.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 338.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y338§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 338.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 339.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y339§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 339.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 340.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y340§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 340.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 341.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y341§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 341.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 342.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y342§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 342.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 343.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y343§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 343.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 344.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y344§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 344.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 345.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y345§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 345.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 346.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y346§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 346.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 347.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y347§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 347.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 348.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y348§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 348.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 349.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y349§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 349.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 350.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y350§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 350.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 351.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y351§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 351.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 352.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y352§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 352.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 353.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y353§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 353.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 354.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y354§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 354.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 355.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y355§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 355.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 356.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y356§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 356.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 357.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y357§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 357.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 358.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y358§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 358.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 359.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y359§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 359.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 360.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y360§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 360.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 361.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y361§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 361.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 362.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y362§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 362.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 363.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y363§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 363.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 364.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y364§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 364.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 365.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y365§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 365.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 366.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y366§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 366.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 367.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y367§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 367.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 368.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y368§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 368.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 369.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y369§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 369.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 370.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y370§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 370.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 371.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y371§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 371.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 372.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y372§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 372.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 373.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y373§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 373.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 374.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y374§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 374.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 375.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y375§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 375.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 376.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y376§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 376.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 377.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y377§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 377.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 378.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y378§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 378.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 379.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y379§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 379.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 380.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y380§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 380.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 381.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y381§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 381.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 382.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y382§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 382.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 383.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y383§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 383.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 384.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y384§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 384.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 385.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y385§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 385.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 386.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y386§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 386.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 387.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y387§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 387.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 388.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y388§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 388.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 389.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y389§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 389.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 390.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y390§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 390.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 391.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y391§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 391.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 392.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y392§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 392.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 393.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y393§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 393.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 394.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y394§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 394.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 395.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y395§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 395.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 396.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y396§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 396.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 397.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y397§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 397.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 398.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y398§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 398.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 399.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y399§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 399.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 400.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y400§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 400.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 401.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y401§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 401.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 402.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y402§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 402.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 403.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y403§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 403.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 404.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y404§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 404.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 405.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y405§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 405.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 406.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y406§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 406.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 407.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y407§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 407.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 408.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y408§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 408.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 409.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y409§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 409.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 410.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y410§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 410.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 411.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y411§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 411.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 412.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y412§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 412.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 413.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y413§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 413.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 414.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y414§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 414.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 415.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y415§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 415.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 416.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y416§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 416.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 417.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y417§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 417.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 418.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y418§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 418.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 419.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y419§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 419.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 420.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y420§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 420.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 421.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y421§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 421.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 422.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y422§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 422.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 423.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y423§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 423.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 424.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y424§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 424.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 425.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y425§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 425.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 426.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y426§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 426.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 427.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y427§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 427.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 428.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y428§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 428.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 429.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y429§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 429.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 430.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y430§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 430.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 431.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y431§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 431.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 432.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y432§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 432.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 433.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y433§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 433.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 434.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y434§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 434.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 435.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y435§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 435.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 436.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y436§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 436.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 437.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y437§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 437.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 438.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y438§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 438.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 439.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y439§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 439.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 440.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y440§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 440.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 441.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y441§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 441.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 442.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y442§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 442.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 443.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y443§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 443.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 444.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y444§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 444.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 445.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y445§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 445.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 446.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y446§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 446.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 447.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y447§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 447.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 448.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y448§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 448.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 449.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y449§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 449.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 450.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y450§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 450.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 451.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y451§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 451.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 452.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y452§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 452.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 453.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y453§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 453.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 454.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y454§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 454.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 455.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y455§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 455.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 456.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y456§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 456.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 457.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y457§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 457.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 458.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y458§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 458.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 459.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y459§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 459.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 460.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y460§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 460.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 461.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y461§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 461.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 462.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y462§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 462.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 463.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y463§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 463.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 464.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y464§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 464.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 465.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y465§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 465.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 466.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y466§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 466.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 467.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y467§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 467.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 468.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y468§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 468.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 469.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y469§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 469.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 470.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y470§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 470.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 471.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y471§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 471.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 472.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y472§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 472.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 473.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y473§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 473.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 474.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y474§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 474.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 475.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y475§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 475.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 476.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y476§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 476.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 477.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y477§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 477.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 478.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y478§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 478.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 479.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y479§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 479.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 480.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y480§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 480.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 481.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y481§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 481.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 482.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y482§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 482.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 483.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y483§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 483.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 484.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y484§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 484.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 485.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y485§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 485.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 486.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y486§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 486.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 487.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y487§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 487.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 488.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y488§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 488.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 489.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y489§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 489.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 490.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y490§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 490.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 491.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y491§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 491.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 492.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y492§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 492.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 493.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y493§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 493.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 494.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y494§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 494.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 495.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y495§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 495.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 496.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y496§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 496.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 497.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y497§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 497.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 498.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y498§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 498.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 499.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y499§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 499.9 }
+						NOT = { check_variable = { which = esgaroth_trading value = 500.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Y500§! realms" }
+		}
+		DAL_trading_realm_count = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = esgaroth_trading value = 500.9 }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§WWe are currently trading with §Ymore than 500§! realms" }
+		}
+		1068 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+	}
+}
