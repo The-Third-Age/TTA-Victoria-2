@@ -255,6 +255,12 @@ political_decisions = {
 			# Start Government Type Cleanup event loop
 			country_event = 100100
 			
+			# Start General/Admiral Generation event loops
+			country_event = { id = 40998 days = 3 }
+			country_event = { id = 40999 days = 3 }
+			add_country_modifier = { name = recruited_generals days = -1 } # Just to make sure the events don't decide to try to fire for FOR
+			add_country_modifier = { name = recruited_admirals days = -1 } # Just to make sure the events don't decide to try to fire for FOR
+			
 			# Making sure special tags can't start wars (either as the aggressor or the defender)
 			BOM = { add_country_modifier = { name = political_neutrality duration = -1 } }
 			EAG = { add_country_modifier = { name = political_neutrality duration = -1 } }
