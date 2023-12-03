@@ -320,9 +320,14 @@ country_event = {
 			# Audax Validator "." Ignore_NEXT
 			secede_province = ---
 		}
-		country_event = {
-			id = 33000
-			days = 365
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = bard_i_age value = -0.1 } } } }
+			owner = {
+				country_event = {
+					id = 33000
+					days = 365
+				}
+			}
 		}
 	}
 }
@@ -978,9 +983,1912 @@ country_event = {
 			# Audax Validator "." Ignore_NEXT
 			secede_province = ---
 		}
-		country_event = {
-			id = 33001
-			days = 365
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = bain_i_age value = -0.1 } } } }
+			owner = {
+				country_event = {
+					id = 33001
+					days = 365
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = 33002
+	picture = "bard_i_info"
+	title = "Updating Brand I's Age"
+	desc = ""
+	is_triggered_only = yes
+	option = {
+		name = "Update please"
+		FOR = { change_variable = { which = brand_i_age value = 1 } }
+		1069 = { secede_province = THIS }
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = -1.1 }
+						NOT = { check_variable = { which = brand_i_age value = -0.9 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! has not yet been born" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = -0.1 }
+						NOT = { check_variable = { which = brand_i_age value = 0.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y0§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 0.9 }
+						NOT = { check_variable = { which = brand_i_age value = 1.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y1§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 1.9 }
+						NOT = { check_variable = { which = brand_i_age value = 2.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y2§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 2.9 }
+						NOT = { check_variable = { which = brand_i_age value = 3.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y3§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 3.9 }
+						NOT = { check_variable = { which = brand_i_age value = 4.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y4§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 4.9 }
+						NOT = { check_variable = { which = brand_i_age value = 5.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y5§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 5.9 }
+						NOT = { check_variable = { which = brand_i_age value = 6.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y6§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 6.9 }
+						NOT = { check_variable = { which = brand_i_age value = 7.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y7§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 7.9 }
+						NOT = { check_variable = { which = brand_i_age value = 8.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y8§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 8.9 }
+						NOT = { check_variable = { which = brand_i_age value = 9.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y9§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 9.9 }
+						NOT = { check_variable = { which = brand_i_age value = 10.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y10§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 10.9 }
+						NOT = { check_variable = { which = brand_i_age value = 11.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y11§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 11.9 }
+						NOT = { check_variable = { which = brand_i_age value = 12.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y12§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 12.9 }
+						NOT = { check_variable = { which = brand_i_age value = 13.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y13§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 13.9 }
+						NOT = { check_variable = { which = brand_i_age value = 14.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y14§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 14.9 }
+						NOT = { check_variable = { which = brand_i_age value = 15.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y15§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 15.9 }
+						NOT = { check_variable = { which = brand_i_age value = 16.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y16§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 16.9 }
+						NOT = { check_variable = { which = brand_i_age value = 17.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y17§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 17.9 }
+						NOT = { check_variable = { which = brand_i_age value = 18.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y18§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 18.9 }
+						NOT = { check_variable = { which = brand_i_age value = 19.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y19§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 19.9 }
+						NOT = { check_variable = { which = brand_i_age value = 20.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y20§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 20.9 }
+						NOT = { check_variable = { which = brand_i_age value = 21.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y21§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 21.9 }
+						NOT = { check_variable = { which = brand_i_age value = 22.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y22§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 22.9 }
+						NOT = { check_variable = { which = brand_i_age value = 23.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y23§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 23.9 }
+						NOT = { check_variable = { which = brand_i_age value = 24.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y24§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 24.9 }
+						NOT = { check_variable = { which = brand_i_age value = 25.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y25§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 25.9 }
+						NOT = { check_variable = { which = brand_i_age value = 26.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y26§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 26.9 }
+						NOT = { check_variable = { which = brand_i_age value = 27.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y27§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 27.9 }
+						NOT = { check_variable = { which = brand_i_age value = 28.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y28§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 28.9 }
+						NOT = { check_variable = { which = brand_i_age value = 29.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y29§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 29.9 }
+						NOT = { check_variable = { which = brand_i_age value = 30.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y30§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 30.9 }
+						NOT = { check_variable = { which = brand_i_age value = 31.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y31§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 31.9 }
+						NOT = { check_variable = { which = brand_i_age value = 32.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y32§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 32.9 }
+						NOT = { check_variable = { which = brand_i_age value = 33.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y33§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 33.9 }
+						NOT = { check_variable = { which = brand_i_age value = 34.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y34§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 34.9 }
+						NOT = { check_variable = { which = brand_i_age value = 35.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y35§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 35.9 }
+						NOT = { check_variable = { which = brand_i_age value = 36.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y36§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 36.9 }
+						NOT = { check_variable = { which = brand_i_age value = 37.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y37§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 37.9 }
+						NOT = { check_variable = { which = brand_i_age value = 38.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y38§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 38.9 }
+						NOT = { check_variable = { which = brand_i_age value = 39.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y39§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 39.9 }
+						NOT = { check_variable = { which = brand_i_age value = 40.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y40§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 40.9 }
+						NOT = { check_variable = { which = brand_i_age value = 41.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y41§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 41.9 }
+						NOT = { check_variable = { which = brand_i_age value = 42.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y42§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 42.9 }
+						NOT = { check_variable = { which = brand_i_age value = 43.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y43§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 43.9 }
+						NOT = { check_variable = { which = brand_i_age value = 44.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y44§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 44.9 }
+						NOT = { check_variable = { which = brand_i_age value = 45.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y45§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 45.9 }
+						NOT = { check_variable = { which = brand_i_age value = 46.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y46§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 46.9 }
+						NOT = { check_variable = { which = brand_i_age value = 47.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y47§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 47.9 }
+						NOT = { check_variable = { which = brand_i_age value = 48.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y48§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 48.9 }
+						NOT = { check_variable = { which = brand_i_age value = 49.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y49§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 49.9 }
+						NOT = { check_variable = { which = brand_i_age value = 50.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y50§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 50.9 }
+						NOT = { check_variable = { which = brand_i_age value = 51.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y51§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 51.9 }
+						NOT = { check_variable = { which = brand_i_age value = 52.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y52§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 52.9 }
+						NOT = { check_variable = { which = brand_i_age value = 53.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y53§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 53.9 }
+						NOT = { check_variable = { which = brand_i_age value = 54.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y54§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 54.9 }
+						NOT = { check_variable = { which = brand_i_age value = 55.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y55§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 55.9 }
+						NOT = { check_variable = { which = brand_i_age value = 56.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y56§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 56.9 }
+						NOT = { check_variable = { which = brand_i_age value = 57.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y57§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 57.9 }
+						NOT = { check_variable = { which = brand_i_age value = 58.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y58§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 58.9 }
+						NOT = { check_variable = { which = brand_i_age value = 59.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y59§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 59.9 }
+						NOT = { check_variable = { which = brand_i_age value = 60.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y60§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 60.9 }
+						NOT = { check_variable = { which = brand_i_age value = 61.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y61§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 61.9 }
+						NOT = { check_variable = { which = brand_i_age value = 62.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y62§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 62.9 }
+						NOT = { check_variable = { which = brand_i_age value = 63.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y63§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 63.9 }
+						NOT = { check_variable = { which = brand_i_age value = 64.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y64§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 64.9 }
+						NOT = { check_variable = { which = brand_i_age value = 65.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y65§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 65.9 }
+						NOT = { check_variable = { which = brand_i_age value = 66.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y66§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 66.9 }
+						NOT = { check_variable = { which = brand_i_age value = 67.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y67§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 67.9 }
+						NOT = { check_variable = { which = brand_i_age value = 68.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y68§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 68.9 }
+						NOT = { check_variable = { which = brand_i_age value = 69.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y69§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 69.9 }
+						NOT = { check_variable = { which = brand_i_age value = 70.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y70§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 70.9 }
+						NOT = { check_variable = { which = brand_i_age value = 71.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y71§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 71.9 }
+						NOT = { check_variable = { which = brand_i_age value = 72.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y72§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 72.9 }
+						NOT = { check_variable = { which = brand_i_age value = 73.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y73§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 73.9 }
+						NOT = { check_variable = { which = brand_i_age value = 74.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y74§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 74.9 }
+						NOT = { check_variable = { which = brand_i_age value = 75.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y75§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 75.9 }
+						NOT = { check_variable = { which = brand_i_age value = 76.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y76§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 76.9 }
+						NOT = { check_variable = { which = brand_i_age value = 77.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y77§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 77.9 }
+						NOT = { check_variable = { which = brand_i_age value = 78.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y78§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 78.9 }
+						NOT = { check_variable = { which = brand_i_age value = 79.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y79§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 79.9 }
+						NOT = { check_variable = { which = brand_i_age value = 80.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y80§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 80.9 }
+						NOT = { check_variable = { which = brand_i_age value = 81.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y81§! years old" }
+		}
+		DAL_brand_i_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = brand_i_age value = 81.9 }
+						NOT = { check_variable = { which = brand_i_age value = 82.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBrand I§! is currently §Y82§! years old" }
+		}
+		1069 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = brand_i_age value = -0.1 } } } }
+			owner = {
+				country_event = {
+					id = 33002
+					days = 365
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = 33003
+	picture = "bard_i_info"
+	title = "Updating Bard II's Age"
+	desc = ""
+	is_triggered_only = yes
+	option = {
+		name = "Update please"
+		FOR = { change_variable = { which = bard_ii_age value = 1 } }
+		1070 = { secede_province = THIS }
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = -1.1 }
+						NOT = { check_variable = { which = bard_ii_age value = -0.9 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! has not yet been born" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = -0.1 }
+						NOT = { check_variable = { which = bard_ii_age value = 0.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y0§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 0.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 1.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y1§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 1.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 2.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y2§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 2.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 3.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y3§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 3.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 4.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y4§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 4.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 5.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y5§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 5.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 6.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y6§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 6.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 7.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y7§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 7.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 8.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y8§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 8.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 9.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y9§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 9.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 10.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y10§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 10.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 11.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y11§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 11.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 12.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y12§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 12.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 13.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y13§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 13.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 14.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y14§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 14.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 15.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y15§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 15.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 16.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y16§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 16.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 17.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y17§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 17.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 18.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y18§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 18.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 19.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y19§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 19.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 20.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y20§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 20.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 21.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y21§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 21.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 22.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y22§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 22.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 23.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y23§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 23.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 24.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y24§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 24.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 25.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y25§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 25.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 26.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y26§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 26.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 27.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y27§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 27.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 28.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y28§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 28.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 29.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y29§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 29.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 30.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y30§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 30.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 31.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y31§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 31.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 32.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y32§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 32.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 33.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y33§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 33.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 34.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y34§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 34.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 35.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y35§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 35.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 36.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y36§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 36.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 37.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y37§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 37.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 38.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y38§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 38.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 39.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y39§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 39.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 40.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y40§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 40.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 41.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y41§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 41.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 42.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y42§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 42.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 43.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y43§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 43.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 44.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y44§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 44.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 45.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y45§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 45.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 46.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y46§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 46.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 47.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y47§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 47.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 48.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y48§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 48.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 49.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y49§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 49.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 50.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y50§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 50.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 51.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y51§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 51.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 52.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y52§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 52.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 53.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y53§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 53.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 54.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y54§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 54.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 55.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y55§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 55.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 56.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y56§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 56.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 57.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y57§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 57.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 58.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y58§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 58.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 59.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y59§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 59.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 60.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y60§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 60.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 61.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y61§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 61.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 62.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y62§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 62.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 63.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y63§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 63.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 64.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y64§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 64.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 65.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y65§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 65.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 66.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y66§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 66.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 67.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y67§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 67.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 68.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y68§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 68.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 69.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y69§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 69.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 70.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y70§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 70.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 71.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y71§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 71.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 72.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y72§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 72.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 73.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y73§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 73.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 74.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y74§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 74.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 75.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y75§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 75.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 76.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y76§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 76.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 77.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y77§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 77.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 78.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y78§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 78.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 79.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y79§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 79.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 80.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y80§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 80.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 81.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y81§! years old" }
+		}
+		DAL_bard_ii_age = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = bard_ii_age value = 81.9 }
+						NOT = { check_variable = { which = bard_ii_age value = 82.1 } }
+					}
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! is currently §Y82§! years old" }
+		}
+		1070 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = bard_ii_age value = -0.1 } } } }
+			owner = {
+				country_event = {
+					id = 33003
+					days = 365
+				}
+			}
 		}
 	}
 }
