@@ -92,7 +92,7 @@ political_decisions = {
 				AND = {
 					year = 2960
 					tag = DA4 # The current Lord of Naertheiaborg has no interest in joining Dale, and actively looks for ways to prevent Dale's reach from extending to his city
-					NOT = { has_global_flag = railroading_disabled }
+					has_global_flag = railroading_enabled
 				}
 			}
 			NOT = { alliance_with = DAL }
@@ -128,7 +128,7 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				tag = DA1
-				NOT = { has_global_flag = railroading_disabled }
+				has_global_flag = railroading_enabled
 			}
 		}
 	}

@@ -1,0 +1,173 @@
+# Railroading
+country_event = {
+	id = 91000
+	title = "Railroading"
+	desc = "EVTDESC91000"
+	picture = "railroading"
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "§BTo the station!§! (turn on railroading)"
+		
+		FOR = { country_event = 91002 } # Railroading Cleanup
+		
+		set_global_flag = railroading_enabled
+	}
+	
+	option = {
+		name = "I like my sandbox (turn off railroading)"
+		
+		set_global_flag = railroading_disabled
+	}
+}
+
+# Railroading Confusion
+country_event = {
+	id = 91001
+	title = "Railroading Confusion"
+	desc = "EVTDESC91001"
+	picture = "railroading"
+	
+	trigger = {
+		tag = FOR
+		has_global_flag = railroading_enabled
+		has_global_flag = railroading_disabled
+	}
+	
+	option = {
+		name = "Why?"
+		
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = running_railroading_cleanup_loop }
+			}
+			owner = {
+				clr_global_flag = railroading_disabled
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = running_railroading_cleanup_loop } }
+			}
+			owner = {
+				clr_global_flag = railroading_enabled
+			}
+		}
+	}
+}
+
+# Railroading Cleanup
+country_event = {
+	id = 91002
+	title = "Railroading Cleanup"
+	desc = "EVTDESC91002"
+	picture = "railroading"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fix things please"
+		
+		any_country = {
+			limit = {
+				ai = yes
+				OR = {
+					good_evil_alignment = good_alignment
+					good_evil_alignment = evil_alignment
+				}
+			}
+			country_event = 91003 # Break Alliances
+		}
+		
+		country_event = 91004 # Railroaded Alliances
+		
+		country_event = { id = 91002 days = 30 } # Run once every 30 days
+		
+		set_global_flag = running_railroading_cleanup_loop
+	}
+}
+
+# Break Alliances
+country_event = {
+	id = 91003
+	title = "Break Alliances"
+	desc = "EVTDESC91003"
+	picture = "railroading"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Get Back on Track"
+		
+		random_owned = {
+			limit = {
+				owner = { good_evil_alignment = good_alignment }
+			}
+			owner = {
+				any_country = {
+					limit = {
+						exists = yes
+						good_evil_alignment = evil_alignment
+					}
+
+					leave_alliance = THIS
+					end_military_access = THIS
+					relation = { who = THIS value = -400 }
+					diplomatic_influence = { who = THIS value = -400 }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { good_evil_alignment = evil_alignment }
+			}
+			owner = {
+				any_country = {
+					limit = {
+						exists = yes
+						good_evil_alignment = good_alignment
+					}
+
+					leave_alliance = THIS
+					end_military_access = THIS
+					relation = { who = THIS value = -400 }
+					diplomatic_influence = { who = THIS value = -400 }
+				}
+			}
+		}
+	}
+}
+
+# Railroaded Alliances
+country_event = {
+	id = 91004
+	title = "Railroaded Alliances"
+	desc = "EVTDESC91004"
+	picture = "railroading"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Railroad please"
+		
+		# Barding Realm + Erebor
+		random_country = {
+			limit = {
+				tag = DAL
+				exists = DAL
+				exists = ERE
+			}
+			create_alliance = ERE
+		}
+		
+		# Barding Realm + Erebor (breaking all other GP alliances with Barding Realm)
+		any_country = {
+			limit = {
+				is_greater_power = yes
+				NOT = { tag = ERE }
+				ERE = { is_greater_power = yes }
+			}
+			leave_alliance = DAL
+		}
+	}
+}

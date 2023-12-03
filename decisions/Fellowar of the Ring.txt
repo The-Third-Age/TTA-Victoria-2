@@ -64,7 +64,7 @@ political_decisions = {
 			# Railroading ensures that Frodo flees the Shire
 			random_owned = {
 				limit = {
-					owner = { NOT = { has_global_flag = railroading_disabled } }
+					owner = { has_global_flag = railroading_enabled }
 				}
 				owner = { country_event = { id = 50202 days = 10 } }
 			}

@@ -256,8 +256,8 @@ political_decisions = {
 			country_event = 100100
 			
 			# Start General/Admiral Generation event loops
-			country_event = { id = 40998 days = 3 }
-			country_event = { id = 40999 days = 3 }
+			country_event = { id = 40998 days = 4 }
+			country_event = { id = 40999 days = 4 }
 			add_country_modifier = { name = recruited_generals days = -1 } # Just to make sure the events don't decide to try to fire for FOR
 			add_country_modifier = { name = recruited_admirals days = -1 } # Just to make sure the events don't decide to try to fire for FOR
 			
@@ -465,33 +465,6 @@ political_decisions = {
 				country_event = 2504
 			}
 		}
-	}
-
-	good_evil_relations_cleanup = {
-		potential = {
-			tag = FOR
-			NOT = { has_global_flag = railroading_disabled }
-			NOT = { has_country_modifier = good_evil_relations_cleanup_timer }
-		}
-
-		allow = {
-			OR = {
-				year = 2955
-				AND = {
-					NOT = { year = 2955 }
-					month = 1
-				}
-			}
-		}
-
-		effect = {
-			country_event = 100011
-			add_country_modifier = {
-				name = good_evil_relations_cleanup_timer
-				duration = 30
-			}
-		}
-
 	}
 }
 

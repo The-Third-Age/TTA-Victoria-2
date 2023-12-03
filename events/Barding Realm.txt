@@ -59,7 +59,7 @@ country_event = {
 					tag = RIV # If United Rivermen has formed, they will NOT be willing to join the Barding Realm
 				}
 				NOT = { vassal_of = DAL }
-				NOT = { has_global_flag = railroading_disabled }
+				has_global_flag = railroading_enabled
 			}
 			modifier = {
 				factor = 2
@@ -92,7 +92,7 @@ country_event = {
 					vassal_of = DAL
 					AND = {
 						tag = DA1 # Historically Riverrun had close ties with the Lakemen
-						NOT = { has_global_flag = railroading_disabled }
+						has_global_flag = railroading_enabled
 					}
 				}
 			}
@@ -868,7 +868,7 @@ province_event = {
 country_event = {
 	id = 50924
 	title = "The Wights Rise"
-	desc = "EVTDESD50924"
+	desc = "EVTDESC50924"
 	picture = "gramavuld/wight_rising"
 	fire_only_once = yes
 	
@@ -983,7 +983,7 @@ country_event = {
 				OR = {
 					NOT = { relation = { who = FROM value = 0 } }
 					AND = {
-						NOT = { has_global_flag = railroading_disabled }
+						has_global_flag = railroading_enabled
 						OR = {
 							tag = DA2
 							tag = DA3
@@ -1009,7 +1009,7 @@ country_event = {
 				OR = {
 					in_sphere = FROM
 					AND = {
-						NOT = { has_global_flag = railroading_disabled }
+						has_global_flag = railroading_enabled
 						tag = DA1
 					}
 				}

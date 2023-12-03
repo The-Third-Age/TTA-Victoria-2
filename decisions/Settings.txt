@@ -47,23 +47,6 @@ political_decisions = {
 		}
 	}
 	
-	disable_railroading = {
-		potential = {
-			ai = no
-			has_global_flag = viewing_settings
-			NOT = { has_global_flag = railroading_disabled }
-			year = 2954
-			NOT = { year = 2955 }
-			NOT = { month = 1 }
-		}
-		
-		allow = {}
-		
-		effect = {
-			set_global_flag = railroading_disabled
-		}
-	}
-	
 	enable_memes = {
 		picture = "memes"
 		potential = {

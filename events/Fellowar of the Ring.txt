@@ -645,7 +645,7 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_global_flag = railroading_disabled }
+				has_global_flag = railroading_enabled
 			}
 		}
 	}
@@ -788,7 +788,7 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_global_flag = railroading_disabled }
+				has_global_flag = railroading_enabled
 				FOR = { any_neighbor_country = { has_country_modifier = fellowship_member } }
 			}
 		}
@@ -1227,7 +1227,7 @@ country_event = {
 			factor = 0.1
 			modifier = {
 				factor = 0
-				NOT = { has_global_flag = railroading_disabled }
+				has_global_flag = railroading_enabled
 			}
 		}
 	}
@@ -1247,7 +1247,7 @@ country_event = {
 		
 		random_owned = {
 			limit = {
-				owner = { NOT = { has_global_flag = railroading_disabled } }
+				owner = { has_global_flag = railroading_enabled }
 				owner = { GON = { has_country_modifier = fellowship_member } }
 			}
 			owner = { GON = { country_event = 50300 } }
@@ -1256,7 +1256,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				OR = {
-					NOT = { owner = { NOT = { has_global_flag = railroading_disabled } } }
+					NOT = { owner = { has_global_flag = railroading_enabled } }
 					NOT = { owner = { GON = { has_country_modifier = fellowship_member } } }
 				}
 			}
@@ -1931,7 +1931,7 @@ country_event = {
 			factor = 5
 			modifier = {
 				factor = 0
-				NOT = { has_global_flag = railroading_disabled }
+				has_global_flag = railroading_enabled
 				NOT = { tag = ISE }
 				NOT = { nationalvalue = saruman }
 			}
