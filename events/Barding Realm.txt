@@ -1167,3 +1167,846 @@ province_event = {
 	}
 }
 # }
+
+# Leader Deaths and Coronations {
+# Death of Bard I
+country_event = {
+	id = 50929
+	title = "The Death of Bard I"
+	desc = "EVTDESC50929"
+	picture = "generic/leader_death"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		nationalvalue = bard_i
+		OR = {
+			AND = {
+				has_global_flag = railroading_enabled
+				year = 2977
+			}
+			AND = {
+				has_global_flag = railroading_disabled
+				year = 2974
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		
+		modifier = {
+			factor = 0.15 # Cut it down to ~6 months if railroading is enabled
+			has_global_flag = railroading_enabled
+		}
+		
+		modifier = {
+			factor = 0.01 # Cut it down to essentially immediately if getting to the edge of the date range the dynamic loc event handles
+			year = 2980
+			month = 10
+		}
+	}
+	
+	option = {
+		name = "He will be missed"
+		
+		# If Bain is at least 16, he becomes king
+		random_owned = {
+			limit = {
+				owner = { FOR = { check_variable = { which = bain_i_age value = 15.9 } } }
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				set_country_flag = bain_i_next_leader
+			}
+		}
+		
+		# If Bain is dead, and Brand is at least 16, he becomes king
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { FOR = { check_variable = { which = bain_i_age value = -1.9 } } }
+					FOR = { check_variable = { which = brand_i_age value = 15.9 } }
+				}
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				set_country_flag = brand_i_next_leader
+		}
+		
+		# If Bain and Brand are dead, and Bard II is at least 16, he becomes king
+		random_owned = {
+			limit = {
+					NOT = { FOR = { check_variable = { which = bain_i_age value = -1.9 } } }
+					NOT = { FOR = { check_variable = { which = brand_i_age value = -1.9 } } }
+					FOR = { check_variable = { which = bard_ii_age value = 15.9 } }
+				}
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				set_country_flag = bard_ii_next_leader
+			}
+		}
+		
+		# If Bain, Brand or Bard II is alive, but not of age yet, the next leader will be a regency council
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = knows_next_leader }
+					OR = {
+						AND = {
+							FOR = { check_variable = { which = bain_i_age value = -0.1 } }
+							NOT = { FOR = { check_variable = { which = bain_i_age value = 15.1 } } }
+						}
+						AND = {
+							FOR = { check_variable = { which = brand_i_age value = -0.1 } }
+							NOT = { FOR = { check_variable = { which = brand_i_age value = 15.1 } } }
+						}
+						AND = {
+							FOR = { check_variable = { which = bard_ii_age value = -0.1 } }
+							NOT = { FOR = { check_variable = { which = bard_ii_age value = 15.1 } } }
+						}
+					}
+				}
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				set_country_flag = regency_next_leader
+			}
+		}
+		
+		# Clears leader-specific modifiers (generic and specific)
+		country_event = 3501
+		
+		# Set the next leader
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = bain_i_next_leader }
+			}
+			owner = { country_event = 50930 }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = brand_i_next_leader }
+			}
+			owner = { country_event = 50932 }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = bard_ii_next_leader }
+			}
+			owner = { country_event = 50934 }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = regency_next_leader }
+			}
+			owner = {
+				prestige = -5
+				nationalvalue = regency
+			}
+		}
+		
+		# Clean up to make sure we don't break something with a flag being left around
+		clr_country_flag = bain_i_next_leader
+		clr_country_flag = brand_i_next_leader
+		clr_country_flag = bard_ii_next_leader
+		clr_country_flag = regency_next_leader
+		
+		FOR = { country_event = 33006 }
+	}
+}
+
+# Coronation of Bain I
+country_event = {
+	id = 50930
+	title = "The Coronation of Bain I"
+	desc = "EVTDESC50930"
+	picture = "generic/coronation"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		nationalvalue = regency
+		FOR = { check_variable = { which = bain_i_age value = 15.9 } }
+	}
+	
+	option = {
+		name = "Long live the King!"
+		
+		prestige = 5
+		nationalvalue = bain_i
+	}
+}
+
+# Death of Bain I
+country_event = {
+	id = 50931
+	title = "The Death of Bain I"
+	desc = "EVTDESC50931"
+	picture = "generic/leader_death"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		nationalvalue = bain_i
+		OR = {
+			AND = {
+				has_global_flag = railroading_enabled
+				year = 3007
+			}
+			AND = {
+				has_global_flag = railroading_disabled
+				year = 3004
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		
+		modifier = {
+			factor = 0.15 # Cut it down to ~6 months if railroading is enabled
+			has_global_flag = railroading_enabled
+		}
+		
+		modifier = {
+			factor = 0.01 # Cut it down to essentially immediately if getting to the edge of the date range the dynamic loc event handles
+			year = 3010
+			month = 10
+		}
+	}
+	
+	option = {
+		name = "He will be missed"
+		
+		# If Brand is at least 16, he becomes king
+		random_owned = {
+			limit = {
+				owner = { FOR = { check_variable = { which = brand_i_age value = 15.9 } } }
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				set_country_flag = brand_i_next_leader
+		}
+		
+		# If Brand is dead, and Bard II is at least 16, he becomes king
+		random_owned = {
+			limit = {
+					NOT = { FOR = { check_variable = { which = brand_i_age value = -1.9 } } }
+					FOR = { check_variable = { which = bard_ii_age value = 15.9 } }
+				}
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				set_country_flag = bard_ii_next_leader
+			}
+		}
+		
+		# If Brand or Bard II is alive, but not of age yet, the next leader will be a regency council
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = knows_next_leader }
+					OR = {
+						AND = {
+							FOR = { check_variable = { which = brand_i_age value = -0.1 } }
+							NOT = { FOR = { check_variable = { which = brand_i_age value = 15.1 } } }
+						}
+						AND = {
+							FOR = { check_variable = { which = bard_ii_age value = -0.1 } }
+							NOT = { FOR = { check_variable = { which = bard_ii_age value = 15.1 } } }
+						}
+					}
+				}
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				set_country_flag = regency_next_leader
+			}
+		}
+		
+		# Clears leader-specific modifiers (generic and specific)
+		country_event = 3501
+		
+		# Set the next leader
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = brand_i_next_leader }
+			}
+			owner = { country_event = 50932 }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = bard_ii_next_leader }
+			}
+			owner = { country_event = 50934 }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = regency_next_leader }
+			}
+			owner = {
+				prestige = -5
+				nationalvalue = regency
+			}
+		}
+		
+		# Clean up to make sure we don't break something with a flag being left around
+		clr_country_flag = brand_i_next_leader
+		clr_country_flag = bard_ii_next_leader
+		clr_country_flag = regency_next_leader
+		
+		FOR = { country_event = 33007 }
+	}
+}
+
+# Coronation of Brand I
+country_event = {
+	id = 50932
+	title = "The Coronation of Brand I"
+	desc = "EVTDESC50932"
+	picture = "generic/coronation"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		nationalvalue = regency
+		FOR = { check_variable = { which = brand_i_age value = 15.9 } }
+	}
+	
+	option = {
+		name = "Long live the King!"
+		
+		prestige = 5
+		nationalvalue = brand_i
+	}
+}
+
+# Death of Brand I
+country_event = {
+	id = 50933
+	title = "The Death of Brand I"
+	desc = "EVTDESC50933"
+	picture = "generic/leader_death"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		nationalvalue = bain_i
+		OR = {
+			AND = {
+				has_global_flag = railroading_enabled
+				year = 3030
+			}
+			AND = {
+				has_global_flag = railroading_disabled
+				year = 3027
+			}
+			AND = {
+				has_global_flag = railroading_enabled
+				has_global_flag = wotr_started
+				NOT = { controls = 652 } # Dale
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		
+		modifier = {
+			factor = 0.15 # Cut it down to ~6 months if railroading is enabled
+			has_global_flag = railroading_enabled
+		}
+		
+		modifier = {
+			factor = 0.01 # Cut it down to essentially immediately if getting to the edge of the date range the dynamic loc event handles
+			OR = {
+				AND = {
+					year = 3033
+					month = 10
+				}
+				AND = {
+					has_global_flag = wotr_started
+					NOT = { controls = 652  } # Dale
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "He will be missed"
+		
+		# If Bard II is at least 16, he becomes king
+		random_owned = {
+			limit = {
+				owner = { FOR = { check_variable = { which = bard_ii_age value = 15.9 } } }
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				set_country_flag = bard_ii_next_leader
+		}
+		
+		# If Bard II is alive, but not of age yet, the next leader will be a regency council
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = knows_next_leader }
+					AND = {
+						FOR = { check_variable = { which = bard_ii_age value = -0.1 } }
+						NOT = { FOR = { check_variable = { which = bard_ii_age value = 15.1 } } }
+					}
+				}
+			}
+			owner = {
+				set_country_flag = knows_next_leader
+				set_country_flag = regency_next_leader
+			}
+		}
+		
+		# Clears leader-specific modifiers (generic and specific)
+		country_event = 3501
+		
+		# Set the next leader
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = bard_ii_next_leader }
+			}
+			owner = { country_event = 50934 }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = regency_next_leader }
+			}
+			owner = {
+				prestige = -5
+				nationalvalue = regency
+			}
+		}
+		
+		# Clean up to make sure we don't break something with a flag being left around
+		clr_country_flag = bard_ii_next_leader
+		clr_country_flag = regency_next_leader
+		
+		FOR = { country_event = 33008 }
+	}
+}
+
+# Coronation of Bard II
+country_event = {
+	id = 50934
+	title = "The Coronation of Bard II"
+	desc = "EVTDESC50934"
+	picture = "generic/coronation"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		nationalvalue = regency
+		FOR = { check_variable = { which = bard_ii_age value = 15.9 } }
+	}
+	
+	option = {
+		name = "Long live the King!"
+		
+		prestige = 5
+		nationalvalue = bard_ii
+	}
+}
+
+# Death of Bard II
+country_event = {
+	id = 50935
+	title = "The Death of Bard II"
+	desc = "EVTDESC50935"
+	picture = "generic/leader_death"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		nationalvalue = bard_ii
+		OR = {
+			AND = {
+				has_global_flag = railroading_enabled
+				year = 3059
+			}
+			AND = {
+				has_global_flag = railroading_disabled
+				year = 3056
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+		
+		modifier = {
+			factor = 0.15 # Cut it down to ~6 months if railroading is enabled
+			has_global_flag = railroading_enabled
+		}
+		
+		modifier = {
+			factor = 0.01 # Cut it down to essentially immediately if getting to the edge of the date range the dynamic loc event handles
+				year = 3062
+				month = 10
+			}
+		}
+	}
+	
+	option = {
+		name = "He will be missed"
+		
+		# Clears leader-specific modifiers (generic and specific) and sets Generic Leader as leader
+		country_event = 3501
+		
+		FOR = { country_event = 33009 }
+	}
+}
+# }
+
+# Royal Weddings and Births {
+# Astrid and Bain I Wed
+country_event = {
+	id = 50936
+	title = "A Royal Wedding"
+	desc = "EVTDESC50936"
+	picture = "generic/wedding"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		FOR = { check_variable = { which = bain_i_age value = 15.9 } } # Making sure Bain is of age
+		NOT = { has_global_flag = DAL_bain_i_married }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		
+		modifier = {
+			factor = 0.01
+			has_global_flag = railroading_enabled
+			year = 2955
+		}
+	}
+	
+	option = {
+		name = "To the happy couple!"
+		
+		prestige = 3
+		
+		set_global_flag = DAL_bain_i_married
+	}
+}
+
+# Brand I is born
+country_event = {
+	id = 50937
+	title = "A Royal Birth"
+	desc = "EVTDESC50937"
+	picture = "generic/birth"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		FOR = { check_variable = { which = bain_i_age value = 15.9 } } # Making sure Bain is still alive
+		has_global_flag = DAL_bain_i_married
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		
+		modifier = {
+			factor = 0.01
+			has_global_flag = railroading_enabled
+			year = 2957
+		}
+	}
+	
+	option = {
+		name = "The line is secured"
+		
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -2
+			consciousness = -4
+		}
+		
+		prestige = 1
+		
+		FOR = {
+			country_event = 33002 # Age Calculation Loop
+			country_event = 33004 # Birth Calculation
+		}
+	}
+}
+
+# Girion Bainson is born
+country_event = {
+	id = 50938
+	title = "A Royal Birth"
+	desc = "EVTDESC50938"
+	picture = "generic/birth"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		FOR = { check_variable = { which = bain_i_age value = 15.9 } } # Making sure Bain is still alive
+		FOR = { check_variable = { which = brand_i_age value = 0.9 } } # Making sure Brand has been born
+		has_global_flag = DAL_bain_i_married
+		year = 2960
+		NOT = { has_global_flag = DAL_girion_bainson_born }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "The line is secured"
+		
+		prestige = 1
+		set_global_flag = DAL_girion_bainson_born
+	}
+}
+
+# Erna and Brand I Wed
+country_event = {
+	id = 50939
+	title = "A Royal Wedding"
+	desc = "EVTDESC50939"
+	picture = "generic/wedding"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		FOR = { check_variable = { which = brand_i_age value = 15.9 } } # Making sure Brand is of age
+		NOT = { has_global_flag = DAL_brand_i_married }
+		year = 2979
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		
+		modifier = {
+			factor = 0.01
+			has_global_flag = railroading_enabled
+			year = 2980
+		}
+	}
+	
+	option = {
+		name = "To the happy couple!"
+		
+		prestige = 3
+		
+		set_global_flag = DAL_brand_i_married
+	}
+}
+
+# Bard II is born
+country_event = {
+	id = 50940
+	title = "A Royal Birth"
+	desc = "EVTDESC50940"
+	picture = "generic/birth"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		FOR = { check_variable = { which = brand_i_age value = 15.9 } } # Making sure Brand is still alive
+		has_global_flag = DAL_brand_i_married
+		year = 2982
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		
+		modifier = {
+			factor = 0.01
+			has_global_flag = railroading_enabled
+			year = 2985
+		}
+	}
+	
+	option = {
+		name = "The line is secured"
+		
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -2
+			consciousness = -4
+		}
+		
+		prestige = 1
+		
+		FOR = {
+			country_event = 33003 # Age Calculation Loop
+			country_event = 33005 # Birth Calculation
+		}
+	}
+}
+
+# Bryn is born
+country_event = {
+	id = 50941
+	title = "A Royal Birth"
+	desc = "EVTDESC50941"
+	picture = "generic/birth"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		FOR = { check_variable = { which = brand_i_age value = 15.9 } } # Making sure Brand is still alive
+		FOR = { check_variable = { which = bard_ii_age value = 0.9 } } # Making sure Bard II has been born
+		has_global_flag = DAL_brand_i_married
+		year = 2985
+		NOT = { has_global_flag = DAL_bryn_brandson_born }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "The line is secured"
+		
+		prestige = 1
+		set_global_flag = DAL_bryn_brandson_born
+	}
+}
+
+# Esgreld and Bard II Wed
+country_event = {
+	id = 50942
+	title = "A Royal Wedding"
+	desc = "EVTDESC50942"
+	picture = "generic/wedding"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		FOR = { check_variable = { which = bard_ii_age value = 15.9 } } # Making sure Bard II is of age
+		NOT = { has_global_flag = DAL_bard_ii_married }
+		year = 3010
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		
+		modifier = {
+			factor = 0.01
+			has_global_flag = railroading_enabled
+			year = 3011
+		}
+	}
+	
+	option = {
+		name = "To the happy couple!"
+		
+		prestige = 3
+		
+		set_global_flag = DAL_bard_ii_married
+	}
+}
+
+# Girion II is born
+country_event = {
+	id = 50943
+	title = "A Royal Birth"
+	desc = "EVTDESC50943"
+	picture = "generic/birth"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		FOR = { check_variable = { which = bard_ii_age value = 15.9 } } # Making sure Bard is still alive
+		has_global_flag = DAL_bard_ii_married
+		year = 3020
+		NOT = { has_global_flag = DAL_girion_ii_born }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		
+		modifier = {
+			factor = 0.01
+			has_global_flag = railroading_enabled
+			year = 3022
+		}
+	}
+	
+	option = {
+		name = "The line is secured"
+		
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = -2
+			consciousness = -4
+		}
+		
+		prestige = 1
+		set_global_flag = DAL_girion_ii_born
+	}
+}
+
+# Girloth is born
+country_event = {
+	id = 50944
+	title = "A Royal Birth"
+	desc = "EVTDESC50944"
+	picture = "generic/birth"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DAL
+		FOR = { check_variable = { which = bard_ii_age value = 15.9 } } # Making sure Bad is still alive
+		has_global_flag = DAL_bard_ii_married
+		year = 3025
+		NOT = { has_global_flag = DAL_girloth_bard2son_born }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "The line is secured"
+		
+		prestige = 1
+		set_global_flag = DAL_girloth_bard2son_born
+	}
+}
+# }

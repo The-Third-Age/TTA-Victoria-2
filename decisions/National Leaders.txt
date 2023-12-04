@@ -89,27 +89,37 @@ political_decisions = {
 		potential = {
 			NOT = { has_global_flag = fluff_disabled }
 			ai = no
-			nationalvalue = bard_i
+			OR = {
+				nationalvalue = bard_i
+				nationalvalue = bain_i
+				nationalvalue = brand_i
+				nationalvalue = bard_ii
+			}
 		}
 		
 		allow = {}
 		
 		effect = {
 			country_event = 30032
+			
 			empty_line_loc = {}
 			DAL_bard_i_born = {}
+			empty_line_loc = {}
 			DAL_bard_i_age = {}
 			empty_line_loc = {}
 			empty_line_loc = {}
 			DAL_bain_i_born = {}
+			empty_line_loc = {}
 			DAL_bain_i_age = {}
 			empty_line_loc = {}
 			empty_line_loc = {}
 			DAL_brand_i_born = {}
+			empty_line_loc = {}
 			DAL_brand_i_age = {}
 			empty_line_loc = {}
 			empty_line_loc = {}
 			DAL_bard_ii_born = {}
+			empty_line_loc = {}
 			DAL_bard_ii_age = {}
 		}
 	}
