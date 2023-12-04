@@ -1895,39 +1895,6 @@ country_event = {
 			}
 			state_scope = { change_region_name = "§YBrand I§! is currently §Y79§! years old" }
 		}
-		DAL_brand_i_age = {
-			limit = {
-				owner = {
-					FOR = {
-						check_variable = { which = brand_i_age value = 79.9 }
-						NOT = { check_variable = { which = brand_i_age value = 80.1 } }
-					}
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! is currently §Y80§! years old" }
-		}
-		DAL_brand_i_age = {
-			limit = {
-				owner = {
-					FOR = {
-						check_variable = { which = brand_i_age value = 80.9 }
-						NOT = { check_variable = { which = brand_i_age value = 81.1 } }
-					}
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! is currently §Y81§! years old" }
-		}
-		DAL_brand_i_age = {
-			limit = {
-				owner = {
-					FOR = {
-						check_variable = { which = brand_i_age value = 81.9 }
-						NOT = { check_variable = { which = brand_i_age value = 82.1 } }
-					}
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! is currently §Y82§! years old" }
-		}
 		1069 = {
 			# Audax Validator "." Ignore_NEXT
 			secede_province = ---
@@ -2854,28 +2821,6 @@ country_event = {
 				}
 			}
 			state_scope = { change_region_name = "§YBard II§! is currently §Y80§! years old" }
-		}
-		DAL_bard_ii_age = {
-			limit = {
-				owner = {
-					FOR = {
-						check_variable = { which = bard_ii_age value = 80.9 }
-						NOT = { check_variable = { which = bard_ii_age value = 81.1 } }
-					}
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! is currently §Y81§! years old" }
-		}
-		DAL_bard_ii_age = {
-			limit = {
-				owner = {
-					FOR = {
-						check_variable = { which = bard_ii_age value = 81.9 }
-						NOT = { check_variable = { which = bard_ii_age value = 82.1 } }
-					}
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! is currently §Y82§! years old" }
 		}
 		1070 = {
 			# Audax Validator "." Ignore_NEXT
@@ -6808,294 +6753,6 @@ country_event = {
 			limit = {
 				province_id = 1072
 				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2980
-					NOT = { year = 2981 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2980§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2981
-					NOT = { year = 2982 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2981§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
 					year = 2982
 					NOT = { year = 2983 }
 					month = 0
@@ -8099,1734 +7756,6 @@ country_event = {
 				}
 			}
 			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2988§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2989
-					NOT = { year = 2990 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2989§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2990
-					NOT = { year = 2991 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2990§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2991
-					NOT = { year = 2992 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2991§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2992
-					NOT = { year = 2993 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2992§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2993
-					NOT = { year = 2994 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2993§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2994
-					NOT = { year = 2995 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2994§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2995
-					NOT = { year = 2996 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2995§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2996
-					NOT = { year = 2997 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2996§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2997
-					NOT = { year = 2998 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2997§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2998
-					NOT = { year = 2999 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2998§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 2999
-					NOT = { year = 3000 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 2999§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJanuary§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YFebruary§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMarch§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YApril§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YMay§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJune§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YJuly§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YAugust§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YSeptember§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YOctober§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YNovember§! of §YTA 3000§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1072
-				owner = {
-					year = 3000
-					NOT = { year = 3001 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBard II§! was born in §YDecember§! of §YTA 3000§!" }
 		}
 		1072 = {
 			# Audax Validator "." Ignore_NEXT
@@ -14196,1015 +12125,1031 @@ country_event = {
 			}
 			state_scope = { change_region_name = "§YBrand I§! died in §YDecember§! of §YTA 3033§!" }
 		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJanuary§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YFebruary§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMarch§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YApril§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMay§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJune§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJuly§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YAugust§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YSeptember§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YOctober§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YNovember§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3034
-					NOT = { year = 3035 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YDecember§! of §YTA 3034§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJanuary§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YFebruary§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMarch§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YApril§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMay§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJune§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJuly§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YAugust§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YSeptember§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YOctober§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YNovember§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3035
-					NOT = { year = 3036 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YDecember§! of §YTA 3035§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJanuary§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YFebruary§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMarch§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YApril§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMay§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJune§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJuly§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YAugust§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YSeptember§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YOctober§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YNovember§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3036
-					NOT = { year = 3037 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YDecember§! of §YTA 3036§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJanuary§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YFebruary§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMarch§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YApril§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMay§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJune§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJuly§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YAugust§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YSeptember§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YOctober§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YNovember§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3037
-					NOT = { year = 3038 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YDecember§! of §YTA 3037§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJanuary§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YFebruary§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMarch§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YApril§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMay§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJune§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJuly§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YAugust§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YSeptember§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YOctober§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YNovember§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3038
-					NOT = { year = 3039 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YDecember§! of §YTA 3038§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJanuary§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YFebruary§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMarch§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YApril§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMay§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJune§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJuly§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YAugust§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YSeptember§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YOctober§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YNovember§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3039
-					NOT = { year = 3040 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YDecember§! of §YTA 3039§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 0
-					NOT = { month = 1 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJanuary§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 1
-					NOT = { month = 2 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YFebruary§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 2
-					NOT = { month = 3 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMarch§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 3
-					NOT = { month = 4 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YApril§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 4
-					NOT = { month = 5 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YMay§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 5
-					NOT = { month = 6 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJune§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 6
-					NOT = { month = 7 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YJuly§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 7
-					NOT = { month = 8 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YAugust§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 8
-					NOT = { month = 9 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YSeptember§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 9
-					NOT = { month = 10 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YOctober§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 10
-					NOT = { month = 11 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YNovember§! of §YTA 3040§!" }
-		}
-		random_owned = {
-			limit = {
-				province_id = 1069
-				owner = {
-					year = 3040
-					NOT = { year = 3041 }
-					month = 11
-					NOT = { month = 12 }
-				}
-			}
-			state_scope = { change_region_name = "§YBrand I§! died in §YDecember§! of §YTA 3040§!" }
-		}
 		1069 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+	}
+}
+country_event = {
+	id = 33009
+	picture = "bard_i_info"
+	title = "Setting Bard II's Death Month and Year"
+	desc = ""
+	is_triggered_only = yes
+	option = {
+		name = "Update please"
+		FOR = { set_variable = { which = bard_ii_age value = -3 } }
+		1070 = { secede_province = THIS }
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 0
+					NOT = { month = 1 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJanuary§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 1
+					NOT = { month = 2 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YFebruary§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 2
+					NOT = { month = 3 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMarch§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 3
+					NOT = { month = 4 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YApril§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 4
+					NOT = { month = 5 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMay§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 5
+					NOT = { month = 6 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJune§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 6
+					NOT = { month = 7 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJuly§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 7
+					NOT = { month = 8 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YAugust§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 8
+					NOT = { month = 9 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YSeptember§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 9
+					NOT = { month = 10 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YOctober§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 10
+					NOT = { month = 11 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YNovember§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3056
+					NOT = { year = 3057 }
+					month = 11
+					NOT = { month = 12 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YDecember§! of §YTA 3056§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 0
+					NOT = { month = 1 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJanuary§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 1
+					NOT = { month = 2 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YFebruary§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 2
+					NOT = { month = 3 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMarch§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 3
+					NOT = { month = 4 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YApril§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 4
+					NOT = { month = 5 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMay§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 5
+					NOT = { month = 6 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJune§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 6
+					NOT = { month = 7 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJuly§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 7
+					NOT = { month = 8 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YAugust§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 8
+					NOT = { month = 9 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YSeptember§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 9
+					NOT = { month = 10 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YOctober§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 10
+					NOT = { month = 11 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YNovember§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3057
+					NOT = { year = 3058 }
+					month = 11
+					NOT = { month = 12 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YDecember§! of §YTA 3057§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 0
+					NOT = { month = 1 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJanuary§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 1
+					NOT = { month = 2 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YFebruary§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 2
+					NOT = { month = 3 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMarch§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 3
+					NOT = { month = 4 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YApril§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 4
+					NOT = { month = 5 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMay§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 5
+					NOT = { month = 6 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJune§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 6
+					NOT = { month = 7 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJuly§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 7
+					NOT = { month = 8 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YAugust§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 8
+					NOT = { month = 9 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YSeptember§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 9
+					NOT = { month = 10 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YOctober§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 10
+					NOT = { month = 11 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YNovember§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3058
+					NOT = { year = 3059 }
+					month = 11
+					NOT = { month = 12 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YDecember§! of §YTA 3058§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 0
+					NOT = { month = 1 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJanuary§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 1
+					NOT = { month = 2 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YFebruary§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 2
+					NOT = { month = 3 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMarch§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 3
+					NOT = { month = 4 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YApril§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 4
+					NOT = { month = 5 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMay§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 5
+					NOT = { month = 6 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJune§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 6
+					NOT = { month = 7 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJuly§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 7
+					NOT = { month = 8 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YAugust§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 8
+					NOT = { month = 9 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YSeptember§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 9
+					NOT = { month = 10 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YOctober§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 10
+					NOT = { month = 11 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YNovember§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3059
+					NOT = { year = 3060 }
+					month = 11
+					NOT = { month = 12 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YDecember§! of §YTA 3059§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 0
+					NOT = { month = 1 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJanuary§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 1
+					NOT = { month = 2 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YFebruary§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 2
+					NOT = { month = 3 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMarch§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 3
+					NOT = { month = 4 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YApril§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 4
+					NOT = { month = 5 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMay§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 5
+					NOT = { month = 6 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJune§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 6
+					NOT = { month = 7 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJuly§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 7
+					NOT = { month = 8 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YAugust§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 8
+					NOT = { month = 9 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YSeptember§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 9
+					NOT = { month = 10 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YOctober§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 10
+					NOT = { month = 11 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YNovember§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3060
+					NOT = { year = 3061 }
+					month = 11
+					NOT = { month = 12 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YDecember§! of §YTA 3060§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 0
+					NOT = { month = 1 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJanuary§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 1
+					NOT = { month = 2 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YFebruary§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 2
+					NOT = { month = 3 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMarch§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 3
+					NOT = { month = 4 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YApril§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 4
+					NOT = { month = 5 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMay§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 5
+					NOT = { month = 6 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJune§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 6
+					NOT = { month = 7 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJuly§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 7
+					NOT = { month = 8 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YAugust§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 8
+					NOT = { month = 9 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YSeptember§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 9
+					NOT = { month = 10 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YOctober§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 10
+					NOT = { month = 11 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YNovember§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3061
+					NOT = { year = 3062 }
+					month = 11
+					NOT = { month = 12 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YDecember§! of §YTA 3061§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 0
+					NOT = { month = 1 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJanuary§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 1
+					NOT = { month = 2 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YFebruary§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 2
+					NOT = { month = 3 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMarch§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 3
+					NOT = { month = 4 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YApril§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 4
+					NOT = { month = 5 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YMay§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 5
+					NOT = { month = 6 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJune§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 6
+					NOT = { month = 7 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YJuly§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 7
+					NOT = { month = 8 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YAugust§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 8
+					NOT = { month = 9 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YSeptember§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 9
+					NOT = { month = 10 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YOctober§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 10
+					NOT = { month = 11 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YNovember§! of §YTA 3062§!" }
+		}
+		random_owned = {
+			limit = {
+				province_id = 1070
+				owner = {
+					year = 3062
+					NOT = { year = 3063 }
+					month = 11
+					NOT = { month = 12 }
+				}
+			}
+			state_scope = { change_region_name = "§YBard II§! died in §YDecember§! of §YTA 3062§!" }
+		}
+		1070 = {
 			# Audax Validator "." Ignore_NEXT
 			secede_province = ---
 		}
