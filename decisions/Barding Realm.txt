@@ -7,6 +7,7 @@
 #	Marsh Wights
 #	Gramavuld Consolidation
 #	Province Flavor
+#	Royal Family
 #	Bard I Flavor
 #	Esgaroth Trade }
 
@@ -812,6 +813,44 @@ political_decisions = {
 		effect = {
 			treasury = -50000
 			652 = { add_province_modifier = { name = wonder_of_the_north duration = -1 } }
+		}
+	}
+}
+
+# Royal Family
+political_decisions = {
+	DAL_line_of_bard = {
+		alert = no
+		potential = {
+			tag = DAL
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+		}
+		
+		allow = {}
+		
+		effect = {
+			country_event = 30032
+			
+			empty_line_loc = {}
+			DAL_bard_i_born = {}
+			empty_line_loc = {}
+			DAL_bard_i_age = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			DAL_bain_i_born = {}
+			empty_line_loc = {}
+			DAL_bain_i_age = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			DAL_brand_i_born = {}
+			empty_line_loc = {}
+			DAL_brand_i_age = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			DAL_bard_ii_born = {}
+			empty_line_loc = {}
+			DAL_bard_ii_age = {}
 		}
 	}
 }
