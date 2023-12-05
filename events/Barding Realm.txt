@@ -1304,10 +1304,7 @@ country_event = {
 			limit = {
 				owner = { has_country_flag = regency_next_leader }
 			}
-			owner = {
-				prestige = -5
-				nationalvalue = regency
-			}
+			owner = { country_event = 50945 }
 		}
 		
 		# Clean up to make sure we don't break something with a flag being left around
@@ -1452,10 +1449,7 @@ country_event = {
 			limit = {
 				owner = { has_country_flag = regency_next_leader }
 			}
-			owner = {
-				prestige = -5
-				nationalvalue = regency
-			}
+			owner = { country_event = 50945 }
 		}
 		
 		# Clean up to make sure we don't break something with a flag being left around
@@ -1552,6 +1546,7 @@ country_event = {
 			owner = {
 				set_country_flag = knows_next_leader
 				set_country_flag = bard_ii_next_leader
+			}
 		}
 		
 		# If Bard II is alive, but not of age yet, the next leader will be a regency council
@@ -1586,10 +1581,7 @@ country_event = {
 			limit = {
 				owner = { has_country_flag = regency_next_leader }
 			}
-			owner = {
-				prestige = -5
-				nationalvalue = regency
-			}
+			owner = { country_event = 50945 }
 		}
 		
 		# Clean up to make sure we don't break something with a flag being left around
@@ -1656,9 +1648,8 @@ country_event = {
 		
 		modifier = {
 			factor = 0.01 # Cut it down to essentially immediately if getting to the edge of the date range the dynamic loc event handles
-				year = 3062
-				month = 10
-			}
+			year = 3062
+			month = 10
 		}
 	}
 	
@@ -1992,7 +1983,7 @@ country_event = {
 	
 	trigger = {
 		tag = DAL
-		FOR = { check_variable = { which = bard_ii_age value = 15.9 } } # Making sure Bad is still alive
+		FOR = { check_variable = { which = bard_ii_age value = 15.9 } } # Making sure Bard is still alive
 		has_global_flag = DAL_bard_ii_married
 		year = 3025
 		NOT = { has_global_flag = DAL_girloth_bard2son_born }
@@ -2010,3 +2001,20 @@ country_event = {
 	}
 }
 # }
+
+# Regency
+country_event = {
+	id = 50945
+	title = "Regency!"
+	desc = "EVTDESC50945"
+	picture = "generic/coronation"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "At least we have an heir"
+		
+		prestige = -5
+		nationalvalue = regency
+	}
+}
