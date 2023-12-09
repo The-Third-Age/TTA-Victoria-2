@@ -751,7 +751,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 60
+		months = 1
 	}
 
 	option = {
@@ -763,6 +763,8 @@ province_event = {
 		# Long-term effects of the attack
 		remove_province_modifier = recent_raid # Reset the timer
 		add_province_modifier = { name = recent_raid duration = 365 }
+		
+		recent_raid_loc = { }
 	}
 }
 
