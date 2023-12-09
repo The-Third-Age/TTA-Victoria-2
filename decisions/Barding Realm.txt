@@ -9,6 +9,7 @@
 #	Province Flavor
 #	Royal Family
 #	Bard I Flavor
+#	Bain I Flavor
 #	Esgaroth Trade }
 
 # Starting Decision (Unseen)
@@ -930,6 +931,31 @@ political_decisions = {
 				consciousness = -4
 			}
 			set_global_flag = DAL_appointed_tilda
+		}
+	}
+}
+
+# Bain I Flavor
+political_decisions = {
+	send_girion_bainson_to_austriborg = {
+		picture = "DAL_girion_bainson"
+		potential = {
+			tag = DAL
+			has_global_flag = DAL_girion_bainson_born
+			NOT = { has_global_flag = DAL_girion_bainson_sent_to_austriborg }
+			nationalvalue = bain_i
+		}
+		
+		allow = {
+			population_3 = 1
+			owns = 642
+			year = 2980
+		}
+		
+		effect = {
+			642 = { add_province_modifier = { name = royal_lord duration = 9125 } }
+			
+			set_global_flag = DAL_girion_bainson_sent_to_austriborg
 		}
 	}
 }

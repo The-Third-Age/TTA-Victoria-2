@@ -2018,3 +2018,99 @@ country_event = {
 		nationalvalue = regency
 	}
 }
+
+# Bryn, Royal Warrior
+country_event = {
+	id = 50946
+	title = "Bryn, Royal Warrior"
+	desc = "EVTDESC50946"
+	picture = "gramavuld/bard_war"
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		tag = DAL
+		has_global_flag = DAL_bryn_brandson_born
+		year = 3005
+		
+	}
+	
+	option = {
+		name = "A new general is always welcome"
+		
+		set_country_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = hidden_effects }
+			}
+			owner = { primary_culture = bryn_culture }
+		}
+		
+		define_general = {
+			name = "§LBryn, §MRoyal Warrior§!"
+			background = captain_of_royal_archers
+			personality = heroic
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = hidden_effects }
+			}
+			owner = { primary_culture = barding }
+		}
+		
+		clr_country_flag = hidden_effects
+	}
+}
+
+# Girloth, Royal General
+country_event = {
+	id = 50947
+	title = "Girloth, Royal General"
+	desc = "EVTDESC50947"
+	picture = "gramavuld/bard_war"
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	trigger = {
+		tag = DAL
+		has_global_flag = DAL_girloth_bard2son_born
+		year = 3045
+		
+	}
+	
+	option = {
+		name = "A new general is always welcome"
+		
+		set_country_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = hidden_effects }
+			}
+			owner = { primary_culture = girloth_culture }
+		}
+		
+		define_general = {
+			name = "§LGirloth, §MRoyal General§!"
+			background = first_captain_of_dale
+			personality = tactical
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = hidden_effects }
+			}
+			owner = { primary_culture = barding }
+		}
+		
+		clr_country_flag = hidden_effects
+	}
+}
