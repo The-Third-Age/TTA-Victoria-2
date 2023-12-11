@@ -952,6 +952,25 @@ revalation_of_the_ringwaiths = {
 	
 	effect = { shared_prestige = 20 }
 }
+lament_of_avor_taul = {
+	limit = { culture_4 = 1 }
+	
+	chance = {
+		base = 0
+		modifier = {
+			factor = 2
+			accepted_culture = dwarven_culture
+		}
+		modifier = {
+			factor = 1
+			any_neighbor_country = {
+				invention = revalation_of_the_ringwaiths
+			}
+		}
+	}
+	
+	effect = { shared_prestige = 20 }
+}
 
 ########################
 # CULTURE_5 INVENTIONS #
