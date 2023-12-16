@@ -275,7 +275,7 @@ political_decisions = {
 					}
 				}
 				643 = { state_scope = { change_region_name = "Lower Gazar Hunshahad" } }
-				643 = { change_province_name = "Burh Nerathis" }
+				643 = { change_province_name = "Burh Nauthauja" }
 				644 = { change_province_name = "Burh Maridais" }
 				478 = { change_province_name = "Kleinibreusta" }
 				owner = { FOR = { set_variable = { which = nether_marches_name value = 2 } } }
@@ -5537,6 +5537,656 @@ political_decisions = {
 				917 = { change_province_name = "Nornhabar" }
 				918 = { change_province_name = "Nan Nogothîr" }
 				owner = { FOR = { set_variable = { which = southern_ered_luin_name value = 1 } } }
+			}
+		}
+	}
+}
+# Grey Mountains
+political_decisions = {
+	rename_erebor = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# [northmen] - Iron Hills
+						AND = {
+							is_culture_group = northmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = iron_hills_name value = -0.1 } } }
+								FOR = { check_variable = { which = iron_hills_name value = 0.1 } }
+							}
+						}
+						# [hobbits] - Iron Hills
+						AND = {
+							is_culture_group = hobbits
+							OR = {
+								FOR = { NOT = { check_variable = { which = iron_hills_name value = 0.9 } } }
+								FOR = { check_variable = { which = iron_hills_name value = 1.1 } }
+							}
+						}
+						# [wicked_dwarves, dwarves] - Iron Hills
+						AND = {
+							OR = {
+								is_culture_group = wicked_dwarves
+								is_culture_group = dwarves
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = iron_hills_name value = 1.9 } } }
+								FOR = { check_variable = { which = iron_hills_name value = 2.1 } }
+							}
+						}
+						# [anduinrim, easterlings, rohirrim] - Iron Hills
+						AND = {
+							OR = {
+								is_culture_group = anduinrim
+								is_culture_group = easterlings
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = iron_hills_name value = 2.9 } } }
+								FOR = { check_variable = { which = iron_hills_name value = 3.1 } }
+							}
+						}
+					}
+					owns = 667
+					owns = 669
+					owns = 1165
+					owns = 670
+				}
+				AND = {
+					OR = {
+						# [northmen, wicked_dwarves, dwarves] - Nan Morsereg
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = wicked_dwarves
+								is_culture_group = dwarves
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = nan_morsereg_name value = -0.1 } } }
+								FOR = { check_variable = { which = nan_morsereg_name value = 0.1 } }
+							}
+						}
+						# [anduinrim, rohirrim] - Nan Morsereg
+						AND = {
+							OR = {
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = nan_morsereg_name value = 0.9 } } }
+								FOR = { check_variable = { which = nan_morsereg_name value = 1.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Nan Morsereg
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = nan_morsereg_name value = 1.9 } } }
+								FOR = { check_variable = { which = nan_morsereg_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 662
+					owns = 663
+					owns = 668
+				}
+				AND = {
+					OR = {
+						# [easterlings] - Mountainlands
+						AND = {
+							is_culture_group = easterlings
+							OR = {
+								FOR = { NOT = { check_variable = { which = mountainlands_name value = -0.1 } } }
+								FOR = { check_variable = { which = mountainlands_name value = 0.1 } }
+							}
+						}
+						# [northmen, dwarves] - Mountainlands
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = dwarves
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = mountainlands_name value = 0.9 } } }
+								FOR = { check_variable = { which = mountainlands_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 1168
+					owns = 659
+					owns = 660
+					owns = 664
+					owns = 396
+				}
+				AND = {
+					OR = {
+						# [easterlings] - Dádhrik's Gap
+						AND = {
+							is_culture_group = easterlings
+							OR = {
+								FOR = { NOT = { check_variable = { which = dadhrik's_gap_name value = -0.1 } } }
+								FOR = { check_variable = { which = dadhrik's_gap_name value = 0.1 } }
+							}
+						}
+						# [northmen, dwarves] - Dádhrik's Gap
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = dwarves
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = dadhrik's_gap_name value = 0.9 } } }
+								FOR = { check_variable = { which = dadhrik's_gap_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 657
+					owns = 689
+					owns = 1169
+					owns = 658
+					owns = 1170
+				}
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			# [northmen] - Iron Hills
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = northmen }
+					province_id = 667
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = iron_hills_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = iron_hills_name value = 0.1 } } }
+					}
+				}
+				1165 = { change_province_name = "Fóla Sarkar" }
+				670 = { change_province_name = "Axe-Hall" }
+				owner = { FOR = { set_variable = { which = iron_hills_name value = 0 } } }
+			}
+			# [hobbits] - Iron Hills
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = hobbits }
+					province_id = 667
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = iron_hills_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = iron_hills_name value = 1.1 } } }
+					}
+				}
+				1165 = { change_province_name = "Axewater" }
+				owner = { FOR = { set_variable = { which = iron_hills_name value = 1 } } }
+			}
+			# [wicked_dwarves, dwarves] - Iron Hills
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = wicked_dwarves
+							is_culture_group = dwarves
+						}
+					}
+					province_id = 667
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = iron_hills_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = iron_hills_name value = 2.1 } } }
+					}
+				}
+				1165 = { change_province_name = "Burkûl" }
+				670 = { change_province_name = "Barukkizdîn" }
+				owner = { FOR = { set_variable = { which = iron_hills_name value = 2 } } }
+			}
+			# [anduinrim, easterlings, rohirrim] - Iron Hills
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = anduinrim
+							is_culture_group = easterlings
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 667
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = iron_hills_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = iron_hills_name value = 3.1 } } }
+					}
+				}
+				1165 = { change_province_name = "Axewater" }
+				670 = { change_province_name = "Axe-Hall" }
+				owner = { FOR = { set_variable = { which = iron_hills_name value = 3 } } }
+			}
+			# [northmen, wicked_dwarves, dwarves] - Nan Morsereg
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = wicked_dwarves
+							is_culture_group = dwarves
+						}
+					}
+					province_id = 662
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = nan_morsereg_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = nan_morsereg_name value = 0.1 } } }
+					}
+				}
+				662 = { state_scope = { change_region_name = "Svarturblodsdal" } }
+				owner = { FOR = { set_variable = { which = nan_morsereg_name value = 0 } } }
+			}
+			# [anduinrim, rohirrim] - Nan Morsereg
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 662
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = nan_morsereg_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = nan_morsereg_name value = 1.1 } } }
+					}
+				}
+				662 = { state_scope = { change_region_name = "Swartizblothdal" } }
+				owner = { FOR = { set_variable = { which = nan_morsereg_name value = 1 } } }
+			}
+			# [teleri, dunedain, eldar] - Nan Morsereg
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 662
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = nan_morsereg_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = nan_morsereg_name value = 2.1 } } }
+					}
+				}
+				662 = { state_scope = { change_region_name = "Nan Morsereg" } }
+				owner = { FOR = { set_variable = { which = nan_morsereg_name value = 2 } } }
+			}
+			# [easterlings] - Mountainlands
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = easterlings }
+					province_id = 396
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = mountainlands_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = mountainlands_name value = 0.1 } } }
+					}
+				}
+				664 = { change_province_name = "Burh Wenjan" }
+				owner = { FOR = { set_variable = { which = mountainlands_name value = 0 } } }
+			}
+			# [northmen, dwarves] - Mountainlands
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = dwarves
+						}
+					}
+					province_id = 396
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = mountainlands_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = mountainlands_name value = 1.1 } } }
+					}
+				}
+				664 = { change_province_name = "Weniaborg" }
+				owner = { FOR = { set_variable = { which = mountainlands_name value = 1 } } }
+			}
+			# [easterlings] - Dádhrik's Gap
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = easterlings }
+					province_id = 657
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = dadhrik's_gap_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = dadhrik's_gap_name value = 0.1 } } }
+					}
+				}
+				657 = { change_province_name = "Burh Thurasig" }
+				658 = { change_province_name = "Burh Saidal" }
+				owner = { FOR = { set_variable = { which = dadhrik's_gap_name value = 0 } } }
+			}
+			# [northmen, dwarves] - Dádhrik's Gap
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = dwarves
+						}
+					}
+					province_id = 657
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = dadhrik's_gap_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = dadhrik's_gap_name value = 1.1 } } }
+					}
+				}
+				657 = { change_province_name = "Thurasigborg" }
+				658 = { change_province_name = "Setborg" }
+				owner = { FOR = { set_variable = { which = dadhrik's_gap_name value = 1 } } }
+			}
+		}
+	}
+	rename_grey_mountains = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# [northern_goblins] - Withered Heath
+						AND = {
+							is_culture_group = northern_goblins
+							OR = {
+								FOR = { NOT = { check_variable = { which = withered_heath_name value = -0.1 } } }
+								FOR = { check_variable = { which = withered_heath_name value = 0.1 } }
+							}
+						}
+						# [northmen, anduinrim, rohirrim] - Withered Heath
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = withered_heath_name value = 0.9 } } }
+								FOR = { check_variable = { which = withered_heath_name value = 1.1 } }
+							}
+						}
+						# [easterlings] - Withered Heath
+						AND = {
+							is_culture_group = easterlings
+							OR = {
+								FOR = { NOT = { check_variable = { which = withered_heath_name value = 1.9 } } }
+								FOR = { check_variable = { which = withered_heath_name value = 2.1 } }
+							}
+						}
+						# [wicked_dwarves] - Withered Heath
+						AND = {
+							is_culture_group = wicked_dwarves
+							OR = {
+								FOR = { NOT = { check_variable = { which = withered_heath_name value = 2.9 } } }
+								FOR = { check_variable = { which = withered_heath_name value = 3.1 } }
+							}
+						}
+						# [dwarves] - Withered Heath
+						AND = {
+							is_culture_group = dwarves
+							OR = {
+								FOR = { NOT = { check_variable = { which = withered_heath_name value = 3.9 } } }
+								FOR = { check_variable = { which = withered_heath_name value = 4.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Withered Heath
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = withered_heath_name value = 4.9 } } }
+								FOR = { check_variable = { which = withered_heath_name value = 5.1 } }
+							}
+						}
+					}
+					owns = 672
+					owns = 291
+					owns = 676
+					owns = 678
+					owns = 671
+				}
+				AND = {
+					OR = {
+						# [northmen] - Cirith Himninond
+						AND = {
+							is_culture_group = northmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = cirith_himninond_name value = -0.1 } } }
+								FOR = { check_variable = { which = cirith_himninond_name value = 0.1 } }
+							}
+						}
+						# [wicked_dwarves, dwarves] - Cirith Himninond
+						AND = {
+							OR = {
+								is_culture_group = wicked_dwarves
+								is_culture_group = dwarves
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = cirith_himninond_name value = 0.9 } } }
+								FOR = { check_variable = { which = cirith_himninond_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 279
+					owns = 682
+					owns = 684
+				}
+				AND = {
+					OR = {
+						# [northmen] - The Narrows
+						AND = {
+							is_culture_group = northmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = the_narrows_name value = -0.1 } } }
+								FOR = { check_variable = { which = the_narrows_name value = 0.1 } }
+							}
+						}
+						# [anduinrim] - The Narrows
+						AND = {
+							is_culture_group = anduinrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = the_narrows_name value = 0.9 } } }
+								FOR = { check_variable = { which = the_narrows_name value = 1.1 } }
+							}
+						}
+						# [rohirrim] - The Narrows
+						AND = {
+							is_culture_group = rohirrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = the_narrows_name value = 1.9 } } }
+								FOR = { check_variable = { which = the_narrows_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 688
+					owns = 686
+					owns = 687
+				}
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			# [northern_goblins] - Withered Heath
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = northern_goblins }
+					province_id = 291
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = withered_heath_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = withered_heath_name value = 0.1 } } }
+					}
+				}
+				676 = { change_province_name = "Kala Dularkurth" }
+				671 = { change_province_name = "Lag Auris" }
+				owner = { FOR = { set_variable = { which = withered_heath_name value = 0 } } }
+			}
+			# [northmen, anduinrim, rohirrim] - Withered Heath
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 291
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = withered_heath_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = withered_heath_name value = 1.1 } } }
+					}
+				}
+				672 = { state_scope = { change_region_name = "Withered Heath" } }
+				676 = { change_province_name = "Thrumfall" }
+				owner = { FOR = { set_variable = { which = withered_heath_name value = 1 } } }
+			}
+			# [easterlings] - Withered Heath
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = easterlings }
+					province_id = 291
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = withered_heath_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = withered_heath_name value = 2.1 } } }
+					}
+				}
+				676 = { change_province_name = "Thrumfall" }
+				owner = { FOR = { set_variable = { which = withered_heath_name value = 2 } } }
+			}
+			# [wicked_dwarves] - Withered Heath
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = wicked_dwarves }
+					province_id = 291
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = withered_heath_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = withered_heath_name value = 3.1 } } }
+					}
+				}
+				672 = { state_scope = { change_region_name = "Withered Heath" } }
+				676 = { change_province_name = "Gathol-zigil" }
+				owner = { FOR = { set_variable = { which = withered_heath_name value = 3 } } }
+			}
+			# [dwarves] - Withered Heath
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dwarves }
+					province_id = 291
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = withered_heath_name value = 3.9 } } } }
+						owner = { FOR = { check_variable = { which = withered_heath_name value = 4.1 } } }
+					}
+				}
+				672 = { state_scope = { change_region_name = "Withered Heath" } }
+				676 = { change_province_name = "Gathol-zigil" }
+				671 = { change_province_name = "Cirith Auris" }
+				owner = { FOR = { set_variable = { which = withered_heath_name value = 4 } } }
+			}
+			# [teleri, dunedain, eldar] - Withered Heath
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 291
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = withered_heath_name value = 4.9 } } } }
+						owner = { FOR = { check_variable = { which = withered_heath_name value = 5.1 } } }
+					}
+				}
+				672 = { state_scope = { change_region_name = "Ladwen Thisin" } }
+				owner = { FOR = { set_variable = { which = withered_heath_name value = 5 } } }
+			}
+			# [northmen] - Cirith Himninond
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = northmen }
+					province_id = 279
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = cirith_himninond_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = cirith_himninond_name value = 0.1 } } }
+					}
+				}
+				682 = { change_province_name = "Dain's Halls" }
+				owner = { FOR = { set_variable = { which = cirith_himninond_name value = 0 } } }
+			}
+			# [wicked_dwarves, dwarves] - Cirith Himninond
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = wicked_dwarves
+							is_culture_group = dwarves
+						}
+					}
+					province_id = 279
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = cirith_himninond_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = cirith_himninond_name value = 1.1 } } }
+					}
+				}
+				682 = { change_province_name = "Dain-dûm" }
+				owner = { FOR = { set_variable = { which = cirith_himninond_name value = 1 } } }
+			}
+			# [northmen] - The Narrows
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = northmen }
+					province_id = 686
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = the_narrows_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = the_narrows_name value = 0.1 } } }
+					}
+				}
+				688 = { change_province_name = "Berafeld" }
+				687 = { change_province_name = "Iorraldinnrín's Gate" }
+				owner = { FOR = { set_variable = { which = the_narrows_name value = 0 } } }
+			}
+			# [anduinrim] - The Narrows
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = anduinrim }
+					province_id = 686
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = the_narrows_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = the_narrows_name value = 1.1 } } }
+					}
+				}
+				688 = { change_province_name = "Beroacra" }
+				686 = { change_province_name = "Bairananthashaima" }
+				687 = { change_province_name = "Bairaldrinno's Gate" }
+				owner = { FOR = { set_variable = { which = the_narrows_name value = 1 } } }
+			}
+			# [rohirrim] - The Narrows
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = rohirrim }
+					province_id = 686
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = the_narrows_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = the_narrows_name value = 2.1 } } }
+					}
+				}
+				688 = { change_province_name = "Beroacra" }
+				686 = { change_province_name = "Beornotham" }
+				687 = { change_province_name = "Bairaldrinno's Gate" }
+				owner = { FOR = { set_variable = { which = the_narrows_name value = 2 } } }
 			}
 		}
 	}
