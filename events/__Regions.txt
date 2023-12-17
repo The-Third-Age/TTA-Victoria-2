@@ -1,0 +1,2836 @@
+country_event = {
+	id = 71701
+	title = "Dynamic Loc Region Bounce Event"
+	picture = "crisis"
+	allow_multiple_instances = no
+	is_triggered_only = yes
+
+	immediate = {
+		UTI = { set_variable = { which = itterator value = 0 } }
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_1_region
+			}
+			UTI = { change_variable = { which = itterator value = 2 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_2_region
+			}
+			UTI = { change_variable = { which = itterator value = 3 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_3_region
+			}
+			UTI = { change_variable = { which = itterator value = 4 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_4_region
+			}
+			UTI = { change_variable = { which = itterator value = 5 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_5_region
+			}
+			UTI = { change_variable = { which = itterator value = 6 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_6_region
+			}
+			UTI = { change_variable = { which = itterator value = 7 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_7_region
+			}
+			UTI = { change_variable = { which = itterator value = 8 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_8_region
+			}
+			UTI = { change_variable = { which = itterator value = 9 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_9_region
+			}
+			UTI = { change_variable = { which = itterator value = 10 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_10_region
+			}
+			UTI = { change_variable = { which = itterator value = 11 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_11_region
+			}
+			UTI = { change_variable = { which = itterator value = 12 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_12_region
+			}
+			UTI = { change_variable = { which = itterator value = 13 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_13_region
+			}
+			UTI = { change_variable = { which = itterator value = 14 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_14_region
+			}
+			UTI = { change_variable = { which = itterator value = 15 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_15_region
+			}
+			UTI = { change_variable = { which = itterator value = 16 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_16_region
+			}
+			UTI = { change_variable = { which = itterator value = 17 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_17_region
+			}
+			UTI = { change_variable = { which = itterator value = 18 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_18_region
+			}
+			UTI = { change_variable = { which = itterator value = 19 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_19_region
+			}
+			UTI = { change_variable = { which = itterator value = 20 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_20_region
+			}
+			UTI = { change_variable = { which = itterator value = 21 } }
+		}
+		country_event = 71702
+	}
+	
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = 71702
+	title = "Dynamic Loc Region Effect Event"
+	picture = "crisis"
+	allow_multiple_instances = no
+	is_triggered_only = yes
+
+	immediate = {
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_20_region
+					UTI = { check_variable = { which = itterator value = 19.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 20.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_20 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_20_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_19_region
+					UTI = { check_variable = { which = itterator value = 18.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 19.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_19 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_19_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_18_region
+					UTI = { check_variable = { which = itterator value = 17.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 18.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_18 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_18_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_17_region
+					UTI = { check_variable = { which = itterator value = 16.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 17.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_17 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_17_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_16_region
+					UTI = { check_variable = { which = itterator value = 15.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 16.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_16 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_16_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_15_region
+					UTI = { check_variable = { which = itterator value = 14.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 15.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_15 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_15_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_14_region
+					UTI = { check_variable = { which = itterator value = 13.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 14.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_14 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_14_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_13_region
+					UTI = { check_variable = { which = itterator value = 12.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 13.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_13 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_13_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_12_region
+					UTI = { check_variable = { which = itterator value = 11.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 12.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_12 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_12_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_11_region
+					UTI = { check_variable = { which = itterator value = 10.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 11.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_11 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_11_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_10_region
+					UTI = { check_variable = { which = itterator value = 9.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 10.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_10 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_10_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_9_region
+					UTI = { check_variable = { which = itterator value = 8.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 9.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_9 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_9_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_8_region
+					UTI = { check_variable = { which = itterator value = 7.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 8.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_8 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_8_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_7_region
+					UTI = { check_variable = { which = itterator value = 6.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 7.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_7 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_7_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_6_region
+					UTI = { check_variable = { which = itterator value = 5.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 6.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_6 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_6_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_5_region
+					UTI = { check_variable = { which = itterator value = 4.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 5.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_5 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_5_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_4_region
+					UTI = { check_variable = { which = itterator value = 3.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 4.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_4 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_4_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_3_region
+					UTI = { check_variable = { which = itterator value = 2.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 3.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_3 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_3_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_2_region
+					UTI = { check_variable = { which = itterator value = 1.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 2.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_2 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_2_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_1_region
+					UTI = { check_variable = { which = itterator value = 0.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 1.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_1 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_1_region
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_4  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Far Anórien§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_14  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Talath Anór§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_16  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Old Anórien§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_23  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ethir Erui§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_27  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lossarnach§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_37  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Upper Lebennin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_44  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Talath Lothen§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_46  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lower Lebennin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_51  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Methed Lebennin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_56  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Tolfalas§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_57  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Emyn Ernil§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_63  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Cape Belfalas§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_71  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dor-en-Ernil§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_72  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ered Tarthonion§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_77  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lonnath-en-Belfalas§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_81  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Tarnost§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_89  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Central Gondor§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_92  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lamedon§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_98  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Tarlang§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_102  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Blackroot Vale§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_105  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lower Morthond Vale§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_114  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Upper Morthond Vale§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_118  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Taerdôrath Rhúnen§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_78  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dor-en-Edhel§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_133  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Anfalas§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_134  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Langstrand§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_146  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Parth Feren§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_123  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Pinnath Gelin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_154  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nan-i-Faroth§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_160  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nan Lefnui§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_165  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Angast§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_169  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ras Morthil§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_175  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Perth Iaur§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_183  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Haerawreigion§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_186  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Old Pûkel's Land§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_188  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Drúwaith Iaur§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_194  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Eastern Drúwaith Iaur§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_198  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Forithilien§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_205  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Emyn Arnen§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_212  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Harithilien§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_216  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Eredtir§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_226  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Laergaladrín§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_228  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Harfalas§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_232  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Forethir§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_238  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Rhuntir§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_249  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Eraguk§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GON_253  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Carnentir§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					UMB_256  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Sakal an-Khar§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					UMB_260  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Glínfalas§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					UMB_263  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Tol Uialgaer§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					UMB_270  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Marös§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					UMB_273  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Sakal-Pharaz§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					HAR_277  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Talath Naur§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					HAR_286  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nînzayan§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					HAR_288  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Harwan§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					HAR_293  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Pezarsan§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					HAR_310  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Siakan§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					HAR_312  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Velarith§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					HAR_322  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Haradwaith§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					HAR_334  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Harûzan§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					HAR_356  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lûrmsakûn§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_342  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Muzeida Vale§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_344  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ered Harmal§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_348  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Kajbah§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_357  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Khandu Sûrakh§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_361  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Desert of Khand§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_362  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Khandu Itakh§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_364  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Wizard's Wanderings§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_366  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Khandu Amú§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_376  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Khandu Khûr§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_380  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Khandu Prakhod§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_387  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Khandu Khûrvesra§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					KHA_391  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Khandu Ylâ§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_397  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Eastern Desolation§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_399  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Khandu Ûda§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_404  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Southern Nurza-Shukh§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_411  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Maegond§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_412  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ghurzun§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_418  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Northern Nurza-Shukh§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_421  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Gap of Nurza-Shûk§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_423  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lithlad§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_429  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Thark Kûfnaz§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_433  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Imlad Morgûl§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_440  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Morgai§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_449  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Bauglith-en-Sauron§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_455  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Udûn§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_408  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ephel Dûath§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					MOR_396  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ered Lithui§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_458  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dagorlad§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_462  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nindalf§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_467  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Emyn Muil§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_472  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Uvanwaith§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_476  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Talath Harroch§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_484  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lower Othnen Vale§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_488  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Upper Othnen Vale§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_491  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Sagathavuld§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_496  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Taj-Urés§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_500  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Duil Rewinion§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_507  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dor Rhúnen§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_512  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Sekelvuld§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_515  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dobok Bron§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_517  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ehwathrumavuld§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_523  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b High Hand§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_527  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dunheath§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHO_532  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Deneral§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DOR_539  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Folyavuld§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DOR_545  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dobok Rhín§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DOR_550  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Parta Rokantha§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DOR_555  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Pinnon Rhûn§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DOR_558  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Cairn Angle§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_560  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Western Dacranamel§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_566  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dacranamel§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_571  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Riav§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_577  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Kara Kalpak§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_580  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Gathod§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_584  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Morad§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_590  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Urgathavuld§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_600  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Urgov§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_601  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Rhunear Isles§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_604  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Taur Rómen§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_608  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Kugavuld§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_614  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Logathavuld§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_618  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Gazar Gord§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_628  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Gazar Ibar§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_629  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Gazar Barak§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_637  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Gazar Narkad§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DAL_640  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Upper Marches§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DAL_642  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nan Carnen§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DAL_643  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nether Marches§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DAL_645  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nan Celduin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DAL_652  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dalelands§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DAL_654  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nan Annen§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ERE_660  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Desolation of Smaug§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ERE_669  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Iron Hills§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GOB_677  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Withered Heath§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GOB_682  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Grey Mountains§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GOB_685  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b The Narrows§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					WRM_692  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Woodland Realm§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					WRM_697  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Northern Greenwood§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					WRM_703  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Central Mirkwood§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					WRM_708  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Angaladh§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GUL_714  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Mirkwood Narrows§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GUL_727  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Necromancer's Realm§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					AND_732  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nan Anduin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					AND_737  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Carrock§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					AND_739  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Greylin Vale§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					AND_745  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Rónen-in-Anduin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					AND_749  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Middle Vales§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					AND_759  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Langflood§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LOR_765  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lothlórien§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LOR_767  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Parth Celebrant§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					FAN_773  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Fangorn§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ROH_774  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b The Wold§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ROH_780  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b East Emnet§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ROH_791  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Eastfold§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ROH_794  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b King's Land§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ROH_798  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b West Emnet§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ROH_803  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Westfold§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ROH_808  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Westmarch§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ISE_811  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nan Curunír§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ENE_815  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Isendale§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ENE_822  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Angrast§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ENE_825  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Enedwaith§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DUN_833  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Upper Dunland§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DUN_830  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lower Dunland§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DUN_835  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b North Dunland§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GOB_843  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Moria§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GOB_847  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Misty Mountains§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					GOB_849  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Goblin Town§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_855  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ettenmoors§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					RHU_859  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Rhudaur§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DND_863  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b The Angle§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					IML_865  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Foreregion§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					IML_874  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Hareregion§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					CAR_876  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Faerdor§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					CAR_883  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b South Downs§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					CAR_887  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dol Tinereb§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					CAR_892  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Caladir§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					CAR_896  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Mirhiriath§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					CAR_905  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Saralainn§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					CAR_912  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Girithlin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BLU_914  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Harvaneth§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BLU_915  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Old Sylvana§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BLU_917  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Southern Ered Luin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_137  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dor Leithan§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_921  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dânwaith§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_926  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Elvaedhorien§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_929  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Harlindon§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_933  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Emyn Beraid§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_936  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Rhûlindon§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_111  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Forlindon§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_953  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Galfalas§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_955  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Geleidhien§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_957  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Estoriand§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_1153  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Thargelion§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_962  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Western Islands§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LIN_964  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Forthargelion§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					LOS_1158  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lothlann§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					NUM_960  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ruins of Númenor§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BLU_975  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Lódalf§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BLU_972  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Númeriador§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BLU_942  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Khazadbizar§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BLU_968  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Ered Luin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BLU_947  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Vale of Thrain§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BLU_940  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Dor Lelvin§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ANG_976  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Forochel§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ANG_979  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Angerith§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ANG_987  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Angmar§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ANG_993  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Gundalok§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					ANG_999  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nan Angmar§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DND_1004  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b En Udanoriath§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DND_1007  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Uitalath§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BRE_1014  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b North Breriondor§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					BRE_1013  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b South Breriondor§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DND_1015  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Nengaren§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DND_1020  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Formenyar§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					DND_1026  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Royal Fold§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					SHI_1031  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Westfarthing§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					SHI_1036  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Southfarthing§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					SHI_1040  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Northfarthing§!" }
+			secede_province = QQQ 
+		}
+		any_sea_province = {
+			limit = {
+				AND = {
+					has_province_modifier = regions_loc_sea
+					FOR_1042  = { has_province_modifier = regions_loc_land }
+				}
+			}
+			secede_province = THIS 
+			state_scope = { change_region_name = "§b Northern Wastes§!" }
+			secede_province = QQQ 
+		}
+		any_land_province = {
+			remove_province_modifier = regions_loc_land
+		}
+		any_sea_province = {
+			remove_province_modifier = regions_loc_sea
+		}
+		any_country = {
+			limit = {
+				tag = UTI
+				check_variable = { which = itterator value = 0 }
+			}
+			change_variable = { which = itterator value = -1 }
+			CLN = { country_event = 71702 }
+		}
+	}
+	
+	option = {
+		name = "Change the Name"
+	}
+}

@@ -1,0 +1,2323 @@
+country_event = {
+	id = 71501
+	title = "Dynamic Loc Flag Bounce Event"
+	picture = "crisis"
+	allow_multiple_instances = no
+	is_triggered_only = yes
+
+	immediate = {
+		UTI = { set_variable = { which = itterator value = 0 } }
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 0.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 1.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 2 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 1.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 2.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 3 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 2.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 3.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 4 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 3.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 4.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 5 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 4.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 5.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 6 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 5.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 6.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 7 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 6.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 7.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 8 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 7.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 8.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 9 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 8.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 9.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 10 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 9.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 10.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 11 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 10.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 11.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 12 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 11.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 12.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 13 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 12.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 13.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 14 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 13.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 14.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 15 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 14.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 15.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 16 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 15.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 16.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 17 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 16.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 17.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 18 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 17.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 18.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 19 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 18.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 19.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 20 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 19.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 20.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 21 } }
+		}
+		country_event = 71502
+	}
+	
+	option = {
+		name = ""
+	}
+}
+
+country_event = {
+	id = 71502
+	title = "Dynamic Loc Flag Effect Event"
+	picture = "crisis"
+	allow_multiple_instances = no
+	is_triggered_only = yes
+
+	immediate = {
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 20.99 } }
+				check_variable = { which = flag_loc_slot value = 19.99 }
+				UTI = { check_variable = { which = itterator value = 19.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 20.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_20 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 19.99 } }
+				check_variable = { which = flag_loc_slot value = 18.99 }
+				UTI = { check_variable = { which = itterator value = 18.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 19.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_19 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 18.99 } }
+				check_variable = { which = flag_loc_slot value = 17.99 }
+				UTI = { check_variable = { which = itterator value = 17.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 18.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_18 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 17.99 } }
+				check_variable = { which = flag_loc_slot value = 16.99 }
+				UTI = { check_variable = { which = itterator value = 16.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 17.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_17 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 16.99 } }
+				check_variable = { which = flag_loc_slot value = 15.99 }
+				UTI = { check_variable = { which = itterator value = 15.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 16.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_16 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 15.99 } }
+				check_variable = { which = flag_loc_slot value = 14.99 }
+				UTI = { check_variable = { which = itterator value = 14.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 15.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_15 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 14.99 } }
+				check_variable = { which = flag_loc_slot value = 13.99 }
+				UTI = { check_variable = { which = itterator value = 13.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 14.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_14 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 13.99 } }
+				check_variable = { which = flag_loc_slot value = 12.99 }
+				UTI = { check_variable = { which = itterator value = 12.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 13.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_13 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 12.99 } }
+				check_variable = { which = flag_loc_slot value = 11.99 }
+				UTI = { check_variable = { which = itterator value = 11.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 12.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_12 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 11.99 } }
+				check_variable = { which = flag_loc_slot value = 10.99 }
+				UTI = { check_variable = { which = itterator value = 10.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 11.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_11 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 10.99 } }
+				check_variable = { which = flag_loc_slot value = 9.99 }
+				UTI = { check_variable = { which = itterator value = 9.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 10.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_10 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 9.99 } }
+				check_variable = { which = flag_loc_slot value = 8.99 }
+				UTI = { check_variable = { which = itterator value = 8.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 9.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_9 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 8.99 } }
+				check_variable = { which = flag_loc_slot value = 7.99 }
+				UTI = { check_variable = { which = itterator value = 7.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 8.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_8 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 7.99 } }
+				check_variable = { which = flag_loc_slot value = 6.99 }
+				UTI = { check_variable = { which = itterator value = 6.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 7.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_7 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 6.99 } }
+				check_variable = { which = flag_loc_slot value = 5.99 }
+				UTI = { check_variable = { which = itterator value = 5.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 6.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_6 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 5.99 } }
+				check_variable = { which = flag_loc_slot value = 4.99 }
+				UTI = { check_variable = { which = itterator value = 4.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 5.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_5 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 4.99 } }
+				check_variable = { which = flag_loc_slot value = 3.99 }
+				UTI = { check_variable = { which = itterator value = 3.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 4.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_4 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 3.99 } }
+				check_variable = { which = flag_loc_slot value = 2.99 }
+				UTI = { check_variable = { which = itterator value = 2.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 3.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_3 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 2.99 } }
+				check_variable = { which = flag_loc_slot value = 1.99 }
+				UTI = { check_variable = { which = itterator value = 1.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 2.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_2 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 1.99 } }
+				check_variable = { which = flag_loc_slot value = 0.99 }
+				UTI = { check_variable = { which = itterator value = 0.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 1.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_1 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		random_country = {
+			limit = {
+				tag = REB
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@REB" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GON
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@GON" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ITH
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ITH" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LOS
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LOS" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LEB
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LEB" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = AMR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@AMR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LAM
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LAM" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ANF
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ANF" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ANO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ANO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = TOL
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@TOL" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = MRN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@MRN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DRU
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DRU" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ADR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ADR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GNR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@GNR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DWM
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DWM" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = OBS
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@OBS" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = EDH
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@EDH" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = PUK
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@PUK" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DRH
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DRH" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DRA
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DRA" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = RUN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@RUN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ADB
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ADB" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = MOR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@MOR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = NUR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@NUR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SHE
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@SHE" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = HAR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@HAR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = HRD
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@HRD" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = UMB
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@UMB" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = HRN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@HRN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = HRU
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@HRU" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = PEZ
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@PEZ" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LUR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LUR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ARY
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ARY" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = KHA
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@KHA" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = CHE
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@CHE" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = RHU
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@RHU" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SAG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@SAG" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SEK
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@SEK" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = URG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@URG" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = KUG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@KUG" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LGV
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LGV" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DOR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DOR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = EHW
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@EHW" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = RHO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@RHO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = NRN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@NRN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DAL
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DAL" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ESG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ESG" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LMW
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LMW" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = AMO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@AMO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GRA
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@GRA" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = RIV
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@RIV" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ADH
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ADH" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ERE
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ERE" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = RAV
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@RAV" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = IRO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@IRO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = BRK
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BRK" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SNO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@SNO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LAR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LAR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GMG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@GMG" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GGT
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@GGT" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GMO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@GMO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GUN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@GUN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = MTN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@MTN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = WRM
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@WRM" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GUL
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@GUL" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = MIR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@MIR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = WOO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@WOO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = BEO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BEO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = STO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@STO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LOR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LOR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = EAG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@EAG" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LYN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LYN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = RAD
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@RAD" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = MEL
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@MEL" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FRA
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@FRA" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = KHU
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@KHU" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = RME
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@RME" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FAN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@FAN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ROH
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ROH" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ISE
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ISE" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ENE
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ENE" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DUN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DUN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DCA
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DCA" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DDR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DDR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DHE
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DHE" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DTU
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DTU" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DUC
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DUC" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ALG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ALG" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = GWA
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@GWA" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = MAU
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@MAU" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = RHR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@RHR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = MAN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@MAN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ARN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ARN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DND
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DND" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = IML
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@IML" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = CAR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@CAR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ART
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ART" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SYL
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@SYL" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = HRV
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@HRV" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SHI
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@SHI" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = BCK
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BCK" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = BRE
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BRE" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SBU
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@SBU" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = BOM
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BOM" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = TRO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@TRO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = BAR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BAR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LSF
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LSF" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = EGL
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@EGL" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = OST
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@OST" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ETT
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ETT" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = SUD
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@SUD" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = MET
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@MET" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FRN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@FRN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = NAD
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@NAD" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = BEN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BEN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = CRN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@CRN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = NID
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@NID" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DEV
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DEV" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = WEA
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@WEA" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = EEL
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@EEL" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = EMB
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@EMB" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = HWD
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@HWD" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = LIN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@LIN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = WND
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@WND" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = BLG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BLG" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = BLU
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BLU" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = DOU
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@DOU" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = KHG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@KHG" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = KHZ
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@KHZ" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = NGD
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@NGD" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = THO
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@THO" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = NUM
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@NUM" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = STF
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@STF" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = ALA
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ALA" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FOR
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@FOR" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = CLN
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@CLN" }
+				secede_province = QQQ
+			}
+		}
+		random_country = {
+			limit = {
+				tag = UTI
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@UTI" }
+				secede_province = QQQ
+			}
+		}
+		any_country = {
+			clr_country_flag = rename_loc_flag
+		}
+		any_sea_province = {
+			remove_province_modifier = flag_rename_modifier
+		}
+		any_country = {
+			limit = {
+				tag = UTI
+				check_variable = { which = itterator value = 0 }
+			}
+			change_variable = { which = itterator value = -1 }
+			CLN = { country_event = 71502 }
+		}
+	}
+	
+	option = {
+		name = "Change the Name"
+	}
+}
