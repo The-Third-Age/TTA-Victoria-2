@@ -6,6 +6,32 @@ country_event = {
 	picture = "railroading"
 	is_triggered_only = yes
 	major = yes
+	
+	immediate = {
+		railroading_tag_specific_description_loc_1 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_2 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_3 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_4 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_5 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_6 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_7 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_8= {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_9 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_10 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_11 = {}
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_12 = {}
+	}
 
 	option = {
 		name = "§BTo the station!§! (turn on railroading)"
@@ -168,6 +194,111 @@ country_event = {
 				ERE = { is_greater_power = yes }
 			}
 			leave_alliance = DAL
+		}
+	}
+}
+
+# Set Railroading Localisation
+country_event = {
+	id = 91005
+	title = "Railroading Localisation"
+	desc = "EVTDESC91005"
+	picture = "railroading"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Set Localisation Please"
+		
+		railroading_tag_specific_description_loc_1 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_2 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_3 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_4 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_5 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_6 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_7 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_8 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_9 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_10 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_11 = { secede_province = THIS }
+		railroading_tag_specific_description_loc_12 = { secede_province = THIS }
+		
+		random_country = {
+			limit = {
+				ai = no
+				tag = DAL
+			}
+			railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "§GWe will be forced into keeping an alliance with Erebor§!" } }
+			railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "§GRiverrun will agree to any scripted diplomatic effects§!" } }
+			railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "§MNaertheiaborg will refuse any scripted diplomatic effects§!" } }
+			railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "§MWe will be unable to pursue the scripted reclamation of §TDádhrik's Gap§M and §TMountainlands§!" } }
+		}
+		
+		random_country = {
+			limit = {
+				ai = no
+				tag = ERE
+			}
+			railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "§GWe will be forced into keeping an alliance with the Barding Realm§!" } }
+		}
+		
+		railroading_tag_specific_description_loc_1 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_2 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_3 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_4 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_5 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_6 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_7 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_8 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_9 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_10 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_11 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
+		}
+		
+		railroading_tag_specific_description_loc_12 = {
+			# Audax Validator "." Ignore_NEXT
+			secede_province = ---
 		}
 	}
 }
