@@ -258,6 +258,15 @@ political_decisions = {
 			# Start Government Type Cleanup event loop
 			country_event = 100100
 			
+			# Firing Mod Changes Fluff event
+			any_country = {
+				limit = {
+					exists = yes
+					ai = no
+				}
+				country_event = { id = 29000 days = 3 }
+			}
+			
 			# Start General/Admiral Generation event loops
 			country_event = { id = 40998 days = 4 }
 			country_event = { id = 40999 days = 4 }
