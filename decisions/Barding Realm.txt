@@ -751,6 +751,89 @@ political_decisions = {
 	}
 }
 
+# Reclamation of Northern Lands
+political_decisions = {
+	DAL_break_treaty_with_erebor = {
+		picture = "DAL_reconquer_north"
+		potential = {
+			tag = DAL
+			has_global_flag = railroading_disabled
+			NOT = { has_global_flag = DAL_reclaimed_northern_lands }
+			OR = {
+				good_evil_alignment = evil_alignment
+				AND = {
+					good_evil_alignment = good_alignment
+					ERE = { good_evil_alignment = evil_alignment }
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+			is_greater_power = yes
+			expansion_4 = 1
+		}
+		
+		effect = {
+			ERE_657 = { add_core = THIS }
+			ERE_660 = { add_core = THIS }
+			
+			any_country = {
+				limit = {
+					any_owned_province = {
+						OR = {
+							region = ERE_657
+							region = ERE_660
+						}
+					}
+				}
+				leave_alliance = THIS
+				relation = { who = THIS value = -400 }
+			}
+			
+			badboy = 8
+			
+			set_global_flag = DAL_reclaimed_northern_lands
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				badboy = 0.5
+			}
+		}
+	}
+	
+	EDA_become_erebor = {
+		picture = "ERE_kingdom_of_erebor"
+		potential = {
+			tag = EDA
+			is_vassal = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					exists = ERE
+				}
+				owner = { ERE = { inherit = THIS } }
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { exists = ERE }
+				}
+				owner = { change_tag = ERE }
+			}
+		}
+	}
+}
+
 # Province Flavor
 political_decisions = {
 	build_meres_end_boatlift = {
