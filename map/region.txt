@@ -282,6 +282,64 @@ FOR_CLEAR = { 372 673 674 675 677 683 } # Forodwaith
 # Remove the below line to have the validator check lines below this line
 # Audax Validator "!" Ignore_NEXT
 
+# Static Tooltip Locs - Generic, Event description
+empty_line_loc = { } # \n
+green_color_loc = { } # §G
+maroon_color_loc = { } # §M
+tan_color_loc = { } # §T
+end_color_loc = { } # §!
+
+admiral_loc = { } # §TAdmirals§!
+general_loc = { } # §TGenerals§!
+military_leader_started_with_loc = { } # §GWe started with this military leader§!
+military_leader_recruited_loc = { } # §GThis leader has been recruited§!
+military_leader_not_recruited_loc = { } # §MThis leader has not yet been recruited.§!
+
+# Static Tooltip Locs - Barding Realm, Event description
+DAL_king_of_the_northmen_loc = { } # King of the Northmen
+DAL_king_of_the_northmen_desc_loc = { } # Rule each Northman culture within Gramavuld!
+DAL_king_of_the_northmen_currently_ruling_over_loc = { } # §TWe currently rule over the following cultures§!|
+DAL_king_of_the_northman_not_ruling_over_loc = { } # §TWe do not currently rule over the following cultures§!|
+DAL_king_of_lakemen_loc = { } # §GLakemen§!,
+DAL_king_of_adhalling_loc = { } # §GAdhalling§!,
+DAL_king_of_grammas_loc = { } # Grammas§!,
+DAL_king_of_rivermen_loc = { } # Rivermen
+DAL_northmen_generals_loc = { } # Lords of Riding and Rivermen Thegans
+DAL_northman_generals_desc_loc = { } # Unite the Grammas and Rivermen under the banner of Dale to unlock the Grammas' Lords of Riding and the Rivermen's Thegans!
+DAL_northman_generals_grammas_desc_loc = { } # The Lords of Riding will only spawn if Grammas is accepted, and if any conditions in parenthesis are met.
+DAL_northman_generals_grammas_gotten_loc = { } # §TWe have recruited the following Lords of Riding§!|
+DAL_northman_generals_grammas_not_gotten_loc = { } # §TWe have not yet recruited the following Lords of Riding§!|
+DAL_northman_generals_grammas_frithalf_loc = { } # Frithalf§!,
+DAL_northman_generals_grammas_eynar_loc = { } # Eynar (owns Grasgard, year is at least 2970)§!,
+DAL_northman_generals_grammas_oyvind_loc = { } # Oyvind (owns Erland's Ferry, year is at least 2990)
+DAL_northman_generals_rivermen_desc_loc = { } # The Rivermen Thegans will spawn only if their realm willingly joins the Barding Realm through scripted diplomatic actions.
+DAL_northman_generals_rivermen_gotten_loc = { } # §TWe have recruited the following Rivermen Thegans§!|
+DAL_northman_generals_rivermen_undecided_loc = { } # §TThe following Rivermen Thegans have not decided if they will be joining us§!|
+DAL_northman_generals_rivermen_not_gotton_loc = { } # §TThe following Rivermen Thegans have chosen to not join us§!|
+DAL_northman_generals_rivermen_aridan_loc = { } # Aridain (Riverrun)§!,
+DAL_northman_generals_rivermen_kynodin_loc = { } # Kynodin (Kaupaborg)§!,
+DAL_northman_generals_rivermen_nomrel_loc = { } # Nomrel (Myrrborg)§!,
+DAL_northman_generals_rivermen_geirmund_loc = { } # Geirmund (Naertheiaborg)
+DAL_trade_with_other_realms_loc = { } # §GTrade with Other Realms§!
+DAL_trade_with_other_realms_desc_loc =  { } # Propose trade agreements with realms you are adjacent to! When a realm accepts, both you and your trade partner may get a small economic boost. Esgaroth will display your current level of economic boost.
+DAL_military_leaders_brestir_loc = { } # §LBrestir the Old§!|
+DAL_military_leaders_elstan_loc = { } # §LElstan, §MFirst Captain of Dale§!|
+DAL_military_leaders_braga_loc = { } # §LBraga, §MFirst Captain of Esgaroth§!|
+DAL_military_leaders_lodin_loc = { } # §LLodin, §MCaptain of the Royal Archers§!|
+DAL_military_leaders_bryn_loc = { } # §LBryn, §MRoyal Warrior§!|
+DAL_military_leaders_girloth_loc = { } # §LGirloth, §MRoyal General§!|
+DAL_military_leaders_unrecruited_lodin = { } # §MHe will be recruited around the year 3005 if we own Dale§!
+DAL_military_leaders_unrecruited_bryn = { } # §MHe will be recruited around the year 3005 if§!
+DAL_military_leaders_brand_i_an_adult = { } # Brand I is an adult§!,
+DAL_military_leaders_brand_i_married = { } # Brand I has been married§!,
+DAL_military_leaders_bard_ii_born = { } # Bard II has been born§!,
+DAL_military_leaders_bryn_born = { } # Bryn has been born§!
+DAL_military_leaders_unrecruited_girloth = { } #§MHe will be recruited around the year 3045 if§!
+DAL_military_leaders_bard_ii_an_adult = { } # Bard II is an adult§!,
+DAL_military_leaders_bard_ii_married = { } # Bard II has been married§!,
+DAL_military_leaders_girion_ii_born = { } # Girion II has been born§!,
+DAL_military_leaders_girloth_born = { } # Girloth has been born§!
+
 # SirRunner Generator Apply "§I"
 
 # Dynamic Tooltip Locs - Generic
@@ -312,7 +370,6 @@ DAL_brand_i_born = { 1071 } # §TBrand I§! has not yet been born
 DAL_bard_ii_born = { 1072 } # §TBard II§! has not yet been born
 
 # Static Tooltip Locs - Generic
-empty_line_loc = { } # \n
 hunting_outlaws_loc = { } # §GThe local militia and any military units in the area will start searching for the outlaws and their base§!
 outlaws_cleared_loc = { } # §GThe local militia and any military units have cleared the province of outlaws, and as such will no longer suffer the effects§!
 recent_raid_loc = { } # §REven if the tool tip only says that this event removes Recent Raid, the province will get the modifier Recent Raid for 1 year§!

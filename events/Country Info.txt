@@ -7,6 +7,7 @@
 # Country Information Events: {
 #	35000 - 39999 (4 per country) }
 
+# { The Kingdom of Gondor
 # The Kingdom of Gondor
 country_event = {
 	id = 35000
@@ -161,7 +162,9 @@ country_event = {
 		name = "EVTOPTE35000"
 	}
 }
+# }
 
+# { The Principality of Dol Amroth
 # The Principality of Dol Amroth
 country_event = {
 	id = 35005
@@ -301,7 +304,9 @@ country_event = {
 		name = "EVTOPTE35000"
 	}
 }
+# }
 
+# { Shadow of Mordor
 # Shadow of Mordor
 country_event = {
 	id = 35009
@@ -441,7 +446,9 @@ country_event = {
 		name = "EVTOPTE35000"
 	}
 }
+# }
 
+# { Kingdom of Dorwinion
 # Kingdom of Dorwinion
 country_event = {
 	id = 35013
@@ -581,6 +588,7 @@ country_event = {
 		name = "EVTOPTE35000"
 	}
 }
+# }
 
 # Kingdom of Dale (Barding Realm) {
 country_event = {
@@ -629,6 +637,11 @@ country_event = {
 	}
 
 	option = {
+		name = "EVTOPTF35000"
+		country_event = 35021
+	}
+
+	option = {
 		name = "EVTOPTE35000"
 		
 		ai_chance = {
@@ -646,7 +659,7 @@ country_event = {
 
 	is_triggered_only = yes
 	major = yes
-
+	
 	option = {
 		name = "EVTOPTA35000"
 		country_event = 35017
@@ -665,6 +678,11 @@ country_event = {
 	option = {
 		name = "EVTOPTD35000"
 		country_event = 35020
+	}
+
+	option = {
+		name = "EVTOPTF35000"
+		country_event = 35021
 	}
 
 	option = {
@@ -703,6 +721,11 @@ country_event = {
 	}
 
 	option = {
+		name = "EVTOPTF35000"
+		country_event = 35021
+	}
+
+	option = {
 		name = "EVTOPTE35000"
 	}
 }
@@ -712,10 +735,385 @@ country_event = {
 	id = 35020
 	picture = "kingdom_of_dale"
 	title = "EVTNAME35003"
-	desc = "EVTDESC35020"
+	desc = " "
 
 	is_triggered_only = yes
 	major = yes
+	
+	immediate = {
+		maroon_color_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = king_of_lakemen
+					has_country_modifier = king_of_adhalling
+					has_country_modifier = king_of_grammas
+					has_country_modifier = king_of_rivermen
+				}
+			}
+			green_color_loc = {}
+		}
+		DAL_king_of_the_northmen_loc = {}
+		end_color_loc = {}
+		
+		empty_line_loc = {}
+		DAL_king_of_the_northmen_desc_loc = {}
+		
+		empty_line_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_country_modifier = king_of_lakemen
+						has_country_modifier = king_of_adhalling
+						has_country_modifier = king_of_grammas
+						has_country_modifier = king_of_rivermen
+					}
+				}
+			}
+			DAL_king_of_the_northmen_currently_ruling_over_loc = {}
+		}
+		DAL_king_of_lakemen_loc = {}
+		DAL_king_of_adhalling_loc = {}
+		random_owned = {
+			limit = { owner = { has_country_modifier = king_of_grammas } }
+			green_color_loc = {}
+			DAL_king_of_grammas_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = king_of_rivermen } }
+			green_color_loc = {}
+			DAL_king_of_rivermen_loc = {}
+			end_color_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						NOT = { has_country_modifier = king_of_grammas }
+						NOT = { has_country_modifier = king_of_rivermen }
+					}
+				}
+			}
+			empty_line_loc = {}
+			DAL_king_of_the_northman_not_ruling_over_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_country_modifier = king_of_grammas } } }
+			maroon_color_loc = {}
+			DAL_king_of_grammas_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_country_modifier = king_of_rivermen } } }
+			maroon_color_loc = {}
+			DAL_king_of_rivermen_loc = {}
+			end_color_loc = {}
+		}
+		
+		empty_line_loc = {}
+		empty_line_loc = {}
+		maroon_color_loc = {}
+		random_owned = {
+			limit = {
+				owner {
+					has_country_modifier = king_of_rivermen
+					has_global_flag = DAL_recruited_frithalf
+					has_global_flag = DAL_recruited_eynar
+					has_global_flag = DAL_recruited_oyvind
+				}
+			}
+			green_color_loc = {}
+		}
+		DAL_northmen_generals_loc = {}
+		end_color_loc = {}
+		
+		empty_line_loc = {}
+		DAL_northman_generals_desc_loc = {}
+		
+		empty_line_loc = {}
+		empty_line_loc = {}
+		DAL_northman_generals_grammas_desc_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = DAL_recruited_frithalf
+						has_global_flag = DAL_recruited_eynar
+						has_global_flag = DAL_recruited_oyvind
+					}
+				}
+			}
+			empty_line_loc = {}
+			DAL_northman_generals_grammas_gotten_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = DAL_recruited_frithalf } }
+			green_color_loc = {}
+			DAL_northman_generals_grammas_frithalf_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = DAL_recruited_eynar } }
+			green_color_loc = {}
+			DAL_northman_generals_grammas_eynar_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = DAL_recruited_oyvind } }
+			green_color_loc = {}
+			DAL_northman_generals_grammas_oyvind_loc = {}
+			end_color_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						NOT = { has_global_flag = DAL_recruited_frithalf }
+						NOT = { has_global_flag = DAL_recruited_eynar }
+						NOT = { has_global_flag = DAL_recruited_oyvind }
+					}
+				}
+			}
+			empty_line_loc = {}
+			DAL_northman_generals_grammas_not_gotten_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = DAL_recruited_frithalf } } }
+			maroon_color_loc = {}
+			DAL_northman_generals_grammas_frithalf_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = DAL_recruited_eynar } } }
+			maroon_color_loc = {}
+			DAL_northman_generals_grammas_eynar_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = DAL_recruited_oyvind } } }
+			maroon_color_loc = {}
+			DAL_northman_generals_grammas_oyvind_loc = {}
+			end_color_loc = {}
+		}
+		
+		empty_line_loc = {}
+		empty_line_loc = {}
+		DAL_northman_generals_rivermen_desc_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						DA1 = { has_country_flag = RIV_willingly_joined_DAL }
+						DA2 = { has_country_flag = RIV_willingly_joined_DAL }
+						DA3 = { has_country_flag = RIV_willingly_joined_DAL }
+						DA4 = { has_country_flag = RIV_willingly_joined_DAL }
+					}
+				}
+			}
+			empty_line_loc = {}
+			DAL_northman_generals_rivermen_gotten_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { DA1 = { has_country_flag = RIV_willingly_joined_DAL } }
+			}
+			green_color_loc = {}
+			DAL_northman_generals_rivermen_aridan_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { DA2 = { has_country_flag = RIV_willingly_joined_DAL } }
+			}
+			green_color_loc = {}
+			DAL_northman_generals_rivermen_kynodin_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { DA3 = { has_country_flag = RIV_willingly_joined_DAL } }
+			}
+			green_color_loc = {}
+			DAL_northman_generals_rivermen_nomrel_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { DA4 = { has_country_flag = RIV_willingly_joined_DAL } }
+			}
+			green_color_loc = {}
+			DAL_northman_generals_rivermen_geirmund_loc = {}
+			end_color_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						AND = {
+							exists = DA1
+							NOT = { DA1 = { has_country_flag = RIV_willingly_joined_DAL } }
+						}
+						AND = {
+							exists = DA2
+							NOT = { DA2 = { has_country_flag = RIV_willingly_joined_DAL } }
+						}
+						AND = {
+							exists = DA3
+							NOT = { DA3 = { has_country_flag = RIV_willingly_joined_DAL } }
+						}
+						AND = {
+							exists = DA4
+							NOT = { DA4 = { has_country_flag = RIV_willingly_joined_DAL } }
+						}
+					}
+				}
+			}
+			empty_line_loc = {}
+			DAL_northman_generals_rivermen_undecided_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = DA1
+					NOT = { DA1 = { has_country_flag = RIV_willingly_joined_DAL } }
+				}
+			}
+			DAL_northman_generals_rivermen_aridan_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = DA2
+					NOT = { DA2 = { has_country_flag = RIV_willingly_joined_DAL } }
+				}
+			}
+			DAL_northman_generals_rivermen_kynodin_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = DA3
+					NOT = { DA3 = { has_country_flag = RIV_willingly_joined_DAL } }
+				}
+			}
+			DAL_northman_generals_rivermen_nomrel_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = DA4
+					NOT = { DA4 = { has_country_flag = RIV_willingly_joined_DAL } }
+				}
+			}
+			DAL_northman_generals_rivermen_geirmund_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						AND = {
+							OR = {
+								NOT = { exists = DA1 }
+								is_our_vassal = DA1
+								DA1 = { has_country_flag = rejected_DALs_ultimatum }
+							}
+							NOT = { DA1 = { has_country_flag = RIV_willingly_joined_DAL } }
+						}
+						AND = {
+							OR = {
+								NOT = { exists = DA2 }
+								is_our_vassal = DA2
+								DA2 = { has_country_flag = rejected_DALs_ultimatum }
+							}
+							NOT = { DA2 = { has_country_flag = RIV_willingly_joined_DAL } }
+						}
+						AND = {
+							OR = {
+								NOT = { exists = DA3 }
+								is_our_vassal = DA3
+								DA3 = { has_country_flag = rejected_DALs_ultimatum }
+							}
+							NOT = { DA3 = { has_country_flag = RIV_willingly_joined_DAL } }
+						}
+						AND = {
+							OR = {
+								NOT = { exists = DA4 }
+								is_our_vassal = DA4
+								DA4 = { has_country_flag = rejected_DALs_ultimatum }
+							}
+							NOT = { DA4 = { has_country_flag = RIV_willingly_joined_DAL } }
+						}
+					}
+				}
+			}
+			empty_line_loc = {}
+			DAL_northman_generals_rivermen_not_gotton_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						NOT = { exists = DA1 }
+						is_our_vassal = DA1
+						DA1 = { has_country_flag = rejected_DALs_ultimatum }
+					}
+					NOT = { DA1 = { has_country_flag = RIV_willingly_joined_DAL } }
+				}
+			}
+			maroon_color_loc = {}
+			DAL_northman_generals_rivermen_aridan_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						NOT = { exists = DA2 }
+						is_our_vassal = DA2
+						DA2 = { has_country_flag = rejected_DALs_ultimatum }
+					}
+					NOT = { DA2 = { has_country_flag = RIV_willingly_joined_DAL } }
+				}
+			}
+			maroon_color_loc = {}
+			DAL_northman_generals_rivermen_kynodin_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						NOT = { exists = DA3 }
+						is_our_vassal = DA3
+						DA3 = { has_country_flag = rejected_DALs_ultimatum }
+					}
+					NOT = { DA3 = { has_country_flag = RIV_willingly_joined_DAL } }
+				}
+			}
+			maroon_color_loc = {}
+			DAL_northman_generals_rivermen_nomrel_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						NOT = { exists = DA4 }
+						is_our_vassal = DA4
+						DA4 = { has_country_flag = rejected_DALs_ultimatum }
+					}
+					NOT = { DA4 = { has_country_flag = RIV_willingly_joined_DAL } }
+				}
+			}
+			maroon_color_loc = {}
+			DAL_northman_generals_rivermen_geirmund_loc = {}
+			end_color_loc = {}
+		}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		DAL_trade_with_other_realms_loc = {}
+		
+		empty_line_loc = {}
+		DAL_trade_with_other_realms_desc_loc = {}
+	}
 
 	option = {
 		name = "EVTOPTA35000"
@@ -738,711 +1136,238 @@ country_event = {
 	}
 
 	option = {
+		name = "EVTOPTF35000"
+		country_event = 35021
+	}
+
+	option = {
+		name = "EVTOPTE35000"
+	}
+}
+
+# Kingdom of Dale (Barding Realm) - Military Leaders
+country_event = {
+	id = 35021
+	picture = "kingdom_of_dale"
+	title = "EVTNAME35021"
+	desc = " "
+	
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		admiral_loc = {}
+		
+		empty_line_loc = {}
+		DAL_military_leaders_brestir_loc = {}
+		military_leader_started_with_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		general_loc = {}
+		
+		empty_line_loc = {}
+		DAL_military_leaders_elstan_loc = {}
+		military_leader_started_with_loc = {}
+		
+		empty_line_loc = {}
+		DAL_military_leaders_braga_loc = {}
+		military_leader_started_with_loc = {}
+		
+		empty_line_loc = {}
+		DAL_military_leaders_lodin_loc = {}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_lodin } }
+			}
+			military_leader_not_recruited_loc = {}
+			DAL_military_leaders_unrecruited_lodin = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = DAL_recruited_lodin }
+			}
+			military_leader_recruited_loc = {}
+		}
+		
+		empty_line_loc = {}
+		DAL_military_leaders_bryn_loc = {}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+			}
+			military_leader_not_recruited_loc = {}
+			DAL_military_leaders_unrecruited_bryn = {}
+			maroon_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+				owner = { FOR = { check_variable = { which = brand_i_age value = 15.9 } } }
+			}
+			green_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+			}
+			DAL_military_leaders_brand_i_an_adult = {}
+			maroon_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+				owner = { has_global_flag = DAL_brand_i_married }
+			}
+			green_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+			}
+			DAL_military_leaders_brand_i_married = {}
+			maroon_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+				owner = { FOR = { check_variable = { which = bard_ii_age value = 0.9 } } }
+			}
+			green_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+			}
+			DAL_military_leaders_bard_ii_born = {}
+			maroon_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+				owner = { has_global_flag = DAL_bryn_brandson_born }
+			}
+			green_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+			}
+			DAL_military_leaders_bryn_born = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = DAL_recruited_bryn }
+			}
+			military_leader_recruited_loc = {}
+		}
+		
+		empty_line_loc = {}
+		DAL_military_leaders_girloth_loc = {}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_bryn } }
+			}
+			military_leader_not_recruited_loc = {}
+			DAL_military_leaders_unrecruited_girloth = {}
+			maroon_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_girloth } }
+				owner = { FOR = { check_variable = { which = bard_ii_age value = 15.9 } } }
+			}
+			green_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_girloth } }
+			}
+			DAL_military_leaders_bard_ii_an_adult = {}
+			maroon_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_girloth } }
+				owner = { has_global_flag = DAL_bard_ii_married }
+			}
+			green_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_girloth } }
+			}
+			DAL_military_leaders_bard_ii_married = {}
+			maroon_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_girloth } }
+				owner = { has_global_flag = DAL_girion_ii_born }
+			}
+			green_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_girloth } }
+			}
+			DAL_military_leaders_girion_ii_born = {}
+			maroon_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_girloth } }
+				owner = { has_global_flag = DAL_girloth_bard2son_born }
+			}
+			green_color_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = DAL_recruited_girloth } }
+			}
+			DAL_military_leaders_girloth_born = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = DAL_recruited_girloth }
+			}
+			military_leader_recruited_loc = {}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA35000"
+		country_event = 35017
+	}
+
+	option = {
+		name = "EVTOPTB35000"
+		country_event = 35018
+	}
+
+	option = {
+		name = "EVTOPTC35000"
+		country_event = 35019
+	}
+
+	option = {
+		name = "EVTOPTD35000"
+		country_event = 35020
+	}
+
+	option = {
+		name = "EVTOPTF35000"
+		country_event = 35021
+	}
+
+	option = {
 		name = "EVTOPTE35000"
 	}
 }
 # }
 
-# Kingdom of Erebor
-country_event = {
-	id = 35021
-	picture = "kingdom_of_erebor"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35021"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35021
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35022
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35023
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35024
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Kingdom of Erebor - Flavor
-country_event = {
-	id = 35022
-	picture = "kingdom_of_erebor"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35022"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35021
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35022
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35023
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35024
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Kingdom of Erebor - Government
-country_event = {
-	id = 35023
-	picture = "kingdom_of_erebor"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35023"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35021
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35022
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35023
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35024
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Kingdom of Erebor - Bonuses
-country_event = {
-	id = 35024
-	picture = "kingdom_of_erebor"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35024"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35021
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35022
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35023
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35024
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Grey Mountain Goblins
-country_event = {
-	id = 35025
-	picture = "grey_mountain_goblins"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35025"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35025
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35026
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35027
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35028
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Grey Mountain Goblins - Flavor
-country_event = {
-	id = 35026
-	picture = "grey_mountain_goblins"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35026"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35025
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35026
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35027
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35028
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Grey Mountain Goblins - Government
-country_event = {
-	id = 35027
-	picture = "grey_mountain_goblins"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35027"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35025
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35026
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35027
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35028
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Grey Mountain Goblins - Bonuses
-country_event = {
-	id = 35028
-	picture = "grey_mountain_goblins"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35028"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35025
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35026
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35027
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35028
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Woodland Realm
-country_event = {
-	id = 35029
-	picture = "woodland_realm"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35029"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35029
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35030
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35031
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35032
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Woodland Realm - Flavor
-country_event = {
-	id = 35030
-	picture = "woodland_realm"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35030"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35029
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35030
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35031
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35032
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Woodland Realm - Government
-country_event = {
-	id = 35031
-	picture = "woodland_realm"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35031"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35029
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35030
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35031
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35032
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Woodland Realm - Bonuses
-country_event = {
-	id = 35032
-	picture = "woodland_realm"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35032"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35029
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35030
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35031
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35032
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dol Guldur
-country_event = {
-	id = 35033
-	picture = "dol_guldur"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35033"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35033
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35034
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35035
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35036
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dol Guldur - Flavor
-country_event = {
-	id = 35034
-	picture = "dol_guldur"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35034"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35033
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35034
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35035
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35036
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dol Guldur - Government
-country_event = {
-	id = 35035
-	picture = "dol_guldur"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35035"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35033
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35034
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35035
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35036
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dol Guldur - Bonuses
-country_event = {
-	id = 35036
-	picture = "dol_guldur"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35036"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35033
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35034
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35035
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35036
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Woodsmen of the Vale
-country_event = {
-	id = 35037
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35037"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35037
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35038
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35039
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35040
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Woodsmen of the Vale - Flavor
-country_event = {
-	id = 35038
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35038"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35037
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35038
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35039
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35040
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Woodsmen of the Vale - Government
-country_event = {
-	id = 35039
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35039"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35037
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35038
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35039
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35040
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Woodsmen of the Vale - Bonuses
-country_event = {
-	id = 35040
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35040"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35037
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35038
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35039
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35040
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
+# { Beornings of the Vale
 # Beornings of the Vale
 country_event = {
 	id = 35041
@@ -1582,4219 +1507,4 @@ country_event = {
 		name = "EVTOPTE35000"
 	}
 }
-
-# Stoor Hobbits
-country_event = {
-	id = 35045
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35045"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35045
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35046
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35047
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35048
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Stoor Hobbits - Flavor
-country_event = {
-	id = 35046
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35046"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35045
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35046
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35047
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35048
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Stoor Hobbits - Government
-country_event = {
-	id = 35047
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35047"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35045
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35046
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35047
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35048
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Stoor Hobbits - Bonuses
-country_event = {
-	id = 35048
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35048"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35045
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35046
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35047
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35048
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Lothlórien
-country_event = {
-	id = 35049
-	picture = "realm_of_lothlorien"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35049"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35049
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35050
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35051
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35052
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Lothlórien - Flavor
-country_event = {
-	id = 35050
-	picture = "realm_of_lothlorien"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35050"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35049
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35050
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35051
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35052
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Lothlórien - Government
-country_event = {
-	id = 35051
-	picture = "realm_of_lothlorien"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35051"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35049
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35050
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35051
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35052
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Lothlórien - Bonuses
-country_event = {
-	id = 35052
-	picture = "realm_of_lothlorien"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35052"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35049
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35050
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35051
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35052
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Ents of Fangorn
-country_event = {
-	id = 35053
-	picture = "ents_of_fangorn"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35053"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35053
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35054
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35055
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35056
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Ents of Fangorn - Flavor
-country_event = {
-	id = 35054
-	picture = "ents_of_fangorn"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35054"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35053
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35054
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35055
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35056
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Ents of Fangorn - Government
-country_event = {
-	id = 35055
-	picture = "ents_of_fangorn"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35055"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35053
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35054
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35055
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35056
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Ents of Fangorn - Bonuses
-country_event = {
-	id = 35056
-	picture = "ents_of_fangorn"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35056"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35053
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35054
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35055
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35056
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Kingdom of Rohan
-country_event = {
-	id = 35057
-	picture = "kingdom_of_rohan"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35057"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35057
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35058
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35059
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35060
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Kingdom of Rohan - Flavor
-country_event = {
-	id = 35058
-	picture = "kingdom_of_rohan"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35058"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35057
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35058
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35059
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35060
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Kingdom of Rohan - Government
-country_event = {
-	id = 35059
-	picture = "kingdom_of_rohan"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35059"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35057
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35058
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35059
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35060
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Kingdom of Rohan - Bonuses
-country_event = {
-	id = 35060
-	picture = "kingdom_of_rohan"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35060"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35057
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35058
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35059
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35060
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Isengard
-country_event = {
-	id = 35061
-	picture = "realm_of_isengard"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35061"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35061
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35062
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35063
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35064
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Isengard - Flavor
-country_event = {
-	id = 35062
-	picture = "realm_of_isengard"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35062"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35061
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35062
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35063
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35064
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Isengard - Government
-country_event = {
-	id = 35063
-	picture = "realm_of_isengard"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35063"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35061
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35062
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35063
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35064
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Isengard - Bonuses
-country_event = {
-	id = 35064
-	picture = "realm_of_isengard"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35064"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35061
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35062
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35063
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35064
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Enedwaith
-country_event = {
-	id = 35065
-	picture = "realm_of_isengard"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35065"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35065
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35066
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35067
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35068
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Enedwaith - Flavor
-country_event = {
-	id = 35066
-	picture = "realm_of_isengard"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35066"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35065
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35066
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35067
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35068
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Enedwaith - Government
-country_event = {
-	id = 35067
-	picture = "realm_of_isengard"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35067"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35065
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35066
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35067
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35068
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Enedwaith - Bonuses
-country_event = {
-	id = 35068
-	picture = "realm_of_isengard"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35068"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35065
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35066
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35067
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35068
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Dunland
-country_event = {
-	id = 35069
-	picture = "realm_of_isengard"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35069"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35069
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35070
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35071
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35072
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Dunland - Flavor
-country_event = {
-	id = 35070
-	picture = "realm_of_isengard"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35070"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35069
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35070
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35071
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35072
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Dunland - Government
-country_event = {
-	id = 35071
-	picture = "realm_of_isengard"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35071"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35069
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35070
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35071
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35072
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Dunland - Bonuses
-country_event = {
-	id = 35072
-	picture = "realm_of_isengard"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35072"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35069
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35070
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35071
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35072
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Goblins of Moria
-country_event = {
-	id = 35073
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35073"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35073
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35074
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35075
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35076
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Goblins of Moria - Flavor
-country_event = {
-	id = 35074
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35074"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35073
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35074
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35075
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35076
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Goblins of Moria - Government
-country_event = {
-	id = 35075
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35075"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35073
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35074
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35075
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35076
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Goblins of Moria - Bonuses
-country_event = {
-	id = 35076
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35076"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35073
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35074
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35075
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35076
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Goblins of Goblins Town
-country_event = {
-	id = 35077
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35077"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35077
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35078
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35079
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35080
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Goblins of Goblins Town - Flavor
-country_event = {
-	id = 35078
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35078"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35077
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35078
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35079
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35080
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Goblins of Goblins Town - Government
-country_event = {
-	id = 35079
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35079"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35077
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35078
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35079
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35080
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Goblins of Goblins Town - Bonuses
-country_event = {
-	id = 35080
-	picture = "woodsmen_of_the_vale"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35080"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35077
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35078
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35079
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35080
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Hillmen of Rhudaur
-country_event = {
-	id = 35081
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35081"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35081
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35082
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35083
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35084
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Hillmen of Rhudaur - Flavor
-country_event = {
-	id = 35082
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35082"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35081
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35082
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35083
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35084
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Hillmen of Rhudaur - Government
-country_event = {
-	id = 35083
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35083"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35081
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35082
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35083
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35084
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Hillmen of Rhudaur - Bonuses
-country_event = {
-	id = 35084
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35084"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35081
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35082
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35083
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35084
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dúnedain of the North
-country_event = {
-	id = 35085
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35085"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35085
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35086
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35087
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35088
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dúnedain of the North - Flavor
-country_event = {
-	id = 35086
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35086"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35085
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35086
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35087
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35088
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dúnedain of the North - Government
-country_event = {
-	id = 35087
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35087"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35085
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35086
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35087
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35088
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dúnedain of the North - Bonuses
-country_event = {
-	id = 35088
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35088"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35085
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35086
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35087
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35088
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Imladris
-country_event = {
-	id = 35089
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35089"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35089
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35090
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35091
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35092
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Imladris - Flavor
-country_event = {
-	id = 35090
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35090"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35089
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35090
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35091
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35092
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Imladris - Government
-country_event = {
-	id = 35091
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35091"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35089
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35090
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35091
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35092
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Imladris - Bonuses
-country_event = {
-	id = 35092
-	picture = "hillmen_of_rhudaur"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35092"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35089
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35090
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35091
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35092
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Remnants of Cardolan
-country_event = {
-	id = 35093
-	picture = "remnants_of_cardolan"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35093"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35093
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35094
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35095
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35096
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Remnants of Cardolan - Flavor
-country_event = {
-	id = 35094
-	picture = "remnants_of_cardolan"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35094"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35093
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35094
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35095
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35096
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Remnants of Cardolan - Government
-country_event = {
-	id = 35095
-	picture = "remnants_of_cardolan"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35095"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35093
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35094
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35095
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35096
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Remnants of Cardolan - Bonuses
-country_event = {
-	id = 35096
-	picture = "remnants_of_cardolan"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35096"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35093
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35094
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35095
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35096
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Lindon
-country_event = {
-	id = 35097
-	picture = "map_of_eriador"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35097"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35097
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35098
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35099
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35100
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Lindon - Flavor
-country_event = {
-	id = 35098
-	picture = "map_of_eriador"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35098"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35097
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35098
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35099
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35100
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Lindon - Government
-country_event = {
-	id = 35099
-	picture = "map_of_eriador"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35099"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35097
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35098
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35099
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35100
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Lindon - Bonuses
-country_event = {
-	id = 35100
-	picture = "map_of_eriador"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35100"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35097
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35098
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35099
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35100
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dwarves of Ered Luin
-country_event = {
-	id = 35101
-	picture = "map_of_eriador"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35101"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35101
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35102
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35103
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35104
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dwarves of Ered Luin - Flavor
-country_event = {
-	id = 35102
-	picture = "map_of_eriador"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35102"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35101
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35102
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35103
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35104
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dwarves of Ered Luin - Government
-country_event = {
-	id = 35103
-	picture = "map_of_eriador"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35103"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35101
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35102
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35103
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35104
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Dwarves of Ered Luin - Bonuses
-country_event = {
-	id = 35104
-	picture = "map_of_eriador"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35104"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35101
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35102
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35103
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35104
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Remnants of Númenor
-country_event = {
-	id = 35105
-	picture = "map_of_numenor"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35105"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35105
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35106
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35107
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35108
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Remnants of Númenor - Flavor
-country_event = {
-	id = 35106
-	picture = "map_of_numenor"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35106"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35105
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35106
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35107
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35108
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Remnants of Númenor - Government
-country_event = {
-	id = 35107
-	picture = "map_of_numenor"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35107"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35105
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35106
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35107
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35108
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Remnants of Númenor - Bonuses
-country_event = {
-	id = 35108
-	picture = "map_of_numenor"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35108"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35105
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35106
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35107
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35108
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Hobbits of the Shire
-country_event = {
-	id = 35109
-	picture = "map_of_eriador"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35109"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35109
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35110
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35111
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35112
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Hobbits of the Shire - Flavor
-country_event = {
-	id = 35110
-	picture = "map_of_eriador"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35110"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35109
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35110
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35111
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35112
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Hobbits of the Shire - Government
-country_event = {
-	id = 35111
-	picture = "map_of_eriador"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35111"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35109
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35110
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35111
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35112
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Hobbits of the Shire - Bonuses
-country_event = {
-	id = 35112
-	picture = "map_of_eriador"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35112"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35109
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35110
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35111
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35112
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Free Peoples of Breeland
-country_event = {
-	id = 35113
-	picture = "map_of_eriador"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35113"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35113
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35114
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35115
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35116
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Free Peoples of Breeland - Flavor
-country_event = {
-	id = 35114
-	picture = "map_of_eriador"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35114"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35113
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35114
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35115
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35116
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Free Peoples of Breeland - Government
-country_event = {
-	id = 35115
-	picture = "map_of_eriador"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35115"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35113
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35114
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35115
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35116
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Free Peoples of Breeland - Bonuses
-country_event = {
-	id = 35116
-	picture = "map_of_eriador"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35116"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35113
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35114
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35115
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35116
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Men of Angmar
-country_event = {
-	id = 35117
-	picture = "map_of_angmar"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35117"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35117
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35118
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35119
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35120
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Men of Angmar - Flavor
-country_event = {
-	id = 35118
-	picture = "map_of_angmar"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35118"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35117
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35118
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35119
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35120
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Men of Angmar - Government
-country_event = {
-	id = 35119
-	picture = "map_of_angmar"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35119"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35117
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35118
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35119
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35120
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Men of Angmar - Bonuses
-country_event = {
-	id = 35120
-	picture = "map_of_angmar"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35120"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35117
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35118
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35119
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35120
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Orcs of Gundabad
-country_event = {
-	id = 35121
-	picture = "map_of_angmar"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35121"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35121
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35122
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35123
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35124
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Orcs of Gundabad - Flavor
-country_event = {
-	id = 35122
-	picture = "map_of_angmar"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35122"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35121
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35122
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35123
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35124
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Orcs of Gundabad - Government
-country_event = {
-	id = 35123
-	picture = "map_of_angmar"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35123"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35121
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35122
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35123
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35124
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Orcs of Gundabad - Bonuses
-country_event = {
-	id = 35124
-	picture = "map_of_angmar"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35124"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35121
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35122
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35123
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35124
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Drúedain of Drúadan Forest
-country_event = {
-	id = 35125
-	picture = "druedain_of_druadan_forest"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35125"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35125
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35126
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35127
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35128
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Drúedain of Drúadan Forest - Flavor
-country_event = {
-	id = 35126
-	picture = "druedain_of_druadan_forest"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35126"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35125
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35126
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35127
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35128
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Drúedain of Drúadan Forest - Government
-country_event = {
-	id = 35127
-	picture = "druedain_of_druadan_forest"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35127"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35125
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35126
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35127
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35128
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Drúedain of Drúadan Forest - Bonuses
-country_event = {
-	id = 35128
-	picture = "druedain_of_druadan_forest"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35128"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35125
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35126
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35127
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35128
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-
-# Druedain of Druwaith Iaur
-country_event = {
-	id = 35129
-	picture = "map_of_andrast"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35129"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35129
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35130
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35131
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35132
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Druedain of Druwaith Iaur - Flavor
-country_event = {
-	id = 35130
-	picture = "map_of_andrast"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35130"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35129
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35130
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35131
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35132
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Druedain of Druwaith Iaur - Government
-country_event = {
-	id = 35131
-	picture = "map_of_andrast"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35131"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35129
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35130
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35131
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35132
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Druedain of Druwaith Iaur - Bonuses
-country_event = {
-	id = 35132
-	picture = "map_of_andrast"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35132"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35129
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35130
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35131
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35132
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Bank
-country_event = {
-	id = 35133
-	picture = "map_of_forodwaith"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35133"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Corsairs of Umbar
-country_event = {
-	id = 35134
-	picture = "map_of_umbar"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35134"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35134
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35135
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35136
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35137
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Corsairs of Umbar - Flavor
-country_event = {
-	id = 35135
-	picture = "map_of_umbar"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35135"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35134
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35135
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35136
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35137
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Corsairs of Umbar - Government
-country_event = {
-	id = 35136
-	picture = "map_of_umbar"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35136"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35134
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35135
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35136
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35137
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Corsairs of Umbar - Bonuses
-country_event = {
-	id = 35137
-	picture = "map_of_umbar"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35137"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35134
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35135
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35136
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35137
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Harad
-country_event = {
-	id = 35138
-	picture = "harad/map"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35138"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35138
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35139
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35140
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35141
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Harad - Flavor
-country_event = {
-	id = 35139
-	picture = "harad/map"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35139"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35138
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35139
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35140
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35141
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Harad - Government
-country_event = {
-	id = 35140
-	picture = "harad/map"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35140"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35138
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35139
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35140
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35141
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Tribes of Harad - Bonuses
-country_event = {
-	id = 35141
-	picture = "harad/map"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35141"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35138
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35139
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35140
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35141
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# United Haradrim Tribes
-country_event = {
-	id = 35142
-	picture = "harad/map"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35142"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35142
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35143
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35144
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35145
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# United Haradrim Tribes - Flavor
-country_event = {
-	id = 35143
-	picture = "harad/map"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35143"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35142
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35143
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35144
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35145
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# United Haradrim Tribes - Government
-country_event = {
-	id = 35144
-	picture = "harad/map"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35144"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35142
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35143
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35144
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35145
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# United Haradrim Tribes - Bonuses
-country_event = {
-	id = 35145
-	picture = "harad/map"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35145"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35142
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35143
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35144
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35145
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Chelkar
-country_event = {
-	id = 35146
-	picture = "map_of_khand"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35146"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35146
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35147
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35148
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35149
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Chelkar - Flavor
-country_event = {
-	id = 35147
-	picture = "map_of_khand"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35147"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35146
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35147
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35148
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35149
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Chelkar - Government
-country_event = {
-	id = 35148
-	picture = "map_of_khand"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35148"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35146
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35147
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35148
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35149
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Chelkar - Bonuses
-country_event = {
-	id = 35149
-	picture = "map_of_khand"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35149"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35146
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35147
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35148
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35149
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Easterling Tribes
-country_event = {
-	id = 35150
-	picture = "map_of_rhun"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35150"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35150
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35151
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35152
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35153
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Easterling Tribes - Flavor
-country_event = {
-	id = 35151
-	picture = "map_of_rhun"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35151"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35150
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35151
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35152
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35153
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Easterling Tribes - Government
-country_event = {
-	id = 35152
-	picture = "map_of_rhun"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35152"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35150
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35151
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35152
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35153
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Easterling Tribes - Bonuses
-country_event = {
-	id = 35153
-	picture = "map_of_rhun"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35153"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35150
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35151
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35152
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35153
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of the Easterlings
-country_event = {
-	id = 35154
-	picture = "map_of_rhun"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35154"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35154
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35155
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35156
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35157
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of the Easterlings - Flavor
-country_event = {
-	id = 35155
-	picture = "map_of_rhun"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35155"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35154
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35155
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35156
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35157
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of the Easterlings - Government
-country_event = {
-	id = 35156
-	picture = "map_of_rhun"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35156"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35154
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35155
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35156
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35157
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of the Easterlings - Bonuses
-country_event = {
-	id = 35157
-	picture = "map_of_rhun"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35157"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35154
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35155
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35156
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35157
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Ehwathrim
-country_event = {
-	id = 35158
-	picture = "map_of_rhovanion"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35158"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35158
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35159
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35160
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35161
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Ehwathrim - Flavor
-country_event = {
-	id = 35159
-	picture = "map_of_rhovanion"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35159"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35158
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35159
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35160
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35161
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Ehwathrim - Government
-country_event = {
-	id = 35160
-	picture = "map_of_rhovanion"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35160"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35158
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35159
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35160
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35161
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Ehwathrim - Bonuses
-country_event = {
-	id = 35161
-	picture = "map_of_rhovanion"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35161"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35158
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35159
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35160
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35161
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Rhovanion
-country_event = {
-	id = 35162
-	picture = "map_of_rhovanion"
-	title = "EVTNAME35000"
-	desc = "EVTDESC35162"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35162
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35163
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35164
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35165
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Rhovanion - Flavor
-country_event = {
-	id = 35163
-	picture = "map_of_rhovanion"
-	title = "EVTNAME35001"
-	desc = "EVTDESC35163"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35162
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35163
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35164
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35165
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Rhovanion - Government
-country_event = {
-	id = 35164
-	picture = "map_of_rhovanion"
-	title = "EVTNAME35002"
-	desc = "EVTDESC35164"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35162
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35163
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35164
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35165
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
-
-# Realm of Rhovanion - Bonuses
-country_event = {
-	id = 35165
-	picture = "map_of_rhovanion"
-	title = "EVTNAME35003"
-	desc = "EVTDESC35165"
-
-	is_triggered_only = yes
-	major = yes
-
-	option = {
-		name = "EVTOPTA35000"
-		country_event = 35162
-	}
-
-	option = {
-		name = "EVTOPTB35000"
-		country_event = 35163
-	}
-
-	option = {
-		name = "EVTOPTC35000"
-		country_event = 35164
-	}
-
-	option = {
-		name = "EVTOPTD35000"
-		country_event = 35165
-	}
-
-	option = {
-		name = "EVTOPTE35000"
-	}
-}
+# }

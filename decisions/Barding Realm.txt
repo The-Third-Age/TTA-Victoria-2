@@ -2,7 +2,7 @@
 # Audax Validator "!" Ignore_1009
 
 # World Bank Decisions: {
-#	Starting Decision (Unseen)
+#	Starting Decision (Unseen) + Country Info (Seen)
 #	Rivermen Minors
 #	Marsh Wights
 #	Gramavuld Consolidation
@@ -12,7 +12,7 @@
 #	Bain I Flavor
 #	Esgaroth Trade }
 
-# Starting Decision (Unseen)
+# Starting Decision (Unseen) + Country Info (Seen)
 political_decisions = {
 	# Audax Validator "." Ignore_1004
 	DAL_start_decision = {
@@ -80,6 +80,22 @@ political_decisions = {
 			# Firing the fluff events -- order reversed so the realm event gets overlayed on top of the leader event
 			country_event = { id = 30032 days = 3 } # Leader Description
 			country_event = { id = 35017 days = 3 } # Realm Description
+		}
+	}
+	
+	kingdom_of_dale = {
+		alert = no
+		picture = "kingdom_of_dale"
+		potential = {
+			NOT = { has_global_flag = fluff_disabled }
+			ai = no
+			tag = DAL
+		}
+		
+		allow = {}
+		
+		effect = {
+			country_event = 35017
 		}
 	}
 }
@@ -154,6 +170,7 @@ political_decisions = {
 			
 		}
 		effect = {
+			set_country_flag = RIV_willingly_joined_DAL
 			DAL = { country_event = 50918 }
 		}
 		
@@ -673,8 +690,12 @@ political_decisions = {
 					exists = DA1
 					DA1 = { vassal_of = THIS }
 				}
+				owner = { inherit = DA1 }
+			}
+			
+			random_owned = {
+				limit = { DA1 = { has_country_flag = RIV_willingly_joined_DAL } }
 				owner = {
-					inherit = DA1
 					define_general = {
 						name = "§LAridain, §MThegan of Riverrun§!"
 						background = rivermen_thegan
@@ -688,8 +709,12 @@ political_decisions = {
 					exists = DA2
 					DA2 = { vassal_of = THIS }
 				}
+				owner = { inherit = DA2 }
+			}
+			
+			random_owned = {
+				limit = { DA2 = { has_country_flag = RIV_willingly_joined_DAL } }
 				owner = {
-					inherit = DA2
 					define_general = {
 						name = "§LKynodin, §MThegan of Kaupaborg§!"
 						background = rivermen_thegan
@@ -703,8 +728,12 @@ political_decisions = {
 					exists = DA3
 					DA3 = { vassal_of = THIS }
 				}
+				owner = { inherit = DA3 }
+			}
+			
+			random_owned = {
+				limit = { DA3 = { has_country_flag = RIV_willingly_joined_DAL } }
 				owner = {
-					inherit = DA3
 					define_general = {
 						name = "§LNomrel, §MThegan of Myrrborg§!"
 						background = rivermen_thegan
@@ -718,8 +747,12 @@ political_decisions = {
 					exists = DA4
 					DA4 = { vassal_of = THIS }
 				}
+				owner = { inherit = DA4 }
+			}
+			
+			random_owned = {
+				limit = { DA4 = { has_country_flag = RIV_willingly_joined_DAL } }
 				owner = {
-					inherit = DA4
 					define_general = {
 						name = "§LGeirmund, §MThegan of Naertheiaborg§!"
 						background = rivermen_thegan
