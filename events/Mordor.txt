@@ -167,3 +167,495 @@ country_event = {
 		name = "Ithilien has been abandoned"
 	}
 }
+
+# The Harondor Question (nobody asked for permission until 2965)
+country_event = {
+	id = 50504
+	title = "The Harondor Question"
+	desc = "EVTDESC50504"
+	picture = "harad/map"
+	is_triggered_only = yes 
+	
+	option = {
+		name = "We should reward our Harnendan allies for their loyalty"
+		prestige = 5
+		badboy = 0.5
+		HRN = {
+			prestige = 10
+			badboy = 2
+		}
+		HRU = {
+			prestige = -5
+			badboy = -0.5
+		}
+		UMB = {
+			prestige = -5
+			badboy = -0.5
+		}
+		CHE = {
+			prestige = -5
+			badboy = -0.5
+		}
+		diplomatic_influence = {
+			who = HRN
+			value = 400
+		}
+		relation = {
+			who = HRN
+			value = 100
+		}
+		diplomatic_influence = {
+			who = HRU
+			value = -25
+		}
+		relation = {
+			who = HRU
+			value = -50
+		}
+		diplomatic_influence = {
+			who = UMB
+			value = -25
+		}
+		relation = {
+			who = UMB
+			value = -50
+		}
+		diplomatic_influence = {
+			who = CHE
+			value = -25
+		}
+		relation = {
+			who = CHE
+			value = -50
+		}
+		set_global_flag = harondor_permission_granted_HRN
+		ai_chance = {
+			factor = 28
+		}
+	}
+	option = {
+		name = "EVTOPTB50504"
+		prestige = 5
+		badboy = 0.5
+		HRU = {
+			prestige = 10
+			badboy = 2
+		}
+		HRN = {
+			prestige = -5
+			badboy = -0.5
+		}
+		UMB = {
+			prestige = -5
+			badboy = -0.5
+		}
+		CHE = {
+			prestige = -5
+			badboy = -0.5
+		}
+		diplomatic_influence = {
+			who = HRU
+			value = 400
+		}
+		relation = {
+			who = HRU
+			value = 100
+		}
+		diplomatic_influence = {
+			who = HRN
+			value = -25
+		}
+		relation = {
+			who = HRN
+			value = -50
+		}
+		diplomatic_influence = {
+			who = UMB
+			value = -25
+		}
+		relation = {
+			who = UMB
+			value = -50
+		}
+		diplomatic_influence = {
+			who = CHE
+			value = -25
+		}
+		relation = {
+			who = CHE
+			value = -50
+		}
+		set_global_flag = harondor_permission_granted_HRU
+		ai_chance = {
+			factor = 12
+		}
+	}
+	option = {
+		name = "Our Chelkiag allies deserve a reward for their loyalty"
+		prestige = 5
+		badboy = 0.5
+		CHE = {
+			prestige = 10
+			badboy = 2
+		}
+		HRU = {
+			prestige = -5
+			badboy = -0.5
+		}
+		UMB = {
+			prestige = -5
+			badboy = -0.5
+		}
+		HRN = {
+			prestige = -5
+			badboy = -0.5
+		}
+		diplomatic_influence = {
+			who = CHE
+			value = 400
+		}
+		relation = {
+			who = CHE
+			value = 100
+		}
+		diplomatic_influence = {
+			who = HRU
+			value = -25
+		}
+		relation = {
+			who = HRU
+			value = -50
+		}
+		diplomatic_influence = {
+			who = HRN
+			value = -25
+		}
+		relation = {
+			who = HRN
+			value = -50
+		}
+		diplomatic_influence = {
+			who = UMB
+			value = -25
+		}
+		relation = {
+			who = UMB
+			value = -50
+		}
+		set_global_flag = harondor_permission_granted_CHE
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = "The Corsairs of Umbar will be able to protect Harondor"
+		prestige = 5
+		badboy = 0.5
+		UMB = {
+			prestige = 10
+			badboy = 2
+		}
+		HRU = {
+			prestige = -5
+			badboy = -0.5
+		}
+		HRN = {
+			prestige = -5
+			badboy = -0.5
+		}
+		CHE = {
+			prestige = -5
+			badboy = -0.5
+		}
+		diplomatic_influence = {
+			who = UMB
+			value = 400
+		}
+		relation = {
+			who = UMB
+			value = 100
+		}
+		diplomatic_influence = {
+			who = HRU
+			value = -25
+		}
+		relation = {
+			who = HRU
+			value = -50
+		}
+		diplomatic_influence = {
+			who = HRN
+			value = -25
+		}
+		relation = {
+			who = HRN
+			value = -50
+		}
+		diplomatic_influence = {
+			who = CHE
+			value = -25
+		}
+		relation = {
+			who = CHE
+			value = -50
+		}
+		set_global_flag = harondor_permission_granted_UMB
+		ai_chance = {
+			factor = 32
+		}
+	}
+	option = {
+		name = "A vassal state shall be established to ensure control"
+		prestige = 10
+		badboy = 2
+		HRN = {
+			prestige = -5
+			badboy = -0.5
+		}
+		HRU = {
+			prestige = -5
+			badboy = -0.5
+		}
+		UMB = {
+			prestige = -5
+			badboy = -0.5
+		}
+		CHE = {
+			prestige = -5
+			badboy = -0.5
+		}
+		255 = { secede_province = THIS }
+		random_owned = {
+			limit = {
+				ITH = {
+					exists = yes
+					vassal_of = MOR
+				}
+			}
+			215 = { secede_province = THIS }
+		}
+		release = HRD
+		create_vassal = HRD
+		create_alliance = HRD
+		HRD = {
+			country_event = 2510
+			political_reform = evil_alignment
+			capital = 255
+		}
+		diplomatic_influence = {
+			who = HRD
+			value = 400
+		}
+		relation = {
+			who = HRD
+			value = 200
+		}
+		diplomatic_influence = {
+			who = UMB
+			value = -25
+		}
+		relation = {
+			who = UMB
+			value = -50
+		}
+		diplomatic_influence = {
+			who = HRN
+			value = -25
+		}
+		relation = {
+			who = HRN
+			value = -50
+		}
+		diplomatic_influence = {
+			who = HRU
+			value = -25
+		}
+		relation = {
+			who = HRU
+			value = -50
+		}
+		diplomatic_influence = {
+			who = CHE
+			value = -25
+		}
+		relation = {
+			who = CHE
+			value = -50
+		}
+		set_global_flag = MOR_established_HRD_vassal
+		ai_chance = {
+			factor = 18
+		}
+	}
+}
+
+# Harondor colonisation proposal
+country_event = {
+	id = 50505
+	title = "EVTNAME50505"
+	desc = "EVTDESC50505"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We accept"
+		diplomatic_influence = {
+			who = FROM
+			value = 400
+		}
+		relation = {
+			who = FROM
+			value = 100
+		}
+		FROM = { country_event = 50506 }
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 60
+				FROM = { tag = HRN }
+			}
+			modifier = {
+				factor = 50
+				FROM = { tag = HRU }
+			}
+			modifier = {
+				factor = 40
+				FROM = { tag = CHE }
+			}
+		}
+	}
+	option = {
+		name = "We reject"
+		relation = {
+			who = FROM
+			value = -50
+		}
+		FROM = { country_event = 50507 }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 60
+				FROM = { tag = CHE }
+			}
+			modifier = {
+				factor = 50
+				FROM = { tag = HRU }
+			}
+			modifier = {
+				factor = 40
+				FROM = { tag = HRN }
+			}
+		}
+	}
+}
+
+# Sauron accepts the proposal
+country_event = {
+	id = 50506
+	title = "Sauron accepts"
+	desc = "EVTDESC50506"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Great!"
+		prestige = 5
+		badboy = 1
+		set_country_flag = proposal_asked_and_accepted
+		random_owned = {
+			limit = { owner = {	tag = UMB }	}
+			relation = {
+				who = HRN
+				value = -50
+			}
+			relation = {
+				who = HRU
+				value = -50
+			}
+			relation = {
+				who = CHE
+				value = -50
+			}
+			set_global_flag = harondor_permission_granted_UMB
+		}
+		random_owned = {
+			limit = { owner = {	tag = HRU } }
+			relation = {
+				who = HRN
+				value = -50
+			}
+			relation = {
+				who = UMB
+				value = -50
+			}
+			relation = {
+				who = CHE
+				value = -50
+			}
+			set_global_flag = harondor_permission_granted_HRU
+		}
+		random_owned = {
+			limit = { owner = {	tag = HRN }	}
+			relation = {
+				who = UMB
+				value = -50
+			}
+			relation = {
+				who = HRU
+				value = -50
+			}
+			relation = {
+				who = CHE
+				value = -50
+			}
+			set_global_flag = harondor_permission_granted_HRN
+		}
+		random_owned = {
+			limit = { owner = {	tag = CHE }	}
+			relation = {
+				who = HRN
+				value = -50
+			}
+			relation = {
+				who = HRU
+				value = -50
+			}
+			relation = {
+				who = UMB
+				value = -50
+			}
+			set_global_flag = harondor_permission_granted_CHE
+		}
+	}
+}
+
+# Sauron rejects the proposal
+country_event = {
+	id = 50507
+	title = "Sauron rejects our proposal"
+	desc = "EVTDESC50507"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We should revise our plans of expansion"
+		prestige = -10
+		badboy = -0.5
+		random_owned = {
+			limit = { owner = {	tag = UMB }	}
+			set_global_flag = harondor_permission_rejected_UMB
+		}
+		random_owned = {
+			limit = { owner = {	tag = HRU }	}
+			set_global_flag = harondor_permission_rejected_HRU
+		}
+		random_owned = {
+			limit = { owner = {	tag = HRN } }
+			set_global_flag = harondor_permission_rejected_HRN
+		}
+		random_owned = {
+			limit = { owner = {	tag = CHE } }
+			set_global_flag = harondor_permission_rejected_CHE
+		}
+	}
+}
