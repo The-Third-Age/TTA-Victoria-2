@@ -18,14 +18,8 @@ political_decisions = {
 					in_sphere = THIS
 					war = no
 				}
-				BRE = {
-					vassal_of = THIS
-				}
-				BRE = {
-					all_core = {
-						owned_by = THIS
-					}
-				}
+				BRE = {	vassal_of = THIS }
+				BRE = {	all_core = { owned_by = THIS } }
 			}
 			OR = {
 				tag = SHI
@@ -33,37 +27,27 @@ political_decisions = {
 					in_sphere = THIS
 					war = no
 				}
-				SHI = {
-						vassal_of = THIS
-				}
-				SHI = {
-					all_core = {
-						owned_by = THIS
-					}
-				}
+				SHI = {	vassal_of = THIS }
+				SHI = {	all_core = { owned_by = THIS } }
 			}
 		}
 		effect = {
 			change_tag = SBU
-			BRE = { all_core = { add_core = SBU} }
-			SHI = { all_core = { add_core = SBU} }
+			BRE = { all_core = { add_core = SBU } }
+			SHI = { all_core = { add_core = SBU } }
 			inherit = BRE
 			inherit = SHI
 			add_accepted_culture = breelander
 			add_accepted_culture = breeland_hobbit
 			add_accepted_culture = shire_hobbit
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	the_buckland_question = {
 	picture = "brandy_hall"
 		potential = {
 			tag = SBU
-			NOT = {
-				has_country_flag = buckland_policy_decided
-			}
+			NOT = { has_country_flag = buckland_policy_decided }
 		}
 		allow = {
 			war = no

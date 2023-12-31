@@ -2553,3 +2553,21 @@ country_event = {
 		}
 	}
 }
+
+#Loss of Harondor
+country_event = {
+	id = 50058
+	title = "Harondor is lost"
+	desc = "EVTDESC50058"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will not surrender to the Shadow!"
+		prestige = -10
+		add_country_modifier = {
+			name = harondor_lost
+			duration = 4380
+		}
+	}
+}
