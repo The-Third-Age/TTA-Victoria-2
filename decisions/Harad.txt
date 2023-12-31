@@ -1036,6 +1036,10 @@ political_decisions = {
 					remove_province_modifier = cultural_core_integration
 				}
 			}
+			random_owned = {
+				limit = { GON = { exists = yes } }
+				GON = { country_event = 50058 }
+			}
 			set_country_flag = colonized_harondor
 			clr_country_flag = colonizing_harondor
 		}
