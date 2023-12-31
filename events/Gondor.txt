@@ -1511,10 +1511,12 @@ country_event = {
 	picture = "harad/map"
 	
 	trigger = {
-		is_our_vassal = HRD
-		any_owned_province = {
-			is_core = HRD
+		OR = {
+			tag = GON
+			tag = MOR
 		}
+		is_our_vassal = HRD
+		any_owned_province = { is_core = HRD }
 	}
 	
 	option = {
