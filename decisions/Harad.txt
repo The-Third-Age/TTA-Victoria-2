@@ -829,7 +829,16 @@ political_decisions = {
 			prestige = 10
 			badboy = 5
 			random_owned = {
-				limit = { NOT = { has_country_flag = proposal_asked_and_accepted } }
+				limit = {
+					NOT = { 
+						OR = {
+							has_global_flag = harondor_permission_granted_UMB
+							has_global_flag = harondor_permission_granted_HRN
+							has_global_flag = harondor_permission_granted_HRU
+							has_global_flag = harondor_permission_granted_CHE
+						}
+					}
+				}
 				THIS = { badboy = 2 }
 			}
 			random_owned = {
