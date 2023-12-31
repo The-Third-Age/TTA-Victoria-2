@@ -880,6 +880,16 @@ political_decisions = {
 				limit = { owner = { tag = CHE }	}
 				255 = { secede_province = THIS }
 			}
+			random_owned = {
+				limit = { THIS = { NOT = { slavery = no_slavery } } }
+				GON_216 = { is_slave = yes }
+				GON_226 = { is_slave = yes }
+				GON_228 = { is_slave = yes }
+				GON_232 = { is_slave = yes }
+				GON_238 = { is_slave = yes }
+				GON_249 = { is_slave = yes }
+				GON_253 = { is_slave = yes }
+			}
 			set_country_flag = colonizing_harondor
 		}
 	}
