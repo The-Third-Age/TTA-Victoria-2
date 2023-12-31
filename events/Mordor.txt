@@ -507,6 +507,66 @@ country_event = {
 			who = FROM
 			value = 50
 		}
+		random_owned = {
+			limit = { FROM = { tag = UMB } }
+			relation = {
+				who = HRN
+				value = -50
+			}
+			relation = {
+				who = HRU
+				value = -50
+			}
+			relation = {
+				who = CHE
+				value = -50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = HRN } }
+			relation = {
+				who = UMB
+				value = -50
+			}
+			relation = {
+				who = HRU
+				value = -50
+			}
+			relation = {
+				who = CHE
+				value = -50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = HRU } }
+			relation = {
+				who = HRN
+				value = -50
+			}
+			relation = {
+				who = UMB
+				value = -50
+			}
+			relation = {
+				who = CHE
+				value = -50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = CHE } }
+			relation = {
+				who = HRN
+				value = -50
+			}
+			relation = {
+				who = HRU
+				value = -50
+			}
+			relation = {
+				who = UMB
+				value = -50
+			}
+		}
 		FROM = { country_event = 50506 }
 		ai_chance = {
 			factor = 70
@@ -531,6 +591,66 @@ country_event = {
 			value = -100
 		}
 		FROM = { country_event = 50507 }
+		random_owned = {
+			limit = { FROM = { tag = UMB } }
+			relation = {
+				who = HRN
+				value = 50
+			}
+			relation = {
+				who = HRU
+				value = 50
+			}
+			relation = {
+				who = CHE
+				value = 50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = HRN } }
+			relation = {
+				who = UMB
+				value = 50
+			}
+			relation = {
+				who = HRU
+				value = 50
+			}
+			relation = {
+				who = CHE
+				value = 50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = HRU } }
+			relation = {
+				who = HRN
+				value = 50
+			}
+			relation = {
+				who = UMB
+				value = 50
+			}
+			relation = {
+				who = CHE
+				value = 50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = CHE } }
+			relation = {
+				who = HRN
+				value = 50
+			}
+			relation = {
+				who = HRU
+				value = 50
+			}
+			relation = {
+				who = UMB
+				value = 50
+			}
+		}
 		ai_chance = {
 			factor = 30
 			modifier = {
