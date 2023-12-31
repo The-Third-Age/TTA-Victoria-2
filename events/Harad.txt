@@ -31,6 +31,10 @@ country_event = {
 			}
 			random_empty_neighbor_province = {
 				limit = { is_core = HRD }
+				random_owned = {
+					limit = { THIS = { NOT = { slavery = no_slavery } } }
+					state_scope = { is_slave = yes }
+				}
 				secede_province = THIS
 			}
 		}
