@@ -808,6 +808,26 @@ political_decisions = {
 					CHE = { has_country_flag = colonized_harondor }
 					HRD = { vassal_of = MOR }
 					HRD = { vassal_of = GON }
+					AND = {
+						tag = UMB
+						in_sphere = MOR
+						has_global_flag = harondor_permission_rejected_UMB
+					}
+					AND = {
+						tag = CHE
+						in_sphere = MOR
+						has_global_flag = harondor_permission_rejected_CHE
+					}
+					AND = {
+						tag = HRU
+						in_sphere = MOR
+						has_global_flag = harondor_permission_rejected_HRU
+					}
+					AND = {
+						tag = HRN
+						in_sphere = MOR
+						has_global_flag = harondor_permission_rejected_HRN
+					}
 				}
 			}
 		}
@@ -829,7 +849,16 @@ political_decisions = {
 			prestige = 10
 			badboy = 5
 			random_owned = {
-				limit = { NOT = { has_country_flag = proposal_asked_and_accepted } }
+				limit = {
+					NOT = { 
+						OR = {
+							has_global_flag = harondor_permission_granted_UMB
+							has_global_flag = harondor_permission_granted_HRN
+							has_global_flag = harondor_permission_granted_HRU
+							has_global_flag = harondor_permission_granted_CHE
+						}
+					}
+				}
 				THIS = { badboy = 2 }
 			}
 			random_owned = {
@@ -850,6 +879,16 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { tag = CHE }	}
 				255 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = { THIS = { NOT = { slavery = no_slavery } } }
+				GON_216 = { is_slave = yes }
+				GON_226 = { is_slave = yes }
+				GON_228 = { is_slave = yes }
+				GON_232 = { is_slave = yes }
+				GON_238 = { is_slave = yes }
+				GON_249 = { is_slave = yes }
+				GON_253 = { is_slave = yes }
 			}
 			set_country_flag = colonizing_harondor
 		}

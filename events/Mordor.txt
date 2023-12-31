@@ -501,11 +501,71 @@ country_event = {
 		name = "We accept"
 		diplomatic_influence = {
 			who = FROM
-			value = 400
+			value = 50
 		}
 		relation = {
 			who = FROM
-			value = 100
+			value = 50
+		}
+		random_owned = {
+			limit = { FROM = { tag = UMB } }
+			relation = {
+				who = HRN
+				value = -50
+			}
+			relation = {
+				who = HRU
+				value = -50
+			}
+			relation = {
+				who = CHE
+				value = -50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = HRN } }
+			relation = {
+				who = UMB
+				value = -50
+			}
+			relation = {
+				who = HRU
+				value = -50
+			}
+			relation = {
+				who = CHE
+				value = -50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = HRU } }
+			relation = {
+				who = HRN
+				value = -50
+			}
+			relation = {
+				who = UMB
+				value = -50
+			}
+			relation = {
+				who = CHE
+				value = -50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = CHE } }
+			relation = {
+				who = HRN
+				value = -50
+			}
+			relation = {
+				who = HRU
+				value = -50
+			}
+			relation = {
+				who = UMB
+				value = -50
+			}
 		}
 		FROM = { country_event = 50506 }
 		ai_chance = {
@@ -528,9 +588,69 @@ country_event = {
 		name = "We reject"
 		relation = {
 			who = FROM
-			value = -50
+			value = -100
 		}
 		FROM = { country_event = 50507 }
+		random_owned = {
+			limit = { FROM = { tag = UMB } }
+			relation = {
+				who = HRN
+				value = 50
+			}
+			relation = {
+				who = HRU
+				value = 50
+			}
+			relation = {
+				who = CHE
+				value = 50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = HRN } }
+			relation = {
+				who = UMB
+				value = 50
+			}
+			relation = {
+				who = HRU
+				value = 50
+			}
+			relation = {
+				who = CHE
+				value = 50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = HRU } }
+			relation = {
+				who = HRN
+				value = 50
+			}
+			relation = {
+				who = UMB
+				value = 50
+			}
+			relation = {
+				who = CHE
+				value = 50
+			}
+		}
+		random_owned = {
+			limit = { FROM = { tag = CHE } }
+			relation = {
+				who = HRN
+				value = 50
+			}
+			relation = {
+				who = HRU
+				value = 50
+			}
+			relation = {
+				who = UMB
+				value = 50
+			}
+		}
 		ai_chance = {
 			factor = 30
 			modifier = {
@@ -561,7 +681,6 @@ country_event = {
 		name = "Great!"
 		prestige = 5
 		badboy = 1
-		set_country_flag = proposal_asked_and_accepted
 		random_owned = {
 			limit = { owner = {	tag = UMB }	}
 			relation = {
