@@ -16,3 +16,54 @@ political_decisions = {
 		}
 	}
 }
+
+
+# The Harondor Question (nobody asked for permission until 2965)
+political_decisions = {
+	harondor_question_MOR_no_request = {
+		picture = "south_gondor_map"
+		potential = {
+			tag = MOR
+			year = 2965
+			NOT = {
+				OR = {
+					has_global_flag = harondor_permission_granted_UMB
+					has_global_flag = harondor_permission_granted_HRN
+					has_global_flag = harondor_permission_granted_HRU
+					has_global_flag = harondor_permission_granted_CHE
+					has_global_flag = harondor_permission_rejected_UMB
+					has_global_flag = harondor_permission_rejected_HRN
+					has_global_flag = harondor_permission_rejected_HRU
+					has_global_flag = harondor_permission_rejected_CHE
+					has_country_flag = nobody_asked_MOR_permitted
+					HRD = { vassal_of = GON }
+					UMB = { has_country_flag = colonizing_harondor }
+					HRN = { has_country_flag = colonizing_harondor }
+					HRU = { has_country_flag = colonizing_harondor }
+					CHE = { has_country_flag = colonizing_harondor }
+					UMB = { has_country_flag = colonized_harondor }
+					HRN = { has_country_flag = colonized_harondor }
+					HRU = { has_country_flag = colonized_harondor }
+					CHE = { has_country_flag = colonized_harondor }
+				}
+			}
+		}
+		
+		allow = {
+			wilderness_1 = 1
+			OR = {
+				UMB = { in_sphere = THIS }
+				HRN = { in_sphere = THIS }
+				HRU = { in_sphere = THIS }
+				CHE = { in_sphere = THIS }
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			badboy = 1
+			country_event = 50504
+			set_country_flag = nobody_asked_MOR_permitted
+		}
+	}
+}

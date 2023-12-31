@@ -1,0 +1,540 @@
+# Harad Events: {
+# 60200 - 60299 }
+
+# Harondor colonisation by the Haradrim/Corsairs
+country_event = {
+	id = 60200
+	title = "The colonisation of Harondor"
+	desc = "EVTDESC60200"
+	picture = "harad/map"
+	
+	trigger = {
+		has_country_flag = colonizing_harondor
+		NOT = { has_country_flag = colonized_harondor }
+		any_owned_province = {
+			has_empty_adjacent_province = yes
+			is_core = HRD
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "We are expanding"
+		random_owned = {
+			limit = {
+				has_empty_adjacent_province = yes
+				is_core = HRD
+				owned_by = THIS
+			}
+			random_empty_neighbor_province = {
+				limit = { is_core = HRD }
+				secede_province = THIS
+			}
+		}
+	}
+}
+
+# Harnendan Ultimatum
+country_event = {
+	id = 60201
+	title = "EVTNAME60201"
+	desc = "EVTDESC60201"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Our position is hopeless"
+		FROM = {
+			country_event = 60202
+		}
+		ai_chance = {
+			factor = 65
+		}
+	}
+	option = {
+		name = "We must fight back"
+		FROM = {
+			country_event = 60203
+		}
+		ai_chance = {
+			factor = 35
+		}
+	}
+}
+
+# Harnendor accepts
+country_event = {
+	id = 60202
+	title = "Harnendor accepts our ultimatum"
+	desc = "EVTDESC60202"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "This was to be expected"
+		prestige = 5
+		badboy = 0.5
+		inherit = HRN
+	}
+}
+
+# Harnendor refuses
+country_event = {
+	id = 60203
+	title = "Harnendor refuses"
+	desc = "EVTDESC60203"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Make them submit"
+		prestige = 5
+		badboy = 2
+		diplomatic_influence = {
+			who = HRN
+			value = -400
+		}
+		relation = {
+			who = HRN
+			value = -200
+		}
+		war = {
+			target = HRN
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+	option = {
+		name = "We should back down"
+		prestige = -20
+		badboy = -2
+		diplomatic_influence = {
+			who = HRN
+			value = -50
+		}
+		relation = {
+			who = HRN
+			value = -100
+		}
+		ai_chance = {
+			factor = 25
+		}
+		HRN = {
+			all_core = {
+				remove_core = THIS
+			}
+		}
+	}
+}
+
+# Harondor core ultimatum
+country_event = {
+	id = 60204
+	title = "EVTNAME60201"
+	desc = "EVTDESC60204"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Our position is hopeless"
+		prestige = -5
+		badboy = -2
+		any_owned = {
+			limit = {
+				is_core = HRD
+			}
+			remove_core = THIS
+		}
+		FROM = {
+			country_event = 60205
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+	option = {
+		name = "We must fight back"
+		prestige = 5
+		badboy = 1
+		FROM = {
+			country_event = 60206
+		}
+		set_country_flag = harondor_core_owner
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Harondor core owner accepts
+country_event = {
+	id = 60205
+	title = "EVTNAME60205"
+	desc = "EVTDESC60205"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "This was to be expected"
+		badboy = 0.5
+		FROM = {
+			any_owned = {
+				limit = {
+					is_core = HRD
+				}
+				secede_province = THIS
+			}
+		}
+	}
+}
+
+# Harondor core owner refuses
+country_event = {
+	id = 60206
+	title = "EVTNAME60206"
+	desc = "EVTDESC60206"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "All of Harondor is rightfully ours"
+		prestige = 3
+		badboy = 0.75
+		diplomatic_influence = {
+			who = FROM
+			value = -400
+		}
+		relation = {
+			who = FROM
+			value = -200
+		}
+		war = {
+			target = FROM
+			attacker_goal = {
+				casus_belli = liberate_and_puppet_country
+				country = HRD
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+		set_country_flag = harondor_conquest
+		
+		ai_chance = {
+			factor = 75
+		}
+	}
+	option = {
+		name = "We should back down"
+		prestige = -15
+		badboy = -1
+		FROM = {
+			any_owned = {
+				limit = {
+					is_core = HRD
+				}
+				remove_core = THIS
+			}
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Harondor war won (attacker)
+country_event = {
+	id = 60207
+	title = "We won!"
+	desc = "EVTDESC60207"
+	picture = "harad/map"
+	is_triggered_only = no
+	fire_only_once = no
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = UMB
+			tag = HRU
+			tag = HRN
+		}
+		has_country_flag = harondor_conquest
+		HRD = { vassal_of = THIS }
+		war = no
+	}
+	
+	option = {
+		name = "They never stood a chance"
+		prestige = 3
+		badboy = 0.75
+		inherit = HRD
+		any_country = {
+			limit = {
+				has_recently_lost_war = yes
+				has_country_flag = harondor_core_owner
+				truce_with = THIS
+			}
+			country_event = 60210
+		}
+	}
+}
+
+# Harondor war lost (attacker)
+country_event = {
+	id = 60208
+	title = "EVTNAME60208"
+	desc = "EVTDESC60208"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "We'll try another day..."
+		prestige = -26
+		badboy = 0.25
+		clr_country_flag = harondor_conquest
+	}
+}
+
+# Harondor war won (defender)
+country_event = {
+	id = 60209
+	title = "We won!"
+	desc = "EVTDESC60209"
+	picture = "harad/map"
+	is_triggered_only = no
+	fire_only_once = no
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		has_country_flag = harondor_core_owner
+		OR = {
+			AND = {
+				UMB = {
+					has_recently_lost_war = yes
+					has_country_flag = harondor_conquest
+					truce_with = THIS
+					war = no
+				}
+				NOT = { HRD = { vassal_of = UMB } }
+			}
+			AND = {
+				HRN = {
+					has_recently_lost_war = yes
+					has_country_flag = harondor_conquest
+					truce_with = THIS
+					war = no
+				}
+				NOT = { HRD = { vassal_of = HRN } }
+			}
+			AND = {
+				HRU = {
+					has_recently_lost_war = yes
+					has_country_flag = harondor_conquest
+					truce_with = THIS
+					war = no
+				}
+				NOT = { HRD = { vassal_of = HRU } }
+			}
+		}
+		war = no
+	}
+	
+	option = {
+		name = "And they thought it was theirs!"
+		prestige = 10
+		badboy = 0.5
+		any_country = {
+			limit = {
+				has_country_flag = harondor_conquest
+				has_recently_lost_war = yes
+				truce_with = THIS
+			}
+			country_event = 60208
+		}
+		clr_country_flag = harondor_core_owner
+	}
+}
+
+# Harondor war lost (defender)
+country_event = {
+	id = 60210
+	title = "EVTNAME60210"
+	desc = "EVTDESC60210"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Are we going to survive?"
+		prestige = -10
+		badboy = -1
+		FROM = { clr_country_flag = harondor_conquest }
+		clr_country_flag = harondor_core_owner
+	}
+}
+
+# Harnendor war won (attacker)
+country_event = {
+	id = 60211
+	title = "We won!"
+	desc = "EVTDESC60211"
+	picture = "harad/map"
+	is_triggered_only = no
+	fire_only_once = no
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = UMB
+			tag = HRU
+		}
+		has_country_flag = HRN_ultimatum_sent
+		HRN = { exists = no }
+		NOT = { has_country_flag = HRN_destroyed }
+		war = no
+	}
+	
+	option = {
+		name = "They never stood a chance"
+		prestige = 3
+		badboy = 0.75
+		set_country_flag = HRN_destroyed
+	}
+}
+
+# Harnendor war lost (attacker)
+country_event = {
+	id = 60212
+	title = "EVTNAME60208"
+	desc = "EVTDESC60208"
+	picture = "harad/map"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We'll try another day..."
+		prestige = -25
+		badboy = 0.25
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 234
+					province_id = 236
+					province_id = 238
+					province_id = 239
+					province_id = 284
+					province_id = 285
+					province_id = 286
+					province_id = 287
+					is_core	= HRN
+				}
+			}
+			remove_core = THIS
+			add_core = HRN
+			secede_province = HRN
+		}
+		random_owned = {
+			limit = {
+				THIS = {
+					tag = UMB
+					owns = 232
+				}
+			}
+			232 = {
+				remove_core = THIS
+				add_core = HRN
+				secede_province = HRN
+			}
+		}
+		random_owned = {
+			limit = {
+				THIS = {
+					OR = {
+						tag = HRU
+						tag = CHE
+					}
+					owns = 235
+				}
+			}
+			235 = {
+				remove_core = THIS
+				add_core = HRN
+				secede_province = HRN
+			}
+		}
+		clr_country_flag = HRN_ultimatum_sent
+	}
+}
+
+# Harnendor war won (defender)
+country_event = {
+	id = 60213
+	title = "We won!"
+	desc = "EVTDESC60209"
+	picture = "harad/map"
+	is_triggered_only = no
+	fire_only_once = no
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		tag = HRN
+		war = no
+		OR = {
+			UMB = {
+				has_recently_lost_war = yes
+				has_country_flag = HRN_ultimatum_sent
+				truce_with = THIS
+				war = no
+			}
+			HRU = {
+				has_recently_lost_war = yes
+				has_country_flag = HRN_ultimatum_sent
+				truce_with = THIS
+				war = no
+			}
+			CHE = {
+				has_recently_lost_war = yes
+				has_country_flag = HRN_ultimatum_sent
+				truce_with = THIS
+				war = no
+			}
+		}
+	}
+	
+	option = {
+		name = "And they thought Harnendor was theirs!"
+		prestige = 10
+		badboy = 0.5
+		any_country = {
+			limit = {
+				has_country_flag = HRN_ultimatum_sent
+				has_recently_lost_war = yes
+				truce_with = THIS
+			}
+			country_event = 60212
+		}
+	}
+}

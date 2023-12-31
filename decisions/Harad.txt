@@ -3,9 +3,11 @@
 
 # Harad Decisions: {
 #	Forming Harad 
+#	Harondor colonization by Harnendor, Haruzan, Umbar and Chelkar
 #	Tribal Incorporation
 #	Core Adding/Removal
 #	Province Flavor }
+
 
 # Forming Harad
 political_decisions = {
@@ -670,6 +672,343 @@ political_decisions = {
 					clr_country_flag = attempting_to_evil
 				}
 			}
+		}
+	}
+}
+
+# Harondor colonization by Harnendor, Haruzan and Umbar
+political_decisions = {
+	ask_for_permission_from_sauron = {
+		picture = "south_gondor_map"
+		potential = {
+			THIS = { in_sphere = MOR }
+			OR = {
+				AND = {
+					tag = HRN
+					232 = { empty = yes	}
+					233 = {	empty = yes	}
+					235 = {	empty = yes	}
+				}
+				AND = {
+					tag = HRU
+					241 = { empty = yes	}
+				}
+				AND = {
+					tag = CHE
+					255 = { empty = yes	}
+				}
+				AND = {
+					tag = UMB
+					232 = { empty = yes	}
+					233 = {	empty = yes	}
+				}
+			}
+			NOT = {
+				OR = {
+					year = 2965
+					has_country_flag = harondor_permission_requested
+					has_global_flag = harondor_permission_granted_UMB
+					has_global_flag = harondor_permission_granted_HRN
+					has_global_flag = harondor_permission_granted_HRU
+					has_global_flag = harondor_permission_granted_CHE
+					has_global_flag = harondor_permission_rejected_UMB
+					has_global_flag = harondor_permission_rejected_HRN
+					has_global_flag = harondor_permission_rejected_HRU
+					has_global_flag = harondor_permission_rejected_CHE
+					UMB = { has_country_flag = colonizing_harondor }
+					HRN = { has_country_flag = colonizing_harondor }
+					HRU = { has_country_flag = colonizing_harondor }
+					CHE = { has_country_flag = colonizing_harondor }
+					UMB = { has_country_flag = colonized_harondor }
+					HRN = { has_country_flag = colonized_harondor }
+					HRU = { has_country_flag = colonized_harondor }
+					CHE = { has_country_flag = colonized_harondor }
+					HRD = { vassal_of = MOR }
+					HRD = { vassal_of = GON }
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					civilized = yes
+					wilderness_1 = 1
+				}
+				AND = {
+					civilized = no
+					expansion_1 = 1
+				}
+			}
+			money = 50000
+			relation = {
+				who = MOR
+				value = 150
+			}
+		}
+		
+		effect = {
+			money = -50000
+			prestige = 10
+			badboy = 1
+			MOR = { country_event = 50505 }
+			set_country_flag = harondor_permission_requested
+		}
+	}
+	
+	colonize_harondor = {
+		picture = "south_gondor_map"
+		potential = {
+			OR = {
+				AND = {
+					tag = HRN
+					OR = {
+						NOT = { in_sphere = MOR }
+						has_global_flag = harondor_permission_granted_HRN
+					}
+					232 = {	empty = yes	}
+					233 = {	empty = yes }
+					235 = {	empty = yes	}
+				}
+				AND = {
+					tag = UMB
+					OR = {
+						NOT = { in_sphere = MOR }
+						has_global_flag = harondor_permission_granted_UMB
+					}
+					232 = {	empty = yes	}
+					233 = {	empty = yes	}
+				}
+				AND = {
+					tag = HRU
+					OR = {
+						NOT = { in_sphere = MOR }
+						has_global_flag = harondor_permission_granted_HRU
+					}
+					241 = {	empty = yes	}
+				}
+				AND = {
+					tag = CHE
+					OR = {
+						NOT = { in_sphere = MOR }
+						has_global_flag = harondor_permission_granted_CHE
+					}
+					255 = {	empty = yes	}
+				}
+			}
+			NOT = {
+				OR = {
+					UMB = { has_country_flag = colonizing_harondor }
+					HRN = { has_country_flag = colonizing_harondor }
+					HRU = { has_country_flag = colonizing_harondor }
+					CHE = { has_country_flag = colonizing_harondor }
+					UMB = { has_country_flag = colonized_harondor }
+					HRN = { has_country_flag = colonized_harondor }
+					HRU = { has_country_flag = colonized_harondor }
+					CHE = { has_country_flag = colonized_harondor }
+					HRD = { vassal_of = MOR }
+					HRD = { vassal_of = GON }
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					civilized = yes
+					wilderness_1 = 1
+				}
+				AND = {
+					civilized = no
+					expansion_1 = 1
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 10
+			badboy = 5
+			random_owned = {
+				limit = { NOT = { has_country_flag = proposal_asked_and_accepted } }
+				THIS = { badboy = 2 }
+			}
+			random_owned = {
+				limit = { owner = { tag = UMB }	}
+				232 = { secede_province = THIS }
+				233 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = { owner = { tag = HRN }	}
+				232 = { secede_province = THIS }
+				233 = { secede_province = THIS }
+				235 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = { owner = { tag = HRU }	}
+				241 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = { owner = { tag = CHE }	}
+				255 = { secede_province = THIS }
+			}
+			set_country_flag = colonizing_harondor
+		}
+	}
+	
+	harnendor_question = {
+		picture = "harnendor_map"
+		potential = {
+			has_recently_lost_war = no
+			OR = {
+				AND = {
+					OR = {
+						tag = HRU
+						tag = CHE
+					}
+					OR = {
+						owns = 241
+						owns = 235
+						owns = 238
+						owns = 239
+					}
+					
+				}
+				AND = {
+					tag = UMB
+					OR = {
+						owns = 235
+						owns = 233
+						owns = 232
+						owns = 234
+						owns = 236
+					}
+					
+				}
+			}
+			NOT = {
+				has_country_flag = HRN_ultimatum_sent
+			}
+		}
+		
+		allow = {
+			war = no
+			expansion_1 = 1
+			diplomacy_1 = 1
+			OR = {
+				AND = {
+					owns = 241
+					owns = 235
+					owns = 233
+					owns = 232
+				}
+				AND = {
+					owns = 234
+					owns = 236
+					owns = 238
+					owns = 239
+				}
+			}
+			NOT = { truce_with = HRN }
+		}
+		
+		effect = {
+			prestige = 15
+			badboy = 5
+			HRN = {	all_core = { add_core = THIS } }
+			HAR_286 = {	add_core = THIS	}
+			234 = { add_core = THIS }
+			236 = { add_core = THIS }
+			238 = { add_core = THIS }
+			239 = { add_core = THIS }
+			random_owned = {
+				limit = {
+					HRN = {
+						any_owned_province = {
+							OR = {
+								is_core = HRD
+								is_core = HRN
+							}
+						}
+					}
+				}
+				HRN = {	country_event = 60201 }
+			}
+			set_country_flag = HRN_ultimatum_sent
+		}
+	}
+	
+	conquer_harondor = {
+		picture = "harnendor_map"
+		potential = {
+			has_country_flag = colonizing_harondor
+			has_recently_lost_war = no
+			NOT = {	has_country_flag = harondor_core_owner }
+			HRD = {
+				any_core = {
+					NOT = { owned_by = THIS	}
+					owner = {
+						neighbour = THIS
+						NOT = {	truce_with = THIS }
+					}
+				}
+			}
+		}
+		
+		allow = {
+			war = no
+			expansion_1 = 1
+			diplomacy_2 = 1
+			HRD = {	any_core = { owner = { NOT = { truce_with = THIS } } } }
+			NOT = { has_country_flag = harondor_conquest }
+		}
+		
+		effect = {
+			prestige = 10
+			badboy = 3
+			any_country = {
+				limit = {
+					NOT = {
+						OR = {
+							tag = THIS
+							tag = HRD
+						}
+						truce_with = THIS
+					}
+					any_owned_province = {
+						is_core = HRD
+					}
+					neighbour = THIS
+				}
+				country_event = 60204
+			}
+		}
+	}
+	
+	claim_harondor = {
+		picture = "south_gondor_map"
+		potential = {
+			has_country_flag = colonizing_harondor
+			HRD = {	any_core = { NOT = { is_core = THIS	} }	}
+		}
+		allow = {
+			war = no
+			expansion_2 = 1
+			population_1 = 1
+			diplomacy_2 = 1
+			HRD = {	all_core = { owned_by = THIS } }
+		}
+		effect = {
+			prestige = 10
+			badboy = 1
+			HRD = {
+				all_core = {
+					add_core = THIS
+					remove_province_modifier = core_integration
+					remove_province_modifier = cultural_core_integration
+				}
+			}
+			set_country_flag = colonized_harondor
+			clr_country_flag = colonizing_harondor
 		}
 	}
 }
