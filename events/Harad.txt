@@ -51,20 +51,30 @@ country_event = {
 	
 	option = {
 		name = "Our position is hopeless"
-		FROM = {
-			country_event = 60202
-		}
+		FROM = { country_event = 60202 }
 		ai_chance = {
 			factor = 65
+			modifier = {
+				factor = 100
+				OR = {
+					THIS = { is_our_vassal = FROM }
+					THIS = { in_sphere = FROM }
+				}
+			}
 		}
 	}
 	option = {
 		name = "We must fight back"
-		FROM = {
-			country_event = 60203
-		}
+		FROM = { country_event = 60203 }
 		ai_chance = {
 			factor = 35
+			modifier = {
+				factor = 0
+				OR = {
+					THIS = { is_our_vassal = FROM }
+					THIS = { in_sphere = FROM }
+				}
+			}
 		}
 	}
 }
@@ -109,12 +119,8 @@ country_event = {
 		}
 		war = {
 			target = HRN
-			attacker_goal = {
-				casus_belli = annex_core_country
-			}
-			defender_goal = {
-				casus_belli = status_quo
-			}
+			attacker_goal = { casus_belli = annex_core_country }
+			defender_goal = { casus_belli = status_quo }
 		}
 		ai_chance = {
 			factor = 75
@@ -132,13 +138,9 @@ country_event = {
 			who = HRN
 			value = -100
 		}
+		HRN = {	all_core = { remove_core = THIS	} }
 		ai_chance = {
 			factor = 25
-		}
-		HRN = {
-			all_core = {
-				remove_core = THIS
-			}
 		}
 	}
 }
@@ -166,6 +168,13 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 75
+			modifier = {
+				factor = 100
+				OR = {
+					THIS = { is_our_vassal = FROM }
+					THIS = { in_sphere = FROM }
+				}
+			}
 		}
 	}
 	option = {
@@ -179,6 +188,13 @@ country_event = {
 		
 		ai_chance = {
 			factor = 25
+			modifier = {
+				factor = 0
+				OR = {
+					THIS = { is_our_vassal = FROM }
+					THIS = { in_sphere = FROM }
+				}
+			}
 		}
 	}
 }
@@ -197,9 +213,7 @@ country_event = {
 		badboy = 0.5
 		FROM = {
 			any_owned = {
-				limit = {
-					is_core = HRD
-				}
+				limit = { is_core = HRD }
 				secede_province = THIS
 			}
 		}
@@ -233,9 +247,7 @@ country_event = {
 				casus_belli = liberate_and_puppet_country
 				country = HRD
 			}
-			defender_goal = {
-				casus_belli = status_quo
-			}
+			defender_goal = { casus_belli = status_quo }
 		}
 		set_country_flag = harondor_conquest
 		
