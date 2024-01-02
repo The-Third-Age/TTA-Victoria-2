@@ -1787,7 +1787,7 @@ country_event = {
 			country_event = 50327
 		}
 
-		prestige = -25
+		prestige = -100
 		
 		random_owned = {
 			limit = {
@@ -1807,6 +1807,11 @@ country_event = {
 		any_pop = {
 			militancy = 4
 			consciousness = 4
+		}
+		war_exhaustion = 100
+		add_country_modifier = {
+			name = no_more_war
+			duration = 3650
 		}
 	}
 }

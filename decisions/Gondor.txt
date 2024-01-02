@@ -1827,6 +1827,7 @@ political_decisions = {
 		allow = {
 			war = no
 			expansion_3 = 1
+			NOT = { truce_with = UMB }
 		}
 		
 		effect = {
@@ -1911,7 +1912,7 @@ political_decisions = {
 					UMB = { exists = no }
 				}
 			}
-			NOT = {
+			OR = {
 				UMB_256 = { NOT = { is_core = GON } }
 				UMB_260 = { NOT = { is_core = GON } }
 				UMB_263 = { NOT = { is_core = GON } }
