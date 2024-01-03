@@ -826,6 +826,7 @@ country_event = {
 	
 	option = {
 		name = "Can't the boats just go around this beast?"
+		plurality = 1
 		middle_strata = { militancy = 1 }
 		add_country_modifier = {
 			name = national_economic_downturn
@@ -862,6 +863,7 @@ country_event = {
 	
 	option = {
 		name = "Let someone else deal with it"
+		plurality = 1
 		poor_strata = { militancy = 1 }
 		add_country_modifier = {
 			name = national_economic_downturn
@@ -967,5 +969,99 @@ country_event = {
 			value = -5
 		}
 		ai_chance = { factor = 0 }
+	}
+}
+
+# Mobs
+country_event = {
+	id = 3622
+	picture = "peasant_mob_in_arms"
+	title = "Mobs"
+	desc = "EVTDESC3622"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
+		average_militancy = 3
+		NOT = { poor_strata_life_needs = 0.8 }
+		plurality = 30
+	}
+	
+	option = {
+		name = "Ignore them"
+		prestige = 5
+		plurality = 2
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = 1
+		}
+	}
+	
+	option = {
+		name = "Make a speech to keep the peace"
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = -1
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = 1
+		}
+	}
+
+	option = {
+		name = "Commit to resolving the deeper issues"
+		prestige = -15
+		plurality = -5
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			militancy = -2
+		}
+		any_pop = {
+			limit = {
+				strata = poor
+			}
+			consciousness = 2
+		}
+	}
+}
+
+# Popular anxiety - personal anxiety
+country_event = {
+	id = 3623
+	picture = "bad_news"
+	title = "Personal anxiety"
+	desc = "EVTDESC3623"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+		}
+		plurality = 50
+		war = no
+	}
+	
+	option = {
+		name = "Ignore the growing issue"
+		prestige = 3
+	}
+	
+	option = {
+		name = "Admit the problem and attempt to remedy"
+		prestige = -5
+		plurality = -2
 	}
 }
