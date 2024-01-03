@@ -152,24 +152,12 @@ undead_culture_nation = {
 small_but_efficient = {
     trigger = {
         exists = yes
-        capital_scope = { continent = europe }
         civilized = yes
         NOT = { number_of_states = 4 }
         NOT = { num_of_cities = 8 }
         NOT = { total_pops = 500000 }
         NOT = { money = 1000000 }
-        NOT = { year = 1886 }
-        OR = {
-            NOT = {
-                is_culture_group = south_slavic
-                is_culture_group = pan_romanian
-                is_culture_group = levantine
-            }
-            NOT = { num_of_cities = 4 }
-        }
     }
-
-
     icon = 9
     tax_efficiency = 0.4
     administrative_efficiency_modifier = 0.3

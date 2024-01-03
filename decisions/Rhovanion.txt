@@ -612,8 +612,36 @@ political_decisions = {
 					has_pop_religion = men
 					NOT = { has_pop_culture = dorwinrim }
 				}
-				militancy = 1
-				consciousness = 2
+				scaled_consciousness = {
+					factor = 6
+					OR = {
+						ideology = high_nobility
+						ideology = low_nobility
+					}
+				}
+				scaled_militancy = {
+					factor = 4
+					OR = {
+						ideology = high_nobility
+						ideology = low_nobility
+					}
+				}
+				scaled_consciousness = {
+					factor = 2
+					ideology = burgher
+				}
+				scaled_militancy = {
+					factor = 1.5
+					ideology = burgher
+				}
+				scaled_consciousness = {
+					factor = -2
+					ideology = loremaster
+				}
+				scaled_militancy = {
+					factor = -1
+					ideology = loremaster
+				}
 			}
 			any_pop = {
 				limit = {
@@ -623,8 +651,36 @@ political_decisions = {
 					}
 					has_pop_religion = men
 				}
-				militancy = 0.5
-				consciousness = 1
+				scaled_consciousness = {
+					factor = 3
+					OR = {
+						ideology = high_nobility
+						ideology = low_nobility
+					}
+				}
+				scaled_militancy = {
+					factor = 2
+					OR = {
+						ideology = high_nobility
+						ideology = low_nobility
+					}
+				}
+				scaled_consciousness = {
+					factor = 1
+					ideology = burgher
+				}
+				scaled_militancy = {
+					factor = -0.75
+					ideology = burgher
+				}
+				scaled_consciousness = {
+					factor = -1
+					ideology = loremaster
+				}
+				scaled_militancy = {
+					factor = -0.5
+					ideology = loremaster
+				}
 			}
 			any_pop = {
 				limit = {
@@ -634,18 +690,46 @@ political_decisions = {
 					}
 					has_pop_religion = elven
 				}
-				militancy = 0.25
-				consciousness = 0.5
+				militancy = 1
+				consciousness = 1.5
 			}
 			any_pop = {
 				limit = { has_pop_culture = dorwinrim }
-				militancy = -0.5
-				consciousness = -1
+				scaled_consciousness = {
+					factor = -1.5
+					OR = {
+						ideology = high_nobility
+						ideology = low_nobility
+					}
+				}
+				scaled_militancy = {
+					factor = -1
+					OR = {
+						ideology = high_nobility
+						ideology = low_nobility
+					}
+				}
+				scaled_consciousness = {
+					factor = -2
+					ideology = burgher
+				}
+				scaled_militancy = {
+					factor = -1.3
+					ideology = burgher
+				}
+				scaled_consciousness = {
+					factor = -3
+					ideology = loremaster
+				}
+				scaled_militancy = {
+					factor = -2
+					ideology = loremaster
+				}
 			}
 			any_pop = {
 				limit = { has_pop_culture = avari }
-				militancy = -1
-				consciousness = -2
+				militancy = -4
+				consciousness = -6
 			}
 		}
 	}
