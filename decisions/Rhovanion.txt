@@ -614,17 +614,19 @@ political_decisions = {
 				}
 				scaled_consciousness = {
 					factor = 6
-					OR = {
-						ideology = high_nobility
-						ideology = low_nobility
-					}
+					ideology = high_nobility
 				}
 				scaled_militancy = {
 					factor = 4
-					OR = {
-						ideology = high_nobility
-						ideology = low_nobility
-					}
+					ideology = high_nobility
+				}
+				scaled_consciousness = {
+					factor = 6
+					ideology = low_nobility
+				}
+				scaled_militancy = {
+					factor = 4
+					ideology = low_nobility
 				}
 				scaled_consciousness = {
 					factor = 2
@@ -645,25 +647,25 @@ political_decisions = {
 			}
 			any_pop = {
 				limit = {
-					OR = {
-						is_accepted_culture = no
-						is_primary_culture = no
-					}
+					is_accepted_culture = no
+					is_primary_culture = no
 					has_pop_religion = men
 				}
 				scaled_consciousness = {
 					factor = 3
-					OR = {
-						ideology = high_nobility
-						ideology = low_nobility
-					}
+					ideology = high_nobility
 				}
 				scaled_militancy = {
 					factor = 2
-					OR = {
-						ideology = high_nobility
-						ideology = low_nobility
-					}
+					ideology = high_nobility
+				}
+				scaled_consciousness = {
+					factor = 3
+					ideology = low_nobility
+				}
+				scaled_militancy = {
+					factor = 2
+					ideology = low_nobility
 				}
 				scaled_consciousness = {
 					factor = 1
@@ -697,17 +699,19 @@ political_decisions = {
 				limit = { has_pop_culture = dorwinrim }
 				scaled_consciousness = {
 					factor = -1.5
-					OR = {
-						ideology = high_nobility
-						ideology = low_nobility
-					}
+					ideology = high_nobility
 				}
 				scaled_militancy = {
 					factor = -1
-					OR = {
-						ideology = high_nobility
-						ideology = low_nobility
-					}
+					ideology = high_nobility
+				}
+				scaled_consciousness = {
+					factor = -1.5
+					ideology = low_nobility
+				}
+				scaled_militancy = {
+					factor = -1
+					ideology = low_nobility
 				}
 				scaled_consciousness = {
 					factor = -2
