@@ -184,8 +184,10 @@ average_literacy = {
 	self_unciv_military_modifier = -0.5
 }
 
-plurality = { 
-	research_points_modifier = 0.02
+# NOTE: The bonuses within plurality are on a per % increase -- when plurality = 100 and global_pop_militancy_modifier = 1, it'll increase militancy by 100 every month
+plurality = { # Legitimacy -- Weddings increase by 1, royal births by 2, coronations of the royal line by 5, acceptable expansion (within the culture group) by 5-10, unacceptable expansion by -15 - -10
+	# Due to how the modifiers are calculated, the militancy decrease will be handled via triggered modifiers
+	prestige = 0.001
 }
 
 generalised_debt_default = {
