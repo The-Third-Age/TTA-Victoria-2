@@ -8,7 +8,8 @@
 #	Government Flags Clean Up 
 #	Realm Leaders 
 #	Wild Goblins 
-#	Debug }
+#	Debug 
+#	Tech Clean Up }
 
 # Starting Decision
 political_decisions = {
@@ -1049,5 +1050,19 @@ political_decisions = {
 				treasury = 1
 			}
 		}
+	}
+}
+
+# Tech Clean Up
+political_decisions = {
+	MOR_expansion_5_if_ring = {
+		potential = {
+			tag = FOR
+			MOR = { NOT = { expansion_5 = 1 } }
+		}
+		
+		allow = { MOR = { has_country_flag = has_one_ring } }
+		
+		effect = { MOR = { activate_technology = expansion_5 } }
 	}
 }
