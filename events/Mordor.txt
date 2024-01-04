@@ -779,3 +779,44 @@ country_event = {
 		}
 	}
 }
+
+# Get World Conquest (and the whole chain of techs before it) if don't have it already and have the ring
+country_event = {
+	id = 50508
+	title = "The War of the Ring"
+	desc = "EVTDESC50508"
+	picture = "acquire_ring"
+	is_triggered_only = no
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MOR
+		NOT = { expansion_5 = 1 }
+		has_country_flag = has_one_ring
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "Forward! To victory!"
+		activate_technology = expansion_5
+		random_owned = {
+			limit = { THIS = { NOT = { expansion_4 = 1 } } }
+			activate_technology = expansion_4
+		}
+		random_owned = {
+			limit = { THIS = { NOT = { expansion_3 = 1 } } }
+			activate_technology = expansion_3
+		}
+		random_owned = {
+			limit = { THIS = { NOT = { expansion_2 = 1 } } }
+			activate_technology = expansion_2
+		}
+		random_owned = {
+			limit = { THIS = { NOT = { expansion_1 = 1 } } }
+			activate_technology = expansion_1
+		}
+	}
+}
