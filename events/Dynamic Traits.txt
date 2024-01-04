@@ -57,6 +57,8 @@ country_event = {
 		set_variable = { which = work_ethic value = 0 }
 		set_variable = { which = generosity value = 0 }
 		set_variable = { which = corruption value = 0 }
+		
+		plurality = -2
 	}
 }
 
@@ -125,6 +127,8 @@ country_event = {
 			}
 			owner = { country_event = 3500 }
 		}
+		
+		plurality = 2
 		
 		# Make sure that we do the right thing with the leader the next time a leader dies for this realm
 		clr_country_flag = knows_next_leader

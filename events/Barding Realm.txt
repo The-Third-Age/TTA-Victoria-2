@@ -651,6 +651,8 @@ country_event = {
 			}
 			owner = { add_accepted_culture = rivermen }
 		}
+		
+		plurality = -1
 	}
 }
 
@@ -1309,6 +1311,8 @@ country_event = {
 			owner = { country_event = 50945 }
 		}
 		
+		plurality = 3
+		
 		# Clean up to make sure we don't break something with a flag being left around
 		clr_country_flag = bain_i_next_leader
 		clr_country_flag = brand_i_next_leader
@@ -1339,6 +1343,8 @@ country_event = {
 		
 		prestige = 5
 		nationalvalue = bain_i
+		
+		plurality = -5
 	}
 }
 
@@ -1454,6 +1460,8 @@ country_event = {
 			owner = { country_event = 50945 }
 		}
 		
+		plurality = 3
+		
 		# Clean up to make sure we don't break something with a flag being left around
 		clr_country_flag = brand_i_next_leader
 		clr_country_flag = bard_ii_next_leader
@@ -1483,6 +1491,8 @@ country_event = {
 		
 		prestige = 5
 		nationalvalue = brand_i
+		
+		plurality = -5
 	}
 }
 
@@ -1586,6 +1596,8 @@ country_event = {
 			owner = { country_event = 50945 }
 		}
 		
+		plurality = 3
+		
 		# Clean up to make sure we don't break something with a flag being left around
 		clr_country_flag = bard_ii_next_leader
 		clr_country_flag = regency_next_leader
@@ -1614,6 +1626,8 @@ country_event = {
 		
 		prestige = 5
 		nationalvalue = bard_ii
+		
+		plurality = -5
 	}
 }
 
@@ -1661,6 +1675,8 @@ country_event = {
 		# Clears leader-specific modifiers (generic and specific) and sets Generic Leader as leader
 		country_event = 3501
 		
+		plurality = 3
+		
 		FOR = { country_event = 33009 }
 	}
 }
@@ -1698,6 +1714,8 @@ country_event = {
 		prestige = 3
 		
 		set_global_flag = DAL_bain_i_married
+		
+		plurality = -1
 	}
 }
 
@@ -1746,6 +1764,8 @@ country_event = {
 			country_event = 33002 # Age Calculation Loop
 			country_event = 33004 # Birth Calculation
 		}
+		
+		plurality = -2
 	}
 }
 
@@ -1811,6 +1831,8 @@ country_event = {
 		prestige = 3
 		
 		set_global_flag = DAL_brand_i_married
+		
+		plurality = -1
 	}
 }
 
@@ -1855,6 +1877,8 @@ country_event = {
 		}
 		
 		prestige = 1
+		
+		plurality = -2
 		
 		FOR = {
 			country_event = 33003 # Age Calculation Loop
@@ -1925,6 +1949,8 @@ country_event = {
 		prestige = 3
 		
 		set_global_flag = DAL_bard_ii_married
+		
+		plurality = -1
 	}
 }
 
@@ -1971,6 +1997,8 @@ country_event = {
 		
 		prestige = 1
 		set_global_flag = DAL_girion_ii_born
+		
+		plurality = -2
 	}
 }
 
@@ -2019,6 +2047,8 @@ country_event = {
 		
 		prestige = -5
 		nationalvalue = regency
+		
+		plurality = -2
 	}
 }
 
