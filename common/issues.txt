@@ -382,12 +382,14 @@ political_reforms = {
 		next_step_only = yes
 		
 		allowed_knighting_rights = {
+			prestige = -0.05
 			global_pop_consciousness_modifier = -0.03
 		}
 		restricted_knighting_rights = {
 			allow = { NOT = { nobility_autonomy = large_noble_autonomy } }
 		}
 		royal_knighting_rights = {
+			prestige = 0.05
 			global_pop_consciousness_modifier = 0.03
 			allow = { nobility_autonomy = small_noble_autonomy }
 		}
