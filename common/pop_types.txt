@@ -718,16 +718,318 @@ assimilation_chance = {
 		}
 	}
 	modifier = {
-		factor = -100
-		NOT = { religion = THIS }
-	}
-	modifier = {
 		factor = -20
 		country = { civilized = no }
 	}
 	modifier = {
 		factor = -100
-		is_culture_group = wild_goblins
+		OR = {
+			is_culture_group = wild_goblins
+			is_state_religion = no # Is true if the pop's race doesn't match the realm's race
+			NOT = { # Is true is there are no primary/accepted pops within the province that match the realm's race
+				location = {
+					any_pop = {
+						OR = {
+							is_primary_culture = yes
+							is_primary_culture = yes
+						}
+						is_state_religion = yes
+					}
+				}
+			}
+		}
+	}
+	# These last group modifiers handle both the massive debuff for pops that don't match the realm's race, and the removal of that debuff if there is an accepted culture of that race present in the province. Hopefully, since these are grouped together by race, it won't have too large of a performance impact.
+	# NOTE: This does not guarantee that assimilation will not happen between races. However, it severely decreases the chance of it happening.
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = men
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = men
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = dunedain
+					accepted_culture = gondorian
+					accepted_culture = amrothian
+					accepted_culture = arnorian
+					accepted_culture = umbarrim
+					accepted_culture = harnendan
+					accepted_culture = haruzani
+					accepted_culture = pezarsani
+					accepted_culture = lurmsakuni
+					accepted_culture = arysian
+					accepted_culture = kingsmen
+					accepted_culture = black_numenorean
+					accepted_culture = variag
+					accepted_culture = nurniag
+					accepted_culture = chelkiag
+					accepted_culture = sagath
+					accepted_culture = sekel
+					accepted_culture = urgath
+					accepted_culture = kuga
+					accepted_culture = logath
+					accepted_culture = dorwinrim
+					accepted_culture = ehwathrim
+					accepted_culture = barding
+					accepted_culture = grammas
+					accepted_culture = rivermen
+					accepted_culture = adhalling
+					accepted_culture = woodsmen
+					accepted_culture = beorning
+					accepted_culture = druedain
+					accepted_culture = wildmen
+					accepted_culture = dunnish
+					accepted_culture = enedwaithrim
+					accepted_culture = dunir
+					accepted_culture = rohirrim
+					accepted_culture = anduinmen
+					accepted_culture = angmarrim
+					accepted_culture = hillmen
+					accepted_culture = lossoth
+					accepted_culture = breelander
+					accepted_culture = siredain
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = men
+				}
+			}
+		}
+	}
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = elven
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = elven
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = noldor
+					accepted_culture = falathrim
+					accepted_culture = sindar
+					accepted_culture = silvan
+					accepted_culture = galadhrim
+					accepted_culture = avari
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = elven
+				}
+			}
+		}
+	}
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = dwarven
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = dwarven
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = longbeard
+					accepted_culture = firebeard
+					accepted_culture = broadbeam
+					accepted_culture = ironfist
+					accepted_culture = dourhand
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = dwarven
+				}
+			}
+		}
+	}
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = orc
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = orc
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = uruk_hai
+					accepted_culture = mordor_orc
+					accepted_culture = mordor_uruk
+					accepted_culture = guldurrim
+					accepted_culture = morian
+					accepted_culture = goblin_towner
+					accepted_culture = gundabad_orc
+					accepted_culture = snow_orc
+					accepted_culture = angmar_orc
+					# Purposefully commenting out the Wild Goblins
+					# accepted_culture = white_mountain_goblin
+					# accepted_culture = blue_mountain_goblin
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = orc
+				}
+			}
+		}
+	}
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = hobbit
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = hobbit
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = shire_hobbit
+					accepted_culture = buckland_hobbit
+					accepted_culture = breeland_hobbit
+					accepted_culture = stoor_hobbit
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = hobbit
+				}
+			}
+		}
+	}
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = ent
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = ent
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = ent
+					accepted_culture = huorn
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = ent
+				}
+			}
+		}
+	}
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = troll
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = troll
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = cave_trolls
+					accepted_culture = hill_trolls
+					accepted_culture = mountain_trolls
+					accepted_culture = snow_trolls
+					accepted_culture = stone_trolls
+					accepted_culture = olog_hai
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = troll
+				}
+			}
+		}
+	}
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = eagle
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = eagle
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = great_eagle
+					accepted_culture = raven
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = eagle
+				}
+			}
+		}
+	}
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = spider
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = spider
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = great_spider
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = spider
+				}
+			}
+		}
+	}
+	group = {
+		modifier = {
+			factor = 0
+			has_pop_religion = undead
+		}
+		modifier = {
+			factor = 100
+			has_pop_religion = undead
+			is_state_religion = no
+			country = {
+				OR = {
+					accepted_culture = wight
+					accepted_culture = oathbreaker
+				}
+			}
+			location = {
+				any_pop = {
+					is_accepted_culture = yes
+					has_pop_religion = undead
+				}
+			}
+		}
 	}
 }
 
