@@ -877,8 +877,10 @@ political_decisions = {
 			HRD = {
 				all_core = {
 					owner = {
-						tag = THIS
-						vassal_of = THIS
+						OR = {
+							tag = THIS
+							vassal_of = THIS
+						}
 					}
 				}
 			}
