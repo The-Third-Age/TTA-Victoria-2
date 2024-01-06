@@ -1287,37 +1287,33 @@ political_decisions = {
 		picture = "renaming"
 		potential = {
 			OR = {
+				# [teleri, dunedain, eldar] - Lossarnach
 				AND = {
 					OR = {
-						# [teleri, dunedain, eldar] - Lossarnach
-						AND = {
-							OR = {
-								is_culture_group = teleri
-								is_culture_group = dunedain
-								is_culture_group = eldar
-							}
-							OR = {
-								FOR = { NOT = { check_variable = { which = lossarnach_name value = -0.1 } } }
-								FOR = { check_variable = { which = lossarnach_name value = 0.1 } }
-							}
-						}
-						# [wildmen] - Lossarnach
-						AND = {
-							is_culture_group = wildmen
-							OR = {
-								FOR = { NOT = { check_variable = { which = lossarnach_name value = 0.9 } } }
-								FOR = { check_variable = { which = lossarnach_name value = 1.1 } }
-							}
-						}
+						is_culture_group = teleri
+						is_culture_group = dunedain
+						is_culture_group = eldar
 					}
-					owns = 22
-					owns = 26
-					owns = 27
-					owns = 28
-					owns = 29
-					owns = 30
+					OR = {
+						FOR = { NOT = { check_variable = { which = lossarnach_name value = -0.1 } } }
+						FOR = { check_variable = { which = lossarnach_name value = 0.1 } }
+					}
+				}
+						# [wildmen] - Lossarnach
+				AND = {
+					is_culture_group = wildmen
+					OR = {
+						FOR = { NOT = { check_variable = { which = lossarnach_name value = 0.9 } } }
+						FOR = { check_variable = { which = lossarnach_name value = 1.1 } }
+					}
 				}
 			}
+			owns = 22
+			owns = 26
+			owns = 27
+			owns = 28
+			owns = 29
+			owns = 30
 		}
 		allow = {
 			war = no
