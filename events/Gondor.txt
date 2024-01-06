@@ -2148,7 +2148,14 @@ country_event = {
 		# TODO: OR about Boromir being killed (don't want it to fire before he comes of age)
 		has_country_modifier = palantir_madness
 		NOT = { controls = 16 }
-		war = yes
+		OR = {
+			war = yes
+			NOT = { owns = 16 }
+		}
+		OR = {
+			tag = GON
+			tag = RUN
+		}
 		NOT = { is_substate = yes }
 	}
 	
@@ -2214,7 +2221,7 @@ country_event = {
 					}
 				}
 			}
-			owner = { 
+			owner = {
 				set_country_flag = knows_next_leader
 				
 				any_country = {
