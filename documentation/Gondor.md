@@ -6,12 +6,12 @@
 	Dúnedain represents the direct descendents of Númenor, those individuals with little-to-no blood of lesser men in their familial history
 	Gondorian/Amrothian represents those who identify as Gondorians but are mixed blood of the Daen and Númenoreans
 		Amrothian is it's own culture as Dol Amroth will have a path that allows them to secede from Gondor (and lose Gondorian as accepted)
-	Drúedain represents the Drúedain in Gondor - most are in Drúedan Forest or Drúwaith Iaur
+	Drúedain represents the Drúedain in Gondor - most are in Drúadan Forest or Drúwaith Iaur
 	Dunir represents the Wild Men of Andrast and Anfalas who have not assimilated into Gondorian society
 	Wildmen represents the other Wild Men in Gondor that have not assimilated into Gondorian society. They purposefully don't have a tag to promote assimilation
 		Those around Ethir Anduin are the remnants of the Ethir Folk
 		Those in the steppes of Harondor are the remnants of the Dônan
-	Harnendan represents those who of a mixed blood between Gondorian and Haradrim, but are not the descendents of the followers of Castamir
+	Harnendan represents those who of a mixed blood between Gondorian and Haradrim, but are not the descendants of the followers of Castamir
 
 
 ### Possible Leaders
