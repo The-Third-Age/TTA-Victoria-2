@@ -1069,3 +1069,39 @@ country_event = {
 		plurality = -2
 	}
 }
+
+# Gandalf in Eriador
+country_event = {
+	id = 3624
+	picture = "gandalf"
+	title = "The Grey Wanderer"
+	desc = "EVTDESC3624"
+	news = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_country_modifier = observer_mode
+			good_evil_alignment = evil_alignment
+			 # Rough start of War of the Ring where Gandalf would be elsewhere in Middle Earth
+			has_global_flag = findings_of_gandalf
+		}
+		OR = {
+			accepted_culture = men_culture
+			accepted_culture = elven_culture
+			accepted_culture = dwarven_culture
+			accepted_culture = hobbit_culture
+			accepted_culture = eagle_culture
+		}
+		capital_scope = {
+			continent = eriador
+		}
+	}
+	
+	option = {
+		name = "There is good in this world"
+		any_pop = { dominant_issue = { value = good_alignment_fake factor = 0.1 } }
+		any_pop = { militancy = -0.2 }
+	}
+}
