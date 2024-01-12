@@ -803,19 +803,19 @@ country_event = {
 		name = "Forward! To victory!"
 		random_owned = {
 			limit = { THIS = { NOT = { expansion_1 = 1 } } }
-			activate_technology = expansion_1
+			owner = { activate_technology = expansion_1 }
 		}
 		random_owned = {
 			limit = { THIS = { NOT = { expansion_2 = 1 } } }
-			activate_technology = expansion_2
+			owner = { activate_technology = expansion_2 }
 		}
 		random_owned = {
 			limit = { THIS = { NOT = { expansion_3 = 1 } } }
-			activate_technology = expansion_3
+			owner = { activate_technology = expansion_3 }
 		}
 		random_owned = {
 			limit = { THIS = { NOT = { expansion_4 = 1 } } }
-			activate_technology = expansion_4
+			owner = { activate_technology = expansion_4 }
 		}
 		activate_technology = expansion_5
 	}

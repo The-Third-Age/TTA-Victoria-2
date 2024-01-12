@@ -731,7 +731,7 @@ assimilation_chance = {
 					any_pop = {
 						OR = {
 							is_primary_culture = yes
-							is_primary_culture = yes
+							is_accepted_culture = yes
 						}
 						is_state_religion = yes
 					}
@@ -996,6 +996,8 @@ assimilation_chance = {
 			has_pop_religion = spider
 			is_state_religion = no
 			country = {
+				# Keeping format in case other spider cultures are added
+				# # Audax Validator "." Ignore_1002
 				OR = {
 					accepted_culture = great_spider
 				}
