@@ -2045,7 +2045,7 @@ political_decisions = {
 		potential = {
 			tag = GON
 			has_country_flag = GON_reclaimed_calednardhon
-			NOT = { 1 = { has_province_modifier = center_of_the_realm } }
+			NOT = { 2 = { has_province_modifier = center_of_the_realm } }
 			ROH = {
 				all_core = {
 					OR = {
@@ -2057,12 +2057,12 @@ political_decisions = {
 		}
 		
 		allow = {
-			owns = 1
+			owns = 2
 			has_country_flag = GON_reclaimed_calednardhon
 		}
 		
 		effect = {
-			1 = { add_province_modifier = { name = center_of_the_realm duration = -1 } }
+			2 = { add_province_modifier = { name = center_of_the_realm duration = -1 } }
 		}
 	}
 }
@@ -2119,7 +2119,7 @@ political_decisions = {
 		potential = {
 			is_culture_group = dunedain
 			NOT = { has_country_flag = leader_visited_tomb_of_elendil }
-			owns = 1
+			owns = 2
 		}
 		
 		allow = {
