@@ -1,11 +1,11 @@
-GON_4 = { 4 1 2 3 5 6 7 } # Far Anórien
-GON_14 = { 14 8 9 10 11 12 13 } # Talath Anór
-GON_16 = { 16 17 18 19 } # Old Anórien
+GON_4 = { 4 2 3 7 } # Far Anórien
+GON_14 = { 14 8 9 10 11 13 } # Talath Anór
+GON_16 = { 16 17 19 } # Old Anórien
 
 GON_23 = { 23 21 24 25 } # Ethir Erui
-GON_27 = { 27 22 26 28 29 30 } # Lossarnach
+GON_27 = { 27 26 28 29 } # Lossarnach
 
-GON_37 = { 37 31 32 33 35 36 } # Upper Lebennin
+GON_37 = { 37 32 33 35 36 } # Upper Lebennin
 GON_44 = { 44 39 41 42 43 } # Talath Lothen
 GON_46 = { 46 45 47 48 } # Lower Lebennin
 GON_51 = { 51 49 50 52 53 } # Methed Lebennin
@@ -18,15 +18,15 @@ GON_72 = { 72 73 74 75 76 } # Ered Tarthonion
 GON_77 = { 77 79 80 } # Lonnath-en-Belfalas
 
 GON_81 = { 81 82 83 84 85 } # Tarnost
-GON_89 = { 89 86 87 88 } # Central Gondor
-GON_92 = { 92 91 93 } # Lamedon
+GON_89 = { 89 86 88 } # Central Gondor
+GON_92 = { 92 93 } # Lamedon
 
 GON_98 = { 98 97 100 } # Tarlang
 GON_102 = { 102 101 103 } # Blackroot Vale
-GON_105 = { 105 94 96 104 107 } # Lower Morthond Vale
-GON_114 = { 114 109 110 112 113 } # Upper Morthond Vale
+GON_105 = { 105 96 104 107 } # Lower Morthond Vale
+GON_114 = { 114 112 113 } # Upper Morthond Vale
 
-GON_118 = { 118 115 116 117 119 122 } # Taerdôrath Rhúnen
+GON_118 = { 118 115 117 119 122 } # Taerdôrath Rhúnen
 GON_78 = { 78 120 121 128 129 } # Dor-en-Edhel
 GON_133 = { 133 130 132 } # Anfalas
 GON_134 = { 134 138 139 142 143 } # Langstrand
@@ -104,7 +104,7 @@ MOR_396 = { 425 437 } # Ered Lithui
 
 RHO_458 = { 458 456 457 459 460 461 } # Dagorlad
 RHO_462 = { 462 463 464 } # Nindalf
-RHO_467 = { 467 465 466 468 } # Emyn Muil
+RHO_467 = { 467 465 466 468 783 784 } # Emyn Muil
 RHO_472 = { 472 469 470 471 473 474 277 269 } # Uvanwaith
 RHO_476 = { 476 475 477 } # Talath Harroch
 
@@ -182,15 +182,25 @@ AND_759 = { 759 755 756 757 758 760 } # Langflood
 LOR_765 = { 765 761 762 763 764 766 } # Lothlórien
 LOR_767 = { 767 768 769 } # Parth Celebrant
 
-FAN_773 = { 773 770 771 772 } # Fangorn
+FAN_773 = { 773 673 770 771 772 } # Fangorn
 
-ROH_774 = { 774 775 776 777 } # The Wold
-ROH_780 = { 780 778 779 781 782 783 784 785 } # East Emnet
-ROH_791 = { 791 786 787 788 789 790 } # Eastfold
-ROH_794 = { 794 792 793 795 796 } # King's Land
-ROH_798 = { 798 797 799 800 801 802 } # West Emnet
-ROH_803 = { 803 804 805 806 } # Westfold
-ROH_808 = { 808 807 809 810 } # Westmarch
+ROH_774 = { 774 674 675 677 778 } # Upper East Emnet
+ROH_775 = { 775 776 777 } # The Wold
+ROH_779 = { 779 1171 1172 1173 } # Central East Emnet
+ROH_780 = { 780 781 782 1174 } # Southern East Emnet
+ROH_785 = { 785 1175 1176 } # Mouths of the Entwash
+
+ROH_786 = { 786 787 788 789 790 } # Lower Eastfold
+ROH_791 = { 791 1 792 793 } # Upper Eastfold
+ROH_794 = { 794 5 6 12 795 } # Folde
+ROH_798 = { 798 22 30 797 799 } # Westfold
+ROH_801 = { 801 31 94 } # Lower West Emnet
+ROH_802 = { 802 18 87 91 109 } # Upper West Emnet
+ROH_805 = { 805 800 803 804 806 } # Gap of Rohan
+ROH_808 = { 808 372 683 807 809 810 } # West-march
+
+GON_110 = { 110 } # Paths of the Dead
+GON_796 = { 796 116 } # White Mountains
 
 ISE_811 = { 811 812 } # Nan Curunír
 
@@ -277,7 +287,6 @@ SHI_1036 = { 1036 1033 1034 1035 1032 } # Southfarthing
 SHI_1040 = { 1040 1037 1038 1039 1041 } # Northfarthing
 
 FOR_1042 = { 1042 1043 1044 1045 1046 1047 1048 1049 1050 1051 1052 1053 1054 1055 1056 1057 1058 1059 1060 1061 1062 1063 1064 1065 } # Northern Wastes
-FOR_CLEAR = { 372 673 674 675 677 683 } # Forodwaith
 
 # Remove the below line to have the validator check lines below this line
 # Audax Validator "!" Ignore_NEXT

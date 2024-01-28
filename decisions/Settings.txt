@@ -90,6 +90,30 @@ political_decisions = {
 		}
 	}
 	
+	gondor_own_mouths_entwash = {
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = memes_enabled }
+			NOT = { year = 2955 }
+			ROH_785 = { owned_by = ROH }
+		}
+		
+		allow = {
+			NOT = { year = 2955 }
+		}
+		
+		effect = {
+			ROH_785 = {
+				add_core = GON
+				remove_core = ROH
+			}
+			ROH = {
+				release = GON
+			}
+		}
+	}
+	
 	unciv_5 = {
 		potential = {
 			ai = no
