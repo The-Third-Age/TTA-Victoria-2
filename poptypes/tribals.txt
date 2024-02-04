@@ -19,11 +19,36 @@ luxury_needs = {
 	food = 1
 }
 
+promote_to = {
+	farmers = {
+		factor = 0.01
+
+		modifier = {
+			factor = 1
+			location = { work_available = { worker = farmers } }
+			country = { civilized = yes }
+		}
+	}
+	labourers = {
+		factor = 0.01
+
+		modifier = {
+			factor = 1
+			location = { work_available = { worker = labourers } }
+			country = { civilized = yes }
+		}
+	}
+}
+
+# No migration
+country_migration_target = { factor = -100 }
+migration_target = { factor = -100 }
+
 ideologies = {
-	slave_ideology = {
+	tribal_ideology = {
 		factor = 1
 	}
 }
 
-issues = {
+issues = { # TODO determine what tribals care about
 }

@@ -119,7 +119,7 @@ promotion_chance = {
 	}
 	modifier = {
 		factor = -100
-		is_culture_group = wild_goblins
+		pop_majority_ideology = tribal_ideology
 	}
 }
 
@@ -296,7 +296,7 @@ demotion_chance = {
 	}
 	modifier = {
 		factor = -100
-		is_culture_group = wild_goblins
+		pop_majority_ideology = tribal_ideology
 	}
 }
 
@@ -394,7 +394,7 @@ migration_chance = {
 	}
 	modifier = {
 		factor = -100
-		is_culture_group = wild_goblins
+		pop_majority_ideology = tribal_ideology
 	}
 }
 
@@ -467,7 +467,7 @@ colonialmigration_chance = {
 	}
 	modifier = {
 		factor = -100
-		is_culture_group = wild_goblins
+		pop_majority_ideology = tribal_ideology
 	}
 }
 
@@ -595,7 +595,7 @@ emigration_chance = {
 	}
 	modifier = {
 		factor = -100
-		is_culture_group = wild_goblins
+		pop_majority_ideology = tribal_ideology
 	}
 }
 
@@ -724,7 +724,7 @@ assimilation_chance = {
 	modifier = {
 		factor = -100
 		OR = {
-			is_culture_group = wild_goblins
+			pop_majority_ideology = tribal_ideology
 			is_state_religion = no # Is true if the pop's race doesn't match the realm's race
 			NOT = { # Is true is there are no primary/accepted pops within the province that match the realm's race
 				location = {
