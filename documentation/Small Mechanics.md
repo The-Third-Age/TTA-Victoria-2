@@ -1,6 +1,6 @@
 # Small Mechanics
 
-## Wild Goblins
+## Wild Goblins (replaces by Tribals)
 	Any pop from the culture group wild_goblins is considered a wild goblin by FOR
 		Any province with wild_goblins cultures will get marked as a wild goblin province
 	

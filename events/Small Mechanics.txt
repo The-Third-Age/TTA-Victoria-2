@@ -4,19 +4,18 @@
 # Small Mechanics Events {
 #	5000 - 5999 }
 
-# Wild Goblins {
+# Tribals (formerly Wild Goblins) {
 # Events 5000 - 5003
-# Wild Goblin Raid
+# Tribal Raid
 province_event = {
 	id = 5000
-	title = "Wild Goblin Raid"
+	title = "Tribal Raid"
 	desc = "EVTDESC5000"
 	
 	trigger = {
 		NOT = { owner = { has_country_modifier = observer_mode } }
 		OR = {
-			has_province_modifier = wild_goblin_hold
-			has_province_modifier = wild_goblin_outpost
+			has_province_modifier = tribal_outpost
 		}
 		any_neighbor_province = {
 			owner = { tag = THIS }
@@ -30,10 +29,10 @@ province_event = {
 	option = {
 		name = "Drat."
 		
-		# Goblins killed in the raid
+		# Tribals killed in the raid
 		any_pop = {
 			limit = {
-				is_culture_group = wild_goblins
+				type = tribals
 			}
 			reduce_pop = 0.95
 		}
@@ -46,7 +45,7 @@ province_event = {
 			any_pop = {
 				limit = {
 					NOT = { type = soldiers }
-					NOT = { is_culture_group = wild_goblins }
+					NOT = { type = tribals }
 				}
 				militancy = 2
 				reduce_pop = 0.98
@@ -55,7 +54,7 @@ province_event = {
 			any_pop = {
 				limit = {
 					type = soldiers
-					NOT = { is_culture_group = wild_goblins }
+					NOT = { type = tribals }
 				}
 				militancy = 2
 				reduce_pop = 0.9
@@ -67,14 +66,14 @@ province_event = {
 	}
 }
 
-# Goblin Settlement Found and Eliminated
+# Tribal Settlement Found and Eliminated
 province_event = {
 	id = 5001
-	title = "Goblin Settlement Found"
+	title = "Tribal Settlement Found"
 	desc = "EVTDESC5001"
 	
 	trigger = {
-		has_province_modifier = military_hunting_wild_goblins
+		has_province_modifier = military_hunting_tribals
 	}
 	
 	mean_time_to_happen = {
@@ -89,10 +88,10 @@ province_event = {
 	option = {
 		name = "Good"
 		
-		# Kill all of the goblins
+		# Kill all of the tribals
 		any_pop = {
 			limit = {
-				is_culture_group = wild_goblins
+				type = tribals
 			}
 			
 			reduce_pop = 0
@@ -106,9 +105,8 @@ province_event = {
 			militancy = -1
 		}
 		
-		remove_province_modifier = wild_goblin_hold
-		remove_province_modifier = wild_goblin_outpost
-		remove_province_modifier = military_hunting_wild_goblins
+		remove_province_modifier = tribal_outpost
+		remove_province_modifier = military_hunting_tribals
 		
 		owner = {
 			random_list = {
@@ -121,14 +119,14 @@ province_event = {
 	}
 }
 
-# Abandoned Goblin Settlement Found
+# Abandoned Tribal Settlement Found
 province_event = {
 	id = 5002
 	title = "Abandoned Settlement Found"
 	desc = "EVTDESC5002"
 	
 	trigger = {
-		has_province_modifier = military_hunting_wild_goblins
+		has_province_modifier = military_hunting_tribals
 	}
 	
 	mean_time_to_happen = {
@@ -152,18 +150,18 @@ province_event = {
 			}
 		}
 		
-		remove_province_modifier = military_hunting_wild_goblins
+		remove_province_modifier = military_hunting_tribals
 	}
 }
 
-# Goblin Settlement Found and Enslaved
+# Tribal Settlement Found and Enslaved
 province_event = {
 	id = 5003
-	title = "Goblin Settlement Found"
+	title = "Tribal Settlement Found"
 	desc = "EVTDESC5003"
 	
 	trigger = {
-		has_province_modifier = military_hunting_wild_goblins_slavery
+		has_province_modifier = military_hunting_tribals_slavery
 	}
 	
 	mean_time_to_happen = {
@@ -181,16 +179,16 @@ province_event = {
 		# Kill those who resist
 		any_pop = {
 			limit = {
-				is_culture_group = wild_goblins
+				type = tribals
 			}
 			
 			reduce_pop = 0.9
 		}
 		
-		# Enslave the remaining goblins
+		# Enslave the remaining tribals
 		any_pop = {
 			limit = {
-				is_culture_group = wild_goblins
+				type = tribals
 			}
 			pop_type = slaves
 		}
@@ -198,7 +196,6 @@ province_event = {
 		# Some of the militia died
 		any_pop = {
 			limit = {
-				NOT = { is_culture_group = wild_goblins }
 				type = soldiers
 			}
 			
@@ -209,9 +206,8 @@ province_event = {
 			militancy = -1
 		}
 		
-		remove_province_modifier = wild_goblin_hold
-		remove_province_modifier = wild_goblin_outpost
-		remove_province_modifier = military_hunting_wild_goblins_slavery
+		remove_province_modifier = tribal_outpost
+		remove_province_modifier = military_hunting_tribals_slavery
 		
 		owner = {
 			random_list = {
@@ -811,7 +807,6 @@ province_event = {
 		# Some of the militia died
 		any_pop = {
 			limit = {
-				NOT = { is_culture_group = wild_goblins }
 				type = soldiers
 			}
 

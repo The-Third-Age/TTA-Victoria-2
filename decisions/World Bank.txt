@@ -7,7 +7,7 @@
 #	Leave FOR Alone 
 #	Government Flags Clean Up 
 #	Realm Leaders 
-#	Wild Goblins 
+#	Tribals 
 #	Debug 
 #	Tech Clean Up }
 
@@ -93,7 +93,6 @@ political_decisions = {
 						is_culture_group = spiders
 						is_culture_group = uruk_hai
 						is_culture_group = northern_goblins
-						is_culture_group = wild_goblins
 						is_culture_group = angmarrim
 						primary_culture = wight
 						is_culture_group = trolls
@@ -229,24 +228,13 @@ political_decisions = {
 				any_state = { is_slave = yes }
 			}
 			
-			# Setting up Wild Goblin Holds
+			# Setting up Tribal Outposts
 			random_owned = {
 				any_neighbor_province = {
 					limit = {
-						culture = white_mountain_goblin
+						type = tribals
 					}
-					add_province_modifier = { name = wild_goblin_hold duration = -1 }
-				}
-			}
-			
-			# Setting up Wild Goblin Outposts
-			random_owned = {
-				any_neighbor_province = {
-					limit = {
-						NOT = { culture = white_mountain_goblin }
-						has_pop_culture = white_mountain_goblin
-					}
-					add_province_modifier = { name = wild_goblin_outpost duration = -1 }
+					add_province_modifier = { name = tribal_outpost duration = -1 }
 				}
 			}
 			
@@ -955,33 +943,34 @@ political_decisions = {
 	}
 }
 
-# Wild Goblins
+# Tribals
 political_decisions = {
-	update_wild_goblin_modifiers = {
+	update_tribals_modifiers = {
 		potential = {
 			tag = FOR
 			any_owned_province = {
 				any_neighbor_province = {
 					OR = {
-						# Majority is wild goblin but doesn't have wild_goblin_hold
+						# Has tribals, but doesn't have tribal_outpost
 						AND = {
-							culture = white_mountain_goblin
-							NOT = { has_province_modifier = wild_goblin_hold }
-							NOT = { any_pop = { type = slaves is_culture_group = wild_goblins } }
+							any_pop = {
+								type = tribals
+								is_accepted_culture = no
+								is_primary_culture = no
+							}
+							NOT = { has_province_modifier = tribal_outpost }
 						}
-						# Minority is wild goblin doesn't have wild_goblin_outpost
+						# Doesn't have any tribals, but has a modifier
 						AND = {
-							NOT = { culture = white_mountain_goblin }
-							has_pop_culture = white_mountain_goblin
-							NOT = { has_province_modifier = wild_goblin_outpost }
-							NOT = { any_pop = { type = slaves is_culture_group = wild_goblins } }
-						}
-						# Doesn't have any wild goblins, but has a modifier
-						AND = {
-							NOT = { has_pop_culture = white_mountain_goblin }
+							NOT = {
+								any_pop = {
+									type = tribals
+									is_accepted_culture = no
+									is_primary_culture = no
+								}
+							}
 							OR = {
-								has_province_modifier = wild_goblin_hold
-								has_province_modifier = wild_goblin_outpost
+								has_province_modifier = tribal_outpost
 							}
 						}
 					}
@@ -991,29 +980,18 @@ political_decisions = {
 		
 		allow = {}
 		
-		effect = {
-			# Setting up Wild Goblin Holds
+		effect = {			
+			# Setting up Tribal Outpost
 			random_owned = {
 				any_neighbor_province = {
 					limit = {
-						culture = white_mountain_goblin
-						NOT = { any_pop = { type = slaves is_culture_group = wild_goblins } }
+						any_pop = {
+							type = tribals
+							is_accepted_culture = no
+							is_primary_culture = no
+						}
 					}
-					add_province_modifier = { name = wild_goblin_hold duration = -1 }
-					remove_province_modifier = wild_goblin_outpost
-				}
-			}
-			
-			# Setting up Wild Goblin Outposts
-			random_owned = {
-				any_neighbor_province = {
-					limit = {
-						NOT = { culture = white_mountain_goblin }
-						has_pop_culture = white_mountain_goblin
-						NOT = { any_pop = { type = slaves is_culture_group = wild_goblins } }
-					}
-					add_province_modifier = { name = wild_goblin_outpost duration = -1 }
-					remove_province_modifier = wild_goblin_hold
+					add_province_modifier = { name = tribal_outpost duration = -1 }
 				}
 			}
 			
@@ -1021,14 +999,16 @@ political_decisions = {
 			random_owned = {
 				any_neighbor_province = {
 					limit = {
-						NOT = { has_pop_culture = white_mountain_goblin }
-						OR = {
-							has_province_modifier = wild_goblin_hold
-							has_province_modifier = wild_goblin_outpost
+						NOT = { 
+							any_pop = {
+								type = tribals
+								is_accepted_culture = no
+								is_primary_culture = no
+							}
 						}
+						has_province_modifier = tribal_outpost
 					}
-					remove_province_modifier = wild_goblin_hold
-					remove_province_modifier = wild_goblin_outpost
+					remove_province_modifier = tribal_outpost
 				}
 			}
 		}
