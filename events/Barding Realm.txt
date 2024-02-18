@@ -1069,7 +1069,7 @@ province_event = {
 			random_country = {
 				limit = {
 					tag = FOR
-					NOT = { check_variable = { name = esgaroth_trading value = 0.1 } }
+					NOT = { check_variable = { which = esgaroth_trading value = 0.1 } }
 				}
 				654 = { # Esgaroth
 					remove_province_modifier = esgaroth_trade_i
