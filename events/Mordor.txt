@@ -229,7 +229,11 @@ country_event = {
 		}
 		set_global_flag = harondor_permission_granted_HRN
 		ai_chance = {
-			factor = 28
+			factor = 11
+			modifier = {
+				factor = 0
+				is_our_vassal = ITH
+			}
 		}
 	}
 	option = {
@@ -286,7 +290,11 @@ country_event = {
 		}
 		set_global_flag = harondor_permission_granted_HRU
 		ai_chance = {
-			factor = 12
+			factor = 11
+			modifier = {
+				factor = 0
+				is_our_vassal = ITH
+			}
 		}
 	}
 	option = {
@@ -343,7 +351,11 @@ country_event = {
 		}
 		set_global_flag = harondor_permission_granted_CHE
 		ai_chance = {
-			factor = 10
+			factor = 6
+			modifier = {
+				factor = 0
+				is_our_vassal = ITH
+			}
 		}
 	}
 	option = {
@@ -400,7 +412,11 @@ country_event = {
 		}
 		set_global_flag = harondor_permission_granted_UMB
 		ai_chance = {
-			factor = 32
+			factor = 36
+			modifier = {
+				factor = 0
+				is_our_vassal = ITH
+			}
 		}
 	}
 	option = {
@@ -483,7 +499,11 @@ country_event = {
 		}
 		set_global_flag = MOR_established_HRD_vassal
 		ai_chance = {
-			factor = 18
+			factor = 36
+			modifier = {
+				factor = 100
+				is_our_vassal = ITH
+			}
 		}
 	}
 }

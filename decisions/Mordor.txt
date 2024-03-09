@@ -3,6 +3,8 @@
 
 # Mordor Decisions:
 #	Starting Decision (Unseen)
+#	The Harondor Question
+#	Annexations of Ithiliten and Harondor
 
 # Starting Decision
 political_decisions = {
@@ -67,6 +69,59 @@ political_decisions = {
 			badboy = 1
 			country_event = 50504
 			set_country_flag = nobody_asked_MOR_permitted
+		}
+	}
+}
+
+# Annexations of Ithiliten and Harondor
+political_decisions = {
+	annex_ithilien_MOR = {
+		picture = "repopulate_ithilien"
+		potential = {
+			tag = MOR
+			is_our_vassal = ITH
+			ITH = {	
+				all_core = { 
+					OR = {
+						owned_by = ITH
+						owned_by = MOR 
+					}
+				}
+			}
+			has_country_flag = ITH_annexed
+		}
+		allow = {
+			war = no
+			expansion_2 = 1
+			population_1 = 1
+			diplomacy_2 = 1
+		}
+		effect = {
+			prestige = 10
+			badboy = 3
+			inherit = ITH
+			set_country_flag = ITH_annexed
+		}
+	}
+	annex_harondor_MOR = {
+		picture = "south_gondor_map"
+		potential = {
+			tag = MOR
+			is_our_vassal = HRD
+			HRD = {	all_core = { owned_by = HRD } }
+			ITH = { all_core = { owned_by = MOR } }
+			has_global_flag = MOR_established_HRD_vassal
+		}
+		allow = {
+			war = no
+			expansion_3 = 1
+			population_2 = 1
+			diplomacy_3 = 1
+		}
+		effect = {
+			prestige = 12
+			badboy = 4
+			inherit = HRD
 		}
 	}
 }
