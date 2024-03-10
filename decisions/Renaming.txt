@@ -9334,7 +9334,7 @@ political_decisions = {
 						}
 					}
 					owns = 1361
-					owns = 1362
+					owns = 994
 					owns = 998
 					owns = 999
 					owns = 1000
@@ -9432,7 +9432,7 @@ political_decisions = {
 							is_culture_group = dwarves
 						}
 					}
-					province_id = 998
+					province_id = 994
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = dur-lugata_name value = -0.1 } } } }
 						owner = { FOR = { check_variable = { which = dur-lugata_name value = 0.1 } } }
@@ -9451,7 +9451,7 @@ political_decisions = {
 							is_culture_group = eldar
 						}
 					}
-					province_id = 998
+					province_id = 994
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = dur-lugata_name value = 0.9 } } } }
 						owner = { FOR = { check_variable = { which = dur-lugata_name value = 1.1 } } }
@@ -9470,7 +9470,7 @@ political_decisions = {
 							is_culture_group = trolls
 						}
 					}
-					province_id = 998
+					province_id = 994
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = dur-lugata_name value = 1.9 } } } }
 						owner = { FOR = { check_variable = { which = dur-lugata_name value = 2.1 } } }
@@ -9489,7 +9489,7 @@ political_decisions = {
 							is_culture_group = wildmen
 						}
 					}
-					province_id = 998
+					province_id = 994
 					OR = {
 						owner = { FOR = { NOT = { check_variable = { which = dur-lugata_name value = 2.9 } } } }
 						owner = { FOR = { check_variable = { which = dur-lugata_name value = 3.1 } } }
@@ -10966,6 +10966,7 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = upper_east_emnet_name value = 1.1 } } }
 					}
 				}
+				674 = { state_scope = { change_region_name = "Upper East Emnet" } }
 				674 = { change_province_name = "Mearaspól" }
 				owner = { FOR = { set_variable = { which = upper_east_emnet_name value = 1 } } }
 			}
@@ -11285,25 +11286,18 @@ political_decisions = {
 								FOR = { check_variable = { which = fangorn_name value = 0.1 } }
 							}
 						}
-						# [teleri, ents, dunedain, eldar] - Fangorn
+						# [teleri, ents, dunedain, rohirrim, eldar] - Fangorn
 						AND = {
 							OR = {
 								is_culture_group = teleri
 								is_culture_group = ents
 								is_culture_group = dunedain
+								is_culture_group = rohirrim
 								is_culture_group = eldar
 							}
 							OR = {
 								FOR = { NOT = { check_variable = { which = fangorn_name value = 0.9 } } }
 								FOR = { check_variable = { which = fangorn_name value = 1.1 } }
-							}
-						}
-						# [rohirrim] - Fangorn
-						AND = {
-							is_culture_group = rohirrim
-							OR = {
-								FOR = { NOT = { check_variable = { which = fangorn_name value = 1.9 } } }
-								FOR = { check_variable = { which = fangorn_name value = 2.1 } }
 							}
 						}
 					}
@@ -11332,7 +11326,7 @@ political_decisions = {
 				772 = { change_province_name = "Maudhûl-shuldunud" }
 				owner = { FOR = { set_variable = { which = fangorn_name value = 0 } } }
 			}
-			# [teleri, ents, dunedain, eldar] - Fangorn
+			# [teleri, ents, dunedain, rohirrim, eldar] - Fangorn
 			random_owned = {
 				limit = {
 					owner = {
@@ -11340,6 +11334,7 @@ political_decisions = {
 							is_culture_group = teleri
 							is_culture_group = ents
 							is_culture_group = dunedain
+							is_culture_group = rohirrim
 							is_culture_group = eldar
 						}
 					}
@@ -11351,20 +11346,6 @@ political_decisions = {
 				}
 				772 = { change_province_name = "Lind-or-Burum" }
 				owner = { FOR = { set_variable = { which = fangorn_name value = 1 } } }
-			}
-			# [rohirrim] - Fangorn
-			random_owned = {
-				limit = {
-					owner = { is_culture_group = rohirrim }
-					province_id = 673
-					OR = {
-						owner = { FOR = { NOT = { check_variable = { which = fangorn_name value = 1.9 } } } }
-						owner = { FOR = { check_variable = { which = fangorn_name value = 2.1 } } }
-					}
-				}
-				673 = { state_scope = { change_region_name = "Upper East Emnet" } }
-				772 = { change_province_name = "Lind-or-Burum" }
-				owner = { FOR = { set_variable = { which = fangorn_name value = 2 } } }
 			}
 		}
 	}
