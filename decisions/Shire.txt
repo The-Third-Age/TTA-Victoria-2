@@ -3,8 +3,7 @@
 
 # Shire Decisions: {
 #	Starting Decision
-#	Expansion
-#	Accepting other Hobbits }
+#	Expansion }
 
 # Starting Decision
 political_decisions = {
@@ -48,40 +47,4 @@ political_decisions = {
 		}
 	}
 
-}
-
-# Accepting other Hobbits
-political_decisions = {
-	accept_bre_hobbit = {
-		picture = "free_peoples_of_breeland"
-		potential = {
-			tag = SHI
-			NOT = { accepted_culture = breeland_hobbit }
-		}
-		
-		allow = {
-			BRE = { all_core = { owned_by = SHI } }
-			war = no
-		}
-		
-		effect = {
-			add_accepted_culture = breeland_hobbit
-		}
-	}
-	accept_bck_hobbit = {
-		picture = "hobbits_of_the_shire"
-		potential = {
-			tag = SHI
-			NOT = { accepted_culture = buckland_hobbit }
-		}
-		
-		allow = {
-			BCK = { all_core = { owned_by = SHI } }
-			war = no
-		}
-		
-		effect = {
-			add_accepted_culture = buckland_hobbit
-		}
-	}
 }
