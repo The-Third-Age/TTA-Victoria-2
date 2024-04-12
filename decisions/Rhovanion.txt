@@ -176,12 +176,36 @@ political_decisions = {
 				limit = {
 					owner = {
 						NOT = {
-							primary_culture = ehwathrim
-							accepted_culture = ehwathrim
+							primary_culture = aivathiuda
+							accepted_culture = aivathiuda
 						}
 					}
 				}
-				owner = { add_accepted_culture = ehwathrim }
+				owner = { add_accepted_culture = aivathiuda }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = anthar
+							accepted_culture = anthar
+						}
+					}
+				}
+				owner = { add_accepted_culture = anthar }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							primary_culture = gadraught
+							accepted_culture = gadraught
+						}
+					}
+				}
+				owner = { add_accepted_culture = gadraught }
 			}
 		}
 	}
