@@ -33,55 +33,12 @@ political_decisions = {
 		}
 		
 		allow = {
-			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
-			# Otherwise, it isn't counted
-			DAL = {
+			RHO = {
 				all_core = {
 					OR = {
 						owner = { tag = THIS }
 						owner = { vassal_of = THIS }
 						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = northmen } }
-						empty = yes
-					}
-				}
-			}
-			DAL_643 = {
-				OR = {
-					owner = { tag = THIS }
-					owner = { vassal_of = THIS }
-					owner = { in_sphere = THIS }
-					owner = { NOT = { is_culture_group = northmen } }
-					empty = yes
-				}
-			}
-			DAL_645 = {
-				OR = {
-					owner = { tag = THIS }
-					owner = { vassal_of = THIS }
-					owner = { in_sphere = THIS }
-					owner = { NOT = { is_culture_group = northmen } }
-					empty = yes
-				}
-			}
-			DOR = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = northmen } }
-						empty = yes
-					}
-				}
-			}
-			EHW = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = northmen } }
 						empty = yes
 					}
 				}
@@ -97,15 +54,7 @@ political_decisions = {
 			
 			any_country = {
 				limit = {
-					OR = {
-						tag = DAL
-						tag = DA1
-						tag = DA2
-						tag = DA3
-						tag = DA4
-						tag = DOR
-						tag = EHW
-					}
+					is_culture_group = northmen
 				}
 				country_event = 100003
 				
@@ -216,89 +165,19 @@ political_decisions = {
 			NOT = { is_culture_group = northmen }
 			is_greater_power = yes
 			NOT = { exists = RHO }
-			OR = {
-				DAL = {
-					any_core = {
-						OR = {
-							owner = { tag = THIS }
-							owner = { vassal_of = THIS }
-							owner = { in_sphere = THIS }
-						}
-					}
-				}
-				DAL_643 = {
+			RHO = {
+				any_core = {
 					OR = {
 						owner = { tag = THIS }
 						owner = { vassal_of = THIS }
 						owner = { in_sphere = THIS }
-					}
-				}
-				DAL_645 = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-					}
-				}
-				DOR = {
-					any_core = {
-						OR = {
-							owner = { tag = THIS }
-							owner = { vassal_of = THIS }
-							owner = { in_sphere = THIS }
-						}
-					}
-				}
-				EHW = {
-					any_core = {
-						OR = {
-							owner = { tag = THIS }
-							owner = { vassal_of = THIS }
-							owner = { in_sphere = THIS }
-						}
 					}
 				}
 			}
 		}
 		
 		allow = {
-			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
-			# Otherwise, it isn't counted
-			DAL = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						empty = yes
-					}
-				}
-			}
-			DAL_643 = {
-				OR = {
-					owner = { tag = THIS }
-					owner = { vassal_of = THIS }
-					owner = { in_sphere = THIS }
-				}
-			}
-			DAL_645 = {
-				OR = {
-					owner = { tag = THIS }
-					owner = { vassal_of = THIS }
-					owner = { in_sphere = THIS }
-				}
-			}
-			DOR = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						empty = yes
-					}
-				}
-			}
-			EHW = {
+			RHO = {
 				all_core = {
 					OR = {
 						owner = { tag = THIS }
@@ -311,107 +190,27 @@ political_decisions = {
 			OR = {
 				good_evil_alignment = neutral_alignment
 				AND = {
-					good_evil_alignment = evil_alignment
-					OR = {
-						DAL = { exists = no }
-						DAL = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						DA1 = { exists = no }
-						DA1 = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						DA2 = { exists = no }
-						DA2 = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						DA3 = { exists = no }
-						DA3 = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						DA4 = { exists = no }
-						DA4 = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						DOR = { exists = no }
-						DOR = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						EHW = { exists = no }
-						EHW = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
+					good_evil_alignment = good_alignment
+					RHO = {
+						all_core = {
+							owner = {
+								OR = {
+									good_evil_alignment = neutral_alignment
+									good_evil_alignment = good_alignment
+								}
 							}
 						}
 					}
 				}
 				AND = {
-					good_evil_alignment = good_alignment
-					OR = {
-						DAL = { exists = no }
-						DAL = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = good_alignment
-								good_evil_alignment = neutral_alignment
-							}
-						}
-					}
-					OR = {
-						DOR = { exists = no }
-						DOR = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = good_alignment
-								good_evil_alignment = neutral_alignment
-							}
-						}
-					}
-					OR = {
-						EHW = { exists = no }
-						EHW = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = good_alignment
-								good_evil_alignment = neutral_alignment
+					good_evil_alignment = evil_alignment
+					RHO = {
+						all_core = {
+							owner = {
+								OR = {
+									good_evil_alignment = neutral_alignment
+									good_evil_alignment = evil_alignment
+								}
 							}
 						}
 					}
@@ -426,18 +225,14 @@ political_decisions = {
 			any_country = {
 				limit = {
 					OR = {
-						tag = DAL
-						tag = DA1
-						tag = DA2
-						tag = DA3
-						tag = DA4
-						tag = DOR
-						tag = EHW
+						vassal_of = THIS
+						in_sphere = THIS
 					}
+					is_culture_group = northmen
 				}
 				annex_to = RHO
 				
-				all_core = { add_core = RHO remove_core = DAL remove_core = DA1 remove_core = DA2 remove_core = DA3 remove_core = DA4 remove_core = DOR remove_core = EHW }
+				all_core = { add_core = RHO remove_core = DAL remove_core = DA1 remove_core = DA2 remove_core = DA3 remove_core = DA4 remove_core = DOR remove_core = EHW remove_core = OTH remove_core = SAU remove_core = VID remove_core = ALN remove_core = TRE remove_core = ANT remove_core = GAD }
 			}
 			
 			any_owned = {
