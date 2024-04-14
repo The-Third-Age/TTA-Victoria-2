@@ -15,59 +15,12 @@ political_decisions = {
 		}
 		
 		allow = {
-			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
-			# Otherwise, it isn't counted
-			SEK = {
+			RHU = {
 				all_core = {
 					OR = {
 						owner = { tag = THIS }
 						owner = { vassal_of = THIS }
 						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = easterlings } }
-						empty = yes
-					}
-				}
-			}
-			SAG = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = easterlings } }
-						empty = yes
-					}
-				}
-			}
-			URG = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = easterlings } }
-						empty = yes
-					}
-				}
-			}
-			KUG = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = easterlings } }
-						empty = yes
-					}
-				}
-			}
-			LGV = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						owner = { NOT = { is_culture_group = easterlings } }
 						empty = yes
 					}
 				}
@@ -83,13 +36,7 @@ political_decisions = {
 			
 			any_country = {
 				limit = {
-					OR = {
-						tag = SEK
-						tag = SAG
-						tag = URG
-						tag = KUG
-						tag = LGV
-					}
+					is_culture_group = easterlings
 				}
 				country_event = 100003
 				
@@ -173,13 +120,7 @@ political_decisions = {
 		effect = {
 			any_country = {
 				limit = {
-					OR = {
-						tag = SEK
-						tag = SAG
-						tag = URG
-						tag = KUG
-						tag = LGV
-					}
+					is_culture_group = easterlings
 					NOT = { tag = THIS }
 				}
 				country_event = 100005
@@ -198,99 +139,19 @@ political_decisions = {
 			NOT = { is_culture_group = easterlings }
 			is_greater_power = yes
 			NOT = { exists = RHU }
-			OR = {
-				SEK = {
-					any_core = {
-						OR = {
-							owner = { tag = THIS }
-							owner = { vassal_of = THIS }
-							owner = { in_sphere = THIS }
-						}
-					}
-				}
-				SAG = {
-					any_core = {
-						OR = {
-							owner = { tag = THIS }
-							owner = { vassal_of = THIS }
-							owner = { in_sphere = THIS }
-						}
-					}
-				}
-				URG = {
-					any_core = {
-						OR = {
-							owner = { tag = THIS }
-							owner = { vassal_of = THIS }
-							owner = { in_sphere = THIS }
-						}
-					}
-				}
-				KUG = {
-					any_core = {
-						OR = {
-							owner = { tag = THIS }
-							owner = { vassal_of = THIS }
-							owner = { in_sphere = THIS }
-						}
-					}
-				}
-				LGV = {
-					any_core = {
-						OR = {
-							owner = { tag = THIS }
-							owner = { vassal_of = THIS }
-							owner = { in_sphere = THIS }
-						}
+			RHU = {
+				any_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
 					}
 				}
 			}
 		}
 		
 		allow = {
-			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
-			# Otherwise, it isn't counted
-			SEK = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						empty = yes
-					}
-				}
-			}
-			SAG = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						empty = yes
-					}
-				}
-			}
-			URG = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						empty = yes
-					}
-				}
-			}
-			LGV = {
-				all_core = {
-					OR = {
-						owner = { tag = THIS }
-						owner = { vassal_of = THIS }
-						owner = { in_sphere = THIS }
-						empty = yes
-					}
-				}
-			}
-			KUG = {
+			RHU = {
 				all_core = {
 					OR = {
 						owner = { tag = THIS }
@@ -303,107 +164,27 @@ political_decisions = {
 			OR = {
 				good_evil_alignment = neutral_alignment
 				AND = {
-					good_evil_alignment = evil_alignment
-					OR = {
-						SEK = { exists = no }
-						SEK = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						SAG = { exists = no }
-						SAG = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						LGV = { exists = no }
-						LGV = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						KUG = { exists = no }
-						KUG = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
-							}
-						}
-					}
-					OR = {
-						URG = { exists = no }
-						URG = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = neutral_alignment
-								good_evil_alignment = evil_alignment
+					good_evil_alignment = good_alignment
+					RHU = {
+						all_core = {
+							owner = {
+								OR = {
+									good_evil_alignment = neutral_alignment
+									good_evil_alignment = good_alignment
+								}
 							}
 						}
 					}
 				}
 				AND = {
-					good_evil_alignment = good_alignment
-					OR = {
-						SEK = { exists = no }
-						SEK = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = good_alignment
-								good_evil_alignment = neutral_alignment
-							}
-						}
-					}
-					OR = {
-						KUG = { exists = no }
-						KUG = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = good_alignment
-								good_evil_alignment = neutral_alignment
-							}
-						}
-					}
-					OR = {
-						LGV = { exists = no }
-						LGV = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = good_alignment
-								good_evil_alignment = neutral_alignment
-							}
-						}
-					}
-					OR = {
-						SAG = { exists = no }
-						SAG = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = good_alignment
-								good_evil_alignment = neutral_alignment
-							}
-						}
-					}
-					OR = {
-						URG = { exists = no }
-						URG = { 
-							exists = yes
-							OR = {
-								good_evil_alignment = good_alignment
-								good_evil_alignment = neutral_alignment
+					good_evil_alignment = evil_alignment
+					RHU = {
+						all_core = {
+							owner = {
+								OR = {
+									good_evil_alignment = neutral_alignment
+									good_evil_alignment = evil_alignment
+								}
 							}
 						}
 					}
@@ -418,16 +199,14 @@ political_decisions = {
 			any_country = {
 				limit = {
 					OR = {
-						tag = SEK
-						tag = SAG
-						tag = URG
-						tag = LGV
-						tag = KUG
+						vassal_of = THIS
+						in_sphere = THIS
 					}
+					is_culture_group = easterlings
 				}
 				annex_to = RHU
 				
-				all_core = { add_core = RHU remove_core = SEK remove_core = SAG remove_core = URG remove_core = LGV remove_core = KUG }
+				all_core = { add_core = RHU remove_core = SAG remove_core = SEK remove_core = URG remove_core = ELG remove_core = PRI remove_core = GAT remove_core = KUG remove_core = IBR remove_core = AGA remove_core = LGV remove_core = NAR remove_core = GOR remove_core = BRC remove_core = UTA remove_core = AMO }
 			}
 			
 			any_owned = {
