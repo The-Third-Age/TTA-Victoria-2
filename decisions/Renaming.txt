@@ -1235,6 +1235,861 @@ political_decisions = {
 			}
 		}
 	}
+	rename_mirkwood = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# [northmen, anduinrim, rohirrim] - Foreryn Galen
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = foreryn_galen_name value = -0.1 } } }
+								FOR = { check_variable = { which = foreryn_galen_name value = 0.1 } }
+							}
+						}
+						# [spiders, mordorian] - Foreryn Galen
+						AND = {
+							OR = {
+								is_culture_group = spiders
+								is_culture_group = mordorian
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = foreryn_galen_name value = 0.9 } } }
+								FOR = { check_variable = { which = foreryn_galen_name value = 1.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Foreryn Galen
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = foreryn_galen_name value = 1.9 } } }
+								FOR = { check_variable = { which = foreryn_galen_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 1426
+					owns = 1427
+					owns = 695
+					owns = 696
+				}
+				AND = {
+					OR = {
+						# [northmen, anduinrim, rohirrim] - Annûneryn Galen
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = annuneryn_galen_name value = -0.1 } } }
+								FOR = { check_variable = { which = annuneryn_galen_name value = 0.1 } }
+							}
+						}
+						# [spiders, mordorian] - Annûneryn Galen
+						AND = {
+							OR = {
+								is_culture_group = spiders
+								is_culture_group = mordorian
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = annuneryn_galen_name value = 0.9 } } }
+								FOR = { check_variable = { which = annuneryn_galen_name value = 1.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Annûneryn Galen
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = annuneryn_galen_name value = 1.9 } } }
+								FOR = { check_variable = { which = annuneryn_galen_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 1428
+					owns = 1429
+					owns = 697
+					owns = 698
+				}
+				AND = {
+					OR = {
+						# [northmen, anduinrim, rohirrim] - Taur-nu-Fuin
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = taur-nu-fuin_name value = -0.1 } } }
+								FOR = { check_variable = { which = taur-nu-fuin_name value = 0.1 } }
+							}
+						}
+						# [mordorian] - Taur-nu-Fuin
+						AND = {
+							is_culture_group = mordorian
+							OR = {
+								FOR = { NOT = { check_variable = { which = taur-nu-fuin_name value = 0.9 } } }
+								FOR = { check_variable = { which = taur-nu-fuin_name value = 1.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Taur-nu-Fuin
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = taur-nu-fuin_name value = 1.9 } } }
+								FOR = { check_variable = { which = taur-nu-fuin_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 704
+					owns = 1431
+					owns = 699
+					owns = 701
+					owns = 702
+					owns = 703
+				}
+				AND = {
+					OR = {
+						# [northmen] - Woodland Realm
+						AND = {
+							is_culture_group = northmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = woodland_realm_name value = -0.1 } } }
+								FOR = { check_variable = { which = woodland_realm_name value = 0.1 } }
+							}
+						}
+						# [anduinrim] - Woodland Realm
+						AND = {
+							is_culture_group = anduinrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = woodland_realm_name value = 0.9 } } }
+								FOR = { check_variable = { which = woodland_realm_name value = 1.1 } }
+							}
+						}
+						# [rohirrim] - Woodland Realm
+						AND = {
+							is_culture_group = rohirrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = woodland_realm_name value = 1.9 } } }
+								FOR = { check_variable = { which = woodland_realm_name value = 2.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Woodland Realm
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = woodland_realm_name value = 2.9 } } }
+								FOR = { check_variable = { which = woodland_realm_name value = 3.1 } }
+							}
+						}
+					}
+					owns = 690
+					owns = 691
+					owns = 692
+					owns = 693
+					owns = 694
+					owns = 700
+				}
+				AND = {
+					OR = {
+						# [northmen, anduinrim, rohirrim] - Southern Mirkwood
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = southern_mirkwood_name value = -0.1 } } }
+								FOR = { check_variable = { which = southern_mirkwood_name value = 0.1 } }
+							}
+						}
+						# [spiders, mordorian] - Southern Mirkwood
+						AND = {
+							OR = {
+								is_culture_group = spiders
+								is_culture_group = mordorian
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = southern_mirkwood_name value = 0.9 } } }
+								FOR = { check_variable = { which = southern_mirkwood_name value = 1.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Southern Mirkwood
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = southern_mirkwood_name value = 1.9 } } }
+								FOR = { check_variable = { which = southern_mirkwood_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 720
+					owns = 721
+					owns = 723
+					owns = 725
+					owns = 1435
+					owns = 1436
+				}
+				AND = {
+					OR = {
+						# [northmen] - Woodman's Realm
+						AND = {
+							is_culture_group = northmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = woodman's_realm_name value = -0.1 } } }
+								FOR = { check_variable = { which = woodman's_realm_name value = 0.1 } }
+							}
+						}
+						# [anduinrim] - Woodman's Realm
+						AND = {
+							is_culture_group = anduinrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = woodman's_realm_name value = 0.9 } } }
+								FOR = { check_variable = { which = woodman's_realm_name value = 1.1 } }
+							}
+						}
+						# [rohirrim] - Woodman's Realm
+						AND = {
+							is_culture_group = rohirrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = woodman's_realm_name value = 1.9 } } }
+								FOR = { check_variable = { which = woodman's_realm_name value = 2.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Woodman's Realm
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = woodman's_realm_name value = 2.9 } } }
+								FOR = { check_variable = { which = woodman's_realm_name value = 3.1 } }
+							}
+						}
+					}
+					owns = 708
+					owns = 709
+					owns = 710
+					owns = 715
+					owns = 716
+				}
+				AND = {
+					OR = {
+						# [northmen, anduinrim, rohirrim] - Necromancer's Realm
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = necromancer's_realm_name value = -0.1 } } }
+								FOR = { check_variable = { which = necromancer's_realm_name value = 0.1 } }
+							}
+						}
+						# [wicked_dwarves, dwarves] - Necromancer's Realm
+						AND = {
+							OR = {
+								is_culture_group = wicked_dwarves
+								is_culture_group = dwarves
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = necromancer's_realm_name value = 0.9 } } }
+								FOR = { check_variable = { which = necromancer's_realm_name value = 1.1 } }
+							}
+						}
+						# [spiders, mordorian] - Necromancer's Realm
+						AND = {
+							OR = {
+								is_culture_group = spiders
+								is_culture_group = mordorian
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = necromancer's_realm_name value = 1.9 } } }
+								FOR = { check_variable = { which = necromancer's_realm_name value = 2.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Necromancer's Realm
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = necromancer's_realm_name value = 2.9 } } }
+								FOR = { check_variable = { which = necromancer's_realm_name value = 3.1 } }
+							}
+						}
+					}
+					owns = 722
+					owns = 724
+					owns = 726
+					owns = 727
+					owns = 1433
+					owns = 1434
+				}
+				AND = {
+					OR = {
+						# [northmen, anduinrim, rohirrim] - Mirkwood Narrows
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = mirkwood_narrows_name value = -0.1 } } }
+								FOR = { check_variable = { which = mirkwood_narrows_name value = 0.1 } }
+							}
+						}
+						# [spiders, mordorian] - Mirkwood Narrows
+						AND = {
+							OR = {
+								is_culture_group = spiders
+								is_culture_group = mordorian
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = mirkwood_narrows_name value = 0.9 } } }
+								FOR = { check_variable = { which = mirkwood_narrows_name value = 1.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Mirkwood Narrows
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = mirkwood_narrows_name value = 1.9 } } }
+								FOR = { check_variable = { which = mirkwood_narrows_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 1432
+					owns = 718
+				}
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			# [northmen, anduinrim, rohirrim] - Foreryn Galen
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 695
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = foreryn_galen_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = foreryn_galen_name value = 0.1 } } }
+					}
+				}
+				1426 = { state_scope = { change_region_name = "Northern Greenwood" } }
+				1426 = { change_province_name = "Lower Forest River Vale" }
+				695 = { change_province_name = "Upper Forest River Vale" }
+				owner = { FOR = { set_variable = { which = foreryn_galen_name value = 0 } } }
+			}
+			# [spiders, mordorian] - Foreryn Galen
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = spiders
+							is_culture_group = mordorian
+						}
+					}
+					province_id = 695
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = foreryn_galen_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = foreryn_galen_name value = 1.1 } } }
+					}
+				}
+				1426 = { state_scope = { change_region_name = "Northern Mirkwood" } }
+				owner = { FOR = { set_variable = { which = foreryn_galen_name value = 1 } } }
+			}
+			# [teleri, dunedain, eldar] - Foreryn Galen
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 695
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = foreryn_galen_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = foreryn_galen_name value = 2.1 } } }
+					}
+				}
+				1426 = { state_scope = { change_region_name = "Foreryn Galen" } }
+				1426 = { change_province_name = "Lower Nan Taurduin" }
+				695 = { change_province_name = "Upper Nan Taurduin" }
+				owner = { FOR = { set_variable = { which = foreryn_galen_name value = 2 } } }
+			}
+			# [northmen, anduinrim, rohirrim] - Annûneryn Galen
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 697
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = annuneryn_galen_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = annuneryn_galen_name value = 0.1 } } }
+					}
+				}
+				1428 = { state_scope = { change_region_name = "Western Greenwood" } }
+				owner = { FOR = { set_variable = { which = annuneryn_galen_name value = 0 } } }
+			}
+			# [spiders, mordorian] - Annûneryn Galen
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = spiders
+							is_culture_group = mordorian
+						}
+					}
+					province_id = 697
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = annuneryn_galen_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = annuneryn_galen_name value = 1.1 } } }
+					}
+				}
+				1428 = { state_scope = { change_region_name = "Western Mirkwood" } }
+				owner = { FOR = { set_variable = { which = annuneryn_galen_name value = 1 } } }
+			}
+			# [teleri, dunedain, eldar] - Annûneryn Galen
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 697
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = annuneryn_galen_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = annuneryn_galen_name value = 2.1 } } }
+					}
+				}
+				1428 = { state_scope = { change_region_name = "Annûneryn Galen" } }
+				owner = { FOR = { set_variable = { which = annuneryn_galen_name value = 2 } } }
+			}
+			# [northmen, anduinrim, rohirrim] - Taur-nu-Fuin
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 699
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = taur-nu-fuin_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = taur-nu-fuin_name value = 0.1 } } }
+					}
+				}
+				702 = { change_province_name = "Forest Marshes" }
+				owner = { FOR = { set_variable = { which = taur-nu-fuin_name value = 0 } } }
+			}
+			# [mordorian] - Taur-nu-Fuin
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = mordorian }
+					province_id = 699
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = taur-nu-fuin_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = taur-nu-fuin_name value = 1.1 } } }
+					}
+				}
+				699 = { change_province_name = "Enchanted Vale" }
+				owner = { FOR = { set_variable = { which = taur-nu-fuin_name value = 1 } } }
+			}
+			# [teleri, dunedain, eldar] - Taur-nu-Fuin
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 699
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = taur-nu-fuin_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = taur-nu-fuin_name value = 2.1 } } }
+					}
+				}
+				699 = { change_province_name = "Nan Gûlduin" }
+				702 = { change_province_name = "Tauraelin" }
+				owner = { FOR = { set_variable = { which = taur-nu-fuin_name value = 2 } } }
+			}
+			# [northmen] - Woodland Realm
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = northmen }
+					province_id = 690
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = woodland_realm_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = woodland_realm_name value = 0.1 } } }
+					}
+				}
+				700 = { change_province_name = "Bendborg" }
+				owner = { FOR = { set_variable = { which = woodland_realm_name value = 0 } } }
+			}
+			# [anduinrim] - Woodland Realm
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = anduinrim }
+					province_id = 690
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = woodland_realm_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = woodland_realm_name value = 1.1 } } }
+					}
+				}
+				700 = { change_province_name = "Bendbuarg" }
+				owner = { FOR = { set_variable = { which = woodland_realm_name value = 1 } } }
+			}
+			# [rohirrim] - Woodland Realm
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = rohirrim }
+					province_id = 690
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = woodland_realm_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = woodland_realm_name value = 2.1 } } }
+					}
+				}
+				700 = { change_province_name = "Bendburg" }
+				owner = { FOR = { set_variable = { which = woodland_realm_name value = 2 } } }
+			}
+			# [teleri, dunedain, eldar] - Woodland Realm
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 690
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = woodland_realm_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = woodland_realm_name value = 3.1 } } }
+					}
+				}
+				700 = { change_province_name = "Tir Bendburn" }
+				owner = { FOR = { set_variable = { which = woodland_realm_name value = 3 } } }
+			}
+			# [northmen, anduinrim, rohirrim] - Southern Mirkwood
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 720
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = southern_mirkwood_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = southern_mirkwood_name value = 0.1 } } }
+					}
+				}
+				720 = { state_scope = { change_region_name = "Southeastern Greenwood" } }
+				721 = { change_province_name = "Mirkwolkandorn" }
+				owner = { FOR = { set_variable = { which = southern_mirkwood_name value = 0 } } }
+			}
+			# [spiders, mordorian] - Southern Mirkwood
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = spiders
+							is_culture_group = mordorian
+						}
+					}
+					province_id = 720
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = southern_mirkwood_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = southern_mirkwood_name value = 1.1 } } }
+					}
+				}
+				720 = { state_scope = { change_region_name = "Southern Mirkwood" } }
+				owner = { FOR = { set_variable = { which = southern_mirkwood_name value = 1 } } }
+			}
+			# [teleri, dunedain, eldar] - Southern Mirkwood
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 720
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = southern_mirkwood_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = southern_mirkwood_name value = 2.1 } } }
+					}
+				}
+				720 = { state_scope = { change_region_name = "Hareryn Galen" } }
+				721 = { change_province_name = "Ceber Fanuifuin" }
+				owner = { FOR = { set_variable = { which = southern_mirkwood_name value = 2 } } }
+			}
+			# [northmen] - Woodman's Realm
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = northmen }
+					province_id = 708
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = woodman's_realm_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = woodman's_realm_name value = 0.1 } } }
+					}
+				}
+				709 = { change_province_name = "Woodmen-town" }
+				716 = { change_province_name = "Darniborg" }
+				owner = { FOR = { set_variable = { which = woodman's_realm_name value = 0 } } }
+			}
+			# [anduinrim] - Woodman's Realm
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = anduinrim }
+					province_id = 708
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = woodman's_realm_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = woodman's_realm_name value = 1.1 } } }
+					}
+				}
+				709 = { change_province_name = "Woodmen-town" }
+				716 = { change_province_name = "Darnibaurg" }
+				owner = { FOR = { set_variable = { which = woodman's_realm_name value = 1 } } }
+			}
+			# [rohirrim] - Woodman's Realm
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = rohirrim }
+					province_id = 708
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = woodman's_realm_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = woodman's_realm_name value = 2.1 } } }
+					}
+				}
+				709 = { change_province_name = "Woodmen-town" }
+				716 = { change_province_name = "Darniburg" }
+				owner = { FOR = { set_variable = { which = woodman's_realm_name value = 2 } } }
+			}
+			# [teleri, dunedain, eldar] - Woodman's Realm
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 708
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = woodman's_realm_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = woodman's_realm_name value = 3.1 } } }
+					}
+				}
+				709 = { change_province_name = "Ost Woodhold" }
+				owner = { FOR = { set_variable = { which = woodman's_realm_name value = 3 } } }
+			}
+			# [northmen, anduinrim, rohirrim] - Necromancer's Realm
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 722
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = necromancer's_realm_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = necromancer's_realm_name value = 0.1 } } }
+					}
+				}
+				722 = { state_scope = { change_region_name = "Southwestern Greenwood" } }
+				727 = { change_province_name = "Naquath Hlain" }
+				owner = { FOR = { set_variable = { which = necromancer's_realm_name value = 0 } } }
+			}
+			# [wicked_dwarves, dwarves] - Necromancer's Realm
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = wicked_dwarves
+							is_culture_group = dwarves
+						}
+					}
+					province_id = 722
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = necromancer's_realm_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = necromancer's_realm_name value = 1.1 } } }
+					}
+				}
+				727 = { change_province_name = "Tumun-Gabil" }
+				owner = { FOR = { set_variable = { which = necromancer's_realm_name value = 1 } } }
+			}
+			# [spiders, mordorian] - Necromancer's Realm
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = spiders
+							is_culture_group = mordorian
+						}
+					}
+					province_id = 722
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = necromancer's_realm_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = necromancer's_realm_name value = 2.1 } } }
+					}
+				}
+				722 = { state_scope = { change_region_name = "Necromancer's Realm" } }
+				724 = { change_province_name = "Lughâsh" }
+				726 = { change_province_name = "Smalug" }
+				727 = { change_province_name = "Dol Guldur" }
+				owner = { FOR = { set_variable = { which = necromancer's_realm_name value = 2 } } }
+			}
+			# [teleri, dunedain, eldar] - Necromancer's Realm
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 722
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = necromancer's_realm_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = necromancer's_realm_name value = 3.1 } } }
+					}
+				}
+				722 = { state_scope = { change_region_name = "Eryn Lasgalen" } }
+				724 = { change_province_name = "Minas Celebolf" }
+				726 = { change_province_name = "Minas Gîl" }
+				727 = { change_province_name = "Amon Lanc" }
+				owner = { FOR = { set_variable = { which = necromancer's_realm_name value = 3 } } }
+			}
+			# [northmen, anduinrim, rohirrim] - Mirkwood Narrows
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 718
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = mirkwood_narrows_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = mirkwood_narrows_name value = 0.1 } } }
+					}
+				}
+				1432 = { state_scope = { change_region_name = "Greenwood Narrows" } }
+				owner = { FOR = { set_variable = { which = mirkwood_narrows_name value = 0 } } }
+			}
+			# [spiders, mordorian] - Mirkwood Narrows
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = spiders
+							is_culture_group = mordorian
+						}
+					}
+					province_id = 718
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = mirkwood_narrows_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = mirkwood_narrows_name value = 1.1 } } }
+					}
+				}
+				1432 = { state_scope = { change_region_name = "Mirkwood Narrows" } }
+				owner = { FOR = { set_variable = { which = mirkwood_narrows_name value = 1 } } }
+			}
+			# [teleri, dunedain, eldar] - Mirkwood Narrows
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 718
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = mirkwood_narrows_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = mirkwood_narrows_name value = 2.1 } } }
+					}
+				}
+				1432 = { state_scope = { change_region_name = "Eryn Galen Narrows" } }
+				owner = { FOR = { set_variable = { which = mirkwood_narrows_name value = 2 } } }
+			}
+		}
+	}
 	rename_uvanwaith = {
 		picture = "renaming"
 		potential = {
