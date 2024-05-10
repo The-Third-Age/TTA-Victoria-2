@@ -13,7 +13,6 @@ categories =  {
 		color = { 0 0 255 }
 	}
 
-	# Have not done yet
 	arctic = {
 		movement_cost = 1.0
 		
@@ -4523,6 +4522,91 @@ categories =  {
 		mine_rgo_eff = 0.1
 		
 		supply_limit = 5
+	}
+	
+	########################### }
+	##### OTHER TERRAINS  ##### {
+	###########################
+
+	# arctic
+	forodwaith = {
+		movement_cost = 1.0
+		
+		color = { 235 235 235 }
+		
+		farm_rgo_size = -0.5
+		farm_rgo_eff = -0.2
+		mine_rgo_size = -0.0
+		mine_rgo_eff = -0.2
+		
+		min_build_railroad = 3
+	}
+	
+	# mountain
+	numenor = {
+		movement_cost = 1.4
+		
+		defence = 2
+		combat_width = -0.5
+		
+		color = { 117 108 119 }
+		
+		farm_rgo_size = -0.3
+		farm_rgo_eff = -0.3
+		mine_rgo_size = 0.2
+		mine_rgo_eff = 0.2
+		
+		supply_limit = 1
+		
+		min_build_railroad = 2
+	}
+	
+	# hills
+	tol_fuin = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# hills
+	tol_himling = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
+	}
+	
+	# hills
+	tol_morwen = {
+		movement_cost = 1.2
+		
+		defence = 1
+		combat_width = -0.25
+		
+		color = { 135 70 0 }
+
+		farm_rgo_eff = -0.1
+		mine_rgo_eff = -0.1		
+		supply_limit = 3
+		
+		min_build_railroad = 1
 	}
 }
 
