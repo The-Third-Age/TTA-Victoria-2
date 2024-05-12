@@ -3,15 +3,45 @@ All notable changes will be documented in this file.
 
 ## [v0.5]() - In Development
 
+
+### Highlights
+ - Barding Realm flavor complete (In development)
+ - Map rework completed -- over 300 new provinces and many unique terrains (split between v0.4 and v0.5)
+ - Plurality reworked into Popular Anxiety
+ - Dynamic Localisation for select events and decisions
+
 ### New Tags
- - In Eriador: House of the Wind, Windan Elves, Dourhands of Ered Luin, Emyn Beriad, Eagles of the Eerie
+ - In Eriador: House of the Wind, Windan Elves, Dourhands of Ered Luin, Emyn Beriad, Eagles of the Eerie, Girithlin, Henlan, Fonntir, Saerlann, Caladir, Enedbund, Dol Tinereb, Mirobel, Mount Gram, Skuthruga Clan, Kosh Clan, Snow Orcs of Angmar
+ - In Rhovanion: Alanborg, Vidusborg, Sauthborg, Othlebed
+ - In Rhûn: Gathod, Pris, Elgaer, Agasha, Utal, Gord, Narkad, Barak
+ - In Upper Anduin Vale: Herimundi of the Vale
+ - In Enedwaith: Angrast, Magur
 
 ### New Cultures
- - In Eriador: Dourhands, Blue Mountain Goblins, Siredain
+ - In Eriador: Dourhands, Blue Mountain Goblins, Siredain, Hollin-folk, Saerlanner, Shornbeard, Gram-goblin (replacing Angmar Orc), Fallohide, Harfoot, Stoor (all 3 hobbit cultures replacing the existing ones)
+ - In Rohan: Marshmen (also in Gondor), Isenmen
+ - In Rhovanion: Aivathiuda (replacing Ehwathrim), Anthar, Gadraught
+ - In Upper Anduin Vale: Beiabarnae (Men of the Misty Mountains), Melburgi, Herimundi, Black Huorn
+
+### Mechanics/Content
+ - Diplomacy and Foreign Investment continent buttons actually work now
+ - Many mountain passes added in the Angmar Mountains, Andrast Mountains, Grey Mountains and Ered Luin
+ - Tunnels added from Moria to Goblin Town
+ - Railroading is starting to be fleshed out
+ - Scripted Harondor colonization for Umbar, Haruzan, Chelkar and Mordor
+ - Barding Realm flavor
+ - Dynamic Localisation
+ - Popular Anxiety (replacing Plurality)
 
 ### Graphics
- - Reworked Lindon and Ered Luin provinces
- - New terrain icons for Lindon and Ered Luin
+ - Reworked Lindon, Ered Luin, Eriador, Angmar, Enedwaith, Upper Anduin Vale, Grey Mountains, Rhûn, Rohan and Rhovanion provinces
+ - New terrain icons for Lindon, Ered Luin, Eriador, Angmar, Enedwaith, Upper Anduin Vale, Grey Mountains, Rhûn, Rohan, Rhovanion and Forodwaith
+   - All province now have unique (or at least regional) terrain images -- no province has the default province images from vanilla
+ - Most mountain ranges have been updated to be wasteland provinces
+   - Those that are not 
+ - Updated major event look
+ - "Major Decision" -- decision images can stretch across the entire decision block now
+ - Updated country and province font to be the same (and be able to display special characters)
 !
 
 ## [v0.4](https://github.com/The-Third-Age/TTA-Victoria-2/releases/tag/v0.4) - 20 Aug 2023
