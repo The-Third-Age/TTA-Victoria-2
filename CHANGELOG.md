@@ -32,6 +32,7 @@ All notable changes will be documented in this file.
  - Barding Realm flavor
  - Dynamic Localisation
  - Popular Anxiety (replacing Plurality)
+ - Permanent Province Modifiers (replacing Crime)
 
 ### Graphics
  - Reworked Lindon, Ered Luin, Eriador, Angmar, Enedwaith, Upper Anduin Vale, Grey Mountains, Rhûn, Rohan and Rhovanion provinces
