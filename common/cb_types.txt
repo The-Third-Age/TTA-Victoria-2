@@ -60,6 +60,7 @@ acquire_core_state
 annex_core_country
 acquire_state
 acquire_substate_region
+demand_state_for_ally
 place_in_the_sun
 colonial_competition
 cut_down_to_size
@@ -1004,6 +1005,66 @@ acquire_state = {
 	
 	war_name = WAR_TAKE_NAME
 	
+	on_add = {
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+demand_state_for_ally = {
+	sprite_index = 18
+	is_triggered_only = yes
+	months = 12
+	construction_speed = 0.5
+	
+	badboy_factor = 11
+	prestige_factor = 2
+	peace_cost_factor = 0.5
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	# scope = target
+	# THIS = country applying wargoal
+	can_use = {
+		is_independant = yes
+	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		FROM = { alliance_with = THIS }
+	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal's state
+	allowed_states = {
+	    any_owned_province = {
+		    OR = {
+			    NOT = {is_core = this}
+				is_core = THIS
+			}
+		}
+	}
+
+	po_transfer_provinces = yes
+	
+	war_name = WAR_DEMAND_FOR_ALLY
+	
+	# scope = target
+	# THIS = country that applied wargoal
 	on_add = {
 		move_issue_percentage = { 
 			from = jingoism 
