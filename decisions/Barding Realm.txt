@@ -405,6 +405,7 @@ political_decisions = {
 			
 			set_global_flag = DAL_invited_the_grammas
 			
+			empty_line_decisions_loc = {}
 			DAL_invite_grammas_loc = {}
 		}
 	}
@@ -546,6 +547,7 @@ political_decisions = {
 			
 			set_global_flag = invited_the_rivermen
 			
+			empty_line_decisions_loc = {}
 			DAL_send_ultimatum_to_rivermen_loc = {}
 		}
 	}
@@ -780,6 +782,8 @@ political_decisions = {
 			prestige = 5
 			add_accepted_culture = rivermen
 			set_global_flag = DAL_proclaimed_lordship_over_the_rivermen
+			
+			empty_line_decisions_loc = {}
 			DAL_proclaim_lord_of_rivermen_loc = {}
 		}
 	}
@@ -910,8 +914,12 @@ political_decisions = {
 				owner = { treasury = -50000 }
 			}
 			
-			set_global_flag = DAL_meres_end_boat_lift_constructing
+			empty_line_decisions_loc = {}
+			DAL_constructing_meres_end_boat_lift_money_loc = {}
+			empty_line_decisions_loc = {}
 			DAL_constructing_meres_end_boat_lift_loc = {}
+			
+			set_global_flag = DAL_meres_end_boat_lift_constructing
 		}
 	}
 	
@@ -975,6 +983,8 @@ political_decisions = {
 			remove_country_modifier = great_advisor
 			add_country_modifier = { name = great_advisor duration = 3650 }
 			
+			DAL_bard_i_only_loc = {}
+			
 			set_global_flag = DAL_appointed_lifstan
 		}
 	}
@@ -994,6 +1004,8 @@ political_decisions = {
 		effect = {
 			remove_country_modifier = great_diplomat
 			add_country_modifier = { name = great_diplomat duration = 3650 }
+			
+			DAL_bard_i_only_loc = {}
 			
 			set_global_flag = DAL_appointed_erland
 		}
@@ -1031,7 +1043,106 @@ political_decisions = {
 				militancy = -4
 				consciousness = -4
 			}
+			
+			plurality = -1
+			
+			empty_line_decisions_loc = {}
+			DAL_bard_i_only_loc = {}
+			
 			set_global_flag = DAL_appointed_tilda
+		}
+	}
+	
+	reforms_of_bard_i = {
+		picture = "Barding Realm/DAL_reforms_bard_i"
+		potential = {
+			tag = DAL
+			nationalvalue = bard_i
+			NOT = { has_global_flag = DAL_reforms_bard_i }
+		}
+		
+		allow = {
+			OR = {
+				population_2 = 1
+				AND = {
+					ai = yes
+					year = 2970
+				}
+			}
+		}
+		
+		effect = {
+			random_owned = {
+				limit = {
+					owner = { nobility_autonomy = large_noble_autonomy }
+				}
+				owner = { political_reform = medium_noble_autonomy }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { noble_tax_contribution = small_tax_contribution }
+				}
+				owner = { political_reform = medium_tax_contribution }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { serfdom = enforced_serfdom }
+				}
+				owner = { political_reform = discouraged_serfdom }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							crown_land_ownership = five_land_ownership
+							crown_land_ownership = ten_land_ownership
+						}
+					}
+				}
+				owner = { political_reform = thirty_land_ownership }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { city_jurisdiction = independent_cities }
+				}
+				owner = { social_reform = chartered_cities }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { pensions = no_pensions }
+				}
+				owner = { social_reform = trinket_pensions }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { nobility_autonomy = large_noble_autonomy }
+						NOT = { noble_tax_contribution = small_tax_contribution }
+						NOT = { serfdom = enforced_serfdom }
+						NOT = { crown_land_ownership = five_land_ownership }
+						NOT = { crown_land_ownership = ten_land_ownership }
+						NOT = { city_jurisdiction = independent_cities }
+						NOT = { pensions = no_pensions }
+					}
+				}
+				owner = {
+					prestige = 15
+					plurality = -3
+				}
+			}
+			
+			empty_line_decisions_loc = {}
+			DAL_reforms_bard_i_loc = {}
+			empty_line_decisions_loc = {}
+			DAL_bard_i_only_loc = {}
+			
+			set_global_flag = DAL_reforms_bard_i
 		}
 	}
 }
@@ -1055,6 +1166,8 @@ political_decisions = {
 		
 		effect = {
 			642 = { add_province_modifier = { name = royal_lord duration = 9125 } }
+			
+			DAL_bain_i_only_loc = { }
 			
 			set_global_flag = DAL_girion_bainson_sent_to_austriborg
 		}
@@ -1116,9 +1229,11 @@ political_decisions = {
 				country_event = 50925
 			}
 			
+			empty_line_decisions_loc = {}
 			DAL_trading_mechanic_notes_loc = {}
+			empty_line_decisions_loc = {}
 			DAL_trading_realm_count_loc = {}
-			empty_line_loc = {}
+			empty_line_decisions_loc = {}
 			
 			# Displays the realms currently being traded with
 			random_owned = {
