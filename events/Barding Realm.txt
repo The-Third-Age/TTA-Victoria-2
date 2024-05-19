@@ -1279,8 +1279,11 @@ country_event = {
 			}
 		}
 		
-		# Clears leader-specific modifiers (generic and specific)
+		# Clears leader-specific modifiers (generic and specific) and handles standard popular anxiety changes
 		country_event = 3501
+		
+		# Bard I's death hits harder than the standard leader [due to him being a good ruler and being the start of the dynasty
+		plurality = 5
 		
 		# Set the next leader
 		random_owned = {
@@ -1310,8 +1313,6 @@ country_event = {
 			}
 			owner = { country_event = 50945 }
 		}
-		
-		plurality = 3
 		
 		# Clean up to make sure we don't break something with a flag being left around
 		clr_country_flag = bain_i_next_leader
@@ -1344,7 +1345,7 @@ country_event = {
 		prestige = 5
 		nationalvalue = bain_i
 		
-		plurality = -5
+		plurality = -3
 	}
 }
 
@@ -1435,7 +1436,7 @@ country_event = {
 			}
 		}
 		
-		# Clears leader-specific modifiers (generic and specific)
+		# Clears leader-specific modifiers (generic and specific) and handles standard popular anxiety changes
 		country_event = 3501
 		
 		# Set the next leader
@@ -1459,8 +1460,6 @@ country_event = {
 			}
 			owner = { country_event = 50945 }
 		}
-		
-		plurality = 3
 		
 		# Clean up to make sure we don't break something with a flag being left around
 		clr_country_flag = brand_i_next_leader
@@ -1492,7 +1491,7 @@ country_event = {
 		prestige = 5
 		nationalvalue = brand_i
 		
-		plurality = -5
+		plurality = -3
 	}
 }
 
@@ -1578,7 +1577,7 @@ country_event = {
 			}
 		}
 		
-		# Clears leader-specific modifiers (generic and specific)
+		# Clears leader-specific modifiers (generic and specific) and handles standard popular anxiety changes
 		country_event = 3501
 		
 		# Set the next leader
@@ -1595,8 +1594,6 @@ country_event = {
 			}
 			owner = { country_event = 50945 }
 		}
-		
-		plurality = 3
 		
 		# Clean up to make sure we don't break something with a flag being left around
 		clr_country_flag = bard_ii_next_leader
@@ -1627,7 +1624,7 @@ country_event = {
 		prestige = 5
 		nationalvalue = bard_ii
 		
-		plurality = -5
+		plurality = -3
 	}
 }
 
@@ -1672,10 +1669,8 @@ country_event = {
 	option = {
 		name = "He will be missed"
 		
-		# Clears leader-specific modifiers (generic and specific) and sets Generic Leader as leader
+		# Clears leader-specific modifiers (generic and specific), sets Generic Leader as leader and handles standard popular anxiety changes
 		country_event = 3501
-		
-		plurality = 3
 		
 		FOR = { country_event = 33009 }
 	}

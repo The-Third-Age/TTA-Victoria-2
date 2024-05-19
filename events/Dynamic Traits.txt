@@ -128,7 +128,7 @@ country_event = {
 			owner = { country_event = 3500 }
 		}
 		
-		plurality = 2
+		plurality = 5
 		
 		# Make sure that we do the right thing with the leader the next time a leader dies for this realm
 		clr_country_flag = knows_next_leader
@@ -502,5 +502,20 @@ country_event = {
 			who = FROM
 			value = -100
 		}
+	}
+}
+
+# The End of the Monarchy
+country_event = {
+	id = 3508
+	title = "The End of the Monarchy"
+	desc = "EVTDESC3508"
+	picture = "administration"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Damn. To our new leader!"
+		
+		country_event = 3501
 	}
 }

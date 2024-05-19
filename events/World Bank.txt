@@ -4,7 +4,7 @@
 # World Bank Events: {
 # 99000 - 99799 }
 
-# Flavor Cleanup
+# DAL Flavor Cleanup
 country_event = {
 	id = 99001
 	picture = "production"
@@ -15,6 +15,26 @@ country_event = {
 	
 	option = {
 		name = "Fix it please"
+		
+		# If turned in a Republic of some kind, Bard's line no longer rules
+		random_country = {
+			limit = {
+				OR = {
+					nationalvalue = bard_i
+					nationalvalue = bain_i
+					nationalvalue = brand_i
+					nationalvalue = bard_ii
+					nationalvalue = regency
+				}
+				OR = {
+					government = democracy
+					government = hobbit_realm
+					government = northmen_democracy
+				}
+			}
+			
+			country_event = 3508
+		}
 		
 		# Building Mere's End Boat Life {
 		random_country = { # Boat lift started building, then province switched hands
