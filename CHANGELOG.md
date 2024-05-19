@@ -25,7 +25,7 @@ All notable changes will be documented in this file.
 
 ### Mechanics/Content
  - Diplomacy and Foreign Investment continent buttons actually work now
- - Many mountain passes added in the Angmar Mountains, Andrast Mountains, Grey Mountains and Ered Luin
+ - Many mountain passes added in the Angmar Mountains, Andrast Mountains, Grey Mountains, Ered Luin and Pinnon Rhûn
  - Tunnels added from Moria to Goblin Town
  - Railroading is starting to be fleshed out
  - Scripted Harondor colonization for Umbar, Haruzan, Chelkar and Mordor
@@ -39,7 +39,6 @@ All notable changes will be documented in this file.
  - New terrain icons for Lindon, Ered Luin, Eriador, Angmar, Enedwaith, Upper Anduin Vale, Grey Mountains, Rhûn, Rohan, Rhovanion and Forodwaith
    - All province now have unique (or at least regional) terrain images -- no province has the default province images from vanilla
  - Most mountain ranges have been updated to be wasteland provinces
-   - Those that are not 
  - Updated major event look
  - "Major Decision" -- decision images can stretch across the entire decision block now
  - Updated country and province font to be the same (and be able to display special characters)
