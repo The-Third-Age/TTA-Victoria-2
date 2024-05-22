@@ -65,6 +65,10 @@ political_decisions = {
 			
 			654 = { add_province_modifier = { name = esgaroth_trade_ii duration = -1 } }
 			
+			# Setting up Merchants vs Guild
+			add_country_modifier = { name = DAL_merchant_power_4 duration = -1 }
+			FOR = { set_variable = { which = DAL_merchants_fishers_bop value = -4 } } # 4 in favor of the Merchants
+			
 			# Setting up Leaders (-1 = unborn)
 			FOR = { set_variable = { which = bard_i_age value = 55 } }
 			FOR = { set_variable = { which = bain_i_age value = 25 } }

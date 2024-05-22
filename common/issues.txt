@@ -511,12 +511,26 @@ social_reforms = {
 		granted_exclusive_tr = {
 			import_cost = 0.2
 			tariff_efficiency_modifier = 0.1
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		limited_exclusive_tr = {
 			import_cost = 0.1
 			tariff_efficiency_modifier = 0.05
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		abolished_exclusive_tr = {
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 	}
 	state_supplies_monopoly = {
@@ -527,13 +541,27 @@ social_reforms = {
 			supply_consumption = 0.5
 			rich_income_modifier = 0.25
 			poor_income_modifier = -0.1
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		allowed_state_supplies = {
 			supply_consumption = 0.25
 			rich_income_modifier = 0.1
 			poor_income_modifier = -0.05
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		restricted_state_supplies = {
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 	}
 	city_jurisdiction = {
@@ -547,6 +575,11 @@ social_reforms = {
 			tax_efficiency = -0.03
 			suppression_points_modifier = -0.2
 			leadership_modifier = -0.1
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		chartered_cities = {
 			global_pop_militancy_modifier = 0.02
@@ -555,53 +588,107 @@ social_reforms = {
 			tax_efficiency = -0.02
 			suppression_points_modifier = -0.1
 			leadership_modifier = -0.05
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		territorial_cities = {
 			global_pop_militancy_modifier = 0.01
 			global_pop_consciousness_modifier = -0.02
 			administrative_efficiency_modifier = -0.01
 			tax_efficiency = -0.01
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		royal_cities = {
 			suppression_points_modifier = 0.1
 			leadership_modifier = 0.1
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 	}
 	pensions = {
 		next_step_only = yes
 		
 		no_pensions = {
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		trinket_pensions = {
 			pension_level	= 0.05
 			global_immigrant_attract = 0.01
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		low_pensions = {
 			pension_level	= 0.10
 			global_immigrant_attract = 0.02
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		acceptable_pensions = {
 			pension_level	= 0.15
 			global_immigrant_attract = 0.03
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		good_pensions = {
 			pension_level	= 0.20
 			global_immigrant_attract = 0.04
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 	}
 	apprenticeship = {
 		next_step_only = yes
 		hereditary = {
 			factory_output = -0.05
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		appointment = {
 			social_reform_desire = 0.1
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 		guild_school = {
 			social_reform_desire = 0.2
 			factory_output = 0.05
 			education_efficiency_modifier = 0.05
 			research_points_modifier = 0.01
+			
+			allow = {
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			}
 		}
 	}
 }
