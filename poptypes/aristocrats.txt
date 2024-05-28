@@ -6,14 +6,17 @@ can_build = yes
 research_points = 0.75
 research_optimum = 0.02
 
-rebel =
-{
+rebel = {
 	infantry = 0.1
 	swordsmen = 0.3
 	archers = 0.3
 	scouts = 0.1
 	heavy_cavalry = 0.1
 	horse_archers = 0.1
+}
+
+life_needs = {
+	food = 5.25
 }
 
 everyday_needs = {
@@ -27,11 +30,6 @@ everyday_needs = {
 	horses = 5
 }
 
-life_needs = {
-	food = 5.25
-}
-
-
 luxury_needs = {
 	ranged_gear = 4
 	melee_gear = 2
@@ -39,7 +37,6 @@ luxury_needs = {
 	horses = 20
 	artillery = 0.1 # It's a meme. Deal with it
 }
-
 
 country_migration_target = {
 	factor = 1
@@ -4816,4 +4813,4 @@ issues = {
 			luxury_needs = 1
 		}
 	}
-} 
+}
