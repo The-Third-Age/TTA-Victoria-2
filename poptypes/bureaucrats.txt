@@ -7,8 +7,7 @@ research_optimum = 0.01
 
 demote_migrant = yes
 
-rebel =
-{
+rebel = {
 	infantry = 0.5
 	archers = 0.5
 }
@@ -22,26 +21,18 @@ life_needs_income = {
 	weight = 1
 }
 
-everyday_needs_income =
-{
+everyday_needs_income = {
 	type = administration
 	weight = 1
 }
 
-luxury_needs_income =
-{
+luxury_needs_income = {
 	type = administration
 	weight = 1
 }
 
-
-luxury_needs = {
-	clothes = 10
-	furniture = 10
-	liquor = 10
-	tea = 10
-	horses = 1
-	ranged_gear = 1
+life_needs = {
+	food = 5.25
 }
 
 everyday_needs = {
@@ -54,8 +45,14 @@ everyday_needs = {
 	tobacco = 3
 	tea = 5
 }
-life_needs = {
-	food = 5.25
+
+luxury_needs = {
+	clothes = 10
+	furniture = 10
+	liquor = 10
+	tea = 10
+	horses = 1
+	ranged_gear = 1
 }
 
 country_migration_target = {
@@ -4669,4 +4666,4 @@ issues = {
 			luxury_needs = 1
 		}
 	}
-} 
+}

@@ -5,13 +5,11 @@ strata = middle
 research_points = 3	#if max %, then 2 extra research points.
 research_optimum = 0.02	#2%
 
-rebel =
-{
+rebel = {
 	infantry = 0.8
 	archers = 0.1
 	swordsmen = 0.1
 }
-
 
 can_reduce_consciousness = yes
 
@@ -25,17 +23,13 @@ everyday_needs_income = {
 	weight = 1
 }
 
-luxury_needs_income =
-{
+luxury_needs_income = {
 	type = reforms
 	weight = 1
 }
 
-luxury_needs = {
-	clothes = 10
-	furniture = 10
-	liquor = 10
-	tea = 10
+life_needs = {
+	food = 5.25
 }
 
 everyday_needs = {
@@ -50,8 +44,11 @@ everyday_needs = {
 	horses = 1
 }
 
-life_needs = {
-	food = 5.25
+luxury_needs = {
+	clothes = 10
+	furniture = 10
+	liquor = 10
+	tea = 10
 }
 
 country_migration_target = {
@@ -4623,4 +4620,4 @@ issues = {
 			luxury_needs = 1
 		}
 	}
-}  
+}

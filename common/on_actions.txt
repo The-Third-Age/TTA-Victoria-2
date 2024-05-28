@@ -37,17 +37,13 @@ on_battle_lost = {
 }
 
 #country, from = occupier.
-on_surrender = 
-{
-
+on_surrender = {
 }
 
-on_new_great_nation = 
-{
+on_new_great_nation = {
 }
 
-on_lost_great_nation = 
-{
+on_lost_great_nation = {
 }
 
 on_election_tick = {
@@ -63,45 +59,38 @@ on_election_tick = {
 # Note: remember to use tag (allow_multiple_instances = yes)
 # in events specified below, so can be executed several times
 # for each acquired state.
-on_colony_to_state = 
-{
+on_colony_to_state = {
 	100 = 70000 # yes_slavery
 	100 = 70001 # removal of cores (flavor)
 }
+
 on_state_conquest = {
 	100 = 70000 # yes_slavery
 	100 = 70007 # non_accepted_slavery
 }
 
-on_colony_to_state_free_slaves =
-{
+on_colony_to_state_free_slaves = {
 }
 
-on_debtor_default =
-{
+on_debtor_default = {
 	100 = 70002
 }
 
-on_debtor_default_small =
-{
+on_debtor_default_small = {
 }
 
-on_debtor_default_second =
-{
+on_debtor_default_second = {
 	100 = 70003
 }
 
-on_civilize =
-{
+on_civilize = {
 	100 = 70005
 }
 
-on_my_factories_nationalized = 
-{
+on_my_factories_nationalized = {
 	100 = 70006
 }
 
-on_crisis_declare_interest =
-{
+on_crisis_declare_interest = {
 	100 = 18000
 }

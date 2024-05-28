@@ -4,8 +4,7 @@ strata = poor
 
 can_be_recruited = yes
 
-rebel =
-{
+rebel = {
 	infantry = 0.1
 	swordsmen = 0.3
 	pikemen = 0.3
@@ -22,12 +21,15 @@ everyday_needs_income = {
 	weight = 1.5
 }
 
-luxury_needs_income =
-{
+luxury_needs_income = {
 	type = reforms
 	weight = 1
 }
 
+life_needs = {
+	food = 5.25
+	wool =  1
+}
 
 everyday_needs = {
 	tea = 4
@@ -37,11 +39,6 @@ everyday_needs = {
 	furniture = 1
 	ranged_gear = 2
 	melee_gear = 1
-}
-
-life_needs = {
-	food = 5.25
-	wool =  1
 }
 
 luxury_needs = {	
@@ -4243,4 +4240,4 @@ issues = {
 			luxury_needs = 1
 		}
 	}
-} 
+}
