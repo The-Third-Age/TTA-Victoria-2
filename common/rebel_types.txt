@@ -15,7 +15,7 @@
 nationalist_rebels = {
 	icon = 1
 	
-	area = nation_culture 				# Stays within provinces of their culture
+	area = nation_culture				# Stays within provinces of their culture
 	break_alliance_on_win = no
 	
 	# <this is the governement in the country> = <this is what the rebels want>
@@ -41,10 +41,9 @@ nationalist_rebels = {
 		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
-	
-	defection = culture		# If the country seeks independence, defection specifies what type of provinces it wants.
-	independence = culture 		# Seeks independence for spawn province culture. Will not spawn at all if there is no suitable tag.
-	defect_delay = 12		# Can spontaneously declare independence after X months (earliest)
+	defection = culture			# If the country seeks independence, defection specifies what type of provinces it wants.
+	independence = culture		# Seeks independence for spawn province culture. Will not spawn at all if there is no suitable tag.
+	defect_delay = 12			# Can spontaneously declare independence after X months (earliest)
 	
 	allow_all_cultures = no
 	allow_all_religions = yes
@@ -53,14 +52,13 @@ nationalist_rebels = {
 	resilient = yes					# Does not disband on retreat
 	reinforcing = yes				# Does not receive reinforcements
 	general = yes					# Does use generals
-	smart = yes					# Does not assault forts, tactically withdraw from battle, etc.
+	smart = yes						# Does not assault forts, tactically withdraw from battle, etc.
 	unit_transfer = yes				# Units do remain after enforcing demands.
 	
-	occupation_mult = 5.0			# The amount of strength this rebel gains from taking provinces	
+	occupation_mult = 5.0			# The amount of strength this rebel gains from taking provinces
 
 	# triggers a general rising, modifier will be multiplied with the country's army strength and compared to the faction's strength
-	will_rise = 
-	{
+	will_rise = {
 		factor = 0.5
 		
 		modifier = {
@@ -104,25 +102,24 @@ nationalist_rebels = {
 						is_cultural_union = no
 						is_primary_culture = THIS
 						exists = no
-			 		}
-			 	}
-		 	}
+					}
+				}
+			}
 		}
 		modifier = {
 			factor = 3
-				location = {
-					any_core = {
-						is_primary_culture = THIS
-						exists = no
-			 		}
-		 	}
+			location = {
+				any_core = {
+					is_primary_culture = THIS
+					exists = no
+				}
+			}
 		}
 		modifier = {
 			factor = 0
-				is_cultural_union = THIS
+			is_cultural_union = THIS
 		}
 		
-
 		modifier = {
 			factor = 1.015
 			NOT = { is_culture_group = THIS }
@@ -142,10 +139,9 @@ nationalist_rebels = {
 				is_colonial = yes
 			}
 		}
-	
 	}
- 
- 	#This is checked for EACH province in the Area of Operations
+
+	#This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -174,9 +170,9 @@ nationalist_rebels = {
 		}
 	}
 	
- 	# Province Scope
- 	#siege_won_trigger = {
- 	#}
+	# Province Scope
+	#siege_won_trigger = {
+	#}
 	
 	#siege_won_effect = {
 	#}
@@ -210,7 +206,7 @@ nationalist_rebels = {
 patriot_rebels = {
 	icon = 1
 
-	area = nation_culture				 # Stays within provinces of their culture
+	area = nation_culture				# Stays within provinces of their culture
 
 	# <this is the governement in the country> = <this is what the rebels want>
 	government = {
@@ -235,7 +231,6 @@ patriot_rebels = {
 		cosmetic_2_govt = cosmetic_2_govt
 	}
 
-
 	defection = none		# If the country seeks independence, defection specifies what type of provinces it wants.
 	independence = none
 	defect_delay = 3		# Can spontaneously declare independence after X months (earliest)
@@ -248,7 +243,7 @@ patriot_rebels = {
 	resilient = yes					# Does not disband on retreat
 	reinforcing = yes				# Does not receive reinforcements
 	general = yes					# Does use generals
-	smart = yes					# Does not assault forts, tactically withdraw from battle, etc.
+	smart = yes						# Does not assault forts, tactically withdraw from battle, etc.
 	unit_transfer = no				# Units do remain after enforcing demands.
 
 	occupation_mult = 5.0			# The amount of strength this rebel gains from taking provinces
@@ -302,8 +297,8 @@ patriot_rebels = {
 			factor = 0
 			NOT = {
 				AND = {
-					country = { 
-						any_neighbor_country = { 
+					country = {
+						any_neighbor_country = {
 							# Audax Validator "." Ignore_1007
 							have_core_in = THIS
 						}
@@ -323,8 +318,8 @@ patriot_rebels = {
 		}
 		modifier = {
 			factor = 1.3
-			country = { 
-				any_neighbor_country = { 
+			country = {
+				any_neighbor_country = {
 					# Audax Validator "." Ignore_1007
 					have_core_in = THIS
 				}
@@ -346,7 +341,7 @@ patriot_rebels = {
 		}
 	}
 
-	 #This is checked for EACH province in the Area of Operations
+	#This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -375,10 +370,10 @@ patriot_rebels = {
 		}
 	}
 
-	 # Province Scope
-	 siege_won_trigger = {
+	# Province Scope
+	siege_won_trigger = {
 		NOT = { has_province_modifier = patriot_uprising }
-	 }
+	}
 
 	siege_won_effect = {
 		add_province_modifier = {
@@ -455,7 +450,7 @@ slave_revolt = {
 		cosmetic_2_govt = cosmetic_2_govt
 	}
 
-	defection = none					# Will defect to the "best" alternative.
+	defection = none				# Will defect to the "best" alternative.
 	independence = none				# Does not strive for independence
 	defect_delay = 18
 
@@ -495,7 +490,6 @@ slave_revolt = {
 			war_exhaustion = 80
 			factor = 0.95
 		}
-
 	}
 
 	# The rebel type with the highest modifier for this pop gets picked
@@ -511,7 +505,7 @@ slave_revolt = {
 		}
 	}
 
-	 #This is checked for EACH province in the Area of Operations
+	#This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -545,9 +539,9 @@ slave_revolt = {
 		}
 	}
 
-	 # Province Scope
-	 #siege_won_trigger = {
-	 #}
+	# Province Scope
+	#siege_won_trigger = {
+	#}
 
 	siege_won_effect = {
 		any_pop = {
@@ -563,9 +557,7 @@ slave_revolt = {
 			}
 			pop_type = labourers
 		}
-
 	}
-
 
 	# Country scope
 	demands_enforced_trigger = {
@@ -588,7 +580,7 @@ slave_revolt = {
 democratic_rebels = {
 	icon = 3
 	
-	area = nation 				  # Stays within the nation
+	area = nation				# Stays within the nation
 	break_alliance_on_win = no
 	
 	# <this is the governement in the country> = <this is what the rebels want>
@@ -614,8 +606,7 @@ democratic_rebels = {
 		cosmetic_2_govt = democracy
 	}
 	
-	
-	defection = none					# Will defect to the "best" alternative.
+	defection = none				# Will defect to the "best" alternative.
 	independence = none				# Does not strive for independence
 	defect_delay = 18
 	
@@ -626,7 +617,7 @@ democratic_rebels = {
 	resilient = yes					# Does not disband on retreat
 	reinforcing = yes				# Receives reinforcements
 	general = yes					# Uses generals
-	smart = yes					# Assaults forts, tactically withdraws from battle, etc.
+	smart = yes						# Assaults forts, tactically withdraws from battle, etc.
 	unit_transfer = no				# Units remain after enforcing demands.
 
 	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces
@@ -695,8 +686,8 @@ democratic_rebels = {
 			country = { has_country_flag = attempting_to_democratic }
 		}
 	}
- 
- 	#This is checked for EACH province in the Area of Operations
+
+	#This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -725,9 +716,9 @@ democratic_rebels = {
 		}
 	}
 	
- 	# Province Scope
- 	#siege_won_trigger = {
- 	#}
+	# Province Scope
+	#siege_won_trigger = {
+	#}
 	
 	#siege_won_effect = {
 	#}
@@ -752,7 +743,7 @@ democratic_rebels = {
 noble_rebels = {
 	icon = 5
 	
-	area = nation 				  # Stays within the nation
+	area = nation				# Stays within the nation
 	break_alliance_on_win = no
 	
 	# <this is the governement in the country> = <this is what the rebels want>
@@ -778,7 +769,7 @@ noble_rebels = {
 		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
-	defection = none					# Will defect to the "best" alternative.
+	defection = none				# Will defect to the "best" alternative.
 	independence = none				# Does not strive for independence
 	defect_delay = 18
 	
@@ -789,7 +780,7 @@ noble_rebels = {
 	resilient = yes					# Does not disband on retreat
 	reinforcing = yes				# Receives reinforcements
 	general = yes					# Uses generals
-	smart = yes					# Assaults forts, tactically withdraws from battle, etc.
+	smart = yes						# Assaults forts, tactically withdraws from battle, etc.
 	unit_transfer = no				# Units remain after enforcing demands.
 
 	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces
@@ -886,8 +877,8 @@ noble_rebels = {
 			country = { knighting_rights = royal_knighting_rights }
 		}
 	}
- 
- 	#This is checked for EACH province in the Area of Operations
+
+	#This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -916,9 +907,9 @@ noble_rebels = {
 		}
 	}
 	
- 	# Province Scope
- 	#siege_won_trigger = {
- 	#}
+	# Province Scope
+	#siege_won_trigger = {
+	#}
 	
 	#siege_won_effect = {
 	#}
@@ -943,7 +934,7 @@ noble_rebels = {
 serf_rebels = {
 	icon = 6
 	
-	area = nation 				  # Stays within the nation
+	area = nation				# Stays within the nation
 	break_alliance_on_win = no
 	
 	# <this is the governement in the country> = <this is what the rebels want>
@@ -969,7 +960,7 @@ serf_rebels = {
 		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
-	defection = none					# Will defect to the "best" alternative.
+	defection = none				# Will defect to the "best" alternative.
 	independence = none				# Does not strive for independence
 	defect_delay = 18
 	
@@ -980,7 +971,7 @@ serf_rebels = {
 	resilient = yes					# Does not disband on retreat
 	reinforcing = yes				# Receives reinforcements
 	general = yes					# Uses generals
-	smart = yes					# Assaults forts, tactically withdraws from battle, etc.
+	smart = yes						# Assaults forts, tactically withdraws from battle, etc.
 	unit_transfer = no				# Units remain after enforcing demands.
 
 	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces
@@ -1040,8 +1031,8 @@ serf_rebels = {
 			country = { serfdom = discouraged_serfdom }
 		}
 	}
- 
- 	#This is checked for EACH province in the Area of Operations
+
+	#This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -1070,9 +1061,9 @@ serf_rebels = {
 		}
 	}
 	
- 	# Province Scope
- 	#siege_won_trigger = {
- 	#}
+	# Province Scope
+	#siege_won_trigger = {
+	#}
 	
 	#siege_won_effect = {
 	#}
@@ -1097,7 +1088,7 @@ serf_rebels = {
 good_rebels = {
 	icon = 7
 	
-	area = nation 				  # Stays within the nation
+	area = nation				# Stays within the nation
 	break_alliance_on_win = no
 	
 	# <this is the governement in the country> = <this is what the rebels want>
@@ -1123,7 +1114,7 @@ good_rebels = {
 		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
-	defection = none					# Will defect to the "best" alternative.
+	defection = none				# Will defect to the "best" alternative.
 	independence = none				# Does not strive for independence
 	defect_delay = 18
 	
@@ -1134,7 +1125,7 @@ good_rebels = {
 	resilient = yes					# Does not disband on retreat
 	reinforcing = yes				# Receives reinforcements
 	general = yes					# Uses generals
-	smart = yes					# Assaults forts, tactically withdraws from battle, etc.
+	smart = yes						# Assaults forts, tactically withdraws from battle, etc.
 	unit_transfer = no				# Units remain after enforcing demands.
 
 	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces
@@ -1232,8 +1223,8 @@ good_rebels = {
 			country = { good_alignment_fake = 99 }
 		}
 	}
- 
- 	#This is checked for EACH province in the Area of Operations
+
+	#This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -1262,9 +1253,9 @@ good_rebels = {
 		}
 	}
 	
- 	# Province Scope
- 	#siege_won_trigger = {
- 	#}
+	# Province Scope
+	#siege_won_trigger = {
+	#}
 	
 	#siege_won_effect = {
 	#}
@@ -1289,7 +1280,7 @@ good_rebels = {
 evil_rebels = {
 	icon = 8
 	
-	area = nation 				  # Stays within the nation
+	area = nation				# Stays within the nation
 	break_alliance_on_win = no
 	
 	# <this is the governement in the country> = <this is what the rebels want>
@@ -1315,7 +1306,7 @@ evil_rebels = {
 		cosmetic_2_govt = dark_realm
 	}
 	
-	defection = none					# Will defect to the "best" alternative.
+	defection = none				# Will defect to the "best" alternative.
 	independence = none				# Does not strive for independence
 	defect_delay = 18
 	
@@ -1326,7 +1317,7 @@ evil_rebels = {
 	resilient = yes					# Does not disband on retreat
 	reinforcing = yes				# Receives reinforcements
 	general = yes					# Uses generals
-	smart = yes					# Assaults forts, tactically withdraws from battle, etc.
+	smart = yes						# Assaults forts, tactically withdraws from battle, etc.
 	unit_transfer = no				# Units remain after enforcing demands.
 
 	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces
@@ -1424,8 +1415,8 @@ evil_rebels = {
 			country = { evil_alignment_fake = 99 }
 		}
 	}
- 
- 	#This is checked for EACH province in the Area of Operations
+
+	#This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -1454,9 +1445,9 @@ evil_rebels = {
 		}
 	}
 	
- 	# Province Scope
- 	#siege_won_trigger = {
- 	#}
+	# Province Scope
+	#siege_won_trigger = {
+	#}
 	
 	#siege_won_effect = {
 	#}
@@ -1481,7 +1472,7 @@ evil_rebels = {
 neutral_rebels = {
 	icon = 2
 	
-	area = nation 				  # Stays within the nation
+	area = nation				# Stays within the nation
 	break_alliance_on_win = no
 	
 	# <this is the governement in the country> = <this is what the rebels want>
@@ -1507,7 +1498,7 @@ neutral_rebels = {
 		cosmetic_2_govt = cosmetic_2_govt
 	}
 	
-	defection = none					# Will defect to the "best" alternative.
+	defection = none				# Will defect to the "best" alternative.
 	independence = none				# Does not strive for independence
 	defect_delay = 18
 	
@@ -1518,7 +1509,7 @@ neutral_rebels = {
 	resilient = yes					# Does not disband on retreat
 	reinforcing = yes				# Receives reinforcements
 	general = yes					# Uses generals
-	smart = yes					# Assaults forts, tactically withdraws from battle, etc.
+	smart = yes						# Assaults forts, tactically withdraws from battle, etc.
 	unit_transfer = no				# Units remain after enforcing demands.
 
 	occupation_mult = 1.0			# The amount of strength this rebel gains from taking provinces
@@ -1616,8 +1607,8 @@ neutral_rebels = {
 			country = { neutral_alignment_fake = 99 }
 		}
 	}
- 
- 	#This is checked for EACH province in the Area of Operations
+
+	#This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -1646,9 +1637,9 @@ neutral_rebels = {
 		}
 	}
 	
- 	# Province Scope
- 	#siege_won_trigger = {
- 	#}
+	# Province Scope
+	#siege_won_trigger = {
+	#}
 	
 	#siege_won_effect = {
 	#}
