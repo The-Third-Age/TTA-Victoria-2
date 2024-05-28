@@ -1,19 +1,17 @@
-building_focus =
-{
+building_focus = {
 	military_goods_focus = {
 		melee_gear = 18.3
 		ranged_gear = 18.3
 		artillery = 18.3
 		icon = 2
-		limit = { 
+		limit = {
 			civilized = yes
 		}
 	}
-	shipping_focus =
-	{
+	shipping_focus = {
 		clipper_convoy = 18.3
 		icon = 3
-		limit = { 
+		limit = {
 			civilized = yes
 			state_scope = { any_owned_province = { port = yes } }
 		}
@@ -48,13 +46,12 @@ building_focus =
 	}
 }
 
-production_focus = 
-{
+production_focus = {
 	artisan_prod_focus = {
 		# Audax Validator "!" Ignore_1007
 		local_artisan_output = 0.25
 		pop_militancy_modifier = 0.03
-		limit = { 
+		limit = {
 			is_colonial = no
 		}
 		icon = 7
@@ -64,7 +61,7 @@ production_focus =
 		# Audax Validator "!" Ignore_1007
 		local_artisan_output = 0.5
 		pop_militancy_modifier = 0.05
-		limit = { 
+		limit = {
 			is_colonial = yes
 		}
 		icon = 8
@@ -73,7 +70,7 @@ production_focus =
 	factory_prod_focus = {
 		local_factory_output = 0.25
 		pop_militancy_modifier = 0.03
-		limit = { 
+		limit = {
 			is_colonial = no
 			civilized = yes
 		}
@@ -84,7 +81,7 @@ production_focus =
 		local_RGO_output = 0.25
 		pop_militancy_modifier = 0.03
 		icon = 10
-		limit = { 
+		limit = {
 			is_colonial = no
 		}
 	}
@@ -93,7 +90,7 @@ production_focus =
 		local_RGO_output = 0.5
 		pop_militancy_modifier = 0.05
 		icon = 11
-		limit = { 
+		limit = {
 			is_colonial = yes
 		}
 	}
@@ -108,8 +105,7 @@ production_focus =
 	}
 }
 
-diplomatic_focus =
-{
+diplomatic_focus = {
 	increase_tension = {
 		icon = 13
 		has_flashpoint = yes
@@ -135,8 +131,7 @@ diplomatic_focus =
 	}
 }
 
-population_focus =
-{
+population_focus = {
 	militancy_decrease = {
 		pop_militancy_modifier = -0.1
 		icon = 15
@@ -159,23 +154,21 @@ population_focus =
 	
 	assimilation_increase = {
 		assimilation_rate = 0.5
-		limit = { 
+		limit = {
 			is_colonial = no
 		}
 		icon = 19
 	}
 	
-	immigration_increase =
-	{
+	immigration_increase = {
 		immigrant_attract = 0.5
 		icon = 20
-		limit = { 
+		limit = {
 			is_colonial = no
 		}
 	}
 	
-	colonial_immigration = 
-	{
+	colonial_immigration = {
 		immigrant_attract = 2
 		icon = 21
 		limit = {
@@ -192,10 +185,8 @@ population_focus =
 	}
 }
 
-promotion_focus =
-{
-	promote_aristocrats =
-	{
+promotion_focus = {
+	promote_aristocrats = {
 		aristocrats = 0.20
 		icon = 23
 		outliner_show_as_percent = yes
@@ -204,15 +195,13 @@ promotion_focus =
 		}
 	}
 
-	promote_artisans =
-	{
+	promote_artisans = {
 		artisans = 0.20
 		icon = 24
 		outliner_show_as_percent = yes
 	}
 
-	promote_bureaucrats =
-	{
+	promote_bureaucrats = {
 		bureaucrats = 0.20
 		icon = 25
 		outliner_show_as_percent = yes
@@ -221,20 +210,17 @@ promotion_focus =
 		}
 	}
 
-	promote_capitalists =
-	{
+	promote_capitalists = {
 		capitalists = 0.20
 		icon = 26
 		outliner_show_as_percent = yes
-		limit = { 
+		limit = {
 			civilized = yes
 			is_colonial = no
 		}
-
 	}
 	
-	promote_clergymen =
-	{
+	promote_clergymen = {
 		clergymen = 0.20
 		icon = 27
 		outliner_show_as_percent = yes
@@ -243,27 +229,24 @@ promotion_focus =
 		}
 	}
 
-	promote_craftsmen =
-	{
+	promote_craftsmen = {
 		craftsmen = 0.20
 		icon = 28
 		outliner_show_as_percent = yes
-		limit = { 
+		limit = {
 			civilized = yes
 			is_colonial = no
 			NOT = { state_scope = { craftsmen = 0.4 } }
 		}
 	}
 	
-	promote_labourers =
-	{
+	promote_labourers = {
 		labourers = 0.20
 		icon = 29
 		outliner_show_as_percent = yes
 	}
 
-	promote_soldiers =
-	{
+	promote_soldiers = {
 		soldiers = 0.20
 		icon = 30
 		outliner_show_as_percent = yes
@@ -285,31 +268,26 @@ promotion_focus =
 	}
 }
 
-party_loyalty_focus =
-{
-	high_nobility_focus =
-	{
+party_loyalty_focus = {
+	high_nobility_focus = {
 		ideology = high_nobility
 		loyalty_value = 0.001
 		icon = 32
 	}
 	
-	low_nobility_focus =
-	{
+	low_nobility_focus = {
 		ideology = low_nobility
 		loyalty_value = 0.001
 		icon = 33
 	}
 	
-	burgher_focus =
-	{
+	burgher_focus = {
 		ideology = burgher
 		loyalty_value = 0.001
 		icon = 34
 	}
 	
-	loremaster_focus =
-	{
+	loremaster_focus = {
 		ideology = loremaster
 		loyalty_value = 0.001
 		icon = 35
