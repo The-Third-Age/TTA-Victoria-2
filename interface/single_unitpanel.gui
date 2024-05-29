@@ -10,8 +10,7 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no	
 
-		
-		listboxType = 	{
+		listboxType = {
 			name ="list"
 			position = { x = 0 y = 0 }
 			backGround=""
@@ -24,14 +23,13 @@ guiTypes = {
 	}
 
 
-
 	##############################################
 	# Unit status
 	##############################################
 	windowType = {
 		name = "sup_unit_status"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=254 y=44 }
 		moveable = 0
 		dontRender = ""
@@ -245,7 +243,7 @@ guiTypes = {
 		fullScreen = no
 		
 		
-		listboxType = 	{
+		listboxType = {
 			name ="list"
 			position = { x = -1 y = -9 }
 			backGround=""
@@ -257,15 +255,15 @@ guiTypes = {
 		}
 		
 		scrollbarType = {
-			name = "external_scroll_slider"	
+			name = "external_scroll_slider"
 			slider = "listboxSliderButton"
 			track= "listboxTrackButton"
 			leftbutton = "upButton"
 			rightbutton = "downButton"
 			size = { x=6 y=315 }
 			position = { x = 305 y = -9 }
-			priority = 100			
-			borderSize = {x = 0 y = 0}	
+			priority = 100
+			borderSize = {x = 0 y = 0}
 			maxValue =100
 			minValue =0
 			stepSize =1
@@ -276,23 +274,23 @@ guiTypes = {
 				name = "listboxSliderButton"	
 				quadTextureSprite = "slider_slider"
 				tooltip = ""
-				tooltipText =""	
+				tooltipText =""
 				delayedTooltipText = ""
 				position = { x=0 y =26}
 			}
 			guiButtonType = {
 				name = "listboxTrackButton"
 				quadTextureSprite = "slider_background"
-				position = { x=6 y =32}	
+				position = { x=6 y =32}
 				tooltip = ""
 				tooltipText =""
-				delayedTooltipText = ""	
-			}	
+				delayedTooltipText = ""
+			}
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "upButton"
 				quadTextureSprite = "slider_downbutton"
-				position = { x=0 y =26}	
+				position = { x=0 y =26}
 			}
 			guiButtonType = {
 				parent = "listboxSliderButton"
