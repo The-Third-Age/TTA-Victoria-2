@@ -1,43 +1,43 @@
 texture tex0 < string name = "sdf"; >;	// Base texture
 texture tex1 < string name = "sdf"; >;	// Base texture
 
-float4x4 WorldViewProjectionMatrix; 
-float4	 FlagCoords;
+float4x4	WorldViewProjectionMatrix;
+float4		FlagCoords;
 
-sampler BaseTexture  =
+sampler BaseTexture =
 sampler_state
 {
-    Texture = <tex0>;
-    MinFilter = Point;
-    MagFilter = Point;
-    MipFilter = None;
-    AddressU = Wrap;
-    AddressV = Wrap;
+	Texture = <tex0>;
+	MinFilter = Point;
+	MagFilter = Point;
+	MipFilter = None;
+	AddressU = Wrap;
+	AddressV = Wrap;
 };
 
-sampler MaskTexture  =
+sampler MaskTexture =
 sampler_state
 {
-    Texture = <tex1>;
-    MinFilter = Point;
-    MagFilter = Point;
-    MipFilter = None;
-    AddressU = Wrap;
-    AddressV = Wrap;
+	Texture = <tex1>;
+	MinFilter = Point;
+	MagFilter = Point;
+	MipFilter = None;
+	AddressU = Wrap;
+	AddressV = Wrap;
 };
 
 struct VS_INPUT
 {
-    float4 vPosition  : POSITION;
-    float2 vTexCoord  : TEXCOORD0;
-    float2 vMaskCoord  : TEXCOORD1;
+	float4 vPosition	: POSITION;
+	float2 vTexCoord	: TEXCOORD0;
+	float2 vMaskCoord	: TEXCOORD1;
 };
 
 struct VS_OUTPUT
 {
-    float4  vPosition : POSITION;
-    float2  vTexCoord0 : TEXCOORD0;
-    float2  vTexCoord1 : TEXCOORD1;
+	float4 vPosition	: POSITION;
+	float2 vTexCoord0	: TEXCOORD0;
+	float2 vTexCoord1	: TEXCOORD1;
 };
 
 
@@ -45,7 +45,7 @@ VS_OUTPUT OurVertexShader(const VS_INPUT v )
 {
 	VS_OUTPUT Out = (VS_OUTPUT)0;
 
-	Out.vPosition  = mul(v.vPosition, WorldViewProjectionMatrix );
+	Out.vPosition = mul(v.vPosition, WorldViewProjectionMatrix );
 
 	Out.vTexCoord1 = v.vMaskCoord;
 
@@ -53,8 +53,6 @@ VS_OUTPUT OurVertexShader(const VS_INPUT v )
 	Out.vTexCoord0.x = Out.vTexCoord0.x + FlagCoords.z;
 	Out.vTexCoord0.y = v.vTexCoord.y/FlagCoords.y;
 	Out.vTexCoord0.y = Out.vTexCoord0.y + FlagCoords.w;
-
-	
 
 	return Out;
 }
@@ -70,37 +68,37 @@ float4 OurPixelShader( VS_OUTPUT v ) : COLOR
 
 float4 PixelShaderOver( VS_OUTPUT v ) : COLOR
 {
-    float4 OutColor = tex2D( BaseTexture, v.vTexCoord0.xy );
-    float4 MaskColor = tex2D( MaskTexture, v.vTexCoord1.xy );
-    float4 MixColor = float4( 0.1, 0.1, 0.1, 0 );
-    OutColor.a = MaskColor.a;
-    OutColor += MixColor;
-    
-    return OutColor;
+	float4 OutColor = tex2D( BaseTexture, v.vTexCoord0.xy );
+	float4 MaskColor = tex2D( MaskTexture, v.vTexCoord1.xy );
+	float4 MixColor = float4( 0.1, 0.1, 0.1, 0 );
+	OutColor.a = MaskColor.a;
+	OutColor += MixColor;
+
+	return OutColor;
 }
 
 float4 PixelShaderDown( VS_OUTPUT v ) : COLOR
 {
-    float4 OutColor = tex2D( BaseTexture, v.vTexCoord0.xy );
-    float4 MaskColor = tex2D( MaskTexture, v.vTexCoord1.xy );
-    float Grey = dot( OutColor.rgb, float3( 0.212671f, 0.715160f, 0.072169f ) ); 
-    
-    OutColor.rgb = Grey;
-    OutColor.a = MaskColor.a;
-    
-    return OutColor;
+	float4 OutColor = tex2D( BaseTexture, v.vTexCoord0.xy );
+	float4 MaskColor = tex2D( MaskTexture, v.vTexCoord1.xy );
+	float Grey = dot( OutColor.rgb, float3( 0.212671f, 0.715160f, 0.072169f ) );
+
+	OutColor.rgb = Grey;
+	OutColor.a = MaskColor.a;
+
+	return OutColor;
 }
 
 float4 PixelShaderDisable( VS_OUTPUT v ) : COLOR
 {
-    float4 OutColor = tex2D( BaseTexture, v.vTexCoord0.xy );
-    float4 MaskColor = tex2D( MaskTexture, v.vTexCoord1.xy );
-    float Grey = dot( OutColor.rgb, float3( 0.212671f, 0.715160f, 0.072169f ) ); 
-    
-    OutColor.rgb = Grey;
-    OutColor.a = MaskColor.a;
-    
-    return OutColor;
+	float4 OutColor = tex2D( BaseTexture, v.vTexCoord0.xy );
+	float4 MaskColor = tex2D( MaskTexture, v.vTexCoord1.xy );
+	float Grey = dot( OutColor.rgb, float3( 0.212671f, 0.715160f, 0.072169f ) );
+
+	OutColor.rgb = Grey;
+	OutColor.a = MaskColor.a;
+
+	return OutColor;
 }
 
 technique tec0
@@ -119,7 +117,7 @@ technique tec0
 		ColorOp[0] = Modulate;
 		ColorArg1[0] = Texture;
 		ColorArg2[0] = current;
-  
+
 		ColorOp[1] = Disable;
 		AlphaOp[1] = Disable;
 
@@ -145,7 +143,7 @@ technique down
 		ColorOp[0] = Modulate;
 		ColorArg1[0] = Texture;
 		ColorArg2[0] = current;
-  
+
 		ColorOp[1] = Disable;
 		AlphaOp[1] = Disable;
 
@@ -173,7 +171,7 @@ technique over
 		ColorOp[0] = Modulate;
 		ColorArg1[0] = Texture;
 		ColorArg2[0] = current;
-  
+
 		ColorOp[1] = Disable;
 		AlphaOp[1] = Disable;
 
@@ -201,7 +199,7 @@ technique disable
 		ColorOp[0] = Modulate;
 		ColorArg1[0] = Texture;
 		ColorArg2[0] = current;
-  
+
 		ColorOp[1] = Disable;
 		AlphaOp[1] = Disable;
 

@@ -1,32 +1,32 @@
 texture tex0 < string name = "sdf"; >;	// Base texture
 
-float4x4 WorldViewProjectionMatrix; 
-float4	 FlagCoords;
+float4x4	WorldViewProjectionMatrix;
+float4		FlagCoords;
 
-sampler BaseTexture  =
+sampler BaseTexture =
 sampler_state
 {
-    Texture = <tex0>;
-    MinFilter = Point;
-    MagFilter = Point;
-    MipFilter = None;
-    AddressU = Wrap;
-    AddressV = Wrap;
+	Texture = <tex0>;
+	MinFilter = Point;
+	MagFilter = Point;
+	MipFilter = None;
+	AddressU = Wrap;
+	AddressV = Wrap;
 };
 
 struct VS_INPUT
 {
-    float4 vPosition  : POSITION;
-    float3 vNormal    : NORMAL;
-    float2 vTexCoord  : TEXCOORD0;
-    float4 vDiffuse   : COLOR;
+	float4 vPosition	: POSITION;
+	float3 vNormal		: NORMAL;
+	float2 vTexCoord	: TEXCOORD0;
+	float4 vDiffuse		: COLOR;
 };
 
 struct VS_OUTPUT
 {
-    float4  vPosition : POSITION;
-    float2  vTexCoord0 : TEXCOORD0;
-    float4  vDiffuse   : COLOR;
+	float4 vPosition	: POSITION;
+	float2 vTexCoord0	: TEXCOORD0;
+	float4 vDiffuse		: COLOR;
 };
 
 
@@ -34,7 +34,7 @@ VS_OUTPUT VertexShader(const VS_INPUT v )
 {
 	VS_OUTPUT Out = (VS_OUTPUT)0;
 
-	Out.vPosition  = mul(v.vPosition, WorldViewProjectionMatrix );
+	Out.vPosition = mul(v.vPosition, WorldViewProjectionMatrix );
 
 	Out.vTexCoord0.x = v.vTexCoord.x/FlagCoords.x;
 	Out.vTexCoord0.x = Out.vTexCoord0.x + FlagCoords.z;
@@ -72,7 +72,7 @@ technique tec0
 		ColorOp[0] = Modulate;
 		ColorArg1[0] = Texture;
 		ColorArg2[0] = current;
-  
+
 		ColorOp[1] = Disable;
 		AlphaOp[1] = Disable;
 

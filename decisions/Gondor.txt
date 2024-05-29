@@ -1046,7 +1046,7 @@ political_decisions = {
 }
 
 # Expansion to the West
-political_decisions = {	
+political_decisions = {
 	andrast_territory = {
 		picture = "andrast_map"
 		potential = {
@@ -1079,7 +1079,7 @@ political_decisions = {
 					}
 					NOT = { tag = ADR }
 					NOT = { vassal_of = THIS }
-				 }
+				}
 				add_casus_belli = {
 					target = GON
 					type = andrast_war_cb
@@ -1087,7 +1087,6 @@ political_decisions = {
 				}
 				country_event = 150000
 			}
-			
 			set_global_flag = GON_andrast_war
 		}
 	}

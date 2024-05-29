@@ -24,7 +24,7 @@ texture tex7 < string ResourceName = "TerraIncog.dds"; >;
 
 
 float4x4 WorldMatrix		: World;
-float4x4 ViewMatrix		: View;
+float4x4 ViewMatrix			: View;
 float4x4 ProjectionMatrix	: Projection;
 float4x4 AbsoluteWorldMatrix;
 float3	 LightDirection;

@@ -46,20 +46,20 @@ guiTypes = {
 	
 	windowType = {
 		name = "country_budget"
-		backGround =""
-		position = { x=-512 y=-250 }	
+		backGround = ""
+		position = { x=-512 y=-250 }
 		size = { x=1024 y=632 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = "0"
 		verticalBorder = ""
 		fullScreen = no
-		orientation="CENTER"
+		orientation = "CENTER"
 		
 		iconType = {
-			name ="main_bg"
+			name = "main_bg"
 			spriteType = "GFX_main_bg"
-			position = { x= -70 y = -70 }
+			position = { x = -70 y = -70 }
 			Orientation = "UPPER_LEFT"
 		}
 				
@@ -301,7 +301,7 @@ guiTypes = {
 			maxWidth = 100
 			maxHeight = 32	
 			format = left
-		}				
+		}
 		
 		instantTextBoxType = { 
 			name = "debt_val"
@@ -311,8 +311,7 @@ guiTypes = {
 			maxWidth = 250
 			maxHeight = 32	
 			format = right
-		}		
-		
+		}
 		
 		instantTextBoxType = { 
 			name = "interest_desc"
@@ -320,29 +319,29 @@ guiTypes = {
 			font = "vic_18_black"
 			text = "INTEREST"	
 			maxWidth = 100
-			maxHeight = 32	
+			maxHeight = 32
 			format = left
-		}				
+		}
 		
 		instantTextBoxType = { 
 			name = "interest_val"
 			position = { x = 375 y = 426 }
 			font = "vic_18_black"
-			text = "100¤"	
+			text = "100¤"
 			maxWidth = 100
-			maxHeight = 32	
+			maxHeight = 32
 			format = right
 		}
 		guiButtonType = {
-				name = "tab_takenloans"
-				quadTextureSprite = "GFX_budget_debt_tab"
-				position = { x=207 y =448}	
-			}
+			name = "tab_takenloans"
+			quadTextureSprite = "GFX_budget_debt_tab"
+			position = { x=207 y =448}
+		}
 		guiButtonType = {
-				name = "tab_givenloans"
-				quadTextureSprite = "GFX_budget_debt_tab"
-				position = { x=346 y =448}	
-			}
+			name = "tab_givenloans"
+			quadTextureSprite = "GFX_budget_debt_tab"
+			position = { x=346 y =448}
+		}
 		instantTextBoxType = { 
 			name = "takenloans_text"
 			position = { x = 205 y = 452 }
@@ -362,19 +361,19 @@ guiTypes = {
 			format = centre
 		}
 		guiButtonType = {
-				name = "debt_sort_country"
-				quadTextureSprite = "GFX_sortbutton_200"
-				position = { x=198 y =463}	
-				buttonText = "BUDGET_COUNTRY"
-				buttonFont = "vic_18_black"
-			}
+			name = "debt_sort_country"
+			quadTextureSprite = "GFX_sortbutton_200"
+			position = { x=198 y =463}	
+			buttonText = "BUDGET_COUNTRY"
+			buttonFont = "vic_18_black"
+		}
 		guiButtonType = {
-				name = "debt_sort_amount"
-				quadTextureSprite = "GFX_sortbutton_96"
-				position = { x=395 y =463}
-				buttonText = "BUDGET_AMOUNT"
-				buttonFont = "vic_18_black"
-			}
+			name = "debt_sort_amount"
+			quadTextureSprite = "GFX_sortbutton_96"
+			position = { x=395 y =463}
+			buttonText = "BUDGET_AMOUNT"
+			buttonFont = "vic_18_black"
+		}
 		
 		
 		#####################  EXPENSES
@@ -382,87 +381,87 @@ guiTypes = {
 		iconType = {
 			name ="nat_stock_land_icon"
 			spriteType = "GFX_military_landorg"
-			position = { x = 634 y = 95	 }
+			position = { x = 634 y = 95 }
 		}
 		
 		iconType = {
 			name ="nat_stock_naval_icon"
 			spriteType = "GFX_topbar_navy"
-			position = { x = 628 y = 110	 }
+			position = { x = 628 y = 110 }
 		}
 		
 		iconType = {
 			name ="nat_stock_construction_icon"
 			spriteType = "GFX_politics_industrial_construction"
-			position = { x = 633 y = 134	 }
+			position = { x = 633 y = 134 }
 			scale = 0.70
 		}
 		
 		instantTextBoxType = { 
 			name = "nat_stock_desc"
-			position = { x = 572 y = 80	 }
+			position = { x = 572 y = 80 }
 			font = "vic_18"
-			text = "BUDGET_NATIONAL_STOCKPILE"	
+			text = "BUDGET_NATIONAL_STOCKPILE"
 			maxWidth = 170
-			maxHeight = 32	
+			maxHeight = 32
 			format = left
 		}
 		instantTextBoxType = { 
 			name = "nat_stock_est"
 			position = { x = 900 y = 113 }
 			font = "vic_22_black"
-			text = "0¤"	
+			text = "0¤"
 			maxWidth = 90
-			maxHeight = 32	
+			maxHeight = 32
 			format = centre
 		}
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "nat_stock_val"
 			position = { x = 527 y = 115 }
 			font = "vic_22_black"
-			text = "0¤"	
+			text = "0¤"
 			maxWidth = 90
-			maxHeight = 32	
+			maxHeight = 32
 			format = centre
 		}
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "mil_cost_desc"
 			position = { x = 694 y = 81 }
 			font = "Arial12_black"
-			text = "BUDGET_MILITARY_COST"	
+			text = "BUDGET_MILITARY_COST"
 			maxWidth = 170
-			maxHeight = 32	
+			maxHeight = 32
 			format = left
 		}
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "mil_cost_val"
 			position = { x = 753  y = 81 }
 			font = "Arial12_black"
-			text = "0¤"	
+			text = "0¤"
 			maxWidth = 60
-			maxHeight = 32	 
+			maxHeight = 32
 			format = right
 		}
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "overseas_desc"
 			position = { x = 824   y = 81 }
 			font = "Arial12_black"
-			text = "BUDGET_OVERSEAS"	
+			text = "BUDGET_OVERSEAS"
 			maxWidth = 170
-			maxHeight = 32	
+			maxHeight = 32
 			format = left
 		}
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "overseas_cost_val"
 			position = { x = 920 y = 81 }
 			font = "Arial12_black"
-			text = "0¤"	
+			text = "0¤"
 			maxWidth = 60
-			maxHeight = 22	
+			maxHeight = 22
 			format = right
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "ind_sub_desc"
 			position = { x = 572 y = 52 }
 			font = "vic_18_black"
