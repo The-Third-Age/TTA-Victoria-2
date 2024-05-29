@@ -36,7 +36,7 @@ guiTypes = {
 			position = { x=-41 y=-9 }
 			spriteType = "GFX_news_list_bg"
 		}
-		listboxType = 	{
+		listboxType = {
 			name ="list"
 			position = { x=7 y=7 }
 			size = { x=177 y=272 }
@@ -52,8 +52,8 @@ guiTypes = {
 			rightbutton = "downButton"
 			size = { x=6 y=272 }
 			position = { x = 140 y = 7 }
-			priority = 100			
-			borderSize = {x = 0 y = 0}	
+			priority = 100
+			borderSize = {x = 0 y = 0}
 			maxValue =100
 			minValue =0
 			stepSize =1
@@ -61,17 +61,17 @@ guiTypes = {
 			horizontal = 0
 
 			guiButtonType = {
-				name = "listboxSliderButton"	
+				name = "listboxSliderButton"
 				quadTextureSprite = "slider_slider"
 				tooltip = ""
-				tooltipText =""	
+				tooltipText =""
 				delayedTooltipText = ""
 				position = { x=0 y =0}
 			}
 			guiButtonType = {
 				name = "listboxTrackButton"
 				quadTextureSprite = "slider_background"
-				position = { x=6 y =6}	
+				position = { x=6 y =6}
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""	
@@ -80,13 +80,13 @@ guiTypes = {
 				parent = "listboxSliderButton"
 				name = "upButton"
 				quadTextureSprite = "slider_downbutton"
-				position = { x=0 y =0}	
+				position = { x=0 y =0}
 			}
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "downButton"
 				quadTextureSprite = "slider_upbutton"
-				position = { x=0 y =120}	
+				position = { x=0 y =120}
 			}
 		}
 	}
@@ -450,12 +450,11 @@ guiTypes = {
 				font = "news_18_black"
 				maxWidth = 161
 				maxHeight = 143
-				text = ""	
+				text = ""
 				format = justified
 				fixedsize = yes
 				allwaystransparent = yes
 			}
-			
 		}
 
 		# Small Article 5
@@ -472,7 +471,7 @@ guiTypes = {
 				font = "news_22_black"
 				maxWidth = 165
 				maxHeight = 44
-				text = ""	
+				text = ""
 				format = center
 				fixedsize = yes
 				allwaystransparent = yes
@@ -485,12 +484,11 @@ guiTypes = {
 				font = "news_18_black"
 				maxWidth = 161
 				maxHeight = 143
-				text = ""	
+				text = ""
 				format = justified
 				fixedsize = yes
 				allwaystransparent = yes
 			}
-			
 		}
 	}
 }
