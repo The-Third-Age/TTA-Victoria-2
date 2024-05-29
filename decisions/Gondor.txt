@@ -20,7 +20,7 @@
 #			Potentially remove Amrothian from Gondor's accepted cultures
 
 # TODO: Update Druwaith Iaur Rebellion and Drúadan Forest Rebellion end to be handled by the utility tag
-# 			Handle flavor related to the rebellions winning?
+#			Handle flavor related to the rebellions winning?
 
 # TODO: Update the cores on Rohan to only include Calenardon
 #			Update the_center_of_the_realm to only look at those regions
@@ -1046,7 +1046,7 @@ political_decisions = {
 }
 
 # Expansion to the West
-political_decisions = {	
+political_decisions = {
 	andrast_territory = {
 		picture = "andrast_map"
 		potential = {
@@ -1079,7 +1079,7 @@ political_decisions = {
 					}
 					NOT = { tag = ADR }
 					NOT = { vassal_of = THIS }
-				 }
+				}
 				add_casus_belli = {
 					target = GON
 					type = andrast_war_cb
@@ -1087,7 +1087,6 @@ political_decisions = {
 				}
 				country_event = 150000
 			}
-			
 			set_global_flag = GON_andrast_war
 		}
 	}

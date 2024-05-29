@@ -1051,9 +1051,9 @@ demand_state_for_ally = {
 	# FROM - country scope is possible match?
 	# war target country of goal's state
 	allowed_states = {
-	    any_owned_province = {
-		    OR = {
-			    NOT = {is_core = this}
+		any_owned_province = {
+			OR = {
+				NOT = {is_core = this}
 				is_core = THIS
 			}
 		}
@@ -1682,9 +1682,9 @@ free_allied_cores = {
 				vassal_of = THIS
 				alliance_with = THIS
 			}
-			# NOT = {
-			#	 any_core = { owned_by = THIS }
-			# }
+			#NOT = {
+			#	any_core = { owned_by = THIS }
+			#}
 		}
 	}
 

@@ -8,10 +8,9 @@ guiTypes = {
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 
-		
-		listboxType = 	{
+		listboxType = {
 			name ="list"
 			position = { x = 0 y = 0 }
 			backGround=""
@@ -24,14 +23,13 @@ guiTypes = {
 	}
 
 
-
 	##############################################
 	# Unit status
 	##############################################
 	windowType = {
 		name = "sup_unit_status"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=254 y=44 }
 		moveable = 0
 		dontRender = ""
@@ -40,23 +38,20 @@ guiTypes = {
 		fullScreen = no	
 		
 		
-		iconType =
-		{
+		iconType = {
 			name ="unit_bottom_bg"
 			spriteType = "GFX_unit_bottom_bg"
 			position = { x= -1 y = 8 }
 			Orientation = "UPPER_LEFT"
 		}
-			
-		iconType =
-		{
+		
+		iconType = {
 			name ="icon_speed"
 			spriteType = "GFX_icon_speed"
 			position = { x= 109 y = 13}
 			Orientation = "UPPER_LEFT"
-			
 		}
-			
+		
 		instantTextBoxType = {
 			name = "speed"
 			position = { x = 118 y = 15 }
@@ -72,13 +67,11 @@ guiTypes = {
 			format = right
 		}	
 		
-		iconType =
-		{
+		iconType = {
 			name ="icon_recon"
 			spriteType = "GFX_icon_recon"
 			position = { x= 185 y = 13}
 			Orientation = "UPPER_LEFT"
-			
 		}
 		
 		instantTextBoxType = {
@@ -87,17 +80,16 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 40
 			maxHeight = 16
 
-			fixedsize = yes	
+			fixedsize = yes
 
 			format = right
-		}		
+		}
 
-		iconType =
-		{
+		iconType = {
 			name ="icon_engineer"
 			spriteType = "GFX_icon_attack_efficiency"
 			position = { x= 261 y = 13}
@@ -110,42 +102,35 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 40
 			maxHeight = 16
 
-			fixedsize = yes	
+			fixedsize = yes
 
 			format = right
-		}		
+		}
 
-		iconType =
-		{
+		iconType = {
 			name ="icon_supplies_small"
 			spriteType = "GFX_unit_supplies_icon"
 			position = { x= 7 y = 13}
 			Orientation = "UPPER_LEFT"
-			
-		}		
+		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="supply_status"
 			spriteType = "supply_progress"
 			position = { x= 36 y = 16 }
 			Orientation = "UPPER_LEFT"
 		}
-						
 		
-		iconType =
-		{
+		iconType = {
 			name ="unitstatus_dugin"
 			spriteType = "GFX_military_dugin_icon"
-			position = { x= 78 y = 10  }
+			position = { x= 78 y = 10 }
 			Orientation = "UPPER_LEFT"
 		}
-
-		
 	}
 
 	##############################################
@@ -185,14 +170,12 @@ guiTypes = {
 			format = right
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="unit_icon"
 			spriteType = "GFX_unit_strip"
 			position = { x= -10 y = 30 }
 			Orientation = "UPPER_LEFT"
 		}
-		
 	}
 	
 	##############################################
@@ -245,7 +228,7 @@ guiTypes = {
 		fullScreen = no
 		
 		
-		listboxType = 	{
+		listboxType = {
 			name ="list"
 			position = { x = -1 y = -9 }
 			backGround=""
@@ -257,15 +240,15 @@ guiTypes = {
 		}
 		
 		scrollbarType = {
-			name = "external_scroll_slider"	
+			name = "external_scroll_slider"
 			slider = "listboxSliderButton"
 			track= "listboxTrackButton"
 			leftbutton = "upButton"
 			rightbutton = "downButton"
 			size = { x=6 y=315 }
 			position = { x = 305 y = -9 }
-			priority = 100			
-			borderSize = {x = 0 y = 0}	
+			priority = 100
+			borderSize = {x = 0 y = 0}
 			maxValue =100
 			minValue =0
 			stepSize =1
@@ -276,23 +259,23 @@ guiTypes = {
 				name = "listboxSliderButton"	
 				quadTextureSprite = "slider_slider"
 				tooltip = ""
-				tooltipText =""	
+				tooltipText =""
 				delayedTooltipText = ""
 				position = { x=0 y =26}
 			}
 			guiButtonType = {
 				name = "listboxTrackButton"
 				quadTextureSprite = "slider_background"
-				position = { x=6 y =32}	
+				position = { x=6 y =32}
 				tooltip = ""
 				tooltipText =""
-				delayedTooltipText = ""	
-			}	
+				delayedTooltipText = ""
+			}
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "upButton"
 				quadTextureSprite = "slider_downbutton"
-				position = { x=0 y =26}	
+				position = { x=0 y =26}
 			}
 			guiButtonType = {
 				parent = "listboxSliderButton"
@@ -374,7 +357,6 @@ guiTypes = {
 			format = centre
 			allwaystransparent = yes
 		}
-
 	}
 	
 	
@@ -392,14 +374,12 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no	
 		
-		guiButtonType = 
-		{
+		guiButtonType = {
 			name ="select"
 			quadTextureSprite ="GFX_unit_siege_entry"	
 			position = { x= 0 y = 338 }
 			Orientation = "UPPER_LEFT"
 		}
-		
 
 		instantTextBoxType = {
 			name = "desc"
@@ -413,34 +393,27 @@ guiTypes = {
 			maxHeight = 32	
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="attacker_flag"
 			spriteType = "GFX_flag_new"
 			position = { x= 6 y = 355 }
 			Orientation = "UPPER_LEFT"
 		}
 
-		iconType =
-		{
+		iconType = {
 			name ="defender_flag"
 			spriteType = "GFX_flag_new"
 			position = { x= 299 y = 355 }
 			Orientation = "UPPER_LEFT"
 		}
 		
-		
-		iconType =
-		{
+		iconType = {
 			name ="progress"
 			spriteType = "combat_progress"
 			position = { x= 37 y = 370 }
 			Orientation = "UPPER_LEFT"
 		}
-				
-	}	
-		
-		
+	}
 
 
 	##############################################
@@ -449,30 +422,28 @@ guiTypes = {
 	windowType = {
 		name = "siege_entry"
 		backGround=""
-		position = { x=0 y=26 }	
+		position = { x=0 y=26 }
 		size = { x=254 y=49 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 		
-		#guiButtonType = 
-		#{
+		#guiButtonType = {
 		#	name ="select"
-		#	quadTextureSprite ="GFX_unit_siege_entry"	
+		#	quadTextureSprite ="GFX_unit_siege_entry"
 		#	position = { x= 0 y = 338 }
 		#	Orientation = "UPPER_LEFT"
 		#}
 		
-		## use this 
+		##use this
 		
-		iconType = 
-		{
-		 name ="select"
-		 spriteType ="GFX_unit_siege_entry"	
-		 position = { x= 0 y = 338 }
-		 Orientation = "UPPER_LEFT"
+		iconType = {
+			name ="select"
+			spriteType ="GFX_unit_siege_entry"
+			position = { x= 0 y = 338 }
+			Orientation = "UPPER_LEFT"
 		}
 		
 

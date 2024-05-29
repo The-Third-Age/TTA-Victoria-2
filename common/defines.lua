@@ -4,15 +4,15 @@ start_date = '2954.1.1',
 end_date = '3100.12.31',
 
 country = {
-	YEARS_OF_NATIONALISM 	= 20,   -- Years of Nationalism
-	MONTHS_UNTIL_BROKEN 		= 3,	-- OBSOLETE! (Months until rebel held capital results in broken country.)
+	YEARS_OF_NATIONALISM = 20,   -- Years of Nationalism
+	MONTHS_UNTIL_BROKEN = 3,	-- OBSOLETE! (Months until rebel held capital results in broken country.)
 	REBEL_ACCEPTANCE_MONTHS = 60,
 	BASE_COUNTRY_TAX_EFFICIENCY = 0.4, -- Basic efficiency for taxes without 'crats and tech
 	BASE_COUNTRY_ADMIN_EFFICIENCY = 0.4,
 	GOLD_TO_CASH_RATE = 0.5, -- Amount of money generated per gold unit
 	GOLD_TO_WORKER_PAY_RATE = 3.5, -- Multiplier for how much money gold pays to pops
 	GREAT_NATIONS_COUNT = 4,	-- Number of Great Powers at any given time
-	GREATNESS_DAYS = 365, 	   -- how many days until country risks losing status as great nation
+	GREATNESS_DAYS = 365,    -- how many days until country risks losing status as great nation
 	BADBOY_LIMIT = 25,
 	MAX_BUREAUCRACY_PERCENTAGE = 0.01, -- More than max percent bureaucrats of poplation will give no additional benefits
 	BUREAUCRACY_PERCENTAGE_INCREMENT = 0.001, -- For each social administrative reform level, this is added to MAX_BUREAUCRACY_PERCENTAGE
@@ -121,9 +121,9 @@ economy = {
 	RGO_SUPPLY_DEMAND_FACTOR_FIRE = 0.4,		-- how fast pops are Fired when there is a low demand
 	EMPLOYMENT_HIRE_LOWEST = 0.001,				-- we Hire pops no slower then x% of total required per day
 	EMPLOYMENT_FIRE_LOWEST = 0.001,				-- we Fire pops no slower then x% of total required per day
-	TRADE_CAP_LOW_LIMIT_LAND = 0, 				-- the lowest % the slider can go for land units
-	TRADE_CAP_LOW_LIMIT_NAVAL = 0.3, 			-- the lowest % the slider can go for naval units
-	TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS = 1, 		-- the lowest % the slider can go for constructions
+	TRADE_CAP_LOW_LIMIT_LAND = 0,				-- the lowest % the slider can go for land units
+	TRADE_CAP_LOW_LIMIT_NAVAL = 0.3,			-- the lowest % the slider can go for naval units
+	TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS = 1,		-- the lowest % the slider can go for constructions
 	FACTORY_PURCHASE_MIN_FACTOR = 0.75,			-- the lowest % of its daily needs a factory will purchase
 	FACTORY_PURCHASE_DRAWDOWN_FACTOR = 0.025		-- the % a factory will reduce its input purchases each day if it did not sell all its goods (also used for scaling up production if all goods are sold)
 },
@@ -614,9 +614,6 @@ diplomacy = {
 	LONE_BACKER_PRESTIGE_FACTOR = 0.05 -- prestige boost for being only defender backer in crisis
 },  
 
-
-
-
 pops = {
 	BASE_CLERGY_FOR_LITERACY = 0.005, 
 	MAX_CLERGY_FOR_LITERACY = 0.04, 
@@ -692,8 +689,7 @@ pops = {
 	LARGE_POPULATION_INFLUENCE_PENALTY_CHUNK = 250000,
 },
 
-ai =
-{
+ai = {
 	COLONY_WEIGHT = 5.0, -- ai weight for colonising
 	ADMINISTRATOR_WEIGHT = 10.0, -- ai weight for new bureaucrat
 	INDUSTRYWORKER_WEIGHT = 10.0, -- ai weight for new industry workers
@@ -735,8 +731,7 @@ ai =
 	MONTHS_BEFORE_DISBAND = 6, -- Months from start date before AI will disband armies/navies (to avoid disbands because of early economic turmoil)
 },
 
-graphics =
-{
+graphics = {
 	CITIES_SPRAWL_OFFSET = 2,
 	CITIES_SPRAWL_WIDTH = 52,
 	CITIES_SPRAWL_HEIGHT = 52,
@@ -747,7 +742,7 @@ graphics =
 	CITIES_MESH_TYPES_COUNT = 3,
 	CITIES_MESH_SIZES_COUNT = 3,
 	CITIES_SPECIAL_BUILDINGS_POOL_SIZE = 64,
-	CITIES_SIZE_MAX_POPULATION_K = 1000 			-- When province population reach 1mln, the city will get it's maximum size.
+	CITIES_SIZE_MAX_POPULATION_K = 1000				-- When province population reach 1mln, the city will get it's maximum size.
 }
 
 }
