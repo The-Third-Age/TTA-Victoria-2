@@ -43,7 +43,7 @@ country_event = {
 	desc = "EVTDESC70001"
 	trigger = {
 		OR = {
-			country = { 
+			country = {
 				tag = GON
 				any_owned_province = {
 					OR = {
@@ -171,7 +171,7 @@ country_event = {
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
 	trigger = {
-		NOT = { 
+		NOT = {
 			tag = FROM
 			has_country_modifier = observer_mode
 		}
@@ -194,7 +194,7 @@ country_event = {
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
 	trigger = {
-		NOT = { 
+		NOT = {
 			tag = FROM
 			has_country_modifier = observer_mode
 		}
@@ -227,7 +227,7 @@ country_event = {
 		always = no
 	}
 
-	option = {				
+	option = {
 		name = "Advancement!"
 	}
 }
@@ -241,7 +241,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = {				
+	option = {
 		name = "They will pay!"
 		casus_belli = {
 			target = FROM
@@ -253,17 +253,15 @@ country_event = {
 			who = FROM
 			value = -100
 		}
-		
 	}
 	
-	option = {				
+	option = {
 		name = "Let them be"
 
 		relation = {
 			who = FROM
 			value = 100
 		}
-		
 	}
 }
 

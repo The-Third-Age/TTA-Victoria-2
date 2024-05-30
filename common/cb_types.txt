@@ -1,5 +1,3 @@
-
-
 # INSTRUCTIONS:
 # -------------
 # constructing_cb - default to yes. if "no", cant be picked for generation or as add_wargoal if no CB already
@@ -40,7 +38,7 @@
 # --------------------------------------------------------------
 
 # Order that CBs are executed in a peace treaty
-peace_order = { 
+peace_order = {
 take_one_ring
 war_of_the_ring_cb
 andrast_war_cb # Specific to Gondor's Flavor
@@ -126,8 +124,8 @@ take_one_ring = {
 	war_name = WAR_ACQUIRE_RING
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -190,8 +188,8 @@ war_of_the_ring_cb = {
 	war_name = WAR_OF_THE_RING
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -249,8 +247,8 @@ add_to_sphere = {
 	war_name = WAR_ADD_SPHERE_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -313,8 +311,8 @@ take_from_sphere = {
 	# scope = THIS = country applying wargoal
 	# FROM = country that currently has target in sphere
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -421,8 +419,8 @@ change_alignment = {
 	war_name = WAR_CHANGE_ALIGNMENT
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -463,8 +461,8 @@ status_quo = {
 	penalty_factor = 1
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -504,8 +502,8 @@ gunboat = {
 	penalty_factor = 1
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -556,8 +554,8 @@ conquest_tiny = {
 	construction_speed = 0.5
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -609,8 +607,8 @@ conquest_small = {
 	construction_speed = 0.5
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -661,8 +659,8 @@ conquest = {
 	construction_speed = 0.5
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -711,8 +709,8 @@ civil_war = {
 	war_name = CIVIL_WAR_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -764,8 +762,8 @@ acquire_core_state = {
 	war_name = WAR_TAKE_CORE_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -814,8 +812,8 @@ annex_core_country = {
 	war_name = WAR_RESTORE_ORDER_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -875,8 +873,8 @@ acquire_substate_region = {
 	war_name = WAR_TAKE_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -926,8 +924,8 @@ acquire_substate_core_state = {
 	war_name = WAR_TAKE_CORE_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -999,15 +997,15 @@ acquire_state = {
 				owner = { tag = THIS }
 			}
 		}
-	}		
+	}
 
 	po_demand_state = yes
 	
 	war_name = WAR_TAKE_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1066,8 +1064,8 @@ demand_state_for_ally = {
 	# scope = target
 	# THIS = country that applied wargoal
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1122,8 +1120,8 @@ place_in_the_sun = {
 	war_name = WAR_COLONIAL_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1156,8 +1154,8 @@ colonial_competition = {
 	war_name = WAR_COLONIAL_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1200,8 +1198,8 @@ cut_down_to_size = {
 	}
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1245,7 +1243,7 @@ free_peoples = {
 		number_of_states = 2
 		NOT = {
 			tag = FROM
-			this_culture_union = FROM	
+			this_culture_union = FROM
 		}
 		
 		any_owned_province = {
@@ -1269,8 +1267,8 @@ free_peoples = {
 	# scope = THIS = country applying wargoal
 	# FROM = country that currently owns the provinces
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1288,7 +1286,7 @@ free_peoples = {
 	# THIS = country that applied wargoal
 	on_po_accepted = {
 		country_event = 2507
-		any_country = { 
+		any_country = {
 			limit = {
 				has_country_flag = possible_free_peoples_target
 				exists = no
@@ -1345,7 +1343,7 @@ liberate_country = {
 		number_of_states = 2
 		NOT = {
 			tag = FROM
-			this_culture_union = FROM	
+			this_culture_union = FROM
 		}
 		any_owned_province = {
 			is_core = FROM
@@ -1370,8 +1368,8 @@ liberate_country = {
 	# scope = THIS = country applying wargoal
 	# FROM = country that currently owns the provinces
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1389,7 +1387,7 @@ liberate_country = {
 	# THIS = country that applied wargoal
 	on_po_accepted = {
 		country_event = 2507
-		any_country = { 
+		any_country = {
 			limit = {
 				has_country_flag = possible_liberate_realm_target
 				exists = no
@@ -1446,7 +1444,7 @@ liberate_and_puppet_country = {
 		number_of_states = 2
 		NOT = {
 			tag = FROM
-			this_culture_union = FROM	
+			this_culture_union = FROM
 		}
 		any_owned_province = {
 			is_core = FROM
@@ -1473,8 +1471,8 @@ liberate_and_puppet_country = {
 	# scope = THIS = country applying wargoal
 	# FROM = country that currently owns the provinces
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1492,7 +1490,7 @@ liberate_and_puppet_country = {
 	# THIS = country that applied wargoal
 	on_po_accepted = {
 		country_event = 2507
-		any_country = { 
+		any_country = {
 			limit = {
 				has_country_flag = possible_liberate_and_puppet_realm_target
 				exists = no
@@ -1551,8 +1549,8 @@ andrast_war_cb = {
 	# scope = THIS = country applying wargoal
 	# FROM = country that currently owns the provinces
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1613,8 +1611,8 @@ druwaith_iaur_war_cb = {
 	# scope = THIS = country applying wargoal
 	# FROM = country that currently owns the provinces
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1748,7 +1746,7 @@ dismantle_forts = {
 	# war target country of goal's state
 	allowed_states = {
 		any_owned_province = {
-			OR = { 
+			OR = {
 				has_building = fort
 				has_building = naval_base
 			}
@@ -1761,8 +1759,8 @@ dismantle_forts = {
 	war_name = WAR_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1815,8 +1813,8 @@ release_puppet = {
 	# scope = THIS = country applying wargoal
 	# FROM = country that currently has target as puppet
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1889,8 +1887,8 @@ make_puppet = {
 	war_name = WAR_PUPPET_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -1949,8 +1947,8 @@ take_puppet = {
 	# scope = THIS = country applying wargoal
 	# FROM = country that currently has target as puppet
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -2035,8 +2033,8 @@ become_independent = {
 	war_name = WAR_INDEPENDENCE_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -2084,8 +2082,8 @@ humiliate = {
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -2138,8 +2136,8 @@ demand_concession_casus_belli = {
 	war_name = WAR_CONCESSION_NAME
 
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.1
 		}
@@ -2180,7 +2178,7 @@ establish_protectorate_casus_belli = {
 		}
 		OR = {
 			NOT = {
-				number_of_states = 2 
+				number_of_states = 2
 			}
 			AND = {
 				THIS = {
@@ -2199,8 +2197,8 @@ establish_protectorate_casus_belli = {
 	war_name = WAR_PROTECTORATE_NAME
 
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.1
 		}
@@ -2431,8 +2429,8 @@ rude_boy = {
 	war_name = WAR_RUDEBOI_NAME
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.1
 		}
@@ -2478,8 +2476,8 @@ great_war_penalty_cb = {
 	#}
 	
 	on_add = {
-		move_issue_percentage = { 
-			from = jingoism 
+		move_issue_percentage = {
+			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
@@ -2526,4 +2524,3 @@ call_allies_cb = {
 	on_add = {
 	}
 }
-
