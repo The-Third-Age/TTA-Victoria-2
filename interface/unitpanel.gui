@@ -46,7 +46,7 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 185
 			maxHeight = 16
 			fixedsize = yes
@@ -65,10 +65,10 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
-			text = "Paris"	
+			text = "Paris"
 			maxWidth = 130
 			maxHeight = 16
-			fixedsize = yes	
+			fixedsize = yes
 			format = left
 		}
 
@@ -78,9 +78,9 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial14_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 100
-			maxHeight = 17	
+			maxHeight = 17
 			format = right
 		}
 		
@@ -90,9 +90,9 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
-			text = "17"	
+			text = "17"
 			maxWidth = 40
-			maxHeight = 17	
+			maxHeight = 17
 			format = right
 		}
 		
@@ -111,7 +111,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			rotation = 1.5708
 		}
-			
+		
 		iconType = {
 			name ="str_bar"
 			spriteType = "GFX_strength_progress"
@@ -124,20 +124,20 @@ guiTypes = {
 			name = "disbandtoosmallbutton"
 			position = { x = 214 y = 32 }
 			quadTextureSprite ="GFX_unit_disband_red"
-		}		
-			
+		}
+		
 		guiButtonType = {
 			name = "disbandbutton"
 			position = { x = 235 y = 32 }
 			quadTextureSprite ="GFX_unit_disband"
-		}	
+		}
 
 		guiButtonType = {
 			name = "splitinhalf"
 			position = { x = 254 y = 32 }
 			quadTextureSprite ="GFX_unit_splitinhalf"
 			shortcut = "s"
-		}		
+		}
 
 		guiButtonType = {
 			name = "newunitbutton"
@@ -164,9 +164,9 @@ guiTypes = {
 			position = { x = 38 y = 26 }
 			name = "unitname"
 			font = "Arial14"
-			borderSize = {x = 8 y = 4}	
+			borderSize = {x = 8 y = 4}
 			size = { x=190 y=24}
-			text = ""	
+			text = ""
 			orientation = "UPPER_LEFT"
 		}
 		iconType = {
@@ -191,20 +191,18 @@ guiTypes = {
 		}
 	}
 
-
 ### MULTI UNIT PANEL ###
 
 	windowType = {
 		name = "multi_unitpanel"
 		backGround=""
-		position = { x=-1 y=176 }	
+		position = { x=-1 y=176 }
 		size = { x=432 y=100 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
-
+		fullScreen = no
 
 		iconType = {
 			name ="multiselect_bg"
@@ -213,18 +211,16 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
-
 		instantTextBoxType = {
 			name = "desc"
 			position = { x = 10 y = 6 }
 			textureFile = ""
 			font = "Arial14_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 300
-			maxHeight = 32	
+			maxHeight = 32
 		}
-
 
 		guiButtonType = {
 			name = "reorganizebutton"
@@ -237,7 +233,7 @@ guiTypes = {
 			buttonFont = "Arial12"
 			shortcut = "r"
 		}
-			
+		
 		guiButtonType = {
 			name = "mergebutton"
 			position = { x = 275 y = 4 }
@@ -249,7 +245,7 @@ guiTypes = {
 			buttonFont = "Arial12"
 			shortcut = "g"
 		}
-			
+		
 		guiButtonType = {
 			name = "close_multiunit"
 			position = { x = 305 y = 4 }
@@ -260,18 +256,18 @@ guiTypes = {
 			name = "disband_multiunit"
 			position = { x = 215 y = 4 }
 			quadTextureSprite ="GFX_unit_disband"
-		}	
+		}
 
 		scrollbarType = {
-			name = "multiunit_slider"	
+			name = "multiunit_slider"
 			slider = "listboxSliderButton"
 			track= "listboxTrackButton"
 			leftbutton = "upButton"
 			rightbutton = "downButton"
 			size = {x =6 y =6 }
 			position = {x= 328 y =48}
-			priority = 100			
-			borderSize = {x = 6 y = 6}	
+			priority = 100
+			borderSize = {x = 6 y = 6}
 			maxValue =100
 			minValue =0
 			stepSize =1
@@ -280,10 +276,10 @@ guiTypes = {
 
 
 			guiButtonType = {
-				name = "listboxSliderButton"	
+				name = "listboxSliderButton"
 				quadTextureSprite = "slider_slider"
 				tooltip = ""
-				tooltipText =""	
+				tooltipText =""
 				delayedTooltipText = ""
 				position = { x=0 y =0}
 			}
@@ -291,49 +287,43 @@ guiTypes = {
 			guiButtonType = {
 				name = "listboxTrackButton"
 				quadTextureSprite = "slider_background"
-				position = { x=6 y =6}	
+				position = { x=6 y =6}
 				tooltip = ""
 				tooltipText =""
-				delayedTooltipText = ""	
-
-			}	
+				delayedTooltipText = ""
+			}
 
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "upButton"
 				quadTextureSprite = "slider_downbutton"
-				position = { x=0 y =0}	
+				position = { x=0 y =0}
 			}
 			
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "downButton"
 				quadTextureSprite = "slider_upbutton"
-				position = { x=0 y =120}	
+				position = { x=0 y =120}
 			}
 		}
 	}
 
-
-
-	
 #######LEADER SELECTION############
 ################################
 
 	windowType = {
 		name = "leader_selection_panel"
 		backGround=""
-		position = { x=345 y=210 }	
+		position = { x=345 y=210 }
 		size = { x=640 y=100 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 
-	
-		iconType =
-		{
+		iconType = {
 			name ="select_leader_bg"
 			spriteType = "GFX_unit_leader_bg"
 			position = { x= -8 y = -64 }
@@ -353,9 +343,9 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			rotation = 1.5708
 			#allwaystransparent = yes
-		}	
+		}
 		
-		iconType =	{
+		iconType = {
 			name ="selected_photo"
 			spriteType = "GFX_leader_generic0"
 			position = { x= 30 y = -54 }
@@ -363,27 +353,27 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-				name = "selected_leader_name"
-				position = { x = 65 y = -40 }
-				textureFile = ""
-				font = "Arial12_bold_black"
-				borderSize = {x = 0 y = 0}
-				text = ""	
-				maxWidth = 240
-				maxHeight = 16	
-				Orientation = "UPPER_LEFT"
-				fixedsize = yes
-			}
-			
+			name = "selected_leader_name"
+			position = { x = 65 y = -40 }
+			textureFile = ""
+			font = "Arial12_bold_black"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 240
+			maxHeight = 16
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+		}
+		
 		instantTextBoxType = {
 			name = "unitleader_personality"
 			position = { x = 325 y = -40 }
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 235
-			maxHeight = 32	
+			maxHeight = 32
 			Orientation = "UPPER_LEFT"
 			format = left
 			fixedsize = yes
@@ -395,15 +385,15 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 235
-			maxHeight = 32	
+			maxHeight = 32
 			Orientation = "UPPER_LEFT"
 			format = left
 			fixedsize = yes
 		}
 		
-		# (Unused???)	
+		# (Unused???)
 		#OverlappingElementsBoxType = {
 		#	name = "selected_leader_traits"
 		#	position = { x = 300 y = -59}
@@ -416,7 +406,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "sort_prestige"
 			position = { x=10 y=-16}
-			quadTextureSprite ="GFX_sortbutton_20"	
+			quadTextureSprite ="GFX_sortbutton_20"
 			buttonText = ""
 			buttonFont = "vic_18_black"
 		}
@@ -428,11 +418,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			#allwaystransparent = yes
 		}
-				
+		
 		guiButtonType = {
 			name = "sort_name"
 			position = { x=30 y=-16}
-			quadTextureSprite ="GFX_sortbutton_292"	
+			quadTextureSprite ="GFX_sortbutton_292"
 			buttonText = "NAME"
 			buttonFont = "vic_18_black"
 		}
@@ -440,7 +430,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "sort_personality"
 			position = { x=320 y=-16}
-			quadTextureSprite ="GFX_sortbutton_240"	
+			quadTextureSprite ="GFX_sortbutton_240"
 			buttonText = "UV_PERSONALITY_LABEL"
 			buttonFont = "vic_18_black"
 		}
@@ -448,7 +438,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "sort_background"
 			position = { x=562 y=-16}
-			quadTextureSprite ="GFX_sortbutton_240"	
+			quadTextureSprite ="GFX_sortbutton_240"
 			buttonText = "UV_BACKGROUND_LABEL"
 			buttonFont = "vic_18_black"
 		}
@@ -456,7 +446,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "back_button"
 			position = { x=487 y=375}
-			quadTextureSprite ="GFX_button_standard_144"	
+			quadTextureSprite ="GFX_button_standard_144"
 			buttonText = "CLOSE"
 			buttonFont = "vic_18_black"
 		}
@@ -464,7 +454,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "noleader_button"
 			position = { x=174 y=375}
-			quadTextureSprite ="GFX_button_standard_144_red"	
+			quadTextureSprite ="GFX_button_standard_144_red"
 			buttonText = "NO_LEADER"
 			buttonFont = "vic_18_black"
 		}
@@ -481,9 +471,9 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18_black"
 			borderSize = {x = 4 y = 0}
-			text = "UW_ASSIGN"	
+			text = "UW_ASSIGN"
 			maxWidth = 300
-			maxHeight = 32	
+			maxHeight = 32
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -504,9 +494,9 @@ guiTypes = {
 		#	textureFile = ""
 		#	font = "Arial12_black"
 		#	borderSize = {x = 0 y = 0}
-		#	text = ""	
+		#	text = ""
 		#	maxWidth = 534
-		#	maxHeight = 32	
+		#	maxHeight = 32
 		#	Orientation = "UPPER_LEFT"
 		#	format = centre
 		#	fixedsize = yes
@@ -518,18 +508,18 @@ guiTypes = {
 	windowType = {
 		name = "leader_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=620 y= 36 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 
 		guiButtonType = {
 			name = "leader_button"
 			position = { x = 6 y = 3 }
-			quadTextureSprite ="GFX_unit_select_leader"	
+			quadTextureSprite ="GFX_unit_select_leader"
 		}
 
 		iconType = {
@@ -545,9 +535,9 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			rotation = 1.5708
 			#allwaystransparent = yes
-		}	
+		}
 		
-		iconType =	{
+		iconType = {
 			name ="photo"
 			spriteType = "GFX_leader_generic0"
 			position = { x = 26 y = 0 }
@@ -560,9 +550,9 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = { x = 0 y = 0 }
-			text = ""	
+			text = ""
 			maxWidth = 240
-			maxHeight = 16	
+			maxHeight = 16
 			Orientation = "UPPER_LEFT"
 			fixedsize = yes
 		}
@@ -573,9 +563,9 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 235
-			maxHeight = 32	
+			maxHeight = 32
 			Orientation = "UPPER_LEFT"
 			format = left
 			fixedsize = yes
@@ -587,9 +577,9 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 235
-			maxHeight = 32	
+			maxHeight = 32
 			Orientation = "UPPER_LEFT"
 			format = left
 			fixedsize = yes
@@ -598,29 +588,25 @@ guiTypes = {
 	
 #################################################################################
 # Trait entry
-#################################################################################	
+#################################################################################
 	windowType = {
 		name = "trait_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=20 y= 20 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 
-		
-		iconType =
-		{
+		iconType = {
 			name ="trait_icon"
 			spriteType = "GFX_unit_supplies_icon"
 			position = { x= 18 y = 16}
 			Orientation = "UPPER_LEFT"
-			
-		}			
-		
-	}	
+		}
+	}
 
 
 ########     REORG WINDOW       ########
@@ -636,11 +622,10 @@ guiTypes = {
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 		Orientation = "UPPER_LEFT"
 
-		iconType =
-		{
+		iconType = {
 			name ="reorg_bg"
 			spriteType = "GFX_unit_reorg_bg"
 			position = { x= -95  y = -2 }
@@ -654,9 +639,9 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_22"
 			borderSize = {x = 4 y = 0}
-			text = "UNIT_PANEL"	
+			text = "UNIT_PANEL"
 			maxWidth = 512
-			maxHeight = 24	
+			maxHeight = 24
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -667,10 +652,10 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 4 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 200
 			fixedsize = yes
-			maxHeight = 24	
+			maxHeight = 24
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -681,10 +666,10 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 4 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 200
 			fixedsize = yes
-			maxHeight = 24	
+			maxHeight = 24
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -697,7 +682,7 @@ guiTypes = {
 			dontRender = ""
 			horizontalBorder= ""
 			verticalBorder= ""
-			fullScreen = no	
+			fullScreen = no
 			Orientation = "UPPER_LEFT"
 		}
 		
@@ -710,14 +695,14 @@ guiTypes = {
 			dontRender = ""
 			horizontalBorder= ""
 			verticalBorder= ""
-			fullScreen = no	
+			fullScreen = no
 			Orientation = "UPPER_LEFT"
 		}
 		
 		guiButtonType = {
 			name = "balancebutton"
 			position = { x=-231 y=195}
-			quadTextureSprite ="GFX_button_standard_177"	
+			quadTextureSprite ="GFX_button_standard_177"
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -729,7 +714,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "closebutton"
 			position = { x=-37 y=195}
-			quadTextureSprite ="GFX_button_standard_177"	
+			quadTextureSprite ="GFX_button_standard_177"
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -762,15 +747,15 @@ guiTypes = {
 		}
 		
 		scrollbarType = {
-			name = "external_scroll_slider_left"	
+			name = "external_scroll_slider_left"
 			slider = "listboxSliderButton"
 			track= "listboxTrackButton"
 			leftbutton = "upButton"
 			rightbutton = "downButton"
 			size = { x=6 y=353 }
 			position = { x = 216 y = 66 }
-			priority = 100			
-			borderSize = {x = 0 y = 0}	
+			priority = 100
+			borderSize = {x = 0 y = 0}
 			maxValue =100
 			minValue =0
 			stepSize =1
@@ -778,45 +763,45 @@ guiTypes = {
 			horizontal = 0
 
 			guiButtonType = {
-				name = "listboxSliderButton"	
+				name = "listboxSliderButton"
 				quadTextureSprite = "slider_slider"
 				tooltip = ""
-				tooltipText =""	
+				tooltipText =""
 				delayedTooltipText = ""
 				position = { x=0 y =0}
 			}
 			guiButtonType = {
 				name = "listboxTrackButton"
 				quadTextureSprite = "slider_background"
-				position = { x=6 y =6}	
+				position = { x=6 y =6}
 				tooltip = ""
 				tooltipText =""
-				delayedTooltipText = ""	
-			}	
+				delayedTooltipText = ""
+			}
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "upButton"
 				quadTextureSprite = "slider_downbutton"
-				position = { x=0 y =0}	
+				position = { x=0 y =0}
 			}
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "downButton"
 				quadTextureSprite = "slider_upbutton"
-				position = { x=0 y =120}	
+				position = { x=0 y =120}
 			}
 		}
 
 		scrollbarType = {
-			name = "external_scroll_slider_right"	
+			name = "external_scroll_slider_right"
 			slider = "listboxSliderButton"
 			track= "listboxTrackButton"
 			leftbutton = "upButton"
 			rightbutton = "downButton"
 			size = { x=6 y=353 }
 			position = { x = 579 y = 66 }
-			priority = 100			
-			borderSize = {x = 0 y = 0}	
+			priority = 100
+			borderSize = {x = 0 y = 0}
 			maxValue =100
 			minValue =0
 			stepSize =1
@@ -824,32 +809,32 @@ guiTypes = {
 			horizontal = 0
 
 			guiButtonType = {
-				name = "listboxSliderButton"	
+				name = "listboxSliderButton"
 				quadTextureSprite = "slider_slider"
 				tooltip = ""
-				tooltipText =""	
+				tooltipText =""
 				delayedTooltipText = ""
 				position = { x=0 y =0}
 			}
 			guiButtonType = {
 				name = "listboxTrackButton"
 				quadTextureSprite = "slider_background"
-				position = { x=6 y =6}	
+				position = { x=6 y =6}
 				tooltip = ""
 				tooltipText =""
-				delayedTooltipText = ""	
-			}	
+				delayedTooltipText = ""
+			}
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "upButton"
 				quadTextureSprite = "slider_downbutton"
-				position = { x=0 y =0}	
+				position = { x=0 y =0}
 			}
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "downButton"
 				quadTextureSprite = "slider_upbutton"
-				position = { x=0 y =120}	
+				position = { x=0 y =120}
 			}
 		}
 	}
@@ -859,150 +844,7 @@ guiTypes = {
 	windowType = {
 		name = "reorg_entry"
 		backGround=""
-		position = { x=-256 y=-128 }	
-		size = { x=256 y= 32 }
-		moveable = 0
-		dontRender = ""
-		horizontalBorder= ""
-		verticalBorder= ""
-		fullScreen = no		
-
-
-
-       
-		iconType =
-		{
-			name ="band_reorg_regiment"
-			spriteType = "GFX_unit_entry_bg"
-			position = { x= 7 y = 1 }
-			Orientation = "UPPER_LEFT"
-		}
-		iconType = 
-		{
-			name ="band_reorg_naval"
-			spriteType ="GFX_unit_entry_bg_naval"	
-			position = { x= 7 y = 1 }
-			Orientation = "UPPER_LEFT"
-		}
-
-		iconType =
-		{
-			name ="unit_icon"
-			spriteType = "GFX_unit_strip"
-			position = { x= 9 y = 0 }
-			Orientation = "UPPER_LEFT"
-		}
-
-		instantTextBoxType = {
-			name = "subunit_name"
-			position = { x = 43 y = -1 }
-
-			textureFile = ""
-			font = "Arial12_bold_black"
-			borderSize = {x = 4 y =4 }
-			text = ""	
-			maxWidth = 173
-			maxHeight = 32
-			Orientation = "UPPER_LEFT"
-			fixedsize = yes
-			
-		}
-		
-
-		instantTextBoxType = {
-			name = "subunit_type"
-			position = { x = 43 y =17 }
-			format = left
-
-			textureFile = ""
-			font = "Arial12_black"
-			borderSize = {x = 4 y = 0 }
-			text = "xxxxxxxxxx"	
-			maxWidth = 173
-			maxHeight = 24	
-			Orientation = "UPPER_LEFT"
-			fixedsize = yes
-		}
-		
-
-		instantTextBoxType = {
-			name = "subunit_strength"
-			position = { x = 204 y = -2 }
-			textureFile = ""
-			font = "vic_18_black"
-			borderSize = {x = 4 y = 4 }
-			text = "xxxx"	
-			maxWidth = 50
-			maxHeight = 10	
-			Orientation = "UPPER_LEFT"
-			format = right	
-		}
-		instantTextBoxType = {
-			name = "subunit_strength_naval"
-			position = { x = 233 y = -2 }
-			textureFile = ""
-			font = "vic_18_black"
-			borderSize = {x = 4 y = 4 }
-			text = "xxxx"	
-			maxWidth = 50
-			maxHeight = 10	
-			Orientation = "UPPER_LEFT"
-			format = right	
-		}
-		
-		guiButtonType =
-		{
-			name ="connected_pop"
-			quadTextureSprite = "GFX_pops_mini"
-			position = { x= 260 y = 0 }
-		}
-		
-		iconType =
-		{
-			name ="rebel_faction"
-			spriteType = "GFX_politics_rebel_strip_trans"
-			position = { x= 257 y = 12 }
-		}
-		
-		iconType =
-				{
-				name ="org_bar"
-				spriteType = "GFX_morale_progress_small"
-				position = { x= 297 y = 23 }
-				Orientation = "UPPER_LEFT"
-				rotation = 1.5708
-			}
-			
-			iconType =
-				{
-				name ="str_bar"
-				spriteType = "GFX_strength_progress_small"
-				position = { x= 305 y = 23 }
-				Orientation = "UPPER_LEFT"
-				rotation = 1.5708
-			}
-
-		guiButtonType = {
-				name = "transferbutton"
-				position = { x = 318 y = 0 }
-				quadTextureSprite ="GFX_button_arrow_right"
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = "  "
-				buttonFont = "Main_14_black"
-
-			}
-	}
-	
-	
-	####### RIGHT ENTRY
-	#######
-
-	windowType = {
-		name = "reorg_entry_right"
-		backGround=""
-		position = { x=-256 y=-128 }	
+		position = { x=-256 y=-128 }
 		size = { x=256 y= 32 }
 		moveable = 0
 		dontRender = ""
@@ -1010,33 +852,25 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no
 
-
-
-
-		iconType =
-		{
+		iconType = {
 			name ="band_reorg_regiment"
 			spriteType = "GFX_unit_entry_bg"
 			position = { x= 7 y = 1 }
 			Orientation = "UPPER_LEFT"
 		}
-		iconType = 
-		{
+		iconType = {
 			name ="band_reorg_naval"
-			spriteType ="GFX_unit_entry_bg_naval"	
+			spriteType ="GFX_unit_entry_bg_naval"
 			position = { x= 7 y = 1 }
 			Orientation = "UPPER_LEFT"
 		}
-		
-		iconType =
-		{
+
+		iconType = {
 			name ="unit_icon"
 			spriteType = "GFX_unit_strip"
 			position = { x= 9 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-
-
 
 		instantTextBoxType = {
 			name = "subunit_name"
@@ -1045,14 +879,12 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 4 y =4 }
-			text = ""	
+			text = ""
 			maxWidth = 173
 			maxHeight = 32
 			Orientation = "UPPER_LEFT"
 			fixedsize = yes
-			
 		}
-		
 
 		instantTextBoxType = {
 			name = "subunit_type"
@@ -1062,13 +894,12 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 4 y = 0 }
-			text = "xxxxxxxxxx"	
+			text = "xxxxxxxxxx"
 			maxWidth = 173
-			maxHeight = 24	
+			maxHeight = 24
 			Orientation = "UPPER_LEFT"
 			fixedsize = yes
 		}
-		
 
 		instantTextBoxType = {
 			name = "subunit_strength"
@@ -1076,11 +907,11 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18_black"
 			borderSize = {x = 4 y = 4 }
-			text = "xxxx"	
+			text = "xxxx"
 			maxWidth = 50
-			maxHeight = 10	
+			maxHeight = 10
 			Orientation = "UPPER_LEFT"
-			format = right	
+			format = right
 		}
 		instantTextBoxType = {
 			name = "subunit_strength_naval"
@@ -1088,29 +919,26 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18_black"
 			borderSize = {x = 4 y = 4 }
-			text = "xxxx"	
+			text = "xxxx"
 			maxWidth = 50
-			maxHeight = 10	
+			maxHeight = 10
 			Orientation = "UPPER_LEFT"
-			format = right	
+			format = right
 		}
 		
-		guiButtonType =
-		{
+		guiButtonType = {
 			name ="connected_pop"
 			quadTextureSprite = "GFX_pops_mini"
 			position = { x= 260 y = 0 }
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="rebel_faction"
 			spriteType = "GFX_politics_rebel_strip_trans"
 			position = { x= 257 y = 12 }
 		}
 		
-		iconType =
-				{
+		iconType = {
 				name ="org_bar"
 				spriteType = "GFX_morale_progress_small"
 				position = { x= 297 y = 23 }
@@ -1118,82 +946,200 @@ guiTypes = {
 				rotation = 1.5708
 			}
 			
-			iconType =
-				{
-				name ="str_bar"
-				spriteType = "GFX_strength_progress_small"
-				position = { x= 305 y = 23 }
-				Orientation = "UPPER_LEFT"
-				rotation = 1.5708
-			}
+		iconType = {
+			name ="str_bar"
+			spriteType = "GFX_strength_progress_small"
+			position = { x= 305 y = 23 }
+			Orientation = "UPPER_LEFT"
+			rotation = 1.5708
+		}
 
 		guiButtonType = {
-				name = "transferbutton"
-				position = { x = -18 y = 0 }
-				quadTextureSprite ="GFX_button_arrow_left"
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = "  "
-				buttonFont = "Main_14_black"
-
-			}
+			name = "transferbutton"
+			position = { x = 318 y = 0 }
+			quadTextureSprite ="GFX_button_arrow_right"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "  "
+			buttonFont = "Main_14_black"
+		}
 	}
+	
+	####### RIGHT ENTRY
+	#######
 
+	windowType = {
+		name = "reorg_entry_right"
+		backGround=""
+		position = { x=-256 y=-128 }
+		size = { x=256 y= 32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType = {
+			name ="band_reorg_regiment"
+			spriteType = "GFX_unit_entry_bg"
+			position = { x= 7 y = 1 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="band_reorg_naval"
+			spriteType ="GFX_unit_entry_bg_naval"
+			position = { x= 7 y = 1 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="unit_icon"
+			spriteType = "GFX_unit_strip"
+			position = { x= 9 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "subunit_name"
+			position = { x = 43 y = -1 }
+
+			textureFile = ""
+			font = "Arial12_bold_black"
+			borderSize = {x = 4 y =4 }
+			text = ""
+			maxWidth = 173
+			maxHeight = 32
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "subunit_type"
+			position = { x = 43 y =17 }
+			format = left
+
+			textureFile = ""
+			font = "Arial12_black"
+			borderSize = {x = 4 y = 0 }
+			text = "xxxxxxxxxx"
+			maxWidth = 173
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "subunit_strength"
+			position = { x = 204 y = -2 }
+			textureFile = ""
+			font = "vic_18_black"
+			borderSize = {x = 4 y = 4 }
+			text = "xxxx"
+			maxWidth = 50
+			maxHeight = 10
+			Orientation = "UPPER_LEFT"
+			format = right
+		}
+		instantTextBoxType = {
+			name = "subunit_strength_naval"
+			position = { x = 233 y = -2 }
+			textureFile = ""
+			font = "vic_18_black"
+			borderSize = {x = 4 y = 4 }
+			text = "xxxx"
+			maxWidth = 50
+			maxHeight = 10
+			Orientation = "UPPER_LEFT"
+			format = right
+		}
+		
+		guiButtonType = {
+			name ="connected_pop"
+			quadTextureSprite = "GFX_pops_mini"
+			position = { x= 260 y = 0 }
+		}
+		
+		iconType = {
+			name ="rebel_faction"
+			spriteType = "GFX_politics_rebel_strip_trans"
+			position = { x= 257 y = 12 }
+		}
+		
+		iconType = {
+			name ="org_bar"
+			spriteType = "GFX_morale_progress_small"
+			position = { x= 297 y = 23 }
+			Orientation = "UPPER_LEFT"
+			rotation = 1.5708
+		}
+		
+		iconType = {
+			name ="str_bar"
+			spriteType = "GFX_strength_progress_small"
+			position = { x= 305 y = 23 }
+			Orientation = "UPPER_LEFT"
+			rotation = 1.5708
+		}
+
+		guiButtonType = {
+			name = "transferbutton"
+			position = { x = -18 y = 0 }
+			quadTextureSprite ="GFX_button_arrow_left"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "  "
+			buttonFont = "Main_14_black"
+		}
+	}
 
 ##### ATTACHMENT SELECTION PANEL ##############
 
 	windowType = {
 		name = "attachment_selection_panel"
 		backGround=""
-		position = { x=320 y=150 }	
+		position = { x=320 y=150 }
 		size = { x=400 y=100 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 
-	
-		iconType =
-		{
+		iconType = {
 			name ="attach_bg"
 			spriteType = "GFX_attach_bg"
 			position = { x= 0 y = -14 }
 			Orientation = "UPPER_LEFT"
 		}
 
-
 		instantTextBoxType = {
-				name = "label"
-				position = { x = 27 y = -7 }
-				textureFile = ""
-				font = "Arial12_headline"
-				borderSize = {x = 4 y = 4}
-				text = "attach_label"	
-				maxWidth = 200
-				maxHeight = 10
-				format = centre
-				Orientation = "UPPER_LEFT"
-				fixedsize = yes
-			}
-		
+			name = "label"
+			position = { x = 27 y = -7 }
+			textureFile = ""
+			font = "Arial12_headline"
+			borderSize = {x = 4 y = 4}
+			text = "attach_label"
+			maxWidth = 200
+			maxHeight = 10
+			format = centre
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+		}
 
 		guiButtonType = {
-				name = "back_button"
-				position = { x=65 y=308}
-				quadTextureSprite ="GFX_button_128wide"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = "CLOSE"
-				buttonFont = "Arial12_bold_black"
-			}
+			name = "back_button"
+			position = { x=65 y=308}
+			quadTextureSprite ="GFX_button_128wide"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "CLOSE"
+			buttonFont = "Arial12_bold_black"
+		}
 
-
-
-		listboxType = 
-			{
+		listboxType = {
 			name ="list"
 			position = { x = 5 y = 14 }
 			backGround=""
@@ -1203,8 +1149,6 @@ guiTypes = {
 			scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
 		}
-
-
 	}
 
 	######    Attachment  entry
@@ -1212,30 +1156,25 @@ guiTypes = {
 	windowType = {
 		name = "unit_assignment_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=360 y= 32 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 
-
-
-		
 
 		guiButtonType = {
-				name = "assign"
-				position = { x=10 y=1}
-				quadTextureSprite ="GFX_attach_banner"	
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = ""
-				buttonFont = "Arial12"
-			}
-
-
+			name = "assign"
+			position = { x=10 y=1}
+			quadTextureSprite ="GFX_attach_banner"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "Arial12"
+		}
 
 		iconType = {
 			name ="counter_type"
@@ -1248,51 +1187,42 @@ guiTypes = {
 			spriteType = "GFX_counter_size"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-		}	
-
+		}
 
 		instantTextBoxType = {
-				name = "name"
-				position = { x = 48 y = 2 }
-				textureFile = ""
-				font = "Arial12_bold"
-				borderSize = {x = 4 y = 4}
-				text = ""	
-				maxWidth = 360
-				maxHeight = 10	
-				Orientation = "UPPER_LEFT"
-				fixedsize = yes
-			}
+			name = "name"
+			position = { x = 48 y = 2 }
+			textureFile = ""
+			font = "Arial12_bold"
+			borderSize = {x = 4 y = 4}
+			text = ""
+			maxWidth = 360
+			maxHeight = 10
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+		}
 		instantTextBoxType = {
-				name = "location"
-				position = { x = 48 y = 16 }
-				textureFile = ""
-				font = "Arial12_black"
-				borderSize = {x = 4 y = 4}
-				text = ""	
-				maxWidth = 360
-				maxHeight = 10	
-				Orientation = "UPPER_LEFT"
-				fixedsize = yes
-			}
-
-
-
+			name = "location"
+			position = { x = 48 y = 16 }
+			textureFile = ""
+			font = "Arial12_black"
+			borderSize = {x = 4 y = 4}
+			text = ""
+			maxWidth = 360
+			maxHeight = 10
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+		}
 	}
 
-
 ####################
-
 
 	positionType = {
 		name = "unitlist_start"
 		position = { x = 0 y =180 }
 	}
-	
 	positionType = {
 		name = "unitlist_offset"
 		position = { x = 16 y =64 }
 	}
-
-
 }
