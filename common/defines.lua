@@ -4,7 +4,7 @@ start_date = '2954.1.1',
 end_date = '3100.12.31',
 
 country = {
-	YEARS_OF_NATIONALISM = 20,   -- Years of Nationalism
+	YEARS_OF_NATIONALISM = 20,	-- Years of Nationalism
 	MONTHS_UNTIL_BROKEN = 3,	-- OBSOLETE! (Months until rebel held capital results in broken country.)
 	REBEL_ACCEPTANCE_MONTHS = 60,
 	BASE_COUNTRY_TAX_EFFICIENCY = 0.4, -- Basic efficiency for taxes without 'crats and tech
@@ -31,14 +31,14 @@ country = {
 	AI_SUPPORT_REFORM = 0.00, -- At least this many % needs to support a reform for the AI to take it
 	BASE_MONTHLY_DIPLOPOINTS = 0.3, -- Base value gain for diplomatic actions each month
 	DIPLOMAT_TRAVEL_TIME = -1,
-	PROVINCE_OVERSEAS_PENALTY = 0.005, -- Each province req. this many goods flagged as overseas penalty 
+	PROVINCE_OVERSEAS_PENALTY = 0.005, -- Each province req. this many goods flagged as overseas penalty
 	NONCORE_TAX_PENALTY = -0.05, -- -5% for each non-core in state
 	BASE_TARIFF_EFFICIENCY = 0.2, -- baseline tariff efficiency
 	COLONY_FORMED_PRESTIGE = 1, -- prestige from founding a colony.
-	CREATED_CB_VALID_TIME = 24,  -- how many months 
+	CREATED_CB_VALID_TIME = 24, -- how many months
 	LOYALTY_BOOST_ON_PARTY_WIN = 0.1,
 	MOVEMENT_RADICALISM_BASE = 25,
-	MOVEMENT_RADICALISM_PASSED_REFORM_EFFECT  = -2,
+	MOVEMENT_RADICALISM_PASSED_REFORM_EFFECT = -2,
 	MOVEMENT_RADICALISM_NATIONALISM_FACTOR = 1.0,
 	SUPPRESSION_POINTS_GAIN_BASE = 170, -- monthly gain with max bureaucrats
 	SUPPRESS_BUREAUCRAT_FACTOR = 0.5,
@@ -251,7 +251,7 @@ diplomacy = {
 	PRESTIGE_INSTALL_COMMUNIST_GOV_TYPE_BASE = 2,
 	PRESTIGE_UNINSTALL_COMMUNIST_GOV_TYPE_BASE = 2,
 	PRESTIGE_COLONY_BASE = 2,
-		
+	
 	PRESTIGE_ADD_TO_SPHERE = 0.05,
 	PRESTIGE_RELEASE_PUPPET = 0.05,
 	PRESTIGE_MAKE_PUPPET = 0.05,
@@ -387,14 +387,14 @@ diplomacy = {
 	WAR_PRESTIGE_COST_HONOR_ALLIANCE = -100,
 	WAR_PRESTIGE_COST_HONOR_GUARNATEE = -50,
 	WAR_PRESTIGE_COST_UNCIVILIZED = -50,
-	WAR_PRESTIGE_COST_CORE = -50,	
+	WAR_PRESTIGE_COST_CORE = -50,
 	
 	WAR_FAILED_GOAL_MILITANCY = 2,
 	WAR_FAILED_GOAL_PRESTIGE_BASE = -10,
 	WAR_FAILED_GOAL_PRESTIGE = -0.1,
 	
 	DISCREDIT_DAYS = 180,
-	DISCREDIT_INFLUENCE_COST_FACTOR = 2,	
+	DISCREDIT_INFLUENCE_COST_FACTOR = 2,
 	DISCREDIT_INFLUENCE_GAIN_FACTOR = -0.75,
 	
 	BANEMBASSY_DAYS = 365,
@@ -568,7 +568,7 @@ diplomacy = {
 	TENSION_FROM_CB = 0.04,
 	TENSION_FROM_MOVEMENT = 0.02, -- tension per 1000 in nationalist movement
 	TENSION_FROM_MOVEMENT_MAX = 1.2, -- max total value no matter the size of the movement
-	AT_WAR_TENSION_DECAY = -0.12, -- for each potentially interested GP at war (value is if all possible GPs are at war) 
+	AT_WAR_TENSION_DECAY = -0.12, -- for each potentially interested GP at war (value is if all possible GPs are at war)
 	TENSION_ON_CB_DISCOVERED = 20,
 	TENSION_ON_REVOLT = 50,
 	TENSION_WHILE_CRISIS = -1.0,
@@ -612,11 +612,11 @@ diplomacy = {
 	TWS_BATTLE_MAX_ASPECT = 8.0, -- Max allowed battle wins aspect for TWS
 	LARGE_POPULATION_INFLUENCE_PENALTY = -0.4,
 	LONE_BACKER_PRESTIGE_FACTOR = 0.05 -- prestige boost for being only defender backer in crisis
-},  
+},
 
 pops = {
-	BASE_CLERGY_FOR_LITERACY = 0.005, 
-	MAX_CLERGY_FOR_LITERACY = 0.04, 
+	BASE_CLERGY_FOR_LITERACY = 0.005,
+	MAX_CLERGY_FOR_LITERACY = 0.04,
 	LITERACY_CHANGE_SPEED = 0.1,
 
 
@@ -643,7 +643,7 @@ pops = {
 	MIL_REFORM_IMPACT = 2,
 	MIL_WAR_EXHAUSTION = 0.005,
 	MIL_NON_ACCEPTED = 0.05,
-		
+	
 	CON_LITERACY = 0.1,
 	CON_LUXURY_GOODS = 0.1,
 	CON_POOR_CLERGY = -2.5,
@@ -665,7 +665,7 @@ pops = {
 	MIL_TO_AUTORISE = 9, -- Rebels over this rise no matter what
 	REDUCTION_AFTER_RISEING = 0.0, -- After a pop spawns a rebellion, its militancy will be reduced this much
 	REDUCTION_AFTER_DEFEAT = 3.0, -- After a rebellion is being defeated in combat, its pop militancy will be divided by this number.
-																-- (if value < 1.0, the MIL will be increased) (Beware! value must be > 0)
+									-- (if value < 1.0, the MIL will be increased) (Beware! value must be > 0)
 	
 	POP_TO_LEADERSHIP = 0.0001, -- how much leadership every 1000 officers gives each day.
 	ARTISAN_MIN_PRODUCTIVITY = 1, -- Minimum efficieny of an artisan
@@ -680,10 +680,10 @@ pops = {
 	MOVEMENT_CON_FACTOR = 0.05,
 	MOVEMENT_LIT_FACTOR = 0.3,
 	MIL_ON_REB_MOVE = 8,
-	POPULATION_SUPPRESSION_FACTOR = 0.0, -- controls base pop size for factor of supression/radicalness cost. zero  disables the feature and jsut uses radicalness
+	POPULATION_SUPPRESSION_FACTOR = 0.0, -- controls base pop size for factor of supression/radicalness cost. zero disables the feature and just uses radicalness
 	POPULATION_MOVEMENT_RADICAL_FACTOR = 300,
 	NATIONALIST_MOVEMENT_MIL_CAP = 3.0,
-	MOVEMENT_SUPPORT_UH_FACTOR = 3, --  3x means 30% country support equals full UH support
+	MOVEMENT_SUPPORT_UH_FACTOR = 3, -- 3x means 30% country support equals full UH support
 	REBEL_OCCUPATION_STRENGTH_BONUS = 0.01, -- the amount of strength given to rebel movements when they occupy a province
 	LARGE_POPULATION_LIMIT = 9000000,
 	LARGE_POPULATION_INFLUENCE_PENALTY_CHUNK = 250000,
@@ -698,7 +698,7 @@ ai = {
 	SOLDIER_FRACTION = 0.03, -- max amount of population AI wants to be soldiers
 	CAPITALIST_FRACTION = 0.001, -- max amount of population AI wants to be capis
 	PRODUCTION_WEIGHT = 0.05, -- ai weight for new production
-	SPAM_PENALTY = 10, -- makes certain diplomatic action less common 
+	SPAM_PENALTY = 10, -- makes certain diplomatic action less common
 	ONE_SIDE_MAX_WARSCORE = 150, -- don't add too many wargoals to one side in a war
 	POP_PROJECT_INVESTMENT_MAX_BUDGET_FACTOR = 0.25, -- how much % of our current budget can be spend on the pop project investments.
 	RELATION_LIMIT_NO_ALLIANCE_OFFER = 0, -- if relation lower then this value, AI will not ally

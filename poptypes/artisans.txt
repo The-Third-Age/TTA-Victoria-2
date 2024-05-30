@@ -194,12 +194,10 @@ migration_target = {
 		unemployment = 0.1
 		state_scope = { has_factories = no }
 	}
-	
 	modifier = {
 		factor = 1.2
 		total_pops = 150000
 	}
-
 	modifier = {
 		factor = 1.2
 		total_pops = 250000
@@ -241,7 +239,7 @@ migration_target = {
 	modifier = {
 		factor = 2
 		is_state_capital = yes
-	}		
+	}
 	modifier = {
 		factor = 1.5
 		is_capital = yes
@@ -268,13 +266,13 @@ promote_to = {
 	bureaucrats = {
 		factor = 0.01
 		modifier = {
-			factor = -100 
+			factor = -100
 			NOT = { is_accepted_culture = yes }
 			NOT = { is_primary_culture = yes }
 		}
 		group = {
 			modifier = {
-				factor =  0.25
+				factor = 0.25
 				literacy = 0.40
 			}
 			modifier = {
@@ -384,7 +382,6 @@ promote_to = {
 				state_scope = { bureaucrats = 0.040 }
 			}
 		}
-		
 		group = {
 			modifier = {
 				factor = 2
@@ -498,7 +495,7 @@ promote_to = {
 				education_spending =0.99
 			}
 		}
-		group = {		
+		group = {
 			modifier = {
 				factor = -2
 				clergymen = 0.004
@@ -510,35 +507,35 @@ promote_to = {
 			modifier = {
 				factor = -2
 				clergymen = 0.012
-			}			
+			}
 			modifier = {
 				factor = -2
 				clergymen = 0.016
-			}			
+			}
 			modifier = {
 				factor = -2
 				clergymen = 0.02
-			}			
+			}
 			modifier = {
 				factor = -2
 				clergymen = 0.024
-			}			
+			}
 			modifier = {
 				factor = -2
 				clergymen = 0.028
-			}			
+			}
 			modifier = {
 				factor = -2
 				clergymen = 0.032
-			}			
+			}
 			modifier = {
 				factor = -2
 				clergymen = 0.036
-			}			
+			}
 			modifier = {
 				factor = -100
 				clergymen = 0.04
-			}						
+			}
 		}
 	}
 	capitalists = {
@@ -549,12 +546,11 @@ promote_to = {
 				has_factories = no
 			}
 			NOT = { total_pops = 200000 }
-		}	
+		}
 		modifier = {
-			factor = -1 
+			factor = -1
 			is_accepted_culture = no
 		}
-				
 		modifier = {
 			factor = -10
 			NOT = { literacy = 0.30 }
@@ -633,7 +629,7 @@ promote_to = {
 		factor = 0.01
 		group = {
 			modifier = {
-				factor =  2
+				factor = 2
 				literacy = 0.10
 			}
 			modifier = {
@@ -645,7 +641,7 @@ promote_to = {
 				literacy = 0.3
 			}
 			modifier = {
-				factor =  2
+				factor = 2
 				literacy = 0.4
 			}
 			modifier = {
@@ -728,7 +724,6 @@ promote_to = {
 		}
 	}
 }
-
 
 ideologies = {
 	high_nobility = {
@@ -867,7 +862,6 @@ ideologies = {
 		}
 	}
 }
-
 
 issues = {
 	#####################
@@ -1069,7 +1063,7 @@ issues = {
 			everyday_needs = 0.75
 			country = { guild_autonomy_policy = independent_guilds }
 		}
-	} 
+	}
 	oversight_guilds = {
 		factor = 1
 		modifier = {
@@ -1097,7 +1091,7 @@ issues = {
 			everyday_needs = 0.75
 			country = { guild_autonomy_policy = oversight_guilds }
 		}
-	} 
+	}
 	controlled_guilds = {
 		factor = 1.2
 		modifier = {
@@ -1154,7 +1148,7 @@ issues = {
 		modifier = {
 			factor = 0.5
 			not = { consciousness = 9 }
-		}	
+		}
 	}
 	alignment_acceptance = {
 		factor = 1
@@ -1191,19 +1185,19 @@ issues = {
 		modifier = {
 			factor = 1.1
 			not = { consciousness = 4 }
-		}	
+		}
 		modifier = {
 			factor = 1.1
 			not = { consciousness = 3 }
-		}	
+		}
 		modifier = {
 			factor = 1.1
 			not = { consciousness = 2 }
-		}	
+		}
 		modifier = {
 			factor = 1.1
 			not = { consciousness = 1 }
-		}			
+		}
 		modifier = {
 			factor = 0.9
 			consciousness = 6
@@ -1224,13 +1218,13 @@ issues = {
 	official_only = {
 		factor = 1.1
 		modifier = {
-			factor = 0 
-			NOT = { consciousness  = 5}
+			factor = 0
+			NOT = { consciousness = 5}
 		}
 		modifier = {
-			factor = 0 
+			factor = 0
 			NOT = { is_primary_culture = yes }
-		}		
+		}
 		modifier = {
 			factor = 1.1
 			consciousness = 8
@@ -1238,19 +1232,19 @@ issues = {
 		modifier = {
 			factor = 1.1
 			consciousness = 9
-		}	
+		}
 	}
 	minority_toleration = {
 		factor = 1
 		modifier = {
-			factor = 0 
-			NOT = { consciousness   = 5}
+			factor = 0
+			NOT = { consciousness = 5}
 		}
 		modifier = {
-			factor = 0 
+			factor = 0
 			NOT = { is_accepted_culture = yes }
 			NOT = { is_primary_culture = yes }
-		}		
+		}
 		modifier = {
 			factor = 1.1
 			consciousness = 8
@@ -1261,10 +1255,10 @@ issues = {
 		}
 	}
 	regional_autonomy = {
-		factor = 1 
+		factor = 1
 		modifier = {
-			factor = 0 
-			NOT = { consciousness  = 5}
+			factor = 0
+			NOT = { consciousness = 5}
 		}
 		modifier = {
 			factor = 1.1
@@ -1485,7 +1479,7 @@ issues = {
 			NOT = {
 				war_exhaustion = 50
 			}
-		}	
+		}
 		modifier = {
 			factor = 1.1
 			war = no
@@ -1707,7 +1701,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = landed_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs =  1.0
+				luxury_needs = 1.0
 				NOT = { life_needs = 0.7 }
 				AND = {
 					NOT = { country = { has_country_flag = attempting_to_democratic } }
@@ -1768,7 +1762,6 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
@@ -1781,7 +1774,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = wealth_weighted_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs =  1.0
+				luxury_needs = 1.0
 				NOT = { life_needs = 0.7 }
 				NOT = { country = { has_country_flag = democratic } }
 			}
@@ -1838,12 +1831,11 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
 		}
-	}			
+	}
 	wealth_voting = {
 		factor = 0.9
 		modifier = {
@@ -1851,7 +1843,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = wealth_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs =  1.0
+				luxury_needs = 1.0
 				NOT = { life_needs = 0.7 }
 				NOT = { country = { has_country_flag = democratic } }
 			}
@@ -1910,7 +1902,6 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
@@ -1923,7 +1914,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = universal_weighted_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs =  1.0
+				luxury_needs = 1.0
 				NOT = { life_needs = 0.7 }
 				NOT = { country = { has_country_flag = democratic } }
 			}
@@ -1980,7 +1971,6 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
@@ -1993,7 +1983,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = universal_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs =  1.0
+				luxury_needs = 1.0
 				NOT = { life_needs = 0.7 }
 				NOT = { country = { has_country_flag = democratic } }
 			}
@@ -2002,7 +1992,6 @@ issues = {
 			factor = 0.25
 			country = { civilized = no }
 		}
-
 		modifier = {
 			factor = 1.25
 			NOT = { agree_with_ruling_party = 1 }
@@ -2051,7 +2040,6 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
@@ -2064,7 +2052,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = appointed }
 				NOT = { consciousness = 6 }
-				luxury_needs =  1.0
+				luxury_needs = 1.0
 				NOT = { life_needs = 0.7 }
 			}
 		}
@@ -2076,7 +2064,6 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
@@ -2089,7 +2076,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = state_equal_weight }
 				NOT = { consciousness = 6 }
-				luxury_needs =  1.0
+				luxury_needs = 1.0
 				NOT = { life_needs = 0.7 }
 				vote_franschise = none_voting
 			}
@@ -2102,7 +2089,6 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
@@ -2115,7 +2101,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = population_equal_weight }
 				NOT = { consciousness = 6 }
-				luxury_needs =  1.0
+				luxury_needs = 1.0
 				NOT = { life_needs = 0.7 }
 				vote_franschise = none_voting
 			}
@@ -2128,7 +2114,6 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
@@ -2217,7 +2202,7 @@ issues = {
 	meeting_curfew = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = meeting_curfew }
 				NOT = { consciousness = 4 }
@@ -2287,7 +2272,7 @@ issues = {
 	yes_meeting = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = yes_meeting }
 				NOT = { consciousness = 4 }
@@ -2357,7 +2342,7 @@ issues = {
 	medium_noble_autonomy = {
 		factor = 1.25
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = medium_noble_autonomy }
 				NOT = { consciousness = 4 }
@@ -2432,7 +2417,7 @@ issues = {
 	small_noble_autonomy = {
 		factor = 1.25
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = small_noble_autonomy }
 				NOT = { consciousness = 4 }
@@ -2507,7 +2492,7 @@ issues = {
 	medium_levy_contribution = {
 		factor = 1.25
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = medium_levy_contribution }
 				NOT = { consciousness = 4 }
@@ -2583,7 +2568,7 @@ issues = {
 	small_levy_contribution = {
 		factor = 1.25
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = small_levy_contribution }
 				NOT = { consciousness = 4 }
@@ -2659,7 +2644,7 @@ issues = {
 	medium_tax_contribution = {
 		factor = 1.25
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = medium_tax_contribution }
 				NOT = { consciousness = 4 }
@@ -2735,7 +2720,7 @@ issues = {
 	large_tax_contribution = {
 		factor = 1.25
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = large_tax_contribution }
 				NOT = { consciousness = 4 }
@@ -2811,7 +2796,7 @@ issues = {
 	restricted_knighting_rights = {
 		factor = 1.25
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = restricted_knighting_rights }
 				NOT = { consciousness = 4 }
@@ -2887,7 +2872,7 @@ issues = {
 	royal_knighting_rights = {
 		factor = 1.25
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = royal_knighting_rights }
 				NOT = { consciousness = 4 }
@@ -2963,7 +2948,7 @@ issues = {
 	discouraged_serfdom = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = discouraged_serfdom }
 				strata = rich
@@ -2986,7 +2971,7 @@ issues = {
 		modifier = {
 			factor = 1.2
 			state_scope = { is_slave = yes }
-		}	
+		}
 		modifier = {
 			factor = 1.5
 			state_scope = { is_slave = yes }
@@ -3001,17 +2986,17 @@ issues = {
 			factor = 1.5
 			state_scope = { is_slave = yes }
 			consciousness = 8
-		}	
+		}
 		modifier = {
 			factor = 1.5
 			state_scope = { is_slave = yes }
 			consciousness = 9
-		}	
+		}
 	}
 	banned_serfdom = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = banned_serfdom }
 				strata = rich
@@ -3024,7 +3009,7 @@ issues = {
 		modifier = {
 			factor = 0.5
 			state_scope = { is_slave = yes }
-		}	
+		}
 		modifier = {
 			factor = 1.1
 			life_needs = 1.0
@@ -3066,7 +3051,7 @@ issues = {
 	ten_land_ownership = {
 		factor = 0.9
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = ten_land_ownership }
 				NOT = { consciousness = 4 }
@@ -3141,7 +3126,7 @@ issues = {
 	thirty_land_ownership = {
 		factor = 0.9
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = thirty_land_ownership }
 				NOT = { consciousness = 4 }
@@ -3216,7 +3201,7 @@ issues = {
 	half_land_ownership = {
 		factor = 0.9
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = half_land_ownership }
 				NOT = { consciousness = 4 }
@@ -3291,7 +3276,7 @@ issues = {
 	seventy_land_ownership = {
 		factor = 0.9
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = seventy_land_ownership }
 				NOT = { consciousness = 4 }
@@ -3366,7 +3351,7 @@ issues = {
 	all_land_ownership = {
 		factor = 0.9
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { is_next_reform = all_land_ownership }
 				NOT = { consciousness = 4 }
@@ -3477,11 +3462,11 @@ issues = {
 		modifier = {
 			factor = 1.5
 			consciousness = 8
-		}	
+		}
 		modifier = {
 			factor = 1.5
 			consciousness = 9
-		}	
+		}
 	}
 	no_slavery = {
 		factor = 1
@@ -3596,7 +3581,6 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
@@ -3660,7 +3644,6 @@ issues = {
 			factor = 1.25
 			consciousness = 8
 		}
-
 		modifier = {
 			factor = 1.25
 			consciousness = 9
@@ -3772,12 +3755,12 @@ issues = {
 	limited_exclusive_tr = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { life_needs = 1.0 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = limited_exclusive_tr }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -3786,7 +3769,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -3798,7 +3781,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -3814,7 +3797,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -3831,12 +3814,12 @@ issues = {
 	abolished_exclusive_tr = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { life_needs = 1.0 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = abolished_exclusive_tr }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -3845,7 +3828,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -3857,7 +3840,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -3873,7 +3856,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -3890,12 +3873,12 @@ issues = {
 	allowed_state_supplies = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { life_needs = 1.0 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = allowed_state_supplies }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -3904,7 +3887,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -3916,7 +3899,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -3932,7 +3915,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -3949,12 +3932,12 @@ issues = {
 	restricted_state_supplies = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { life_needs = 1.0 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = restricted_state_supplies }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -3963,7 +3946,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -3975,7 +3958,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -3991,7 +3974,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -4008,12 +3991,12 @@ issues = {
 	chartered_cities = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { life_needs = 1.0 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = chartered_cities }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -4022,7 +4005,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -4034,7 +4017,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -4050,7 +4033,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -4067,12 +4050,12 @@ issues = {
 	territorial_cities = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { life_needs = 1.0 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = territorial_cities }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -4081,7 +4064,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -4093,7 +4076,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -4109,7 +4092,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -4126,12 +4109,12 @@ issues = {
 	royal_cities = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { life_needs = 1.0 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = royal_cities }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -4140,7 +4123,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -4152,7 +4135,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -4168,7 +4151,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -4182,14 +4165,14 @@ issues = {
 			luxury_needs = 1
 		}
 	}
-	trinket_pensions = { 
+	trinket_pensions = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = trinket_pensions }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -4198,7 +4181,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -4210,7 +4193,7 @@ issues = {
 		modifier = {
 			factor = 0.25
 			not = { life_needs = 0.25 }
-		}	
+		}
 		modifier = {
 			factor = 0.25
 			not = { life_needs = 0.50 }
@@ -4226,7 +4209,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -4242,7 +4225,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -4256,14 +4239,14 @@ issues = {
 			luxury_needs = 1
 		}
 	}
-	low_pensions = { 
+	low_pensions = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = low_pensions }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -4272,7 +4255,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -4284,7 +4267,7 @@ issues = {
 		modifier = {
 			factor = 0.25
 			not = { life_needs = 0.25 }
-		}	
+		}
 		modifier = {
 			factor = 0.25
 			not = { life_needs = 0.50 }
@@ -4300,7 +4283,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -4316,7 +4299,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -4330,14 +4313,14 @@ issues = {
 			luxury_needs = 1
 		}
 	}
-	acceptable_pensions = { 
+	acceptable_pensions = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = acceptable_pensions }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -4346,7 +4329,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -4358,7 +4341,7 @@ issues = {
 		modifier = {
 			factor = 0.25
 			not = { life_needs = 0.25 }
-		}	
+		}
 		modifier = {
 			factor = 0.25
 			not = { life_needs = 0.50 }
@@ -4374,7 +4357,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -4390,7 +4373,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -4404,14 +4387,14 @@ issues = {
 			luxury_needs = 1
 		}
 	}
-	good_pensions = { 
+	good_pensions = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = good_pensions }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -4420,7 +4403,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -4432,7 +4415,7 @@ issues = {
 		modifier = {
 			factor = 0.25
 			not = { life_needs = 0.25 }
-		}	
+		}
 		modifier = {
 			factor = 0.25
 			not = { life_needs = 0.50 }
@@ -4448,7 +4431,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -4464,7 +4447,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -4481,12 +4464,12 @@ issues = {
 	appointment = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { life_needs = 1.0 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = appointment }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -4495,7 +4478,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -4507,7 +4490,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -4523,7 +4506,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50
@@ -4540,12 +4523,12 @@ issues = {
 	guild_school = {
 		factor = 1
 		modifier = {
-			factor = 0 
+			factor = 0
 			OR = {
 				NOT = { life_needs = 1.0 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = guild_school }
-			}	
+			}
 		}
 		modifier = {
 			factor = 0.25
@@ -4554,7 +4537,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			consciousness = 7
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			consciousness = 8
@@ -4566,7 +4549,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			everyday_needs = 0.50
@@ -4582,7 +4565,7 @@ issues = {
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.25
-		}	
+		}
 		modifier = {
 			factor = 1.25
 			luxury_needs = 0.50

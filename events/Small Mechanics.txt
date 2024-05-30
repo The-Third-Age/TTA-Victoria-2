@@ -391,8 +391,8 @@ country_event = {
 	trigger = {
 		has_country_flag = using_palantiri
 		
-		FOR = { 
-			any_neighbor_country = { 
+		FOR = {
+			any_neighbor_country = {
 				alliance_with = THIS
 				NOT = { vassal_of = THIS }
 			}

@@ -1,9 +1,9 @@
 guiTypes = {
 
 	windowType = {
-		name ="back_end"
-		backGround=""
-		position = { x=-800 y =-600}	
+		name = "back_end"
+		backGround = ""
+		position = { x=-800 y =-600}
 		size = { x=1024 y = 768}
 		moveable = 0
 		dontRender = ""
@@ -14,24 +14,24 @@ guiTypes = {
 		fullscreen=yes
 		Orientation = "CENTER"
 		
-		iconType =	{
+		iconType = {
 			name ="backend_bg"
 			spriteType = "GFX_backend_bg"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "year_text"
 			position = { x = 550 y = 225 }
 			font = "vic_title"
-			text = "The World in 2000"	
+			text = "The World in 2000"
 			maxWidth = 500
-			maxHeight = 48	
+			maxHeight = 48
 			format = centre
 		}
 		
-		OverlappingElementsBoxType = {   
+		OverlappingElementsBoxType = {
 			name = "great_powers_list"
 			position = { x= 381 y = 343 }
 			size = { x=2000 y= 128 }
@@ -40,7 +40,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 		
-		OverlappingElementsBoxType = {   
+		OverlappingElementsBoxType = {
 			name = "great_powers_list2"
 			position = { x= 805 y = 343 }
 			size = { x=2000 y= 128 }
@@ -49,7 +49,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 		
-		OverlappingElementsBoxType = {   
+		OverlappingElementsBoxType = {
 			name = "second_rank_list"
 			position = { x= 382 y = 554 }
 			size = { x=1200 y= 64 }
@@ -57,12 +57,12 @@ guiTypes = {
 			spacing = 0
 			Orientation = "UPPER_LEFT"
 		}
-			
+		
 		guiButtonType = {
 			name = "Exit"
 			position = { x = 682 y = 938 }
 			Orientation = "UPPER_LEFT"
-			quadTextureSprite ="GFX_frontend_button_236"	
+			quadTextureSprite ="GFX_frontend_button_236"
 			buttonText = "EXIT"
 			buttonFont = "vic_22_black"
 		}
@@ -71,21 +71,19 @@ guiTypes = {
 		windowType = {
 			name = "player_window"
 			backGround=""
-			position = { x= 400 y = 700 }	
+			position = { x= 400 y = 700 }
 			size = { x=128 y= 128 }
 			moveable = 0
 			Orientation = "UPPER_LEFT"
 			
-			iconType =
-			{
+			iconType = {
 				name ="country_flag1"
 				spriteType = "GFX_flag_event2"
 				position = { x= 69 y = -25 }
 				Orientation = "UPPER_LEFT"
 				rotation = -1.5708
 			}
-			iconType =
-			{
+			iconType = {
 				name ="country_flag2"
 				spriteType = "GFX_flag_event"
 				position = { x= 598 y = -25 }
@@ -93,44 +91,44 @@ guiTypes = {
 				rotation = -1.5708
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "country_name"
 				position = { x = 268 y = -50 }
 				font = "vic_32"
-				text = ""	
+				text = ""
 				maxWidth = 260
-				maxHeight = 24	
+				maxHeight = 24
 				fixedsize = yes
-				format = centre				
+				format = centre
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "country_class"
 				position = { x = 268 y = -18 }
 				font = "vic_22_black"
-				text = ""	
+				text = ""
 				maxWidth = 260
-				maxHeight = 20	
+				maxHeight = 20
 				fixedsize = yes
 				format = centre
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "total_score"
 				position = { x = 361 y = 16 }
 				font = "vic_32"
-				text = "SCORE"	
+				text = "SCORE"
 				maxWidth = 75
-				maxHeight = 24	
+				maxHeight = 24
 				format = centre
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "country_rank"
 				position = { x = 361 y = 43 }
 				font = "vic_18"
-				text = "#2"	
+				text = "#2"
 				maxWidth = 75
-				maxHeight = 24	
+				maxHeight = 24
 				format = centre
 			}
 			
@@ -153,180 +151,180 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "country_prestige"
 				position = { x = 230 y = 28 }
 				font = "vic_18_black"
-				text = "123"	
+				text = "123"
 				maxWidth = 50
-				maxHeight = 20	
+				maxHeight = 20
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "country_economic"
 				position = { x = 310 y = 28 }
 				font = "vic_18_black"
-				text = "234"	
+				text = "234"
 				maxWidth = 50
-				maxHeight = 20	
+				maxHeight = 20
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "country_military"
 				position = { x = 470 y = 28 }
 				font = "vic_18_black"
-				text = "345"	
+				text = "345"
 				maxWidth = 50
-				maxHeight = 20	
+				maxHeight = 20
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "country_money"
 				position = { x = 520 y = 28 }
 				font = "vic_18_black"
-				text = "345"	
+				text = "345"
 				maxWidth = 90
-				maxHeight = 20	
+				maxHeight = 20
 			}
 			
 			# country stat lists
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "population_label"
 				position = { x = 10 y = 98 }
 				font = "vic_18_black"
-				text = "BE_POPULATION"	
+				text = "BE_POPULATION"
 				maxWidth = 150
 				maxHeight = 20
 				fixedsize = yes
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "population_value"
 				position = { x = 130 y = 98 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 70
-				maxHeight = 20	
+				maxHeight = 20
 				format = right
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "provinces_label"
 				position = { x = 10 y = 115 }
 				font = "vic_18_black"
-				text = "BE_PROVINCES"	
+				text = "BE_PROVINCES"
 				maxWidth = 150
-				maxHeight = 20	
+				maxHeight = 20
 				fixedsize = yes
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "provinces_value"
 				position = { x = 130 y = 115 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 70
-				maxHeight = 20	
+				maxHeight = 20
 				format = right
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "factories_label"
 				position = { x = 10 y = 132 }
 				font = "vic_18_black"
-				text = "BE_FACTORIES"	
+				text = "BE_FACTORIES"
 				maxWidth = 150
 				maxHeight = 20
 				fixedsize = yes
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "factories_value"
 				position = { x = 130 y = 132 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 70
-				maxHeight = 20	
+				maxHeight = 20
 				format = right
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "literacy_label"
 				position = { x = 10 y = 149 }
 				font = "vic_18_black"
-				text = "BE_LITERACY"	
+				text = "BE_LITERACY"
 				maxWidth = 150
 				maxHeight = 20
 				fixedsize = yes
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "literacy_value"
 				position = { x = 130 y = 149 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 70
-				maxHeight = 20	
+				maxHeight = 20
 				format = right
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "army_label"
 				position = { x = 10 y = 166 }
 				font = "vic_18_black"
-				text = "BE_ARMY"	
+				text = "BE_ARMY"
 				maxWidth = 150
 				maxHeight = 20
 				fixedsize = yes
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "army_value"
 				position = { x = 130 y = 166 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 70
-				maxHeight = 20	
+				maxHeight = 20
 				format = right
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "navy_label"
 				position = { x = 10 y = 183 }
 				font = "vic_18_black"
-				text = "BE_NAVY"	
+				text = "BE_NAVY"
 				maxWidth = 150
 				maxHeight = 20
 				fixedsize = yes
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "navy_value"
 				position = { x = 130 y = 183 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 70
 				maxHeight = 20
 				format = right
 			}
 			
 			# column 2
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "gov_type_label"
 				position = { x = 500 y = 98 }
 				font = "vic_18_black"
-				text = "BE_GOV"	
+				text = "BE_GOV"
 				maxWidth = 50
-				maxHeight = 20	
+				maxHeight = 20
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "gov_type_value"
 				position = { x = 630 y = 98 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 150
 				maxHeight = 20
 				fixedsize = yes
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "party_label"
 				position = { x = 500 y = 115 }
 				font = "vic_18_black"
-				text = "BE_PARTY"	
+				text = "BE_PARTY"
 				maxWidth = 150
-				maxHeight = 20	
+				maxHeight = 20
 				fixedsize = yes
 			}
 			
@@ -336,58 +334,58 @@ guiTypes = {
 				position = { x= 630 y = 112 }
 				Orientation = "UPPER_LEFT"
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "party_value"
 				position = { x = 660 y = 115 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 150
 				maxHeight = 20
 				fixedsize = yes
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "technologies_label"
 				position = { x = 500 y = 132 }
 				font = "vic_18_black"
-				text = "BE_TECH"	
+				text = "BE_TECH"
 				maxWidth = 50
-				maxHeight = 20	
+				maxHeight = 20
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "technologies_value"
 				position = { x = 630 y = 132 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 150
 				maxHeight = 20
 				fixedsize = yes
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "inventions_label"
 				position = { x = 500 y = 149 }
 				font = "vic_18_black"
-				text = "BE_INVENT"	
+				text = "BE_INVENT"
 				maxWidth = 50
-				maxHeight = 20	
+				maxHeight = 20
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "inventions_value"
 				position = { x = 630 y = 149 }
 				font = "vic_18_black"
-				text = "99"	
+				text = "99"
 				maxWidth = 150
 				maxHeight = 20
 				fixedsize = yes
 			}
 			
 			### piecharts
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "ideology_label"
 				position = { x= 240 y = 101 }
 				font = "vic_18"
-				text = "BA_IDEOLOGY"	
+				text = "BA_IDEOLOGY"
 				maxWidth = 125
-				maxHeight = 20	
+				maxHeight = 20
 				format = centre
 			}
 			
@@ -404,11 +402,11 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "workforce_label"
 				position = { x= 345 y = 101 }
 				font = "vic_18"
-				text = "BA_WORK_FORCE"	
+				text = "BA_WORK_FORCE"
 				maxWidth = 125
 				maxHeight = 20
 				format = centre
@@ -430,12 +428,12 @@ guiTypes = {
 			guiButtonType = {
 				name = "ledger_button"
 				position = { x = 560 y = 166 }
-				quadTextureSprite ="GFX_button_standard_177"	
+				quadTextureSprite ="GFX_button_standard_177"
 				buttonText = "LEDGER"
 				buttonFont = "vic_18_black"
 				Orientation = "UPPER_LEFT"
 			}
-		}	
+		}
 	}
 	
 	
@@ -443,7 +441,7 @@ guiTypes = {
 	windowType = {
 		name = "great_power_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=212 y= 128 }
 		moveable = 0
 
@@ -454,7 +452,7 @@ guiTypes = {
 			buttonText = ""
 			buttonFont = "vic_18_black"
 		}
-			
+		
 		iconType = {
 			name ="country_flag_overlay"
 			spriteType = "GFX_topbar_flag_overlay_trans"
@@ -462,24 +460,24 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "score"
 			position = { x = 0 y = 105 }
 			font = "vic_22_black"
-			text = "9999"	
+			text = "9999"
 			maxWidth = 200
-			maxHeight = 20	
+			maxHeight = 20
 			fixedsize = yes
 			format = centre
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "country_name"
 			position = { x = 0 y = -15 }
 			font = "vic_22"
-			text = "Sweden"	
+			text = "Sweden"
 			maxWidth = 200
-			maxHeight = 20	
+			maxHeight = 20
 			fixedsize = yes
 			format = centre
 		}
@@ -490,7 +488,7 @@ guiTypes = {
 	windowType = {
 		name = "second_rank_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=104 y= 64 }
 		moveable = 0
 		
@@ -501,28 +499,27 @@ guiTypes = {
 			buttonText = ""
 			buttonFont = "vic_18_black"
 		}
-			
-		instantTextBoxType = { 
+		
+		instantTextBoxType = {
 			name = "score"
 			position = { x = 0 y = 47 }
 			font = "vic_18_black"
-			text = "9999"	
+			text = "9999"
 			maxWidth = 100
-			maxHeight = 20	
+			maxHeight = 20
 			fixedsize = yes
 			format = centre
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "country_name"
 			position = { x = 0 y = -14 }
 			font = "vic_18"
-			text = "Sweden"	
+			text = "Sweden"
 			maxWidth = 100
-			maxHeight = 20	
+			maxHeight = 20
 			fixedsize = yes
 			format = centre
 		}
 	}
-
 }

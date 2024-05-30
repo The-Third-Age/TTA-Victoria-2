@@ -72,7 +72,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = ranged_gear_factory }
+				state_scope = { has_building = ranged_gear_factory }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -118,7 +118,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = melee_gear_factory }
+				state_scope = { has_building = melee_gear_factory }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -164,7 +164,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = artillery_factory }
+				state_scope = { has_building = artillery_factory }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -210,7 +210,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = clipper_shipyard }
+				state_scope = { has_building = clipper_shipyard }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -256,7 +256,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = cut_stone_factory }
+				state_scope = { has_building = cut_stone_factory }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -302,7 +302,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = lumber_mill }
+				state_scope = { has_building = lumber_mill }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -348,7 +348,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = steel_factory }
+				state_scope = { has_building = steel_factory }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -396,7 +396,7 @@ country_event = {
 			any_owned_province = {
 				OR = {
 					AND = {
-						state_scope =  { has_building = charcoal_factory }
+						state_scope = { has_building = charcoal_factory }
 						unemployment_by_type = {
 							type = craftsmen
 							value = 0.25
@@ -457,7 +457,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = furniture_factory }
+				state_scope = { has_building = furniture_factory }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -503,7 +503,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = paper_mill }
+				state_scope = { has_building = paper_mill }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -549,7 +549,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = clothes_factory }
+				state_scope = { has_building = clothes_factory }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -595,7 +595,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = liquor_distillery }
+				state_scope = { has_building = liquor_distillery }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -643,14 +643,14 @@ country_event = {
 			any_owned_province = {
 				OR = {
 					AND = {
-						state_scope =  { has_building = fabric_factory }
+						state_scope = { has_building = fabric_factory }
 						unemployment_by_type = {
 							type = craftsmen
 							value = 0.25
 						}
 					}
 					AND = {
-						state_scope =  { has_building = fabric_factory_wool }
+						state_scope = { has_building = fabric_factory_wool }
 						unemployment_by_type = {
 							type = craftsmen
 							value = 0.25
@@ -698,7 +698,7 @@ country_event = {
 		modifier = {
 			factor = 0.7
 			any_owned_province = {
-				state_scope =  { has_building = glass_factory }
+				state_scope = { has_building = glass_factory }
 				unemployment_by_type = {
 					type = craftsmen
 					value = 0.25
@@ -1216,12 +1216,12 @@ province_event = {
 			}
 		}
 	}
-		
+	
 	option = {
 		name = "...to the storehouse!"
 		owner = {
 			food = 15
-		}	
+		}
 	}
 
 	option = {
@@ -1284,11 +1284,11 @@ province_event = {
 	id = 12027
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = cotton
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1355,11 +1355,11 @@ province_event = {
 	id = 12028
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = ranged_gear_factory }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1426,11 +1426,11 @@ province_event = {
 	id = 12029
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = melee_gear_factory }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1497,11 +1497,11 @@ province_event = {
 	id = 12030
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = artillery_factory }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1568,11 +1568,11 @@ province_event = {
 	id = 12031
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = rock
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1639,11 +1639,11 @@ province_event = {
 	id = 12032
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = dye
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1710,11 +1710,11 @@ province_event = {
 	id = 12033
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = wool
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1781,14 +1781,14 @@ province_event = {
 	id = 12034
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		OR = {
 			trade_goods = coal
 			state_scope = { has_building = charcoal_factory }
 		}
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1855,11 +1855,11 @@ province_event = {
 	id = 12035
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = iron
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1926,11 +1926,11 @@ province_event = {
 	id = 12036
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = timber
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -1997,11 +1997,11 @@ province_event = {
 	id = 12037
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = steel_factory }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2068,11 +2068,11 @@ province_event = {
 	id = 12038
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = glass_factory }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2139,11 +2139,11 @@ province_event = {
 	id = 12039
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = clipper_shipyard }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2210,14 +2210,14 @@ province_event = {
 	id = 12040
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		OR = {
 			state_scope = { has_building = fabric_factory }
 			state_scope = { has_building = fabric_factory_wool }
 		}
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2284,11 +2284,11 @@ province_event = {
 	id = 12041
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = lumber_mill }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2355,11 +2355,11 @@ province_event = {
 	id = 12042
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = cut_stone_factory }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2426,11 +2426,11 @@ province_event = {
 	id = 12043
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = food
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2497,11 +2497,11 @@ province_event = {
 	id = 12044
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = paper_mill }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2568,11 +2568,11 @@ province_event = {
 	id = 12045
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = tobacco
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2639,11 +2639,11 @@ province_event = {
 	id = 12046
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = tea
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2710,11 +2710,11 @@ province_event = {
 	id = 12047
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = liquor_distillery }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2781,11 +2781,11 @@ province_event = {
 	id = 12048
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = clothes_factory }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2852,11 +2852,11 @@ province_event = {
 	id = 12049
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		state_scope = { has_building = furniture_factory }
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2923,11 +2923,11 @@ province_event = {
 	id = 12050
 	title = "High Quality Goods"
 	desc = "EVTDESC12027"
-		
+	
 	trigger = {
 		trade_goods = horses
 	}
-		
+	
 	mean_time_to_happen = {
 		months = 4000
 		
@@ -2994,7 +2994,7 @@ province_event = {
 	id = 12051
 	title = "A New Vein"
 	desc = "EVTDESC12051"
-		
+	
 	trigger = {
 		OR = {
 			trade_goods = coal
@@ -3018,7 +3018,7 @@ province_event = {
 	}
 }
 
-# Large Production 
+# Large Production
 province_event = {
 	id = 12052
 	title = "High Production!"
