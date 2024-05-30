@@ -1,4 +1,4 @@
-	guiTypes = {
+guiTypes = {
 		windowType = {
 			name ="lobby"
 			backGround=""
@@ -41,16 +41,16 @@
 				position = { x = -176 y = -153 }
 				spriteType = "GFX_frontend_lobby_cornerright"
 				Orientation = "LOWER_RIGHT"
-			}		
+			}
 			
 			editBoxType = {
 				position = { x = -258 y = -45 }
 				name = "lobby_chat_edit"
 				textureFile = "gfx\\interface\\small_tiles_dialog.dds"
 				font = "vic_18"
-				borderSize = {x = 8 y = 4}	
+				borderSize = {x = 8 y = 4}
 				size = { x=509 y=32}
-				text = " "	
+				text = " "
 				Orientation = "CENTER_DOWN"
 			}
 			
@@ -58,7 +58,7 @@
 			guiButtonType = {
 				name = "newgame_tab"
 				position = { x = 5339 y = 7 }
-				quadTextureSprite ="GFX_frontend_tab_button"	
+				quadTextureSprite ="GFX_frontend_tab_button"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -72,7 +72,7 @@
 			guiButtonType = {
 				name = "savedgame_tab"
 				position = { x = 5121 y = 7 }
-				quadTextureSprite ="GFX_frontend_tab_button"	
+				quadTextureSprite ="GFX_frontend_tab_button"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -98,9 +98,9 @@
 				textureFile = ""
 				font = "vic_32_black"
 				borderSize = {x = 4 y = 4}
-				text = "FE_SELECTED_SCENARIO"	
+				text = "FE_SELECTED_SCENARIO"
 				maxWidth = 600
-				maxHeight = 50	
+				maxHeight = 50
 
 				Orientation = "CENTER_UP"
 				format = centre
@@ -113,9 +113,9 @@
 				textureFile = ""
 				font = "vic_18_black"
 				borderSize = {x = 4 y = 4}
-				text = "FE_SELECT_NATION"	
+				text = "FE_SELECT_NATION"
 				maxWidth = 600
-				maxHeight = 30	
+				maxHeight = 30
 				Orientation = "CENTER_UP"
 				format = centre
 			}
@@ -125,7 +125,7 @@
 			windowType = {
 				name ="multiplayer"
 				backGround=""
-				position = { x=-200 y =300 }	
+				position = { x=-200 y =300 }
 				size = { x=200 y =300}
 				moveable = 0
 				dontRender = ""
@@ -136,8 +136,7 @@
 				fullscreen=no
 				Orientation = "UPPER_RIGHT"
 				
-				listboxType = 
-					{
+				listboxType = {
 					name ="multiplayer_list"
 					position = { x=-60 y =30}
 					backGround=""
@@ -155,9 +154,9 @@
 					textureFile = ""
 					font = "Arial12_black"
 					borderSize = {x = 0 y = 4}
-					text = ""	
+					text = ""
 					maxWidth = 200
-					maxHeight = 24	
+					maxHeight = 24
 					format = centre
 				}
 				
@@ -167,9 +166,9 @@
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 0 y = 4}
-					text = "Number of Players: 5"	
+					text = "Number of Players: 5"
 					maxWidth = 200
-					maxHeight = 24	
+					maxHeight = 24
 					format = centre
 				}
 			}
@@ -179,7 +178,7 @@
 			windowType = {
 				name ="singleplayer"
 				backGround=""
-				position = { x=-260 y =-10}	
+				position = { x=-260 y =-10}
 				size = { x=200 y =340}
 				moveable = 0
 				dontRender = ""
@@ -193,9 +192,9 @@
 		
 				guiButtonType = {
 					position = { x= 8 y = 27 }
-					name = "player_shield"	
+					name = "player_shield"
 					quadTextureSprite ="GFX_topbarflag"
-					tooltip = ""	
+					tooltip = ""
 					tooltipText =""
 					delayedTooltipText = ""
 					rotation = 0
@@ -222,9 +221,9 @@
 					textureFile = ""
 					font = "Arial12"
 					borderSize = {x = 0 y = 0}
-					text = "7"	
+					text = "7"
 					maxWidth = 24
-					maxHeight = 32	
+					maxHeight = 32
 					format = centre
 				}
 				
@@ -234,7 +233,7 @@
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 0 y = 0}
-					text = ""	
+					text = ""
 					maxWidth = 150
 					maxHeight = 24
 					fixedsize = yes
@@ -247,7 +246,7 @@
 					textureFile = ""
 					font = "Arial12_black"
 					borderSize = {x = 0 y = 4}
-					text = "Great Power"	
+					text = "Great Power"
 					maxWidth = 190
 					maxHeight = 20
 					format = left
@@ -259,9 +258,9 @@
 					textureFile = ""
 					font = "Arial12_black"
 					borderSize = {x = 0 y = 4}
-					text = ""	
+					text = ""
 					maxWidth = 200
-					maxHeight = 32	
+					maxHeight = 32
 					format = left
 				}
 				
@@ -272,9 +271,9 @@
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 0 y = 4}
-					text = "FE_RANK"	
+					text = "FE_RANK"
 					maxWidth = 50
-					maxHeight = 20	
+					maxHeight = 20
 					format = right
 				}
 				
@@ -291,9 +290,9 @@
 					textureFile = ""
 					font = "Arial12_black"
 					borderSize = {x = 0 y = 4}
-					text = "FE_PRESTIGE"	
+					text = "FE_PRESTIGE"
 					maxWidth = 80
-					maxHeight = 20	
+					maxHeight = 20
 					format = left
 				}
 				instantTextBoxType = {
@@ -302,9 +301,9 @@
 					textureFile = ""
 					font = "Arial12_black"
 					borderSize = {x = 0 y = 4}
-					text = "3"	
+					text = "3"
 					maxWidth = 40
-					maxHeight = 30	
+					maxHeight = 30
 					format = right
 				}
 				
@@ -321,9 +320,9 @@
 					textureFile = ""
 					font = "Arial12_black"
 					borderSize = {x = 0 y = 4}
-					text = "FE_INDUSTRY"	
+					text = "FE_INDUSTRY"
 					maxWidth = 80
-					maxHeight = 20	
+					maxHeight = 20
 					format = left
 				}
 				instantTextBoxType = {
@@ -332,9 +331,9 @@
 					textureFile = ""
 					font = "Arial12_black"
 					borderSize = {x = 0 y = 4}
-					text = "12"	
+					text = "12"
 					maxWidth = 40
-					maxHeight = 20	
+					maxHeight = 20
 					format = right
 				}
 				
@@ -351,9 +350,9 @@
 					textureFile = ""
 					font = "Arial12_black"
 					borderSize = {x = 0 y = 4}
-					text = "FE_MILITARY"	
+					text = "FE_MILITARY"
 					maxWidth = 80
-					maxHeight = 20	
+					maxHeight = 20
 					format = left
 				}
 				instantTextBoxType = {
@@ -362,9 +361,9 @@
 					textureFile = ""
 					font = "Arial12_black"
 					borderSize = {x = 0 y = 4}
-					text = "139"	
+					text = "139"
 					maxWidth = 40
-					maxHeight = 20	
+					maxHeight = 20
 					format = right
 				}
 				
@@ -375,9 +374,9 @@
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 0 y = 4}
-					text = "FE_POP"	
+					text = "FE_POP"
 					maxWidth = 70
-					maxHeight = 20	
+					maxHeight = 20
 					format = left
 				}
 				instantTextBoxType = {
@@ -386,9 +385,9 @@
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 0 y = 4}
-					text = "34M"	
+					text = "34M"
 					maxWidth = 50
-					maxHeight = 20	
+					maxHeight = 20
 					format = right
 				}
 				iconType = {
@@ -402,7 +401,6 @@
 					spriteType = "GFX_chart_overlay_small"
 					position = { x= 99 y = 196 }
 					Orientation = "UPPER_LEFT"
-				
 				}
 			
 				### wars/allies
@@ -412,9 +410,9 @@
 					textureFile = ""
 					font = "vic_18_black"
 					borderSize = {x = 0 y = 4}
-					text = "FE_WARS"	
+					text = "FE_WARS"
 					maxWidth = 100
-					maxHeight = 20	
+					maxHeight = 20
 					format = left
 				}
 				instantTextBoxType = {
@@ -423,9 +421,9 @@
 					textureFile = ""
 					font = "vic_18_black"
 					borderSize = {x = 0 y = 4}
-					text = "FE_ALLIES"	
+					text = "FE_ALLIES"
 					maxWidth = 100
-					maxHeight = 20	
+					maxHeight = 20
 					format = left
 				}
 				instantTextBoxType = {
@@ -434,9 +432,9 @@
 					textureFile = ""
 					font = "vic_18_black"
 					borderSize = {x = 0 y = 4}
-					text = ""	
+					text = ""
 					maxWidth = 100
-					maxHeight = 20	
+					maxHeight = 20
 					format = left
 				}
 				
@@ -464,14 +462,13 @@
 					format = left
 					spacing = 1.0
 				}
-						
 			}
 			
 			### Interesting Countries Window ###
 			windowType = {
 				name = "interesting_countries"
 				backGround = ""
-				position = { x = 140 y = 10 }	
+				position = { x = 140 y = 10 }
 				size = { x=110 y =768}
 				moveable = 0
 				dontRender = ""
@@ -487,9 +484,9 @@
 					textureFile = ""
 					font = "vic_18_black"
 					borderSize = {x = 0 y = 4}
-					text = "INTERESTING_COUNTRIES_TITLE"	
+					text = "INTERESTING_COUNTRIES_TITLE"
 					maxWidth = 150
-					maxHeight = 20	
+					maxHeight = 20
 					format = centre
 				}
 			
@@ -499,9 +496,9 @@
 					textureFile = ""
 					font = "vic_18_black"
 					borderSize = {x = 0 y = 4}
-					text = "INTERESTING_COUNTRIES"	
+					text = "INTERESTING_COUNTRIES"
 					maxWidth = 150
-					maxHeight = 20	
+					maxHeight = 20
 					format = left
 				}
 			}
@@ -512,7 +509,7 @@
 			windowType = {
 				name ="save_games"
 				backGround=""
-				position = { x=0 y =0 }	
+				position = { x=0 y =0 }
 				size = { x=110 y =768}
 				moveable = 0
 				dontRender = ""
@@ -534,7 +531,6 @@
 					scrollbartype = "standardlistbox_slider"
 					borderSize = {x = 10 y = 10}
 				}
-				
 			}
 			
 			### BOOKMARKS
@@ -542,7 +538,7 @@
 			windowType = {
 				name ="bookmarks"
 				backGround=""
-				position = { x=0 y =0 }	
+				position = { x=0 y =0 }
 				size = { x=110 y =768}
 				moveable = 0
 				dontRender = ""
@@ -573,7 +569,7 @@
 			windowType = {
 				name ="playable_countries_window"
 				backGround=""
-				position = { x=0 y =0 }	
+				position = { x=0 y =0 }
 				size = { x=110 y =768}
 				moveable = 0
 				dontRender = ""
@@ -585,38 +581,38 @@
 				fullscreen=no
 				
 				
-			instantTextBoxType = {
+				instantTextBoxType = {
 					name = "playable_countries_label"
 					position = { x = 15 y = 310 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 0 y = 4}
-					text = "FE_PLAYABLE_COUNTRIES"	
+					text = "FE_PLAYABLE_COUNTRIES"
 					maxWidth = 200
-					maxHeight = 30	
+					maxHeight = 30
 					format = centre
 				}
 			guiButtonType = {
 				name = "lobby_sort_countryname"
 				position = { x = 12 y = 328 }
-				quadTextureSprite ="GFX_sortbutton_132"	
+				quadTextureSprite ="GFX_sortbutton_132"
 				buttonText = "FE_COUNTRY"
 				buttonFont = "vic_18_black"
 			}
 			guiButtonType = {
 				name = "lobby_sort_prestige"
 				position = { x = 143 y = 332 }
-				quadTextureSprite ="GFX_sort_prestige_rank"	
+				quadTextureSprite ="GFX_sort_prestige_rank"
 			}
 			guiButtonType = {
 				name = "lobby_sort_industry"
 				position = { x = 165 y = 332 }
-				quadTextureSprite ="GFX_sort_industry_rank"	
+				quadTextureSprite ="GFX_sort_industry_rank"
 			}
 			guiButtonType = {
 				name = "lobby_sort_military"
 				position = { x = 187 y = 332 }
-				quadTextureSprite ="GFX_sort_military_rank"	
+				quadTextureSprite ="GFX_sort_military_rank"
 			}
 
 			
@@ -631,15 +627,14 @@
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 10 y = 00}
 			}
-
-		}		
+		}
 
 			### BUTTONS
 		
 			guiButtonType = {
 				name = "back_button"
 				position = { x = 17 y = -80 }
-				quadTextureSprite ="GFX_frontend_play_button"	
+				quadTextureSprite ="GFX_frontend_play_button"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -652,7 +647,7 @@
 			guiButtonType = {
 				name = "play_button"
 				position = { x = -184 y = -80 }
-				quadTextureSprite ="GFX_frontend_play_button"	
+				quadTextureSprite ="GFX_frontend_play_button"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -663,10 +658,9 @@
 				clicksound = start_game
 			}
 			
-			############	
+			############
 			
-			listboxType = 
-			{
+			listboxType = {
 				name ="chatlog"
 				position = { x = -250 y = -173 }
 				backGround=""
@@ -681,7 +675,7 @@
 		guiButtonType = {
 		name ="shield"
 		position = { x = 0 y = 0 }
-		quadTextureSprite = "GFX_thinshield"	
+		quadTextureSprite = "GFX_thinshield"
 		tooltip = ""
 		tooltipText =""
 		delayedTooltipText = ""
@@ -708,7 +702,7 @@
 	windowType = {
 		name = "playable_countries_list_item"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=320 y= 19 }
 		moveable = 0
 		dontRender = ""
@@ -717,7 +711,7 @@
 		fullScreen = no
 
 		guiButtonType = {
-			name = "playable_countries_button"	
+			name = "playable_countries_button"
 			quadTextureSprite = "GFX_frontend_lobby_countries_entry"
 			position = { x=7 y =-10}
 		}
@@ -735,7 +729,7 @@
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 1 y = 1}
-			text = ""	
+			text = ""
 			maxWidth = 100
 			maxHeight = 18
 			fixedsize = yes
@@ -747,10 +741,10 @@
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 1 y = 1}
-			text = ""	
+			text = ""
 			maxWidth = 22
 			maxHeight = 18
-			format = right			
+			format = right
 		}
 		instantTextBoxType = {
 			name = "industry_rank"
@@ -758,7 +752,7 @@
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 1 y = 1}
-			text = ""	
+			text = ""
 			maxWidth = 22
 			maxHeight = 18
 			format = right
@@ -769,11 +763,11 @@
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 1 y = 1}
-			text = ""	
+			text = ""
 			maxWidth = 22
 			maxHeight = 18
 			format = right
-		}	
+		}
 	}
 	
 	######  WARS/ALLIES OVERLAPPING-BOX ITEM
@@ -794,9 +788,6 @@
 			spriteType = "GFX_flag_new"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-		}		
-		
+		}
 	}
-
-
-    }
+}

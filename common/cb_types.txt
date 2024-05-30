@@ -106,9 +106,9 @@ take_one_ring = {
 		accepted_culture = one_ring_culture
 		has_country_modifier = one_ring
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -160,9 +160,9 @@ war_of_the_ring_cb = {
 	
 	can_use = {
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { is_our_vassal = THIS }
 		OR = {
 			has_global_flag = wotr_started
@@ -225,9 +225,9 @@ add_to_sphere = {
 	# THIS = country applying wargoal
 	can_use = {
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { is_our_vassal = THIS }
 		THIS = { is_greater_power = yes }
 		is_greater_power = no
@@ -284,9 +284,9 @@ take_from_sphere = {
 	# THIS = country applying wargoal
 	can_use = {
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		THIS = { is_greater_power = yes }
 		is_greater_power = yes
 		NOT = { has_country_modifier = political_neutrality }
@@ -374,9 +374,9 @@ change_alignment = {
 	# THIS = country applying wargoal
 	can_use = {
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { is_our_vassal = THIS }
 		OR = {
 			THIS = { is_greater_power = no }
@@ -443,9 +443,9 @@ status_quo = {
 		NOT = { is_our_vassal = THIS }
 		always = no
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -484,9 +484,9 @@ gunboat = {
 		NOT = { is_our_vassal = THIS }
 		in_default = THIS
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -525,9 +525,9 @@ conquest_tiny = {
 		NOT = { is_our_vassal = THIS }
 		NOT = { number_of_states = 2 }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		OR = {
 			civilized = yes
 			THIS = { civilized = no }
@@ -578,9 +578,9 @@ conquest_small = {
 		NOT = { is_our_vassal = THIS }
 		NOT = { number_of_states = 2 }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		OR = {
 			civilized = yes
 			THIS = { civilized = no }
@@ -630,9 +630,9 @@ conquest = {
 		NOT = { is_our_vassal = THIS }
 		NOT = { number_of_states = 2 }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		OR = {
 			civilized = yes
 			THIS = { civilized = no }
@@ -682,9 +682,9 @@ civil_war = {
 		NOT = { is_our_vassal = THIS }
 		always = no
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -743,9 +743,9 @@ acquire_core_state = {
 		NOT = { is_our_vassal = THIS }
 		number_of_states = 2
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		any_owned_province = { is_core = THIS }
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
@@ -799,9 +799,9 @@ annex_core_country = {
 		NOT = { is_our_vassal = THIS }
 		any_owned_province = { is_core = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { any_owned_province = { NOT = { is_core = THIS } } }
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
@@ -844,9 +844,9 @@ acquire_substate_region = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		num_of_substates = 1
 		any_substate = {
 			number_of_states = 1
@@ -904,9 +904,9 @@ acquire_substate_core_state = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		num_of_substates = 1
 		any_substate = { any_owned_province = { is_core = THIS } }
 		NOT = { has_country_modifier = political_neutrality }
@@ -955,9 +955,9 @@ acquire_state = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		number_of_states = 2
 		any_owned_province = {
 			not = { is_core = THIS }
@@ -1094,9 +1094,9 @@ place_in_the_sun = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		any_owned_province = { is_colonial = yes }
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
@@ -1189,9 +1189,9 @@ cut_down_to_size = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		is_disarmed = no
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
@@ -1229,9 +1229,9 @@ free_peoples = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -1329,9 +1329,9 @@ liberate_country = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -1430,9 +1430,9 @@ liberate_and_puppet_country = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -1535,9 +1535,9 @@ andrast_war_cb = {
 	can_use = {
 		always = yes
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -1599,9 +1599,9 @@ druwaith_iaur_war_cb = {
 	can_use = {
 		always = yes
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -1649,9 +1649,9 @@ free_allied_cores = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -1734,9 +1734,9 @@ dismantle_forts = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -1791,9 +1791,9 @@ release_puppet = {
 		# num_of_vassals_no_substates = 1
 		num_of_vassals = 1
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -1874,9 +1874,9 @@ make_puppet = {
 		is_greater_power = no
 		is_vassal = no
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -1924,9 +1924,9 @@ take_puppet = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		num_of_vassals = 1
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
@@ -2010,9 +2010,9 @@ become_independent = {
 	can_use = {
 		is_our_vassal = THIS
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
@@ -2074,9 +2074,9 @@ humiliate = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		has_recently_lost_war = no
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
@@ -2116,9 +2116,9 @@ demand_concession_casus_belli = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		THIS = { civilized = yes }
 		civilized = no
 		number_of_states = 2
@@ -2170,9 +2170,9 @@ establish_protectorate_casus_belli = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		THIS = {
 			civilized = yes
 		}
@@ -2234,9 +2234,9 @@ take_capital = {
 			is_our_vassal = THIS
 		}
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		number_of_states = 2 # annex if you want their last state
 		any_owned_province = {
 			NOT = { is_core = THIS }
@@ -2327,9 +2327,9 @@ demand_concession_capital = {
 		}
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		number_of_states = 2 # annex if you want their last state
 		any_owned_province = {
 			NOT = { is_core = THIS }
@@ -2414,9 +2414,9 @@ rude_boy = {
 	can_use = {
 		NOT = { is_our_vassal = THIS }
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		badboy = 1
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
@@ -2468,9 +2468,9 @@ great_war_penalty_cb = {
 	
 	#can_use = {
 	#	OR = {
-    #		war_with = THIS
+	#		war_with = THIS
 	#		THIS = { NOT = { has_country_modifier = no_more_war } }
-    #	}
+	#	}
 	#	NOT = { is_our_vassal = THIS }
 	#	is_disarmed = no
 	#}
@@ -2510,9 +2510,9 @@ call_allies_cb = {
 		THIS = { ai = yes }
 		always = no
 		OR = {
-            war_with = THIS
-            THIS = { NOT = { has_country_modifier = no_more_war } }
-        }
+			war_with = THIS
+			THIS = { NOT = { has_country_modifier = no_more_war } }
+		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
