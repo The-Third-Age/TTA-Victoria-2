@@ -2,7 +2,7 @@
 # Audax Validator "!" Ignore_1009
 
 # Harad Decisions: {
-#	Forming Harad 
+#	Forming Harad
 #	Harondor colonization by Harnendor, Haruzan, Umbar and Chelkar
 #	Tribal Incorporation
 #	Core Adding/Removal
@@ -482,7 +482,7 @@ political_decisions = {
 					good_evil_alignment = evil_alignment
 					OR = {
 						HRN = { exists = no }
-						HRN = { 
+						HRN = {
 							exists = yes
 							OR = {
 								good_evil_alignment = neutral_alignment
@@ -492,7 +492,7 @@ political_decisions = {
 					}
 					OR = {
 						HRU = { exists = no }
-						HRU = { 
+						HRU = {
 							exists = yes
 							OR = {
 								good_evil_alignment = neutral_alignment
@@ -502,7 +502,7 @@ political_decisions = {
 					}
 					OR = {
 						PEZ = { exists = no }
-						PEZ = { 
+						PEZ = {
 							exists = yes
 							OR = {
 								good_evil_alignment = neutral_alignment
@@ -512,7 +512,7 @@ political_decisions = {
 					}
 					OR = {
 						LUR = { exists = no }
-						LUR = { 
+						LUR = {
 							exists = yes
 							OR = {
 								good_evil_alignment = neutral_alignment
@@ -522,7 +522,7 @@ political_decisions = {
 					}
 					OR = {
 						ARY = { exists = no }
-						ARY = { 
+						ARY = {
 							exists = yes
 							OR = {
 								good_evil_alignment = neutral_alignment
@@ -535,7 +535,7 @@ political_decisions = {
 					good_evil_alignment = good_alignment
 					OR = {
 						HRN = { exists = no }
-						HRN = { 
+						HRN = {
 							exists = yes
 							OR = {
 								good_evil_alignment = good_alignment
@@ -545,7 +545,7 @@ political_decisions = {
 					}
 					OR = {
 						HRU = { exists = no }
-						HRU = { 
+						HRU = {
 							exists = yes
 							OR = {
 								good_evil_alignment = good_alignment
@@ -555,7 +555,7 @@ political_decisions = {
 					}
 					OR = {
 						PEZ = { exists = no }
-						PEZ = { 
+						PEZ = {
 							exists = yes
 							OR = {
 								good_evil_alignment = good_alignment
@@ -565,7 +565,7 @@ political_decisions = {
 					}
 					OR = {
 						LUR = { exists = no }
-						LUR = { 
+						LUR = {
 							exists = yes
 							OR = {
 								good_evil_alignment = good_alignment
@@ -575,7 +575,7 @@ political_decisions = {
 					}
 					OR = {
 						ARY = { exists = no }
-						ARY = { 
+						ARY = {
 							exists = yes
 							OR = {
 								good_evil_alignment = good_alignment
@@ -625,7 +625,7 @@ political_decisions = {
 			HAR = { capital = 334 }
 			diplomatic_influence = {
 				who = HAR
-				value = 400 
+				value = 400
 			}
 			
 			random_owned = {
@@ -850,7 +850,7 @@ political_decisions = {
 			badboy = 5
 			random_owned = {
 				limit = {
-					NOT = { 
+					NOT = {
 						OR = {
 							has_global_flag = harondor_permission_granted_UMB
 							has_global_flag = harondor_permission_granted_HRN
@@ -900,7 +900,6 @@ political_decisions = {
 						owns = 238
 						owns = 239
 					}
-					
 				}
 				AND = {
 					tag = UMB
@@ -911,7 +910,6 @@ political_decisions = {
 						owns = 234
 						owns = 236
 					}
-					
 				}
 			}
 			NOT = {
@@ -1070,8 +1068,8 @@ political_decisions = {
 		}
 		
 		effect = {
-			CHE = { 
-				country_event = 100004 
+			CHE = {
+				country_event = 100004
 				all_core = { add_core = HAR }
 			}
 			

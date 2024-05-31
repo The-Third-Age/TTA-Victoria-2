@@ -1,5 +1,4 @@
 guiTypes = {
-
 	windowType = {
 		name = "topcolor_technology"
 		backGround = ""
@@ -59,7 +58,7 @@ guiTypes = {
 			position = { x= -70 y = -70 }
 			Orientation = "UPPER_LEFT"
 		}
-				
+		
 		iconType = {
 			name ="bg_tech"
 			spriteType = "GFX_bg_tech"
@@ -67,48 +66,46 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 		
-		textBoxType = { 
+		textBoxType = {
 			name = "headline_technology"
 			position = { x = 770 y = -42 }
 			font = "vic_title"
-			text = "TECHNOLOGYVIEW"	
+			text = "TECHNOLOGYVIEW"
 			maxWidth = 200
-			maxHeight = 48	
+			maxHeight = 48
 			format = right
 		}
 		
 		guiButtonType = {
 			name = "close_button"
 			position = { x= -31 y = -7}
-			quadTextureSprite = "GFX_main_close_button"		
+			quadTextureSprite = "GFX_main_close_button"
 			Orientation = "UPPER_RIGHT"
 			shortcut = "ESCAPE"
 			clicksound = click
 		}
 		
 		#######################
+		###ADMINISTRATION
 		#######################
 		
-		###ADMINISTRATION
-		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "administration"
 			position = { x = 40 y = 30 }
 			font = "vic_18_black"
-			text = "TECHNOLOGYVIEW_ADMINISTRATION"	
+			text = "TECHNOLOGYVIEW_ADMINISTRATION"
 			maxWidth = 110
-			maxHeight = 20	
-		}	
+			maxHeight = 20
+		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "administration_type"
 			position = { x = 135 y = 30 }
 			font = "vic_18_black"
-			text = "administration_type"	
+			text = "administration_type"
 			maxWidth = 200
 			maxHeight = 20
 			fixedsize = yes
-			
 		}
 		
 		OverlappingElementsBoxType = {
@@ -120,27 +117,26 @@ guiTypes = {
 			spacing = 1.0
 		}
 		
-		
 		##################
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "current_research"
 			position = { x = 610 y = 30 }
 			font = "vic_18_black"
-			text = "TECHNOLOGYVIEW_CURRENT_RESEARCH"	
+			text = "TECHNOLOGYVIEW_CURRENT_RESEARCH"
 			maxWidth = 150
-			maxHeight = 20	
-		}	
+			maxHeight = 20
+		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "possible_inventions"
 			position = { x = 29 y = 345 }
 			font = "vic_22"
-			text = "TECHNOLOGYVIEW_POSSIBLE_INVERTIONS"	
+			text = "TECHNOLOGYVIEW_POSSIBLE_INVERTIONS"
 			maxWidth = 280
 			maxHeight = 20
 			format = centre
-		}	
+		}
 		
 		iconType = {
 			name = "research_progress"
@@ -148,39 +144,39 @@ guiTypes = {
 			position = { x = 720 y = 25 }
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "research_progress_name"
 			position = { x = 720 y = 24 }
 			font = "vic_18"
-			text = "research_progress_name"	
+			text = "research_progress_name"
 			maxWidth = 250
 			maxHeight = 20
 			format = centre
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "research_progress_category"
 			position = { x = 720 y = 39 }
 			font = "Arial12"
-			text = "research_progress_category"	
+			text = "research_progress_category"
 			maxWidth = 250
 			maxHeight = 20
-			format = centre	
+			format = centre
 		}
 		
 		guiButtonType = {
 			name = "sort_by_type"
-			position = { x = 30 y = 367 }			
-			quadTextureSprite = "GFX_sortbutton_folder"		
+			position = { x = 30 y = 367 }
+			quadTextureSprite = "GFX_sortbutton_folder"
 			Orientation = "UPPER_LEFT"
 			clicksound = click
 		}
 		
 		guiButtonType = {
 			name = "sort_by_name"
-			position = { x = 58 y = 366 }			
+			position = { x = 58 y = 366 }
 			quadTextureSprite = "GFX_sortbutton_204"
-			buttonText = "TECHNOLOGYVIEW_SORT_BY_NAME"		
+			buttonText = "TECHNOLOGYVIEW_SORT_BY_NAME"
 			buttonFont = "vic_18_black"
 			Orientation = "UPPER_LEFT"
 			clicksound = click
@@ -189,7 +185,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "sort_by_percent"
 			position = { x = 260 y = 367 }
-			quadTextureSprite = "GFX_sortbutton_percent"		
+			quadTextureSprite = "GFX_sortbutton_percent"
 			Orientation = "UPPER_LEFT"
 			clicksound = click
 		}
@@ -202,7 +198,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			spacing = 2
 			scrollbartype = "standardlistbox_slider"
-		}	
+		}
 		
 		#########################
 		# SELECTED TECH WINDOW  #
@@ -211,7 +207,7 @@ guiTypes = {
 		windowType = {
 			name = "selected_tech_window"
 			backGround =""
-			position = { x=320 y=328 }	
+			position = { x=320 y=328 }
 			size = { x=800 y=300 }
 			moveable = 0
 			dontRender = ""
@@ -226,29 +222,29 @@ guiTypes = {
 				spriteType = "GFX_no_tech_image"
 				position = { x = 19 y = 51 }
 				Orientation = "UPPER_LEFT"
-			}	
+			}
 			
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "title"
 				position = { x = 20 y = 18 }
 				font = "vic_22"
-				text = "NO_TECH_SELECTED"	
+				text = "NO_TECH_SELECTED"
 				maxWidth = 450
 				maxHeight = 20
-			}	
-			instantTextBoxType = { 
+			}
+			instantTextBoxType = {
 				name = "effect"
 				position = { x = 195 y = 53 }
 				font = "vic_18"
-				text = ""	
+				text = ""
 				maxWidth = 235
 				maxHeight = 100
-			}	
-			instantTextBoxType = { 
+			}
+			instantTextBoxType = {
 				name = "desc"
 				position = { x = 22 y = 155 }
 				font = "Arial12_black"
-				text = ""	
+				text = ""
 				maxWidth = 408
 				maxHeight = 100
 			}
@@ -258,44 +254,44 @@ guiTypes = {
 				position = { x = 318 y = 17 }
 				Orientation = "UPPER_LEFT"
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "diff_label"
 				position = { x = 340 y = 21 }
 				font = "vic_18"
-				text = "TECHNOLOGY_RESEARCH_POINTS"	
+				text = "TECHNOLOGY_RESEARCH_POINTS"
 				maxWidth = 120
 				maxHeight = 20
 				format = left
 				fixedsize = yes
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "diff"
 				position = { x = 450 y = 18 }
 				font = "vic_22"
-				text = ""	
+				text = ""
 				maxWidth = 100
 				maxHeight = 20
 				format = left
 			}
-			instantTextBoxType = { 
+			instantTextBoxType = {
 				name = "year_label"
 				position = { x = 532 y = 21 }
 				font = "vic_18"
-				text = "TECHNOLOGY_ACTIVATION_YEAR"	
+				text = "TECHNOLOGY_ACTIVATION_YEAR"
 				maxWidth = 120
 				maxHeight = 20
 				format = left
 				fixedsize = yes
-			}			
-			instantTextBoxType = { 
+			}
+			instantTextBoxType = {
 				name = "year"
 				position = { x = 630 y = 18 }
 				font = "vic_22"
-				text = ""	
+				text = ""
 				maxWidth = 100
 				maxHeight = 20
 				format = left
-			}		
+			}
 
 
 			listboxType = {
@@ -306,20 +302,19 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				spacing = 2
 				scrollbartype = "standardlistbox_slider"
-			}			
+			}
 
 			guiButtonType = {
 				name = "start"
-				position = { x = 457 y = 244 }			
+				position = { x = 457 y = 244 }
 				quadTextureSprite = "GFX_button_standard_200"
 				buttonText = "Start Research"
 				buttonFont = "vic_22_black"
 				Orientation = "UPPER_LEFT"
 				clicksound = click
 			}
-		
 		}
-	}	
+	}
 	
 	##########################
 	# FOLDER WINDOW          #
@@ -338,7 +333,7 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "folder_button"
-			quadTextureSprite = "GFX_tech_folder_army"		
+			quadTextureSprite = "GFX_tech_folder_army"
 			buttonFont = "vic_18_black"
 			Orientation = "UPPER_LEFT"
 			clicksound = click
@@ -349,13 +344,13 @@ guiTypes = {
 			spriteType = "GFX_tech_fake_icons"
 			position = { x = -5 y = -1 }
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "folder_category"
 			position = { x = 6 y = 6 }
 			font = "vic_22_black"
-			text = "folder_category"	
+			text = "folder_category"
 			maxWidth = 125
 			maxHeight = 20
 			format = centre
@@ -374,16 +369,15 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "folder_number_discovered"
 			position = { x = 18 y = 27 }
 			font = "Arial12_black"
-			text = "folder_number_discovered"	
+			text = "folder_number_discovered"
 			maxWidth = 100
 			maxHeight = 20
 			format = centre
 		}
-		
 	}
 	
 	##########################
@@ -393,7 +387,7 @@ guiTypes = {
 	windowType = {
 		name = "tech_group"
 		backGround =""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=242 y=102 }
 		moveable = 0
 		dontRender = ""
@@ -402,18 +396,17 @@ guiTypes = {
 		fullScreen = no
 		orientation="UPPER_LEFT"
 		
-		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "group_name"
 			# x should be -7
 			position = { x = -5 y = -4 }
 			font = "vic_18"
-			text = "group_name"	
+			text = "group_name"
 			maxWidth = 250
 			maxHeight = 20
 			format = centre
-		}		
-	}	
+		}
+	}
 	
 	##########################
 	# TECH ENTRY           #
@@ -422,7 +415,7 @@ guiTypes = {
 	windowType = {
 		name = "tech_window"
 		backGround =""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=242 y=39 }
 		moveable = 0
 		dontRender = ""
@@ -431,28 +424,24 @@ guiTypes = {
 		fullScreen = no
 		orientation="UPPER_LEFT"
 		
-		
 		guiButtonType = {
 			name = "start_research"
-			quadTextureSprite = "GFX_tech_start_research"		
+			quadTextureSprite = "GFX_tech_start_research"
 			buttonFont = "vic_18_black"
 			Orientation = "UPPER_LEFT"
 			clicksound = click
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "tech_name"
 			position = { x = 7 y = 9 }
 			font = "vic_18_black"
-			text = "tech_name"	
+			text = "tech_name"
 			maxWidth = 175
 			maxHeight = 20
 			fixedsize = yes
 		}
-	
-
-
-	}	
+	}
 
 	##########################
 	# INVENTION ENTRY       #
@@ -461,7 +450,7 @@ guiTypes = {
 	windowType = {
 		name = "invention_window"
 		backGround =""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=165 y=25 }
 		moveable = 0
 		dontRender = ""
@@ -482,23 +471,23 @@ guiTypes = {
 			spriteType = "GFX_tech_folder_strip"
 			position = { x = -2 y = -2 }
 			Orientation = "UPPER_LEFT"
-		}	
+		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "invention_name"
 			position = { x = 32 y = 8 }
 			font = "Arial12_black"
-			text = "invention_name"	
+			text = "invention_name"
 			maxWidth = 195
 			maxHeight = 20
 			fixedsize = yes
 		}
 		
-		instantTextBoxType = { 
+		instantTextBoxType = {
 			name = "invention_percent"
 			position = { x = 212 y = 8 }
 			font = "Arial12_bold_black"
-			text = "invention_percent"	
+			text = "invention_percent"
 			maxWidth = 50
 			maxHeight = 20
 			format = right
@@ -512,7 +501,7 @@ guiTypes = {
 	windowType = {
 		name = "invention_icon_window"
 		backGround =""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=240 y=19 }
 		moveable = 0
 		dontRender = ""
@@ -526,16 +515,16 @@ guiTypes = {
 			spriteType = "GFX_tech_invention_strip"
 			position = { x = 2 y = 0 }
 			Orientation = "UPPER_LEFT"
-		}	
-		instantTextBoxType = { 
+		}
+		instantTextBoxType = {
 			name = "i_invention_name"
 			position = { x = 24 y = 4 }
 			font = "Arial12_black"
-			text = "invention_name"	
+			text = "invention_name"
 			maxWidth = 200
 			maxHeight = 20
 			fixedsize = yes
-		}	
+		}
 	}
 	
 	##########################
@@ -545,7 +534,7 @@ guiTypes = {
 	windowType = {
 		name = "school_icon_window"
 		backGround =""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=36 y=20 }
 		moveable = 0
 		dontRender = ""
@@ -553,7 +542,6 @@ guiTypes = {
 		verticalBorder = ""
 		fullScreen = no
 		orientation="UPPER_LEFT"
-		
 
 		iconType = {
 			name = "main_icon"
@@ -567,7 +555,5 @@ guiTypes = {
 			position = { x = 17 y = 16 }
 			Orientation = "UPPER_LEFT"
 		}
-		
-				
-	}	
+	}
 }

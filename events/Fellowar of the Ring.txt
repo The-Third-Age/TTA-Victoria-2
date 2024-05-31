@@ -937,7 +937,7 @@ country_event = {
 					}
 				}
 			}
-			owner = { 
+			owner = {
 				country_event = 50306
 				FOR = {
 					any_country = {
@@ -1750,7 +1750,7 @@ country_event = {
 	}
 }
 
-# The Ring is Destroyed - Mordor 
+# The Ring is Destroyed - Mordor
 country_event = {
 	id = 50330
 	picture = ring_is_destroyed
@@ -1816,7 +1816,7 @@ country_event = {
 	}
 }
 
-# The Ring is Destroyed - Nazguls 
+# The Ring is Destroyed - Nazguls
 country_event = {
 	id = 50331
 	picture = ring_is_destroyed
@@ -1834,13 +1834,13 @@ country_event = {
 				any_core = { owned_by = THIS }
 			}
 			country_event = 50328
-		}		
+		}
 		# Releases any vassal
 		any_country = {
 			limit = { vassal_of = THIS }
 			leave_alliance = THIS
 			country_event = 50329
-		}		
+		}
 		# Releases non-existing realms
 		any_country = {
 			limit = {
@@ -1944,5 +1944,3 @@ country_event = {
 	}
 }
 # }
-	
-	

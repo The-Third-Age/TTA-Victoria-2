@@ -1,10 +1,8 @@
 guiTypes = {
-
-	windowType = 
-	{
+	windowType = {
 		name = "ButtonMenuWindow"
 		backGround=""
-		position = { x= 0 y = 0 }	
+		position = { x= 0 y = 0 }
 		size = { x=0 y = 0 }
 		moveable = 0
 		dontRender = ""
@@ -14,8 +12,7 @@ guiTypes = {
 		Orientation = "UPPER_LEFT"
 	}
 
-	guiButtonType =
-	{
+	guiButtonType = {
 		name ="ButtonMenuButton"
 		quadTextureSprite = "GFX_country_flag_submenu"
 		position = { x = 0 y = 0 }
@@ -38,33 +35,32 @@ guiTypes = {
 	windowType = {
 		name = "logtext"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=700 y= 16 }
 		moveable = 0
 		fullScreen = no
 		
 		guiButtonType = {
-				name = "messagelogbutton"
-				position = { x = 10 y = 0 }
-				quadTextureSprite =""
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = "  "
+			name = "messagelogbutton"
+			position = { x = 10 y = 0 }
+			quadTextureSprite =""
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "  "
 
-				Orientation = "UPPER_LEFT"
-				size = { x = 430 y = 16  }
-				buttonFont = "Arial12_alpha"
-				format = left
-			}		
-		
+			Orientation = "UPPER_LEFT"
+			size = { x = 430 y = 16  }
+			buttonFont = "Arial12_alpha"
+			format = left
+		}
 	}
 
 	### DIPLO MESSAGES
 	windowType = {
 		name = "diplomessageicons_window"
 		backGround=""
-		position = { x=340 y=80 }	
+		position = { x=340 y=80 }
 		size = { x=340 y= 48 }
 		moveable = 0
 		dontRender = ""
@@ -76,7 +72,7 @@ guiTypes = {
 	windowType = {
 		name = "diplomessageicon_entry_window"
 		backGround=""
-		position = { x=20 y=60 }	
+		position = { x=20 y=60 }
 		size = { x=20 y= 48 }
 		moveable = 0
 		dontRender = ""
@@ -84,11 +80,10 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no
 
-
 		guiButtonType = {
 			name = "diplomessageicon_button"
 			position = { x = 48 y = -26 }
-			quadTextureSprite ="GFX_diplo_message_icons"	
+			quadTextureSprite ="GFX_diplo_message_icons"
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -106,10 +101,10 @@ guiTypes = {
 			allwaystransparent = yes
 
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 32
-			maxHeight = 32	
-			Orientation = "UPPER_LEFT"			
+			maxHeight = 32
+			Orientation = "UPPER_LEFT"
 		}
 		
 		iconType = {
@@ -124,7 +119,7 @@ guiTypes = {
 		windowType = {
 			name = "message_icons"
 			backGround=""
-			position = { x=-284 y=-274 }	
+			position = { x=-284 y=-274 }
 			size = { x=256 y= 48 }
 			moveable = 0
 			dontRender = ""
@@ -192,7 +187,7 @@ guiTypes = {
 		windowType = {
 		name = "messageicon_entry_window"
 		backGround=""
-		position = { x=20 y=0 }	
+		position = { x=20 y=0 }
 		size = { x=32 y= 20 }
 		moveable = 0
 		dontRender = ""
@@ -203,7 +198,7 @@ guiTypes = {
 		guiButtonType = {
 				name = "messageicon_button"
 				position = { x = 14 y = -21 }
-				quadTextureSprite ="GFX_mailbox_strip"	
+				quadTextureSprite ="GFX_mailbox_strip"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -221,10 +216,10 @@ guiTypes = {
 			allwaystransparent = yes
 
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 32
-			maxHeight = 32	
-			Orientation = "UPPER_LEFT"			
+			maxHeight = 32
+			Orientation = "UPPER_LEFT"
 		}
 	}
 
@@ -237,15 +232,13 @@ guiTypes = {
 		name = "diplomessageicon_start"
 		position = { x = 476 y = 110 }
 	}
-	
-				
 
 ##### MENU
 
 	windowType = {
 		name = "menu"
 		backGround=""
-		position = { x= -228 y = -266 }	
+		position = { x= -228 y = -266 }
 		size = { x=512 y = 512 }
 		moveable = 0
 		dontRender = ""
@@ -254,8 +247,7 @@ guiTypes = {
 		fullScreen = no
 		Orientation = "CENTER"
 		
-		iconType =
-		{
+		iconType = {
 			name ="menu"
 			spriteType = "GFX_menu"
 			position = { x= 75 y = 50 }
@@ -268,7 +260,7 @@ guiTypes = {
 		windowType = {
 			name ="menu_panel"
 			backGround=""
-			position = { x=46 y =24}	
+			position = { x=46 y =24}
 			size = { x=420 y =500}
 			moveable = 0
 			dontRender = ""
@@ -281,7 +273,7 @@ guiTypes = {
 			guiButtonType = {
 				name = "menu_save_button"
 				position = { x = 86 y = 140 }
-				quadTextureSprite ="GFX_frontend_button_236"	
+				quadTextureSprite ="GFX_frontend_button_236"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -292,7 +284,7 @@ guiTypes = {
 			guiButtonType = {
 				name = "menu_options_button"
 				position = { x = 86 y = 183}
-				quadTextureSprite ="GFX_frontend_button_236"	
+				quadTextureSprite ="GFX_frontend_button_236"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -303,7 +295,7 @@ guiTypes = {
 			guiButtonType = {
 				name = "menu_resign_button"
 				position = { x = 86 y = 226}
-				quadTextureSprite ="GFX_frontend_button_236"	
+				quadTextureSprite ="GFX_frontend_button_236"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -314,7 +306,7 @@ guiTypes = {
 			guiButtonType = {
 				name = "menu_message_button"
 				position = { x = 86 y = 269}
-				quadTextureSprite ="GFX_frontend_button_236"	
+				quadTextureSprite ="GFX_frontend_button_236"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -325,26 +317,24 @@ guiTypes = {
 			guiButtonType = {
 				name = "menu_quit_button"
 				position = { x = 86 y = 312 }
-				quadTextureSprite ="GFX_frontend_button_236"	
+				quadTextureSprite ="GFX_frontend_button_236"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "MENU_BAR_QUIT"
 				buttonFont = "vic_22_black"
 			}
-						
+			
 			guiButtonType = {
 				name = "menu_close_button"
 				position = { x = 116 y = 380 }
-				quadTextureSprite ="GFX_button_standard_177"	
+				quadTextureSprite ="GFX_button_standard_177"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "MENU_BAR_CLOSE"
-				buttonFont = "vic_18_black"				
+				buttonFont = "vic_18_black"
 			}
-
-		
 		}
 		
 		
@@ -354,7 +344,7 @@ guiTypes = {
 		windowType = {
 			name ="menu_save"
 			backGround=""
-			position = { x=0 y =0 }	
+			position = { x=0 y =0 }
 			size = { x=420 y =500}
 			moveable = 0
 			dontRender = ""
@@ -364,16 +354,14 @@ guiTypes = {
 			downsound = ""
 			fullscreen=no
 			
-			iconType =
-			{
+			iconType = {
 			name ="menu_savebg"
 			spriteType = "GFX_menu_savebg"
 			position = { x= 129 y = 126 }
 			Orientation = "UPPER_LEFT"
 			}
 			
-			listboxType = 
-			{
+			listboxType = {
 				name ="games"
 				position = { x=129 y =157}
 				#backGround="SandboxFloaterBackground"
@@ -385,14 +373,14 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			instantTextBoxType={
+			instantTextBoxType = {
 				position = {x = 124 y = 131 }
 				name = "savegame_label"
 				font = "vic_22_black"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				maxWidth = 256
 				maxHeight = 18
-				text = "MENU_BAR_SAVE_GAME"	
+				text = "MENU_BAR_SAVE_GAME"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
@@ -400,7 +388,7 @@ guiTypes = {
 			guiButtonType = {
 				name = "save"
 				position = { x = 162 y = 387 }
-				quadTextureSprite ="GFX_button_standard_177"	
+				quadTextureSprite ="GFX_button_standard_177"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -411,7 +399,7 @@ guiTypes = {
 			guiButtonType = {
 				name = "cancel"
 				position = { x = 162 y = 420 }
-				quadTextureSprite ="GFX_button_standard_177"	
+				quadTextureSprite ="GFX_button_standard_177"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -424,10 +412,10 @@ guiTypes = {
 				position = {x = 152 y = 350 }
 				name = "filename_label"
 				font = "Arial12"
-				borderSize = {x = 8 y = 0}	
+				borderSize = {x = 8 y = 0}
 				maxWidth = 188
 				maxHeight = 18
-				text = "MENU_BAR_SAVE_GAME_FILENAME"	
+				text = "MENU_BAR_SAVE_GAME_FILENAME"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
@@ -437,9 +425,9 @@ guiTypes = {
 				name = "game_name"
 				textureFile = "gfx\\interface\\small_tiles_dialog.dds"
 				font = "Arial12_bold"
-				borderSize = { x = 8 y = 2  }	
+				borderSize = { x = 8 y = 2  }
 				size = { x=260 y=32 }
-				text = ""	
+				text = ""
 				orientation = "UPPER_LEFT"
 			}
 			
@@ -451,7 +439,7 @@ guiTypes = {
 		windowType = {
 			name ="menu_message_settings"
 			backGround=""
-			position = { x=-152 y =0 }	
+			position = { x=-152 y =0 }
 			size = { x=420 y =500}
 			moveable = 0
 			dontRender = ""
@@ -461,25 +449,22 @@ guiTypes = {
 			downsound = ""
 			fullscreen=no
 
-			iconType =
-				{
+			iconType = {
 				name ="messagesettings_bg"
 				spriteType = "GFX_messagesettings_bg"
 				position = { x= -8 y = 23 }
 				Orientation = "UPPER_LEFT"
 			}
 
-			
-
 
 			instantTextBoxType={
 				position = {x = 186 y = 41 }
 				name = "messagesettings_label"
 				font = "vic_22"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				maxWidth = 390
 				maxHeight = 18
-				text = "MENU_BAR_MESSAGE_SETTINGS"	
+				text = "MENU_BAR_MESSAGE_SETTINGS"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
@@ -494,10 +479,10 @@ guiTypes = {
 				position = {x = 10 y = 77 }
 				name = "messagecat_text_all"
 				font = "vic_18_black"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				maxWidth = 90
 				maxHeight = 18
-				text = "MESSAGESETTINGS_ALL"	
+				text = "MESSAGESETTINGS_ALL"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
@@ -512,10 +497,10 @@ guiTypes = {
 				position = {x = 100 y = 77 }
 				name = "messagecat_text_combat"
 				font = "vic_18_black"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				maxWidth = 90
 				maxHeight = 18
-				text = "MESSAGESETTINGS_COMBAT"	
+				text = "MESSAGESETTINGS_COMBAT"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
@@ -530,10 +515,10 @@ guiTypes = {
 				position = {x = 190 y = 77 }
 				name = "messagecat_text_diplomacy"
 				font = "vic_18_black"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				maxWidth = 90
 				maxHeight = 18
-				text = "MESSAGESETTINGS_DIPLOMACY"	
+				text = "MESSAGESETTINGS_DIPLOMACY"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
@@ -548,10 +533,10 @@ guiTypes = {
 				position = {x = 280 y = 77 }
 				name = "messagecat_text_units"
 				font = "vic_18_black"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				maxWidth = 90
 				maxHeight = 18
-				text = "MESSAGESETTINGS_UNITS"	
+				text = "MESSAGESETTINGS_UNITS"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
@@ -566,10 +551,10 @@ guiTypes = {
 				position = {x = 370 y = 77 }
 				name = "messagecat_text_provinces"
 				font = "vic_18_black"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				maxWidth = 90
 				maxHeight = 18
-				text = "MESSAGESETTINGS_PROVINCES"	
+				text = "MESSAGESETTINGS_PROVINCES"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
@@ -584,10 +569,10 @@ guiTypes = {
 				position = {x = 460 y = 77 }
 				name = "messagecat_text_events"
 				font = "vic_18_black"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				maxWidth = 90
 				maxHeight = 18
-				text = "MESSAGESETTINGS_EVENTS"	
+				text = "MESSAGESETTINGS_EVENTS"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
@@ -602,16 +587,15 @@ guiTypes = {
 				position = {x = 550 y = 77 }
 				name = "messagecat_text_other"
 				font = "vic_18_black"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				maxWidth = 90
 				maxHeight = 18
-				text = "MESSAGESETTINGS_OTHER"	
+				text = "MESSAGESETTINGS_OTHER"
 				orientation = "UPPER_LEFT"
 				format = centre
 			}
-						
-			listboxType = 
-			{
+			
+			listboxType = {
 				name ="settings"
 				position = { x=-12 y =128}
 				#backGround="SandboxFloaterBackground"
@@ -626,51 +610,51 @@ guiTypes = {
 			guiButtonType = {
 				name = "reset"
 				position = { x = 145 y = 437 }
-				quadTextureSprite ="GFX_button_standard_177"	
+				quadTextureSprite ="GFX_button_standard_177"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "MENU_MESSAGES_RESET"
 				buttonFont = "vic_18_black"
 			}
-					
+			
 			guiButtonType = {
 				name = "close"
 				position = { x = 445 y = 437 }
-				quadTextureSprite ="GFX_button_standard_177"	
+				quadTextureSprite ="GFX_button_standard_177"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "MENU_BAR_CLOSE"
 				buttonFont = "vic_18_black"
-			}		
+			}
 			
 			instantTextBoxType = {
 				name = "header_interesting"
 				position = { x = 510 y = 108 }
 				maxWidth = 125
-				maxHeight = 26	
+				maxHeight = 26
 				font = "vic_22_black"
-				borderSize = {x = 0 y = 0}	
+				borderSize = {x = 0 y = 0}
 				format = centre
 				textureFile = ""
-				text = "MESSAGE_TYPE_INTERESTING"	
-				Orientation = "UPPER_LEFT"	
-				fixedsize = yes		
+				text = "MESSAGE_TYPE_INTERESTING"
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
 			}
 			
 			instantTextBoxType = {
 				name = "header_other"
 				position = { x = 640 y = 108 }
 				maxWidth = 125
-				maxHeight = 26	
+				maxHeight = 26
 				format = centre
 				textureFile = ""
 				font = "vic_22_black"
-				borderSize = {x = 0 y = 0}	
-				text = "MESSAGE_TYPE_NOT_INTERESTING"	
-				Orientation = "UPPER_LEFT"	
-				fixedsize = yes		
+				borderSize = {x = 0 y = 0}
+				text = "MESSAGE_TYPE_NOT_INTERESTING"
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
 			}
 			
 			instantTextBoxType = {
@@ -679,7 +663,7 @@ guiTypes = {
 				font = "vic_22_black"
 				maxWidth = 60
 				maxHeight = 18
-				text = "MESSAGE_SEARCH"	
+				text = "MESSAGE_SEARCH"
 				orientation = "UPPER_LEFT"
 				format = left
 			}
@@ -689,35 +673,34 @@ guiTypes = {
 				name = "search_edit"
 				textureFile = "gfx\\interface\\small_tiles_dialog.dds"
 				font = "vic_18"
-				borderSize = { x = 8 y = 4  }	
+				borderSize = { x = 8 y = 4 }
 				size = { x=240 y=34 }
-				text = ""	
+				text = ""
 				orientation = "UPPER_LEFT"
 			}
 			
 			guiButtonType = {
 				name = "button_search"
 				position = { x = 323 y = 103 }
-				quadTextureSprite ="GFX_button_thin_84"	
+				quadTextureSprite ="GFX_button_thin_84"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "MESSAGE_BUTTON_SEARCH"
 				buttonFont = "vic_18_black"
-			}		
+			}
 			
 			guiButtonType = {
 				name = "button_clear"
 				position = { x = 412 y = 103 }
-				quadTextureSprite ="GFX_button_thin_84"	
+				quadTextureSprite ="GFX_button_thin_84"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
 				buttonText = "MESSAGE_BUTTON_CLEAR"
 				buttonFont = "vic_18_black"
-			}		
+			}
 		}
-		
 	}
 	
 	### MESSAGE ENTRY
@@ -725,7 +708,7 @@ guiTypes = {
 	windowType = {
 		name = "message_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=128 y= 20 }
 		moveable = 0
 		dontRender = ""
@@ -757,10 +740,10 @@ guiTypes = {
 			position = {x = 6 y = -17 }
 			name = "text"
 			font = "Arial12_bold_black"
-			borderSize = {x = 0 y = 0}	
+			borderSize = {x = 0 y = 0}
 			maxWidth = 505
 			maxHeight = 16
-			text = ""	
+			text = ""
 			orientation = "UPPER_LEFT"
 			format = left
 			fixedsize = yes
@@ -868,9 +851,6 @@ guiTypes = {
 			buttonText = ""
 			buttonFont = "Main_14_black"
 		}
-
-
-		
 	}
 	
 	#### SAVE GAME ENTRY
@@ -878,7 +858,7 @@ guiTypes = {
 	windowType = {
 		name = "save_game_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=128 y= 24 }
 		moveable = 0
 		dontRender = ""
@@ -893,7 +873,6 @@ guiTypes = {
 			buttonText = ""
 			buttonFont = "vic_18_black"
 		}
-		
 	}
 	
 	### CHAT ENTRY
@@ -901,7 +880,7 @@ guiTypes = {
 	windowType = {
 		name = "chat_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=512 y= 18 }
 		moveable = 0
 		dontRender = ""
@@ -920,10 +899,10 @@ guiTypes = {
 			position = {x = 33 y = 5 }
 			name = "text_shadow"
 			font = "vic_18_black"
-			borderSize = {x = 0 y = 0}	
+			borderSize = {x = 0 y = 0}
 			maxWidth = 512
 			maxHeight = 18
-			text = ""	
+			text = ""
 			orientation = "UPPER_LEFT"
 			format = left
 			allwaystransparent = yes
@@ -933,23 +912,20 @@ guiTypes = {
 			position = {x = 32 y = 4 }
 			name = "text"
 			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
+			borderSize = {x = 0 y = 0}
 			maxWidth = 512
 			maxHeight = 18
-			text = ""	
+			text = ""
 			orientation = "UPPER_LEFT"
 			format = left
 			allwaystransparent = yes
 		}
-
-		
-		
 	}
 	
 	windowType = {
 		name = "chat_entry_other"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=512 y= 18 }
 		moveable = 0
 		dontRender = ""
@@ -961,10 +937,10 @@ guiTypes = {
 			position = {x = 33 y = 5 }
 			name = "text_shadow"
 			font = "vic_18_black"
-			borderSize = {x = 0 y = 0}	
+			borderSize = {x = 0 y = 0}
 			maxWidth = 512
 			maxHeight = 18
-			text = ""	
+			text = ""
 			orientation = "UPPER_LEFT"
 			format = left
 			allwaystransparent = yes
@@ -974,21 +950,17 @@ guiTypes = {
 			position = {x = 32 y = 4 }
 			name = "text"
 			font = "vic_18"
-			borderSize = {x = 0 y = 0}	
+			borderSize = {x = 0 y = 0}
 			maxWidth = 512
 			maxHeight = 18
-			text = ""	
+			text = ""
 			orientation = "UPPER_LEFT"
 			format = left
 			allwaystransparent = yes
 		}
-
-		
-		
 	}
 
-	listBoxType = 
-		{
+		listBoxType = {
 			name ="chat_list"
 			background = ""
 			position = { x=5 y=115 }
@@ -1004,7 +976,7 @@ guiTypes = {
 	windowType = {
 		name = "menubar"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=100 y=100 }
 		moveable = 0
 		dontRender = ""
@@ -1012,12 +984,11 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = yes
 
-
 		windowType = {
 			name = "messagelog_window"
 			backGround=""
-			position = { x=-874 y=-156 }	
-			size = { x=720 y=100 }	
+			position = { x=-874 y=-156 }
+			size = { x=720 y=100 }
 			moveable = 0
 			dontRender = ""
 			horizontalBorder= ""
@@ -1102,19 +1073,18 @@ guiTypes = {
 		}
 
 		guiButtonType = {
-				name = "OPENbutton"
-				position = { x=-447 y=-29 }
-				quadTextureSprite ="GFX_openlog_button"
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = "  "
-				buttonFont = "Main_14_black"
+			name = "OPENbutton"
+			position = { x=-447 y=-29 }
+			quadTextureSprite ="GFX_openlog_button"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "  "
+			buttonFont = "Main_14_black"
 
-				shortcut = "<"
-				Orientation = "LOWER_RIGHT"
+			shortcut = "<"
+			Orientation = "LOWER_RIGHT"
 		}
-	
 
 ##### CHAT WINDOW
 		
@@ -1122,16 +1092,14 @@ guiTypes = {
 		windowType = {
 			name = "chat_window"
 			backGround="chat_bg"
-			position = { x=0 y=-148 }	
-			size = { x=720 y=150 }	
+			position = { x=0 y=-148 }
+			size = { x=720 y=150 }
 			moveable = 0
 			dontRender = ""
 			horizontalBorder= ""
 			verticalBorder= ""
 			fullScreen = no
 			Orientation = "LOWER_LEFT"
-		
-
 
 			guiButtonType = {
 				name = "chat_bg"
@@ -1215,26 +1183,21 @@ guiTypes = {
 				#textureFile = "gfx\\interface\\small_tiles_dialog.dds"
 				textureFile = "" 
 				font = "vic_18"
-				borderSize = { x = 8 y = 8 }	
+				borderSize = { x = 8 y = 8 }
 				size = { x=599 y=40 }
-				text = ""	
+				text = ""
 				orientation = "UPPER_LEFT"
 			}
 		}
 	
-		
-	iconType =
-	{
+	iconType = {
 		name ="minimap_bg"
 		spriteType = "GFX_minimap_bg"
 		position = { x= -374 y = -172 }
 		Orientation = "LOWER_RIGHT"
 	}
-	
 
-
-		iconType =
-	{
+	iconType = {
 		name ="menubar_bg"
 		spriteType = "GFX_menubar_bg"
 		position = { x= -64 y = -200 }
@@ -1242,8 +1205,7 @@ guiTypes = {
 	}
 	
 		### MAILBOX BG and BUTTONS
-	iconType =
-		{
+		iconType = {
 			name ="menubar_mail_bg"
 			spriteType = "GFX_menubar_mail_bg"
 			position = { x= -32 y = -321 }
@@ -1581,7 +1543,7 @@ guiTypes = {
 	windowType = {
 		name = "short_player_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x = 30 y = 30 }
 		moveable = 0
 		dontRender = ""
@@ -1589,8 +1551,7 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no
 	
-		checkboxType = 
-		{
+		checkboxType = {
 			name = "shield"
 			position = { x=0 y =0}
 			quadTextureSprite ="GFX_minishield_greydown"
@@ -1601,19 +1562,18 @@ guiTypes = {
 			buttonFont = "Main_14_black"
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="minishield_strikeout"
 			spriteType = "GFX_minishield_strikeout"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
 	}
-	## chat player entry	
+	## chat player entry
 	windowType = {
 		name = "player_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=125 y= 18 }
 		moveable = 0
 		dontRender = ""
@@ -1642,11 +1602,11 @@ guiTypes = {
 			allwaystransparent = yes
 
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 96
-			maxHeight = 16	
-			Orientation = "UPPER_LEFT"	
-			fixedsize = yes		
+			maxHeight = 16
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
 		}
 		
 		checkboxType = {
@@ -1660,21 +1620,18 @@ guiTypes = {
 			buttonFont = "Main_14_black"
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="minishield_strikeout"
 			spriteType = "GFX_minishield_strikeout"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-		
-			
 	}
 	
 	windowType = {
 		name = "endgame_dialog"
 		backGround=""
-		position = { x=-300 y=-200 }	
+		position = { x=-300 y=-200 }
 		size = { x=600 y=400 }
 		moveable = 0
 		dontRender = ""
@@ -1696,9 +1653,9 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_title"
 			borderSize = {x = 4 y = 4}
-			text = "ENDGAME_HEADLINE"	
+			text = "ENDGAME_HEADLINE"
 			maxWidth = 512 
-			maxHeight = 50	
+			maxHeight = 50
 			format = centre
 		}
 
@@ -1708,9 +1665,9 @@ guiTypes = {
 			textureFile = ""
 			font = "Main_24"
 			borderSize = {x = 4 y = 4}
-			text = "ENDGAME_DESC"	
+			text = "ENDGAME_DESC"
 			maxWidth = 512
-			maxHeight = 120	
+			maxHeight = 120
 			format = left
 		}
 
@@ -1725,5 +1682,4 @@ guiTypes = {
 			buttonFont = "Main_14_black"
 		}
 	}
-
 }
