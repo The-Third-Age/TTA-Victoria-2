@@ -1036,6 +1036,8 @@ demand_state_for_ally = {
 	# THIS = country applying wargoal
 	can_use = {
 		is_independant = yes
+		NOT = { has_country_modifier = political_neutrality }
+		THIS = { NOT = { has_country_modifier = political_neutrality } }
 	}
 	
 	# THIS - us
