@@ -15,64 +15,6 @@
 
 # Starting Decision (Unseen) + Country Info (Seen)
 political_decisions = {
-	test_decision = {
-		potential = { ai = no }
-		allow = {
-			AND = {
-				has_country_flag = reforms_cache_had_granted_exclusive_tr
-				exclusive_trading_rights = limited_exclusive_tr
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_limited_exclusive_tr
-				exclusive_trading_rights = abolished_exclusive_tr
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_privileged_state_supplies
-				state_supplies_monopoly = allowed_state_supplies
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_allowed_state_supplies
-				state_supplies_monopoly = restricted_state_supplies
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_independent_cities
-				city_jurisdiction = chartered_cities
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_chartered_cities
-				city_jurisdiction = territorial_cities
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_territorial_cities
-				city_jurisdiction = royal_cities
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_no_pensions
-				pensions = trinket_pensions
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_trinket_pensions
-				pensions = low_pensions
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_low_pensions
-				pensions = acceptable_pensions
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_acceptable_pensions
-				pensions = good_pensions
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_hereditary
-				apprenticeship = appointment
-			}
-			AND = {
-				has_country_flag = reforms_cache_had_appointment
-				apprenticeship = guild_school
-			}
-		}
-		effect = {}
-	}
 	# Audax Validator "." Ignore_1004
 	DAL_start_decision = {
 		potential = {
