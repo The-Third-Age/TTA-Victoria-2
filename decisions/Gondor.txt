@@ -578,7 +578,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = { 
+		allow = {
 			OR = {
 				crown_land_ownership = all_land_ownership
 				ai = yes
@@ -621,8 +621,8 @@ political_decisions = {
 		}
 		
 		effect = {
-			16 = { 
-				add_province_modifier = { 
+			16 = {
+				add_province_modifier = {
 					name = houses_of_healing
 					duration = -1
 				}
@@ -665,7 +665,7 @@ political_decisions = {
 		picture = "crossroads_fallen_king"
 		potential = {
 			NOT = { owns = 204 }
-			204 = { 
+			204 = {
 				owner = { war_with = THIS }
 				has_province_modifier = crossroads_fallen_king
 			}
@@ -1073,7 +1073,7 @@ political_decisions = {
 			badboy = 5
 			
 			any_country = {
-				limit = { 
+				limit = {
 					any_owned_province = {
 						is_core = ADR
 					}
@@ -1240,7 +1240,7 @@ political_decisions = {
 			any_owned = {
 				limit = {
 					is_core = PUK
-					NOT = { has_province_modifier = gondorification } 
+					NOT = { has_province_modifier = gondorification }
 				}
 				any_pop = {
 					limit = {
@@ -1350,7 +1350,7 @@ political_decisions = {
 		effect = {
 			any_pop = {
 				limit = {
-					location = { 
+					location = {
 						is_core = PUK
 						NOT = { is_core = GON }
 						NOT = { is_core = ADR }
@@ -1570,7 +1570,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			11 = { 
+			11 = {
 				remove_province_modifier = gondorification
 				remove_province_modifier = nationalist_resistance
 				remove_core = DRU
@@ -1729,11 +1729,11 @@ political_decisions = {
 			}
 			war = no
 			HRD = {
-				all_core = { 
+				all_core = {
 					OR = {
 						owned_by = HRD
 						owned_by = THIS
-					} 
+					}
 				}
 			}
 		}
@@ -1778,12 +1778,12 @@ political_decisions = {
 				has_country_modifier = low_military_recruitment
 			}
         }
-        
+
         allow = {
             war = no
 			expansion_2 = 1
         }
-        
+
         effect = {
             prestige = 10
             badboy = 3
@@ -1857,7 +1857,7 @@ political_decisions = {
 				}
 			}
 			random_owned = {
-				limit = { 
+				limit = {
 					owner = {
 						OR = {
 							UMB_256 = { owned_by = UMB }
@@ -1925,7 +1925,6 @@ political_decisions = {
 		allow = {
 			war = no
 			population_4 = 1
-			
 		}
 		effect = {
 			prestige = 10

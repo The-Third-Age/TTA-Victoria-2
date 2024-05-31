@@ -2,7 +2,7 @@ guiTypes = {
 	windowType = {
 		name = "single_unitpanel"
 		backGround=""
-		position = { x=0 y=150 }	
+		position = { x=0 y=150 }
 		size = { x=1000 y=1000 }
 		moveable = 0
 		dontRender = ""
@@ -35,7 +35,7 @@ guiTypes = {
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 		
 		
 		iconType = {
@@ -58,14 +58,14 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 40
 			maxHeight = 16
 
-			fixedsize = yes	
+			fixedsize = yes
 
 			format = right
-		}	
+		}
 		
 		iconType = {
 			name ="icon_recon"
@@ -139,7 +139,7 @@ guiTypes = {
 	windowType = {
 		name = "unittype_item"
 		backGround=""
-		position = { x=0 y=26 }	
+		position = { x=0 y=26 }
 		size = { x=100 y=50 }
 		moveable = 0
 		dontRender = ""
@@ -153,7 +153,7 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18_black"
 			borderSize = {x = 0 y = 0}
-			text = "17"	
+			text = "17"
 			maxWidth = 50
 			maxHeight = 16
 			format = right
@@ -164,7 +164,7 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
-			text = "32000"	
+			text = "32000"
 			maxWidth = 50
 			maxHeight = 16
 			format = right
@@ -184,7 +184,7 @@ guiTypes = {
 	windowType = {
 		name = "sup_odds"
 		backGround=""
-		position = { x=0 y=26 }	
+		position = { x=0 y=26 }
 		size = { x=254 y=28 }
 		moveable = 0
 		dontRender = ""
@@ -192,8 +192,7 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no
 
-		iconType =
-		{
+		iconType = {
 			name ="power_bg"
 			spriteType = "GFX_unit_bg_28"
 			position = { x= 0 y = 26 }
@@ -206,9 +205,9 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 0 y = 0}
-			text = "We will not stand a chance."	
+			text = "We will not stand a chance."
 			maxWidth = 305
-			maxHeight = 32	
+			maxHeight = 32
 			format = centre
 		}
 	}
@@ -219,7 +218,7 @@ guiTypes = {
 	windowType = {
 		name = "sup_subunits"
 		backGround=""
-		position = { x=0 y=-9 }	
+		position = { x=0 y=-9 }
 		size = { x=314 y=282 }
 		moveable = 0
 		dontRender = ""
@@ -256,7 +255,7 @@ guiTypes = {
 			horizontal = 0
 
 			guiButtonType = {
-				name = "listboxSliderButton"	
+				name = "listboxSliderButton"
 				quadTextureSprite = "slider_slider"
 				tooltip = ""
 				tooltipText =""
@@ -281,7 +280,7 @@ guiTypes = {
 				parent = "listboxSliderButton"
 				name = "downButton"
 				quadTextureSprite = "slider_upbutton"
-				position = { x=0 y =146}	
+				position = { x=0 y =146}
 			}
 		}
 	}
@@ -293,53 +292,52 @@ guiTypes = {
 	windowType = {
 		name = "sup_buttons_window"
 		backGround=""
-		position = { x=0 y=26 }	
+		position = { x=0 y=26 }
 		size = { x=254 y=32 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 		
 		guiButtonType = {
 			name = "load_button"
 			position = { x=282 y=338}
-			quadTextureSprite ="GFX_unit_load_button"	
+			quadTextureSprite ="GFX_unit_load_button"
 		}
 			
 		guiButtonType = {
 			name = "unload_button"
 			position = { x=282 y=338}
-			quadTextureSprite ="GFX_unit_unload_button"	
+			quadTextureSprite ="GFX_unit_unload_button"
 		}
 		
 		guiButtonType = {
 			name = "enable_rebel_button"
 			position = { x=222 y=338}
-			quadTextureSprite ="GFX_unit_hunt_rebel1"	
+			quadTextureSprite ="GFX_unit_hunt_rebel1"
 		}
 		guiButtonType = {
 			name = "disable_rebel_button"
 			position = { x=222 y=338}
-			quadTextureSprite ="GFX_unit_hunt_rebel2"	
+			quadTextureSprite ="GFX_unit_hunt_rebel2"
 		}
 			
 		guiButtonType = {
 			name = "attach_unit_button"
 			position = { x=20 y=338}
-			quadTextureSprite ="GFX_unit_attach_button"	
+			quadTextureSprite ="GFX_unit_attach_button"
 		}
 		
 		guiButtonType = {
 			name = "detach_unit_button"
 			position = { x=20 y=338}
-			quadTextureSprite ="GFX_unit_detach_button"	
+			quadTextureSprite ="GFX_unit_detach_button"
 		}
 
-		
 		guiButtonType = {
 			name ="select_land"
-			quadTextureSprite ="GFX_unit_gunboat_diplo_button"	
+			quadTextureSprite ="GFX_unit_gunboat_diplo_button"
 			position = { x= 172 y = 337 }
 			Orientation = "UPPER_LEFT"
 			buttonText = ""
@@ -351,7 +349,7 @@ guiTypes = {
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 0 y = 0}
-			text = "xx"	
+			text = "xx"
 			maxWidth = 150
 			maxHeight = 32
 			format = centre
@@ -366,17 +364,17 @@ guiTypes = {
 	windowType = {
 		name = "combat_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=254 y=49 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 		
 		guiButtonType = {
 			name ="select"
-			quadTextureSprite ="GFX_unit_siege_entry"	
+			quadTextureSprite ="GFX_unit_siege_entry"
 			position = { x= 0 y = 338 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -387,10 +385,10 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
-			text = "xxx"	
+			text = "xxx"
 			format = centre
 			maxWidth = 250
-			maxHeight = 32	
+			maxHeight = 32
 		}
 		
 		iconType = {
@@ -453,77 +451,62 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
-			text = "xxx"	
+			text = "xxx"
 			format = centre
 			maxWidth = 250
-			maxHeight = 32	
+			maxHeight = 32
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="attacker_flag"
 			spriteType = "GFX_flag_new"
 			position = { x= 6 y = 355 }
 			Orientation = "UPPER_LEFT"
 		}
 
-		iconType =
-		{
+		iconType = {
 			name ="defender_flag"
 			spriteType = "GFX_flag_new"
 			position = { x= 299 y = 355 }
 			Orientation = "UPPER_LEFT"
 		}
 		
-		
-		iconType =
-		{
+		iconType = {
 			name ="progress"
 			spriteType = "combat_progress"
 			position = { x= 37 y = 370 }
 			Orientation = "UPPER_LEFT"
 		}
-				
-	}	
-		
-		
+	}
 
-
-
-
-	##################################################	
+	##################################################
 	# Subunit entry for divisions / air units / naval units.
 	##################################################
 	windowType = {
 		name = "subunit_entry"
 		backGround=""
-		position = { x=0 y=0 }	
+		position = { x=0 y=0 }
 		size = { x=360 y= 31 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
-		fullScreen = no	
+		fullScreen = no
 
-
-
-		iconType = 
-		{
+		iconType = {
 			name ="select"
-			spriteType ="GFX_unit_entry_bg"	
+			spriteType ="GFX_unit_entry_bg"
 			position = { x= 7 y = 1 }
 			Orientation = "UPPER_LEFT"
 		}
-		iconType = 
-		{
+		iconType = {
 			name ="select_naval"
-			spriteType ="GFX_unit_entry_bg_naval"	
+			spriteType ="GFX_unit_entry_bg_naval"
 			position = { x= 7 y = 1 }
 			Orientation = "UPPER_LEFT"
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="sunit_icon"
 			spriteType = "GFX_unit_strip"
 			position = { x= 9 y = 0 }
@@ -536,7 +519,7 @@ guiTypes = {
 				textureFile = ""
 				font = "Arial12_bold_black"
 				borderSize = {x = 4 y = 4}
-				text = ""	
+				text = ""
 				maxWidth = 173
 				maxHeight = 10
 				fixedsize = yes
@@ -551,14 +534,12 @@ guiTypes = {
 				textureFile = ""
 				font = "Arial12_black"
 				borderSize = {x = 4 y = 0}
-				text = ""	
+				text = ""
 				maxWidth = 173
-				maxHeight = 10	
+				maxHeight = 10
 				fixedsize = yes
 				allwaystransparent = yes
 				Orientation = "UPPER_LEFT"
-
-			
 		}
 
 		instantTextBoxType = {
@@ -567,10 +548,10 @@ guiTypes = {
 				textureFile = ""
 				font = "vic_18_black"
 				borderSize = {x = 4 y = 4}
-				text = ""	
+				text = ""
 				maxWidth = 50
 				maxHeight = 10
-				format = right	
+				format = right
 				allwaystransparent = yes
 				Orientation = "UPPER_LEFT"
 			}
@@ -580,54 +561,48 @@ guiTypes = {
 				textureFile = ""
 				font = "vic_18_black"
 				borderSize = {x = 4 y = 4}
-				text = "100%"	
+				text = "100%"
 				maxWidth = 50
 				maxHeight = 10
-				format = right	
+				format = right
 				allwaystransparent = yes
 				Orientation = "UPPER_LEFT"
 		}
 			
-		guiButtonType =
-		{
+		guiButtonType = {
 			name ="connected_pop"
 			quadTextureSprite = "GFX_pops_mini"
 			position = { x= 260 y = 0 }
 		}
 		
-		iconType =
-		{
+		iconType = {
 			name ="rebel_faction"
 			spriteType = "GFX_politics_rebel_strip_trans"
 			position = { x= 257 y = 12 }
 		}
 
-		iconType =
-				{
+		iconType = {
 				name ="unit_experience"
 				spriteType = "GFX_unit_stars"
 				position = { x= 195 y = 16 }
 				Orientation = "UPPER_LEFT"
 			}
 
-		iconType =
-				{
-				name ="org_bar"
-				spriteType = "GFX_morale_progress_small"
-				position = { x= 297 y = 23 }
-				Orientation = "UPPER_LEFT"
-				rotation = 1.5708
-			}
+		iconType = {
+			name ="org_bar"
+			spriteType = "GFX_morale_progress_small"
+			position = { x= 297 y = 23 }
+			Orientation = "UPPER_LEFT"
+			rotation = 1.5708
+		}
 			
-			iconType =
-				{
-				name ="str_bar"
-				spriteType = "GFX_strength_progress_small"
-				position = { x= 305 y = 23 }
-				Orientation = "UPPER_LEFT"
-				rotation = 1.5708
-			}
-
+		iconType = {
+			name ="str_bar"
+			spriteType = "GFX_strength_progress_small"
+			position = { x= 305 y = 23 }
+			Orientation = "UPPER_LEFT"
+			rotation = 1.5708
+		}
 	}
 	
 	#### POSITION/OFFSET UNITTYPES.
@@ -640,5 +615,4 @@ guiTypes = {
 		name = "unittype_item_offset"
 		position = { x = 106 y =0 }
 	}
-	
 }
