@@ -637,6 +637,15 @@ country_event = {
 	}
 
 	option = {
+		name = "EVTOPTG35000"
+		country_event = 35022
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
 		name = "EVTOPTF35000"
 		country_event = 35021
 	}
@@ -681,6 +690,11 @@ country_event = {
 	}
 
 	option = {
+		name = "EVTOPTG35000"
+		country_event = 35022
+	}
+
+	option = {
 		name = "EVTOPTF35000"
 		country_event = 35021
 	}
@@ -718,6 +732,11 @@ country_event = {
 	option = {
 		name = "EVTOPTD35000"
 		country_event = 35020
+	}
+
+	option = {
+		name = "EVTOPTG35000"
+		country_event = 35022
 	}
 
 	option = {
@@ -1136,6 +1155,11 @@ country_event = {
 	}
 
 	option = {
+		name = "EVTOPTG35000"
+		country_event = 35022
+	}
+
+	option = {
 		name = "EVTOPTF35000"
 		country_event = 35021
 	}
@@ -1354,6 +1378,275 @@ country_event = {
 	option = {
 		name = "EVTOPTD35000"
 		country_event = 35020
+	}
+
+	option = {
+		name = "EVTOPTG35000"
+		country_event = 35022
+	}
+
+	option = {
+		name = "EVTOPTF35000"
+		country_event = 35021
+	}
+
+	option = {
+		name = "EVTOPTE35000"
+	}
+}
+
+# Kingdom of Dale (Barding Realm) - Bonuses (II)
+country_event = {
+	id = 35022
+	picture = "kingdom_of_dale"
+	title = "EVTNAME35004"
+	desc = " "
+	
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		tan_color_loc = {}
+		DAL_merchant_guild_bop_title_loc = {}
+		end_color_loc = {}
+		
+		empty_line_loc = {}
+		DAL_merchant_guild_bop_desc_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = DAL_merchant_guild_balanced
+				}
+			}
+			DAL_merchant_guild_bop_balanced_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = DAL_merchant_supported_by_realm
+				}
+			}
+			DAL_merchant_guild_bop_merchants_permanent_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = DAL_guild_supported_by_realm
+				}
+			}
+			DAL_merchant_guild_bop_guild_permanent_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_10
+						has_country_modifier = DAL_merchant_power_9
+						has_country_modifier = DAL_merchant_power_8
+						has_country_modifier = DAL_merchant_power_7
+						has_country_modifier = DAL_merchant_power_6
+						has_country_modifier = DAL_merchant_power_5
+						has_country_modifier = DAL_merchant_power_4
+						has_country_modifier = DAL_merchant_power_3
+						has_country_modifier = DAL_merchant_power_2
+						has_country_modifier = DAL_merchant_power_1
+					}
+				}
+			}
+			DAL_merchant_guild_bop_merchants_lead_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_guild_power_1
+						has_country_modifier = DAL_guild_power_2
+						has_country_modifier = DAL_guild_power_3
+						has_country_modifier = DAL_guild_power_4
+						has_country_modifier = DAL_guild_power_5
+						has_country_modifier = DAL_guild_power_6
+						has_country_modifier = DAL_guild_power_7
+						has_country_modifier = DAL_guild_power_8
+						has_country_modifier = DAL_guild_power_9
+						has_country_modifier = DAL_guild_power_10
+					}
+				}
+			}
+			DAL_merchant_guild_bop_guild_lead_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_1
+						has_country_modifier = DAL_guild_power_1
+					}
+				}
+			}
+			one_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_2
+						has_country_modifier = DAL_guild_power_2
+					}
+				}
+			}
+			two_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_3
+						has_country_modifier = DAL_guild_power_3
+					}
+				}
+			}
+			three_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_4
+						has_country_modifier = DAL_guild_power_4
+					}
+				}
+			}
+			four_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_5
+						has_country_modifier = DAL_guild_power_5
+					}
+				}
+			}
+			five_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_6
+						has_country_modifier = DAL_guild_power_6
+					}
+				}
+			}
+			six_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_7
+						has_country_modifier = DAL_guild_power_7
+					}
+				}
+			}
+			seven_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_8
+						has_country_modifier = DAL_guild_power_8
+					}
+				}
+			}
+			eight_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_9
+						has_country_modifier = DAL_guild_power_9
+					}
+				}
+			}
+			nine_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+					NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					OR = {
+						has_country_modifier = DAL_merchant_power_10
+						has_country_modifier = DAL_guild_power_10
+					}
+				}
+			}
+			ten_loc = {}
+			DAL_merchant_guild_bop_desc_ii_loc = {}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA35000"
+		country_event = 35017
+	}
+
+	option = {
+		name = "EVTOPTB35000"
+		country_event = 35018
+	}
+
+	option = {
+		name = "EVTOPTC35000"
+		country_event = 35019
+	}
+
+	option = {
+		name = "EVTOPTD35000"
+		country_event = 35020
+	}
+
+	option = {
+		name = "EVTOPTG35000"
+		country_event = 35022
 	}
 
 	option = {

@@ -395,6 +395,18 @@ military_leader_recruited_loc = { } # §GThis leader has been recruited§!
 military_leader_not_recruited_loc = { } # §MThis leader has not yet been recruited.§!
 traits_loc = { } # §MTraits§!
 
+zero_loc = { } # 0
+one_loc = { } # 1
+two_loc = { } # 2
+three_loc = { } # 3
+four_loc = { } # 4
+five_loc = { } # 5
+six_loc = { } # 6
+seven_loc = { } # 7
+eight_loc = { } # 8
+nine_loc = { } # 9
+ten_loc = { } # 10
+
 # Static Tooltip Locs - Barding Realm, Event description
 DAL_king_of_the_northmen_loc = { } # King of the Northmen
 DAL_king_of_the_northmen_desc_loc = { } # Rule each Northman culture within Gramavuld!
@@ -422,6 +434,16 @@ DAL_northman_generals_rivermen_nomrel_loc = { } # Nomrel (Myrrborg)§!,
 DAL_northman_generals_rivermen_geirmund_loc = { } # Geirmund (Naertheiaborg)
 DAL_trade_with_other_realms_loc = { } # §GTrade with Other Realms§!
 DAL_trade_with_other_realms_desc_loc =  { } # Propose trade agreements with realms you are adjacent to! When a realm accepts, both you and your trade partner may get a small economic boost. Esgaroth will display your current level of economic boost.
+
+DAL_merchant_guild_bop_title_loc = { } # Merchants and Fisher's Guild
+DAL_merchant_guild_bop_desc_loc = { } # Unlike many Medieval societies, the merchants of the Lakemen function as the landed nobles and aristocrats of society. This puts them at direct odds with the Fisher's Guild, leading to an ever-present internal strife.\n\nFor the past couple centuries, the Merchants have had distinct control over society, culminating in the Master of Laketown that the Company of Thorin met. Since the downfall of the merchant Master and the rebalance of power over with the ascent of Bard I, the Fisher's guild has been demanding more and more rights, attempting to sway economic power in their favor.\n\nMechanically, this balance of power runs on a scale of 10 points in favor of the Merchants, to 10 points in favor of the Fisher's Guild (total range of 21 -- 10 in favor of the Merchants, 1 for a tie, and an additional 10 in favor of the Fisher's Guild). On top on a small amount of interaction with other flavor, any Burgher's Reform will move the scale 2 points in favor of the Fisher's Guild, while repealing any Burgher's Reform will move the scale 2 points in favor of the Merchants. Should the balance of power reach 8 points in favor of either side, the realm can decide to officially support that side, ending the mechanic and permanently gaining the bonuses associated with that side.
+DAL_merchant_guild_bop_merchants_lead_loc = { } # Currently the §TMerchants§! lead (+
+DAL_merchant_guild_bop_guild_lead_loc = { } # Currently the §TFisher's Guild§! lead (+
+DAL_merchant_guild_bop_desc_ii_loc = { } # )
+DAL_merchant_guild_bop_balanced_loc = { } # Currently, the opposing parties are §Tbalanced§! (+0)
+DAL_merchant_guild_bop_merchants_permanent_loc = { } # §TThe realm has chosen to officially support the Merchants§! (+10)
+DAL_merchant_guild_bop_guild_permanent_loc = { } # §TThe realm has chosen to officially support the Fisher's Guild§! (+10)
+
 DAL_military_leaders_brestir_loc = { } # §LBrestir the Old§!|
 DAL_military_leaders_elstan_loc = { } # §LElstan, §MFirst Captain of Dale§!|
 DAL_military_leaders_braga_loc = { } # §LBraga, §MFirst Captain of Esgaroth§!|
@@ -493,7 +515,13 @@ DAL_constructing_meres_end_boat_lift_money_loc = { } # §GIf we do not have the n
 DAL_constructing_meres_end_boat_lift_loc = { } # §GWhen the boat life finishes construction, all provinces adjacent to Long Lake will gain a modifier slightly increasing artisan, guild and rgo output.§!
 DAL_activate_celduin_pirates_loc = { } # §GThis will activate the Celduin Pirates mechanic. Realms with Rivermen as their primary culture are immune to the pirates.§!
 DAL_trading_mechanic_notes_loc = { } # §RNote that the count is updated every 30 days. The list of realms you are currently trading with will always be up-to-date§!\n
+
 DAL_reforms_bard_i_loc = { } # §GThis decision will either give us the reforms of Bard I for free, or, if we have completed all of Bard I's reforms, it will give us some prestige and reduce popular anxiety. If some of Bard's reforms have been completed or superceded, our reforms will not regress§!\n
+
+DAL_supported_merchants_loc = { } # §RThis decision will lock us into supporting the Merchants and not allow us to pass any Burgher reforms. Additionally, all Burgher reforms will be set to the least centralized versions§!
+DAL_supported_guild_loc = { } # §RThis decision will lock us into supporting the Fisher's Guild and not allow us to pass any Burgher reforms. Additionally, all Burgher reforms will be set to the most centralized versions§!
+DAL_merchant_guild_bop_shift_merchants_1_loc = { } # §RThe Balance of Power between the Merchants and Fisher's Guild will shift in the favor of the Merchants by 1
+DAL_merchant_guild_bop_shift_guild_1_loc = { } # §RThe Balance of Power between the Merchants and Fisher's Guild will shift in the favor of the Fisher's Guild by 1
 
 RIV_break_dal_hegemony_loc = { } # §GWe must win this war and get our CB fulfilled. If we lose or whitepeace, DAL will puppet us (and likely annex us via flavor).§!
 

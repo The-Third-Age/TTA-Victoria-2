@@ -4,6 +4,323 @@
 # World Bank Events: {
 # 99000 - 99799 }
 
+# Generic Cleanup
+country_event = {
+	id = 99000
+	picture = "production"
+	title = "Generic Cleanup"
+	desc = "EVTDESC99000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fix it please"
+		
+		# Social (Burgher) Reforms Caching {
+		# Clearing the old cached values
+		any_country = {
+			clr_country_flag = reforms_cache_had_granted_exclusive_tr
+			clr_country_flag = reforms_cache_had_limited_exclusive_tr
+			clr_country_flag = reforms_cache_had_abolished_exclusive_tr
+			clr_country_flag = reforms_cache_had_privileged_state_supplies
+			clr_country_flag = reforms_cache_had_allowed_state_supplies
+			clr_country_flag = reforms_cache_had_restricted_state_supplies
+			clr_country_flag = reforms_cache_had_independent_cities
+			clr_country_flag = reforms_cache_had_chartered_cities
+			clr_country_flag = reforms_cache_had_territorial_cities
+			clr_country_flag = reforms_cache_had_royal_cities
+			clr_country_flag = reforms_cache_had_no_pensions
+			clr_country_flag = reforms_cache_had_trinket_pensions
+			clr_country_flag = reforms_cache_had_low_pensions
+			clr_country_flag = reforms_cache_had_acceptable_pensions
+			clr_country_flag = reforms_cache_had_good_pensions
+			clr_country_flag = reforms_cache_had_hereditary
+			clr_country_flag = reforms_cache_had_appointment
+			clr_country_flag = reforms_cache_had_guild_school
+		}
+		
+		# Updating the cached values
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_granted_exclusive_tr
+			}
+			set_country_flag = reforms_cache_had_granted_exclusive_tr
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_limited_exclusive_tr
+			}
+			set_country_flag = reforms_cache_had_limited_exclusive_tr
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_abolished_exclusive_tr
+			}
+			set_country_flag = reforms_cache_had_abolished_exclusive_tr
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_privileged_state_supplies
+			}
+			set_country_flag = reforms_cache_had_privileged_state_supplies
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_allowed_state_supplies
+			}
+			set_country_flag = reforms_cache_had_allowed_state_supplies
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_restricted_state_supplies
+			}
+			set_country_flag = reforms_cache_had_restricted_state_supplies
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_independent_cities
+			}
+			set_country_flag = reforms_cache_had_independent_cities
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_chartered_cities
+			}
+			set_country_flag = reforms_cache_had_chartered_cities
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_territorial_cities
+			}
+			set_country_flag = reforms_cache_had_territorial_cities
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_royal_cities
+			}
+			set_country_flag = reforms_cache_had_royal_cities
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_no_pensions
+			}
+			set_country_flag = reforms_cache_had_no_pensions
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_trinket_pensions
+			}
+			set_country_flag = reforms_cache_had_trinket_pensions
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_low_pensions
+			}
+			set_country_flag = reforms_cache_had_low_pensions
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_acceptable_pensions
+			}
+			set_country_flag = reforms_cache_had_acceptable_pensions
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_good_pensions
+			}
+			set_country_flag = reforms_cache_had_good_pensions
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_hereditary
+			}
+			set_country_flag = reforms_cache_had_hereditary
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_appointment
+			}
+			set_country_flag = reforms_cache_had_appointment
+		}
+		
+		any_country = {
+			limit = {
+				has_country_flag = reforms_has_guild_school
+			}
+			set_country_flag = reforms_cache_had_guild_school
+		}
+		
+		# Clearing the old values
+		any_country = {
+			clr_country_flag = reforms_has_granted_exclusive_tr
+			clr_country_flag = reforms_has_limited_exclusive_tr
+			clr_country_flag = reforms_has_abolished_exclusive_tr
+			clr_country_flag = reforms_has_privileged_state_supplies
+			clr_country_flag = reforms_has_allowed_state_supplies
+			clr_country_flag = reforms_has_restricted_state_supplies
+			clr_country_flag = reforms_has_independent_cities
+			clr_country_flag = reforms_has_chartered_cities
+			clr_country_flag = reforms_has_territorial_cities
+			clr_country_flag = reforms_has_royal_cities
+			clr_country_flag = reforms_has_no_pensions
+			clr_country_flag = reforms_has_trinket_pensions
+			clr_country_flag = reforms_has_low_pensions
+			clr_country_flag = reforms_has_acceptable_pensions
+			clr_country_flag = reforms_has_good_pensions
+			clr_country_flag = reforms_has_hereditary
+			clr_country_flag = reforms_has_appointment
+			clr_country_flag = reforms_has_guild_school
+		}
+		
+		# Caching the current value for next time this event fires
+		any_country = {
+			limit = {
+				exclusive_trading_rights = granted_exclusive_tr
+			}
+			set_country_flag = reforms_has_granted_exclusive_tr
+		}
+		
+		any_country = {
+			limit = {
+				exclusive_trading_rights = limited_exclusive_tr
+			}
+			set_country_flag = reforms_has_limited_exclusive_tr
+		}
+		
+		any_country = {
+			limit = {
+				exclusive_trading_rights = abolished_exclusive_tr
+			}
+			set_country_flag = reforms_has_abolished_exclusive_tr
+		}
+		
+		any_country = {
+			limit = {
+				state_supplies_monopoly = privileged_state_supplies
+			}
+			set_country_flag = reforms_has_privileged_state_supplies
+		}
+		
+		any_country = {
+			limit = {
+				state_supplies_monopoly = allowed_state_supplies
+			}
+			set_country_flag = reforms_has_allowed_state_supplies
+		}
+		
+		any_country = {
+			limit = {
+				state_supplies_monopoly = restricted_state_supplies
+			}
+			set_country_flag = reforms_has_restricted_state_supplies
+		}
+		
+		any_country = {
+			limit = {
+				city_jurisdiction = independent_cities
+			}
+			set_country_flag = reforms_has_independent_cities
+		}
+		
+		any_country = {
+			limit = {
+				city_jurisdiction = chartered_cities
+			}
+			set_country_flag = reforms_has_chartered_cities
+		}
+		
+		any_country = {
+			limit = {
+				city_jurisdiction = territorial_cities
+			}
+			set_country_flag = reforms_has_territorial_cities
+		}
+		
+		any_country = {
+			limit = {
+				city_jurisdiction = royal_cities
+			}
+			set_country_flag = reforms_has_royal_cities
+		}
+		
+		any_country = {
+			limit = {
+				pensions = no_pensions
+			}
+			set_country_flag = reforms_has_no_pensions
+		}
+		
+		any_country = {
+			limit = {
+				pensions = trinket_pensions
+			}
+			set_country_flag = reforms_has_trinket_pensions
+		}
+		
+		any_country = {
+			limit = {
+				pensions = low_pensions
+			}
+			set_country_flag = reforms_has_low_pensions
+		}
+		
+		any_country = {
+			limit = {
+				pensions = acceptable_pensions
+			}
+			set_country_flag = reforms_has_acceptable_pensions
+		}
+		
+		any_country = {
+			limit = {
+				pensions = good_pensions
+			}
+			set_country_flag = reforms_has_good_pensions
+		}
+		
+		any_country = {
+			limit = {
+				apprenticeship = hereditary
+			}
+			set_country_flag = reforms_has_hereditary
+		}
+		
+		any_country = {
+			limit = {
+				apprenticeship = appointment
+			}
+			set_country_flag = reforms_has_appointment
+		}
+		
+		any_country = {
+			limit = {
+				apprenticeship = guild_school
+			}
+			set_country_flag = reforms_has_guild_school
+		}
+		# }
+		
+		# Refire the cleanup event next month
+		country_event = { id = 99000 days = 30 }
+	}
+}
+
 # DAL Flavor Cleanup
 country_event = {
 	id = 99001
@@ -288,6 +605,418 @@ country_event = {
 		
 		# Now that the counting variable is updated, update the dynamic text
 		country_event = 200000
+		# }
+		
+		# Merchants vs Fishers Guild {
+		# Updating the variable based upon the previous reform
+		
+		# TODO: Split out each one of these change variables into one random_country block -- if multiple triggers in the OR fire (i.e., multiple reforms changing at once, the variable will only be updated once for that level, rather than twice
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
+					AND = {
+						has_country_flag = reforms_cache_had_good_pensions
+						pensions = no_pensions
+					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -8 } # Shift 8 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
+					AND = {
+						has_country_flag = reforms_cache_had_royal_cities
+						city_jurisdiction = independent_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_acceptable_pensions
+						pensions = no_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_good_pensions
+						pensions = trinket_pensions
+					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -6 } # Shift 6 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
+					AND = {
+						has_country_flag = reforms_cache_had_abolished_exclusive_tr
+						exclusive_trading_rights = granted_exclusive_tr
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_restricted_state_supplies
+						state_supplies_monopoly = privileged_state_supplies
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_territorial_cities
+						city_jurisdiction = independent_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_royal_cities
+						city_jurisdiction = chartered_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_low_pensions
+						pensions = no_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_acceptable_pensions
+						pensions = trinket_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_good_pensions
+						pensions = low_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_guild_school
+						apprenticeship = hereditary
+					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -4 } # Shift 4 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
+					AND = {
+						has_country_flag = reforms_cache_had_limited_exclusive_tr
+						exclusive_trading_rights = granted_exclusive_tr
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_abolished_exclusive_tr
+						exclusive_trading_rights = limited_exclusive_tr
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_allowed_state_supplies
+						state_supplies_monopoly = privileged_state_supplies
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_restricted_state_supplies
+						state_supplies_monopoly = allowed_state_supplies
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_chartered_cities
+						city_jurisdiction = independent_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_territorial_cities
+						city_jurisdiction = chartered_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_royal_cities
+						city_jurisdiction = territorial_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_trinket_pensions
+						pensions = no_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_low_pensions
+						pensions = trinket_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_acceptable_pensions
+						pensions = low_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_good_pensions
+						pensions = acceptable_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_appointment
+						apprenticeship = hereditary
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_guild_school
+						apprenticeship = appointment
+					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -2 } # Shift 2 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
+					AND = {
+						has_country_flag = reforms_cache_had_granted_exclusive_tr
+						exclusive_trading_rights = limited_exclusive_tr
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_limited_exclusive_tr
+						exclusive_trading_rights = abolished_exclusive_tr
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_privileged_state_supplies
+						state_supplies_monopoly = allowed_state_supplies
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_allowed_state_supplies
+						state_supplies_monopoly = restricted_state_supplies
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_independent_cities
+						city_jurisdiction = chartered_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_chartered_cities
+						city_jurisdiction = territorial_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_territorial_cities
+						city_jurisdiction = royal_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_no_pensions
+						pensions = trinket_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_trinket_pensions
+						pensions = low_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_low_pensions
+						pensions = acceptable_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_acceptable_pensions
+						pensions = good_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_hereditary
+						apprenticeship = appointment
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_appointment
+						apprenticeship = guild_school
+					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 2 } # Shift 2 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
+					AND = {
+						has_country_flag = reforms_cache_had_granted_exclusive_tr
+						exclusive_trading_rights = abolished_exclusive_tr
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_privileged_state_supplies
+						state_supplies_monopoly = restricted_state_supplies
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_independent_cities
+						city_jurisdiction = territorial_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_chartered_cities
+						city_jurisdiction = royal_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_no_pensions
+						pensions = low_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_trinket_pensions
+						pensions = acceptable_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_low_pensions
+						pensions = good_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_hereditary
+						apprenticeship = guild_school
+					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 4 } # Shift 4 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
+					AND = {
+						has_country_flag = reforms_cache_had_independent_cities
+						city_jurisdiction = royal_cities
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_no_pensions
+						pensions = acceptable_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_trinket_pensions
+						pensions = good_pensions
+					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 6 } # Shift 6 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
+					AND = {
+						has_country_flag = reforms_cache_had_no_pensions
+						pensions = good_pensions
+					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 8 } # Shift 8 in favor of the Fisher's Guild
+		}
+		
+		# Detecting if the modifier needs to change
+		random_country = {
+			limit = {
+				tag = DAL
+				OR = {
+					AND = { # Merchants have been supported by the realm, or the bop is 10+ in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_10 }
+						OR = {
+							has_country_flag = DAL_merchant_supported_by_realm
+							NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -9.9 } }
+						}
+					}
+					AND = { # The bop is 9 in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_9 }
+						check_variable = { which = DAL_merchants_fishers_bop value = -9.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -8.9 } }
+					}
+					AND = { # The bop is 8 in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_8 }
+						check_variable = { which = DAL_merchants_fishers_bop value = -8.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -7.9 } }
+					}
+					AND = { # The bop is 7 in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_7 }
+						check_variable = { which = DAL_merchants_fishers_bop value = -7.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -6.9 } }
+					}
+					AND = { # The bop is 6 in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_6 }
+						check_variable = { which = DAL_merchants_fishers_bop value = -6.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -5.9 } }
+					}
+					AND = { # The bop is 5 in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_5 }
+						check_variable = { which = DAL_merchants_fishers_bop value = -5.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -4.9 } }
+					}
+					AND = { # The bop is 4 in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_4 }
+						check_variable = { which = DAL_merchants_fishers_bop value = -4.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -3.9 } }
+					}
+					AND = { # The bop is 3 in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_3 }
+						check_variable = { which = DAL_merchants_fishers_bop value = -3.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -2.9 } }
+					}
+					AND = { # The bop is 2 in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_2 }
+						check_variable = { which = DAL_merchants_fishers_bop value = -2.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -1.9 } }
+					}
+					AND = { # The bop is 1 in favor of the Merchants
+						NOT = { has_country_modifier = DAL_merchant_power_1 }
+						check_variable = { which = DAL_merchants_fishers_bop value = -1.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -0.9 } }
+					}
+					AND = { # The bop is even
+						NOT = { has_country_modifier = DAL_merchant_guild_balanced }
+						check_variable = { which = DAL_merchants_fishers_bop value = -0.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 0.1 } }
+					}
+					AND = { # The bop is 1 in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_1 }
+						check_variable = { which = DAL_merchants_fishers_bop value = 0.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 1.1 } }
+					}
+					AND = { # The bop is 2 in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_2 }
+						check_variable = { which = DAL_merchants_fishers_bop value = 1.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 2.1 } }
+					}
+					AND = { # The bop is 3 in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_3 }
+						check_variable = { which = DAL_merchants_fishers_bop value = 2.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 3.1 } }
+					}
+					AND = { # The bop is 4 in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_4 }
+						check_variable = { which = DAL_merchants_fishers_bop value = 3.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 4.1 } }
+					}
+					AND = { # The bop is 5 in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_5 }
+						check_variable = { which = DAL_merchants_fishers_bop value = 4.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 5.1 } }
+					}
+					AND = { # The bop is 6 in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_6 }
+						check_variable = { which = DAL_merchants_fishers_bop value = 5.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 6.1 } }
+					}
+					AND = { # The bop is 7 in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_7 }
+						check_variable = { which = DAL_merchants_fishers_bop value = 6.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 7.1 } }
+					}
+					AND = { # The bop is 8 in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_8 }
+						check_variable = { which = DAL_merchants_fishers_bop value = 7.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 8.1 } }
+					}
+					AND = { # The bop is 9 in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_9 }
+						check_variable = { which = DAL_merchants_fishers_bop value = 8.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 9.1 } }
+					}
+					AND = { # The bop is 10+ in favor of the Fisher's Guild
+						NOT = { has_country_modifier = DAL_guild_power_10 }
+						OR = {
+							check_variable = { which = DAL_merchants_fishers_bop value = 9.9 }
+							has_country_flag = DAL_guild_supported_by_realm
+						}
+					}
+				}
+			}
+			country_event = 50949
+		}
 		# }
 		
 		# Refire the cleanup event next month

@@ -2249,3 +2249,345 @@ country_event = {
 		set_global_flag = DAL_kept_erebor
 	}
 }
+
+# A Shift in the Balance of Power of the Merchants and Fishers Guild
+country_event = {
+	id = 50949
+	title = "A Shift in the Balance of Power"
+	desc = "EVTDESC50949"
+	picture = "gramavuld/market"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The power shifts"
+		
+		remove_country_modifier = DAL_merchant_power_10
+		remove_country_modifier = DAL_merchant_power_9
+		remove_country_modifier = DAL_merchant_power_8
+		remove_country_modifier = DAL_merchant_power_7
+		remove_country_modifier = DAL_merchant_power_6
+		remove_country_modifier = DAL_merchant_power_5
+		remove_country_modifier = DAL_merchant_power_4
+		remove_country_modifier = DAL_merchant_power_3
+		remove_country_modifier = DAL_merchant_power_2
+		remove_country_modifier = DAL_merchant_power_1
+		remove_country_modifier = DAL_merchant_guild_balanced
+		remove_country_modifier = DAL_guild_power_1
+		remove_country_modifier = DAL_guild_power_2
+		remove_country_modifier = DAL_guild_power_3
+		remove_country_modifier = DAL_guild_power_4
+		remove_country_modifier = DAL_guild_power_5
+		remove_country_modifier = DAL_guild_power_6
+		remove_country_modifier = DAL_guild_power_7
+		remove_country_modifier = DAL_guild_power_8
+		remove_country_modifier = DAL_guild_power_9
+		remove_country_modifier = DAL_guild_power_10
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_country_flag = DAL_merchant_supported_by_realm
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -9.9 } }
+					}
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_10 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -9.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -8.9 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_9 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -8.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -7.9 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_8 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -7.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -6.9 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_7 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -6.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -5.9 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_6 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -5.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -4.9 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_5 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -4.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -3.9 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_4 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -3.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -2.9 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_3 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -2.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -1.9 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_2 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -1.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -0.9 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_power_1 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = -0.1 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 0.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_merchant_guild_balanced duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = 0.9 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 1.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_1 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = 1.9 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 2.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_2 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = 2.9 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 3.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_3 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = 3.9 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 4.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_4 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = 4.9 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 5.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_5 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = 5.9 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 6.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_6 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = 6.9 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 7.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_7 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = 7.9 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 8.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_8 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = DAL_merchants_fishers_bop value = 8.9 }
+					NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 9.1 } }
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_9 duration = -1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 9.9 }
+						has_country_flag = DAL_guild_supported_by_realm
+					}
+				}
+			}
+			owner = { add_country_modifier = { name = DAL_guild_power_10 duration = -1 } }
+		}
+	}
+}
+
+# Merchants-Fisher Guild Tensions Flare Up
+province_event = {
+	id = 50950
+	title = "The Rights of the Fisher's Guild"
+	desc = "EVTDESC50950"
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	trigger = {
+		OR = {
+			province_id = 140 # Holmgeirstadur
+			province_id = 648 # Londaroth
+			province_id = 649 # Elliborg
+			province_id = 653 # Hafborg
+			province_id = 654 # Esgaroth
+		}
+		owner = {
+			NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+			NOT = { has_country_flag = DAL_guild_supported_by_realm }
+			OR = {
+				has_country_modifier = DAL_merchant_power_10
+				has_country_modifier = DAL_merchant_power_9
+				has_country_modifier = DAL_merchant_power_8
+				has_country_modifier = DAL_merchant_power_7
+				has_country_modifier = DAL_merchant_power_6
+				has_country_modifier = DAL_merchant_power_5
+				has_country_modifier = DAL_merchant_power_4
+				has_country_modifier = DAL_merchant_power_3
+				has_country_modifier = DAL_merchant_power_2
+				has_country_modifier = DAL_merchant_power_1
+				has_country_modifier = DAL_merchant_guild_balanced
+				has_country_modifier = DAL_guild_power_1
+				has_country_modifier = DAL_guild_power_2
+				has_country_modifier = DAL_guild_power_3
+				has_country_modifier = DAL_guild_power_4
+				has_country_modifier = DAL_guild_power_5
+				has_country_modifier = DAL_guild_power_6
+				has_country_modifier = DAL_guild_power_7
+				has_country_modifier = DAL_guild_power_8
+				has_country_modifier = DAL_guild_power_9
+				has_country_modifier = DAL_guild_power_10
+			}
+		}
+	}
+	
+	option = {
+		name = "Agree with the Merchants"
+		
+		owner = {
+			change_variable = { which = DAL_merchants_fishers_bop value = -1 } # Shift 1 in favor of the Merchants
+			DAL_merchant_guild_bop_shift_merchants_1_loc = {}
+		}
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "Agree with the Fisher's Guild"
+		
+		owner = {
+			change_variable = { which = DAL_merchants_fishers_bop value = 1 } # Shift 1 in favor of the Fisher's Guild
+			DAL_merchant_guild_bop_shift_guild_1_loc = {}
+		}
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "Take no sides"
+		
+		owner = {
+			random_list = {
+				1 = {
+					change_variable = { which = DAL_merchants_fishers_bop value = -1 }  # Shift 1 in favor of the Merchants
+					DAL_merchant_guild_bop_shift_merchants_1_loc = {}
+				}
+				1 = {
+					change_variable = { which = DAL_merchants_fishers_bop value = 1 } # Shift 1 in favor of the Fisher's Guild
+					DAL_merchant_guild_bop_shift_guild_1_loc = {}
+					}
+			}
+			plurality = 1
+		}
+	}
+}

@@ -10,10 +10,69 @@
 #	Royal Family
 #	Bard I Flavor
 #	Bain I Flavor
+#	Fishers Guild vs Merchants
 #	Esgaroth Trade }
 
 # Starting Decision (Unseen) + Country Info (Seen)
 political_decisions = {
+	test_decision = {
+		potential = { ai = no }
+		allow = {
+			AND = {
+				has_country_flag = reforms_cache_had_granted_exclusive_tr
+				exclusive_trading_rights = limited_exclusive_tr
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_limited_exclusive_tr
+				exclusive_trading_rights = abolished_exclusive_tr
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_privileged_state_supplies
+				state_supplies_monopoly = allowed_state_supplies
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_allowed_state_supplies
+				state_supplies_monopoly = restricted_state_supplies
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_independent_cities
+				city_jurisdiction = chartered_cities
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_chartered_cities
+				city_jurisdiction = territorial_cities
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_no_pensions
+				pensions = trinket_pensions
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_trinket_pensions
+				pensions = low_pensions
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_low_pensions
+				pensions = acceptable_pensions
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_acceptable_pensions
+				pensions = good_pensions
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_hereditary
+				apprenticeship = appointment
+			}
+			AND = {
+				has_country_flag = reforms_cache_had_appointment
+				apprenticeship = guild_school
+			}
+		}
+		effect = {}
+	}
 	# Audax Validator "." Ignore_1004
 	DAL_start_decision = {
 		potential = {
@@ -67,7 +126,7 @@ political_decisions = {
 			
 			# Setting up Merchants vs Guild
 			add_country_modifier = { name = DAL_merchant_power_4 duration = -1 }
-			FOR = { set_variable = { which = DAL_merchants_fishers_bop value = -4 } } # 4 in favor of the Merchants
+			set_variable = { which = DAL_merchants_fishers_bop value = -4 } # 4 in favor of the Merchants
 			
 			# Setting up Leaders (-1 = unborn)
 			FOR = { set_variable = { which = bard_i_age value = 55 } }
@@ -78,8 +137,8 @@ political_decisions = {
 			FOR = { country_event = { id = 33000 days = 152 } } # June 1
 			FOR = { country_event = { id = 33001 days = 182 } } # June 1
 			
-			# Start Flavor Cleanup event loop
-			FOR = { country_event = 99001 }
+			# Start Flavor Cleanup event loop -- not starting it immediately to time reform flags correctly
+			FOR = { country_event = { id = 99001 days = 3 } }
 			
 			# Firing the fluff events -- order reversed so the realm event gets overlayed on top of the leader event
 			country_event = { id = 30032 days = 3 } # Leader Description
@@ -947,6 +1006,9 @@ political_decisions = {
 		effect = {
 			treasury = -50000
 			652 = { add_province_modifier = { name = wonder_of_the_north duration = -1 } }
+			
+			change_variable = { which = DAL_merchants_fishers_bop value = -1 } # 1 in favor of the Merchants
+			DAL_merchant_guild_bop_shift_merchants_1_loc = {}
 		}
 	}
 }
@@ -1112,14 +1174,22 @@ political_decisions = {
 			
 			random_owned = {
 				limit = {
-					owner = { city_jurisdiction = independent_cities }
+					owner = {
+						city_jurisdiction = independent_cities
+						NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+						NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					}
 				}
 				owner = { social_reform = chartered_cities }
 			}
 			
 			random_owned = {
 				limit = {
-					owner = { pensions = no_pensions }
+					owner = { 
+						pensions = no_pensions
+						NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+						NOT = { has_country_flag = DAL_guild_supported_by_realm }
+					}
 				}
 				owner = { social_reform = trinket_pensions }
 			}
@@ -1175,6 +1245,231 @@ political_decisions = {
 			DAL_bain_i_only_loc = { }
 			
 			set_global_flag = DAL_girion_bainson_sent_to_austriborg
+		}
+	}
+}
+
+# Fishers Guild vs Merchants
+political_decisions = {
+	DAL_support_merchants = {
+		picture = "Barding Realm/merchants"
+		potential = {
+			tag = DAL
+			NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+			NOT = { has_country_flag = DAL_guild_supported_by_realm }
+		}
+		
+		allow = {
+			OR = {
+				has_country_modifier = DAL_merchant_power_8
+				has_country_modifier = DAL_merchant_power_9
+				has_country_modifier = DAL_merchant_power_10
+			}
+		}
+		
+		effect = {
+			remove_country_modifier = DAL_guild_power_10
+			remove_country_modifier = DAL_guild_power_9
+			remove_country_modifier = DAL_guild_power_8
+			remove_country_modifier = DAL_guild_power_7
+			remove_country_modifier = DAL_guild_power_6
+			remove_country_modifier = DAL_guild_power_5
+			remove_country_modifier = DAL_guild_power_4
+			remove_country_modifier = DAL_guild_power_3
+			remove_country_modifier = DAL_guild_power_2
+			remove_country_modifier = DAL_guild_power_1
+			remove_country_modifier = DAL_merchant_guild_balanced
+			remove_country_modifier = DAL_merchant_power_1
+			remove_country_modifier = DAL_merchant_power_2
+			remove_country_modifier = DAL_merchant_power_3
+			remove_country_modifier = DAL_merchant_power_4
+			remove_country_modifier = DAL_merchant_power_5
+			remove_country_modifier = DAL_merchant_power_6
+			remove_country_modifier = DAL_merchant_power_7
+			remove_country_modifier = DAL_merchant_power_8
+			remove_country_modifier = DAL_merchant_power_9
+			
+			set_variable = { which = DAL_merchants_fishers_bop value = -10 } # 10 in favor of the Merchants
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { has_country_modifier = DAL_merchant_power_10 } }
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_10 duration = -1 } }
+			}
+			
+			any_pop = {
+				limit = {
+					strata = poor
+				}
+				militancy = 6
+			}
+			
+			any_pop = {
+				limit = {
+					strata = middle
+				}
+				militancy = 3
+			}
+			
+			any_pop = {
+				limit = {
+					strata = rich
+				}
+				militancy = -10
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { exclusive_trading_rights = granted_exclusive_tr } }
+				}
+				owner = { social_reform = granted_exclusive_tr }
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { state_supplies_monopoly = privileged_state_supplies } }
+				}
+				owner = { social_reform = privileged_state_supplies }
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { city_jurisdiction = independent_cities } }
+				}
+				owner = { social_reform = independent_cities }
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { pensions = no_pensions } }
+				}
+				owner = { social_reform = no_pensions }
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { apprenticeship = hereditary } }
+				}
+				owner = { social_reform = hereditary }
+			}
+			
+			set_country_flag = DAL_merchant_supported_by_realm
+			
+			plurality = -2
+			
+			DAL_supported_merchants_loc = {}
+		}
+	}
+	
+	DAL_support_fishers_guild = {
+		picture = "Barding Realm/fishers_guild"
+		potential = {
+			tag = DAL
+			NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+			NOT = { has_country_flag = DAL_guild_supported_by_realm }
+		}
+		
+		allow = {
+			OR = {
+				has_country_modifier = DAL_guild_power_8
+				has_country_modifier = DAL_guild_power_9
+				has_country_modifier = DAL_guild_power_10
+			}
+		}
+		
+		effect = {
+			remove_country_modifier = DAL_merchant_power_10
+			remove_country_modifier = DAL_merchant_power_9
+			remove_country_modifier = DAL_merchant_power_8
+			remove_country_modifier = DAL_merchant_power_7
+			remove_country_modifier = DAL_merchant_power_6
+			remove_country_modifier = DAL_merchant_power_5
+			remove_country_modifier = DAL_merchant_power_4
+			remove_country_modifier = DAL_merchant_power_3
+			remove_country_modifier = DAL_merchant_power_2
+			remove_country_modifier = DAL_merchant_power_1
+			remove_country_modifier = DAL_merchant_guild_balanced
+			remove_country_modifier = DAL_guild_power_1
+			remove_country_modifier = DAL_guild_power_2
+			remove_country_modifier = DAL_guild_power_3
+			remove_country_modifier = DAL_guild_power_4
+			remove_country_modifier = DAL_guild_power_5
+			remove_country_modifier = DAL_guild_power_6
+			remove_country_modifier = DAL_guild_power_7
+			remove_country_modifier = DAL_guild_power_8
+			remove_country_modifier = DAL_guild_power_9
+			
+			set_variable = { which = DAL_merchants_fishers_bop value = 10 } # 10 in favor of the Fishers Guild
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { has_country_modifier = DAL_guild_power_10 } }
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_10 duration = -1 } }
+			}
+			
+			any_pop = {
+				limit = {
+					strata = poor
+				}
+				militancy = -10
+			}
+			
+			any_pop = {
+				limit = {
+					strata = middle
+				}
+				militancy = -5
+			}
+			
+			any_pop = {
+				limit = {
+					strata = rich
+				}
+				militancy = 6
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { exclusive_trading_rights = abolished_exclusive_tr } }
+				}
+				owner = { social_reform = abolished_exclusive_tr }
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { state_supplies_monopoly = restricted_state_supplies } }
+				}
+				owner = { social_reform = restricted_state_supplies }
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { city_jurisdiction = royal_cities } }
+				}
+				owner = { social_reform = royal_cities }
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { pensions = good_pensions } }
+				}
+				owner = { social_reform = good_pensions }
+			}
+			
+			random_owned = {
+				limit = {
+					NOT = { owner = { apprenticeship = guild_school } }
+				}
+				owner = { social_reform = guild_school }
+			}
+			
+			set_country_flag = DAL_guild_supported_by_realm
+			
+			plurality = -2
+			
+			DAL_supported_guild_loc = {}
 		}
 	}
 }
