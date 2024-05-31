@@ -115,76 +115,75 @@ guiTypes = {
 		}
 	}
 		
-		### MESSAGE ICONS
-		windowType = {
-			name = "message_icons"
-			backGround=""
-			position = { x=-284 y=-274 }
-			size = { x=256 y= 48 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder= ""
-			verticalBorder= ""
-			fullScreen = no
-			Orientation = "LOWER_RIGHT"
+	### MESSAGE ICONS
+	windowType = {
+		name = "message_icons"
+		backGround=""
+		position = { x=-284 y=-274 }
+		size = { x=256 y= 48 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "LOWER_RIGHT"
 	
-			OverlappingElementsBoxType = {
-				name = "cat_combat"
-				position = { x = -140 y = 0 }
-				size = { x = 380 y = 32 }
-				Orientation = "UPPER_LEFT"
-				format = right
-				spacing = 1.0
-			}
-			
-			OverlappingElementsBoxType = {
-				name = "cat_diplomacy"
-				position = { x = -140 y = 21 }
-				size = { x = 380 y = 32 }
-				Orientation = "UPPER_LEFT"
-				format = right
-				spacing = 1.0
-			}
-			
-			OverlappingElementsBoxType = {
-				name = "cat_units"
-				position = { x = -140 y = 42 }
-				size = { x=380 y= 32 }
-				Orientation = "UPPER_LEFT"
-				format = right
-				spacing = 1.0
-			}
-			
-			OverlappingElementsBoxType = {
-				name = "cat_province"
-				position = { x = -140 y = 63 }
-				size = { x=380 y= 32 }
-				Orientation = "UPPER_LEFT"
-				format = right
-				spacing = 1.0
-			}
-			
-			OverlappingElementsBoxType = {
-				name = "cat_events"
-				position = { x = -140 y = 84 }
-				size = { x=380 y= 32 }
-				Orientation = "UPPER_LEFT"
-				format = right
-				spacing = 1.0
-			}
-			
-			OverlappingElementsBoxType = {
-				name = "cat_other"
-				position = { x = -140 y = 105 }
-				size = { x=380 y= 32 }
-				Orientation = "UPPER_LEFT"
-				format = right
-				spacing = 1.0
-			}
+		OverlappingElementsBoxType = {
+			name = "cat_combat"
+			position = { x = -140 y = 0 }
+			size = { x = 380 y = 32 }
+			Orientation = "UPPER_LEFT"
+			format = right
+			spacing = 1.0
 		}
-		##########
-		
-		windowType = {
+			
+		OverlappingElementsBoxType = {
+			name = "cat_diplomacy"
+			position = { x = -140 y = 21 }
+			size = { x = 380 y = 32 }
+			Orientation = "UPPER_LEFT"
+			format = right
+			spacing = 1.0
+		}
+			
+		OverlappingElementsBoxType = {
+			name = "cat_units"
+			position = { x = -140 y = 42 }
+			size = { x=380 y= 32 }
+			Orientation = "UPPER_LEFT"
+			format = right
+			spacing = 1.0
+		}
+			
+		OverlappingElementsBoxType = {
+			name = "cat_province"
+			position = { x = -140 y = 63 }
+			size = { x=380 y= 32 }
+			Orientation = "UPPER_LEFT"
+			format = right
+			spacing = 1.0
+		}
+			
+		OverlappingElementsBoxType = {
+			name = "cat_events"
+			position = { x = -140 y = 84 }
+			size = { x=380 y= 32 }
+			Orientation = "UPPER_LEFT"
+			format = right
+			spacing = 1.0
+		}
+			
+		OverlappingElementsBoxType = {
+			name = "cat_other"
+			position = { x = -140 y = 105 }
+			size = { x=380 y= 32 }
+			Orientation = "UPPER_LEFT"
+			format = right
+			spacing = 1.0
+		}
+	}
+	
+	windowType = {
 		name = "messageicon_entry_window"
 		backGround=""
 		position = { x=20 y=0 }
@@ -196,15 +195,15 @@ guiTypes = {
 		fullScreen = no
 
 		guiButtonType = {
-				name = "messageicon_button"
-				position = { x = 14 y = -21 }
-				quadTextureSprite ="GFX_mailbox_strip"
-				tooltip = ""
-				tooltipText =""
-				delayedTooltipText = ""
-				buttonText = ""
-				buttonFont = ""
-			}
+			name = "messageicon_button"
+			position = { x = 14 y = -21 }
+			quadTextureSprite ="GFX_mailbox_strip"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = ""
+		}
 			
 		instantTextBoxType = {
 			name = "flag"
@@ -233,7 +232,7 @@ guiTypes = {
 		position = { x = 476 y = 110 }
 	}
 
-##### MENU
+	##### MENU
 
 	windowType = {
 		name = "menu"
@@ -355,10 +354,10 @@ guiTypes = {
 			fullscreen=no
 			
 			iconType = {
-			name ="menu_savebg"
-			spriteType = "GFX_menu_savebg"
-			position = { x= 129 y = 126 }
-			Orientation = "UPPER_LEFT"
+				name ="menu_savebg"
+				spriteType = "GFX_menu_savebg"
+				position = { x= 129 y = 126 }
+				Orientation = "UPPER_LEFT"
 			}
 			
 			listboxType = {
@@ -408,7 +407,7 @@ guiTypes = {
 				shortcut = "ESCAPE"
 			}
 
-			instantTextBoxType={
+			instantTextBoxType = {
 				position = {x = 152 y = 350 }
 				name = "filename_label"
 				font = "Arial12"
@@ -430,11 +429,9 @@ guiTypes = {
 				text = ""
 				orientation = "UPPER_LEFT"
 			}
-			
-			
-			#### MESSAGE SETTINGS
-			
 		}
+
+		#### MESSAGE SETTINGS
 		
 		windowType = {
 			name ="menu_message_settings"
@@ -455,7 +452,6 @@ guiTypes = {
 				position = { x= -8 y = 23 }
 				Orientation = "UPPER_LEFT"
 			}
-
 
 			instantTextBoxType={
 				position = {x = 186 y = 41 }
@@ -730,11 +726,11 @@ guiTypes = {
 		####
 
 		iconType = {
-				name ="message_bg"
-				spriteType = "GFX_messagesettings_listbutton"
-				position = { x= 0 y = -20 }
-				Orientation = "UPPER_LEFT"
-			}
+			name ="message_bg"
+			spriteType = "GFX_messagesettings_listbutton"
+			position = { x= 0 y = -20 }
+			Orientation = "UPPER_LEFT"
+		}
 		
 		instantTextBoxType={
 			position = {x = 6 y = -17 }
@@ -960,16 +956,16 @@ guiTypes = {
 		}
 	}
 
-		listBoxType = {
-			name ="chat_list"
-			background = ""
-			position = { x=5 y=115 }
-			orientation = "UPPER_LEFT"
-			priority = 100
-			size = { x=265 y=246 }
-			borderSize = {x = 32 y = 32}
-			allwaystransparent = yes
-		}
+	listBoxType = {
+		name ="chat_list"
+		background = ""
+		position = { x=5 y=115 }
+		orientation = "UPPER_LEFT"
+		priority = 100
+		size = { x=265 y=246 }
+		borderSize = {x = 32 y = 32}
+		allwaystransparent = yes
+	}
 	
 	### MENUBAR
 	
@@ -1086,7 +1082,7 @@ guiTypes = {
 			Orientation = "LOWER_RIGHT"
 		}
 
-##### CHAT WINDOW
+		##### CHAT WINDOW
 		
 		
 		windowType = {
@@ -1181,7 +1177,7 @@ guiTypes = {
 				position = { x = 80 y = 95 }
 				name = "chat_message"
 				#textureFile = "gfx\\interface\\small_tiles_dialog.dds"
-				textureFile = "" 
+				textureFile = ""
 				font = "vic_18"
 				borderSize = { x = 8 y = 8 }
 				size = { x=599 y=40 }
@@ -1190,19 +1186,19 @@ guiTypes = {
 			}
 		}
 	
-	iconType = {
-		name ="minimap_bg"
-		spriteType = "GFX_minimap_bg"
-		position = { x= -374 y = -172 }
-		Orientation = "LOWER_RIGHT"
-	}
+		iconType = {
+			name ="minimap_bg"
+			spriteType = "GFX_minimap_bg"
+			position = { x= -374 y = -172 }
+			Orientation = "LOWER_RIGHT"
+		}
 
-	iconType = {
-		name ="menubar_bg"
-		spriteType = "GFX_menubar_bg"
-		position = { x= -64 y = -200 }
-		Orientation = "LOWER_RIGHT"
-	}
+		iconType = {
+			name ="menubar_bg"
+			spriteType = "GFX_menubar_bg"
+			position = { x= -64 y = -200 }
+			Orientation = "LOWER_RIGHT"
+		}
 	
 		### MAILBOX BG and BUTTONS
 		iconType = {
@@ -1261,7 +1257,7 @@ guiTypes = {
 			clicksound = click
 		}
 		
-	########### 
+		###########
 	
 		guiButtonType = {
 			name = "menubar_plans_toggle"
@@ -1520,11 +1516,10 @@ guiTypes = {
 			Orientation = "LOWER_RIGHT"
 			clicksound = click
 		}
-}
+	}
 
+	#### CHAT PLAYER STUFF
 
-   #### CHAT PLAYER STUFF
-    
 	positionType = {
 		name = "chat_shield_start"
 		position = { x = 90 y = 30 }
@@ -1654,7 +1649,7 @@ guiTypes = {
 			font = "vic_title"
 			borderSize = {x = 4 y = 4}
 			text = "ENDGAME_HEADLINE"
-			maxWidth = 512 
+			maxWidth = 512
 			maxHeight = 50
 			format = centre
 		}
@@ -1672,7 +1667,7 @@ guiTypes = {
 		}
 
 		guiButtonType = {
-			name = "quit_button" 
+			name = "quit_button"
 			position = { x=180 y =285}
 			quadTextureSprite ="GFX_frontend_button_236"
 			tooltip = ""
