@@ -13,27 +13,21 @@ political_decisions = {
 		picture = "wild_goblins"
 		potential = {
 			any_owned_province = {
-				OR = {
-					has_province_modifier = tribal_outpost
-				}
+				has_province_modifier = tribal_outpost
 				NOT = { has_province_modifier = military_hunting_tribals }
 				NOT = { has_province_modifier = military_hunting_tribals_slavery }
 			}
 		}
 		
 		allow = {
-			OR = {
-				AND = {
-					any_owned_province = {
-						has_province_modifier = tribal_outpost
-						has_building = fort
-						NOT = { has_province_modifier = military_hunting_tribals }
-						NOT = { has_province_modifier = military_hunting_tribals_slavery }
-					}
-					army_tactics_1 = 1
-					money = 30000
-				}
+			any_owned_province = {
+				has_province_modifier = tribal_outpost
+				has_building = fort
+				NOT = { has_province_modifier = military_hunting_tribals }
+				NOT = { has_province_modifier = military_hunting_tribals_slavery }
 			}
+			army_tactics_1 = 1
+			money = 30000
 		}
 		
 		effect = {
@@ -60,27 +54,21 @@ political_decisions = {
 				slavery = non_accepted_slavery
 			}
 			any_owned_province = {
-				OR = {
-					has_province_modifier = tribal_outpost
-				}
+				has_province_modifier = tribal_outpost
 				NOT = { has_province_modifier = military_hunting_tribals }
 				NOT = { has_province_modifier = military_hunting_tribals_slavery }
 			}
 		}
 		
 		allow = {
-			OR = {
-				AND = {
-					any_owned_province = {
-						has_province_modifier = tribal_outpost
-						has_building = fort
-						NOT = { has_province_modifier = military_hunting_tribals }
-						NOT = { has_province_modifier = military_hunting_tribals_slavery }
-					}
-					army_tactics_1 = 1
-					money = 30000
-				}
+			any_owned_province = {
+				has_province_modifier = tribal_outpost
+				has_building = fort
+				NOT = { has_province_modifier = military_hunting_tribals }
+				NOT = { has_province_modifier = military_hunting_tribals_slavery }
 			}
+			army_tactics_1 = 1
+			money = 30000
 		}
 		
 		effect = {

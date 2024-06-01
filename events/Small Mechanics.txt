@@ -14,9 +14,7 @@ province_event = {
 	
 	trigger = {
 		NOT = { owner = { has_country_modifier = observer_mode } }
-		OR = {
-			has_province_modifier = tribal_outpost
-		}
+		has_province_modifier = tribal_outpost
 		any_neighbor_province = {
 			owner = { tag = THIS }
 		}
