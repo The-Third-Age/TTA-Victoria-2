@@ -609,19 +609,13 @@ country_event = {
 		
 		# Merchants vs Fishers Guild {
 		# Updating the variable based upon the previous reform
-		
-		# TODO: Split out each one of these change variables into one random_country block -- if multiple triggers in the OR fire (i.e., multiple reforms changing at once, the variable will only be updated once for that level, rather than twice
 		random_country = {
 			limit = {
 				tag = DAL
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
-				OR = {
-					AND = {
-						has_country_flag = reforms_cache_had_good_pensions
-						pensions = no_pensions
-					}
-				}
+				has_country_flag = reforms_cache_had_good_pensions
+				pensions = no_pensions
 			}
 			change_variable = { which = DAL_merchants_fishers_bop value = -8 } # Shift 8 in favor of the Merchants
 		}
@@ -631,20 +625,8 @@ country_event = {
 				tag = DAL
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
-				OR = {
-					AND = {
-						has_country_flag = reforms_cache_had_royal_cities
-						city_jurisdiction = independent_cities
-					}
-					AND = {
-						has_country_flag = reforms_cache_had_acceptable_pensions
-						pensions = no_pensions
-					}
-					AND = {
-						has_country_flag = reforms_cache_had_good_pensions
-						pensions = trinket_pensions
-					}
-				}
+				has_country_flag = reforms_cache_had_royal_cities
+				city_jurisdiction = independent_cities
 			}
 			change_variable = { which = DAL_merchants_fishers_bop value = -6 } # Shift 6 in favor of the Merchants
 		}
@@ -654,15 +636,29 @@ country_event = {
 				tag = DAL
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				has_country_flag = reforms_cache_had_abolished_exclusive_tr
+				exclusive_trading_rights = granted_exclusive_tr
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -4 } # Shift 4 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				has_country_flag = reforms_cache_had_restricted_state_supplies
+				state_supplies_monopoly = privileged_state_supplies
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -4 } # Shift 4 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
 				OR = {
-					AND = {
-						has_country_flag = reforms_cache_had_abolished_exclusive_tr
-						exclusive_trading_rights = granted_exclusive_tr
-					}
-					AND = {
-						has_country_flag = reforms_cache_had_restricted_state_supplies
-						state_supplies_monopoly = privileged_state_supplies
-					}
 					AND = {
 						has_country_flag = reforms_cache_had_territorial_cities
 						city_jurisdiction = independent_cities
@@ -671,6 +667,17 @@ country_event = {
 						has_country_flag = reforms_cache_had_royal_cities
 						city_jurisdiction = chartered_cities
 					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -4 } # Shift 4 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_low_pensions
 						pensions = no_pensions
@@ -683,11 +690,18 @@ country_event = {
 						has_country_flag = reforms_cache_had_good_pensions
 						pensions = low_pensions
 					}
-					AND = {
-						has_country_flag = reforms_cache_had_guild_school
-						apprenticeship = hereditary
-					}
 				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -4 } # Shift 4 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				has_country_flag = reforms_cache_had_guild_school
+				apprenticeship = hereditary
 			}
 			change_variable = { which = DAL_merchants_fishers_bop value = -4 } # Shift 4 in favor of the Merchants
 		}
@@ -706,6 +720,17 @@ country_event = {
 						has_country_flag = reforms_cache_had_abolished_exclusive_tr
 						exclusive_trading_rights = limited_exclusive_tr
 					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -2 } # Shift 2 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_allowed_state_supplies
 						state_supplies_monopoly = privileged_state_supplies
@@ -714,6 +739,17 @@ country_event = {
 						has_country_flag = reforms_cache_had_restricted_state_supplies
 						state_supplies_monopoly = allowed_state_supplies
 					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -2 } # Shift 2 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_chartered_cities
 						city_jurisdiction = independent_cities
@@ -726,6 +762,17 @@ country_event = {
 						has_country_flag = reforms_cache_had_royal_cities
 						city_jurisdiction = territorial_cities
 					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -2 } # Shift 2 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_trinket_pensions
 						pensions = no_pensions
@@ -742,6 +789,17 @@ country_event = {
 						has_country_flag = reforms_cache_had_good_pensions
 						pensions = acceptable_pensions
 					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = -2 } # Shift 2 in favor of the Merchants
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_appointment
 						apprenticeship = hereditary
@@ -769,6 +827,17 @@ country_event = {
 						has_country_flag = reforms_cache_had_limited_exclusive_tr
 						exclusive_trading_rights = abolished_exclusive_tr
 					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 2 } # Shift 2 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_privileged_state_supplies
 						state_supplies_monopoly = allowed_state_supplies
@@ -777,6 +846,17 @@ country_event = {
 						has_country_flag = reforms_cache_had_allowed_state_supplies
 						state_supplies_monopoly = restricted_state_supplies
 					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 2 } # Shift 2 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_independent_cities
 						city_jurisdiction = chartered_cities
@@ -789,6 +869,17 @@ country_event = {
 						has_country_flag = reforms_cache_had_territorial_cities
 						city_jurisdiction = royal_cities
 					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 2 } # Shift 2 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_no_pensions
 						pensions = trinket_pensions
@@ -805,6 +896,17 @@ country_event = {
 						has_country_flag = reforms_cache_had_acceptable_pensions
 						pensions = good_pensions
 					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 2 } # Shift 2 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_hereditary
 						apprenticeship = appointment
@@ -823,15 +925,29 @@ country_event = {
 				tag = DAL
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				has_country_flag = reforms_cache_had_granted_exclusive_tr
+				exclusive_trading_rights = abolished_exclusive_tr
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 4 } # Shift 4 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				has_country_flag = reforms_cache_had_privileged_state_supplies
+				state_supplies_monopoly = restricted_state_supplies
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 4 } # Shift 4 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
 				OR = {
-					AND = {
-						has_country_flag = reforms_cache_had_granted_exclusive_tr
-						exclusive_trading_rights = abolished_exclusive_tr
-					}
-					AND = {
-						has_country_flag = reforms_cache_had_privileged_state_supplies
-						state_supplies_monopoly = restricted_state_supplies
-					}
 					AND = {
 						has_country_flag = reforms_cache_had_independent_cities
 						city_jurisdiction = territorial_cities
@@ -839,22 +955,6 @@ country_event = {
 					AND = {
 						has_country_flag = reforms_cache_had_chartered_cities
 						city_jurisdiction = royal_cities
-					}
-					AND = {
-						has_country_flag = reforms_cache_had_no_pensions
-						pensions = low_pensions
-					}
-					AND = {
-						has_country_flag = reforms_cache_had_trinket_pensions
-						pensions = acceptable_pensions
-					}
-					AND = {
-						has_country_flag = reforms_cache_had_low_pensions
-						pensions = good_pensions
-					}
-					AND = {
-						has_country_flag = reforms_cache_had_hereditary
-						apprenticeship = guild_school
 					}
 				}
 			}
@@ -868,9 +968,50 @@ country_event = {
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
 				OR = {
 					AND = {
-						has_country_flag = reforms_cache_had_independent_cities
-						city_jurisdiction = royal_cities
+						has_country_flag = reforms_cache_had_no_pensions
+						pensions = low_pensions
 					}
+					AND = {
+						has_country_flag = reforms_cache_had_trinket_pensions
+						pensions = acceptable_pensions
+					}
+					AND = {
+						has_country_flag = reforms_cache_had_low_pensions
+						pensions = good_pensions
+					}
+				}
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 4 } # Shift 4 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				has_country_flag = reforms_cache_had_hereditary
+				apprenticeship = guild_school
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 4 } # Shift 4 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				has_country_flag = reforms_cache_had_independent_cities
+				city_jurisdiction = royal_cities
+			}
+			change_variable = { which = DAL_merchants_fishers_bop value = 6 } # Shift 6 in favor of the Fisher's Guild
+		}
+		
+		random_country = {
+			limit = {
+				tag = DAL
+				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
+				NOT = { has_country_flag = DAL_guild_supported_by_realm }
+				OR = {
 					AND = {
 						has_country_flag = reforms_cache_had_no_pensions
 						pensions = acceptable_pensions
@@ -889,12 +1030,8 @@ country_event = {
 				tag = DAL
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
-				OR = {
-					AND = {
-						has_country_flag = reforms_cache_had_no_pensions
-						pensions = good_pensions
-					}
-				}
+				has_country_flag = reforms_cache_had_no_pensions
+				pensions = good_pensions
 			}
 			change_variable = { which = DAL_merchants_fishers_bop value = 8 } # Shift 8 in favor of the Fisher's Guild
 		}
