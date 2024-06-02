@@ -10,7 +10,7 @@ guiTypes = {
 		verticalBorder = ""
 		fullScreen = no
 		orientation="UPPER_LEFT"
-	
+		
 		iconType = {
 			name = "topcolor_icon"
 			spriteType = "GFX_topcolor"
@@ -24,7 +24,6 @@ guiTypes = {
 		name = "folder_offset"
 		position = { x = 28 y = 55 }
 	}
-	
 	#position
 	positionType = {
 		name = "tech_group_offset"
@@ -97,7 +96,6 @@ guiTypes = {
 			maxWidth = 110
 			maxHeight = 20
 		}
-		
 		instantTextBoxType = {
 			name = "administration_type"
 			position = { x = 135 y = 30 }
@@ -127,7 +125,6 @@ guiTypes = {
 			maxWidth = 150
 			maxHeight = 20
 		}
-		
 		instantTextBoxType = {
 			name = "possible_inventions"
 			position = { x = 29 y = 345 }
@@ -153,7 +150,6 @@ guiTypes = {
 			maxHeight = 20
 			format = centre
 		}
-		
 		instantTextBoxType = {
 			name = "research_progress_category"
 			position = { x = 720 y = 39 }
@@ -171,7 +167,6 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			clicksound = click
 		}
-		
 		guiButtonType = {
 			name = "sort_by_name"
 			position = { x = 58 y = 366 }
@@ -181,7 +176,6 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			clicksound = click
 		}
-		
 		guiButtonType = {
 			name = "sort_by_percent"
 			position = { x = 260 y = 367 }
@@ -200,10 +194,10 @@ guiTypes = {
 			scrollbartype = "standardlistbox_slider"
 		}
 		
-		#########################
-		# SELECTED TECH WINDOW  #
-		#########################
-
+		##########################
+		## SELECTED TECH WINDOW ##
+		##########################
+		
 		windowType = {
 			name = "selected_tech_window"
 			backGround =""
@@ -215,7 +209,7 @@ guiTypes = {
 			verticalBorder = ""
 			fullScreen = no
 			orientation="UPPER_LEFT"
-
+			
 			# 165 x 223
 			iconType = {
 				name = "picture"
@@ -248,12 +242,14 @@ guiTypes = {
 				maxWidth = 408
 				maxHeight = 100
 			}
+			
 			iconType = {
 				name = "diff_icon"
 				spriteType = "GFX_topbar_researchpoints"
 				position = { x = 318 y = 17 }
 				Orientation = "UPPER_LEFT"
 			}
+			
 			instantTextBoxType = {
 				name = "diff_label"
 				position = { x = 340 y = 21 }
@@ -292,8 +288,7 @@ guiTypes = {
 				maxHeight = 20
 				format = left
 			}
-
-
+			
 			listboxType = {
 				name ="inventions"
 				position = { x = 443 y = 49 }
@@ -303,7 +298,7 @@ guiTypes = {
 				spacing = 2
 				scrollbartype = "standardlistbox_slider"
 			}
-
+			
 			guiButtonType = {
 				name = "start"
 				position = { x = 457 y = 244 }
@@ -316,9 +311,9 @@ guiTypes = {
 		}
 	}
 	
-	##########################
-	# FOLDER WINDOW          #
-	##########################
+	#########################
+	##### FOLDER WINDOW #####
+	#########################
 	
 	windowType = {
 		name = "folder_window"
@@ -338,7 +333,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			clicksound = click
 		}
-
+		
 		iconType = {
 			name = "folder_icon"
 			spriteType = "GFX_tech_fake_icons"
@@ -361,7 +356,6 @@ guiTypes = {
 			spriteType = "GFX_folder_progress"
 			position = { x = 16 y = 29 }
 		}
-		
 		iconType = {
 			name = "tech_folder_progress_overlay"
 			spriteType = "GFX_tech_folder_progress_overlay"
@@ -381,9 +375,9 @@ guiTypes = {
 	}
 	
 	##########################
-	# GROUP WINDOW           #
+	###### GROUP WINDOW ######
 	##########################
-		
+	
 	windowType = {
 		name = "tech_group"
 		backGround =""
@@ -408,9 +402,9 @@ guiTypes = {
 		}
 	}
 	
-	##########################
-	# TECH ENTRY           #
-	##########################
+	########################
+	###### TECH ENTRY ######
+	########################
 	
 	windowType = {
 		name = "tech_window"
@@ -442,10 +436,10 @@ guiTypes = {
 			fixedsize = yes
 		}
 	}
-
-	##########################
-	# INVENTION ENTRY       #
-	##########################
+	
+	###########################
+	##### INVENTION ENTRY #####
+	###########################
 	
 	windowType = {
 		name = "invention_window"
@@ -465,7 +459,6 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-		
 		iconType = {
 			name = "folder_icon"
 			spriteType = "GFX_tech_folder_strip"
@@ -482,7 +475,6 @@ guiTypes = {
 			maxHeight = 20
 			fixedsize = yes
 		}
-		
 		instantTextBoxType = {
 			name = "invention_percent"
 			position = { x = 212 y = 8 }
@@ -494,9 +486,9 @@ guiTypes = {
 		}
 	}
 	
-	##########################
-	# SELECTED TECH INVENTIONS  #
-	##########################
+	############################
+	# SELECTED TECH INVENTIONS #
+	############################
 	
 	windowType = {
 		name = "invention_icon_window"
@@ -542,7 +534,7 @@ guiTypes = {
 		verticalBorder = ""
 		fullScreen = no
 		orientation="UPPER_LEFT"
-
+		
 		iconType = {
 			name = "main_icon"
 			spriteType = "GFX_tech_folder_strip"
