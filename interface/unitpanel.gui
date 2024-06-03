@@ -9,7 +9,7 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
+		
 		iconType = {
 			name ="unitpanel_bg"
 			spriteType = "GFX_unit_toppanel_bg"
@@ -23,14 +23,14 @@ guiTypes = {
 			position = { x = 18 y = 32 }
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		iconType = {
 			name ="unit_activity"
 			spriteType = "GFX_unit_activity_strip"
 			position = { x= 26 y = 69 }
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		guiButtonType = {
 			name ="leader_button"
 			quadTextureSprite = "GFX_unit_leader_button"
@@ -50,13 +50,13 @@ guiTypes = {
 			fixedsize = yes
 			format = left
 		}
-
+		
 		guiButtonType = {
 				name = "unit_location_button"
 				position = { x = 51 y = 71 }
 				quadTextureSprite ="GFX_unit_location_button"
 		}
-
+		
 		instantTextBoxType = {
 			name = "unitlocation"
 			position = { x = 55 y = 70 }
@@ -69,7 +69,7 @@ guiTypes = {
 			fixedsize = yes
 			format = left
 		}
-
+		
 		instantTextBoxType = {
 			name = "unitstrength"
 			position = { x = 201 y = 54 }
@@ -129,14 +129,14 @@ guiTypes = {
 			position = { x = 235 y = 32 }
 			quadTextureSprite ="GFX_unit_disband"
 		}
-
+		
 		guiButtonType = {
 			name = "splitinhalf"
 			position = { x = 254 y = 32 }
 			quadTextureSprite ="GFX_unit_splitinhalf"
 			shortcut = "s"
 		}
-
+		
 		guiButtonType = {
 			name = "newunitbutton"
 			position = { x = 279 y = 32 }
@@ -149,7 +149,7 @@ guiTypes = {
 			position = { x = 303 y = 32 }
 			quadTextureSprite ="GFX_unit_close"
 		}
-
+		
 		guiButtonType = {
 			name = "only_unit_from_selection_button"
 			position = { x = 327 y = 41 }
@@ -190,7 +190,7 @@ guiTypes = {
 	}
 
 ### MULTI UNIT PANEL ###
-
+	
 	windowType = {
 		name = "multi_unitpanel"
 		backGround=""
@@ -201,14 +201,14 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
+		
 		iconType = {
 			name ="multiselect_bg"
 			spriteType = "GFX_unit_multiunit_bg"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		instantTextBoxType = {
 			name = "desc"
 			position = { x = 10 y = 6 }
@@ -219,7 +219,7 @@ guiTypes = {
 			maxWidth = 300
 			maxHeight = 32
 		}
-
+		
 		guiButtonType = {
 			name = "reorganizebutton"
 			position = { x = 245 y = 4 }
@@ -249,13 +249,13 @@ guiTypes = {
 			position = { x = 305 y = 4 }
 			quadTextureSprite ="GFX_unit_multiunit_close"
 		}
-
+		
 		guiButtonType = {
 			name = "disband_multiunit"
 			position = { x = 215 y = 4 }
 			quadTextureSprite ="GFX_unit_disband"
 		}
-
+		
 		scrollbarType = {
 			name = "multiunit_slider"
 			slider = "listboxSliderButton"
@@ -271,8 +271,7 @@ guiTypes = {
 			stepSize =1
 			startValue = 0
 			horizontal = 0
-
-
+			
 			guiButtonType = {
 				name = "listboxSliderButton"
 				quadTextureSprite = "slider_slider"
@@ -281,7 +280,7 @@ guiTypes = {
 				delayedTooltipText = ""
 				position = { x=0 y =0}
 			}
-
+			
 			guiButtonType = {
 				name = "listboxTrackButton"
 				quadTextureSprite = "slider_background"
@@ -290,7 +289,7 @@ guiTypes = {
 				tooltipText =""
 				delayedTooltipText = ""
 			}
-
+			
 			guiButtonType = {
 				parent = "listboxSliderButton"
 				name = "upButton"
@@ -309,7 +308,7 @@ guiTypes = {
 
 #######LEADER SELECTION############
 ################################
-
+	
 	windowType = {
 		name = "leader_selection_panel"
 		backGround=""
@@ -320,7 +319,7 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
+		
 		iconType = {
 			name ="select_leader_bg"
 			spriteType = "GFX_unit_leader_bg"
@@ -349,7 +348,7 @@ guiTypes = {
 			position = { x= 30 y = -54 }
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		instantTextBoxType = {
 			name = "selected_leader_name"
 			position = { x = 65 y = -40 }
@@ -400,7 +399,7 @@ guiTypes = {
 		#	format = left
 		#	spacing = 1.0
 		#}
-
+		
 		guiButtonType = {
 			name = "sort_prestige"
 			position = { x=10 y=-16}
@@ -424,7 +423,7 @@ guiTypes = {
 			buttonText = "NAME"
 			buttonFont = "vic_18_black"
 		}
-			
+		
 		guiButtonType = {
 			name = "sort_personality"
 			position = { x=320 y=-16}
@@ -432,7 +431,7 @@ guiTypes = {
 			buttonText = "UV_PERSONALITY_LABEL"
 			buttonFont = "vic_18_black"
 		}
-			
+		
 		guiButtonType = {
 			name = "sort_background"
 			position = { x=562 y=-16}
@@ -440,7 +439,7 @@ guiTypes = {
 			buttonText = "UV_BACKGROUND_LABEL"
 			buttonFont = "vic_18_black"
 		}
-
+		
 		guiButtonType = {
 			name = "back_button"
 			position = { x=487 y=375}
@@ -448,7 +447,7 @@ guiTypes = {
 			buttonText = "CLOSE"
 			buttonFont = "vic_18_black"
 		}
-
+		
 		guiButtonType = {
 			name = "noleader_button"
 			position = { x=174 y=375}
@@ -456,13 +455,13 @@ guiTypes = {
 			buttonText = "NO_LEADER"
 			buttonFont = "vic_18_black"
 		}
-			
+		
 		checkboxType = {
 			name = "auto_assign"
 			position = { x= 337 y = 383 }
 			quadTextureSprite ="GFX_checkbox_default"
 		}
-
+		
 		instantTextBoxType = {
 			name = "assign_label"
 			position = { x = 358 y = 385 }
@@ -474,7 +473,7 @@ guiTypes = {
 			maxHeight = 32
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		listboxType = {
 			name ="leaderlist"
 			position = { x = 4 y = 10 }
@@ -500,9 +499,9 @@ guiTypes = {
 		#	fixedsize = yes
 		#}
 	}
-
+	
 	######Leader  entry
-
+	
 	windowType = {
 		name = "leader_entry"
 		backGround=""
@@ -513,13 +512,13 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
+		
 		guiButtonType = {
 			name = "leader_button"
 			position = { x = 6 y = 3 }
 			quadTextureSprite ="GFX_unit_select_leader"
 		}
-
+		
 		iconType = {
 			name ="prestige_bar_frame"
 			spriteType = "GFX_prestige_bar_frame"
@@ -554,7 +553,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			fixedsize = yes
 		}
-			
+		
 		instantTextBoxType = {
 			name = "unitleader_personality"
 			position = { x = 322 y = 14 }
@@ -583,7 +582,7 @@ guiTypes = {
 			fixedsize = yes
 		}
 	}
-	
+
 #################################################################################
 # Trait entry
 #################################################################################
@@ -597,7 +596,7 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
+		
 		iconType = {
 			name ="trait_icon"
 			spriteType = "GFX_unit_supplies_icon"
@@ -609,7 +608,6 @@ guiTypes = {
 ##############################
 ######## REORG WINDOW ########
 ##############################
-
 	
 	windowType = {
 		name = "reorg_window"
@@ -622,14 +620,14 @@ guiTypes = {
 		verticalBorder= ""
 		fullScreen = no
 		Orientation = "UPPER_LEFT"
-
+		
 		iconType = {
 			name ="reorg_bg"
 			spriteType = "GFX_unit_reorg_bg"
 			position = { x= -95  y = -2 }
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		instantTextBoxType = {
 			name = "reorg_label"
 			position = { x = -5 y =12 }
@@ -642,7 +640,6 @@ guiTypes = {
 			maxHeight = 24
 			Orientation = "UPPER_LEFT"
 		}
-
 		instantTextBoxType = {
 			name = "unitname_1"
 			position = { x = 25 y =47 }
@@ -656,7 +653,6 @@ guiTypes = {
 			maxHeight = 24
 			Orientation = "UPPER_LEFT"
 		}
-
 		instantTextBoxType = {
 			name = "unitname_2"
 			position = { x = 277 y =47 }
@@ -670,7 +666,7 @@ guiTypes = {
 			maxHeight = 24
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		windowType = {
 			name = "cell_window_left"
 			backGround=""
@@ -683,7 +679,6 @@ guiTypes = {
 			fullScreen = no
 			Orientation = "UPPER_LEFT"
 		}
-		
 		windowType = {
 			name = "cell_window_right"
 			backGround=""
@@ -708,7 +703,6 @@ guiTypes = {
 			buttonFont = "vic_18_black"
 			Orientation = "CENTER"
 		}
-		
 		guiButtonType = {
 			name = "closebutton"
 			position = { x=-37 y=195}
@@ -721,7 +715,7 @@ guiTypes = {
 			Orientation = "CENTER"
 			clicksound = close_window
 		}
-			
+		
 		listboxType = {
 			name ="left_list"
 			position = { x = -92 y = 66 }
@@ -732,7 +726,6 @@ guiTypes = {
 			#scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
 		}
-
 		listboxType = {
 			name ="right_list"
 			position = { x = 271 y = 66 }
@@ -759,7 +752,7 @@ guiTypes = {
 			stepSize =1
 			startValue = 0
 			horizontal = 0
-
+			
 			guiButtonType = {
 				name = "listboxSliderButton"
 				quadTextureSprite = "slider_slider"
@@ -789,7 +782,7 @@ guiTypes = {
 				position = { x=0 y =120}
 			}
 		}
-
+		
 		scrollbarType = {
 			name = "external_scroll_slider_right"
 			slider = "listboxSliderButton"
@@ -805,7 +798,7 @@ guiTypes = {
 			stepSize =1
 			startValue = 0
 			horizontal = 0
-
+			
 			guiButtonType = {
 				name = "listboxSliderButton"
 				quadTextureSprite = "slider_slider"
@@ -837,8 +830,8 @@ guiTypes = {
 		}
 	}
 	
-	#####Reorg entry   LEFT
-
+	#####Reorg entry LEFT
+	
 	windowType = {
 		name = "reorg_entry"
 		backGround=""
@@ -849,7 +842,7 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
+		
 		iconType = {
 			name ="band_reorg_regiment"
 			spriteType = "GFX_unit_entry_bg"
@@ -862,18 +855,17 @@ guiTypes = {
 			position = { x= 7 y = 1 }
 			Orientation = "UPPER_LEFT"
 		}
-
 		iconType = {
 			name ="unit_icon"
 			spriteType = "GFX_unit_strip"
 			position = { x= 9 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		instantTextBoxType = {
 			name = "subunit_name"
 			position = { x = 43 y = -1 }
-
+			
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 4 y =4 }
@@ -883,12 +875,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			fixedsize = yes
 		}
-
 		instantTextBoxType = {
 			name = "subunit_type"
 			position = { x = 43 y =17 }
 			format = left
-
+			
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 4 y = 0 }
@@ -898,7 +889,6 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			fixedsize = yes
 		}
-
 		instantTextBoxType = {
 			name = "subunit_strength"
 			position = { x = 204 y = -2 }
@@ -935,15 +925,13 @@ guiTypes = {
 			spriteType = "GFX_politics_rebel_strip_trans"
 			position = { x= 257 y = 12 }
 		}
-		
 		iconType = {
-				name ="org_bar"
-				spriteType = "GFX_morale_progress_small"
-				position = { x= 297 y = 23 }
-				Orientation = "UPPER_LEFT"
-				rotation = 1.5708
-			}
-			
+			name ="org_bar"
+			spriteType = "GFX_morale_progress_small"
+			position = { x= 297 y = 23 }
+			Orientation = "UPPER_LEFT"
+			rotation = 1.5708
+		}
 		iconType = {
 			name ="str_bar"
 			spriteType = "GFX_strength_progress_small"
@@ -951,7 +939,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			rotation = 1.5708
 		}
-
+		
 		guiButtonType = {
 			name = "transferbutton"
 			position = { x = 318 y = 0 }
@@ -966,7 +954,7 @@ guiTypes = {
 	
 	####### RIGHT ENTRY
 	#######
-
+	
 	windowType = {
 		name = "reorg_entry_right"
 		backGround=""
@@ -977,7 +965,7 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
+		
 		iconType = {
 			name ="band_reorg_regiment"
 			spriteType = "GFX_unit_entry_bg"
@@ -990,18 +978,17 @@ guiTypes = {
 			position = { x= 7 y = 1 }
 			Orientation = "UPPER_LEFT"
 		}
-		
 		iconType = {
 			name ="unit_icon"
 			spriteType = "GFX_unit_strip"
 			position = { x= 9 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		instantTextBoxType = {
 			name = "subunit_name"
 			position = { x = 43 y = -1 }
-
+			
 			textureFile = ""
 			font = "Arial12_bold_black"
 			borderSize = {x = 4 y =4 }
@@ -1011,12 +998,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			fixedsize = yes
 		}
-
 		instantTextBoxType = {
 			name = "subunit_type"
 			position = { x = 43 y =17 }
 			format = left
-
+			
 			textureFile = ""
 			font = "Arial12_black"
 			borderSize = {x = 4 y = 0 }
@@ -1026,7 +1012,6 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			fixedsize = yes
 		}
-
 		instantTextBoxType = {
 			name = "subunit_strength"
 			position = { x = 204 y = -2 }
@@ -1063,7 +1048,6 @@ guiTypes = {
 			spriteType = "GFX_politics_rebel_strip_trans"
 			position = { x= 257 y = 12 }
 		}
-		
 		iconType = {
 			name ="org_bar"
 			spriteType = "GFX_morale_progress_small"
@@ -1071,7 +1055,6 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			rotation = 1.5708
 		}
-		
 		iconType = {
 			name ="str_bar"
 			spriteType = "GFX_strength_progress_small"
@@ -1079,7 +1062,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			rotation = 1.5708
 		}
-
+		
 		guiButtonType = {
 			name = "transferbutton"
 			position = { x = -18 y = 0 }
@@ -1093,7 +1076,7 @@ guiTypes = {
 	}
 
 ##### ATTACHMENT SELECTION PANEL ##############
-
+	
 	windowType = {
 		name = "attachment_selection_panel"
 		backGround=""
@@ -1104,14 +1087,14 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
+		
 		iconType = {
 			name ="attach_bg"
 			spriteType = "GFX_attach_bg"
 			position = { x= 0 y = -14 }
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		instantTextBoxType = {
 			name = "label"
 			position = { x = 27 y = -7 }
@@ -1125,7 +1108,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			fixedsize = yes
 		}
-
+		
 		guiButtonType = {
 			name = "back_button"
 			position = { x=65 y=308}
@@ -1136,7 +1119,7 @@ guiTypes = {
 			buttonText = "CLOSE"
 			buttonFont = "Arial12_bold_black"
 		}
-
+		
 		listboxType = {
 			name ="list"
 			position = { x = 5 y = 14 }
@@ -1148,9 +1131,9 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 		}
 	}
-
-	######    Attachment  entry
-
+	
+	###### Attachment entry
+	
 	windowType = {
 		name = "unit_assignment_entry"
 		backGround=""
@@ -1161,8 +1144,7 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
-
+		
 		guiButtonType = {
 			name = "assign"
 			position = { x=10 y=1}
@@ -1173,7 +1155,7 @@ guiTypes = {
 			buttonText = ""
 			buttonFont = "Arial12"
 		}
-
+		
 		iconType = {
 			name ="counter_type"
 			spriteType = "GFX_temp_unit_icon"
@@ -1186,7 +1168,7 @@ guiTypes = {
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
-
+		
 		instantTextBoxType = {
 			name = "name"
 			position = { x = 48 y = 2 }
@@ -1212,9 +1194,7 @@ guiTypes = {
 			fixedsize = yes
 		}
 	}
-
-####################
-
+	
 	positionType = {
 		name = "unitlist_start"
 		position = { x = 0 y =180 }
