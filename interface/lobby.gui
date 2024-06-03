@@ -11,7 +11,7 @@ guiTypes = {
 		upsound = ""
 		downsound = ""
 		fullscreen=yes
-
+		
 		iconType = {
 			name ="frontend_chat_bg"
 			position = { x = -266 y = -194 }
@@ -42,7 +42,7 @@ guiTypes = {
 			spriteType = "GFX_frontend_lobby_cornerright"
 			Orientation = "LOWER_RIGHT"
 		}
-			
+		
 		editBoxType = {
 			position = { x = -258 y = -45 }
 			name = "lobby_chat_edit"
@@ -53,7 +53,7 @@ guiTypes = {
 			text = " "
 			Orientation = "CENTER_DOWN"
 		}
-			
+		
 		###remove!
 		guiButtonType = {
 			name = "newgame_tab"
@@ -64,10 +64,10 @@ guiTypes = {
 			delayedTooltipText = ""
 			buttonText = "FE_NEW_GAME"
 			buttonFont = "Arial12_bold"
-
+			
 			Orientation = "UPPER_LEFT"
 		}
-			
+		
 		###remove!
 		guiButtonType = {
 			name = "savedgame_tab"
@@ -78,7 +78,7 @@ guiTypes = {
 			delayedTooltipText = ""
 			buttonText = "FE_SAVE_GAME"
 			buttonFont = "Arial12_bold"
-
+			
 			Orientation = "UPPER_LEFT"
 		}
 		
@@ -92,7 +92,7 @@ guiTypes = {
 			spriteType = "GFX_frontend_lobby_titlebg"
 			Orientation = "CENTER_UP"
 		}
-
+		
 		textBoxType = {
 			name = "year_label"
 			position = { x = -300 y = 8 }
@@ -102,11 +102,11 @@ guiTypes = {
 			text = "FE_SELECTED_SCENARIO"
 			maxWidth = 600
 			maxHeight = 50
-
+			
 			Orientation = "CENTER_UP"
 			format = centre
 		}
-	
+		
 		textBoxType = {
 			name = "select_label"
 			position = { x = -300 y = 36 }
@@ -121,7 +121,7 @@ guiTypes = {
 		}
 		
 		### MULTI PLAYER
-
+		
 		windowType = {
 			name ="multiplayer"
 			backGround=""
@@ -144,10 +144,10 @@ guiTypes = {
 				spacing = 2
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 11 y = 10}
-
+				
 				Orientation = "UPPER_LEFT"
 			}
-
+			
 			instantTextBoxType = {
 				name = "checksum"
 				position = { x = -18 y = 268 }
@@ -159,7 +159,7 @@ guiTypes = {
 				maxHeight = 24
 				format = centre
 			}
-				
+			
 			instantTextBoxType = {
 				name = "num_players"
 				position = { x = -33 y = 10 }
@@ -172,9 +172,9 @@ guiTypes = {
 				format = centre
 			}
 		}
-			
+		
 		#### SELECTED COUNTRY UPPER RIGHT
-	
+		
 		windowType = {
 			name ="singleplayer"
 			backGround=""
@@ -205,9 +205,9 @@ guiTypes = {
 				position = { x= -3 y = 9 }
 				Orientation = "UPPER_LEFT"
 			}
-				
+			
 			#### info beside flag
-				
+			
 			iconType = {
 				name ="frontend_rank_bg"
 				spriteType = "GFX_frontend_rank_bg"
@@ -225,7 +225,7 @@ guiTypes = {
 				maxHeight = 32
 				format = centre
 			}
-				
+			
 			instantTextBoxType = {
 				name = "selected_nation_label"
 				position = { x = 112 y = 27 }
@@ -238,7 +238,7 @@ guiTypes = {
 				fixedsize = yes
 				format = left
 			}
-				
+			
 			instantTextBoxType = {
 				name = "selected_countrystatus"
 				position = { x = 113 y = 49 }
@@ -250,7 +250,7 @@ guiTypes = {
 				maxHeight = 20
 				format = left
 			}
-				
+			
 			instantTextBoxType = {
 				name = "selected_fog"
 				position = { x = 113 y = 64 }
@@ -262,7 +262,7 @@ guiTypes = {
 				maxHeight = 32
 				format = left
 			}
-				
+			
 			### RANKINGS
 			instantTextBoxType = {
 				name = "selected_rank_label"
@@ -275,7 +275,7 @@ guiTypes = {
 				maxHeight = 20
 				format = right
 			}
-				
+			
 			### ranking prestige
 			iconType = {
 				name ="selected_prestige_icon"
@@ -305,7 +305,7 @@ guiTypes = {
 				maxHeight = 30
 				format = right
 			}
-				
+			
 			### ranking industry
 			iconType = {
 				name ="selected_industry_icon"
@@ -335,7 +335,7 @@ guiTypes = {
 				maxHeight = 20
 				format = right
 			}
-				
+			
 			### ranking military
 			iconType = {
 				name ="selected_military_icon"
@@ -365,7 +365,7 @@ guiTypes = {
 				maxHeight = 20
 				format = right
 			}
-				
+			
 			### population
 			instantTextBoxType = {
 				name = "selected_population_label"
@@ -436,7 +436,7 @@ guiTypes = {
 				maxHeight = 20
 				format = left
 			}
-				
+			
 			OverlappingElementsBoxType = {
 				name = "wars_overlappingbox"
 				position = { x = 80 y = 258 }
@@ -462,7 +462,7 @@ guiTypes = {
 				spacing = 1.0
 			}
 		}
-			
+		
 		### Interesting Countries Window ###
 		windowType = {
 			name = "interesting_countries"
@@ -501,10 +501,9 @@ guiTypes = {
 				format = left
 			}
 		}
-			
-
+		
 		### SAVE GAMES ####
-			
+		
 		windowType = {
 			name ="save_games"
 			backGround=""
@@ -517,7 +516,7 @@ guiTypes = {
 			upsound = ""
 			downsound = ""
 			fullscreen=no
-
+			
 			listboxType = {
 				name ="save_games_list"
 				position = { x = -5 y = 34 }
@@ -529,9 +528,9 @@ guiTypes = {
 				borderSize = {x = 10 y = 10}
 			}
 		}
-			
+		
 		### BOOKMARKS
-
+		
 		windowType = {
 			name ="bookmarks"
 			backGround=""
@@ -544,7 +543,7 @@ guiTypes = {
 			upsound = ""
 			downsound = ""
 			fullscreen=no
-
+			
 			listboxType = {
 				name ="bookmarks_list"
 				position = { x = 1 y = 15 }
@@ -556,9 +555,9 @@ guiTypes = {
 				borderSize = {x = 10 y = 00}
 			}
 		}
-			
+		
 		### PLAYABLE COUNTRIES WINDOW
-
+		
 		windowType = {
 			name ="playable_countries_window"
 			backGround=""
@@ -572,8 +571,7 @@ guiTypes = {
 			upsound = ""
 			downsound = ""
 			fullscreen=no
-				
-				
+			
 			instantTextBoxType = {
 				name = "playable_countries_label"
 				position = { x = 15 y = 310 }
@@ -585,6 +583,7 @@ guiTypes = {
 				maxHeight = 30
 				format = centre
 			}
+			
 			guiButtonType = {
 				name = "lobby_sort_countryname"
 				position = { x = 12 y = 328 }
@@ -607,7 +606,7 @@ guiTypes = {
 				position = { x = 187 y = 332 }
 				quadTextureSprite ="GFX_sort_military_rank"
 			}
-
+			
 			listboxType = {
 				name ="playable_countries_list"
 				position = { x = -5 y = 355 }
@@ -619,7 +618,7 @@ guiTypes = {
 				borderSize = {x = 10 y = 00}
 			}
 		}
-
+		
 		### BUTTONS
 		
 		guiButtonType = {
@@ -631,10 +630,10 @@ guiTypes = {
 			delayedTooltipText = ""
 			buttonText = "FE_BACK"
 			buttonFont = "vic_32_black"
-
+			
 			Orientation = "LOWER_LEFT"
 		}
-
+		
 		guiButtonType = {
 			name = "play_button"
 			position = { x = -184 y = -80 }
@@ -644,13 +643,13 @@ guiTypes = {
 			delayedTooltipText = ""
 			buttonText = "PLAY"
 			buttonFont = "vic_32_black"
-
+			
 			Orientation = "LOWER_RIGHT"
 			clicksound = start_game
 		}
-			
+		
 		############
-			
+		
 		listboxType = {
 			name ="chatlog"
 			position = { x = -250 y = -173 }
@@ -662,7 +661,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 		}
 	}
-		
+	
 	guiButtonType = {
 		name ="shield"
 		position = { x = 0 y = 0 }
@@ -677,19 +676,18 @@ guiTypes = {
 	}
 	
 	################
-
+	
 	positionType = {
 		# Should be relative to lower center of screen
 		name = "shield_position"
 		position = { x = -3000 y = -260 }
 	}
-
 	positionType = {
 		name = "shield_offset"
 		position = { x = 66 y = 0 }
 	}
 	
-	### playable_countries_list  ITEM
+	### playable_countries_list ITEM
 	windowType = {
 		name = "playable_countries_list_item"
 		backGround=""
@@ -700,7 +698,7 @@ guiTypes = {
 		horizontalBorder= ""
 		verticalBorder= ""
 		fullScreen = no
-
+		
 		guiButtonType = {
 			name = "playable_countries_button"
 			quadTextureSprite = "GFX_frontend_lobby_countries_entry"
@@ -761,7 +759,7 @@ guiTypes = {
 		}
 	}
 	
-	######  WARS/ALLIES OVERLAPPING-BOX ITEM
+	###### WARS/ALLIES OVERLAPPING-BOX ITEM
 	
 	windowType = {
 		name = "warsallies_item"

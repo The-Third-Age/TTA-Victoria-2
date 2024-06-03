@@ -12,7 +12,7 @@ country = {
 	GOLD_TO_CASH_RATE = 0.5, -- Amount of money generated per gold unit
 	GOLD_TO_WORKER_PAY_RATE = 3.5, -- Multiplier for how much money gold pays to pops
 	GREAT_NATIONS_COUNT = 4,	-- Number of Great Powers at any given time
-	GREATNESS_DAYS = 365,    -- how many days until country risks losing status as great nation
+	GREATNESS_DAYS = 365,		-- how many days until country risks losing status as great nation
 	BADBOY_LIMIT = 25,
 	MAX_BUREAUCRACY_PERCENTAGE = 0.01, -- More than max percent bureaucrats of poplation will give no additional benefits
 	BUREAUCRACY_PERCENTAGE_INCREMENT = 0.001, -- For each social administrative reform level, this is added to MAX_BUREAUCRACY_PERCENTAGE
@@ -673,7 +673,7 @@ pops = {
 	
 	MIL_HIT_FROM_CONQUEST = 4, -- how much militancy grows in a province if taken without being core.
 	LUXURY_CON_CHANGE = 0.001, -- con boost from over-buying luxuary goods
-	INVENTION_IMPACT_ON_DEMAND = 0.005, -- how much each invention in a country increases demand for a product in percent
+	INVENTION_IMPACT_ON_DEMAND = 0, -- how much each invention in a country increases demand for a product in percent
 	ARTISAN_SUPPRESSED_COLONIAL_GOODS_CATEGORY = 0, -- Goods category index not produced in colonies
 	ISSUE_MOVEMENT_JOIN_LIMIT = 8,
 	ISSUE_MOVEMENT_LEAVE_LIMIT = 7,
