@@ -599,7 +599,7 @@ guiTypes = {
 		}
 		
 		
-		#################    TRADE
+		################# TRADE
 		guiButtonType = {
 			name = "topbarbutton_trade"
 			quadTextureSprite ="GFX_topbar_button_trade"
@@ -700,7 +700,7 @@ guiTypes = {
 			#allwaystransparent = yes
 		}
 		
-		#################   DIPLOMACY
+		################# DIPLOMACY
 		guiButtonType = {
 			name = "topbarbutton_diplomacy"
 			quadTextureSprite ="GFX_topbar_button_diplo"
@@ -838,7 +838,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
-		#################  MILITARY
+		################# MILITARY
 		guiButtonType = {
 			name = "topbarbutton_military"
 			quadTextureSprite ="GFX_topbar_button_military"
@@ -971,120 +971,120 @@ guiTypes = {
 		}
 		
 		iconType = {
-					name ="rank_bg"
-					spriteType = "GFX_frontend_rank_bg"
-					position = { x= 76 y = 136 }
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "nation_totalrank"
-					position = { x = 78 y = 144 }
-					textureFile = ""
-					font = "Arial12"
-					borderSize = {x = 0 y = 0}
-					text = "7"
-					maxWidth = 24
-					maxHeight = 32
-					format = centre
-				}
+			name ="rank_bg"
+			spriteType = "GFX_frontend_rank_bg"
+			position = { x= 76 y = 136 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "nation_totalrank"
+			position = { x = 78 y = 144 }
+			textureFile = ""
+			font = "Arial12"
+			borderSize = {x = 0 y = 0}
+			text = "7"
+			maxWidth = 24
+			maxHeight = 32
+			format = centre
+		}
 		
 		### ranking prestige
-				iconType = {
-					name ="selected_prestige_icon"
-					spriteType = "GFX_topbar_prestige"
-					position = { x= 110 y = 88 }
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "country_prestige"
-					position = { x = 131 y = 92 }
-					font = "Arial12"
-					text = "1372"
-					maxWidth = 100
-					maxHeight = 20
-				}
-				instantTextBoxType = {
-					name = "selected_prestige_rank"
-					position = { x = 109 y = 92 }
-					textureFile = ""
-					font = "Arial12_bold"
-					text = "3"
-					maxWidth = 80
-					maxHeight = 30
-					format = right
-				}
+		iconType = {
+			name ="selected_prestige_icon"
+			spriteType = "GFX_topbar_prestige"
+			position = { x= 110 y = 88 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "country_prestige"
+			position = { x = 131 y = 92 }
+			font = "Arial12"
+			text = "1372"
+			maxWidth = 100
+			maxHeight = 20
+		}
+		instantTextBoxType = {
+			name = "selected_prestige_rank"
+			position = { x = 109 y = 92 }
+			textureFile = ""
+			font = "Arial12_bold"
+			text = "3"
+			maxWidth = 80
+			maxHeight = 30
+			format = right
+		}
 
-			### ranking industry
-				iconType = {
-					name ="selected_industry_icon"
-					spriteType = "GFX_topbar_production"
-					position = { x= 110 y = 104 }
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "country_economic"
-					position = { x = 131 y = 111 }
-					font = "Arial12"
-					text = "1372"
-					maxWidth = 100
-					maxHeight = 20
-				}
-				instantTextBoxType = {
-					name = "selected_industry_rank"
-					position = { x = 109 y = 111 }
-					textureFile = ""
-					font = "Arial12_bold"
-					text = "12"
-					maxWidth = 80
-					maxHeight = 30
-					format = right
-				}
+		### ranking industry
+		iconType = {
+			name ="selected_industry_icon"
+			spriteType = "GFX_topbar_production"
+			position = { x= 110 y = 104 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "country_economic"
+			position = { x = 131 y = 111 }
+			font = "Arial12"
+			text = "1372"
+			maxWidth = 100
+			maxHeight = 20
+		}
+		instantTextBoxType = {
+			name = "selected_industry_rank"
+			position = { x = 109 y = 111 }
+			textureFile = ""
+			font = "Arial12_bold"
+			text = "12"
+			maxWidth = 80
+			maxHeight = 30
+			format = right
+		}
 			
-			### ranking military
-				iconType = {
-					name ="selected_military_icon"
-					spriteType = "GFX_army_icon_2"
-					position = { x= 110 y = 124 }
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "country_military"
-					position = { x = 131 y = 130 }
-					font = "Arial12"
-					text = "1372"
-					maxWidth = 100
-					maxHeight = 20
-				}
-				instantTextBoxType = {
-					name = "selected_military_rank"
-					position = { x = 109 y = 130 }
-					textureFile = ""
-					font = "Arial12_bold"
-					text = "139"
-					maxWidth = 80
-					maxHeight = 30
-					format = right
-				}
+		### ranking military
+		iconType = {
+			name ="selected_military_icon"
+			spriteType = "GFX_army_icon_2"
+			position = { x= 110 y = 124 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "country_military"
+			position = { x = 131 y = 130 }
+			font = "Arial12"
+			text = "1372"
+			maxWidth = 100
+			maxHeight = 20
+		}
+		instantTextBoxType = {
+			name = "selected_military_rank"
+			position = { x = 109 y = 130 }
+			textureFile = ""
+			font = "Arial12_bold"
+			text = "139"
+			maxWidth = 80
+			maxHeight = 30
+			format = right
+		}
 
-			### colonial points
-				iconType = {
-					name ="colonial_power_icon"
-					spriteType = "GFX_pops_colonial_state_icon"
-					position = { x= 112 y = 146 }
-					Orientation = "UPPER_LEFT"
-				}
-				instantTextBoxType = {
-					name = "country_colonial_power"
-					position = { x = 112.5 y = 149 }
-					textureFile = ""
-					font = "Arial12_bold"
-					text = "12/45"
-					maxWidth = 100
-					maxHeight = 30
-					format = centre
-				}
+		### colonial points
+		iconType = {
+			name ="colonial_power_icon"
+			spriteType = "GFX_pops_colonial_state_icon"
+			position = { x= 112 y = 146 }
+			Orientation = "UPPER_LEFT"
+		}
+			instantTextBoxType = {
+			name = "country_colonial_power"
+			position = { x = 112.5 y = 149 }
+			textureFile = ""
+			font = "Arial12_bold"
+			text = "12/45"
+			maxWidth = 100
+			maxHeight = 30
+			format = centre
+		}
 				
-		####  SPEED STUFF
+		#### SPEED STUFF
 		
 		guiButtonType = {
 			name = "button_speedup"
@@ -1094,7 +1094,6 @@ guiTypes = {
 			delayedTooltipText = ""
 			position = { x = 385 y = 87 }
 		}
-
 		guiButtonType = {
 			name = "button_speeddown"
 			quadTextureSprite ="GFX_button_speeddown"
@@ -1103,14 +1102,12 @@ guiTypes = {
 			delayedTooltipText = ""
 			position = { x = 409 y = 87 }
 		}
-		
 		guiButtonType = {
 			name = "pause_bg"
 			quadTextureSprite ="GFX_pause_bg"
 			position = { x= 185 y =87 }
 			Orientation = "UPPER_LEFT"
 		}
-		
 		guiButtonType = {
 			name = "speed_indicator"
 			quadTextureSprite = "GFX_speed_indicator"
@@ -1126,7 +1123,6 @@ guiTypes = {
 			maxHeight = 32
 			format = left
 		}
-		
 		instantTextBoxType = {
 			name = "CountryName"
 			position = { x = 205 y = 106 }
