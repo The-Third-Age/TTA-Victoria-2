@@ -167,3 +167,21 @@ small_but_efficient = {
 	middle_income_modifier = 3
 	rich_income_modifier = 5
 }
+#Money hoarding
+money_hoarder_1 = {
+	trigger = {
+		money = 5000000
+		not = { money = 10000000 }
+	}
+	tax_efficiency = -0.40
+	tariff_efficiency_modifier = -0.60
+	icon = 1
+}
+money_hoarder_2 = {
+	trigger = {
+		money = 10000000
+	}
+	tax_efficiency = -0.50
+	tariff_efficiency_modifier = -0.80
+	icon = 1
+}
