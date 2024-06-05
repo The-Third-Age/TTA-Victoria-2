@@ -1,0 +1,485 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
+# Tribals Events 6000 - 6999 {
+# 6000 - 6050 - on_actions.txt replacement
+# 6050 - 6099 - easy embrace
+# 6100 - 6299 - positive interactions
+# 6300 - 6499 - negative interactions
+# 6900 - 6999 - end (hard embrace or eliminate) tribals interactions
+# }
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+# Tribal Raid - REMOVE
+province_event = {
+	id = 5000
+	title = "Tribal Raid"
+	desc = "EVTDESC5000"
+	
+	trigger = {
+		NOT = { owner = { has_country_modifier = observer_mode } }
+		has_province_modifier = tribal_outpost
+		any_neighbor_province = {
+			owner = { tag = THIS }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = "Drat."
+		
+		# Tribals killed in the raid
+		any_pop = {
+			limit = {
+				type = tribals
+			}
+			reduce_pop = 0.95
+		}
+		
+		# Raid on an owned neighbor province
+		random_neighbor_province = {
+			limit = {
+				owner = { tag = THIS }
+			}
+			any_pop = {
+				limit = {
+					NOT = { type = soldiers }
+					NOT = { type = tribals }
+				}
+				militancy = 2
+				reduce_pop = 0.98
+			}
+			
+			any_pop = {
+				limit = {
+					type = soldiers
+					NOT = { type = tribals }
+				}
+				militancy = 2
+				reduce_pop = 0.9
+			}
+			
+			remove_province_modifier = recent_raid # Reset the timer
+			add_province_modifier = { name = recent_raid duration = 365 }
+		}
+	}
+}
+
+# Tribal Settlement Found and Eliminated - REMOVE
+province_event = {
+	id = 5001
+	title = "Tribal Settlement Found"
+	desc = "EVTDESC5001"
+	
+	trigger = {
+		has_province_modifier = military_hunting_tribals
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+	}
+	
+	option = {
+		name = "Good"
+		
+		# Kill all of the tribals
+		any_pop = {
+			limit = {
+				type = tribals
+			}
+			
+			reduce_pop = 0
+		}
+		
+		soldiers = {
+			reduce_pop = 0.98
+		}
+		
+		any_pop = {
+			militancy = -1
+		}
+		
+		remove_province_modifier = tribal_outpost
+		remove_province_modifier = military_hunting_tribals
+		
+		owner = {
+			random_list = {
+				5 = { treasury = 5000 }
+				10 = { treasury = 10000 }
+				4 = { treasury = 15000 }
+				1 = { years_of_research = 0.10 }
+			}
+		}
+	}
+}
+
+# Abandoned Tribal Settlement Found - REMOVE
+province_event = {
+	id = 5002
+	title = "Abandoned Settlement Found"
+	desc = "EVTDESC5002"
+	
+	trigger = {
+		has_province_modifier = military_hunting_tribals
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+	}
+	
+	option = {
+		name = "How are they one step ahead of us?"
+		
+		owner = {
+			random_list = {
+				5 = { treasury = 2500 }
+				10 = { treasury = 5000 }
+				4 = { treasury = 7500 }
+				1 = { years_of_research = 0.05 }
+			}
+		}
+		
+		remove_province_modifier = military_hunting_tribals
+	}
+}
+
+# Tribal Settlement Found and Enslaved - REMOVE
+province_event = {
+	id = 5003
+	title = "Tribal Settlement Found"
+	desc = "EVTDESC5003"
+	
+	trigger = {
+		has_province_modifier = military_hunting_tribals_slavery
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+	}
+	
+	option = {
+		name = "Good"
+		
+		# Kill those who resist
+		any_pop = {
+			limit = {
+				type = tribals
+			}
+			
+			reduce_pop = 0.9
+		}
+		
+		# Enslave the remaining tribals
+		any_pop = {
+			limit = {
+				type = tribals
+			}
+			pop_type = slaves
+		}
+		
+		# Some of the militia died
+		any_pop = {
+			limit = {
+				type = soldiers
+			}
+			
+			reduce_pop = 0.98
+		}
+		
+		any_pop = {
+			militancy = -1
+		}
+		
+		remove_province_modifier = tribal_outpost
+		remove_province_modifier = military_hunting_tribals_slavery
+		
+		owner = {
+			random_list = {
+				5 = { treasury = 5000 }
+				10 = { treasury = 10000 }
+				4 = { treasury = 15000 }
+				1 = { years_of_research = 0.10 }
+			}
+		}
+	}
+}
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+# on_state_conquest - yes slavery - replace event 70000
+## Convert % of non-accepted pops to slaves
+## Convert % of non-accepted pops to tribals
+
+# on_state_conquest - yes non_accepted_slavery - replace event 70007
+## Convert % of non-accepted pops to slaves
+## Convert % of non-accepted pops to tribals
+
+# on_state_conquest - no slavery
+## Convert % of non-accepted pops to tribals
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+# Reembrace primary culture tribals
+province_event = {
+	id = 6050
+	title = "Tribals embrace us"
+	desc = "EVTDESC6050"
+
+    trigger = {
+        owner = {
+            civilized = yes
+        }
+        any_pop = {
+            type = tribals
+            is_primary_culture = yes
+        }
+    }
+	
+	mean_time_to_happen = {
+        # Basically instant
+		months = 1
+		
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+	}
+
+    effect = {
+		any_pop = {
+			limit = {
+                type = tribals
+                is_primary_culture = yes
+			}
+			pop_type = labourers
+		}
+    }
+}
+
+# Reembrace accepted culture tribals
+province_event = {
+	id = 6051
+	title = "Tribals embrace us"
+	desc = "EVTDESC6051"
+
+    trigger = {
+        owner = {
+            civilized = yes
+        }
+        any_pop = {
+            type = tribals
+            is_accepted_culture = yes
+        }
+    }
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+	}
+
+    effect = {
+		any_pop = {
+			limit = {
+                type = tribals
+                is_accepted_culture = yes
+			}
+			pop_type = labourers
+		}
+    }
+}
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+# Reembrace same race - Elf
+# Reembrace same race - Orc
+province_event = {
+	id = 6052
+	title = "Orc tribals accept our rule"
+	desc = "EVTDESC6052"
+
+    trigger = {
+        owner = {
+            has_accepted_culture = orc_culture
+            civilized = yes
+        }
+        any_pop = {
+            type = tribals
+            OR = {
+                is_culture_group = uruk_hai
+                is_culture_group = mordorian
+                is_culture_group = northern_goblins
+            }
+        }
+    }
+	
+	mean_time_to_happen = {
+		months = 600
+		
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+	}
+
+    effect = {
+		any_pop = {
+			limit = {
+                type = tribals
+                OR = {
+                    is_culture_group = uruk_hai
+                    is_culture_group = mordorian
+                    is_culture_group = northern_goblins
+                }
+			}
+			pop_type = labourers
+		}
+    }
+}
+# Reembrace same race - Hobbit
+# Reembrace same race - Ent
+# Reembrace same race - Troll
+# Reembrace same race - Spider
+# Reembrace same race - Undead
+####################################################################################################
+####################################################################################################
+####################################################################################################
+# Positive interaction - peaceful coexistence - Good Any nation-Ent tribals
+# Positive interaction - peaceful coexistence - Evil Any nation-Undead tribals
+
+# Positive interaction - peaceful coexistence - Man nation-Man tribals
+# Positive interaction - peaceful coexistence - Good/Neutral Man nation-Elf tribals
+# Positive interaction - peaceful coexistence - Man nation-Dwarf tribals
+# Positive interaction - peaceful coexistence - Evil Man nation-Orc tribals
+# Positive interaction - peaceful coexistence - Man nation-Hobbit tribals
+
+# Positive interaction - peaceful coexistence - Elf nation-Man tribals
+# Positive interaction - peaceful coexistence - Elf nation-Dwarf tribals
+# Positive interaction - peaceful coexistence - Evil Elf nation-Orc tribals
+# Positive interaction - peaceful coexistence - Elf nation-Hobbit tribals
+
+# Positive interaction - peaceful coexistence - Dwarf nation-Man tribals
+# Positive interaction - peaceful coexistence - Dwarf nation-Elf tribals
+# Positive interaction - peaceful coexistence - Evil Dwarf nation-Orc tribals
+# Positive interaction - peaceful coexistence - Dwarf nation-Hobbit tribals
+
+# Positive interaction - peaceful coexistence - Orc nation-Man tribals
+# Positive interaction - peaceful coexistence - Orc nation-Dwarf tribals
+# Positive interaction - peaceful coexistence - Orc nation-Hobbit tribals
+# Positive interaction - peaceful coexistence - Orc nation-Troll tribals
+# Positive interaction - peaceful coexistence - Orc nation-Spider tribals
+
+# Positive interaction - peaceful coexistence - Hobbit nation-Man tribals
+# Positive interaction - peaceful coexistence - Hobbit nation-Elf tribals
+# Positive interaction - peaceful coexistence - Hobbit nation-Dwarf tribals
+# Positive interaction - peaceful coexistence - Hobbit nation-Orc tribals
+
+# Positive interaction - peaceful coexistence - Ent nation-Man tribals
+# Positive interaction - peaceful coexistence - Ent nation-Elf tribals
+# Positive interaction - peaceful coexistence - Ent nation-Dwarf tribals
+# Positive interaction - peaceful coexistence - Ent nation-Hobbit tribals
+
+# Positive interaction - peaceful coexistence - Troll nation-Orc tribals
+# Positive interaction - peaceful coexistence - Troll nation-Spider tribals
+
+# Positive interaction - peaceful coexistence - Spider nation-Orc tribals
+# Positive interaction - peaceful coexistence - Spider nation-Troll tribals
+
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+# Negative interaction - war - Evil Any nation-DUNEDAIN tribals - RANGERS
+
+# Negative interaction - war - Any nation-Ent tribals
+# Negative interaction - war - Any nation-Troll tribals
+# Negative interaction - war - Any nation-Spider tribals
+# Negative interaction - war - Any nation-Undead tribals
+
+# Negative interaction - war - Man nation-Man tribals
+# Negative interaction - war - Man nation-Elf tribals
+# Negative interaction - war - Man nation-Dwarf tribals
+# Negative interaction - war - Man nation-Orc tribals
+# Negative interaction - war - Man nation-Hobbit tribals
+# Negative interaction - war - Man nation-Ent tribals
+# Negative interaction - war - Man nation-Troll tribals
+# Negative interaction - war - Man nation-Spider tribals
+# Negative interaction - war - Man nation-Undead tribals
+
+# Negative interaction - war - Elf nation-Man tribals
+# Negative interaction - war - Elf nation-Dwarf tribals
+# Negative interaction - war - Elf nation-Orc tribals
+# Negative interaction - war - Elf nation-Hobbit tribals
+# Negative interaction - war - Elf nation-Ent tribals
+# Negative interaction - war - Elf nation-Troll tribals
+# Negative interaction - war - Elf nation-Spider tribals
+# Negative interaction - war - Elf nation-Undead tribals
+
+# Negative interaction - war - Orc nation-Man tribals
+# Negative interaction - war - Orc nation-Elf tribals
+# Negative interaction - war - Orc nation-Dwarf tribals
+# Negative interaction - war - Orc nation-Orc tribals
+# Negative interaction - war - Orc nation-Hobbit tribals
+# Negative interaction - war - Orc nation-Ent tribals
+# Negative interaction - war - Orc nation-Troll tribals
+# Negative interaction - war - Orc nation-Spider tribals
+# Negative interaction - war - Orc nation-Undead tribals
+
+# Negative interaction - war - Hobbit nation-Dwarf tribals
+# Negative interaction - war - Hobbit nation-Orc tribals
+# Negative interaction - war - Hobbit nation-Ent tribals
+# Negative interaction - war - Hobbit nation-Troll tribals
+# Negative interaction - war - Hobbit nation-Spider tribals
+# Negative interaction - war - Hobbit nation-Undead tribals
+
+# Negative interaction - war - Ent nation-Any tribals
+
+# Negative interaction - war - Troll nation-Any tribals
+
+# Negative interaction - war - Spider nation-Any tribals
+
+# Negative interaction - war - Undead nation-Any tribals
+
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+# End positive interaction - pay up or end it
+# End negative interaction - keep it or end it
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+# Embrace non-acceptable tribals (convert to laborers) with ongoing positive interaction
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+# Eliminate non-acceptable tribals with ongoing negative interaction (Reuse wild goblins mechanic?)
+# Enslave non-acceptable tribals with ongoing negative interaction (Reuse wild goblins mechanic?)
