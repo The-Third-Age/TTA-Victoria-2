@@ -535,6 +535,20 @@ conquest_tiny = {
 		is_independant = yes
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 
 	badboy_factor = 12
@@ -588,6 +602,20 @@ conquest_small = {
 		is_independant = yes
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 
 	badboy_factor = 17
@@ -640,6 +668,20 @@ conquest = {
 		is_independant = yes
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 
 	badboy_factor = 22
@@ -857,6 +899,20 @@ acquire_substate_region = {
 		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 	
 	allowed_substate_regions = {
@@ -980,6 +1036,20 @@ acquire_state = {
 		is_independant = yes
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 	
 	allowed_states = {
@@ -1038,6 +1108,20 @@ demand_state_for_ally = {
 		is_independant = yes
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 	
 	# THIS - us
@@ -1102,6 +1186,20 @@ place_in_the_sun = {
 		any_owned_province = { is_colonial = yes }
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 	
 	allowed_states = {
@@ -1253,6 +1351,24 @@ free_peoples = {
 			NOT = { is_core = THIS }
 		}
 		is_releasable_vassal = FROM
+		
+		# The selected realm is not a formable/union country, or it already exists
+		OR = {
+			FROM = {
+				NOT = { tag = ARN }
+				NOT = { tag = GON }
+				NOT = { tag = RUN }
+				NOT = { tag = ADB }
+				NOT = { tag = HAR }
+				NOT = { tag = RHU }
+				NOT = { tag = RHO }
+				NOT = { tag = MTN }
+				NOT = { tag = ENE }
+				NOT = { tag = DUN }
+				NOT = { tag = SBU }
+			}
+			FROM = { exists = yes }
+		}
 	}
 
 	# THIS - us
@@ -1352,6 +1468,24 @@ liberate_country = {
 			NOT = { is_core = THIS }
 		}
 		is_releasable_vassal = FROM
+		
+		# The selected realm is not a formable/union country, or it already exists
+		OR = {
+			FROM = {
+				NOT = { tag = ARN }
+				NOT = { tag = GON }
+				NOT = { tag = RUN }
+				NOT = { tag = ADB }
+				NOT = { tag = HAR }
+				NOT = { tag = RHU }
+				NOT = { tag = RHO }
+				NOT = { tag = MTN }
+				NOT = { tag = ENE }
+				NOT = { tag = DUN }
+				NOT = { tag = SBU }
+			}
+			FROM = { exists = yes }
+		}
 	}
 
 	# THIS - us
@@ -1454,6 +1588,24 @@ liberate_and_puppet_country = {
 		}
 		is_releasable_vassal = FROM
 		FROM = { exists = no }
+		
+		# The selected realm is not a formable/union country, or it already exists
+		OR = {
+			FROM = {
+				NOT = { tag = ARN }
+				NOT = { tag = GON }
+				NOT = { tag = RUN }
+				NOT = { tag = ADB }
+				NOT = { tag = HAR }
+				NOT = { tag = RHU }
+				NOT = { tag = RHO }
+				NOT = { tag = MTN }
+				NOT = { tag = ENE }
+				NOT = { tag = DUN }
+				NOT = { tag = SBU }
+			}
+			FROM = { exists = yes }
+		}
 	}
 
 	# THIS - us
@@ -2126,6 +2278,20 @@ demand_concession_casus_belli = {
 		number_of_states = 2
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 	
 	allowed_states = {
@@ -2192,6 +2358,20 @@ establish_protectorate_casus_belli = {
 		civilized = no
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 	
 	po_annex = yes
@@ -2270,6 +2450,20 @@ take_capital = {
 		is_vassal = no
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 
 	allowed_states = {
@@ -2339,6 +2533,20 @@ demand_concession_capital = {
 		}
 		NOT = { has_country_modifier = political_neutrality }
 		THIS = { NOT = { has_country_modifier = political_neutrality } }
+		
+		# Railroading disabled or alignments don't match
+		OR = {
+			has_global_flag = railroading_disabled
+			THIS = { good_evil_alignment = neutral_alignment }
+			AND = {
+				NOT = { good_evil_alignment = good_alignment }
+				THIS = { good_evil_alignment = good_alignment }
+			}
+			AND = {
+				NOT = { good_evil_alignment = evil_alignment }
+				THIS = { good_evil_alignment = evil_alignment }
+			}
+		}
 	}
 
 	allowed_states = {
