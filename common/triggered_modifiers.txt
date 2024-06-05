@@ -170,18 +170,79 @@ small_but_efficient = {
 #Money hoarding
 money_hoarder_1 = {
 	trigger = {
-		money = 5000000
-		not = { money = 10000000 }
+		money = 10000000
+		NOT = { money = 20000000 }
 	}
-	tax_efficiency = -0.40
-	tariff_efficiency_modifier = -0.60
+	tax_efficiency = -0.05
+	tariff_efficiency_modifier = -0.20
+	min_social_spending = 1
+	min_military_spending = 1
 	icon = 1
 }
 money_hoarder_2 = {
 	trigger = {
-		money = 10000000
+		money = 20000000
+		NOT = { money = 30000000 }
 	}
-	tax_efficiency = -0.50
+	tax_efficiency = -0.10
+	tariff_efficiency_modifier = -0.40
+	min_social_spending = 1
+	min_military_spending = 1
+	icon = 1
+}
+money_hoarder_3 = {
+	trigger = {
+		money = 30000000
+		NOT = { money = 40000000 }
+	}
+	tax_efficiency = -0.20
+	tariff_efficiency_modifier = -0.60
+	min_social_spending = 1
+	min_military_spending = 1
+	icon = 1
+}
+money_hoarder_4 = {
+	trigger = {
+		money = 40000000
+		NOT = { money = 50000000 }
+	}
+	tax_efficiency = -0.25
 	tariff_efficiency_modifier = -0.80
+	min_social_spending = 1
+	min_military_spending = 1
+	icon = 1
+}
+money_hoarder_5 = {
+	trigger = {
+		money = 50000000
+		NOT = { money = 60000000 }
+	}
+	tax_efficiency = -0.40
+	tariff_efficiency_modifier = -1.0
+	min_social_spending = 1
+	min_military_spending = 1
+	icon = 1
+}
+money_hoarder_6 = {
+	trigger = {
+		money = 60000000
+		NOT = { money = 100000000 }
+	}
+	tax_efficiency = -0.75
+	tariff_efficiency_modifier = -1.25
+	min_social_spending = 1
+	min_military_spending = 1
+	icon = 1
+}
+money_hoarder_7 = {
+	trigger = {
+		money = 100000000
+	}
+	max_tariff = -1
+	max_tax = -1
+	tax_efficiency = -1
+	tariff_efficiency_modifier = -1.5
+	min_social_spending = 1
+	min_military_spending = 1
 	icon = 1
 }
