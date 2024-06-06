@@ -887,7 +887,6 @@ political_decisions = {
 	harnendor_question = {
 		picture = "harnendor_map"
 		potential = {
-			has_recently_lost_war = no
 			OR = {
 				AND = {
 					OR = {
@@ -916,6 +915,7 @@ political_decisions = {
 		}
 		
 		allow = {
+			has_recently_lost_war = no
 			war = no
 			expansion_1 = 1
 			diplomacy_1 = 1
@@ -980,7 +980,6 @@ political_decisions = {
 		picture = "harnendor_map"
 		potential = {
 			has_country_flag = colonizing_harondor
-			has_recently_lost_war = no
 			NOT = {	has_country_flag = harondor_core_owner }
 			HRD = {
 				any_core = {
@@ -994,7 +993,8 @@ political_decisions = {
 			}
 		}
 		
-		allow = {		
+		allow = {	
+			has_recently_lost_war = no
 			war = no
 			expansion_1 = 1
 			diplomacy_2 = 1
