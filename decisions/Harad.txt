@@ -988,13 +988,13 @@ political_decisions = {
 					owner = {
 						neighbour = THIS
 						NOT = {	truce_with = THIS }
-						is_vassal = no
+						NOT = { is_our_vassal = THIS }
 					}
 				}
 			}
 		}
 		
-		allow = {
+		allow = {		
 			war = no
 			expansion_1 = 1
 			diplomacy_2 = 1
