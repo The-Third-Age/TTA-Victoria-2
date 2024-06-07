@@ -456,14 +456,14 @@ RGO_template_clerks = {
 rock_quarry = {
 	template = RGO_template_labourers
 	output_goods = rock
-	value = 3
+	value = 6.5
 	mine = yes
 }
 
 food_fields = {
 	template = RGO_template_farmers
 	output_goods = food
-	value = 7.0
+	value = 7.5
 	farm = yes
 }
 
@@ -477,35 +477,35 @@ stables = {
 artisinal_workshop = {
 	template = RGO_template_clerks
 	output_goods = artisinal_goods
-	value = 1
+	value = 3.9
 	farm = yes
 }
 
 coal_mine = {
 	template = RGO_template_labourers
 	output_goods = coal
-	value = 2.4
+	value = 7
 	mine = yes
 }
 
 cotton_plantation = {
 	template = RGO_template_farmers
 	output_goods = cotton
-	value = 2.2
+	value = 7.9
 	farm = yes
 }
 
 dye_plantation = {
 	template = RGO_template_farmers
 	output_goods = dye
-	value = 0.22
+	value = 1.3
 	farm = yes
 }
 
 iron_mine = {
 	template = RGO_template_labourers
 	output_goods = iron
-	value = 1.8
+	value = 4.4
 	mine = yes
 }
 
@@ -519,28 +519,28 @@ precious_metal_mine = {
 sheep_ranch = {
 	template = RGO_template_farmers
 	output_goods = wool
-	value = 5
+	value = 22
 	farm = yes
 }
 
 tea_plantation = {
 	template = RGO_template_farmers
 	output_goods = tea
-	value = 1.75
+	value = 6
 	farm = yes
 }
 
 timber_lodge = {
 	template = RGO_template_labourers
 	output_goods = timber
-	value = 8
+	value = 8.5
 	farm = yes
 }
 
 tobacco_plantation = {
 	template = RGO_template_farmers
 	output_goods = tobacco
-	value = 2.5
+	value = 14
 	farm = yes
 }
 
@@ -841,22 +841,22 @@ artisan_dye = {
 
 ##### ARTISAN ONLY #####
 
-artisan_horse_to_food = {
-	input_goods = {
-		horses = 2	# 16
-	}
-	output_goods = food
-	value = 9	# 18
-	
-	owner = {
-		poptype = artisans
-		effect = output
-	}
-	
-	type = artisan
-	
-	workforce = 10000
-}
+#artisan_horse_to_food = {
+#	input_goods = {
+#		horses = 2	# 16
+#	}
+#	output_goods = food
+#	value = 9	# 18
+#	
+#	owner = {
+#		poptype = artisans
+#		effect = output
+#	}
+#	
+#	type = artisan
+#	
+#	workforce = 10000
+#}
 
 artisan_food_to_horse = {
 	input_goods = {
@@ -875,53 +875,53 @@ artisan_food_to_horse = {
 	workforce = 10000
 }
 
-artisan_tea_to_food = {
-	input_goods = {
-		tea = 5		# 13
-	}
-	output_goods = food
-	value = 8	# 16
-	
-	owner = {
-		poptype = artisans
-		effect = output
-	}
-	
-	type = artisan
-	
-	workforce = 10000
-}
+#artisan_tea_to_food = {
+#	input_goods = {
+#		tea = 5		# 13
+#	}
+#	output_goods = food
+#	value = 8	# 16
+#	
+#	owner = {
+#		poptype = artisans
+#		effect = output
+#	}
+#	
+#	type = artisan
+#	
+#	workforce = 10000
+#}
 
-artisan_food_to_tea = {
-	input_goods = {
-		food = 3	# 6
-	}
-	output_goods = tea
-	value = 3	# 7.8
-	
-	owner = {
-		poptype = artisans
-		effect = output
-	}
-	
-	type = artisan
-	
-	workforce = 10000
-}
+#artisan_food_to_tea = {
+#	input_goods = {
+#		food = 3	# 6
+#	}
+#	output_goods = tea
+#	value = 3	# 7.8
+#	
+#	owner = {
+#		poptype = artisans
+#		effect = output
+#	}
+#	
+#	type = artisan
+#	
+#	workforce = 10000
+#}
 
-artisan_liquor_to_food = {
-	input_goods = {
-		liquor = 2	# 12.8
-	}
-	output_goods = food
-	value = 7	# 14
-	
-	owner = {
-		poptype = artisans
-		effect = output
-	}
-	
-	type = artisan
-	
-	workforce = 10000
-}
+#artisan_liquor_to_food = {
+#	input_goods = {
+#		liquor = 2	# 12.8
+#	}
+#	output_goods = food
+#	value = 7	# 14
+#	
+#	owner = {
+#		poptype = artisans
+#		effect = output
+#	}
+#	
+#	type = artisan
+#	
+#	workforce = 10000
+#}
