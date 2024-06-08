@@ -1,5 +1,17 @@
 # Modding Notes
 
+## Triggers
+
+`controlled_by = owner` is a completely valid province trigger
+- This is the only known place that owner can be passed as an argument for a trigger that requires a province id
+- Overall, `controlled_by = [TAG, THIS, FROM or owner]` is all valid
+
+## Effects
+
+`sub_unit`
+- general syntax that many mods use is `[province_scope] = { sub_unit = { type = [unit_type] value = current } }`
+- it is also a valid in the country scope: `sub_unit = { type = [unit_type] value = [province_id] }`
+
 ## Scripted Wars
 
 If possible, using standard cbs is the preferred method. However, if the existing cbs don't work as needed here's some tips:
