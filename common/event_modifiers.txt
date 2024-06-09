@@ -35,6 +35,7 @@
 # Yellow Artwork			29						31
 # Yellow Guns				30						32
 # Yellow People				31						33
+# Outlaws					32						34
 
 #############################
 ##### VANILLA MODIFIERS #####
@@ -152,16 +153,19 @@ cultural_core_integration = {
 
 # }
 ##### RGO MODIFIERS ##### {
+# Province Modifier
 repairing_mine = {
 	mine_rgo_size = -0.5
 	icon = 2
 }
 
+# Province Modifier
 new_vein = {
 	local_RGO_output = 0.5
 	icon = 3
 }
 
+# Province Modifier
 high_production = {
 	local_RGO_output = 1
 	local_factory_output = 1
@@ -172,6 +176,7 @@ high_production = {
 	icon = 13
 }
 
+# Province Modifier
 large_road = {
 	local_rgo_output = 0.1
 	local_factory_throughput = 0.1
@@ -184,12 +189,14 @@ large_road = {
 	icon = 11
 }
 
+# Province Modifier
 sacked_large_road = {
 	immigrant_attract = -0.1
 	
 	icon = 12
 }
 
+# Province Modifier
 major_road = {
 	local_rgo_output = 0.25
 	local_factory_output = 0.25
@@ -202,12 +209,14 @@ major_road = {
 	icon = 11
 }
 
+# Province Modifier
 sacked_major_road = {
 	immigrant_attract = -0.25
 	
 	icon = 12
 }
 
+# Province Modifier
 great_road = {
 	local_rgo_throughput = 0.35
 	local_rgo_output = 0.35
@@ -220,12 +229,14 @@ great_road = {
 	icon = 11
 }
 
+# Province Modifier
 sacked_great_road = {
 	immigrant_attract = -0.35
 	
 	icon = 12
 }
 
+# Province Modifier
 orc_raids = {
 	immigrant_attract = -0.25
 	immigrant_push = 0.25
@@ -239,6 +250,7 @@ orc_raids = {
 	icon = 20
 }
 
+# Province Modifier
 tribal_outpost = {
 	immigrant_attract = -0.1
 	immigrant_push = 0.1
@@ -250,14 +262,17 @@ tribal_outpost = {
 	icon = 20
 }
 
+# Province Modifier
 military_hunting_tribals = {
 	icon = 17
 }
 
+# Province Modifier
 military_hunting_tribals_slavery = {
 	icon = 17
 }
 
+# Province Modifier
 recent_raid = {
 	immigrant_attract = -0.1
 	immigrant_push = 0.1
@@ -270,6 +285,7 @@ recent_raid = {
 	icon = 20
 }
 
+# Province Modifier
 rebuilt_city = {
 	life_rating = 0.1
 	immigrant_attract = 0.25
@@ -280,10 +296,30 @@ rebuilt_city = {
 	icon = 19
 }
 
+# Province Modifier
 dome_of_stars = {
 	research_points_modifier = 0.01
 	
 	icon = 5
+}
+
+# Province Modifier
+outlaws = {
+	movement_cost = 0.05
+	local_RGO_output = -0.1
+	local_artisan_output = -0.1
+	local_factory_output = -0.1
+	
+	icon = 34
+}
+
+# Province Modifier
+hunting_outlaws = {
+	local_RGO_output = -0.05
+	local_artisan_output = -0.05
+	local_factory_output = -0.05
+	
+	icon = 34
 }
 
 # }
@@ -1258,6 +1294,17 @@ hunting_marsh_wights = {
 	pop_militancy_modifier = 0.01
 	
 	icon = 20
+}
+
+# Province Modifier
+celduin_pirates = {
+	local_RGO_output = -0.1
+	local_artisan_output = -0.1
+	local_factory_output = -0.1
+	pop_militancy_modifier = 0.01
+	pop_consciousness_modifier = 0.01
+	
+	icon = 18
 }
 
 # }

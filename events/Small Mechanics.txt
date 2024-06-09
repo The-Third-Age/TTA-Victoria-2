@@ -738,8 +738,8 @@ province_event = {
 	trigger = {
 		NOT = { owner = { has_country_modifier = observer_mode } }
 		OR = {
-			has_crime = outlaws
-			any_neighbor_province = { has_crime = outlaws }
+			has_province_modifier = outlaws
+			any_neighbor_province = { has_province_modifier = outlaws }
 		}
 		owner = { money = 1000 }
 	}
@@ -770,7 +770,7 @@ province_event = {
 
 	trigger = {
 		NOT = { owner = { has_country_modifier = observer_mode } }
-		has_crime = hunting_outlaws
+		has_province_modifier = hunting_outlaws
 	}
 
 	mean_time_to_happen = {
@@ -800,7 +800,8 @@ province_event = {
 	option = {
 		name = "Good"
 		
-		add_crime = no_crime
+		remove_province_modifier = hunting_outlaws
+		remove_province_modifier = outlaws # Shouldn't be needed, but a sanity check anyway
 
 		# Some of the militia died
 		any_pop = {
