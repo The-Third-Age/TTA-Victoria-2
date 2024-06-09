@@ -1,6 +1,41 @@
 # Audax Validator "!" Ignore_NEXT
 # Remove the above line to have the validator run over this tile
 
+# Icon						Country Icon Number		Province Icon Number
+# Green Gavel				-						1
+# Red Gavel					-						2
+# Green Pie Chart			1						3
+# Red Pie Chart				2						4
+# Green Lightbulb			3						5
+# Red Lightbulb				4						6
+# Green Legal Document		5						7
+# Red Legal Document		6						8
+# Green Globe				7						9
+# Red Globe					8						10
+# Green Money				9						11
+# Red Money					10						12
+# Green Factory				11						13
+# Red Factory				12						14
+# Green Artwork				13						15
+# Red Artwork				14						16
+# Green Guns				15						17
+# Red Guns					16						18
+# Green People				17						19
+# Red People				18						20
+# Green One Ring			19						21
+# Red One Ring				20						22
+# Eye of Sauron				21						23
+# Yellow Gavel				22						24
+# Yellow Pie Chart			23						25
+# Yellow Lightbulb			24						26
+# Yellow Legal Document		25						27
+# Yellow Globe				26						28
+# Yellow Money				27						29
+# Yellow Factory			28						30
+# Yellow Artwork			29						31
+# Yellow Guns				30						32
+# Yellow People				31						33
+
 #############################
 ##### VANILLA MODIFIERS #####
 #############################
@@ -867,6 +902,7 @@ bad_raven_influence = {
 }
 # }
 ##### BARDING REALM ##### {
+# Country Modifier
 king_of_lakemen = {
 	commerce_tech_research_bonus = 0.02
 	prestige = 0.1
@@ -874,6 +910,7 @@ king_of_lakemen = {
 	icon = 5
 }
 
+# Country Modifier
 king_of_adhalling = {
 	factory_output = 0.05
 	prestige = 0.1
@@ -881,6 +918,7 @@ king_of_adhalling = {
 	icon = 5
 }
 
+# Country Modifier
 king_of_grammas = {
 	rgo_output = 0.05
 	prestige = 0.1
@@ -888,6 +926,7 @@ king_of_grammas = {
 	icon = 5
 }
 
+# Country Modifier
 king_of_rivermen = {
 	# Audax Validator "." Ignore_1007
 	min_tariff = 0.1
@@ -897,6 +936,7 @@ king_of_rivermen = {
 	icon = 5
 }
 
+# Province Modifier
 reconstruction_finished_smaugs_desolation = {
 	immigrant_attract = 0.10
 	pop_consciousness_modifier = -0.01
@@ -906,18 +946,21 @@ reconstruction_finished_smaugs_desolation = {
 	icon = 1
 }
 
+# Country Modifier
 northmen_council = {
 	global_pop_consciousness_modifier = -0.02
 	
 	icon = 5
 }
 
+# Country Modifier
 meres_end_constructing_boat_lift = {
 	tax_efficiency = -0.05
 	
 	icon = 10
 }
 
+# Province Modifier
 meres_end_increased_trade = {
 	# Audax Validator "." Ignore_1007
 	local_artisan_output = 0.05
@@ -927,6 +970,7 @@ meres_end_increased_trade = {
 	icon = 9
 }
 
+# Country Modifier
 rivermen_minor = {
 	mobilization_economy_impact = -1
 	mobilization_impact = -1
@@ -936,6 +980,7 @@ rivermen_minor = {
 	icon = 15
 }
 
+# Country Modifier
 funding_celduin_pirates = {
 	tax_efficiency = -0.05
 	tariff_efficiency_modifier = 0.1
@@ -944,6 +989,7 @@ funding_celduin_pirates = {
 	icon = 15
 }
 
+# Province Modifier
 wonder_of_the_north = {
 	immigrant_attract = 0.1
 	# Audax Validator "." Ignore_1007
@@ -955,6 +1001,7 @@ wonder_of_the_north = {
 	icon = 11
 }
 
+# Esgaroth Trade Levels - Province Modifiers {
 esgaroth_trade_i = {
 	local_RGO_output = 0.05
 	
@@ -988,13 +1035,16 @@ esgaroth_trade_v = {
 	
 	icon = 11
 }
+# }
 
+# Country Modifier
 trading_with_DAL = {
 	tariff_efficiency_modifier = 0.25
 	
 	icon = 9
 }
 
+# Province Modifier
 royal_lord = {
 	pop_militancy_modifier = -0.01
 	pop_consciousness_modifier = -0.01
@@ -1003,7 +1053,7 @@ royal_lord = {
 	icon = 19
 }
 
-# Merchant/Guild Balance of Power {
+# Merchant/Guild Balance of Power - Country Modifiers {
 DAL_merchant_power_10 = {
 	factory_output = 0.10
 	artisan_output = 0.10
@@ -1187,6 +1237,28 @@ DAL_guild_power_10 = {
 	icon = 23
 }
 # }
+
+# Province Modifier
+marsh_wights = {
+	assimilation_rate = -1
+	immigrant_attract = -1
+	life_rating = -0.25
+	pop_consciousness_modifier = 0.01
+	pop_militancy_modifier = 0.01
+	
+	icon = 20
+}
+
+# Province Modifier
+hunting_marsh_wights = {
+	assimilation_rate = -0.5
+	immigrant_attract = -0.5
+	life_rating = -0.10
+	pop_consciousness_modifier = 0.01
+	pop_militancy_modifier = 0.01
+	
+	icon = 20
+}
 
 # }
 ##### URUKDURBZAGH ##### {

@@ -462,15 +462,16 @@ country_event = {
 			any_neighbor_province = {
 				limit = {
 					OR = {
-						has_crime = marsh_wights
-						has_crime = hunting_marsh_wights
+						has_province_modifier = marsh_wights
+						has_province_modifier = hunting_marsh_wights
 					}
 					OR = {
 						owned_by = LMW
 						NOT = { is_core = LMW }
 					}
 				}
-				add_crime = no_crime
+				remove_province_modifier = marsh_wights
+				remove_province_modifier = hunting_marsh_wights
 			}
 		}
 		

@@ -58,7 +58,7 @@ political_decisions = {
 			}
 			
 			# Setting up Marsh Wights
-			451 = { add_crime = marsh_wights }
+			451 = { add_province_modifier = { name = marsh_wights duration = -1 } }
 			
 			# Setting up trading mechanic
 			ERE = { add_country_modifier = { name = trading_with_DAL duration = -1 } }
@@ -318,8 +318,8 @@ political_decisions = {
 				any_core = {
 					owner = { war_with = THIS }
 					OR = {
-						has_crime = marsh_wights
-						has_crime = hunting_marsh_wights
+						has_province_modifier = marsh_wights
+						has_province_modifier = hunting_marsh_wights
 					}
 				}
 			}
@@ -337,8 +337,8 @@ political_decisions = {
 					limit = {
 						owner = { war_with = THIS }
 						OR = {
-							has_crime = marsh_wights
-							has_crime = hunting_marsh_wights
+							has_province_modifier = marsh_wights
+							has_province_modifier = hunting_marsh_wights
 						}
 					}
 					owner = { country_event = 50924 }
