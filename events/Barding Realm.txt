@@ -567,7 +567,7 @@ province_event = {
 	desc = "EVTDESC50916"
 	
 	trigger = {
-		has_crime = celduin_pirates
+		has_province_modifier = celduin_pirates
 		owner = { money = 5000 }
 	}
 	
@@ -753,7 +753,7 @@ province_event = {
 	desc = "EVTDESC50922"
 	
 	trigger = {
-		has_crime = marsh_wights
+		has_province_modifier = marsh_wights
 		NOT = { owner = { tag = LMW } }
 	}
 	
@@ -806,7 +806,8 @@ province_event = {
 		
 		owner = { treasury = -100000 }
 		
-		add_crime = hunting_marsh_wights
+		add_province_modifier = { name = hunting_marsh_wights duration = -1 }
+		remove_province_modifier = marsh_wights
 		
 		ai_chance = {
 			factor = 1
@@ -826,7 +827,7 @@ province_event = {
 	desc = "EVTDESC50923"
 	
 	trigger = {
-		has_crime = hunting_marsh_wights
+		has_province_modifier = hunting_marsh_wights
 		NOT = { owner = { tag = LMW } }
 	}
 	
@@ -882,8 +883,8 @@ country_event = {
 			any_core = {
 				owned_by = THIS
 				OR = {
-					has_crime = marsh_wights
-					has_crime = hunting_marsh_wights
+					has_province_modifier = marsh_wights
+					has_province_modifier = hunting_marsh_wights
 				}
 				OR = {
 					pop_majority_culture = wight

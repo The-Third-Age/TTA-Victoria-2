@@ -428,10 +428,10 @@ country_event = {
 						province_id = 1406 # Durannon
 						province_id = 1431 # Esgaldor
 					}
-					NOT = { has_crime = celduin_pirates }
+					NOT = { has_province_modifier = celduin_pirates }
 					NOT = { owner = { primary_culture = rivermen } }
 				}
-				add_crime = celduin_pirates
+				add_province_modifier = { name = celduin_pirates duration = -1 }
 			}
 		}
 		
@@ -441,15 +441,15 @@ country_event = {
 			}
 			any_neighbor_province = {
 				limit = {
-					has_crime = celduin_pirates
+					has_province_modifier = celduin_pirates
 				}
-				add_crime = no_crime
+				remove_province_modifier = celduin_pirates
 			}
 		}
 		
 		any_country = {
 			limit = {
-				any_owned_province = { has_crime = celduin_pirates }
+				any_owned_province = { has_province_modifier = celduin_pirates }
 				NOT = { has_country_flag = DAL_alerted_about_pirates }
 			}
 			country_event = 50915
@@ -462,15 +462,16 @@ country_event = {
 			any_neighbor_province = {
 				limit = {
 					OR = {
-						has_crime = marsh_wights
-						has_crime = hunting_marsh_wights
+						has_province_modifier = marsh_wights
+						has_province_modifier = hunting_marsh_wights
 					}
 					OR = {
 						owned_by = LMW
 						NOT = { is_core = LMW }
 					}
 				}
-				add_crime = no_crime
+				remove_province_modifier = marsh_wights
+				remove_province_modifier = hunting_marsh_wights
 			}
 		}
 		

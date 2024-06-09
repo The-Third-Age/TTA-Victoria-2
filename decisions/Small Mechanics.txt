@@ -93,12 +93,12 @@ political_decisions = {
 political_decisions = {
 	hunt_for_outlaws = {
 		potential = {
-			any_owned_province = { has_crime = outlaws }
+			any_owned_province = { has_province_modifier = outlaws }
 		}
 
 		allow = {
 			any_owned_province = {
-				has_crime = outlaws
+				has_province_modifier = outlaws
 				OR = {
 					has_building = fort
 					country_units_in_province = THIS
@@ -110,13 +110,14 @@ political_decisions = {
 		effect = {
 			random_owned = {
 				limit = {
-					has_crime = outlaws
+					has_province_modifier = outlaws
 					OR = {
 						has_building = fort
 						country_units_in_province = THIS
 					}
 				}
-				add_crime = hunting_outlaws
+				add_province_modifier = { name = hunting_outlaws duration = -1 }
+				remove_province_modifier = outlaws
 			}
 			treasury = -10000
 			
