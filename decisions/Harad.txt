@@ -914,7 +914,6 @@ political_decisions = {
 			}
 			NOT = {	has_country_flag = HRN_ultimatum_sent }
 		}
-		
 		allow = {
 			has_recently_lost_war = no
 			war = no
@@ -936,7 +935,6 @@ political_decisions = {
 			}
 			NOT = { truce_with = HRN }
 		}
-		
 		effect = {
 			prestige = 15
 			badboy = 5
@@ -976,7 +974,7 @@ political_decisions = {
 		}
 	}
 	
-	conquer_harondor_southern_colonizer = {
+	conquer_harondor_southron_colonizer = {
 		picture = "harnendor_map"
 		potential = {
 			has_country_flag = colonizing_harondor
@@ -1113,6 +1111,37 @@ political_decisions = {
 			}
 			
 			add_accepted_culture = variag
+		}
+	}
+	
+	incorporate_nurn = {
+		picture = "HAR_core_removal"
+		potential = {
+			tag = HAR
+			NOT = { accepted_culture = nurniag }
+			NOT = { primary_culture = nurniag }
+		}
+		
+		allow = {
+			NUR = {
+				all_core = {
+					OR = {
+						owner = { tag = THIS }
+						owner = { vassal_of = THIS }
+						owner = { in_sphere = THIS }
+						empty = yes
+					}
+				}
+			}
+		}
+		
+		effect = {
+			KHA = {
+				country_event = 100004
+				all_core = { add_core = HAR }
+			}
+			
+			add_accepted_culture = nurniag
 		}
 	}
 	
