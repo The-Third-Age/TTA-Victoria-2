@@ -278,13 +278,13 @@ guiTypes = {
 			iconType = {
 				name = "crime_icon"
 				spriteType = "GFX_crime_strip"
-				position = { x= 23 y = 131 }
+				position = { x= 21 y = 135 }
 				Orientation = "UPPER_LEFT"
 			}
 			
 			instantTextBoxType = {
 				name = "crime_name"
-				position = { x = 57 y = 138 }
+				position = { x = 75 y = 138 }
 				font = "vic_18_black"
 				text = "crime_name"
 				maxWidth = 200
@@ -292,20 +292,20 @@ guiTypes = {
 				format = left
 			}
 			
-			iconType = {
-				name = "crimefight_icon"
-				spriteType = "GFX_province_crimefight"
-				position = { x= 244 y = 130 }
-				Orientation = "UPPER_LEFT"
-			}
+			# iconType = {
+				# name = "crimefight_icon"
+				# spriteType = "GFX_province_crimefight"
+				# position = { x= 244 y = 130 }
+				# Orientation = "UPPER_LEFT"
+			# }
 			
 			instantTextBoxType = {
 				name = "crimefight_percent"
 				position = { x = 262 y = 138 }
-				font = "vic_18_black"
+				font = "empty_font"
 				text = "10%"
-				maxWidth = 100
-				maxHeight = 16
+				maxWidth = 0
+				maxHeight = 0
 				format = left
 			}
 
