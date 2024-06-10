@@ -1157,6 +1157,26 @@ country_event = {
 		}
 		# }
 		
+		# Smaug's Desolation (Country Modifier)
+		# Removing Smaug's Desolation
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = smaugs_desolation_country
+				NOT = { any_owned_province = { has_province_modifier = smaugs_desolation } }
+			}
+			country_event = 50906
+		}
+		
+		# Adding Smaug's Desolation
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = smaugs_desolation_country }
+				any_owned_province = { has_province_modifier = smaugs_desolation }
+			}
+			country_event = 50905
+		}
+		# }
+		
 		# Refire the cleanup event next month
 		country_event = { id = 99001 days = 30 }
 	}
