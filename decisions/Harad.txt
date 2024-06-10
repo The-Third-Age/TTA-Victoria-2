@@ -887,6 +887,7 @@ political_decisions = {
 	harnendor_question = {
 		picture = "harnendor_map"
 		potential = {
+			HRN = { any_core = { NOT = { owned_by = THIS } } }
 			OR = {
 				AND = {
 					OR = {
@@ -945,20 +946,6 @@ political_decisions = {
 			236 = { add_core = THIS }
 			238 = { add_core = THIS }
 			239 = { add_core = THIS }
-			any_country = {
-				limit = {
-					NOT = { tag = HRN }
-					any_owned = { is_core = HRN }
-					OR = { 
-						is_our_vassal = THIS
-						in_sphere = THIS
-					}
-				}
-				any_owned = {
-					limit = { is_core = HRD }
-					secede_province = THIS
-				}
-			}
 			random_owned = {
 				limit = {
 					HRN = {
@@ -972,36 +959,46 @@ political_decisions = {
 				}
 				HRN = {	country_event = 60201 }
 			}
+			any_country = {
+				limit = {
+					NOT = { tag = HRN }
+					OR = { 
+						is_our_vassal = THIS
+						in_sphere = THIS
+					}
+				}
+				any_owned = {
+					limit = { is_core = HRD }
+					secede_province = THIS
+				}
+			}
 			set_country_flag = HRN_ultimatum_sent
 		}
 	}
 	
-	conquer_harondor = {
+	conquer_harondor_southern_colonizer = {
 		picture = "harnendor_map"
 		potential = {
 			has_country_flag = colonizing_harondor
 			NOT = {	has_country_flag = harondor_core_owner }
-			HRD = {
-				any_core = {
-					NOT = { owned_by = THIS	}
-					owner = {
-						neighbour = THIS
-						NOT = {	truce_with = THIS }
-						NOT = { is_our_vassal = THIS }
-					}
-				}
-			}
+			HRD = {	any_core = { owner = { neighbour = THIS } }	}
 		}
-		
-		allow = {	
+		allow = {
 			has_recently_lost_war = no
 			war = no
 			expansion_1 = 1
 			diplomacy_2 = 1
 			HRD = {	any_core = { owner = { NOT = { truce_with = THIS } } } }
 			NOT = { has_country_flag = harondor_conquest }
+			HRD = {
+				any_core = {
+					NOT = { owned_by = THIS	}
+					NOT = {	owner = { truce_with = THIS } }
+					NOT = { owner = { is_our_vassal = THIS } }
+					owner = { neighbour = THIS }
+				}
+			}
 		}
-		
 		effect = {
 			prestige = 10
 			badboy = 3
