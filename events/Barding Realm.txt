@@ -229,85 +229,60 @@ province_event = {
 	}
 }
 
-province_event = {
+# Adding of Smaug's Desolation
+country_event = {
 	id = 50905
-	title = "Reconstruction from Smaug's Destruction"
-	desc = "EVTDESC50906"
+	title = "Smaug's Desolation"
+	desc = "EVTDESC50905"
+	picture = "Gramavuld/Smaug"
 	
-	trigger = {
-		has_crime = smaugs_desolation
-	}
-	
-	mean_time_to_happen = {
-		months = 60
-	}
+	is_triggered_only = yes
 	
 	option = {
-		name = "It is time"
+		name = "We must repair the damage"
 		
-		add_crime = reconstruction_started_smaugs_desolation
+		add_country_modifier = { name = smaugs_desolation_country duration = -1 }
 	}
 }
 
-province_event = {
+# Removal of Smaug's Desolation
+country_event = {
 	id = 50906
-	title = "Reconstruction from Smaug's Destruction"
+	title = "Reconstruction from Smaug's Desolation"
 	desc = "EVTDESC50906"
+	picture = "Gramavuld/Smaug"
 	
-	trigger = {
-		has_crime = smaugs_desolation
-		owner = { money = 25000 }
-	}
-	
-	mean_time_to_happen = {
-		months = 60
-		
-		modifier = {
-			factor = 0.5
-			owner = { money = 100000 }
-		}
-		
-		modifier = {
-			factor = 0.5
-			owner = { money = 250000 }
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
-		name = "It is time"
+		name = "Good"
 		
-		owner = { treasury = -25000 }
-		
-		add_crime = reconstruction_started_smaugs_desolation
-	}
-	
-	option = {
-		name = "We have other matters to attend"
+		remove_country_modifier = smaugs_desolation_country
 	}
 }
 
+# Reconstruction from Smaug's Desolation
 province_event = {
 	id = 50907
 	title = "Reconstruction from Smaug's Destruction"
 	desc = "EVTDESC50907"
 	
 	trigger = {
-		has_crime = reconstruction_started_smaugs_desolation
-	}
-	
-	mean_time_to_happen = {
-		months = 180
-		
-		modifier = {
-			factor = 0.75
-			guilds_3 = 1
+		has_province_modifier = smaugs_desolation
+		OR = {
+			has_crime = province_wealth_0
+			has_crime = province_wealth_1
+			has_crime = province_wealth_2
+			has_crime = province_wealth_3
+			has_crime = province_wealth_4
+			has_crime = province_wealth_5
 		}
 	}
 	
 	option = {
 		name = "We are removing a stain from the land and memory"
 		
-		add_crime = no_crime
+		remove_province_modifier = smaugs_desolation
 		add_province_modifier = { name = reconstruction_finished_smaugs_desolation duration = 730 }
 	}
 }
@@ -567,7 +542,7 @@ province_event = {
 	desc = "EVTDESC50916"
 	
 	trigger = {
-		has_crime = celduin_pirates
+		has_province_modifier = celduin_pirates
 		owner = { money = 5000 }
 	}
 	
@@ -753,7 +728,7 @@ province_event = {
 	desc = "EVTDESC50922"
 	
 	trigger = {
-		has_crime = marsh_wights
+		has_province_modifier = marsh_wights
 		NOT = { owner = { tag = LMW } }
 	}
 	
@@ -806,7 +781,8 @@ province_event = {
 		
 		owner = { treasury = -100000 }
 		
-		add_crime = hunting_marsh_wights
+		add_province_modifier = { name = hunting_marsh_wights duration = -1 }
+		remove_province_modifier = marsh_wights
 		
 		ai_chance = {
 			factor = 1
@@ -826,7 +802,7 @@ province_event = {
 	desc = "EVTDESC50923"
 	
 	trigger = {
-		has_crime = hunting_marsh_wights
+		has_province_modifier = hunting_marsh_wights
 		NOT = { owner = { tag = LMW } }
 	}
 	
@@ -882,8 +858,8 @@ country_event = {
 			any_core = {
 				owned_by = THIS
 				OR = {
-					has_crime = marsh_wights
-					has_crime = hunting_marsh_wights
+					has_province_modifier = marsh_wights
+					has_province_modifier = hunting_marsh_wights
 				}
 				OR = {
 					pop_majority_culture = wight

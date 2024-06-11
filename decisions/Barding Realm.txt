@@ -37,12 +37,15 @@ political_decisions = {
 			}
 			
 			# Setting up Smaug's Desolation
-			141 = { add_crime = smaugs_desolation }
-			652 = { add_crime = reconstruction_started_smaugs_desolation }
-			653 = { add_crime = smaugs_desolation }
-			654 = { add_crime = reconstruction_started_smaugs_desolation }
-			655 = { add_crime = smaugs_desolation }
-			656 = { add_crime = smaugs_desolation }
+			# TODO: Have these regions start with repairing_province (when implemented)
+			141 = { add_crime = province_devastation_1 add_province_modifier = { name = smaugs_desolation duration = -1 } }
+			652 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
+			653 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
+			654 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
+			655 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
+			656 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
+			
+			add_country_modifier = { name = smaugs_desolation_country duration = -1 }
 			
 			# Setting up the Rivermen Minors
 			any_country = {
@@ -58,7 +61,7 @@ political_decisions = {
 			}
 			
 			# Setting up Marsh Wights
-			451 = { add_crime = marsh_wights }
+			451 = { add_province_modifier = { name = marsh_wights duration = -1 } }
 			
 			# Setting up trading mechanic
 			ERE = { add_country_modifier = { name = trading_with_DAL duration = -1 } }
@@ -79,12 +82,12 @@ political_decisions = {
 			FOR = { country_event = { id = 33000 days = 152 } } # June 1
 			FOR = { country_event = { id = 33001 days = 182 } } # June 1
 			
-			# Start Flavor Cleanup event loop -- not starting it immediately to time reform flags correctly
-			FOR = { country_event = { id = 99001 days = 3 } }
-			
 			# Firing the fluff events -- order reversed so the realm event gets overlayed on top of the leader event
 			country_event = { id = 30032 days = 3 } # Leader Description
 			country_event = { id = 35017 days = 3 } # Realm Description
+			
+			# Start Flavor Cleanup event loop -- not starting it immediately to time reform flags correctly
+			FOR = { country_event = { id = 99001 days = 3 } }
 		}
 	}
 	
@@ -318,8 +321,8 @@ political_decisions = {
 				any_core = {
 					owner = { war_with = THIS }
 					OR = {
-						has_crime = marsh_wights
-						has_crime = hunting_marsh_wights
+						has_province_modifier = marsh_wights
+						has_province_modifier = hunting_marsh_wights
 					}
 				}
 			}
@@ -337,8 +340,8 @@ political_decisions = {
 					limit = {
 						owner = { war_with = THIS }
 						OR = {
-							has_crime = marsh_wights
-							has_crime = hunting_marsh_wights
+							has_province_modifier = marsh_wights
+							has_province_modifier = hunting_marsh_wights
 						}
 					}
 					owner = { country_event = 50924 }
