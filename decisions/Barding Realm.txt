@@ -38,7 +38,7 @@ political_decisions = {
 			
 			# Setting up Smaug's Desolation
 			# TODO: Have these regions start with repairing_province (when implemented)
-			141 = { add_crime = province_devastation_1 add_province_modifier = { name = smaugs_desolation duration = -1 } }
+			141 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
 			652 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
 			653 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
 			654 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
@@ -61,7 +61,10 @@ political_decisions = {
 			}
 			
 			# Setting up Marsh Wights
-			451 = { add_province_modifier = { name = marsh_wights duration = -1 } }
+			451 = { 
+				add_province_modifier = { name = marsh_wights duration = -1 }
+				add_crime = province_devastation_2
+			}
 			
 			# Setting up trading mechanic
 			ERE = { add_country_modifier = { name = trading_with_DAL duration = -1 } }

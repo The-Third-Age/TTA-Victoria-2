@@ -4,7 +4,7 @@
 # World Bank Events: {
 # 99000 - 99799 }
 
-# Generic Cleanup
+# Generic Month Cleanup
 country_event = {
 	id = 99000
 	picture = "production"
@@ -457,10 +457,11 @@ country_event = {
 		}
 		# }
 		
-		# Marsh Wights
+		# Marsh Wights {
 		random_owned = {
 			any_neighbor_province = {
 				limit = {
+					province_id = 451
 					OR = {
 						has_province_modifier = marsh_wights
 						has_province_modifier = hunting_marsh_wights
@@ -474,6 +475,21 @@ country_event = {
 				remove_province_modifier = hunting_marsh_wights
 			}
 		}
+		
+		random_owned = {
+			random_neighbor_province = {
+				limit = {
+					province_id = 451
+					is_core = LMW
+					NOT = {
+						has_province_modifier = marsh_wights
+						has_province_modifier = hunting_marsh_wights
+					}
+				}
+				add_province_modifier = { name = marsh_wights duration = -1 }
+			}
+		}
+		# }
 		
 		# Trading Mechanic Modifier Changes {
 		# Remove trading modifiers and flags if DAL doesn't exist or it doesn't own Esgaroth
@@ -1179,5 +1195,190 @@ country_event = {
 		
 		# Refire the cleanup event next month
 		country_event = { id = 99001 days = 30 }
+	}
+}
+
+# Generic Daily Cleanup
+country_event = {
+	id = 99250
+	picture = "production"
+	title = "Generic Cleanup"
+	desc = "EVTDESC99250"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fix it please"
+		
+		# Add the default wealth to any province missing it
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+						NOT = { has_crime = province_devastation_5 }
+						NOT = { has_crime = province_devastation_4 }
+						NOT = { has_crime = province_devastation_3 }
+						NOT = { has_crime = province_devastation_2 }
+						NOT = { has_crime = province_devastation_1 }
+						NOT = { has_crime = province_wealth_0 }
+						NOT = { has_crime = province_wealth_1 }
+						NOT = { has_crime = province_wealth_2 }
+						NOT = { has_crime = province_wealth_3 }
+						NOT = { has_crime = province_wealth_4 }
+						NOT = { has_crime = province_wealth_5 }
+				}
+				add_crime = province_wealth_0
+			}
+		}
+		
+		# Province initial occupation: -1
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					NOT = { controlled_by = owner }
+					NOT = { province_control_days = 1 }
+				}
+				add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+				owner = { set_global_flag = hidden_effects } # Only run the application event if changes are detected
+			}
+		}
+		
+		# Apply the calculated changes
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = hidden_effects }
+			}
+			owner = {
+				clr_global_flag = hidden_effects
+				country_event = 90799
+			}
+		}
+		
+		# Refire the cleanup event tomorrow
+		country_event = { id = 99250 days = 1 }
+	}
+}
+
+# Province Wealth -- Generic change
+country_event = {
+	id = 90799
+	picture = "production"
+	title = "Province Wealth"
+	desc = "EVTDESC90799"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Change it"
+		
+		# Change by -1 {
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_4
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_devastation_5
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_3
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_devastation_4
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_2
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_devastation_3
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_1
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_devastation_2
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_0
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_devastation_1
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_1
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_wealth_0
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_2
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_wealth_1
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_3
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_wealth_2
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_4
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_wealth_3
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_5
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				add_crime = province_wealth_4
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = province_wealth_decrease_1_target_modifier
+				}
+				remove_province_modifier = province_wealth_decrease_1_target_modifier
+			}
+		}
+		# }
 	}
 }
