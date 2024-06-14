@@ -560,6 +560,7 @@ province_event = {
 		random = {
 			chance = 10
 			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+			owner = { FOR = { country_event = 90799 } } # Province Wealth change event
 		}
 	}
 	
@@ -584,29 +585,6 @@ province_event = {
 				country_event = 50917
 				relation = { who = THIS value = -50 }
 			}
-		}
-		
-		# Only set the flag (and run the cleanup event) if the effects actually are happening
-		owner = {
-			random_owned = {
-				limit = {
-					has_province_modifier = province_wealth_decrease_1_target_modifier
-				}
-				owner = { set_global_flag = hidden_effects }
-			}
-		}
-		
-		# Decrease Province Wealth by 1
-		owner = {
-			random_country = {
-				limit = {
-					tag = FOR
-					has_global_flag = hidden_effects
-				}
-				country_event = 90799
-			}
-			
-			clr_global_flag = hidden_effects
 		}
 		
 		random = {
@@ -772,6 +750,7 @@ province_event = {
 		random = {
 			chance = 50
 			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+			owner = { FOR = { country_event = 90799 } } # Province Wealth change event
 		}
 	}
 	
@@ -798,29 +777,6 @@ province_event = {
 			reduce_pop = 0.95
 			militancy = 2
 			consciousness = 2
-		}
-		
-		# Only set the flag (and run the cleanup event) if the effects actually are happening
-		owner = {
-			random_owned = {
-				limit = {
-					has_province_modifier = province_wealth_decrease_1_target_modifier
-				}
-				owner = { set_global_flag = hidden_effects }
-			}
-		}
-		
-		# Decrease Province Wealth by 1
-		owner = {
-			random_country = {
-				limit = {
-					tag = FOR
-					has_global_flag = hidden_effects
-				}
-				country_event = 90799
-			}
-			
-			clr_global_flag = hidden_effects
 		}
 		
 		random = {
@@ -854,29 +810,6 @@ province_event = {
 		
 		add_province_modifier = { name = hunting_marsh_wights duration = -1 }
 		remove_province_modifier = marsh_wights
-		
-		# Only set the flag (and run the cleanup event) if the effects actually are happening
-		owner = {
-			random_owned = {
-				limit = {
-					has_province_modifier = province_wealth_decrease_1_target_modifier
-				}
-				owner = { set_global_flag = hidden_effects }
-			}
-		}
-		
-		# Decrease Province Wealth by 1
-		owner = {
-			random_country = {
-				limit = {
-					tag = FOR
-					has_global_flag = hidden_effects
-				}
-				country_event = 90799
-			}
-			
-			clr_global_flag = hidden_effects
-		}
 		
 		random = {
 			chance = 50 # Make sure this percentage matches the immediate
@@ -913,6 +846,7 @@ province_event = {
 		random = {
 			chance = 50
 			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+			owner = { FOR = { country_event = 90799 } } # Province Wealth change event
 		}
 	}
 	
@@ -946,29 +880,6 @@ province_event = {
 			reduce_pop = 0.95
 			militancy = 2
 			consciousness = 2
-		}
-		
-		# Only set the flag (and run the cleanup event) if the effects actually are happening
-		owner = {
-			random_owned = {
-				limit = {
-					has_province_modifier = province_wealth_decrease_1_target_modifier
-				}
-				owner = { set_global_flag = hidden_effects }
-			}
-		}
-		
-		# Decrease Province Wealth by 1
-		owner = {
-			random_country = {
-				limit = {
-					tag = FOR
-					has_global_flag = hidden_effects
-				}
-				country_event = 90799
-			}
-			
-			clr_global_flag = hidden_effects
 		}
 		
 		random = {
