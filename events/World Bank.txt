@@ -317,6 +317,7 @@ country_event = {
 		# }
 		
 		# Province Wealth Changes {
+		# Technically speaking, we should be worry about if there are change modifiers existing. However, that occurrance is going to be rare enough that a player *likely* will not notice
 		# Province controlled by someone other than owner: 10% chance of -1
 		random_owned = {
 			any_neighbor_province = {
@@ -1357,6 +1358,7 @@ country_event = {
 		}
 		
 		# Province initial occupation: -1
+		# Technically speaking, we should be worry about if there are change modifiers existing. However, that occurrance is going to be rare enough that a player *likely* will not notice
 		random_owned = {
 			any_neighbor_province = {
 				limit = {
@@ -1367,6 +1369,7 @@ country_event = {
 			}
 		}
 		
+		# Apply any changes to the province wealth
 		country_event = { id = 90799 days = 0 }
 		
 		# Refire the cleanup event tomorrow
@@ -1385,6 +1388,96 @@ country_event = {
 	
 	option = {
 		name = "Change it"
+		
+		# Change by +2
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_4
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_wealth_5
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_3
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_wealth_5
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_2
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_wealth_4
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_1
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_wealth_3
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_0
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_wealth_2
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_1
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_wealth_1
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_2
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_wealth_0
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_3
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_devastation_1
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_4
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_devastation_2
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_5
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				add_crime = province_devastation_3
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = province_wealth_increase_2_target_modifier
+				}
+				remove_province_modifier = province_wealth_increase_2_target_modifier
+			}
+		}
 		
 		# Change by +1
 		random_owned = {
