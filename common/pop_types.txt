@@ -126,6 +126,10 @@ promotion_chance = {
 		factor = 10
 		pop_majority_ideology = tribal_ideology
 		country = { civilized = yes }
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
 	}
 }
 
@@ -303,6 +307,10 @@ demotion_chance = {
 		factor = 10
 		pop_majority_ideology = tribal_ideology
 		country = { civilized = yes }
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
 	}
 }
 
