@@ -3059,3 +3059,229 @@ province_event = {
 		}
 	}
 }
+
+# Province Wealth Repair
+province_event = {
+	id = 12053
+	title = "The Repair of $PROVINCENAME$"
+	desc = "EVTDESC12053"
+	
+	trigger = {
+		NOT = { owner = { has_global_flag = province_wealth_intervention_disabled } }
+		NOT = { owner = { has_country_modifier = observer_mode } }
+		owner = { war = no }
+		OR = {
+			has_crime = province_devastation_5
+			has_crime = province_devastation_4
+			has_crime = province_devastation_3
+			has_crime = province_devastation_2
+			has_crime = province_devastation_1
+		}
+		owner = { NOT = { any_owned_province = { has_province_modifier = province_wealth_repairing_province } } }
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		name = "We can spare some money"
+		
+		state_scope = {
+			any_owned = {
+				limit = {
+					OR = {
+						has_crime = province_devastation_5
+						has_crime = province_devastation_4
+						has_crime = province_devastation_3
+						has_crime = province_devastation_2
+						has_crime = province_devastation_1
+					}
+				}
+				add_province_modifier = { name = province_wealth_repairing_province duration = -1 }
+				remove_province_modifier = province_wealth_ignore_repair_province
+			}
+		}
+	}
+	
+	option = {
+		name = "The locals will repair the province in time"
+		
+		state_scope = {
+			any_owned = {
+				limit = {
+					OR = {
+						has_crime = province_devastation_5
+						has_crime = province_devastation_4
+						has_crime = province_devastation_3
+						has_crime = province_devastation_2
+						has_crime = province_devastation_1
+					}
+				}
+				add_province_modifier = { name = province_wealth_ignore_repair_province duration = 365 }
+				remove_province_modifier = province_wealth_repairing_province
+			}
+		}
+		
+		owner = { plurality = -1 }
+	}
+}
+
+# Province Investment
+province_event = {
+	id = 12054
+	title = "An Opportunity in $PROVINCENAME$"
+	desc = "EVTDESC12054"
+	
+	trigger = {
+		NOT = { owner = { has_global_flag = province_wealth_intervention_disabled } }
+		owner = { war = no }
+		NOT = { owner = { has_country_modifier = observer_mode } }
+		OR = {
+			has_crime = province_wealth_0
+			has_crime = province_wealth_1
+			has_crime = province_wealth_2
+			has_crime = province_wealth_3
+			has_crime = province_wealth_4
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 800
+	}
+	
+	option = {
+		name = "Of course!"
+		
+		state_scope = {
+			any_owned = {
+				limit = {
+					OR = {
+						has_crime = province_wealth_0
+						has_crime = province_wealth_1
+						has_crime = province_wealth_2
+						has_crime = province_wealth_3
+						has_crime = province_wealth_4
+					}
+				}
+				remove_province_modifier = province_wealth_repairing_province # Shouldn't be needed, but tossing it here just in case
+				add_province_modifier = { name = province_wealth_investing_in_province duration = 365 }
+			}
+		}
+	}
+	
+	option = {
+		name = "We have more pressing concerns"
+	}
+}
+
+# The Sacking of $PROVINCENAME$
+province_event = {
+	id = 12055
+	title = "The Sacking of $PROVINCENAME$"
+	desc = "EVTDESC12055"
+	
+	trigger = {
+		NOT = { owner = { has_global_flag = province_wealth_intervention_disabled } }
+		NOT = { controlled_by = owner }
+		controlled_by_rebels = no
+		OR = {
+			has_crime = province_wealth_3
+			has_crime = province_wealth_4
+			has_crime = province_wealth_5
+		}
+	}
+	
+	# mean_time_to_happen = {
+		# months = 12
+	# }
+	
+	option = {
+		name = "They will pay for this!"
+		
+		add_crime = province_devastation_5
+		
+		controller = {
+			set_country_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					controlled_by = owner
+					OR = {
+						has_crime = province_devastation_5
+						has_crime = province_devastation_4
+						has_crime = province_devastation_3
+						has_crime = province_devastation_2
+						has_crime = province_devastation_1
+						has_crime = province_wealth_0
+						has_crime = province_wealth_1
+						has_crime = province_wealth_2
+						has_crime = province_wealth_3
+					}
+				}
+				province_event = { id = 12056 days = 0 }
+				owner = { set_country_flag = province_wealth_target_found }
+			}
+			random_owned = {
+				limit = {
+					has_country_flag = hidden_effects
+					owner = { NOT = { has_country_flag = province_wealth_target_found } }
+					controlled_by = owner
+					has_crime = province_wealth_4
+				}
+				province_event = { id = 12056 days = 0 }
+			}
+			random_owned = {
+				limit = {
+					has_country_flag = hidden_effects
+					owner = { NOT = { has_country_flag = province_wealth_target_found } }
+					controlled_by = owner
+					has_crime = province_wealth_5
+				}
+				province_event = { id = 12056 days = 0 }
+			}
+			clr_country_flag = province_wealth_target_found
+			clr_country_flag = hidden_effects
+		}
+	}
+}
+
+# A Great Haul
+province_event = {
+	id = 12056
+	title = "A Great Haul"
+	desc = "EVTDESC12056"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_province_modifier = { name = province_target_modifier duration = -1 }
+	}
+	
+	option = {
+		name = "Invest in our lands"
+		
+		province_wealth_increase_2_loc = {}
+		
+		owner = {
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_modifier
+				}
+				add_province_modifier = { name = province_wealth_increase_2_target_modifier duration = -1 }
+				remove_province_modifier = province_target_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+	
+	option = {
+		name = "Enrich the realm"
+		
+		owner = { treasury = 25000 }
+	}
+}

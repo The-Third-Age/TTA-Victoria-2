@@ -330,6 +330,7 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	# TODO: Update to work with province wealth
 	option = {
 		name = "Now trade can flow more easily"
 		
@@ -555,6 +556,13 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		random = {
+			chance = 10
+			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+		}
+	}
+	
 	option = {
 		name = "We ought to do something"
 		
@@ -576,6 +584,11 @@ province_event = {
 				country_event = 50917
 				relation = { who = THIS value = -50 }
 			}
+		}
+		
+		random = {
+			chance = 10 # Make sure this percentage matches the immediate
+			province_wealth_decrease_1_loc = {}
 		}
 	}
 }
@@ -732,6 +745,13 @@ province_event = {
 		NOT = { owner = { tag = LMW } }
 	}
 	
+	immediate = {
+		random = {
+			chance = 50
+			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+		}
+	}
+	
 	mean_time_to_happen = {
 		months = 12
 	}
@@ -755,6 +775,11 @@ province_event = {
 			reduce_pop = 0.95
 			militancy = 2
 			consciousness = 2
+		}
+		
+		random = {
+			chance = 50 # Make sure this percentage matches the immediate
+			province_wealth_decrease_1_loc = {}
 		}
 	}
 	
@@ -784,6 +809,11 @@ province_event = {
 		add_province_modifier = { name = hunting_marsh_wights duration = -1 }
 		remove_province_modifier = marsh_wights
 		
+		random = {
+			chance = 50 # Make sure this percentage matches the immediate
+			province_wealth_decrease_1_loc = {}
+		}
+		
 		ai_chance = {
 			factor = 1
 			
@@ -808,6 +838,13 @@ province_event = {
 	
 	mean_time_to_happen = {
 		months = 12
+	}
+	
+	immediate = {
+		random = {
+			chance = 50
+			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+		}
 	}
 	
 	option = {
@@ -840,6 +877,11 @@ province_event = {
 			reduce_pop = 0.95
 			militancy = 2
 			consciousness = 2
+		}
+		
+		random = {
+			chance = 50 # Make sure this percentage matches the immediate
+			province_wealth_decrease_1_loc = {}
 		}
 	}
 }

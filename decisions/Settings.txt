@@ -477,6 +477,36 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+	
+	disable_province_wealth_intervention = {
+		alert = no
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = province_wealth_intervention_disabled }
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = province_wealth_intervention_disabled
+		}
+	}
+	
+	enable_province_wealth_intervention = {
+		alert = no
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			has_global_flag = province_wealth_intervention_disabled
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = province_wealth_intervention_disabled
+		}
+	}
 }
 
 # Play As

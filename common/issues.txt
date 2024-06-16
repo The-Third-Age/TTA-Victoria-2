@@ -411,7 +411,6 @@ political_reforms = {
 	}
 	crown_land_ownership = {
 		next_step_only = yes
-		administrative = yes
 		
 		five_land_ownership = {
 			rich_income_modifier = 0.05
@@ -510,6 +509,7 @@ social_reforms = {
 		granted_exclusive_tr = {
 			import_cost = 0.2
 			tariff_efficiency_modifier = 0.1
+			administrative_multiplier = 1
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -519,6 +519,7 @@ social_reforms = {
 		limited_exclusive_tr = {
 			import_cost = 0.1
 			tariff_efficiency_modifier = 0.05
+			administrative_multiplier = 2
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -526,6 +527,7 @@ social_reforms = {
 			}
 		}
 		abolished_exclusive_tr = {
+			administrative_multiplier = 3
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
@@ -540,6 +542,7 @@ social_reforms = {
 			supply_consumption = 0.5
 			rich_income_modifier = 0.25
 			poor_income_modifier = -0.1
+			administrative_multiplier = 1
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -550,6 +553,7 @@ social_reforms = {
 			supply_consumption = 0.25
 			rich_income_modifier = 0.1
 			poor_income_modifier = -0.05
+			administrative_multiplier = 2
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -557,6 +561,7 @@ social_reforms = {
 			}
 		}
 		restricted_state_supplies = {
+			administrative_multiplier = 3
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
@@ -564,7 +569,6 @@ social_reforms = {
 		}
 	}
 	city_jurisdiction = {
-		administrative = yes
 		next_step_only = yes
 		
 		independent_cities = {
@@ -574,6 +578,7 @@ social_reforms = {
 			tax_efficiency = -0.03
 			suppression_points_modifier = -0.2
 			leadership_modifier = -0.1
+			administrative_multiplier = 1
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -587,6 +592,7 @@ social_reforms = {
 			tax_efficiency = -0.02
 			suppression_points_modifier = -0.1
 			leadership_modifier = -0.05
+			administrative_multiplier = 2
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -598,6 +604,7 @@ social_reforms = {
 			global_pop_consciousness_modifier = -0.02
 			administrative_efficiency_modifier = -0.01
 			tax_efficiency = -0.01
+			administrative_multiplier = 3
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -607,6 +614,7 @@ social_reforms = {
 		royal_cities = {
 			suppression_points_modifier = 0.1
 			leadership_modifier = 0.1
+			administrative_multiplier = 4
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -619,6 +627,7 @@ social_reforms = {
 		
 		no_pensions = {
 			minimum_wage = 1
+			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
@@ -628,6 +637,7 @@ social_reforms = {
 			minimum_wage = 1
 			pension_level = 0.05
 			global_immigrant_attract = 0.01
+			administrative_multiplier = 2
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -638,6 +648,7 @@ social_reforms = {
 			minimum_wage = 1
 			pension_level = 0.10
 			global_immigrant_attract = 0.02
+			administrative_multiplier = 3
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -648,6 +659,7 @@ social_reforms = {
 			minimum_wage = 1
 			pension_level = 0.15
 			global_immigrant_attract = 0.03
+			administrative_multiplier = 4
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -658,6 +670,7 @@ social_reforms = {
 			minimum_wage = 1
 			pension_level = 0.20
 			global_immigrant_attract = 0.04
+			administrative_multiplier = 5
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -667,8 +680,11 @@ social_reforms = {
 	}
 	apprenticeship = {
 		next_step_only = yes
+		administrative = yes
+		
 		hereditary = {
 			factory_output = -0.05
+			administrative_multiplier = 1
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -677,6 +693,7 @@ social_reforms = {
 		}
 		appointment = {
 			social_reform_desire = 0.1
+			administrative_multiplier = 2
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -688,6 +705,7 @@ social_reforms = {
 			factory_output = 0.05
 			education_efficiency_modifier = 0.05
 			research_points_modifier = 0.01
+			administrative_multiplier = 3
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }

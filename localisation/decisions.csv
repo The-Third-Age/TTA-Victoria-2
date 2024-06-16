@@ -89,6 +89,10 @@ annex_all_title;§TAnnex Everything§!;x
 annex_all_desc;This decision annexes all of Middle Earth to your nation.;x
 activate_observer_mode_title;§TActivate Observer Mode§!;x
 activate_observer_mode_desc;Turn on a variety of modifiers and flags to make an observer game as relaxed as possible. It's recommended to play as Remnants of Numenor if you want to play an observer game since they are far from the rest of the world.;x
+disable_province_wealth_intervention_title;§TDisable Province Wealth Intervention§!;x
+disable_province_wealth_intervention_desc;For the most part, the Province Wealth mechanic works in the background, without player intervention. However, there are a couple of random events that can fire related to no other mechanic, allowing the realm to intervene in the wealth of a province.\n\nClicking this decision will disable those events from firing.;x
+enable_province_wealth_intervention_title;§TEnable Province Wealth Intervention§!;x
+enable_province_wealth_intervention_desc;For the most part, the Province Wealth mechanic works in the background, without player intervention. However, there are a couple of random events that can fire related to no other mechanic, allowing the realm to intervene in the wealth of a province.\n\nClicking this decision will reenable these events.
 play_as_DWM_title;§rPlay as the Dwarves of the White Mountains§!;x
 play_as_DWM_desc;The Dwarves of the White Mountains are not releaseable except through this decision. Take this decision if you would like to play as the Dwarves of the White Mountains.\n\n§RThis decision will disappear after 1 month of game time. Beware that the Dwarves of the White Mountains are a meme realm§!;x
 clear_cores_from_DWM_title;§rClear Cores from Dwarves of the White Mountains§!;x
@@ -365,6 +369,8 @@ incorporate_chelkar_title;Incorporate the Chelkiags;x
 incorporate_chelkar_desc;Now that we have secured a powerful position among all of the Haradrim Tribes, we can invite other people's typically considered "Southrons" into our alliance.;x
 incorporate_khand_title;Incorporate the Variags;x
 incorporate_khand_desc;Now that we have secured a powerful position among all of the Haradrim Tribes, we can invite other people's typically considered "Southrons" into our alliance.;x
+incorporate_nurn_title;Incorporate the Nûrniags;x
+incorporate_nurn_desc;Now that we have secured a powerful position among all of the Haradrim Tribes, we can invite other people's typically considered "Southrons" into our alliance.;x
 incorporate_umbar_title;Incorporate the Umbarrim;x
 incorporate_umbar_desc;Now that we have secured a powerful position among all of the Haradrim Tribes, we can invite other people's typically considered "Southrons" into our alliance.;x
 HAR_core_removal_title;Tribal Core Removal;x
@@ -379,8 +385,8 @@ colonize_harondor_title;Colonize Harondor;x
 colonize_harondor_desc;We are in a position to colonize the neighboring land of Harondor.;x
 harnendor_question_title;The Harnendan Question;x
 harnendor_question_desc;Since we started colonising Harondor, Harnendan influence and prestige among the Haradrim has decreased. In fact, they've become a mere buffer state. We can use our influence in the area to annex Harnendor.;x
-conquer_harondor_title;Conquer Harondor;x
-conquer_harondor_desc;Another realm owns some of Harondor. We need to expel them from it.;x
+conquer_harondor_southron_colonizer_title;Conquer Harondor;x
+conquer_harondor_southron_colonizer_desc;Another realm owns some of Harondor. We need to expel them from it.;x
 claim_harondor_title;Claim Harondor;x
 claim_harondor_desc;With our control cemented, we can assert our claim to Harondor.;x
 ############################;x }
@@ -406,7 +412,7 @@ awaken_the_marsh_wights_desc;Centuries ago, the Witch-king of Angmar sent a forc
 exterminate_the_wights_title;Exterminate the Marsh-wights;x
 exterminate_the_wights_desc;After the Marsh-wights' attack, we learned where they were hiding. Now that we have beaten them back, we can finally crush them once and for all!;x
 invite_the_grammas_title;Invite the Grammas;x
-invite_the_grammas_desc;In the 10 years since our great Lord, King Bard I, slew the dragon Smaug, prosperity has come to Dale, and the realm as a whole. Seeking the consolidate the Northmen of Gramavuld under one banner, King Bard has been sending messengers and envoys to the Grammas villages within the Upper and Nether Marches. Upon the encouragement from his advisors that the Grammas are ready for integration, King Bard has sent envoys to the various villages with the following message:\n\nTo the Esteemed Villages of the Grammas,\n\nGreetings and warm tidings from the prosperous Kingdom of Dale! I, King Bard, the ruler of the Lakemen and the Adhallings, extend my hand in friendship, and bring an offer of great significance to you and your village.\n\nI seek the unite the Northmen of Gramavuld. Only together can we do that. By joining my kingdom, your village will recieve all of the protection and prosperity our great kingdom offers. What say you?;x
+invite_the_grammas_desc;In the 10 years since our great Lord, King Bard I, slew the dragon Smaug, prosperity has come to Dale, and the realm as a whole. Seeking the consolidate the Northmen of Gramavuld under one banner, King Bard has been sending messengers and envoys to the Grammas villages within the Upper and Nether Marches. Upon the encouragement from his advisors that the Grammas are ready for integration, King Bard has sent envoys to the various villages with the following message:\n\nTo the Esteemed Villages of the Grammas,\n\nGreetings and warm tidings from the prosperous Kingdom of Dale! I, King Bard, the ruler of the Lakemen and the Adhallings, extend my hand in friendship, and bring an offer of great significance to you and your village.\n\nI seek to unite the Northmen of Gramavuld. Only together can we do that. By joining my kingdom, your village will receive all of the protection and prosperity our great kingdom offers. What say you?;x
 proclaim_lordship_over_the_grammas_title;Proclaim Lordship Over the Grammas;x
 proclaim_lordship_over_the_grammas_desc;With all of the Grammas settlements joining the realm, our leader is King of the Grammas.;x
 invite_the_rivermen_title;Invite the Rivermen;x
@@ -422,7 +428,7 @@ EDA_become_erebor_desc;We have become free. It is time we join something greater
 build_meres_end_boatlift_title;Rebuild the Mere's End Boat Lift;x
 build_meres_end_boatlift_desc;At the southern tip of Long Lake is a small waterfall that prevents ships from sailing up or down. In order to get around this, goods are offloaded and shipped by caravan, and ships are wheeled out of the water and pushed from one side of the falls to the other.\n\nDuring the prosperous times before Smaug, a boat lift existed, which used different water levels to carry boats up and down the falls. It would greatly benefit our trade if we were to rebuild this.\n\n§RIf we do not have the techs required, but are allied with Erebor and they do, we will pay them 50000 in addition to the 50000 it takes to build the lift§!;x
 rebuild_dale_toy_market_title;Rebuild the Toy Market of Dale;x
-rebuild_dale_toy_market_desc;Before the coming of Smaug, the toy market of Dale was known far and wide for its wares. These goods, many manufactured in both Dale and Erebor, captivated old and young, Man and Dwarf, and even the odd Elf or Wizard. They brought in traders from all around, boosting the already strong economies of both Dale and Erebor. It is time we reopend this market.;x
+rebuild_dale_toy_market_desc;Before the coming of Smaug, the toy market of Dale was known far and wide for its wares. These goods, many manufactured in both Dale and Erebor, captivated old and young, Man and Dwarf, and even the odd Elf or Wizard. They brought in traders from all around, boosting the already strong economies of both Dale and Erebor. It is time we reopen this market.;x
 DAL_line_of_bard_title;§OThe House of Bard§!;x
 DAL_line_of_bard_desc;Click this decision to get a description and breakdown of the §OThe House of Bard§!.;x
 appoint_lifstan_the_chancellor_title;Appoint Lifstan as Chancellor;x
@@ -437,7 +443,6 @@ DAL_support_merchants_title;Support the Merchants;x
 DAL_support_merchants_desc;Unlike many Medieval societies, the merchants of the Lakemen function as the landed nobles and aristocrats of society. This puts them at direct odds with the Fisher's Guild, leading to an ever-present internal strife.\n\nFor the past couple centuries, the Merchants have had distinct control over society, culminating in the Master of Laketown that the Company of Thorin met. Since the downfall of the merchant Master and the rebalance of power over with the ascent of Bard I, the Fisher's guild has been demanding more and more rights, attempting to sway economic power in their favor.\n\nUnfortunately for them, this upsets the societal balance that so delicately rules the lives of all in the realm. The realm supports the merchants.;x
 DAL_support_fishers_guild_title;Support the Fisher's Guild;x
 DAL_support_fishers_guild_desc;Unlike many Medieval societies, the merchants of the Lakemen function as the landed nobles and aristocrats of society. This puts them at direct odds with the Fisher's Guild, leading to an ever-present internal strife.\n\nFor the past couple centuries, the Merchants have had distinct control over society, culminating in the Master of Laketown that the Company of Thorin met. Since the downfall of the merchant Master and the rebalance of power over with the ascent of Bard I, the Fisher's guild has been demanding more and more rights, attempting to sway economic power in their favor.\n\nFortunately for them, these changes align with the visions of the realm. The realm supports the Fisher's Guild.;x
-DAL_support_fishers_guild_title;Support the 
 send_girion_bainson_to_austriborg_title;Send Girion Bainson to Austriborg;x
 send_girion_bainson_to_austriborg_desc;The younger son of Bain I, Girion Bainson was not in the direct line of succession. Instead, he chose to travel to the eastern part of the realm, eventually settling in Austriborg and becoming its lord.\n\n§RThis decision can only be taken while Bain I is your leader.§!;x
 propose_trade_with_realm_title;Propose a Trade Agreement with Neighboring Realm;x
@@ -477,7 +482,7 @@ RHO_core_addition_desc;There is some land that we own that is claimed by one of 
 call_the_attathrain_title;Call the Attathráin;x
 call_the_attathrain_desc;The Attathráin originally was the council of the Elders of Esgaroth, with the Master as the head. Eventually, every free man within Esgaroth and its allied settlements would come to have a say in it. Once Laketown became a center of trade of Gramavuld, it spread quickly to the other Northmen tribes.;x
 accept_avari_RHO_title;Accept the Avari;x
-accept_avari_RHO_desc;A part of our great realm called Dorwinion is inhabited not only by Men, but also by Avari Elves. Dorwinrim Men coexisted with them harmonically before the unification, but the relationship has since soured and social tensions have increased. Restoring this relationship will temporarily may not be appreciated by other Men in our realm, but will be beneficial long term.;x
+accept_avari_RHO_desc;A part of our great realm called Dorwinion is inhabited not only by Men, but also by Avari Elves. Dorwinrim Men coexisted with them harmonically before the unification, but the relationship has since soured and social tensions have increased. Restoring this relationship may not be appreciated by other Men in our realm, but will be beneficial long term.;x
 ###########################;x }
 ##### ROHAN DECISIONS #####;x {
 ###########################;x
