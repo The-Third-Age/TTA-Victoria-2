@@ -18,26 +18,31 @@ rebel = {
 }
 
 life_needs = {
-	food = 5.25
-	wool = 1
+	food = 8
+	liquor = 1
+	fabric = 1
+	lumber = 1
+	coal = 1
 }
 
 everyday_needs = {
-	coal = 20
-	paper = 20
-	clothes = 20
-	furniture = 20
-	liquor = 20
-	tobacco = 20
-	tea = 20
-	horses = 5
+	clothes = 2
+	furniture = 2
+	tea = 10
+	tobacco = 10
+	glass = 2
+	paper = 10
+	horses = 10
 }
 
 luxury_needs = {
-	ranged_gear = 4
-	melee_gear = 2
-	clipper_convoy = 4
-	horses = 20
+	#clothes = 20			#replace clothes, furniture, dye with luxury versions
+	#furniture = 20
+	dye = 0.9
+	cut_stone = 10
+	ranged_gear = 1
+	melee_gear = 1
+	clipper_convoy = 0.2
 }
 
 country_migration_target = {
@@ -336,56 +341,8 @@ promote_to = {
 				state_scope = { bureaucrats = 0.014 }
 			}
 			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.016 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.018 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.020 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.022 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.024 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.026 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.028 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.030 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.032 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.034 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.036 }
-			}
-			modifier = {
-				factor = -2
-				state_scope = { bureaucrats = 0.038 }
-			}
-			modifier = {
 				factor = -100
-				state_scope = { bureaucrats = 0.040 }
+				state_scope = { bureaucrats = 0.015 }
 			}
 		}
 		group = {
@@ -609,23 +566,23 @@ promote_to = {
 		group = {
 			modifier = {
 				factor = 1
+				state_scope = { bureaucrats = 0.006 }
+			}
+			modifier = {
+				factor = 1
+				state_scope = { bureaucrats = 0.007 }
+			}
+			modifier = {
+				factor = 1
+				state_scope = { bureaucrats = 0.008 }
+			}
+			modifier = {
+				factor = 1
+				state_scope = { bureaucrats = 0.009 }
+			}
+			modifier = {
+				factor = 1
 				state_scope = { bureaucrats = 0.01 }
-			}
-			modifier = {
-				factor = 1
-				state_scope = { bureaucrats = 0.02 }
-			}
-			modifier = {
-				factor = 1
-				state_scope = { bureaucrats = 0.03 }
-			}
-			modifier = {
-				factor = 1
-				state_scope = { bureaucrats = 0.04 }
-			}
-			modifier = {
-				factor = 1
-				state_scope = { bureaucrats = 0.05 }
 			}
 		}
 		group = {

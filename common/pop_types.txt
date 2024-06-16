@@ -120,6 +120,16 @@ promotion_chance = {
 	modifier = {
 		factor = -100
 		pop_majority_ideology = tribal_ideology
+		country = { civilized = no }
+	}
+	modifier = {
+		factor = 10
+		pop_majority_ideology = tribal_ideology
+		country = { civilized = yes }
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
 	}
 }
 
@@ -155,7 +165,7 @@ demotion_chance = {
 			strata = poor
 		}
 	}
-		group = {
+	group = {
 		modifier = {
 			factor = -0.02
 			not = { literacy = 0.1 }
@@ -291,6 +301,16 @@ demotion_chance = {
 	modifier = {
 		factor = -100
 		pop_majority_ideology = tribal_ideology
+		country = { civilized = no }
+	}
+	modifier = {
+		factor = 10
+		pop_majority_ideology = tribal_ideology
+		country = { civilized = yes }
+		OR = {
+			is_accepted_culture = yes
+			is_primary_culture = yes
+		}
 	}
 }
 
