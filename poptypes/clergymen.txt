@@ -36,19 +36,19 @@ life_needs = {
 }
 
 everyday_needs = {
-	liquor = 1
-	fabric = 1
-	lumber = 1
-	coal = 1
-	glass = 2
+	liquor = 10
+	fabric = 10
+	lumber = 10
+	coal = 10
+	glass = 10
 }
 
 luxury_needs = {
-	tea = 1
-	tobacco = 1
-	clothes = 2
-	furniture = 2
-	horses = 1
+	tea = 10
+	tobacco = 10
+	clothes = 10
+	furniture = 10
+	horses = 10
 	#paper = 10		#replace paper and dye with literature
 	#dye = 1
 }
@@ -363,8 +363,16 @@ promote_to = {
 				state_scope = { bureaucrats = 0.010 }
 			}
 			modifier = {
+				factor = -2
+				state_scope = { bureaucrats = 0.012 }
+			}
+			modifier = {
+				factor = -2
+				state_scope = { bureaucrats = 0.014 }
+			}
+			modifier = {
 				factor = -100
-				state_scope = { bureaucrats = 0.011 }
+				state_scope = { bureaucrats = 0.015 }
 			}
 		}
 		group = {

@@ -65,9 +65,9 @@ will_never_be_unlocked = {
 artillery_factory = {
 	template = factory_template
 	input_goods = {
+		rock = 2
 		steel = 1
 		lumber = 10
-		rock = 2
 	}
 	output_goods = artillery
 	value = 0.5
@@ -89,27 +89,22 @@ artillery_factory = {
 melee_gear_factory = {
 	template = factory_template
 	input_goods = {
-		steel = 3.6
-		timber = 2.5
+		steel = 4
 	}
 	output_goods = melee_gear
 	value = 1.5
 	
 	bonus = {
-		trigger = { trade_goods_in_state = timber }
-		value = 0.05
-	}
-	bonus = {
 		trigger = { has_building = steel_factory }
-		value = 0.20
+		value = 0.25
 	}
 }
 
 ranged_gear_factory = {
 	template = factory_template
 	input_goods = {
-		lumber = 13
 		iron = 2
+		lumber = 13
 	}
 	output_goods = ranged_gear
 	value = 2
@@ -272,8 +267,8 @@ clothes_factory = {
 liquor_distillery = {
 	template = factory_template
 	input_goods = {
-		food = 9
 		glass = 2
+		food = 9
 	}
 	output_goods = liquor
 	value = 30
@@ -496,9 +491,9 @@ tobacco_plantation = {
 
 artisan_artillery = {
 	input_goods = {
+		rock = 2
 		steel = 1
 		lumber = 10
-		rock = 2
 	}
 	output_goods = artillery
 	value = 0.5
@@ -513,8 +508,7 @@ artisan_artillery = {
 
 artisan_melee_gear = {
 	input_goods = {
-		steel = 3.6
-		timber = 2.5
+		steel = 4
 	}
 	output_goods = melee_gear
 	value = 1.5
@@ -529,8 +523,8 @@ artisan_melee_gear = {
 
 artisan_ranged_gear = {
 	input_goods = {
-		lumber = 13
 		iron = 2
+		lumber = 13
 	}
 	output_goods = ranged_gear
 	value = 2
@@ -676,8 +670,8 @@ artisan_clothes = {
 
 artisan_liquor = {
 	input_goods = {
-		food = 9
 		glass = 2
+		food = 9
 	}
 	output_goods = liquor
 	value = 30
