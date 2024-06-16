@@ -144,6 +144,13 @@ province_target_modifier = {
 	icon = 36
 }
 
+# }
+##### PROVINCE WEALTH MODIFIERS ##### = {
+# Province Modifier
+province_wealth_increase_1_target_modifier = {
+	icon = 36
+}
+
 # Province Modifier
 province_wealth_decrease_1_target_modifier=  {
 	icon = 36
@@ -154,8 +161,28 @@ province_wealth_decrease_2_target_modifier = {
 	icon = 36
 }
 
-# }
+# Province Modifier
+province_wealth_ignore_repair_province = {
+	pop_militancy_modifier = 0.01
+	
+	icon = 2
+}
 
+# Province Modifier
+province_wealth_repairing_province = {
+	tax_efficiency = -0.01 # Country effect, but using it on province level to more easily calculate the effect
+	
+	icon = 1
+}
+
+# Province Modifier
+province_wealth_investing_in_province = {
+	tax_efficiency = -0.02 # Country effect, but using it on province level to more easily calculate the effect
+	
+	icon = 11
+}
+
+# }
 ##### CORING MODIFIERS ##### = {
 core_integration = {
 	assimilation_rate = 0.25

@@ -37,13 +37,18 @@ political_decisions = {
 			}
 			
 			# Setting up Smaug's Desolation
-			# TODO: Have these regions start with repairing_province (when implemented)
-			141 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
-			652 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
-			653 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
-			654 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
-			655 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
-			656 = { add_crime = province_devastation_2 add_province_modifier = { name = smaugs_desolation duration = -1 } }
+			any_owned = {
+				limit = {
+					OR = {
+						region = DAL_652
+						province_id = 653
+						province_id = 654
+					}
+				}
+				add_crime = province_devastation_2
+				add_province_modifier = { name = smaugs_desolation duration = -1 }
+				add_province_modifier = { name = province_wealth_repairing_province duration = -1 }
+			}
 			
 			add_country_modifier = { name = smaugs_desolation_country duration = -1 }
 			

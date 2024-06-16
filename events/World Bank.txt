@@ -13,10 +13,6 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	immediate = {
-		country_event = 90799 # Fire the outcome of Province Wealth changes
-	}
-	
 	option = {
 		name = "Fix it please"
 		
@@ -356,6 +352,91 @@ country_event = {
 				random = {
 					chance = 10
 					add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+				}
+			}
+		}
+		
+		# Make sure that provinces getting repaired are actually damaged
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = province_wealth_repairing_province
+					OR = {
+						has_crime = province_wealth_0
+						has_crime = province_wealth_1
+						has_crime = province_wealth_2
+						has_crime = province_wealth_3
+						has_crime = province_wealth_4
+						has_crime = province_wealth_5
+					}
+				}
+				remove_province_modifier = province_wealth_repairing_province
+			}
+		}
+		
+		# Repairing Province: 10% chance of +1
+		# Do not need to worry about the above changes as the province needs to be controlled by the owner with no battles in it
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = province_wealth_repairing_province
+					controlled_by = owner
+					NOT = { unit_in_battle = yes } # unit_in_battle = no returns true if a battle is happening in the province
+				}
+				random = {
+					chance = 10
+					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+				}
+			}
+		}
+		
+		# Standard Province Repairing: 5% chance of +1
+		# Do not need to worry about the above changes and the province needs to be cotnrolled by the owner with no battles in it. Additionally, there is no overlap between standard province repair and accelerated repair (with money)
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					NOT = { has_province_modifier = province_wealth_repairing_province }
+					controlled_by = owner
+					NOT = { unit_in_battle = yes } # unit_in_battle = no returns true if a battle is happening in the province
+					OR = {
+						has_crime = province_devastation_5
+						has_crime = province_devastation_4
+						has_crime = province_devastation_3
+						has_crime = province_devastation_2
+						has_crime = province_devastation_1
+					}
+				}
+				random = {
+					chance = 5
+					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+				}
+			}
+		}
+		
+		# Remove investment if the province maxes out
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = province_wealth_investing_in_province
+					has_crime = province_wealth_5
+				}
+				remove_province_modifier = province_wealth_investing_in_province
+			}
+		}
+		
+		# Investing in Province: 8% chance of +1 (average of a increase of 1 per year)
+		# Do not need to worry about the above changes as the province needs to be controlled by the owner with no battles in it + repairing province should not overlap with investing in province
+		# TODO: May want to consider moving this to a quarterly event -- it seems like the same provinces get favored every month
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = province_wealth_investing_in_province
+					controlled_by = owner
+					NOT = { unit_in_battle = yes } # unit_in_battle = no returns true if a battle is happening in the province
+				}
+				random = {
+					chance = 8
+					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
 				}
 			}
 		}
@@ -1283,27 +1364,17 @@ country_event = {
 					NOT = { province_control_days = 1 }
 				}
 				add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
-				owner = { set_global_flag = hidden_effects } # Only run the application event if changes are detected
 			}
 		}
 		
-		# Apply the calculated changes
-		random_owned = {
-			limit = {
-				owner = { has_global_flag = hidden_effects }
-			}
-			owner = {
-				clr_global_flag = hidden_effects
-				country_event = 90799
-			}
-		}
+		country_event = { id = 90799 days = 0 }
 		
 		# Refire the cleanup event tomorrow
 		country_event = { id = 99250 days = 1 }
 	}
 }
 
-# Province Wealth -- Generic change
+# Province Wealth -- Generic change, DO NOT CALL THIS EVENT EXCEPT FOR IN THE GENERIC DAILY CLEAN UP EVENT -- YOU WILL CAUSE RANDOM CTD
 country_event = {
 	id = 90799
 	picture = "production"
@@ -1311,11 +1382,96 @@ country_event = {
 	desc = "EVTDESC90799"
 	
 	is_triggered_only = yes
-	# WHY DOES THIS *RANDOMLY* CRASH THE GAME
-	# allow_multiple_instances = yes
 	
 	option = {
 		name = "Change it"
+		
+		# Change by +1
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_4
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_wealth_5
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_3
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_wealth_4
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_2
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_wealth_3
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_1
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_wealth_2
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_wealth_0
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_wealth_1
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_1
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_wealth_0
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_2
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_devastation_1
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_3
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_devastation_2
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_4
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_devastation_3
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				limit = {
+					has_crime = province_devastation_5
+					has_province_modifier = province_wealth_increase_1_target_modifier
+				}
+				add_crime = province_devastation_4
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+			any_neighbor_province = {
+				remove_province_modifier = province_wealth_increase_1_target_modifier
+			}
+		}
 		
 		# Change by -1
 		random_owned = {
@@ -1400,9 +1556,6 @@ country_event = {
 				remove_province_modifier = province_wealth_decrease_1_target_modifier
 			}
 			any_neighbor_province = {
-				limit = {
-					has_province_modifier = province_wealth_decrease_1_target_modifier
-				}
 				remove_province_modifier = province_wealth_decrease_1_target_modifier
 			}
 		}
@@ -1482,9 +1635,6 @@ country_event = {
 				remove_province_modifier = province_wealth_decrease_2_target_modifier
 			}
 			any_neighbor_province = {
-				limit = {
-					has_province_modifier = province_wealth_decrease_2_target_modifier
-				}
 				remove_province_modifier = province_wealth_decrease_2_target_modifier
 			}
 		}

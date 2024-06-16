@@ -3065,3 +3065,119 @@ province_event = {
 		}
 	}
 }
+
+# Province Wealth Repair
+province_event = {
+	id = 12053
+	title = "The Repair of $PROVINCENAME$"
+	desc = "EVTDESC12053"
+	
+	trigger = {
+		NOT = { owner = { has_global_flag = province_wealth_intervention_disabled } }
+		NOT = { owner = { has_country_modifier = observer_mode } }
+		owner = { war = no }
+		OR = {
+			has_crime = province_devastation_5
+			has_crime = province_devastation_4
+			has_crime = province_devastation_3
+			has_crime = province_devastation_2
+			has_crime = province_devastation_1
+		}
+		owner = { NOT = { any_owned_province = { has_province_modifier = province_wealth_repairing_province } } }
+	}
+	
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	option = {
+		name = "We can spare some money"
+		
+		state_scope = {
+			any_owned = {
+				limit = {
+					OR = {
+						has_crime = province_devastation_5
+						has_crime = province_devastation_4
+						has_crime = province_devastation_3
+						has_crime = province_devastation_2
+						has_crime = province_devastation_1
+					}
+				}
+				add_province_modifier = { name = province_wealth_repairing_province duration = -1 }
+				remove_province_modifier = province_wealth_ignore_repair_province
+			}
+		}
+	}
+	
+	option = {
+		name = "The locals will repair the province in time"
+		
+		state_scope = {
+			any_owned = {
+				limit = {
+					OR = {
+						has_crime = province_devastation_5
+						has_crime = province_devastation_4
+						has_crime = province_devastation_3
+						has_crime = province_devastation_2
+						has_crime = province_devastation_1
+					}
+				}
+				add_province_modifier = { name = province_wealth_ignore_repair_province duration = 365 }
+				remove_province_modifier = province_wealth_repairing_province
+			}
+		}
+		
+		owner = { plurality = -1 }
+	}
+}
+
+# Province Investment
+province_event = {
+	id = 12054
+	title = "An Opportunity in $PROVINCENAME$"
+	desc = "EVTDESC12054"
+	
+	trigger = {
+		NOT = { owner = { has_global_flag = province_wealth_intervention_disabled } }
+		owner = { war = no }
+		NOT = { owner = { has_country_modifier = observer_mode } }
+		OR = {
+			has_crime = province_wealth_0
+			has_crime = province_wealth_1
+			has_crime = province_wealth_2
+			has_crime = province_wealth_3
+			has_crime = province_wealth_4
+		}
+		owner = { NOT = { any_owned_province = { has_province_modifier = province_wealth_investing_in_province } } }
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+	
+	option = {
+		name = "Of course!"
+		
+		state_scope = {
+			any_owned = {
+				limit = {
+					OR = {
+						has_crime = province_wealth_0
+						has_crime = province_wealth_1
+						has_crime = province_wealth_2
+						has_crime = province_wealth_3
+						has_crime = province_wealth_4
+					}
+				}
+				remove_province_modifier = province_wealth_repairing_province
+				add_province_modifier = { name = province_wealth_investing_in_province duration = 365 }
+			}
+		}
+	}
+	
+	option = {
+		name = "We have more pressing opportunities"
+	}
+}
