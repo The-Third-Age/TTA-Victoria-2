@@ -618,12 +618,14 @@ social_reforms = {
 		next_step_only = yes
 		
 		no_pensions = {
+			minimum_wage = 1
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 				NOT = { has_country_flag = DAL_guild_supported_by_realm }
 			}
 		}
 		trinket_pensions = {
+			minimum_wage = 1
 			pension_level = 0.05
 			global_immigrant_attract = 0.01
 			
@@ -633,6 +635,7 @@ social_reforms = {
 			}
 		}
 		low_pensions = {
+			minimum_wage = 1
 			pension_level = 0.10
 			global_immigrant_attract = 0.02
 			
@@ -642,6 +645,7 @@ social_reforms = {
 			}
 		}
 		acceptable_pensions = {
+			minimum_wage = 1
 			pension_level = 0.15
 			global_immigrant_attract = 0.03
 			
@@ -651,6 +655,7 @@ social_reforms = {
 			}
 		}
 		good_pensions = {
+			minimum_wage = 1
 			pension_level = 0.20
 			global_immigrant_attract = 0.04
 			
