@@ -124,7 +124,7 @@ promotion_chance = {
 	}
 	modifier = {
 		factor = 10
-		pop_majority_ideology = tribal_ideology
+		NOT = { pop_majority_ideology = tribal_ideology }
 		country = { civilized = yes }
 		OR = {
 			is_accepted_culture = yes
@@ -305,7 +305,7 @@ demotion_chance = {
 	}
 	modifier = {
 		factor = 10
-		pop_majority_ideology = tribal_ideology
+		NOT = { pop_majority_ideology = tribal_ideology }
 		country = { civilized = yes }
 		OR = {
 			is_accepted_culture = yes
@@ -365,6 +365,24 @@ migration_chance = {
 	}
 	group = {
 		modifier = {
+			factor = -0.1
+			life_needs = 0.9
+			everyday_needs = 0.5
+		}
+		modifier = {
+			factor = -0.1
+			life_needs = 0.9
+			everyday_needs = 0.8
+		}
+		modifier = {
+			factor = -0.1
+			life_needs = 0.9
+			everyday_needs = 0.9
+			luxury_needs = 0.5
+		}
+	}
+	group = {
+		modifier = {
 			factor = 0.1
 			unemployment = 0.1
 		}
@@ -391,10 +409,18 @@ migration_chance = {
 	}
 	modifier = {
 		factor = -0.3
+		country = { civilized = no }
+	}
+	modifier = {
+		factor = -0.3
 		state_scope = { has_factories = yes }
 	}
 	modifier = {
-		factor = 0.3
+		factor = -1
+		strata = rich
+	}
+	modifier = {
+		factor = 0.2
 		OR = {
 			is_accepted_culture = yes
 			is_primary_culture = yes
