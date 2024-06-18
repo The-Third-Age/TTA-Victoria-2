@@ -110,12 +110,12 @@ ranged_gear_factory = {
 	value = 2
 	
 	bonus = {
-		trigger = { trade_goods_in_state = lumber }
-		value = 0.20
-	}
-	bonus = {
 		trigger = { trade_goods_in_state = iron }
 		value = 0.05
+	}
+	bonus = {
+		trigger = { has_building = lumber_mill }
+		value = 0.20
 	}
 }
 
@@ -215,16 +215,12 @@ charcoal_factory = {
 furniture_factory = {
 	template = factory_template
 	input_goods = {
-		lumber = 15
 		fabric = 2
+		lumber = 15
 	}
 	output_goods = furniture
 	value = 15
 	
-	bonus = {
-		trigger = { has_building = lumber_mill }
-		value = 0.20
-	}
 	bonus = {
 		trigger = {
 			OR = {
@@ -233,6 +229,10 @@ furniture_factory = {
 			}
 		}
 		value = 0.05
+	}
+	bonus = {
+		trigger = { has_building = lumber_mill }
+		value = 0.20
 	}
 }
 
