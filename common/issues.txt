@@ -503,7 +503,6 @@ political_reforms = {
 ##########################################
 social_reforms = {
 	exclusive_trading_rights = {
-		administrative = yes
 		next_step_only = yes
 		
 		granted_exclusive_tr = {
@@ -565,6 +564,7 @@ social_reforms = {
 		}
 	}
 	city_jurisdiction = {
+		administrative = yes
 		next_step_only = yes
 		
 		independent_cities = {
@@ -581,6 +581,7 @@ social_reforms = {
 			}
 		}
 		chartered_cities = {
+			administrative_multiplier = 1
 			global_pop_militancy_modifier = 0.02
 			global_pop_consciousness_modifier = -0.04
 			administrative_efficiency_modifier = -0.02
@@ -594,6 +595,7 @@ social_reforms = {
 			}
 		}
 		territorial_cities = {
+			administrative_multiplier = 2
 			global_pop_militancy_modifier = 0.01
 			global_pop_consciousness_modifier = -0.02
 			administrative_efficiency_modifier = -0.01
@@ -605,6 +607,7 @@ social_reforms = {
 			}
 		}
 		royal_cities = {
+			administrative_multiplier = 3
 			suppression_points_modifier = 0.1
 			leadership_modifier = 0.1
 			
