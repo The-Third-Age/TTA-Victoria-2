@@ -44,7 +44,7 @@ float	BorderHeight;
 
 const float3 GREYIFY = float3( 0.212671, 0.715160, 0.072169 );
 
-float3 ApplyFOWColor( float3 c, float FOW ) 
+float3 ApplyFOWColor( float3 c, float FOW )
 {
 	float Grey = dot( c.rgb, GREYIFY );
 	return lerp( Grey.rrr * 0.4, c.rgb, FOW > 0.8 ? 1.0 : 0.3 );
@@ -275,8 +275,6 @@ struct VS_OUTPUT
 
     float2 vProvinceIndexCoord  : TEXCOORD6;
     float4 vBorderOffsetColor : COLOR0;
-    
-    
 };
 
 struct VS_MAP_OUTPUT
@@ -286,7 +284,7 @@ struct VS_MAP_OUTPUT
     float2  vTexCoord1 : TEXCOORD1;
     float2  vColorTexCoord : TEXCOORD2;
 	float2	vProvinceId : TEXCOORD3;
-    float2  vTerrainTexCoord : TEXCOORD4; 
+    float2  vTerrainTexCoord : TEXCOORD4;
     float4	vTerrainIndexColor : TEXCOORD5;
 };
 
@@ -299,7 +297,7 @@ struct VS_OUTPUT_BEACH
     float3  vLightIntensity : TEXCOORD2;
     float2 vProvinceIndexCoord  : TEXCOORD3;
     float2 vBorderTexCoord0		: TEXCOORD4;
-    
+
     float4 vTerrainIndexColor : TEXCOORD5;
     float2  vTexCoord1 : TEXCOORD6;
     float4 vBorderOffsetColor : COLOR0;
@@ -612,7 +610,7 @@ float4 PixelShader_Map2_0_General_Low( VS_MAP_OUTPUT v ) : COLOR
 	float4 TerrainColor = GenerateTiles( s );
 	//return float4(s.vTexCoord0.xy, 0, 1);
 
-	float Grey = dot( TerrainColor.rgb, GREYIFY ); 
+	float Grey = dot( TerrainColor.rgb, GREYIFY );
 	TerrainColor.rgb = Grey;
 	TerrainColor *= White;
 	
@@ -785,7 +783,7 @@ struct VS_BORDER_OUTPUT
 {
 	float4  vPosition : POSITION;
 	float4  vUV_ProvUV : TEXCOORD0;
-	float4 vBorderOffsetColor : TEXCOORD1; 
+	float4 vBorderOffsetColor : TEXCOORD1;
 };
 
 #define MAX_HALF_SIZE 1000.0f
@@ -1107,7 +1105,7 @@ technique PTIShader
 		ColorOp[0] = Modulate;
 		ColorArg1[0] = Texture;
 		ColorArg2[0] = current;
-  
+
 		ColorOp[1] = Disable;
 		AlphaOp[1] = Disable;
 
