@@ -1,13 +1,11 @@
 political_decisions = {
 	form_misty_mountains = {
 		picture = "mtn_decision"
-	
 		potential = {
 			is_independant = yes
 			is_culture_group = northern_goblins
 			NOT = { exists = MTN }
 		}
-
 		allow = {
 			war = no
 			GUN = { all_core = { owned_by = THIS } }
@@ -16,7 +14,6 @@ political_decisions = {
 			# Angirith Province
 			995 = { owned_by = THIS }
 		}
-
 		effect = {
 			prestige = 20
 			all_core = { add_core = MTN }
@@ -54,20 +51,16 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
 	make_snow_orcs_accepted = {
 		picture = "mtn_decision"
-
 		potential = {
 			tag = MTN
 			NOT = { primary_culture = snow_orc }
 			NOT = { accepted_culture = snow_orc }
 		}
-		
 		allow = {
 			GMG = { all_core = { owned_by = THIS } }
 		}
-		
 		effect = {
 			prestige = 5
 			GMG = { all_core = { add_core = MTN } }
@@ -78,15 +71,12 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
 	make_angrimm_accepted = {
 		picture = "mtn_decision"
-
 		potential = {
 			tag = MTN
 			NOT = { accepted_culture = angmarrim }
 		}
-		
 		allow = {
 			MAN = {
 				all_core = {
@@ -95,7 +85,6 @@ political_decisions = {
 				}
 			}
 		}
-		
 		effect = {
 			prestige = 5
 			add_accepted_culture = angmarrim
@@ -105,20 +94,16 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
 	saruman_engineers = {
 		picture = "mtn_decision"
-
 		potential = {
 			tag = MTN
 			NOT = { has_country_modifier = saruman_engineers }
 		}
-		
 		allow = {
 			# Isengard Province
 			811 = { owned_by = THIS }
 		}
-		
 		effect = {
 			811 = { add_core = MTN }
 			add_country_modifier = {
@@ -131,19 +116,13 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
 	goblin_industry = {
 		picture = "mtn_decision"
-
 		potential = {
 			tag = MTN
 			NOT = { has_country_modifier = goblin_industry }
 		}
-		
-		allow = {
-			literacy = .4
-		}
-		
+		allow = { literacy = 0.4 }
 		effect = {
 			prestige = 1
 			add_country_modifier = {

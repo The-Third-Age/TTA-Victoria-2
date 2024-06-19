@@ -14,13 +14,9 @@ political_decisions = {
 			tag = ISE
 			always = no
 		}
-		
 		allow = {}
-		
-		effect = {
-		}
+		effect = {}
 	}
-	
 	lord_of_isengard = {
 		picture = "lord_of_isengard"
 		potential = {
@@ -28,7 +24,6 @@ political_decisions = {
 			vassal_of = GON
 			nationalvalue = saruman
 		}
-		
 		allow = {
 			NOT = { year = 2955 }
 			OR = {
@@ -36,7 +31,6 @@ political_decisions = {
 				month = 1
 			}
 		}
-		
 		effect = {
 			GON = {
 				diplomatic_influence = {
@@ -65,7 +59,6 @@ political_decisions = {
 				}
 			}
 		}
-
 		allow = {
 			diplomacy_1 = 1
 			war = no
@@ -78,7 +71,6 @@ political_decisions = {
 				}
 			}
 		}
-
 		effect = {
 			814 = {
 				owner = {
@@ -98,13 +90,11 @@ political_decisions = {
 			nationalvalue = saruman
 			NOT = { has_country_modifier = breeding_uruk_hai }
 		}
-
 		allow = {
 			magic_3 = 1
 			good_evil_alignment = evil_alignment
 			war = no
 		}
-
 		effect = {
 			prestige = 5
 			badboy = 3

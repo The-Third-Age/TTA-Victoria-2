@@ -9,13 +9,9 @@ political_decisions = {
 			tag = ERE
 			always = no
 		}
-		
 		allow = {}
-		
-		effect = {
-		}
+		effect = {}
 	}
-
 	ravens_of_erebor = {
 		picture = "raven"
 		potential = {
@@ -24,14 +20,12 @@ political_decisions = {
 			good_evil_alignment = good_alignment
 			NOT = { has_country_modifier = good_raven_influence }
 		}
-
 		allow = {
 			any_owned_province = {
 				has_pop_culture = raven
 			}
 			diplomacy_3 = 1
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = good_raven_influence

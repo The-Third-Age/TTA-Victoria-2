@@ -10,11 +10,7 @@ political_decisions = {
 			NOT = { year = 2955 }
 			NOT = { has_global_flag = DWM_cores_cleared }
 		}
-		
-		allow = {
-			NOT = { year = 2955 }
-		}
-		
+		allow = { NOT = { year = 2955 } }
 		effect = {
 			112 = {
 				remove_core = GON
@@ -32,17 +28,14 @@ political_decisions = {
 				remove_core = GON
 				remove_core = ANF
 			}
-			
 			set_global_flag = DWM_cores_cleared
 		}
 	}
-	
 	claim_white_mountains = {
 		potential = {
 			tag = DWM
 			NOT = { has_global_flag = DWM_claimed_white_mountains }
 		}
-		
 		allow = {
 			OR = {
 				is_greater_power = yes
@@ -50,7 +43,6 @@ political_decisions = {
 			}
 			expansion_1 = 1
 		}
-		
 		effect = {
 			FOR = {
 				random_owned = {
@@ -88,21 +80,16 @@ political_decisions = {
 					}
 				}
 			}
-			
-			
 			set_global_flag = DWM_claimed_white_mountains
 		}
 	}
-	
 	forcibly_rename_white_mountains_province = {
 		picture = "renaming"
 		potential = {
 			tag = DWM
 			NOT = { has_global_flag = DWM_renamed_white_mountains }
 		}
-		
-		allow = { }
-		
+		allow = {}
 		effect = {
 			116 = { change_province_name = "Forbidden Halls" }
 			

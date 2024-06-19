@@ -14,21 +14,18 @@ political_decisions = {
 			tag = EDH
 			NOT = { has_global_flag = EDH_claimed_dor_en_edhel }
 		}
-		
 		allow = {
 			OR = {
 				is_secondary_power = yes
 				is_greater_power = yes
 			}
 		}
-		
 		effect = {
 			GON_78 = { add_core = EDH }
 			
 			set_global_flag = EDH_claimed_dor_en_edhel
 		}
 	}
-	
 	reclaim_tirith_aear = {
 		picture = "edhellond"
 		potential = {
@@ -36,14 +33,12 @@ political_decisions = {
 			has_global_flag = EDH_claimed_dor_en_edhel
 			NOT = { has_global_flag = EDH_claimed_tirith_aear }
 		}
-		
 		allow = {
 			OR = {
 				is_secondary_power = yes
 				is_greater_power = yes
 			}
 		}
-		
 		effect = {
 			GON_77 = { add_core = EDH }
 			70 = { add_core = EDH }
@@ -65,12 +60,10 @@ political_decisions = {
 			NOT = { primary_culture = galadhrim }
 			NOT = { accepted_culture = elven_culture }
 		}
-		
 		allow = {
 			NOT = { EDH = { any_core = { has_pop_religion = elven } } }
 			EDH = { exists = no }
 		}
-		
 		effect = {
 			EDH = { all_core = { remove_core = EDH } }
 			
