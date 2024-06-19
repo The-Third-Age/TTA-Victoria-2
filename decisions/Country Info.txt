@@ -7,8 +7,8 @@ political_decisions = {
 		alert = no
 		picture = "kingdom_of_gondor"
 		potential = {
-			NOT = { has_global_flag = fluff_disabled }
 			ai = no
+			NOT = { has_global_flag = fluff_disabled }
 			OR = {
 				tag = GON
 				substate_of = GON
@@ -16,9 +16,7 @@ political_decisions = {
 				tag = HRD
 			}
 		}
-		
 		allow = {}
-		
 		effect = {
 			# Gondor
 			random_owned = {
@@ -29,7 +27,6 @@ political_decisions = {
 				}
 				owner = { country_event = 35000 }
 			}
-			
 			# Gondor Substates
 			random_owned = {
 				limit = {
@@ -45,68 +42,48 @@ political_decisions = {
 			}
 		}
 	}
-	
 	principality_of_dol_amroth = {
 		alert = no
 		picture = "principality_of_dol_amroth"
 		potential = {
-			NOT = { has_global_flag = fluff_disabled }
 			ai = no
 			tag = AMR
+			NOT = { has_global_flag = fluff_disabled }
 		}
-		
 		allow = {}
-		
-		effect = {
-			country_event = 35005
-		}
+		effect = { country_event = 35005 }
 	}
-	
 	shadow_of_mordor = {
 		alert = no
 		picture = "shadow_of_mordor"
 		potential = {
-			NOT = { has_global_flag = fluff_disabled }
 			ai = no
 			tag = MOR
+			NOT = { has_global_flag = fluff_disabled }
 		}
-		
 		allow = {}
-		
-		effect = {
-			country_event = 35009
-		}
+		effect = { country_event = 35009 }
 	}
-	
 	kingdom_of_dorwinion = {
 		alert = no
 		picture = "kingdom_of_dorwinion"
 		potential = {
-			NOT = { has_global_flag = fluff_disabled }
 			ai = no
 			tag = DOR
+			NOT = { has_global_flag = fluff_disabled }
 		}
-		
 		allow = {}
-		
-		effect = {
-			country_event = 35013
-		}
+		effect = { country_event = 35013 }
 	}
-	
 	beornings_of_the_vale = {
 		alert = no
 		picture = "woodsmen_of_the_vale"
 		potential = {
-			NOT = { has_global_flag = fluff_disabled }
 			ai = no
 			tag = BEO
+			NOT = { has_global_flag = fluff_disabled }
 		}
-		
 		allow = {}
-		
-		effect = {
-			country_event = 35041
-		}
+		effect = { country_event = 35041 }
 	}
 }

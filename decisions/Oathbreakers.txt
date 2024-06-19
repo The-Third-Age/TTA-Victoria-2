@@ -13,14 +13,12 @@ political_decisions = {
 			tag = OBS
 			NOT = { has_global_flag = OBS_cores_claimed }
 		}
-		
 		allow = {
 			OR = {
 				is_secondary_power = yes
 				is_greater_power = yes
 			}
 		}
-		
 		effect = {
 			94 = { add_core = OBS }
 			96 = { add_core = OBS }
@@ -34,7 +32,6 @@ political_decisions = {
 			set_global_flag = OBS_cores_claimed
 		}
 	}
-	
 	expand_the_haunt = {
 		picture = "expand_the_haunt"
 		potential = {
@@ -42,7 +39,6 @@ political_decisions = {
 			has_global_flag = OBS_cores_claimed
 			NOT = { has_global_flag = OBS_expanded_haunt }
 		}
-		
 		allow = {
 			all_core = { owned_by = THIS }
 			OR = {
@@ -50,7 +46,6 @@ political_decisions = {
 				is_greater_power = yes
 			}
 		}
-		
 		effect = {
 			91 = { add_core = OBS }
 			115 = { add_core = OBS }
@@ -78,9 +73,7 @@ political_decisions = {
 				}
 			}
 		}
-		
-		allow = { }
-		
+		allow = {}
 		effect = {
 			OBS = {
 				all_core = {
@@ -90,7 +83,6 @@ political_decisions = {
 					add_province_modifier = { name = haunted_by_oathbreakers duration = -1 }
 				}
 			}
-			
 			random_owned = {
 				any_neighbor_province = {
 					limit = {

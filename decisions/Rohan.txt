@@ -11,11 +11,7 @@ political_decisions = {
 			783 = { empty = yes }
 			784 = { empty = yes }
 		}
-		
-		allow = {
-			expansion_1 = 1
-		}
-		
+		allow = { expansion_1 = 1 }
 		effect = {
 			prestige = 10
 			783 = { secede_province = THIS }
@@ -32,7 +28,6 @@ political_decisions = {
 			is_culture_group = rohirrim
 			NOT = { exists = ROH }
 		}
-		
 		allow = {
 			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
 			# Otherwise, it isn't counted
@@ -48,7 +43,6 @@ political_decisions = {
 				}
 			}
 		}
-		
 		effect = {
 			prestige = 15
 			change_tag = ROH

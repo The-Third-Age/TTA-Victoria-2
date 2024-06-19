@@ -23,9 +23,9 @@ political_decisions = {
 			}
 		}
 		allow = {
+			is_greater_power = yes
 			civilized = yes
 			is_independant = yes
-			is_greater_power = yes
 			war = no
 			ARN = {
 				all_core = {
@@ -62,14 +62,13 @@ political_decisions = {
 					}
 					secede_province = THIS
 				}
-
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-form_arthedain = {
+	form_arthedain = {
 		picture = "arthedain"
 		potential = {
 			OR = {
@@ -121,14 +120,12 @@ form_arthedain = {
 					}
 					secede_province = THIS
 				}
-
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
 	form_cardolan = {
 		picture = "cardolan"
 		potential = {
@@ -182,14 +179,12 @@ form_arthedain = {
 					}
 					secede_province = THIS
 				}
-
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
 	fate_of_the_shire = {
 		picture = "arnor"
 		potential = {
@@ -203,6 +198,7 @@ form_arthedain = {
 			NOT = { has_country_flag = fate_of_the_shire }
 		}
 		allow = {
+			is_greater_power = yes
 			SHI = {
 				OR = {
 					vassal_of = THIS
@@ -210,7 +206,6 @@ form_arthedain = {
 				}
 			}
 			is_independant = yes
-			is_greater_power = yes
 			war = no
 			# Annuminas
 			owns = 1026
@@ -222,7 +217,6 @@ form_arthedain = {
 			set_country_flag = fate_of_the_shire
 		}
 	}
-
 	northern_expansion = {
 		picture = "arnor"
 		potential = {
@@ -233,9 +227,9 @@ form_arthedain = {
 			NOT = { has_country_flag = northern_expansion }
 		}
 		allow = {
+			is_greater_power = yes
 			civilized = yes
 			is_independant = yes
-			is_greater_power = yes
 			war = no
 			all_core = { owned_by = THIS }
 		}
@@ -247,7 +241,6 @@ form_arthedain = {
 			ANG_1004 = { add_core = THIS }
 		}
 	}
-
 	claim_angmar = {
 		picture = "arnor"
 		potential = {
@@ -259,9 +252,9 @@ form_arthedain = {
 			NOT = { has_country_flag = claim_angmar }
 		}
 		allow = {
+			is_greater_power = yes
 			civilized = yes
 			is_independant = yes
-			is_greater_power = yes
 			war = no
 			all_core = { owned_by = THIS }
 		}
