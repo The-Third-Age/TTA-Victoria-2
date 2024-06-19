@@ -11,22 +11,22 @@ country_event = { # First attempt
 	id = 50700
 
 	trigger = {
-		not = { has_country_flag = searching_for_lesser_ring }
+		NOT = { has_country_flag = searching_for_lesser_ring }
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
-		not = { has_country_flag = rejected_searching_for_lesser_ring }
+		NOT = { has_country_flag = rejected_searching_for_lesser_ring }
 	}
 
 	mean_time_to_happen = {
@@ -93,15 +93,15 @@ country_event = { # Lesser Ring of Might
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_might }
@@ -170,15 +170,15 @@ country_event = { # Lesser Ring of Courage
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_courage }
@@ -247,15 +247,15 @@ country_event = { # Lesser Ring of Wit
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_wit }
@@ -324,15 +324,15 @@ country_event = { # Lesser Ring of Calm
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_calm }
@@ -401,15 +401,15 @@ country_event = { # Lesser Ring of Plenty
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_plenty }
@@ -478,15 +478,15 @@ country_event = { # Lesser Ring of Glory
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_glory }
@@ -555,9 +555,9 @@ country_event = { # First attempt
 
 	trigger = {
 		invention = entwives
-		not = { has_global_flag = entwives_found }
-		not = { has_country_flag = searching_for_entwives }
-		not = { has_country_flag = rejected_searching_for_entwives }
+		NOT = { has_global_flag = entwives_found }
+		NOT = { has_country_flag = searching_for_entwives }
+		NOT = { has_country_flag = rejected_searching_for_entwives }
 	}
 
 	mean_time_to_happen = {
@@ -623,7 +623,7 @@ country_event = { # Entwives found
 
 	trigger = {
 		has_country_flag = searching_for_entwives
-		not = { has_global_flag = entwives_found }
+		NOT = { has_global_flag = entwives_found }
 	}
 
 	mean_time_to_happen = {
@@ -823,7 +823,7 @@ country_event = { # Silmaril found
 
 	trigger = {
 		has_country_flag = searching_for_silmarils
-		not = { has_global_flag = silmarils_found }
+		NOT = { has_global_flag = silmarils_found }
 		is_greater_power = yes
 	}
 
@@ -880,11 +880,11 @@ country_event = { # First attempt
 	trigger = {
 		invention = blue_wizards
 		OR = {
-			not = { has_global_flag = alatar_activated }
-			not = { has_global_flag = pallando_activated }
+			NOT = { has_global_flag = alatar_activated }
+			NOT = { has_global_flag = pallando_activated }
 		}
-		not = { has_country_flag = searching_for_blue_wizards }
-		not = { has_country_flag = rejected_searching_for_blue_wizards }
+		NOT = { has_country_flag = searching_for_blue_wizards }
+		NOT = { has_country_flag = rejected_searching_for_blue_wizards }
 		is_greater_power = yes
 	}
 
@@ -922,16 +922,16 @@ country_event = { # Found one but not the other
 		invention = blue_wizards
 		OR = {
 			OR = {
-				not = { has_global_flag = alatar_activated }
+				NOT = { has_global_flag = alatar_activated }
 				has_global_flag = pallando_activated
 			}
 			OR = {
-				not = { has_global_flag = pallando_activated }
+				NOT = { has_global_flag = pallando_activated }
 				has_global_flag = alatar_activated
 			}
 		}
-		not = { has_country_flag = searching_for_blue_wizards }
-		not = { has_country_flag = rejected_searching_for_blue_wizards }
+		NOT = { has_country_flag = searching_for_blue_wizards }
+		NOT = { has_country_flag = rejected_searching_for_blue_wizards }
 		is_greater_power = yes
 	}
 
@@ -996,7 +996,7 @@ country_event = { # Alatar found
 
 	trigger = {
 		has_country_flag = searching_for_blue_wizards
-		not = { has_global_flag = alatar_activated }
+		NOT = { has_global_flag = alatar_activated }
 		is_greater_power = yes
 	}
 
@@ -1087,7 +1087,7 @@ country_event = { # Pallando found
 
 	trigger = {
 		has_country_flag = searching_for_blue_wizards
-		not = { has_global_flag = pallando_activated }
+		NOT = { has_global_flag = pallando_activated }
 		is_greater_power = yes
 	}
 
