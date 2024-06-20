@@ -24,6 +24,10 @@ province_event = {
 		months = 1200
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "Give the mine more money"
 		
@@ -36,6 +40,7 @@ province_event = {
 			reduce_pop = 0.999
 			consciousness = 1
 		}
+		province_wealth_decrease_1_loc = {}
 	}
 	
 	option = {
@@ -45,10 +50,12 @@ province_event = {
 			name = repairing_mine
 			duration = 730
 		}
+		owner = { plurality = 1 }
 		labourers = {
 			reduce_pop = 0.999
 			militancy = 1
 		}
+		province_wealth_decrease_1_loc = {}
 	}
 }
 
@@ -1217,18 +1224,23 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the storehouse!"
-		owner = {
-			food = 15
-		}
+		owner = { food = 15 }
+		province_wealth_increase_1_loc = {}
 	}
 
 	option = {
 		name = "...to the people!"
 		owner = {
 			war_exhaustion = -1
+			plurality = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1244,6 +1256,7 @@ province_event = {
 			food = 15
 		}
 	}
+	
 	mean_time_to_happen = {
 		months = 800
 		modifier = {
@@ -1263,12 +1276,18 @@ province_event = {
 			average_consciousness = 5
 		}
 	}
-
+	
+	immediate = {
+		add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "Help them"
 		owner = {
 			food = -15
+			treasury = -50000
 		}
+		province_wealth_decrease_1_loc = {}
 	}
 	
 	option = {
@@ -1276,6 +1295,8 @@ province_event = {
 		labourers = {
 			militancy = 1
 		}
+		owner = { plurality = 1 }
+		province_wealth_decrease_1_loc = {}
 	}
 }
 
@@ -1308,15 +1329,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1347,6 +1374,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1379,15 +1407,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1418,6 +1452,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1450,15 +1485,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1489,6 +1530,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1521,15 +1563,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1560,6 +1608,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1592,15 +1641,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1631,6 +1686,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1663,15 +1719,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1702,6 +1764,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1734,15 +1797,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1773,6 +1842,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1808,15 +1878,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1847,6 +1923,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1879,15 +1956,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1918,6 +2001,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1950,15 +2034,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1989,6 +2079,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2021,15 +2112,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2060,6 +2157,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2092,15 +2190,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2131,6 +2235,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2163,15 +2268,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2202,6 +2313,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2237,15 +2349,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2276,6 +2394,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2308,15 +2427,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2347,6 +2472,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2379,15 +2505,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2418,6 +2550,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2450,15 +2583,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2489,6 +2628,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2521,15 +2661,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2560,6 +2706,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2592,15 +2739,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2631,6 +2784,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2642,6 +2796,10 @@ province_event = {
 	
 	trigger = {
 		trade_goods = tea
+	}
+	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
 	}
 	
 	mean_time_to_happen = {
@@ -2667,11 +2825,13 @@ province_event = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2702,6 +2862,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2713,6 +2874,10 @@ province_event = {
 	
 	trigger = {
 		state_scope = { has_building = liquor_distillery }
+	}
+	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
 	}
 	
 	mean_time_to_happen = {
@@ -2738,11 +2903,13 @@ province_event = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2773,6 +2940,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2805,15 +2973,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2844,6 +3018,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2876,15 +3051,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2915,6 +3096,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2947,15 +3129,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2986,6 +3174,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -3009,12 +3198,17 @@ province_event = {
 		months = 800
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "Good"
 		add_province_modifier = {
 			name = new_vein
 			duration = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -3051,12 +3245,17 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "Good"
 		add_province_modifier = {
 			name = high_production
 			duration = 730
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -3192,9 +3391,9 @@ province_event = {
 		}
 	}
 	
-	# mean_time_to_happen = {
-		# months = 12
-	# }
+	mean_time_to_happen = {
+		months = 12
+	}
 	
 	option = {
 		name = "They will pay for this!"
