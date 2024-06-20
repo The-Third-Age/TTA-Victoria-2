@@ -501,20 +501,6 @@ country_event = {
 			}
 			remove_country_modifier = meres_end_constructing_boat_lift
 		}
-		random_owned = { # Finished building, but one of the affected provinces is missing the modifier
-			any_neighbor_province = {
-				limit = {
-					owner = { has_global_flag = DAL_meres_end_boat_lift_constructed }
-					OR = {
-						province_id = 649
-						province_id = 653
-						province_id = 654
-					}
-					NOT = { has_province_modifier = meres_end_increased_trade }
-				}
-				add_province_modifier = { name = meres_end_increased_trade duration = -1 }
-			}
-		}
 		# }
 		
 		# Celduin Pirates {
