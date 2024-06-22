@@ -88,6 +88,7 @@ country_event = {
 	picture = "gondor/dol_amroth"
 	title = "Secession!"
 	desc = "EVTDESC50001"
+	
 	major = yes
 	is_triggered_only = yes
 	
@@ -116,6 +117,7 @@ country_event = {
 	picture = "gondor/dol_amroth"
 	title = "We are Victorious!"
 	desc = "EVTDESC50002"
+	
 	major = yes
 	fire_only_once = yes
 	
@@ -144,6 +146,7 @@ country_event = {
 	picture = "gondor/dol_amroth"
 	title = "We are Victorious!"
 	desc = "EVTDESC50003"
+	
 	major = yes
 	fire_only_once = yes
 	
@@ -202,6 +205,14 @@ country_event = {
 					military_score = GON
 				}
 			}
+			modifier = {
+				factor = 0
+				AND = {
+					GON = { brigades_compare = 1 }
+					NOT = { military_score = GON }
+					relation = { who = GON value = 190 }
+				}
+			}
 		}
 	}
 }
@@ -212,6 +223,7 @@ country_event = {
 	picture = "gondor/map"
 	title = "They Accept!"
 	desc = "EVTDESC50005"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -233,6 +245,7 @@ country_event = {
 	picture = "gondor/dol_amroth"
 	title = "They Refuse!"
 	desc = "EVTDESC50006"
+	
 	major = yes
 	is_triggered_only = yes
 	
@@ -421,9 +434,10 @@ country_event = {
 # Service of Thorongil
 country_event = {
 	id = 50012
-	picture = "gondor/thorongil"
 	title = "The Service of Thorongil"
 	desc = "EVTDESC50012"
+	picture = "gondor/thorongil"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -555,6 +569,7 @@ country_event = {
 	title = "Movement in the Shadows"
 	desc = "EVTDESC50016"
 	picture = "gondor/second_kinstrife"
+	
 	major = yes
 	fire_only_once = yes
 	
@@ -617,6 +632,7 @@ country_event = {
 	title = "The Council of Gondor"
 	desc = "EVTDESC50017"
 	picture = "gondor/second_kinstrife"
+	
 	major = yes
 	is_triggered_only = yes
 	
@@ -664,6 +680,7 @@ province_event = {
 	id = 50018
 	title = "The Flowers Expedition"
 	desc = "EVTDESC50018"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -682,8 +699,7 @@ province_event = {
 			infrastructure_tech_2 = 1
 		}
 	}
-		
-
+	
 	option = {
 		name = "To the Healers of Gondor!"
 		
@@ -749,7 +765,6 @@ country_event = {
 	option = {
 		name = "A toast to our friends!"
 		
-		
 		random_country = {
 			limit = {
 				NOT = { tag = FOR }
@@ -793,6 +808,7 @@ country_event = {
 	title = "The Beacons of Gondor are Lit..."
 	desc = "EVTDESC50020"
 	picture = "gondor/light_the_beacons"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -812,7 +828,6 @@ country_event = {
 				value = 50
 			}
 		}
-		
 		prestige = 5
 	}
 	
@@ -843,6 +858,7 @@ country_event = {
 	title = "The Death of Ecthelion II"
 	desc = "EVTDESC50021"
 	picture = "gondor/leader_death"
+	
 	major = yes
 	fire_only_once = yes
 	
@@ -860,18 +876,15 @@ country_event = {
 			year = 2982
 			NOT = { year = 2983 }
 		}
-		
 		modifier = {
 			factor = 0.5
 			year = 2983
 			NOT = { year = 2984 }
 		}
-		
 		modifier = {
 			factor = 0.25
 			year = 2984
 		}
-		
 		modifier = {
 			factor = 0.01
 			year = 2985
@@ -950,6 +963,7 @@ country_event = {
 	title = "The New Lord of Lossarnach"
 	desc = "EVTDESC50024"
 	picture = "gondor/leader_death"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -1009,6 +1023,7 @@ country_event = {
 	title = "The New Lord of Lossarnach"
 	desc = "EVTDESC50024"
 	picture = "gondor/leader_death"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -1022,10 +1037,12 @@ country_event = {
 	title = "The New Lord of Lamedon"
 	desc = "EVTDESC50026"
 	picture = "gondor/leader_death"
+	
 	fire_only_once = yes
 	
 	trigger = {
 		year = 2990
+		NOT = { year = 2995 }
 		
 		OR = {
 			tag = LAM
@@ -1034,8 +1051,6 @@ country_event = {
 				NOT = { exists = LAM }
 			}
 		}
-		
-		NOT = { year = 2995 }
 		
 		# Owns all of the regions in Lamedon except the RinglùÛ Vale
 		GON_81 = { owned_by = THIS }
@@ -1067,10 +1082,8 @@ country_event = {
 			limit = {
 				owner = { is_substate = yes }
 			}
-			
 			owner = { overlord = { country_event = 50027 } }
 		}
-		
 		set_global_flag = angbor_lord_of_lamedon
 	}
 }
@@ -1081,6 +1094,7 @@ country_event = {
 	title = "The New Lord of Lamedon"
 	desc = "EVTDESC50026"
 	picture = "gondor/leader_death"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -1094,10 +1108,12 @@ country_event = {
 	title = "The New Lord of the RinglÛ Vale"
 	desc = "EVTDESC50028"
 	picture = "gondor/leader_death"
+	
 	fire_only_once = yes
 	
 	trigger = {
 		year = 2990
+		NOT = { year = 2995 }
 		
 		OR = {
 			tag = LAM
@@ -1106,8 +1122,6 @@ country_event = {
 				NOT = { exists = LAM }
 			}
 		}
-		
-		NOT = { year = 2995 }
 		
 		# Owns the RinglÛ Vale
 		GON_92 = { owned_by = THIS }
@@ -1138,10 +1152,8 @@ country_event = {
 			limit = {
 				owner = { is_substate = yes }
 			}
-			
 			owner = { overlord = { country_event = 50029 } }
 		}
-		
 		set_global_flag = dervorin_lord_of_the_ringlo_vale
 	}
 }
@@ -1152,6 +1164,7 @@ country_event = {
 	title = "The New Lord of the RinglÛ Vale"
 	desc = "EVTDESC50028"
 	picture = "gondor/leader_death"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -1165,6 +1178,7 @@ country_event = {
 	title = "The New Lord of the Blackroot Vale"
 	desc = "EVTDESC50030"
 	picture = "gondor/leader_death"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -1182,7 +1196,6 @@ country_event = {
 				NOT = { exists = LAM }
 			}
 		}
-		
 		NOT = { year = 2975 }
 		
 		# Owns the Blackroot Vale
@@ -1220,7 +1233,6 @@ country_event = {
 			
 			owner = { overlord = { country_event = 50031 } }
 		}
-		
 		set_global_flag = duinhir_lord_of_the_blackroot_vale
 	}
 }
@@ -1231,6 +1243,7 @@ country_event = {
 	title = "The New Lord of the RinglÛ Vale"
 	desc = "EVTDESC50030"
 	picture = "gondor/leader_death"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -1244,6 +1257,7 @@ country_event = {
 	title = "The New Lord of Pinnath Gelin"
 	desc = "EVTDESC50032"
 	picture = "gondor/leader_death"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -1290,10 +1304,8 @@ country_event = {
 			limit = {
 				owner = { is_substate = yes }
 			}
-			
 			owner = { overlord = { country_event = 50033 } }
 		}
-		
 		set_global_flag = hirluin_lord_of_pinnath_gelin
 	}
 }
@@ -1304,6 +1316,7 @@ country_event = {
 	title = "The New Lord of the Pinnath Gelin"
 	desc = "EVTDESC50032"
 	picture = "gondor/leader_death"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -1317,6 +1330,7 @@ country_event = {
 	title = "The New Lord of Anfalas"
 	desc = "EVTDESC50034"
 	picture = "gondor/leader_death"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -1364,11 +1378,9 @@ country_event = {
 			limit = {
 				owner = { is_substate = yes }
 			}
-			
 			owner = { overlord = { country_event = 50035 } }
 			owner = { prestige = 1 }
 		}
-		
 		set_global_flag = golasgil_lord_of_anfalas
 	}
 }
@@ -1379,6 +1391,7 @@ country_event = {
 	title = "The New Lord of the Anfalas"
 	desc = "EVTDESC50034"
 	picture = "gondor/leader_death"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -1400,18 +1413,14 @@ province_event = {
 				primary_culture = gondorian
 			}
 		}
-		
 		any_neighbor_province = {
 			owned_by = THIS
 			is_core = THIS
 		}
-		
 		is_core = THIS
 	}
 	
-	mean_time_to_happen = {
-		months = 4800
-	}
+	mean_time_to_happen = { months = 4800 }
 	
 	option = {
 		name = "We agree with ßB$PROVINCENAME$"
@@ -1421,7 +1430,6 @@ province_event = {
 				owned_by = THIS
 				is_core = THIS
 			}
-			
 			aristocrats = { militancy = 5 }
 		}
 	}
@@ -1444,20 +1452,15 @@ province_event = {
 			is_accepted_culture = yes
 			is_primary_culture = yes
 		}
-		
 		owner = { is_culture_group = dunedain }
 	}
 	
-	mean_time_to_happen = {
-		months = 2400
-	}
+	mean_time_to_happen = { months = 2400 }
 	
 	option = {
 		name = "That sounds like fun!"
 		
-		any_pop = {
-			militancy = -3
-		}
+		any_pop = { militancy = -3 }
 	}
 }
 
@@ -1481,9 +1484,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	option = {
 		name = "We are reclaiming what is rightfully ours"
@@ -1498,7 +1499,6 @@ country_event = {
 				limit = {
 					is_core = HRD
 				}
-				
 				secede_province = THIS
 			}
 		}
@@ -1619,7 +1619,6 @@ country_event = {
 				add_province_modifier = { name = the_mesta duration = -1 }
 			}
 		}
-		
 		set_global_flag = the_mesta_covers_anfalas
 	}
 }
@@ -1733,7 +1732,6 @@ country_event = {
 			}
 			owner = { ADR = { annex_to = THIS } }
 		}
-		
 		set_global_flag = ADR_part_of_ANF
 	}
 }
@@ -1750,16 +1748,12 @@ province_event = {
 		province_id = 169
 	}
 	
-	mean_time_to_happen = {
-		months = 1
-	}
+	mean_time_to_happen = { months = 1 }
 	
 	option = {
 		name = "Unlikely"
 		
-		labourers = {
-			militancy = 0.1
-		}
+		labourers = { militancy = 0.1 }
 		
 		owner = { prestige = 1 }
 	}
@@ -2052,7 +2046,6 @@ country_event = {
 				}
 			}
 		}
-		
 		clr_country_flag = GON_strengthening_river_crossings
 	}
 }
@@ -2189,18 +2182,15 @@ country_event = {
 			year = 3027
 			NOT = { year = 3028 }
 		}
-		
 		modifier = {
 			factor = 0.5
 			year = 3028
 			NOT = { year = 3029 }
 		}
-		
 		modifier = {
 			factor = 0.25
 			year = 3029
 		}
-		
 		modifier = {
 			factor = 0.01
 			year = 3030
@@ -2376,7 +2366,6 @@ country_event = {
 			background = warden_of_white_tower
 			personality = heroic
 		}
-		
 		primary_culture = dunedain
 		
 		set_global_flag = boromir_ii_alive
@@ -2404,7 +2393,6 @@ country_event = {
 			background = captain_of_gondor
 			personality = heroic
 		}
-		
 		primary_culture = dunedain
 		
 		set_global_flag = faramir_i_alive
@@ -2429,7 +2417,6 @@ country_event = {
 			background = prince_of_belfalas
 			personality = tactical
 		}
-		
 		set_global_flag = imrahil_i_alive
 	}
 }
