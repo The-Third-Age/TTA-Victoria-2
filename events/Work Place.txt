@@ -3484,3 +3484,1055 @@ province_event = {
 		owner = { treasury = 25000 }
 	}
 }
+
+# Generic RGO Change Event
+province_event = {
+	id = 12057
+	title = "A Change in RGO"
+	desc = "EVTDESC12057"
+	
+	trigger = {
+		NOT = { owner = { has_global_flag = generic_rgo_changing_disabled } }
+		NOT = { has_province_modifier = locked_rgo }
+		has_pop_type = labourers
+		work_available = { worker = labourers }
+		unemployment_by_type = { type = labourers value = 0.5 }
+		controlled_by = owner
+		province_control_days = 365
+		owner = { war = no }
+		NOT = { trade_goods = precious_metal }
+		NOT = { trade_goods = artisinal_goods }
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	immediate = {
+		add_province_modifier = { name = province_target_modifier duration = -1 }
+	}
+	
+	option = {
+		name = "Of course!"
+		
+		owner = {
+			# "Hills" RGOs
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					OR = {
+						trade_goods = rock
+						trade_goods = coal
+						trade_goods = iron
+						trade_goods = wool
+					}
+				}
+				province_event = { id = 12058 days = 0 }
+			}
+			# "Woods" RGOs in Mordor and Harad
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					OR = {
+						continent = africa # Mordor
+						continent = oceania # Harad
+					}
+					OR = {
+						trade_goods = timber
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = cotton
+					}
+				}
+				province_event = { id = 12059 days = 0 }
+			}
+			# "Woods" RGOs in Gondor
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					continent = south_america # Gondor/Rohan
+					OR = {
+						trade_goods = timber
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = tobacco
+						trade_goods = cotton
+					}
+				}
+				province_event = { id = 12060 days = 0 }
+			}
+			# "Woods" RGOs in Eriador
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					continent = north_america # Eriador
+					OR = {
+						trade_goods = timber
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = tobacco
+					}
+				}
+				province_event = { id = 12061 days = 0 }
+			}
+			# "Woods" RGOs in Rhovanion and Rhun
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					OR = {
+						continent = europe # Rhovanion
+						continent = asia # Rhun
+					}
+					OR = {
+						trade_goods = timber
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+					}
+				}
+				province_event = { id = 12062 days = 0 }
+			}
+			# "Flatland" RGOs in Mordor and Harad
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					life_rating = 30
+					OR = {
+						continent = africa # Mordor
+						continent = oceania # Harad
+					}
+					OR = {
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = cotton
+					}
+				}
+				province_event = { id = 12063 days = 0 }
+			}
+			# "Flatland" RGOs in Gondor
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					life_rating = 30
+					continent = south_america # Gondor/Rohan
+					OR = {
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = tobacco
+						trade_goods = cotton
+					}
+				}
+				province_event = { id = 12064 days = 0 }
+			}
+			# "Flatland" RGOs in Eriador
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					life_rating = 30
+					continent = north_america # Eriador
+					OR = {
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = tobacco
+					}
+				}
+				province_event = { id = 12065 days = 0 }
+			}
+			# "Flatland" RGOs in Rhovanion and Rhun
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					life_rating = 30
+					OR = {
+						continent = europe # Rhovanion
+						continent = asia # Rhun
+					}
+					OR = {
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+					}
+				}
+				province_event = { id = 12066 days = 0 }
+			}
+		}
+		
+		add_province_modifier = { name = locked_rgo duration = 365 }
+		province_wealth_decrease_2_loc = {}
+		
+		owner = {
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_modifier
+				}
+				add_province_modifier = { name = province_wealth_decrease_2_target_modifier duration = -1 }
+				remove_province_modifier = province_target_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+	
+	option = {
+		name = "We do not want to change the RGO at this time"
+		
+		add_province_modifier = { name = locked_rgo duration = 365 }
+		
+		owner = {
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_modifier
+				}
+				remove_province_modifier = province_target_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+	
+	option = {
+		name = "We never want to change this RGO"
+		
+		add_province_modifier = { name = locked_rgo duration = -1 }
+		
+		owner = {
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_modifier
+				}
+				remove_province_modifier = province_target_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+}
+
+# "Hills" RGOs
+province_event = {
+	id = 12058
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Rock"
+		
+		trade_goods = rock
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = rock
+			}
+		}
+	}
+	
+	option = {
+		name = "Coal"
+		
+		trade_goods = coal
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = coal
+			}
+		}
+	}
+	
+	option = {
+		name = "Iron"
+		
+		trade_goods = iron
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = iron
+			}
+		}
+	}
+	
+	option = {
+		name = "Wool"
+		
+		trade_goods = wool
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = wool
+			}
+		}
+	}
+}
+
+# "Woods" RGOs in Mordor and Harad
+province_event = {
+	id = 12059
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Timber"
+		
+		trade_goods = timber
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = timber
+			}
+		}
+	}
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Cotton"
+		
+		trade_goods = cotton
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = cotton
+			}
+		}
+	}
+}
+
+# "Woods" RGOs in Gondor
+province_event = {
+	id = 12060
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Timber"
+		
+		trade_goods = timber
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = timber
+			}
+		}
+	}
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Pipeweed"
+		
+		trade_goods = tobacco
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = tobacco
+			}
+		}
+	}
+	
+	option = {
+		name = "Cotton"
+		
+		trade_goods = cotton
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = cotton
+			}
+		}
+	}
+}
+
+# "Woods" RGOs in Eriador
+province_event = {
+	id = 12061
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Timber"
+		
+		trade_goods = timber
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = timber
+			}
+		}
+	}
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Pipeweed"
+		
+		trade_goods = tobacco
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tobacco
+			}
+		}
+	}
+}
+
+# "Woods" RGOs in Rhovanion and Rhun
+province_event = {
+	id = 12062
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Timber"
+		
+		trade_goods = timber
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = timber
+			}
+		}
+	}
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+}
+
+# "Flatland" RGOs in Mordor and Harad
+province_event = {
+	id = 12063
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Cotton"
+		
+		trade_goods = cotton
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = cotton
+			}
+		}
+	}
+}
+
+# "Flatland" RGOs in Gondor
+province_event = {
+	id = 12064
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Pipeweed"
+		
+		trade_goods = tobacco
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tobacco
+			}
+		}
+	}
+	
+	option = {
+		name = "Cotton"
+		
+		trade_goods = cotton
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = cotton
+			}
+		}
+	}
+}
+
+# "Flatland" RGOs in Eriador
+province_event = {
+	id = 12065
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Pipeweed"
+		
+		trade_goods = tobacco
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = tobacco
+			}
+		}
+	}
+}
+
+# "Flatland" RGOs in Rhovanion and Rhun
+province_event = {
+	id = 12066
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+}
