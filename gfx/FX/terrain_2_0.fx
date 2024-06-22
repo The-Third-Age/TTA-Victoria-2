@@ -413,8 +413,6 @@ float4 GenerateTiles( TILE_STRUCT v )
 	
 	float4 UpTerrain = tex2D( TextureSheet, TexCoord + uvThis ); //->upleft
 	
-	
-	
 //	noisy.x = tex2D(NoiseTexture, noisecoord / 12 ).r;
 //	noisy.y = tex2D(NoiseTexture, noisecoord / 2 + 1.5 ).r;
 //	noisy.z = tex2D(NoiseTexture, noisecoord / 6 + 2.0 ).r;
@@ -553,7 +551,7 @@ VS_MAP_OUTPUT VertexShader_Map(const VS_INPUT v )
 	Out.vTexCoord1.xy = float2( ( WorldX + X_OFFSET)/ColorMapTextureWidth, (WorldY + Z_OFFSET)/ColorMapTextureHeight );
 
 	Out.vTerrainIndexColor.x = ((WorldPosition.x - TerrainIndexOffsetX) + X_MAGIC ) / TerrainIndexSizeX;
-	Out.vTerrainIndexColor.y = ((WorldPosition.z - TerrainIndexOffsetY) + Y_MAGIC ) / TerrainIndexSizeY;		
+	Out.vTerrainIndexColor.y = ((WorldPosition.z - TerrainIndexOffsetY) + Y_MAGIC ) / TerrainIndexSizeY;
 	
 	Out.vTerrainIndexColor = clamp(Out.vTerrainIndexColor,0.0,1.0);
 	return Out;
