@@ -20,9 +20,7 @@ province_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 60
-	}
+	mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = "Drat."
@@ -91,7 +89,6 @@ province_event = {
 			limit = {
 				type = tribals
 			}
-			
 			reduce_pop = 0
 		}
 		
@@ -147,7 +144,6 @@ province_event = {
 				1 = { years_of_research = 0.05 }
 			}
 		}
-		
 		remove_province_modifier = military_hunting_tribals
 	}
 }
@@ -179,7 +175,6 @@ province_event = {
 			limit = {
 				type = tribals
 			}
-			
 			reduce_pop = 0.9
 		}
 		
@@ -196,7 +191,6 @@ province_event = {
 			limit = {
 				type = soldiers
 			}
-			
 			reduce_pop = 0.98
 		}
 		
@@ -232,9 +226,7 @@ country_event = {
 		NOT = { has_country_modifier = great_advisor }
 	}
 	
-	mean_time_to_happen = {
-		months = 480
-	}
+	mean_time_to_happen = { months = 480 }
 	
 	option = {
 		name = "Huzzah!"
@@ -254,9 +246,7 @@ country_event = {
 		NOT = { has_country_modifier = great_diplomat }
 	}
 	
-	mean_time_to_happen = {
-		months = 480
-	}
+	mean_time_to_happen = { months = 480 }
 	
 	option = {
 		name = "Huzzah!"
@@ -279,9 +269,7 @@ country_event = {
 		has_country_flag = using_palantiri
 	}
 	
-	mean_time_to_happen = {
-		months = 36
-	}
+	mean_time_to_happen = { months = 36 }
 	
 	option = {
 		name = "Placate them"
@@ -338,9 +326,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 36
-	}
+	mean_time_to_happen = { months = 36 }
 	
 	option = {
 		name = "Sieze it"
@@ -369,7 +355,6 @@ country_event = {
 			}
 			create_alliance = THIS
 		}
-		
 		treasury = -10000
 		prestige = 2
 	}
@@ -397,9 +382,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 36
-	}
+	mean_time_to_happen = { months = 36 }
 	
 	option = {
 		name = "Strike first"
@@ -440,9 +423,7 @@ country_event = {
 		NOT = { has_country_modifier = economic_boom }
 	}
 	
-	mean_time_to_happen = {
-		months = 36
-	}
+	mean_time_to_happen = { months = 36 }
 	
 	option = {
 		name = "Sieze it"
@@ -462,9 +443,7 @@ country_event = {
 		has_country_flag = using_palantiri
 	}
 	
-	mean_time_to_happen = {
-		months = 36
-	}
+	mean_time_to_happen = { months = 36 }
 	
 	option = {
 		name = "Use it"
@@ -487,9 +466,7 @@ country_event = {
 		MOR = { nationalvalue = sauron }
 	}
 	
-	mean_time_to_happen = {
-		months = 108
-	}
+	mean_time_to_happen = { months = 108 }
 	
 	option = {
 		name = "A contest of wills"
@@ -541,9 +518,7 @@ country_event = {
 		NOT = { in_sphere = MOR }
 	}
 	
-	mean_time_to_happen = {
-		months = 4
-	}
+	mean_time_to_happen = { months = 4 }
 	
 	option = {
 		name = "Sauron is our friend"
@@ -578,9 +553,7 @@ country_event = {
 		in_sphere = MOR
 	}
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	option = {
 		name = "We serve the Lord Sauron"
@@ -603,9 +576,7 @@ country_event = {
 		FOR = { any_neighbor_country = { alliance_with = THIS } }
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
+	mean_time_to_happen = { months = 12 }
 	
 	option = {
 		name = "They are plotting against me!"
@@ -709,9 +680,7 @@ province_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 600
-	}
+	mean_time_to_happen = { months = 600 }
 
 	option = {
 		name = "Damn these birds!"
@@ -744,9 +713,7 @@ province_event = {
 		owner = { money = 1000 }
 	}
 
-	mean_time_to_happen = {
-		months = 120
-	}
+	mean_time_to_happen = { months = 120 }
 	
 	immediate = {
 		random = {
@@ -791,17 +758,14 @@ province_event = {
 			factor = 0.9
 			units_in_province = 1
 		}
-
 		modifier = {
 			factor = 0.9
 			units_in_province = 3
 		}
-
 		modifier = {
 			factor = 0.9
 			units_in_province = 5
 		}
-
 		modifier = {
 			factor = 0.9
 			units_in_province = 10
@@ -819,7 +783,6 @@ province_event = {
 			limit = {
 				type = soldiers
 			}
-
 			reduce_pop = 0.99
 		}
 

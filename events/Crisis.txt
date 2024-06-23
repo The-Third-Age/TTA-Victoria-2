@@ -10,16 +10,13 @@ country_event = {
 	title = "A Crisis is Brewing!"
 	desc = "EVTDESC18000"
 	picture = "crisis"
-	trigger = {
-	}
-
+	
 	is_triggered_only = yes
+	
 	option = {
 		name = "We are interested"
-		ai_chance = {
-			factor = 100
-		}
-
+		ai_chance = { factor = 100 }
+		
 		add_crisis_interest = yes
 	}
 	option = {
@@ -41,7 +38,7 @@ province_event = {
 			has_flashpoint = yes
 			flashpoint_tension = 5
 			NOT = { flashpoint_tension = 90 }
-			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -67,18 +64,15 @@ province_event = {
 
 	option = {
 		name = "Of course not!" #
-		ai_chance = {
-			factor = 95
-		}
+		ai_chance = { factor = 95 }
+		
 		state_scope = {
 			flashpoint_tension = 10
 		}
 	}
 	option = {
 		name = "Talking is good..."
-		ai_chance = {
-			factor = 5
-		}
+		ai_chance = { factor = 5 }
 
 		owner = { prestige_factor = -0.15 }
 	}
@@ -89,13 +83,14 @@ province_event = {
 	id = 18002
 	title = "Tensions in $STATE$"
 	desc = "EVTDESC18001"
+	
 	trigger = {
 		owner = { is_greater_power = no }
 		state_scope = {
 			has_flashpoint = yes
-				flashpoint_tension = 5
-				NOT = { flashpoint_tension = 90 }
-			}
+			flashpoint_tension = 5
+			NOT = { flashpoint_tension = 90 }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -121,19 +116,16 @@ province_event = {
 
 	option = {
 		name = "Insist $STATE$ is ours!"
-		ai_chance = {
-			factor = 70
-		}
+		ai_chance = { factor = 70 }
+		
 		state_scope = {
 			flashpoint_tension = 10
 		}
 	}
 	option = {
 		name = "Concede their point..."
-		ai_chance = {
-			factor = 30
-		}
-
+		ai_chance = { factor = 30 }
+		
 		owner = { prestige_factor = -0.1 }
 	}
 }
@@ -144,6 +136,7 @@ country_event = {
 	title = "The $CRISISAREA$ Crisis"
 	desc = "EVTDESC18003"
 	picture = "crisis"
+	
 	trigger = {
 		crisis_exist = yes
 		involved_in_crisis = yes
@@ -174,17 +167,14 @@ country_event = {
 
 	option = {
 		name = "Only war will solve this!"
-		ai_chance = {
-			factor = 95
-		}
-			add_crisis_temperature = 10
+		ai_chance = { factor = 95 }
+		
+		add_crisis_temperature = 10
 	}
 	option = {
 		name = "Don't listen to him!"
-		ai_chance = {
-			factor = 5
-		}
-
+		ai_chance = { factor = 5 }
+		
 		prestige_factor = -0.15
 	}
 }
@@ -195,6 +185,7 @@ country_event = {
 	title = "The destiny of $CRISISTAKER$"
 	desc = "EVTDESC18004"
 	picture = "crisis"
+	
 	trigger = {
 		crisis_exist = yes
 		involved_in_crisis = yes
@@ -225,17 +216,14 @@ country_event = {
 
 	option = {
 		name = "Rattle our sabre!"
-		ai_chance = {
-			factor = 95
-		}
-			add_crisis_temperature = 10
+		ai_chance = { factor = 95 }
+		
+		add_crisis_temperature = 10
 	}
 	option = {
 		name = "Fire the fool!"
-		ai_chance = {
-			factor = 5
-		}
-
+		ai_chance = { factor = 5 }
+		
 		prestige_factor = -0.15
 	}
 }
@@ -246,6 +234,7 @@ country_event = {
 	title = "The $CRISISAREA$ Crisis"
 	desc = "EVTDESC20104"
 	picture = "crisis"
+	
 	trigger = {
 		crisis_exist = yes
 		involved_in_crisis = yes
@@ -276,16 +265,13 @@ country_event = {
 
 	option = {
 		name = "It's our!"
-		ai_chance = {
-			factor = 70
-		}
-			add_crisis_temperature = 5
+		ai_chance = { factor = 70 }
+		
+		add_crisis_temperature = 5
 	}
 	option = {
 		name = "Let's discuss this"
-		ai_chance = {
-			factor = 30
-		}
+		ai_chance = { factor = 30 }
 	}
 }
 
@@ -295,6 +281,7 @@ country_event = {
 	title = "The $CRISISAREA$ Crisis"
 	desc = "EVTDESC18006"
 	picture = "crisis"
+	
 	trigger = {
 		crisis_exist = yes
 		involved_in_crisis = yes
@@ -325,15 +312,12 @@ country_event = {
 
 	option = {
 		name = "Press our claim!"
-		ai_chance = {
-			factor = 70
-		}
-			add_crisis_temperature = 5
+		ai_chance = { factor = 70 }
+		
+		add_crisis_temperature = 5
 	}
 	option = {
 		name = "Fighting is bad"
-		ai_chance = {
-			factor = 30
-		}
+		ai_chance = { factor = 30 }
 	}
 }
