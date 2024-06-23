@@ -38,6 +38,10 @@
 # Outlaws					32						34
 # Smaug						33						35
 # Empty						34						36
+# Summer					35						37
+# Autumn					36						38
+# Winter					37						39
+# Spring					38						40
 
 #############################
 ##### VANILLA MODIFIERS #####
@@ -188,10 +192,46 @@ province_wealth_investing_in_province = {
 }
 
 # }
-##### RGO CHANGING MODIFIERS #### {
+##### RGO CHANGING MODIFIERS ##### {
 # Province Modifier
 locked_rgo = {
 	icon = 1
+}
+
+# }
+##### SEASONS MODIFIERS ##### {
+# Province Modifier
+summer_modifier = {
+	farm_rgo_eff = 0.1
+	pop_militancy_modifier = -0.01
+	pop_consciousness_modifier = -0.01
+	
+	icon = 37
+}
+
+# Province Modifier
+autumn_modifier = {
+	farm_rgo_eff = 0.05
+	
+	icon = 38
+}
+
+# Province Modifier
+winter_modifier = {
+	farm_rgo_eff = -0.25
+	pop_militancy_modifier = 0.01
+	pop_consciousness_modifier = 0.01
+	movement_cost = 0.1
+	
+	icon = 39
+}
+
+# Province Modifier
+spring_modifier = {
+	farm_rgo_eff = 0.05
+	movement_cost = 0.05
+	
+	icon = 40
 }
 
 # }
