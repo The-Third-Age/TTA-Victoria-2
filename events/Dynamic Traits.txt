@@ -10,9 +10,9 @@
 # New Leader
 country_event = {
 	id = 3500
-	picture = administration
 	title = "A New Leader"
 	desc = "EVTDESC3500"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -65,13 +65,11 @@ country_event = {
 # Generic Leader Dies
 country_event = {
 	id = 3501
-	picture = administration
 	title = "Our Leader has Died!"
 	desc = "EVTDESC3501"
+	picture = administration
 	
-	trigger = {
-		nationalvalue = generic_leader
-	}
+	trigger = { nationalvalue = generic_leader }
 	
 	mean_time_to_happen = {
 		months = 360
@@ -138,9 +136,9 @@ country_event = {
 # strata_support Modifiers - of_the_people vs aristocrat_modifier
 country_event = {
 	id = 3502
-	picture = administration
 	title = "A Trait Change"
 	desc = "EVTDESC3502"
+	picture = administration
 	
 	trigger = {
 		OR = {
@@ -207,9 +205,9 @@ country_event = {
 # wisdom Modifiers - wise_ruler vs charlatan
 country_event = {
 	id = 3503
-	picture = administration
 	title = "A Trait Change"
 	desc = "EVTDESC3503"
+	picture = administration
 	
 	trigger = {
 		OR = {
@@ -276,9 +274,9 @@ country_event = {
 # work_ethic Modifiers - diligent vs lazy
 country_event = {
 	id = 3504
-	picture = administration
 	title = "A Trait Change"
 	desc = "EVTDESC3504"
+	picture = administration
 	
 	trigger = {
 		OR = {
@@ -345,9 +343,9 @@ country_event = {
 # generosity Modifiers - generous vs greedy
 country_event = {
 	id = 3505
-	picture = administration
 	title = "A Trait Change"
 	desc = "EVTDESC3505"
+	picture = administration
 	
 	trigger = {
 		OR = {
@@ -414,9 +412,9 @@ country_event = {
 # corruption Modifiers - just vs corrupt
 country_event = {
 	id = 3506
-	picture = administration
 	title = "A Trait Change"
 	desc = "EVTDESC3506"
+	picture = administration
 	
 	trigger = {
 		OR = {
@@ -486,6 +484,7 @@ country_event = {
 	title = "The Death of $FROMCOUNTRY$'s Ruler"
 	desc = "EVTDESC50022"
 	picture = "gondor/coronation"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -511,6 +510,7 @@ country_event = {
 	title = "The End of the Monarchy"
 	desc = "EVTDESC3508"
 	picture = "administration"
+	
 	is_triggered_only = yes
 	
 	option = {

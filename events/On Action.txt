@@ -10,11 +10,13 @@ country_event = {
 	title = "$STATE$ Granted Statehood!"
 	desc = "EVTDESC70000"
 	picture = "Slaves"
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
 	trigger = {
 		country = { slavery = yes_slavery }
 	}
-	is_triggered_only = yes
-	allow_multiple_instances = yes
 	
 	option = {
 		name = "Extend slavery"
@@ -41,6 +43,10 @@ country_event = {
 	id = 70001
 	title = "$STATE$ Granted Statehood!"
 	desc = "EVTDESC70001"
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
 	trigger = {
 		OR = {
 			country = {
@@ -77,8 +83,6 @@ country_event = {
 			}
 		}
 	}
-	is_triggered_only = yes
-	allow_multiple_instances = yes
 	
 	option = {
 		name = "Excellent!"
@@ -170,14 +174,16 @@ country_event = {
 	title = "$FROMCOUNTRY$ goes bankrupt!"
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
+	
+	is_triggered_only = yes
+	
 	trigger = {
 		NOT = {
 			tag = FROM
 			has_country_modifier = observer_mode
 		}
 	}
-
-	is_triggered_only = yes
+	
 	option = {
 		name = "OK"
 		casus_belli = {
@@ -193,14 +199,16 @@ country_event = {
 	title = "$FROMCOUNTRY$ goes bankrupt!"
 	desc = "EVTDESC70002"
 	picture = "Bankruptcy"
+	
+	is_triggered_only = yes
+	
 	trigger = {
 		NOT = {
 			tag = FROM
 			has_country_modifier = observer_mode
 		}
 	}
-
-	is_triggered_only = yes
+	
 	option = {
 		name = "OK"
 		casus_belli = {
@@ -211,15 +219,14 @@ country_event = {
 }
 
 country_event = {
+	id = 70005
 	title = "Embrace Advancement"
 	desc = "EVTDESC70005"
+	picture = "Prosper"
 	news = yes
 	news_desc_long = "EVTDESC70005_NEWS_LONG"
 	news_desc_medium = "EVTDESC70005_NEWS_MEDIUM"
 	news_desc_short = "EVTDESC70005_NEWS_SHORT"
-	picture = "Prosper"
-
-	id = 70005
 
 	is_triggered_only = yes
 	
@@ -233,11 +240,10 @@ country_event = {
 }
 
 country_event = {
+	id = 70006
 	title = "Guilds Siezed!"
 	desc = "EVTDESC70006"
 	picture = "Prosper"
-
-	id = 70006
 
 	is_triggered_only = yes
 
@@ -271,11 +277,12 @@ country_event = {
 	desc = "EVTDESC70000"
 	picture = "administration"
 	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
 	trigger = {
 		country = { slavery = non_accepted_slavery }
 	}
-	is_triggered_only = yes
-	allow_multiple_instances = yes
 	
 	option = {
 		name = "Extend slavery"

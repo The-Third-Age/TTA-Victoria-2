@@ -18,9 +18,7 @@ country_event = {
 		NOT = {	has_country_modifier = CB_gen_minus }
 	}
 	
-	mean_time_to_happen = {
-		months = 3
-	}
+	mean_time_to_happen = { months = 3 }
 	
 	option = {
 		name = "They're coming right for us!"
@@ -39,17 +37,14 @@ country_event = {
 	picture = "entmoot"
 	
 	trigger = {
+		accepted_culture = ent_culture
 		constructing_cb_progress = 10
 		NOT = { involved_in_crisis = yes }
 		NOT = {	has_country_modifier = CB_gen_plus }
 		NOT = {	has_country_modifier = CB_gen_minus }
-
-		accepted_culture = ent_culture
 	}
 	
-	mean_time_to_happen = {
-		months = 3
-	}
+	mean_time_to_happen = { months = 3 }
 	
 	option = {
 		name = "Good morning, indeed"
@@ -69,17 +64,14 @@ country_event = {
 	
 	trigger = {
 		constructing_cb_progress = 10
+		accepted_culture = men_culture
+		has_global_flag = fourth_age_flag
 		NOT = { involved_in_crisis = yes }
 		NOT = {	has_country_modifier = CB_gen_plus }
 		NOT = {	has_country_modifier = CB_gen_minus }
-
-		accepted_culture = men_culture
-		has_global_flag = fourth_age_flag
 	}
 	
-	mean_time_to_happen = {
-		months = 3
-	}
+	mean_time_to_happen = { months = 3 }
 	
 	option = {
 		name = "It is our right"
