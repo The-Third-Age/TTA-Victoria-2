@@ -1279,13 +1279,63 @@ province_event = {
 	
 	immediate = {
 		add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+		add_province_modifier = { name = province_target_modifier duration = -1 }
 	}
 	
 	option = {
 		name = "Help them"
 		owner = {
 			food = -15
-			treasury = -50000
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { total_pops = 10000 }
+				}
+				owner = { treasury = -5000 }
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					total_pops = 10000
+					NOT = { total_pops = 30000 }
+				}
+				owner = { treasury = -10000 }
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					total_pops = 30000
+					NOT = { total_pops = 60000 }
+				}
+				owner = { treasury = -20000 }
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					total_pops = 60000
+					NOT = { total_pops = 100000 }
+				}
+				owner = { treasury = -35000 }
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					total_pops = 100000
+				}
+				owner = { treasury = -50000 }
+			}
+			
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					owner = { has_global_flag = hidden_effects }
+				}
+				remove_province_modifier = province_target_modifier
+			}
+			
+			clr_global_flag = hidden_effects
 		}
 		province_wealth_decrease_1_loc = {}
 	}
