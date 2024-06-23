@@ -7,9 +7,9 @@
 # The Lord of Isengard
 country_event = {
 	id = 50100
-	picture = lord_of_isengard
 	title = "The Lord of Isengard!"
 	desc = "EVTDESC50100"
+	picture = lord_of_isengard
 	
 	is_triggered_only = yes
 	
@@ -28,9 +28,7 @@ country_event = {
 			value = -200
 		}
 		
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 90 }
 	}
 	
 	option = {
@@ -64,9 +62,9 @@ country_event = {
 # Alliance with Draig Luth
 country_event = {
 	id = 50110
-	picture = lord_of_isengard
 	title = "An alliance with the White Wizard?"
 	desc = "EVTDESC50110"
+	picture = lord_of_isengard
 	
 	is_triggered_only = yes
 
@@ -76,9 +74,7 @@ country_event = {
 		FROM = {
 			country_event = 50111
 		}
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 90 }
 	}
 	option = {
 		name = "Not a chance"
@@ -86,18 +82,16 @@ country_event = {
 		FROM = {
 			country_event = 50112
 		}
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 10 }
 	}
 }
 
 # Alliance with the Dunnish accepted
 country_event = {
 	id = 50111
-	picture = lord_of_isengard
 	title = "Alliance accepted"
 	desc = "They have accepted our offer."
+	picture = lord_of_isengard
 	
 	is_triggered_only = yes
 
@@ -112,9 +106,9 @@ country_event = {
 # Alliance with the Dunnish Refused
 country_event = {
 	id = 50112
-	picture = lord_of_isengard
 	title = "Alliance Refused"
 	desc = "They have rejected our offer."
+	picture = lord_of_isengard
 	
 	is_triggered_only = yes
 
@@ -133,9 +127,9 @@ country_event = {
 # The Age of the Uruk Hai
 country_event = {
 	id = 50120
-	picture = lord_of_isengard
 	title = "The Age of the Uruk Hai"
 	desc = "EVTDESC50120"
+	picture = lord_of_isengard
 
 	trigger = {
 		tag = ISE
@@ -145,9 +139,7 @@ country_event = {
 		NOT = { has_global_flag = bred_uruk_hai }
 	}
 	
-	mean_time_to_happen = {
-		months = 24
-	}
+	mean_time_to_happen = { months = 24 }
 
 	option = {
 		name = "A new power is rising, it's victory is at hand."
@@ -179,9 +171,7 @@ country_event = {
 		prestige = 5
 		badboy = 3
 
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 	}
 	option = {
 		name = "On second thoughts, no."
@@ -189,15 +179,16 @@ country_event = {
 		prestige = 5
 		badboy = -5
 		
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
 # Gaze in the Palantir - Start
 country_event = {
 	id = 50130
+	title = "Gaze in to the Palantir"
+	desc = "EVTDESC50130"
+	picture = "palantir_saruman"
 
 	trigger = {
 		nationalvalue = saruman
@@ -211,13 +202,7 @@ country_event = {
 		NOT = { has_country_flag = saruman_has_palantired_with_mordor}
 	}
 
-	mean_time_to_happen = {
-		months = 6
-	}
-
-	title = "Gaze in to the Palantir"
-	desc = "EVTDESC50130"
-	picture = "palantir_saruman"
+	mean_time_to_happen = { months = 6 }
 
 	option = {
 		name = "Cast your gaze..."
@@ -228,9 +213,7 @@ country_event = {
 		prestige = 5
 		set_country_flag = saruman_has_palantired_with_mordor
 
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 	}
 
 	option = {
@@ -238,21 +221,18 @@ country_event = {
 		prestige = -5
 		set_country_flag = saruman_has_palantired_with_mordor
 
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
 # Gaze in the Palantir - Offer Alliance
 country_event = {
 	id = 50131
-
-	is_triggered_only = yes
-
 	title = "Gaze in to the Palantir"
 	desc = "EVTDESC50131"
 	picture = "palantir_saruman"
+
+	is_triggered_only = yes
 
 	option = {
 		name = "Yes, an alliance would suit our interests..."
@@ -263,29 +243,24 @@ country_event = {
 			}
 		}
 		prestige = 2
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 	}
 
 	option = {
 		name = "Resist"
 		prestige = 1
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
 # Gaze in the Palantir - Mordor receives an alliance offer from Isengard
 country_event = {
 	id = 50132
-
-	is_triggered_only = yes
-
 	title = "An alliance with Isengard?"
 	desc = "EVTDESC50132"
 	picture = "palantir"
+
+	is_triggered_only = yes
 
 	option = {
 		name = "All according to plan"
@@ -295,28 +270,23 @@ country_event = {
 				days = 1
 			}
 		}
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 	}
 
 	option = {
 		name = "No way"
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { factor = 0 }
 	}
 }
 
 # Gaze in the Palantir - Alliance Accepted
 country_event = {
 	id = 50133
-
-	is_triggered_only = yes
-
 	title = "Alliance accepted"
 	desc = "EVTDESC50133"
 	picture = "palantir_saruman"
+
+	is_triggered_only = yes
 
 	option = {
 		name = "Excellent"
@@ -333,8 +303,6 @@ country_event = {
 		}
 		political_reform = evil_alignment
 		prestige = 2
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
 	}
 }
