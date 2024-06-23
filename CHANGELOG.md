@@ -9,7 +9,8 @@ All notable changes will be documented in this file.
  - Map rework completed -- over 300 new provinces and many unique terrains (split between v0.4 and v0.5)
  - Plurality reworked into Popular Anxiety
  - Dynamic Localisation for select events
- - Province Wealth mechanic (In development)
+ - Province Wealth mechanic
+ - Seasons mechanic
 
 ### New Tags
  - In Eriador: House of the Wind, Windan Elves, Dourhands of Ered Luin, Emyn Beriad, Eagles of the Eerie, Girithlin, Henlan, Fonntir, Saerlann, Caladir, Enedbund, Dol Tinereb, Mirobel, Mount Gram, Skuthruga Clan, Kosh Clan, Snow Orcs of Angmar
@@ -34,6 +35,8 @@ All notable changes will be documented in this file.
  - Dynamic Localisation
  - Popular Anxiety (replacing Plurality)
  - Province Wealth (replacing Crime)
+ - Seasons
+ - Beginning of Economy Rework
 
 ### Graphics
  - Reworked Lindon, Ered Luin, Eriador, Angmar, Enedwaith, Upper Anduin Vale, Grey Mountains, Rhûn, Rohan and Rhovanion provinces

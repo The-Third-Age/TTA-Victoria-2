@@ -24,6 +24,10 @@ province_event = {
 		months = 1200
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "Give the mine more money"
 		
@@ -36,6 +40,7 @@ province_event = {
 			reduce_pop = 0.999
 			consciousness = 1
 		}
+		province_wealth_decrease_1_loc = {}
 	}
 	
 	option = {
@@ -45,10 +50,12 @@ province_event = {
 			name = repairing_mine
 			duration = 730
 		}
+		owner = { plurality = 1 }
 		labourers = {
 			reduce_pop = 0.999
 			militancy = 1
 		}
+		province_wealth_decrease_1_loc = {}
 	}
 }
 
@@ -1217,18 +1224,23 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the storehouse!"
-		owner = {
-			food = 15
-		}
+		owner = { food = 15 }
+		province_wealth_increase_1_loc = {}
 	}
 
 	option = {
 		name = "...to the people!"
 		owner = {
 			war_exhaustion = -1
+			plurality = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1244,6 +1256,7 @@ province_event = {
 			food = 15
 		}
 	}
+	
 	mean_time_to_happen = {
 		months = 800
 		modifier = {
@@ -1263,12 +1276,68 @@ province_event = {
 			average_consciousness = 5
 		}
 	}
-
+	
+	immediate = {
+		add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+		add_province_modifier = { name = province_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "Help them"
 		owner = {
 			food = -15
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { total_pops = 10000 }
+				}
+				owner = { treasury = -5000 }
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					total_pops = 10000
+					NOT = { total_pops = 30000 }
+				}
+				owner = { treasury = -10000 }
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					total_pops = 30000
+					NOT = { total_pops = 60000 }
+				}
+				owner = { treasury = -20000 }
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					total_pops = 60000
+					NOT = { total_pops = 100000 }
+				}
+				owner = { treasury = -35000 }
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					total_pops = 100000
+				}
+				owner = { treasury = -50000 }
+			}
+			
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					owner = { has_global_flag = hidden_effects }
+				}
+				remove_province_modifier = province_target_modifier
+			}
+			
+			clr_global_flag = hidden_effects
 		}
+		province_wealth_decrease_1_loc = {}
 	}
 	
 	option = {
@@ -1276,6 +1345,8 @@ province_event = {
 		labourers = {
 			militancy = 1
 		}
+		owner = { plurality = 1 }
+		province_wealth_decrease_1_loc = {}
 	}
 }
 
@@ -1308,15 +1379,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1347,6 +1424,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1379,15 +1457,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1418,6 +1502,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1450,15 +1535,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1489,6 +1580,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1521,15 +1613,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1560,6 +1658,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1592,15 +1691,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1631,6 +1736,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1663,15 +1769,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1702,6 +1814,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1734,15 +1847,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1773,6 +1892,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1808,15 +1928,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1847,6 +1973,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1879,15 +2006,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1918,6 +2051,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -1950,15 +2084,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -1989,6 +2129,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2021,15 +2162,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2060,6 +2207,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2092,15 +2240,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2131,6 +2285,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2163,15 +2318,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2202,6 +2363,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2237,15 +2399,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2276,6 +2444,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2308,15 +2477,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2347,6 +2522,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2379,15 +2555,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2418,6 +2600,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2450,15 +2633,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2489,6 +2678,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2521,15 +2711,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2560,6 +2756,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2592,15 +2789,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2631,6 +2834,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2642,6 +2846,10 @@ province_event = {
 	
 	trigger = {
 		trade_goods = tea
+	}
+	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
 	}
 	
 	mean_time_to_happen = {
@@ -2667,11 +2875,13 @@ province_event = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2702,6 +2912,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2713,6 +2924,10 @@ province_event = {
 	
 	trigger = {
 		state_scope = { has_building = liquor_distillery }
+	}
+	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
 	}
 	
 	mean_time_to_happen = {
@@ -2738,11 +2953,13 @@ province_event = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2773,6 +2990,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2805,15 +3023,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2844,6 +3068,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2876,15 +3101,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2915,6 +3146,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -2947,15 +3179,21 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "...to the people!"
 		owner = {
 			prestige = 1
+			plurality = -1
 		}
 		any_pop = {
 			consciousness = -0.5
 			militancy = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 	
 	option = {
@@ -2986,6 +3224,7 @@ province_event = {
 				}
 			}
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -3009,12 +3248,17 @@ province_event = {
 		months = 800
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "Good"
 		add_province_modifier = {
 			name = new_vein
 			duration = -1
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -3051,12 +3295,17 @@ province_event = {
 		}
 	}
 	
+	immediate = {
+		add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+	}
+	
 	option = {
 		name = "Good"
 		add_province_modifier = {
 			name = high_production
 			duration = 730
 		}
+		province_wealth_increase_1_loc = {}
 	}
 }
 
@@ -3192,9 +3441,9 @@ province_event = {
 		}
 	}
 	
-	# mean_time_to_happen = {
-		# months = 12
-	# }
+	mean_time_to_happen = {
+		months = 12
+	}
 	
 	option = {
 		name = "They will pay for this!"
@@ -3283,5 +3532,1057 @@ province_event = {
 		name = "Enrich the realm"
 		
 		owner = { treasury = 25000 }
+	}
+}
+
+# Generic RGO Change Event
+province_event = {
+	id = 12057
+	title = "A Change in RGO"
+	desc = "EVTDESC12057"
+	
+	trigger = {
+		NOT = { owner = { has_global_flag = generic_rgo_changing_disabled } }
+		NOT = { has_province_modifier = locked_rgo }
+		has_pop_type = labourers
+		work_available = { worker = labourers }
+		unemployment_by_type = { type = labourers value = 0.5 }
+		controlled_by = owner
+		province_control_days = 365
+		owner = { war = no }
+		NOT = { trade_goods = precious_metal }
+		NOT = { trade_goods = artisinal_goods }
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+	
+	immediate = {
+		add_province_modifier = { name = province_target_modifier duration = -1 }
+	}
+	
+	option = {
+		name = "Of course!"
+		
+		owner = {
+			# "Hills" RGOs
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					OR = {
+						trade_goods = rock
+						trade_goods = coal
+						trade_goods = iron
+						trade_goods = wool
+					}
+				}
+				province_event = { id = 12058 days = 0 }
+			}
+			# "Woods" RGOs in Mordor and Harad
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					OR = {
+						continent = africa # Mordor
+						continent = oceania # Harad
+					}
+					OR = {
+						trade_goods = timber
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = cotton
+					}
+				}
+				province_event = { id = 12059 days = 0 }
+			}
+			# "Woods" RGOs in Gondor
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					continent = south_america # Gondor/Rohan
+					OR = {
+						trade_goods = timber
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = tobacco
+						trade_goods = cotton
+					}
+				}
+				province_event = { id = 12060 days = 0 }
+			}
+			# "Woods" RGOs in Eriador
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					continent = north_america # Eriador
+					OR = {
+						trade_goods = timber
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = tobacco
+					}
+				}
+				province_event = { id = 12061 days = 0 }
+			}
+			# "Woods" RGOs in Rhovanion and Rhun
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					NOT = { life_rating = 30 }
+					OR = {
+						continent = europe # Rhovanion
+						continent = asia # Rhun
+					}
+					OR = {
+						trade_goods = timber
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+					}
+				}
+				province_event = { id = 12062 days = 0 }
+			}
+			# "Flatland" RGOs in Mordor and Harad
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					life_rating = 30
+					OR = {
+						continent = africa # Mordor
+						continent = oceania # Harad
+					}
+					OR = {
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = cotton
+					}
+				}
+				province_event = { id = 12063 days = 0 }
+			}
+			# "Flatland" RGOs in Gondor
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					life_rating = 30
+					continent = south_america # Gondor/Rohan
+					OR = {
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = tobacco
+						trade_goods = cotton
+					}
+				}
+				province_event = { id = 12064 days = 0 }
+			}
+			# "Flatland" RGOs in Eriador
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					life_rating = 30
+					continent = north_america # Eriador
+					OR = {
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+						trade_goods = tobacco
+					}
+				}
+				province_event = { id = 12065 days = 0 }
+			}
+			# "Flatland" RGOs in Rhovanion and Rhun
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_modifier
+					life_rating = 30
+					OR = {
+						continent = europe # Rhovanion
+						continent = asia # Rhun
+					}
+					OR = {
+						trade_goods = dye
+						trade_goods = food
+						trade_goods = tea
+						trade_goods = horses
+					}
+				}
+				province_event = { id = 12066 days = 0 }
+			}
+		}
+		
+		add_province_modifier = { name = locked_rgo duration = 365 }
+		province_wealth_decrease_2_loc = {}
+		
+		owner = {
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_modifier
+				}
+				add_province_modifier = { name = province_wealth_decrease_2_target_modifier duration = -1 }
+				remove_province_modifier = province_target_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+	
+	option = {
+		name = "We do not want to change the RGO at this time"
+		
+		add_province_modifier = { name = locked_rgo duration = 365 }
+		
+		owner = {
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_modifier
+				}
+				remove_province_modifier = province_target_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+	
+	option = {
+		name = "We never want to change this RGO"
+		
+		add_province_modifier = { name = locked_rgo duration = -1 }
+		
+		owner = {
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_modifier
+				}
+				remove_province_modifier = province_target_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+}
+
+# "Hills" RGOs
+province_event = {
+	id = 12058
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Rock"
+		
+		trade_goods = rock
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = rock
+			}
+		}
+	}
+	
+	option = {
+		name = "Coal"
+		
+		trade_goods = coal
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = coal
+			}
+		}
+	}
+	
+	option = {
+		name = "Iron"
+		
+		trade_goods = iron
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = iron
+			}
+		}
+	}
+	
+	option = {
+		name = "Wool"
+		
+		trade_goods = wool
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = wool
+			}
+		}
+	}
+}
+
+# "Woods" RGOs in Mordor and Harad
+province_event = {
+	id = 12059
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Timber"
+		
+		trade_goods = timber
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = timber
+			}
+		}
+	}
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Cotton"
+		
+		trade_goods = cotton
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = cotton
+			}
+		}
+	}
+}
+
+# "Woods" RGOs in Gondor
+province_event = {
+	id = 12060
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Timber"
+		
+		trade_goods = timber
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = timber
+			}
+		}
+	}
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Pipeweed"
+		
+		trade_goods = tobacco
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = tobacco
+			}
+		}
+	}
+	
+	option = {
+		name = "Cotton"
+		
+		trade_goods = cotton
+		
+		ai_chance = {
+			factor = 14
+			
+			modifier = {
+				factor = 0
+				trade_goods = cotton
+			}
+		}
+	}
+}
+
+# "Woods" RGOs in Eriador
+province_event = {
+	id = 12061
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Timber"
+		
+		trade_goods = timber
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = timber
+			}
+		}
+	}
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Pipeweed"
+		
+		trade_goods = tobacco
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tobacco
+			}
+		}
+	}
+}
+
+# "Woods" RGOs in Rhovanion and Rhun
+province_event = {
+	id = 12062
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Timber"
+		
+		trade_goods = timber
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = timber
+			}
+		}
+	}
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+}
+
+# "Flatland" RGOs in Mordor and Harad
+province_event = {
+	id = 12063
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Cotton"
+		
+		trade_goods = cotton
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = cotton
+			}
+		}
+	}
+}
+
+# "Flatland" RGOs in Gondor
+province_event = {
+	id = 12064
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Pipeweed"
+		
+		trade_goods = tobacco
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = tobacco
+			}
+		}
+	}
+	
+	option = {
+		name = "Cotton"
+		
+		trade_goods = cotton
+		
+		ai_chance = {
+			factor = 17
+			
+			modifier = {
+				factor = 0
+				trade_goods = cotton
+			}
+		}
+	}
+}
+
+# "Flatland" RGOs in Eriador
+province_event = {
+	id = 12065
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
+	}
+	
+	option = {
+		name = "Pipeweed"
+		
+		trade_goods = tobacco
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 0
+				trade_goods = tobacco
+			}
+		}
+	}
+}
+
+# "Flatland" RGOs in Rhovanion and Rhun
+province_event = {
+	id = 12066
+	title = "A Change in RGO"
+	desc = "EVTDESC12058"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Dye"
+		
+		trade_goods = dye
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = dye
+			}
+		}
+	}
+	
+	option = {
+		name = "Food"
+		
+		trade_goods = food
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = food
+			}
+		}
+	}
+	
+	option = {
+		name = "Tea"
+		
+		trade_goods = tea
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = tea
+			}
+		}
+	}
+	
+	option = {
+		name = "Horses"
+		
+		trade_goods = horses
+		
+		ai_chance = {
+			factor = 25
+			
+			modifier = {
+				factor = 0
+				trade_goods = horses
+			}
+		}
 	}
 }

@@ -11,22 +11,22 @@ country_event = { # First attempt
 	id = 50700
 
 	trigger = {
-		not = { has_country_flag = searching_for_lesser_ring }
+		NOT = { has_country_flag = searching_for_lesser_ring }
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
-		not = { has_country_flag = rejected_searching_for_lesser_ring }
+		NOT = { has_country_flag = rejected_searching_for_lesser_ring }
 	}
 
 	mean_time_to_happen = {
@@ -93,15 +93,15 @@ country_event = { # Lesser Ring of Might
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_might }
@@ -170,15 +170,15 @@ country_event = { # Lesser Ring of Courage
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_courage }
@@ -247,15 +247,15 @@ country_event = { # Lesser Ring of Wit
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_wit }
@@ -324,15 +324,15 @@ country_event = { # Lesser Ring of Calm
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_calm }
@@ -401,15 +401,15 @@ country_event = { # Lesser Ring of Plenty
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_plenty }
@@ -478,15 +478,15 @@ country_event = { # Lesser Ring of Glory
 		OR = {
 			AND = {
 				invention = first_lesser_ring
-				not = { has_country_flag = found_first_lesser_ring }
+				NOT = { has_country_flag = found_first_lesser_ring }
 			}
 			AND = {
 				invention = second_lesser_ring
-				not = { has_country_flag = found_second_lesser_ring }
+				NOT = { has_country_flag = found_second_lesser_ring }
 			}
 			AND = {
 				invention = third_lesser_ring
-				not = { has_country_flag = found_third_lesser_ring }
+				NOT = { has_country_flag = found_third_lesser_ring }
 			}
 		}
 		NOT = { has_country_modifier = lesser_ring_of_glory }
@@ -552,23 +552,19 @@ country_event = { # Lesser Ring of Glory
 ########################
 country_event = { # First attempt
 	id = 50730
-
-	trigger = {
-		invention = entwives
-		not = { has_global_flag = entwives_found }
-		not = { has_country_flag = searching_for_entwives }
-		not = { has_country_flag = rejected_searching_for_entwives }
-	}
-
-	mean_time_to_happen = {
-		months = 12
-	}
-
 	title = "Search for the Entwives"
 	desc = "EVTDESC50730"
 	picture = "entwives"
-	
 
+	trigger = {
+		invention = entwives
+		NOT = { has_global_flag = entwives_found }
+		NOT = { has_country_flag = searching_for_entwives }
+		NOT = { has_country_flag = rejected_searching_for_entwives }
+	}
+
+	mean_time_to_happen = { months = 12 }
+	
 	option = {
 		name = "Support the mission"
 		ai_chance = { factor = 25 }
@@ -590,19 +586,16 @@ country_event = { # First attempt
 
 country_event = { # Attempt fails, try again?
 	id = 50731
+	title = "Failure to find the Entwives"
+	desc = "EVTDESC50731"
+	picture = "entwives"
 	
 	trigger = {
 		invention = entwives
 		has_country_flag = searching_for_entwives
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "Failure to find the Entwives"
-	desc = "EVTDESC50731"
-	picture = "entwives"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Try again" # Fund second attempt
@@ -620,19 +613,16 @@ country_event = { # Attempt fails, try again?
 
 country_event = { # Entwives found
 	id = 50732
-
-	trigger = {
-		has_country_flag = searching_for_entwives
-		not = { has_global_flag = entwives_found }
-	}
-
-	mean_time_to_happen = {
-		months = 36
-	}
-
 	title = "We've found the entwives"
 	desc = "EVTDESC50732"
 	picture = "entwives"
+
+	trigger = {
+		has_country_flag = searching_for_entwives
+		NOT = { has_global_flag = entwives_found }
+	}
+
+	mean_time_to_happen = { months = 36 }
 
 	option = {
 		name = "Excellent"
@@ -669,12 +659,12 @@ country_event = { # Entwives found
 
 country_event = { # Other country has found Entwives
 	id = 50733
-	is_triggered_only = yes
-
 	title = "Entwives have been found"
 	desc = "EVTDESC50733"
 	picture = "entwives"
 
+	is_triggered_only = yes
+	
 	option = {
 		name = "Interesting"
 		clr_country_flag = searching_for_entwives
@@ -686,8 +676,12 @@ country_event = { # Other country has found Entwives
 ########################
 country_event = { # Helper event to say you can't find a silmaril unless you can dig deep and greedily
 	id = 50740
+	title = "Where can one find a Silmaril"
+	desc = "EVTDESC50740"
+	picture = "silmarils"
 
 	trigger = {
+		is_greater_power = yes
 		invention = silmarils
 		NOT = { has_global_flag = silmarils_found }
 		NOT = { has_country_flag = searching_for_silmarils }
@@ -700,16 +694,9 @@ country_event = { # Helper event to say you can't find a silmaril unless you can
 				owns = 660
 			}
 		}
-		is_greater_power = yes
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "Where can one find a Silmaril"
-	desc = "EVTDESC50740"
-	picture = "silmarils"
+	mean_time_to_happen = { months = 12 }
 	
 	option = {
 		name = "Hmm, deep and greedily..."
@@ -719,8 +706,12 @@ country_event = { # Helper event to say you can't find a silmaril unless you can
 
 country_event = { # First attempt
 	id = 50741
+	title = "Search for a Silmaril"
+	desc = "EVTDESC50741"
+	picture = "silmarils"
 
 	trigger = {
+		is_greater_power = yes
 		invention = silmarils
 		NOT = { has_global_flag = silmarils_found }
 		NOT = { has_country_flag = searching_for_silmarils }
@@ -730,16 +721,9 @@ country_event = { # First attempt
 			owns = 843
 			owns = 660
 		}
-		is_greater_power = yes
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "Search for a Silmaril"
-	desc = "EVTDESC50741"
-	picture = "silmarils"
+	mean_time_to_happen = { months = 12 }
 	
 	option = {
 		name = "Dig deep and greedily!"
@@ -762,18 +746,15 @@ country_event = { # First attempt
 
 country_event = { # Attempt fails, try again?
 	id = 50742
+	title = "Failure to find the silmarils"
+	desc = "EVTDESC50742"
+	picture = "silmarils"
 	
 	trigger = {
 		has_country_flag = searching_for_silmaril
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "Failure to find the silmarils"
-	desc = "EVTDESC50742"
-	picture = "silmarils"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Try again" # Fund second attempt
@@ -791,6 +772,9 @@ country_event = { # Attempt fails, try again?
 
 country_event = { # Finding Silmaril is now impossible
 	id = 50743
+	title = "Failure to find the silmarils"
+	desc = "EVTDESC50743"
+	picture = "silmarils"
 	
 	trigger = {
 		has_country_flag = searching_for_silmaril
@@ -802,13 +786,7 @@ country_event = { # Finding Silmaril is now impossible
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "Failure to find the silmarils"
-	desc = "EVTDESC50743"
-	picture = "silmarils"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Forget it"
@@ -820,21 +798,19 @@ country_event = { # Finding Silmaril is now impossible
 
 country_event = { # Silmaril found
 	id = 50744
-
-	trigger = {
-		has_country_flag = searching_for_silmarils
-		not = { has_global_flag = silmarils_found }
-		is_greater_power = yes
-	}
-
-	mean_time_to_happen = {
-		months = 120
-	}
-
 	title = "Silmaril has been found"
 	desc = "EVTDESC50744"
 	picture = "silmarils"
+	
 	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = searching_for_silmarils
+		NOT = { has_global_flag = silmarils_found }
+		is_greater_power = yes
+	}
+
+	mean_time_to_happen = { months = 120 }
 
 	option = {
 		name = "Excellent"
@@ -859,11 +835,11 @@ country_event = { # Silmaril found
 
 country_event = { # Other country has found Silmaril
 	id = 50745
-	is_triggered_only = yes
-
 	title = "Another realm has found a Silmaril"
 	desc = "EVTDESC50745"
 	picture = "silmarils"
+	
+	is_triggered_only = yes
 
 	option = {
 		name = "Interesting"
@@ -880,11 +856,11 @@ country_event = { # First attempt
 	trigger = {
 		invention = blue_wizards
 		OR = {
-			not = { has_global_flag = alatar_activated }
-			not = { has_global_flag = pallando_activated }
+			NOT = { has_global_flag = alatar_activated }
+			NOT = { has_global_flag = pallando_activated }
 		}
-		not = { has_country_flag = searching_for_blue_wizards }
-		not = { has_country_flag = rejected_searching_for_blue_wizards }
+		NOT = { has_country_flag = searching_for_blue_wizards }
+		NOT = { has_country_flag = rejected_searching_for_blue_wizards }
 		is_greater_power = yes
 	}
 
@@ -922,16 +898,16 @@ country_event = { # Found one but not the other
 		invention = blue_wizards
 		OR = {
 			OR = {
-				not = { has_global_flag = alatar_activated }
+				NOT = { has_global_flag = alatar_activated }
 				has_global_flag = pallando_activated
 			}
 			OR = {
-				not = { has_global_flag = pallando_activated }
+				NOT = { has_global_flag = pallando_activated }
 				has_global_flag = alatar_activated
 			}
 		}
-		not = { has_country_flag = searching_for_blue_wizards }
-		not = { has_country_flag = rejected_searching_for_blue_wizards }
+		NOT = { has_country_flag = searching_for_blue_wizards }
+		NOT = { has_country_flag = rejected_searching_for_blue_wizards }
 		is_greater_power = yes
 	}
 
@@ -996,7 +972,7 @@ country_event = { # Alatar found
 
 	trigger = {
 		has_country_flag = searching_for_blue_wizards
-		not = { has_global_flag = alatar_activated }
+		NOT = { has_global_flag = alatar_activated }
 		is_greater_power = yes
 	}
 
@@ -1087,7 +1063,7 @@ country_event = { # Pallando found
 
 	trigger = {
 		has_country_flag = searching_for_blue_wizards
-		not = { has_global_flag = pallando_activated }
+		NOT = { has_global_flag = pallando_activated }
 		is_greater_power = yes
 	}
 

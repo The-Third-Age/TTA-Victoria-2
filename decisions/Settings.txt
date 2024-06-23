@@ -507,6 +507,36 @@ political_decisions = {
 			clr_global_flag = province_wealth_intervention_disabled
 		}
 	}
+	
+	disable_rgo_switching = {
+		alert = no
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			NOT = { has_global_flag = generic_rgo_changing_disabled }
+		}
+		
+		allow = {}
+		
+		effect = {
+			set_global_flag = generic_rgo_changing_disabled
+		}
+	}
+	
+	enable_rgo_switching = {
+		alert = no
+		potential = {
+			ai = no
+			has_global_flag = viewing_settings
+			has_global_flag = generic_rgo_changing_disabled
+		}
+		
+		allow = {}
+		
+		effect = {
+			clr_global_flag = generic_rgo_changing_disabled
+		}
+	}
 }
 
 # Play As

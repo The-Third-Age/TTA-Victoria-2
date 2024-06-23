@@ -163,7 +163,7 @@ country_event = {
 # The Integration of the Grammas
 province_event = {
 	id = 50904
-	title = "The Integration of the Grammas" 
+	title = "The Integration of the Grammas"
 	desc = "EVTDESC50904"
 	
 	trigger = {
@@ -212,9 +212,9 @@ province_event = {
 			}
 			
 			# Randomly grabs one of the marked provinces and annexes a random neighbor uncolonized core
-			FOR = { 
-				random_owned = { 
-					random_empty_neighbor_province = { 
+			FOR = {
+				random_owned = {
+					random_empty_neighbor_province = {
 						limit = { has_province_modifier = colonization_target }
 						secede_province = THIS
 					}
@@ -311,7 +311,7 @@ province_event = {
 	option = {
 		name = "Thrushes are always our friends"
 		
-		owner = { 
+		owner = {
 			prestige = 1
 			any_pop = {
 				militancy = -0.5
@@ -330,16 +330,28 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	# TODO: Update to work with province wealth
+	immediate = {
+		649 = { add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 } }
+		653 = { add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 } }
+		654 = { add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 } }
+	}
+	
 	option = {
 		name = "Now trade can flow more easily"
 		
 		remove_country_modifier = meres_end_constructing_boat_lift
 		set_global_flag = DAL_meres_end_boat_lift_constructed
 		
-		649 = { add_province_modifier = { name = meres_end_increased_trade duration = -1 } }
-		653 = { add_province_modifier = { name = meres_end_increased_trade duration = -1 } }
-		654 = { add_province_modifier = { name = meres_end_increased_trade duration = -1 } }
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 649
+					province_id = 653
+					province_id = 654
+				}
+			}
+			province_wealth_increase_1_loc = {}
+		}
 	}
 }
 

@@ -443,8 +443,119 @@ country_event = {
 		}
 		# }
 		
-		# Refire the cleanup event next month
-		country_event = { id = 99000 days = 30 }
+		# Seasons
+		random_owned = {
+			# December, January, February
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						month = 11
+						NOT = { month = 2 }
+					}
+				}
+				add_province_modifier = { name = winter_modifier duration = -1 }
+				remove_province_modifier = spring_modifier
+				remove_province_modifier = summer_modifier
+				remove_province_modifier = autumn_modifier
+			}
+			# March, April, May
+			any_neighbor_province = {
+				limit = {
+					month = 2
+					NOT = { month = 5 }
+				}
+				remove_province_modifier = winter_modifier
+				add_province_modifier = { name = spring_modifier duration = -1 }
+				remove_province_modifier = summer_modifier
+				remove_province_modifier = autumn_modifier
+			}
+			# June, July, August
+			any_neighbor_province = {
+				limit = {
+					month = 5
+					NOT = { month = 8 }
+				}
+				remove_province_modifier = winter_modifier
+				remove_province_modifier = spring_modifier
+				add_province_modifier = { name = summer_modifier duration = -1 }
+				remove_province_modifier = autumn_modifier
+			}
+			# September October, November
+			any_neighbor_province = {
+				limit = {
+					month = 8
+					NOT = { month = 11 }
+				}
+				remove_province_modifier = winter_modifier
+				remove_province_modifier = spring_modifier
+				remove_province_modifier = summer_modifier
+				add_province_modifier = { name = autumn_modifier duration = -1 }
+			}
+		}
+		
+		# Refire the cleanup event next month {
+		random_owned = {
+			limit = {
+				OR = {
+					# January
+					NOT = { month = 1 }
+					AND = { # March
+						month = 2
+						NOT = { month = 3 }
+					}
+					AND = { # May
+						month = 4
+						NOT = { month = 5 }
+					}
+					AND = { # July
+						month = 6
+						NOT = { month = 7 }
+					}
+					AND = { # August
+						month = 7
+						NOT = { month = 8 }
+					}
+					AND = { # October
+						month = 9
+						NOT = { month = 10 }
+					}
+					# December
+					month = 11
+				}
+			}
+			owner = { country_event = { id = 99000 days = 31 } }
+		}
+		random_owned = {
+			limit = { # February
+				month = 1
+				NOT = { month = 2 }
+			}
+			owner = { country_event = { id = 99000 days = 28 } }
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					AND = { # April
+						month = 3
+						NOT = { month = 4 }
+					}
+					AND = { # June
+						month = 5
+						NOT = { month = 6 }
+					}
+					AND = { # September
+						month = 8
+						NOT = { month = 9 }
+					}
+					AND = { # November
+						month = 10
+						NOT = { month = 11 }
+					}
+				}
+			}
+			owner = { country_event = { id = 99000 days = 30 } }
+		}
+		# }
 	}
 }
 
@@ -500,20 +611,6 @@ country_event = {
 				}
 			}
 			remove_country_modifier = meres_end_constructing_boat_lift
-		}
-		random_owned = { # Finished building, but one of the affected provinces is missing the modifier
-			any_neighbor_province = {
-				limit = {
-					owner = { has_global_flag = DAL_meres_end_boat_lift_constructed }
-					OR = {
-						province_id = 649
-						province_id = 653
-						province_id = 654
-					}
-					NOT = { has_province_modifier = meres_end_increased_trade }
-				}
-				add_province_modifier = { name = meres_end_increased_trade duration = -1 }
-			}
 		}
 		# }
 		
@@ -1337,6 +1434,7 @@ country_event = {
 	option = {
 		name = "Fix it please"
 		
+		# Province Wealth {
 		# Add the default wealth to any province missing it
 		random_owned = {
 			any_neighbor_province = {
@@ -1371,6 +1469,7 @@ country_event = {
 		
 		# Apply any changes to the province wealth
 		country_event = { id = 90799 days = 0 }
+		# }
 		
 		# Refire the cleanup event tomorrow
 		country_event = { id = 99250 days = 1 }

@@ -745,9 +745,15 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 60
+		months = 120
 	}
-
+	
+	immediate = {
+		random = {
+			chance = 5
+			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+		}
+	}
 	option = {
 		name = "Drat."
 
@@ -758,7 +764,12 @@ province_event = {
 		remove_province_modifier = recent_raid # Reset the timer
 		add_province_modifier = { name = recent_raid duration = 365 }
 		
-		recent_raid_loc = { }
+		recent_raid_loc = {}
+		
+		random = {
+			chance = 5 # Make sure this percentage matches the immediate
+			province_wealth_decrease_1_loc = {}
+		}
 	}
 }
 

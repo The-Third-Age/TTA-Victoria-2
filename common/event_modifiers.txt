@@ -38,6 +38,10 @@
 # Outlaws					32						34
 # Smaug						33						35
 # Empty						34						36
+# Summer					35						37
+# Autumn					36						38
+# Winter					37						39
+# Spring					38						40
 
 #############################
 ##### VANILLA MODIFIERS #####
@@ -138,14 +142,14 @@ CB_gen_minus = {
 #########################
 ##### TTA MODIFIERS #####
 #########################
-##### TARGETTING MODIFIERS ##### = {
+##### TARGETTING MODIFIERS ##### {
 # Province Modifier
 province_target_modifier = {
 	icon = 36
 }
 
 # }
-##### PROVINCE WEALTH MODIFIERS ##### = {
+##### PROVINCE WEALTH MODIFIERS ##### {
 # Province Modifier
 province_wealth_increase_2_target_modifier = {
 	icon = 36
@@ -188,7 +192,50 @@ province_wealth_investing_in_province = {
 }
 
 # }
-##### CORING MODIFIERS ##### = {
+##### RGO CHANGING MODIFIERS ##### {
+# Province Modifier
+locked_rgo = {
+	icon = 1
+}
+
+# }
+##### SEASONS MODIFIERS ##### {
+# Province Modifier
+summer_modifier = {
+	farm_rgo_eff = 0.1
+	pop_militancy_modifier = -0.01
+	pop_consciousness_modifier = -0.01
+	
+	icon = 37
+}
+
+# Province Modifier
+autumn_modifier = {
+	farm_rgo_eff = 0.05
+	
+	icon = 38
+}
+
+# Province Modifier
+winter_modifier = {
+	farm_rgo_eff = -0.25
+	pop_militancy_modifier = 0.01
+	pop_consciousness_modifier = 0.01
+	movement_cost = 0.1
+	
+	icon = 39
+}
+
+# Province Modifier
+spring_modifier = {
+	farm_rgo_eff = 0.05
+	movement_cost = 0.05
+	
+	icon = 40
+}
+
+# }
+##### CORING MODIFIERS ##### {
 core_integration = {
 	assimilation_rate = 0.25
 	pop_consciousness_modifier = 0.01
@@ -1046,16 +1093,6 @@ meres_end_constructing_boat_lift = {
 	tax_efficiency = -0.05
 	
 	icon = 10
-}
-
-# Province Modifier
-meres_end_increased_trade = {
-	# Audax Validator "." Ignore_1007
-	local_artisan_output = 0.05
-	local_factory_output = 0.05
-	local_RGO_output = 0.05
-	
-	icon = 9
 }
 
 # Country Modifier
