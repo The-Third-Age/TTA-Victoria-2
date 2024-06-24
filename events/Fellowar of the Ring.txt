@@ -20,9 +20,9 @@
 # Bilbo's 111th Birthday
 country_event = {
 	id = 50200
-	picture = birthday
 	title = "Bilbo's 111th Birthday"
 	desc = "EVTDESC50200"
+	picture = birthday
 	
 	is_triggered_only = yes
 	
@@ -51,9 +51,9 @@ country_event = {
 # Frodo Acquires the Ring (Cosmetic)
 country_event = {
 	id = 50201
-	picture = frodo_ring
 	title = "Frodo Acquires the Ring"
 	desc = "EVTDESC50201"
+	picture = frodo_ring
 	
 	is_triggered_only = yes
 	
@@ -65,9 +65,9 @@ country_event = {
 # Evil Hobbiton Owner Unable to Find Ring
 country_event = {
 	id = 50202
-	picture = frodo_ring
 	title = "We Have Failed to Acquire the One Ring"
 	desc = "EVTDESC50202"
+	picture = frodo_ring
 	
 	is_triggered_only = yes
 	
@@ -104,9 +104,9 @@ country_event = {
 # Generic Owner Finds Ring
 country_event = {
 	id = 50203
-	picture = acquire_ring
 	title = "We Have Taken the One Ring"
 	desc = "EVTDESC50203"
+	picture = acquire_ring
 	
 	is_triggered_only = yes
 	
@@ -168,9 +168,9 @@ country_event = {
 # $FROMCOUNTRY$ Acquires the Ring (Cosmetic)
 country_event = {
 	id = 50204
-	picture = acquire_ring
 	title = "$FROMCOUNTRY$ Has Acquired the One Ring"
 	desc = "EVTDESC50204"
+	picture = acquire_ring
 	
 	is_triggered_only = yes
 	
@@ -182,9 +182,9 @@ country_event = {
 # Frodo Flees the Shire (Cosmetic)
 country_event = {
 	id = 50205
-	picture = leave_shire
 	title = "Frodo Flees the Shire"
 	desc = "EVTDESC50205"
+	picture = leave_shire
 	
 	is_triggered_only = yes
 	
@@ -206,17 +206,17 @@ country_event = {
 # The Findings of Gandalf
 country_event = {
 	id = 50206
-	picture = innovation
 	title = "The Research of Gandalf"
 	desc = "EVTDESC50206"
+	picture = innovation
 	
 	fire_only_once = yes
 	
 	trigger = {
+		owns = 1040
 		has_global_flag = bilbos_111_birthday_party
 		FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 		FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
-		owns = 1040
 		NOT = { has_global_flag = findings_of_gandalf }
 	}
 	
@@ -256,9 +256,9 @@ country_event = {
 # The Findings of Gandalf (Cosmetic)
 country_event = {
 	id = 50207
-	picture = innovation
 	title = "The Research of Gandalf"
 	desc = "EVTDESC50207"
+	picture = innovation
 	
 	is_triggered_only = yes
 	
@@ -270,9 +270,9 @@ country_event = {
 # Frodo Flees the Shire
 country_event = {
 	id = 50208
-	picture = leave_shire
 	title = "Frodo Flees the Shire"
 	desc = "EVTDESC50208"
+	picture = leave_shire
 	
 	fire_only_once = yes
 	
@@ -349,9 +349,9 @@ country_event = {
 # The Prancing Pony
 country_event = {
 	id = 50209
-	picture = prancing_pony
 	title = "The Prancing Pony"
 	desc = "EVTDESC50209"
+	picture = prancing_pony
 	
 	trigger = {
 		has_global_flag = frodo_fled_shire
@@ -385,7 +385,6 @@ country_event = {
 				country_event = 50210
 			}
 		}
-		
 		set_global_flag = frodo_in_bree
 	}
 }
@@ -393,9 +392,9 @@ country_event = {
 # The Prancing Pony (Cosmetic)
 country_event = {
 	id = 50210
-	picture = prancing_pony
 	title = "The Prancing Pony"
 	desc = "EVTDESC50210"
+	picture = prancing_pony
 	
 	is_triggered_only = yes
 	
@@ -407,9 +406,9 @@ country_event = {
 # The Camp at Weathertop
 country_event = {
 	id = 50211
-	picture = weathertop
 	title = "The Camp at Weathertop"
 	desc = "EVTDESC50211"
+	picture = weathertop
 	
 	trigger = {
 		OR = {
@@ -460,9 +459,9 @@ country_event = {
 # The Camp at Weathertop (Cosmetic)
 country_event = {
 	id = 50212
-	picture = weathertop
 	title = "The Camp at Weathertop"
 	desc = "EVTDESC50212"
+	picture = weathertop
 	
 	is_triggered_only = yes
 	
@@ -474,22 +473,20 @@ country_event = {
 # Frodo Succumbs to his Wound
 country_event = {
 	id = 50213
-	picture = frodo_stabbed
 	title = "Frodo Succumbs to his Wound"
 	desc = "EVTDESC50213"
+	picture = frodo_stabbed
 	
 	trigger = {
+		owns = 1010
 		has_global_flag = frodo_stabbed
 		NOT = { has_global_flag = frodo_is_safe }
-		owns = 1010
 		FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 		FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
 		has_global_flag = railroading_disabled
 	}
 	
-	mean_time_to_happen = {
-		months = 36
-	}
+	mean_time_to_happen = { months = 36 }
 	
 	option = {
 		name = "The horror!"
@@ -502,7 +499,6 @@ country_event = {
 				country_event = 50214
 			}
 		}
-		
 		MOR = { country_event = { id = 50203 days = 5 } }
 	}
 }
@@ -510,9 +506,9 @@ country_event = {
 # Frodo Succumbs to his Wound (Cosmetic)
 country_event = {
 	id = 50214
-	picture = frodo_stabbed
 	title = "Frodo Succumbs to his Wound"
 	desc = "EVTDESC50214"
+	picture = frodo_stabbed
 	
 	is_triggered_only = yes
 	
@@ -524,9 +520,9 @@ country_event = {
 # Frodo Arrives
 country_event = {
 	id = 50215
-	picture = frodo_arrives
 	title = "A Traveller has Arrived"
 	desc = "EVTDESC50215"
+	picture = frodo_arrives
 	
 	trigger = {
 		has_global_flag = frodo_camped_at_weathertop
@@ -597,9 +593,9 @@ country_event = {
 # Frodo Arrives (Cosmetic)
 country_event = {
 	id = 50216
-	picture = frodo_arrives
 	title = "Frodo Arrives in $FROMCOUNTRY$"
 	desc = "EVTDESC50216"
+	picture = frodo_arrives
 	
 	is_triggered_only = yes
 	
@@ -613,9 +609,9 @@ country_event = {
 # An Invitation from Elrond
 country_event = {
 	id = 50250
-	picture = council_of_elrond
 	title = "An Invitation from $FROMCOUNTRY$"
 	desc = "EVTDESC50250"
+	picture = council_of_elrond
 	
 	is_triggered_only = yes
 	
@@ -654,9 +650,9 @@ country_event = {
 # Voting on the formation of the Fellowship
 country_event = {
 	id = 50251
-	picture = council_of_elrond
 	title = "The Matter of the Fellowship"
 	desc = "EVTDESC50251"
+	picture = council_of_elrond
 	
 	is_triggered_only = yes
 	
@@ -686,9 +682,9 @@ country_event = {
 # Consequenes of rejecting the Fellowship
 country_event = {
 	id = 50252
-	picture = council_of_elrond
 	title = "The Realms of the Fellowship"
 	desc = "EVTDESC50252"
+	picture = council_of_elrond
 	
 	is_triggered_only = yes
 	
@@ -714,9 +710,9 @@ country_event = {
 # The Fellowship of the Ring
 country_event = {
 	id = 50253
-	picture = council_of_elrond
 	title = "The Fellowship of the Ring"
 	desc = "EVTDESC50253"
+	picture = council_of_elrond
 	
 	is_triggered_only = yes
 	
@@ -798,9 +794,9 @@ country_event = {
 # Fellowship of the Ring (Cosmetic)
 country_event = {
 	id = 50254
-	picture = council_of_elrond
 	title = "The Fellowship of the Ring"
 	desc = "EVTDESC50254"
+	picture = council_of_elrond
 	
 	is_triggered_only = yes
 	
@@ -814,9 +810,9 @@ country_event = {
 # Our Fellowship Member has Died
 country_event = {
 	id = 50300
-	picture = dead_fellowship_member
 	title = "Our Fellowship Member has Died!"
 	desc = "EVTDESC50300"
+	picture = dead_fellowship_member
 	
 	is_triggered_only = yes
 	
@@ -844,9 +840,9 @@ country_event = {
 # Fellowship Member Died (Cosmetic)
 country_event = {
 	id = 50301
-	picture = dead_fellowship_member
 	title = "$FROMCOUNTRY$'s Fellowship Member has Died!"
 	desc = "EVTDESC50301"
+	picture = dead_fellowship_member
 	
 	is_triggered_only = yes
 	
@@ -858,9 +854,9 @@ country_event = {
 # The Pass of Caradhras
 country_event = {
 	id = 50302
-	picture = fellowship_cross_caradhras
 	title = "Crossing Caradhras"
 	desc = "EVTDESC50302"
+	picture = fellowship_cross_caradhras
 	
 	trigger = {
 		has_global_flag = the_council_of_elrond
@@ -871,9 +867,7 @@ country_event = {
 		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 	}
 	
-	mean_time_to_happen = {
-		months = 20
-	}
+	mean_time_to_happen = { months = 20 }
 	
 	option = {
 		name = "A most treacherous path"
@@ -895,7 +889,6 @@ country_event = {
 				country_event = 50303
 			}
 		}
-		
 		set_global_flag = fellowship_crossed_caradhras
 	}
 }
@@ -903,9 +896,9 @@ country_event = {
 # The Pass of Caradhras (Cosmetic)
 country_event = {
 	id = 50303
-	picture = fellowship_cross_caradhras
 	title = "The Fellowship has Crossed Caradhras"
 	desc = "EVTDESC50303"
+	picture = fellowship_cross_caradhras
 	
 	is_triggered_only = yes
 	
@@ -917,9 +910,9 @@ country_event = {
 # The Mines of Moria
 country_event = {
 	id = 50304
-	picture = fellowship_in_moria
 	title = "The Fellowship Passes Through the Mines of Moria"
 	desc = "EVTDESC50304"
+	picture = fellowship_in_moria
 	
 	is_triggered_only = yes
 	
@@ -959,7 +952,6 @@ country_event = {
 				country_event = 50305
 			}
 		}
-		
 		set_global_flag = fellowship_passed_through_moria
 	}
 }
@@ -967,9 +959,9 @@ country_event = {
 # The Mines of Moria (Cosmetic)
 country_event = {
 	id = 50305
-	picture = fellowship_in_moria
 	title = "The Fellowship Passes Through the Mines of Moria"
 	desc = "EVTDESC50305"
+	picture = fellowship_in_moria
 	
 	is_triggered_only = yes
 	
@@ -981,9 +973,9 @@ country_event = {
 # Fellowship Member Dies in Moria
 country_event = {
 	id = 50306
-	picture = dead_fellowship_member
 	title = "Our Fellowship Member's Sacrifice"
 	desc = "EVTDESC50306"
+	picture = dead_fellowship_member
 	
 	is_triggered_only = yes
 	
@@ -1014,9 +1006,9 @@ country_event = {
 # Fellowship in Lothlorien
 country_event = {
 	id = 50307
-	picture = fellowship_in_lothlorien
 	title = "The Fellowship Passes Through Lothlórien"
 	desc = "EVTDESC50307"
+	picture = fellowship_in_lothlorien
 	
 	trigger = {
 		has_global_flag = the_council_of_elrond
@@ -1039,9 +1031,7 @@ country_event = {
 		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 	}
 	
-	mean_time_to_happen = {
-		months = 24
-	}
+	mean_time_to_happen = { months = 24 }
 	
 	option = {
 		name = "Will the Elves help them?"
@@ -1064,9 +1054,9 @@ country_event = {
 # Fellowship in Lothlorien (Cosmetic)
 country_event = {
 	id = 50308
-	picture = fellowship_in_lothlorien
 	title = "The Fellowship Passes Through Lothlórien"
 	desc = "EVTDESC50308"
+	picture = fellowship_in_lothlorien
 	
 	is_triggered_only = yes
 	
@@ -1078,9 +1068,9 @@ country_event = {
 # Fellowship in Ithilien
 country_event = {
 	id = 50309
-	picture = fellowship_in_ithilien
 	title = "The Fellowship Passes Through Ithilien"
 	desc = "EVTDESC50309"
+	picture = fellowship_in_ithilien
 	
 	trigger = {
 		has_global_flag = the_council_of_elrond
@@ -1092,9 +1082,7 @@ country_event = {
 		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 	}
 	
-	mean_time_to_happen = {
-		months = 30
-	}
+	mean_time_to_happen = { months = 30 }
 	
 	option = {
 		name = "Isn't Ithilien overrun?"
@@ -1106,10 +1094,8 @@ country_event = {
 				}
 				country_event = 50310
 			}
-			
 			country_event = 50318
 		}
-		
 		set_global_flag = fellowship_passed_through_ithilien
 	}
 }
@@ -1117,9 +1103,9 @@ country_event = {
 # Fellowship in Ithilien (Cosmetic)
 country_event = {
 	id = 50310
-	picture = fellowship_in_ithilien
 	title = "The Fellowship Passes Through Ithilien"
 	desc = "EVTDESC50310"
+	picture = fellowship_in_ithilien
 	
 	is_triggered_only = yes
 	
@@ -1131,9 +1117,9 @@ country_event = {
 # Fellowship passes into Mordor
 country_event = {
 	id = 50311
-	picture = fellowship_in_mordor
 	title = "The Fellowship Passes into Mordor"
 	desc = "EVTDESC50311"
+	picture = fellowship_in_mordor
 	
 	trigger = {
 		has_global_flag = the_council_of_elrond
@@ -1163,10 +1149,8 @@ country_event = {
 				}
 				country_event = 50312
 			}
-			
 			country_event = 50318
 		}
-		
 		set_global_flag = fellowship_into_mordor
 	}
 }
@@ -1174,9 +1158,9 @@ country_event = {
 # Fellowship passes into Mordor (Cosmetic)
 country_event = {
 	id = 50312
-	picture = fellowship_in_mordor
 	title = "The Fellowship Passes into Mordor"
 	desc = "EVTDESC50312"
+	picture = fellowship_in_mordor
 	
 	is_triggered_only = yes
 	
@@ -1188,9 +1172,9 @@ country_event = {
 # The Test
 country_event = {
 	id = 50313
-	picture = the_test
 	title = "The Test of Galadriel"
 	desc = "EVTDESC50313"
+	picture = the_test
 	
 	is_triggered_only = yes
 	
@@ -1236,9 +1220,9 @@ country_event = {
 # The Assault on Amon Hen
 country_event = {
 	id = 50314
-	picture = amon_hen_assault
 	title = "The Assault on Amon Hen"
 	desc = "EVTDESC50314"
+	picture = amon_hen_assault
 	
 	is_triggered_only = yes
 	
@@ -1302,9 +1286,9 @@ country_event = {
 # The Assault on Amon Hen (Cosmetic)
 country_event = {
 	id = 50315
-	picture = amon_hen_assault
 	title = "The Assault on Amon Hen"
 	desc = "EVTDESC50315"
+	picture = amon_hen_assault
 	
 	is_triggered_only = yes
 	
@@ -1316,9 +1300,9 @@ country_event = {
 # Skirmish with the Fellowship
 country_event = {
 	id = 50316
-	picture = amon_hen_assault
 	title = "A Skirmish with the Fellowship"
 	desc = "EVTDESC50316"
+	picture = amon_hen_assault
 	
 	trigger = {
 		NOT = { has_global_flag = fellowship_has_failed }
@@ -1358,9 +1342,9 @@ country_event = {
 # The Fellowship has been Discovered in Our Lands
 country_event = {
 	id = 50317
-	picture = crisis
 	title = "The Fellowship has been Discovered in Our Lands"
 	desc = "EVTDESC50317"
+	picture = crisis
 	
 	trigger = {
 		NOT = { has_country_flag = fellowship_in_our_lands }
@@ -1427,9 +1411,9 @@ country_event = {
 # Flag/Modifier Clean-Up
 country_event = {
 	id = 50318
-	picture = crisis
 	title = "Fellowship Clean Up"
 	desc = "EVTDESC50318"
+	picture = crisis
 	
 	is_triggered_only = yes
 	
@@ -1462,9 +1446,9 @@ country_event = {
 # Gollum joins the Fellowship
 country_event = {
 	id = 50319
-	picture = gollum
 	title = "Gollum Joins the Fellowship"
 	desc = "EVTDESC50319"
+	picture = gollum
 	
 	trigger = {
 		has_country_modifier = fellowship_member
@@ -1475,9 +1459,7 @@ country_event = {
 		NOT = { has_global_flag = gollum_in_fellowship }
 	}
 	
-	mean_time_to_happen = {
-		months = 48
-	}
+	mean_time_to_happen = { months = 48 }
 	
 	option = {
 		name = "He only wants 'his' precious"
@@ -1497,9 +1479,9 @@ country_event = {
 # Gollum joins the Fellowship (Cosmetic)
 country_event = {
 	id = 50320
-	picture = gollum
 	title = "Gollum Joins the Fellowship"
 	desc = "EVTDESC50320"
+	picture = gollum
 	
 	is_triggered_only = yes
 	
@@ -1511,9 +1493,9 @@ country_event = {
 # Gollum Steals the Ring
 country_event = {
 	id = 50321
-	picture = gollum
 	title = "Gollum Steals the One Ring"
 	desc = "EVTDESC50321"
+	picture = gollum
 	
 	trigger = {
 		has_country_modifier = fellowship_member
@@ -1522,9 +1504,7 @@ country_event = {
 		FOR = { NOT = { check_variable = { which = ring_controller value = 2.1 } } } # Fellowship
 	}
 	
-	mean_time_to_happen = {
-		months = 120
-	}
+	mean_time_to_happen = { months = 120 }
 	
 	option = {
 		name = "He won't get far"
@@ -1554,9 +1534,9 @@ country_event = {
 # Gollum Steals the Ring (Cosmetic)
 country_event = {
 	id = 50322
-	picture = gollum
 	title = "Gollum Steals the Ring"
 	desc = "EVTDESC50322"
+	picture = gollum
 	
 	is_triggered_only = yes
 	
@@ -1568,9 +1548,9 @@ country_event = {
 # Gollum Captured
 country_event = {
 	id = 50323
-	picture = gollum
 	title = "We have Captured Gollum"
 	desc = "EVTDESC50323"
+	picture = gollum
 	
 	trigger = {
 		has_country_modifier = ring_hunters
@@ -1596,9 +1576,9 @@ country_event = {
 # The End of the Fellowship (Cosmetic)
 country_event = {
 	id = 50324
-	picture = acquire_ring
 	title = "The Fellowship has Failed"
 	desc = "EVTDESC50324"
+	picture = acquire_ring
 	
 	is_triggered_only = yes
 	
@@ -1610,9 +1590,9 @@ country_event = {
 # The Ring is Destroyed
 country_event = {
 	id = 50325
-	picture = ring_is_destroyed
 	title = "The Ring is Destroyed!"
 	desc = "EVTDESC50325"
+	picture = ring_is_destroyed
 	
 	is_triggered_only = yes
 	
@@ -1671,9 +1651,9 @@ country_event = {
 # The Ring is Destroyed (Cosmetic)
 country_event = {
 	id = 50326
-	picture = ring_is_destroyed
 	title = "The Ring is Destroyed"
 	desc = "EVTDESC50326"
+	picture = ring_is_destroyed
 	
 	is_triggered_only = yes
 	
@@ -1685,9 +1665,9 @@ country_event = {
 # The Ring is Destroyed - Release non-existing realms
 country_event = {
 	id = 50327
-	picture = administration
 	title = "We are Free"
 	desc = "EVTDESC50327"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -1710,9 +1690,9 @@ country_event = {
 # The Ring is Destroyed - Release land of existing realms
 country_event = {
 	id = 50328
-	picture = administration
 	title = "Our Lands Returned"
 	desc = "EVTDESC50328"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -1738,9 +1718,9 @@ country_event = {
 # The Ring is Destroyed - Release Vassals
 country_event = {
 	id = 50329
-	picture = administration
 	title = "Our Lands Returned"
 	desc = "EVTDESC50329"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -1753,9 +1733,9 @@ country_event = {
 # The Ring is Destroyed - Mordor
 country_event = {
 	id = 50330
-	picture = ring_is_destroyed
 	title = "The One Ring is Destroyed"
 	desc = "EVTDESC50330"
+	picture = ring_is_destroyed
 	
 	is_triggered_only = yes
 	
@@ -1819,9 +1799,9 @@ country_event = {
 # The Ring is Destroyed - Nazguls
 country_event = {
 	id = 50331
-	picture = ring_is_destroyed
 	title = "The One Ring is Destroyed"
 	desc = "EVTDESC50331"
+	picture = ring_is_destroyed
 	
 	is_triggered_only = yes
 	
@@ -1885,9 +1865,9 @@ country_event = {
 # Mordor Asks for the Ring
 country_event = {
 	id = 50358
-	picture = acquire_ring
 	title = "Mordor Asks for the Ring"
 	desc = "EVTDESC50358"
+	picture = acquire_ring
 	
 	is_triggered_only = yes
 	
