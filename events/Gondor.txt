@@ -27,9 +27,9 @@
 # The Tolfalas Question
 country_event = {
 	id = 50000
-	picture = "gondor/tolfalas_map"
 	title = "The Tolfalas Question"
 	desc = "EVTDESC50000"
+	picture = "gondor/tolfalas_map"
 	
 	is_triggered_only = yes
 	
@@ -85,9 +85,9 @@ country_event = {
 # Dol Amroth Independence War
 country_event = {
 	id = 50001
-	picture = "gondor/dol_amroth"
 	title = "Secession!"
 	desc = "EVTDESC50001"
+	picture = "gondor/dol_amroth"
 	
 	major = yes
 	is_triggered_only = yes
@@ -114,9 +114,9 @@ country_event = {
 # Dol Amroth wins
 country_event = {
 	id = 50002
-	picture = "gondor/dol_amroth"
 	title = "We are Victorious!"
 	desc = "EVTDESC50002"
+	picture = "gondor/dol_amroth"
 	
 	major = yes
 	fire_only_once = yes
@@ -143,9 +143,9 @@ country_event = {
 # Gondor Wins
 country_event = {
 	id = 50003
-	picture = "gondor/dol_amroth"
 	title = "We are Victorious!"
 	desc = "EVTDESC50003"
+	picture = "gondor/dol_amroth"
 	
 	major = yes
 	fire_only_once = yes
@@ -175,9 +175,9 @@ country_event = {
 # Dol Amroth gets Annexed?
 country_event = {
 	id = 50004
-	picture = "gondor/map"
 	title = "Gondor is Annexing Us!"
 	desc = "EVTDESC50004"
+	picture = "gondor/map"
 	
 	is_triggered_only = yes
 	
@@ -220,9 +220,9 @@ country_event = {
 # Dol Amroth accepts annexation
 country_event = {
 	id = 50005
-	picture = "gondor/map"
 	title = "They Accept!"
 	desc = "EVTDESC50005"
+	picture = "gondor/map"
 	
 	is_triggered_only = yes
 	
@@ -242,9 +242,9 @@ country_event = {
 # Dol Amroth refuses annexation
 country_event = {
 	id = 50006
-	picture = "gondor/dol_amroth"
 	title = "They Refuse!"
 	desc = "EVTDESC50006"
+	picture = "gondor/dol_amroth"
 	
 	major = yes
 	is_triggered_only = yes
@@ -266,9 +266,9 @@ country_event = {
 # Birth of Imrahil - Dol Amroth
 country_event = {
 	id = 50007
-	picture = birth
 	title = "An Heir Apparent"
 	desc = "EVTDESC50007"
+	picture = birth
 
 	fire_only_once = yes
 	
@@ -285,9 +285,7 @@ country_event = {
 		has_global_flag = adrahil_ii_alive
 	}
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	option = {
 		name = "The line is secured"
@@ -301,9 +299,9 @@ country_event = {
 # Royal Wedding
 country_event = {
 	id = 50008
-	picture = wedding
 	title = "A Royal Wedding"
 	desc = "EVTDESC50008"
+	picture = wedding
 	
 	trigger = {
 		year = 2976
@@ -334,9 +332,7 @@ country_event = {
 		NOT = { has_global_flag = wedding_denethor_finduilas }
 	}
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	option = {
 		name = "Now onto securing the line..."
@@ -356,9 +352,9 @@ country_event = {
 # Royal Wedding - Dol Amroth
 country_event = {
 	id = 50009
-	picture = wedding
 	title = "A Royal Wedding"
 	desc = "EVTDESC50008"
+	picture = wedding
 	
 	is_triggered_only = yes
 	
@@ -376,9 +372,9 @@ country_event = {
 # Birth of Boromir
 country_event = {
 	id = 50010
-	picture = birth
 	title = "An Heir to the Throne"
 	desc = "EVTDESC50010"
+	picture = birth
 	
 	trigger = {
 		year = 2978
@@ -388,9 +384,7 @@ country_event = {
 		NOT = { has_global_flag = birth_of_boromir }
 	}
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	option = {
 		name = "The line is secured"
@@ -405,9 +399,9 @@ country_event = {
 # Birth of Faramir
 country_event = {
 	id = 50011
-	picture = birth
 	title = "A Second Son!"
 	desc = "EVTDESC50011"
+	picture = birth
 	
 	fire_only_once = yes
 	
@@ -418,9 +412,7 @@ country_event = {
 		has_global_flag = birth_of_boromir
 	}
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	option = {
 		name = "He isn't Boromir"
@@ -453,12 +445,10 @@ country_event = {
 			factor = 0.9
 			year = 2960
 		}
-		
 		modifier = {
 			factor = 0.5
 			year = 2965
 		}
-		
 		modifier = {
 			factor = 0.01
 			year = 2968
@@ -481,6 +471,7 @@ province_event = {
 	id = 50013
 	title = "The Fortress of Lornost"
 	desc = "EVTDESC50013"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -507,9 +498,12 @@ province_event = {
 	id = 50014
 	title = "The Juggling School of Caben Angren"
 	desc = "EVTDESC50014"
+	
 	fire_only_once = yes
 	
 	trigger = {
+		province_id = 112
+		culture_2 = 1
 		OR = {
 			owner = { tag = GON }
 			AND = {
@@ -517,8 +511,6 @@ province_event = {
 				owner = { is_culture_group = dunedain }
 			}
 		}
-		province_id = 112
-		culture_2 = 1
 	}
 	
 	option = {
@@ -541,9 +533,7 @@ country_event = {
 		any_neighbor_country = { good_evil_alignment = evil_alignment }
 	}
 	
-	mean_time_to_happen = {
-		months = 180
-	}
+	mean_time_to_happen = { months = 180 }
 	
 	option = {
 		name = "Fewer troops for the Enemy"
@@ -585,17 +575,14 @@ country_event = {
 			factor = 0.9
 			militancy = 3
 		}
-		
 		modifier = {
 			factor = 0.75
 			militancy = 4
 		}
-		
 		modifier = {
 			factor = 0.6
 			militancy = 5
 		}
-		
 		modifier = {
 			factor = 5
 			militancy = 6
@@ -715,6 +702,7 @@ country_event = {
 	picture = "gondor/merethrond"
 	
 	trigger = {
+		owns = 16
 		is_culture_group = dunedain
 		war = no
 		any_neighbor_country = {
@@ -734,7 +722,6 @@ country_event = {
 				}
 			}
 		}
-		owns = 16
 		money = 5000
 	}
 	
@@ -790,7 +777,6 @@ country_event = {
 				value = 25
 			}
 		}
-		
 		prestige = 5
 		treasury = -5000
 	}
@@ -1535,6 +1521,7 @@ country_event = {
 	title = "Emergence of the Mesta"
 	desc = "EVTDESC50040"
 	picture = "gondor/pinnath_gelin"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -1741,6 +1728,7 @@ province_event = {
 	id = 50042
 	title = "A Sighting of Eärcaraxë"
 	desc = "EVTDESC50042"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -1972,6 +1960,7 @@ country_event = {
 	desc = "EVTDESC50044"
 	title = "River Defenses Reinforced"
 	picture = "gondor/river_crossings"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -2056,6 +2045,7 @@ country_event = {
 	title = "River Defense Construction Abandoned"
 	desc = "EVTDESC50045"
 	picture = "gondor/river_crossings"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -2088,6 +2078,7 @@ province_event = {
 	id = 50046
 	title = "Rammas Echor Built"
 	desc = "EVTDESC50046"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -2110,6 +2101,7 @@ country_event = {
 	title = "Rammas Echor Construction Abandoned"
 	desc = "EVTDESC50047"
 	picture = "gondor/river_crossings"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -2133,6 +2125,7 @@ country_event = {
 	title = "The Pyre of Denethor"
 	desc = "EVTDESC50048"
 	picture = "gondor/pyre_of_denethor"
+	
 	major = yes
 	fire_only_once = yes
 	
@@ -2165,6 +2158,7 @@ country_event = {
 	title = "The Passing of Denethor II"
 	desc = "EVTDESC50049"
 	picture = "gondor/leader_death"
+	
 	major = yes
 	fire_only_once = yes
 	
@@ -2435,9 +2429,7 @@ country_event = {
 		year = 2990
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
+	mean_time_to_happen = { months = 12 }
 	
 	# Audax Validator "." Ignore_NEXT
 	option = {
@@ -2471,9 +2463,7 @@ country_event = {
 		is_culture_group = dunedain
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
+	mean_time_to_happen = { months = 12 }
 	
 	option = {
 		name = "Good"
@@ -2508,9 +2498,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
+	mean_time_to_happen = { months = 12 }
 	
 	option = {
 		name = "We want faster ships"
@@ -2552,6 +2540,7 @@ country_event = {
 	title = "Harondor is lost"
 	desc = "EVTDESC50058"
 	picture = "harad/map"
+	
 	major = yes
 	is_triggered_only = yes
 	

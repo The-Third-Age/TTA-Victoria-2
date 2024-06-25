@@ -12,6 +12,7 @@ province_event = {
 	id = 50900
 	title = "The Integration of Odriksdún"
 	desc = "EVTDESC50900"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -20,9 +21,7 @@ province_event = {
 		650 = { empty = yes } # Odriksdun
 	}
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	option = {
 		name = "Another village joins the realm"
@@ -37,6 +36,7 @@ country_event = {
 	title = "An Ultimatum From $FROMCOUNTRY$"
 	desc = "EVTDESC50901"
 	picture = "gramavuld/bard_war"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -109,6 +109,7 @@ country_event = {
 	title = "$FROMCOUNTRY$ Accepts the Ultimatum"
 	desc = "EVTDESC50902"
 	picture = "gramavuld/bard_war"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -132,6 +133,7 @@ country_event = {
 	title = "$FROMCOUNTRY$ Refuses the Ultimatum"
 	desc = "EVTDESC50903"
 	picture = "gramavuld/bard_war"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -187,9 +189,7 @@ province_event = {
 		province_id = 652 # Dale
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
+	mean_time_to_happen = { months = 12 }
 	
 	option = {
 		name = "We welcome our brothers"
@@ -293,19 +293,18 @@ province_event = {
 	title = "Trussell-Day"
 	desc = "EVTDESC50908"
 	
+	trigger = {
+		owner = { is_culture_group = northmen }
+		province_id = 652 # Dale
+	}
+	
 	mean_time_to_happen = {
 		months = 240
 		
 		modifier = {
 			factor = 2
-			
 			owner = { war = yes }
 		}
-	}
-	
-	trigger = {
-		owner = { is_culture_group = northmen }
-		province_id = 652 # Dale
 	}
 	
 	option = {
@@ -361,12 +360,19 @@ province_event = {
 	title = "Gold in Long Lake!"
 	desc = "EVTDESC50910"
 	
+	trigger = {
+		OR = {
+			province_id = 649
+			province_id = 653
+			province_id = 654
+		}
+	}
+	
 	mean_time_to_happen = {
 		months = 150
 		
 		modifier = {
 			factor = 2
-			
 			year = 2960
 		}
 		modifier = {
@@ -395,14 +401,6 @@ province_event = {
 		}
 	}
 	
-	trigger = {
-		OR = {
-			province_id = 649
-			province_id = 653
-			province_id = 654
-		}
-	}
-	
 	option = {
 		name = "A mightly find indeed"
 		
@@ -416,16 +414,15 @@ country_event = {
 	title = "Frithalf, Lord of Riding"
 	desc = "EVTDESC50911"
 	picture = "gramavuld/bard_war"
-	fire_only_once = yes
 	
-	mean_time_to_happen = {
-		months = 60
-	}
+	fire_only_once = yes
 	
 	trigger = {
 		tag = DAL
 		accepted_culture = grammas
 	}
+	
+	mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = "A new general is always welcome"
@@ -435,7 +432,6 @@ country_event = {
 			background = lord_of_riding
 			personality = persistent
 		}
-		
 		set_global_flag = DAL_recruited_frithalf
 	}
 }
@@ -446,11 +442,8 @@ country_event = {
 	title = "Eynar, Lord of Riding"
 	desc = "EVTDESC50911"
 	picture = "gramavuld/bard_war"
-	fire_only_once = yes
 	
-	mean_time_to_happen = {
-		months = 60
-	}
+	fire_only_once = yes
 	
 	trigger = {
 		tag = DAL
@@ -458,6 +451,8 @@ country_event = {
 		year = 2970
 		owns = 640 # Grasgarda
 	}
+	
+	mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = "A new general is always welcome"
@@ -467,7 +462,6 @@ country_event = {
 			background = lord_of_riding
 			personality = ballsy
 		}
-		
 		set_global_flag = DAL_recruited_eynar
 	}
 }
@@ -478,11 +472,8 @@ country_event = {
 	title = "Oyvind, Master of Erland's Ferry"
 	desc = "EVTDESC50913"
 	picture = "gramavuld/bard_war"
-	fire_only_once = yes
 	
-	mean_time_to_happen = {
-		months = 60
-	}
+	fire_only_once = yes
 	
 	trigger = {
 		tag = DAL
@@ -490,6 +481,8 @@ country_event = {
 		year = 2990
 		owns = 446 # Erland's Ferry
 	}
+	
+	mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = "A new general is always welcome"
@@ -510,17 +503,16 @@ country_event = {
 	title = "Lodin, Captain of the Royal Archers"
 	desc = "EVTDESC50914"
 	picture = "gramavuld/bard_war"
-	fire_only_once = yes
 	
-	mean_time_to_happen = {
-		months = 60
-	}
+	fire_only_once = yes
 	
 	trigger = {
 		tag = DAL
 		owns = 652 # Dale
 		year = 3005
 	}
+	
+	mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = "A new general is always welcome"
@@ -530,7 +522,6 @@ country_event = {
 			background = captain_of_royal_archers
 			personality = aggressive
 		}
-		
 		set_global_flag = DAL_recruited_lodin
 	}
 }
@@ -541,6 +532,7 @@ country_event = {
 	title = "Activation of Celduin Pirates"
 	desc = "EVTDESC50915"
 	picture = "gramavuld/celduin_river"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -611,6 +603,7 @@ country_event = {
 	title = "Successful raid in $FROMPROVINCE$"
 	desc = "EVTDESC50917"
 	picture = "gramavuld/celduin_river"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -626,6 +619,7 @@ country_event = {
 	title = "$FROMCOUNTRY$ Petitions to Join the $COUNTRY$"
 	desc = "EVTDESC50918"
 	picture = "gramavuld/bard_war"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -662,6 +656,7 @@ country_event = {
 	title = "War with $FROMCOUNTRY$!"
 	desc = "EVTDESC50919"
 	picture = "gramavuld/bard_war"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -676,6 +671,7 @@ country_event = {
 	title = "The Results of the War"
 	desc = "EVTDESC50920"
 	picture = "gramavuld/bard_war"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -702,6 +698,7 @@ country_event = {
 	title = "The Results of the War"
 	desc = "EVTDESC50921"
 	picture = "gramavuld/bard_war"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -757,15 +754,13 @@ province_event = {
 		NOT = { owner = { tag = LMW } }
 	}
 	
+	mean_time_to_happen = { months = 12 }
+	
 	immediate = {
 		random = {
 			chance = 50
 			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
 		}
-	}
-	
-	mean_time_to_happen = {
-		months = 12
 	}
 	
 	option = {
@@ -848,9 +843,7 @@ province_event = {
 		NOT = { owner = { tag = LMW } }
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
+	mean_time_to_happen = { months = 12 }
 	
 	immediate = {
 		random = {
@@ -904,6 +897,7 @@ country_event = {
 	title = "The Wights Rise"
 	desc = "EVTDESC50924"
 	picture = "gramavuld/wight_rising"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -926,9 +920,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	option = {
 		name = "The day has come"
@@ -989,7 +981,6 @@ country_event = {
 				sub_unit = { type = artillery value = current }
 			}
 		}
-		
 		set_global_flag = DAL_marsh_wights_risen
 	}
 }
@@ -1001,6 +992,7 @@ country_event = {
 	title = "Trade With the $FROMCOUNTRY$?"
 	desc = "EVTDESC50925"
 	picture = "gramavuld/market"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -1058,6 +1050,7 @@ country_event = {
 	title = "Trade with the $FROMCOUNTRY$ Accepted"
 	desc = "EVTDESC50926"
 	picture = "gramavuld/market"
+	
 	is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -1074,6 +1067,7 @@ country_event = {
 	title = "Trade with the $FROMCOUNTRY$ Rejected"
 	desc = "EVTDESC50927"
 	picture = "gramavuld/market"
+	
 	is_triggered_only = yes
 	allow_multiple_instances = yes
 	
@@ -1089,6 +1083,7 @@ province_event = {
 	id = 50928
 	title = "A Change in Trade"
 	desc = "EVTDESC50928"
+	
 	is_triggered_only = yes
 	
 	option = {
@@ -1409,7 +1404,6 @@ country_event = {
 			factor = 0.15 # Cut it down to ~6 months if railroading is enabled
 			has_global_flag = railroading_enabled
 		}
-		
 		modifier = {
 			factor = 0.01 # Cut it down to essentially immediately if getting to the edge of the date range the dynamic loc event handles
 			year = 3010
@@ -1560,7 +1554,6 @@ country_event = {
 			factor = 0.15 # Cut it down to ~6 months if railroading is enabled
 			has_global_flag = railroading_enabled
 		}
-		
 		modifier = {
 			factor = 0.01 # Cut it down to essentially immediately if getting to the edge of the date range the dynamic loc event handles
 			OR = {
@@ -1812,9 +1805,7 @@ country_event = {
 		NOT = { has_global_flag = DAL_girion_bainson_born }
 	}
 	
-	mean_time_to_happen = {
-		months = 24
-	}
+	mean_time_to_happen = { months = 24 }
 	
 	option = {
 		name = "The line is secured"
@@ -1930,9 +1921,7 @@ country_event = {
 		NOT = { has_global_flag = DAL_bryn_brandson_born }
 	}
 	
-	mean_time_to_happen = {
-		months = 24
-	}
+	mean_time_to_happen = { months = 24 }
 	
 	option = {
 		name = "The line is secured"
@@ -2045,9 +2034,7 @@ country_event = {
 		NOT = { has_global_flag = DAL_girloth_bard2son_born }
 	}
 	
-	mean_time_to_happen = {
-		months = 24
-	}
+	mean_time_to_happen = { months = 24 }
 	
 	option = {
 		name = "The line is secured"
@@ -2083,11 +2070,10 @@ country_event = {
 	title = "Bryn, Royal Warrior"
 	desc = "EVTDESC50946"
 	picture = "gramavuld/bard_war"
+	
 	fire_only_once = yes
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	trigger = {
 		tag = DAL
@@ -2132,11 +2118,10 @@ country_event = {
 	title = "Girloth, Royal General"
 	desc = "EVTDESC50947"
 	picture = "gramavuld/bard_war"
+	
 	fire_only_once = yes
 	
-	mean_time_to_happen = {
-		months = 6
-	}
+	mean_time_to_happen = { months = 6 }
 	
 	trigger = {
 		tag = DAL
@@ -2181,6 +2166,7 @@ country_event = {
 	title = "The Fate of the Longbeards"
 	desc = "EVTDESC50948"
 	picture = "erebor/erebor_mountain"
+	
 	fire_only_once = yes
 	
 	trigger = {
@@ -2536,10 +2522,6 @@ province_event = {
 	title = "The Rights of the Fisher's Guild"
 	desc = "EVTDESC50950"
 	
-	mean_time_to_happen = {
-		months = 60
-	}
-	
 	trigger = {
 		OR = {
 			province_id = 140 # Holmgeirstadur
@@ -2576,6 +2558,8 @@ province_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = "Agree with the Merchants"
