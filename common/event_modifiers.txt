@@ -201,37 +201,111 @@ locked_rgo = {
 # }
 ##### SEASONS MODIFIERS ##### {
 # Province Modifier
-summer_modifier = {
+summer_modifier_north = {
 	farm_rgo_eff = 0.1
 	pop_militancy_modifier = -0.01
 	pop_consciousness_modifier = -0.01
+	supply_limit = 1
 	
 	icon = 37
 }
 
 # Province Modifier
-autumn_modifier = {
+summer_modifier_south = {
+	farm_rgo_eff = 0.2
+	pop_militancy_modifier = -0.01
+	pop_consciousness_modifier = -0.01
+	supply_limit = 2
+	
+	icon = 37
+}
+
+# Province Modifier
+autumn_modifier_north = {
 	farm_rgo_eff = 0.05
 	
 	icon = 38
 }
 
 # Province Modifier
-winter_modifier = {
+autumn_modifier_rhun = {
+	farm_rgo_eff = 0.05
+	movement_cost = 0.05
+	
+	icon = 38
+}
+
+# Province Modifier
+autumn_modifier_south = {
+	farm_rgo_eff = 0.15
+	supply_limit = 1
+	
+	icon = 38
+}
+
+# Province Modifier
+winter_modifier_north = {
 	farm_rgo_eff = -0.25
 	pop_militancy_modifier = 0.01
 	pop_consciousness_modifier = 0.01
 	movement_cost = 0.1
+	supply_limit = -3.5 # Remove half of the starting supply
 	
 	icon = 39
 }
 
 # Province Modifier
-spring_modifier = {
+winter_modifier_south = {
+	farm_rgo_eff = -0.15
+	pop_militancy_modifier = 0.01
+	pop_consciousness_modifier = 0.01
+	movement_cost = 0.1
+	supply_limit = -2.5
+	
+	icon = 39
+}
+
+# Province Modifier
+spring_modifier_north = {
 	farm_rgo_eff = 0.05
 	movement_cost = 0.05
 	
 	icon = 40
+}
+
+# Province Modifier
+spring_modifier_rhun = {
+	farm_rgo_eff = 0.05
+	movement_cost = 0.1
+	
+	icon = 40
+}
+
+# Province Modifier
+spring_modifier_south = {
+	farm_rgo_eff = 0.15
+	movement_cost = 0.05
+	supply_limit = 1
+	
+	icon = 40
+}
+
+# Province Modifier
+dry_season_modifier = {
+	farm_rgo_eff = -0.25
+	pop_militancy_modifier = 0.01
+	pop_consciousness_modifier = 0.01
+	supply_limit = -2
+	
+	icon = 37
+}
+
+# Province Modifier
+wet_season_modifier = {
+	farm_rgo_eff = 0.1
+	movement_cost = 0.1
+	
+	icon = 39
 }
 
 # }

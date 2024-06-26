@@ -452,44 +452,182 @@ country_event = {
 						month = 11
 						NOT = { month = 2 }
 					}
+					OR = {
+						continent = north_america # Eriador
+						continent = europe # Rhovanion
+						continent = asia # Rhun
+					}
 				}
-				add_province_modifier = { name = winter_modifier duration = -1 }
-				remove_province_modifier = spring_modifier
-				remove_province_modifier = summer_modifier
-				remove_province_modifier = autumn_modifier
+				add_province_modifier = { name = winter_modifier_north duration = -1 }
+				remove_province_modifier = spring_modifier_north
+				remove_province_modifier = spring_modifier_rhun
+				remove_province_modifier = summer_modifier_north
+				remove_province_modifier = autumn_modifier_north
+				remove_province_modifier = autumn_modifier_rhun
 			}
 			# March, April, May
 			any_neighbor_province = {
 				limit = {
 					month = 2
 					NOT = { month = 5 }
+					OR = {
+						continent = north_america # Eriador
+						continent = europe # Rhovanion
+					}
 				}
-				remove_province_modifier = winter_modifier
-				add_province_modifier = { name = spring_modifier duration = -1 }
-				remove_province_modifier = summer_modifier
-				remove_province_modifier = autumn_modifier
+				remove_province_modifier = winter_modifier_north
+				add_province_modifier = { name = spring_modifier_north duration = -1 }
+				remove_province_modifier = spring_modifier_rhun
+				remove_province_modifier = summer_modifier_north
+				remove_province_modifier = autumn_modifier_north
+				remove_province_modifier = autumn_modifier_rhun
+			}
+			# March, April, May
+			any_neighbor_province = {
+				limit = {
+					month = 2
+					NOT = { month = 5 }
+					continent = asia # Rhun
+				}
+				remove_province_modifier = winter_modifier_north
+				remove_province_modifier = spring_modifier_north
+				add_province_modifier = { name = spring_modifier_rhun duration = -1 }
+				remove_province_modifier = summer_modifier_north
+				remove_province_modifier = autumn_modifier_north
+				remove_province_modifier = autumn_modifier_rhun
 			}
 			# June, July, August
 			any_neighbor_province = {
 				limit = {
 					month = 5
 					NOT = { month = 8 }
+					OR = {
+						continent = north_america # Eriador
+						continent = europe # Rhovanion
+						continent = asia # Rhun
+					}
 				}
-				remove_province_modifier = winter_modifier
-				remove_province_modifier = spring_modifier
-				add_province_modifier = { name = summer_modifier duration = -1 }
-				remove_province_modifier = autumn_modifier
+				remove_province_modifier = winter_modifier_north
+				remove_province_modifier = spring_modifier_north
+				remove_province_modifier = spring_modifier_rhun
+				add_province_modifier = { name = summer_modifier_north duration = -1 }
+				remove_province_modifier = autumn_modifier_north
+				remove_province_modifier = autumn_modifier_rhun
 			}
 			# September October, November
 			any_neighbor_province = {
 				limit = {
 					month = 8
 					NOT = { month = 11 }
+					OR = {
+						continent = north_america # Eriador
+						continent = europe # Rhovanion
+					}
 				}
-				remove_province_modifier = winter_modifier
-				remove_province_modifier = spring_modifier
-				remove_province_modifier = summer_modifier
-				add_province_modifier = { name = autumn_modifier duration = -1 }
+				remove_province_modifier = winter_modifier_north
+				remove_province_modifier = spring_modifier_north
+				remove_province_modifier = spring_modifier_rhun
+				remove_province_modifier = summer_modifier_north
+				add_province_modifier = { name = autumn_modifier_north duration = -1 }
+				remove_province_modifier = autumn_modifier_rhun
+			}
+			# September October, November
+			any_neighbor_province = {
+				limit = {
+					month = 8
+					NOT = { month = 11 }
+					continent = asia # Rhun
+				}
+				remove_province_modifier = winter_modifier_north
+				remove_province_modifier = spring_modifier_north
+				remove_province_modifier = spring_modifier_rhun
+				remove_province_modifier = summer_modifier_north
+				remove_province_modifier = autumn_modifier_north
+				add_province_modifier = { name = autumn_modifier_rhun duration = -1 }
+			}
+			# December, January, February
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						month = 11
+						NOT = { month = 2 }
+					}
+					OR = {
+						continent = south_america # Gondor/Rohan
+						continent = africa # Mordor
+					}
+				}
+				add_province_modifier = { name = winter_modifier_south duration = -1 }
+				remove_province_modifier = spring_modifier_south
+				remove_province_modifier = summer_modifier_south
+				remove_province_modifier = autumn_modifier_south
+			}
+			#  March, April, May
+			any_neighbor_province = {
+				limit = {
+					month = 2
+					NOT = { month = 5 }
+					OR = {
+						continent = south_america # Gondor/Rohan
+						continent = africa # Mordor
+					}
+				}
+				remove_province_modifier = winter_modifier_south
+				add_province_modifier = { name = spring_modifier_south duration = -1 }
+				remove_province_modifier = summer_modifier_south
+				remove_province_modifier = autumn_modifier_south
+			}
+			# June, July, August
+			any_neighbor_province = {
+				limit = {
+					month = 5
+					NOT = { month = 8 }
+					OR = {
+						continent = south_america # Gondor/Rohan
+						continent = africa # Mordor
+					}
+				}
+				remove_province_modifier = winter_modifier_south
+				remove_province_modifier = spring_modifier_south
+				add_province_modifier = { name = summer_modifier_south duration = -1 }
+				remove_province_modifier = autumn_modifier_south
+			}
+			# September October, November
+			any_neighbor_province = {
+				limit = {
+					month = 8
+					NOT = { month = 11 }
+					OR = {
+						continent = south_america # Gondor/Rohan
+						continent = africa # Mordor
+					}
+				}
+				remove_province_modifier = winter_modifier_south
+				remove_province_modifier = spring_modifier_south
+				remove_province_modifier = summer_modifier_south
+				add_province_modifier = { name = autumn_modifier_south duration = -1 }
+			}
+			# October, November, December, January, February, March
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						month = 9
+						NOT = { month = 3 }
+					}
+					continent = oceania # Harad
+				}
+				add_province_modifier = { name = dry_season_modifier duration = -1 }
+				remove_province_modifier = wet_season_modifier
+			}
+			# April, May, June, July, August, September
+			any_neighbor_province = {
+				limit = {
+					month = 3
+					NOT = { month = 9 }
+					continent = oceania # Harad
+				}
+				remove_province_modifier = dry_season_modifier
+				add_province_modifier = { name = wet_season_modifier duration = -1 }
 			}
 		}
 		
