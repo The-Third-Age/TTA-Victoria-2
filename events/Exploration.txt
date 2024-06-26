@@ -9,6 +9,9 @@
 ########################
 country_event = { # First attempt
 	id = 50700
+	title = "Search for a Lesser Ring"
+	desc = "EVTDESC50700"
+	picture = "acquire_ring"
 
 	trigger = {
 		NOT = { has_country_flag = searching_for_lesser_ring }
@@ -29,13 +32,7 @@ country_event = { # First attempt
 		NOT = { has_country_flag = rejected_searching_for_lesser_ring }
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "Search for a Lesser Ring"
-	desc = "EVTDESC50700"
-	picture = "acquire_ring"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Support the mission"
@@ -58,18 +55,15 @@ country_event = { # First attempt
 
 country_event = { # Attempt fails, try again?
 	id = 50701
+	title = "Failure to find a Lesser Ring"
+	desc = "EVTDESC50701"
+	picture = "acquire_ring"
 	
 	trigger = {
 		has_country_flag = searching_for_lesser_ring
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "Failure to find a Lesser Ring"
-	desc = "EVTDESC50701"
-	picture = "acquire_ring"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Try again" # Fund second attempt
@@ -87,6 +81,9 @@ country_event = { # Attempt fails, try again?
 
 country_event = { # Lesser Ring of Might
 	id = 50702
+	title = "The Lesser Ring of Might"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
 
 	trigger = {
 		has_country_flag = searching_for_lesser_ring
@@ -107,13 +104,7 @@ country_event = { # Lesser Ring of Might
 		NOT = { has_country_modifier = lesser_ring_of_might }
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "The Lesser Ring of Might"
-	desc = "Our search for a Lesser Ring is over. One has finally been found."
-	picture = "acquire_ring"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Excellent"
@@ -164,6 +155,9 @@ country_event = { # Lesser Ring of Might
 
 country_event = { # Lesser Ring of Courage
 	id = 50703
+	title = "The Lesser Ring of Courage"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
 
 	trigger = {
 		has_country_flag = searching_for_lesser_ring
@@ -184,13 +178,7 @@ country_event = { # Lesser Ring of Courage
 		NOT = { has_country_modifier = lesser_ring_of_courage }
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "The Lesser Ring of Courage"
-	desc = "Our search for a Lesser Ring is over. One has finally been found."
-	picture = "acquire_ring"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Excellent"
@@ -241,6 +229,9 @@ country_event = { # Lesser Ring of Courage
 
 country_event = { # Lesser Ring of Wit
 	id = 50704
+	title = "The Lesser Ring of Wit"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
 
 	trigger = {
 		has_country_flag = searching_for_lesser_ring
@@ -261,13 +252,7 @@ country_event = { # Lesser Ring of Wit
 		NOT = { has_country_modifier = lesser_ring_of_wit }
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "The Lesser Ring of Wit"
-	desc = "Our search for a Lesser Ring is over. One has finally been found."
-	picture = "acquire_ring"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Excellent"
@@ -318,6 +303,9 @@ country_event = { # Lesser Ring of Wit
 
 country_event = { # Lesser Ring of Calm
 	id = 50705
+	title = "The Lesser Ring of Calm"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
 
 	trigger = {
 		has_country_flag = searching_for_lesser_ring
@@ -338,13 +326,7 @@ country_event = { # Lesser Ring of Calm
 		NOT = { has_country_modifier = lesser_ring_of_calm }
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "The Lesser Ring of Calm"
-	desc = "Our search for a Lesser Ring is over. One has finally been found."
-	picture = "acquire_ring"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Excellent"
@@ -395,6 +377,9 @@ country_event = { # Lesser Ring of Calm
 
 country_event = { # Lesser Ring of Plenty
 	id = 50706
+	title = "The Lesser Ring of Plenty"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
 
 	trigger = {
 		has_country_flag = searching_for_lesser_ring
@@ -415,13 +400,7 @@ country_event = { # Lesser Ring of Plenty
 		NOT = { has_country_modifier = lesser_ring_of_plenty }
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "The Lesser Ring of Plenty"
-	desc = "Our search for a Lesser Ring is over. One has finally been found."
-	picture = "acquire_ring"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Excellent"
@@ -472,6 +451,9 @@ country_event = { # Lesser Ring of Plenty
 
 country_event = { # Lesser Ring of Glory
 	id = 50707
+	title = "The Lesser Ring of Glory"
+	desc = "Our search for a Lesser Ring is over. One has finally been found."
+	picture = "acquire_ring"
 
 	trigger = {
 		has_country_flag = searching_for_lesser_ring
@@ -492,13 +474,7 @@ country_event = { # Lesser Ring of Glory
 		NOT = { has_country_modifier = lesser_ring_of_glory }
 	}
 
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	title = "The Lesser Ring of Glory"
-	desc = "Our search for a Lesser Ring is over. One has finally been found."
-	picture = "acquire_ring"
+	mean_time_to_happen = { months = 12 }
 
 	option = {
 		name = "Excellent"

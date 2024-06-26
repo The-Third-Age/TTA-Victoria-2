@@ -752,7 +752,7 @@ province_event = {
 	
 	mean_time_to_happen = {
 		months = 200
-		modifier = {	
+		modifier = {
 			factor = 0.9
 			average_consciousness = 4
 		}
@@ -1296,7 +1296,7 @@ province_event = {
 			factor = 0.9
 			average_militancy = 7
 		}
-		modifier = {	
+		modifier = {
 			factor = 0.9
 			average_consciousness = 6
 		}
@@ -1515,7 +1515,6 @@ province_event = {
 			}
 		}
 	}
-		
 }
 
 # Nationalist Sympathies among the officers
@@ -2264,6 +2263,8 @@ province_event = {
 	title = "Dryzymala's Wagon"
 	desc = "EVTDESC15021"
 	
+	fire_only_once = yes
+	
 	trigger = {
 		is_primary_culture = no
 		is_accepted_culture = no
@@ -2275,8 +2276,6 @@ province_event = {
 		}
 		controlled_by = owner
 	}
-	
-	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		months = 700
