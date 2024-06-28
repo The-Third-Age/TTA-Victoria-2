@@ -8,9 +8,9 @@
 # The Plight of the Working Folk
 country_event = {
 	id = 3600
-	picture = administration
 	title = "The Plight of the Working Folk"
 	desc = "EVTDESC3600"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -32,7 +32,6 @@ country_event = {
 			}
 			militancy = -1
 		}
-		
 		change_variable = { which = strata_support value = 1 }
 	}
 	
@@ -45,7 +44,6 @@ country_event = {
 			}
 			militancy = -1
 		}
-		
 		change_variable = { which = strata_support value = -1 }
 	}
 }
@@ -53,9 +51,9 @@ country_event = {
 # A Request for Aid
 country_event = {
 	id = 3601
-	picture = administration
 	title = "A Request for Aid"
 	desc = "EVTDESC3601"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -70,7 +68,6 @@ country_event = {
 		name = "Show them the door"
 
 		prestige = 1
-		
 		change_variable = { which = wisdom value = 1 }
 	}
 	
@@ -101,7 +98,6 @@ country_event = {
 			}
 			treasury = 10000
 		}
-		
 		change_variable = { which = wisdom value = -1 }
 	}
 }
@@ -109,9 +105,9 @@ country_event = {
 # A Game of Golf
 country_event = {
 	id = 3602
-	picture = administration
 	title = "A Game of Golf?"
 	desc = "EVTDESC3602"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -125,7 +121,6 @@ country_event = {
 		name = "I've better things to do than play golf!"
 		
 		prestige = 1
-		
 		change_variable = { which = work_ethic value = 1 }
 	}
 	
@@ -138,7 +133,6 @@ country_event = {
 			}
 			consciousness = 1
 		}
-		
 		change_variable = { which = work_ethic value = -1 }
 	}
 }
@@ -146,9 +140,9 @@ country_event = {
 # Gifts to the People
 country_event = {
 	id = 3603
-	picture = administration
 	title = "Gifts to the People?"
 	desc = "EVTDESC3603"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -170,7 +164,6 @@ country_event = {
 			}
 			militancy = -1
 		}
-		
 		change_variable = { which = generosity value = 1 }
 	}
 	
@@ -185,7 +178,6 @@ country_event = {
 			}
 			consciousness = 1
 		}
-		
 		change_variable = { which = generosity value = -1 }
 	}
 }
@@ -193,9 +185,9 @@ country_event = {
 # The Trial
 country_event = {
 	id = 3604
-	picture = administration
 	title = "The Trial"
 	desc = "EVTDESC3604"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -209,7 +201,6 @@ country_event = {
 		name = "No. This court does not take bribes."
 
 		prestige = 5
-		
 		change_variable = { which = corruption value = 1 }
 	}
 	
@@ -217,7 +208,6 @@ country_event = {
 		name = "I mean, a little money can't hurt..."
 		
 		treasury = 2000
-		
 		change_variable = { which = corruption value = -1 }
 	}
 }
@@ -225,6 +215,9 @@ country_event = {
 # Comet Sighted -- Gotta keep the meme alive
 country_event = {
 	id = 3605
+	title = "Comet Sighted!"
+	desc = "EVTDESC3605"
+	picture = "comet"
 
 	trigger = {
 		NOT = {
@@ -233,13 +226,7 @@ country_event = {
 		civilized = yes
 	}
 
-	mean_time_to_happen = {
-		months = 1200
-	}
-
-	title = "Comet Sighted!"
-	desc = "EVTDESC3605"
-	picture = "comet"
+	mean_time_to_happen = { months = 1200 }
 
 	option = {
 		name = "It's an omen"
@@ -281,9 +268,9 @@ country_event = {
 # Temporary insanity
 country_event = {
 	id = 3606
-	picture = administration
 	title = "Temporary insanity"
 	desc = "EVTDESC3606"
+	picture = administration
 	
 	is_triggered_only = yes
 	
@@ -305,7 +292,6 @@ country_event = {
 			consciousness = -1
 			militancy = -1
 		}
-		
 		change_variable = { which = wisdom value = 1 }
 	}
 	
@@ -320,7 +306,6 @@ country_event = {
 			}
 			consciousness = 1
 		}
-		
 		change_variable = { which = wisdom value = -1 }
 	}
 }
@@ -328,9 +313,9 @@ country_event = {
 # Diplomatic move
 country_event = {
 	id = 3607
-	picture = administration
 	title = "Good diplomats"
 	desc = "EVTDESC3607"
+	picture = administration
 
 	is_triggered_only = yes
 
@@ -400,9 +385,9 @@ country_event = {
 # Excellent diplomacy
 country_event = {
 	id = 3608
-	picture = administration
 	title = "Excellent diplomacy"
 	desc = "EVTDESC3608"
+	picture = administration
 
 	is_triggered_only = yes
 
@@ -428,9 +413,9 @@ country_event = {
 # Corruption
 country_event = {
 	id = 3609
-	picture = administration
 	title = "Corruption"
 	desc = "EVTDESC3609"
+	picture = administration
 
 	is_triggered_only = yes
 
@@ -478,9 +463,9 @@ country_event = {
 # Noble Family Requests Aid
 country_event = {
 	id = 3610
-	picture = administration
 	title = "Noble Family Requests Aid"
 	desc = "EVTDESC3610"
+	picture = administration
 
 	is_triggered_only = yes
 
@@ -517,9 +502,9 @@ country_event = {
 # Redress
 country_event = {
 	id = 3611
-	picture = administration
 	title = "Petition for Redress"
 	desc = "EVTDESC3611"
+	picture = administration
 
 	is_triggered_only = yes
 
@@ -568,9 +553,9 @@ country_event = {
 # Serfs getting uppity - civilised
 country_event = {
 	id = 3612
-	picture = administration
 	title = "Serfs getting uppity"
 	desc = "EVTDESC3612"
+	picture = administration
 
 	is_triggered_only = yes
 
@@ -628,9 +613,9 @@ country_event = {
 # Exceptional painter
 country_event = {
 	id = 3613
-	picture = administration
 	title = "Exception Court Painter"
 	desc = "EVTDESC3613"
+	picture = administration
 
 	is_triggered_only = yes
 
@@ -661,9 +646,9 @@ country_event = {
 # Economic Boom
 country_event = {
 	id = 3614
-	picture = "production"
 	title = "Economic Boom"
 	desc = "EVTDESC3614"
+	picture = "production"
 
 	is_triggered_only = yes
 	
@@ -695,9 +680,9 @@ country_event = {
 # Famine Strikes State!
 country_event = {
 	id = 3615
-	picture = "starving"
 	title = "Famine Strikes State!"
 	desc = "EVTDESC3615"
+	picture = "starving"
 
 	is_triggered_only = yes
 	
@@ -732,9 +717,9 @@ country_event = {
 # Murder!
 country_event = {
 	id = 3616
-	picture = "murderer"
 	title = "Foul Murder!"
 	desc = "EVTDESC3616"
+	picture = "murderer"
 
 	is_triggered_only = yes
 	
@@ -777,9 +762,9 @@ country_event = {
 # Outlaw on The Run
 country_event = {
 	id = 3617
-	picture = "murderer"
 	title = "Wanted!"
 	desc = "EVTDESC3617"
+	picture = "murderer"
 
 	is_triggered_only = yes
 	
@@ -806,9 +791,9 @@ country_event = {
 # Sea Monster
 country_event = {
 	id = 3618
-	picture = "sea_monster"
 	title = "Sea Monster"
 	desc = "EVTDESC3618"
+	picture = "sea_monster"
 
 	is_triggered_only = yes
 	
@@ -825,6 +810,7 @@ country_event = {
 	option = {
 		name = "Put together a naval force to seek out and quell this monster"
 		money = -500
+		plurality = -0.2
 		change_variable = { which = work_ethic value = 1 }
 	}
 	
@@ -843,9 +829,9 @@ country_event = {
 # Wolves
 country_event = {
 	id = 3619
-	picture = "wolves"
 	title = "Wolves attacking"
 	desc = "EVTDESC3619"
+	picture = "wolves"
 
 	is_triggered_only = yes
 	
@@ -862,6 +848,7 @@ country_event = {
 	option = {
 		name = "Send some men to root out any wolves' dens"
 		money = -500
+		plurality = -0.2
 		change_variable = { which = work_ethic value = 1 }
 	}
 	
@@ -880,9 +867,9 @@ country_event = {
 # Serfs getting uppity - uncivilised
 country_event = {
 	id = 3620
-	picture = administration
 	title = "Serfs getting uppity"
 	desc = "EVTDESC3612"
+	picture = administration
 
 	is_triggered_only = yes
 
@@ -933,9 +920,9 @@ country_event = {
 # Diplomacy - eagles
 country_event = {
 	id = 3621
-	picture = "eagle"
 	title = "Diplomacy with Eagles of Manwë"
 	desc = "EVTDESC3621"
+	picture = "eagle"
 
 	is_triggered_only = yes
 
@@ -979,9 +966,9 @@ country_event = {
 # Mobs
 country_event = {
 	id = 3622
-	picture = "peasant_mob_in_arms"
 	title = "Mobs"
 	desc = "EVTDESC3622"
+	picture = "peasant_mob_in_arms"
 
 	is_triggered_only = yes
 	
@@ -1044,9 +1031,9 @@ country_event = {
 # Popular anxiety - personal anxiety
 country_event = {
 	id = 3623
-	picture = "bad_news"
 	title = "Personal anxiety"
 	desc = "EVTDESC3623"
+	picture = "bad_news"
 
 	is_triggered_only = yes
 	
@@ -1074,9 +1061,9 @@ country_event = {
 # Audax Validator "." Ignore_1009
 country_event = {
 	id = 3624
-	picture = "gandalf"
 	title = "The Grey Wanderer"
 	desc = "EVTDESC3624"
+	picture = "gandalf"
 	news = yes
 
 	is_triggered_only = yes
