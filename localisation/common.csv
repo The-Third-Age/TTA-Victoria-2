@@ -46,7 +46,7 @@ SUPPLY_LOAD_STATUS_DESC_BASIC;The total §Ysupply throughput§! of all our §Yports
 NF_OVERWRITE_HEADER;To set the new national focus §Y$NF$§! you must remove another one.;x
 NF_OVERWRITE_ENTRY;§Y$NF$§!\nin §G$STATE$§!;x
 POP_INTERNAL_MIGRATION;§Y$NUM$§! people intend to move to other national provinces.;x
-POP_EXTERNAL_MIGRATION;§Y$NUM$§! people intend to move to another country.;x
+POP_EXTERNAL_MIGRATION;§Y$NUM$§! people intend to move to another realm.;x
 POP_COLONIAL_MIGRATION;§Y$NUM$§! people intend to move to the territories.;x
 AVAILABLE_COLONIAL_POWER;Available: §Y$VALUE$§!;x
 colonial_b;Territorial;x
@@ -56,20 +56,20 @@ COUNTRYALERT_ColonialGood_protectorate;§GWe can create a protectorate in §Y$REGI
 COUNTRYALERT_ColonialGood_colony;§GWe can create a territory in §Y$REGION$§!;x
 COUNTRYALERT_ColonialGood_state;§GWe can create a state in §Y$REGION$§!;x
 UNIT_REBEL_HUNT_IS_BUSY;§RArmy is currently busy, and will not hunt any rebels right now.§!;x
-HAS_COLONIES;is a territorial country.\n;x
-HAS_NO_COLONIES;is not a territorial country.\n;x
+HAS_COLONIES;is a territorial realm.\n;x
+HAS_NO_COLONIES;is not a territorial realm.\n;x
 COLONIAL_EDUCATION;Territory: $VAL$;x
 POP_DETAILS_COLONIAL_MIGRATION;Territorial migration:;x
 COLONIAL_MIGRATION_TECH;Territorial Migration;x
 COLONY_SUCCESS_SETUP;When we succeed with the settlement of an unclaimed province.;x
 COLONY_FAIL_SETUP;When we fail to settle an unclaimed province.;x
 COLONY_IN_CRISIS;Currently involved in territorial crisis;x
-NON_COLONIAL_POWER;We are not a second rank country or great power yet so we have no territorial power.;x
+NON_COLONIAL_POWER;We are not a second rank realm or great power yet so we have no territorial power.;x
 CRISIS_DESCRIPTION_COLONIZE;Crisis over the rights to settle unclaimed land.;x
 CB_COLONY_CLAIMS;Enforce territorial claim;x
 COUNTRYALERT_ColonialGood_invest;§GWe can invest in our settlement in §Y$REGION$§!;x
 CB_GENERATION_SPEED_BONUS_ON_COLONY_COMPETITION;Competing with §Y$COUNTRY$§! for settling §Y$REGION$§!, speed bonus §Y$BONUS$§!.;x
-COLONIZE_MAX_SLOTS;No more then §Y$NUM$§! countries can compete for province settlement.;x
+COLONIZE_MAX_SLOTS;No more then §Y$NUM$§! realms can compete for province settlement.;x
 COLONY_ABORT_MAP;Settlement Aborted!;x
 COLONY_ABORT_SETUP;When settlement is aborted.;x
 COLONY_ABORT_LOG;Settlement of $TARGET$ has been aborted.;x
@@ -95,9 +95,9 @@ PW_UPGRADE_TO_COLONY;Click to convert to upgrade to territory. You need §Y$VALUE
 COLONY_INVEST_COST;Cost of investment: §Y$COST$§! Territorial Power;x
 COLONY_INVEST_COST_LACK;Cost of investment: §R$COST$§! Territorial Power;x
 COUNTRYALERT_NO_Colonial;Nothing in our territories needs attention.;x
-COLONIZE_PHASE_INTEREST_DESC;Compete with investment of territorial power. The top two countries when someone gets $LEVELS$ levels ahead go on to next state of competition;x
+COLONIZE_PHASE_INTEREST_DESC;Compete with investment of territorial power. The top two realms when someone gets $LEVELS$ levels ahead go on to next state of competition;x
 COLONIZE_PHASE_INFLUENCE;Territorial competition;x
-COLONIZE_PHASE_INFLUENCE_DESC;Two countries battle with territorial power until one side can not match influence. Every time investment is made tension in state will increase and if it gets too hot turns into a crisis.;x
+COLONIZE_PHASE_INFLUENCE_DESC;Two realms battle with territorial power until one side can not match influence. Every time investment is made tension in state will increase and if it gets too hot turns into a crisis.;x
 COLONIZE_PHASE_COLONIZATION;Settling;x
 COLONIZE_PHASE_COLONIZATION_DESC;Winner of previous phases has $MONTHS$ months to convert to a territory or lose investments.;x
 COLONY_ADD_INFLUENCE;Add territorial influence;x
@@ -120,7 +120,7 @@ COLONY_FAIL_2;$MONARCHTITLE$, our settlement in;x
 COLONY_SUCCESS_HEADER;When our settlement efforts are successful.;x
 COLONY_SUCCESS_1;Territory Created!;x
 COLONY_SUCCESS_2;$MONARCHTITLE$, we have successfully settled;x
-CONFIRM_CREATE_STATE_DESC;Do you wish to turn this territory into a state?\nThis will make it into a normal state in your country, conferring upon its population the same rights and privileges as your other citizens.;x
+CONFIRM_CREATE_STATE_DESC;Do you wish to turn this territory into a state?\nThis will make it into a normal state in your realm, conferring upon its population the same rights and privileges as your other citizens.;x
 COLONIZE_LIFE_RATING;Liferating: §R$RATE$§!. Current tech allows territories where liferating is at least: §Y$TECH$§!;x
 MAPMODE_7;Territorial Mapmode;x
 FOCUS_OWNED_COLONY;You cannot settle a non empty province.;x
@@ -143,7 +143,7 @@ CEASECOLONIZATION_OTHER_ACCEPT_LOG;$RECIPIENT$ agreed to cease settling $RSTATE$
 CEASECOLONIZATION_THEY_DECLINE_LOG;$RECIPIENT$ declined to cease settling $RSTATE$.;x
 CEASECOLONIZATION_WE_DECLINE_LOG;We've declined to cease settling $RSTATE$.;x
 CEASECOLONIZATION_OTHER_DECLINE_LOG;$RECIPIENT$ declined to cease settling $RSTATE$, $ACTOR$ offered to cease settling $ASTATE$.;x
-CEASECOLONIZATION_DESC;Ask country to cease settling a state we are also settling, and in exchange, we do the same.;x
+CEASECOLONIZATION_DESC;Ask realm to cease settling a state we are also settling, and in exchange, we do the same.;x
 CEASECOLONIZATION_BUTTON;Cease Settling;x
 CEASECOLONIZATION_OFFER;$ACTOR$ requests that we cease settling $RSTATE$. In return, they will stop settling $ASTATE$;x
 HAS_GOODS_IN_STATE;Producing $GOODS$ in state.;x
@@ -172,19 +172,19 @@ SOIS_HAS_REBELS_WARNING;Rebels have risen against our Sphere members: §Y$LIST$§!
 SIDEMENU_menubar_msg_province;Left-click to show all §YProvince§W messages. Right-click to dismiss all.;x
 COUNTRYALERT_CanDoReforms;We can enact the following reforms:;x
 COUNTRYALERT_CanDoDecisions;We can enact the following decisions:;x
-COUNTRYALERT_HaveRebels;There are rebels rising in our country!;x
+COUNTRYALERT_HaveRebels;There are rebels rising in our realm!;x
 COUNTRYALERT_LoosingGPStatus;We are losing §YGreat Power§W status! If we don't regain by §Y$DAYS$§W, the world will no longer view us as a §YGreat Power§W!;x
-COUNTRYALERT_NO_HasUnemployedWorkers;There are no unemployed workers in our country;x
+COUNTRYALERT_NO_HasUnemployedWorkers;There are no unemployed workers in our realm;x
 COUNTRYALERT_NO_CanDoReforms;We cannot enact any reforms;x
-COUNTRYALERT_NO_IsInElection;There's currently no election taking place in our country;x
-COUNTRYALERT_NO_HaveRebels;We have no rebels in our country;x
+COUNTRYALERT_NO_IsInElection;There's currently no election taking place in our realm;x
+COUNTRYALERT_NO_HaveRebels;We have no rebels in our realm;x
 COUNTRYALERT_NO_LoosingGPStatus;We are not losing §YGreat Power§W status;x
 COUNTRYALERT_NO_GPStatus;We are not a §YGreat Power§W;x
 INFLUENCE_CHANGE;§Y$ACTIVE$§W influence with §Y$PASSIVE$§W changes with $MUCH$.\n;x
 INFLUENCE_CHANGE_SHORT;Influence with §Y$PASSIVE$§W changed by $MUCH$.\n;x
 HAVE_DIPLOMATIC_INFLUENCE;has more diplomatic influence than;x
 HAVE_LESS_DIPLOMATIC_INFLUENCE;has lower diplomatic influence than;x
-CALLALLY_OFFER;The country of $ACTOR$, your faithful ally, is requesting that you come to their aid in the $LIST$.;x
+CALLALLY_OFFER;The realm of $ACTOR$, your faithful ally, is requesting that you come to their aid in the $LIST$.;x
 CALLALLY_THEY_ACCEPT_HEADER;The Foreign Minister reports;x
 CALLALLY_THEY_ACCEPT_1;§Y$RECIPIENT$§W;x
 CALLALLY_THEY_ACCEPT_2;$MONARCHTITLE$, we are not surprised to learn that;x
@@ -220,7 +220,7 @@ DIPLOMACY_CANNOT_JOIN_WAR_INVALID_ENEMY;Already at war with §Y$COUNTRY$§W, we ca
 DIPLOMACY_CANNOT_JOIN_WAR_ALLIED_ENEMY;Allied with §Y$COUNTRY$§W in another war, we cannot start another war against them.;x
 DIPLOMACY_ALREADY_IN_WAR;Already involved in this war.;x
 CALLALLY_DESC;Call on our partner to aid us in our conflicts.\n$VERSUS$;x
-INVESTED_IN_US_SETUP;When a country invests in us;x
+INVESTED_IN_US_SETUP;When a realm invests in us;x
 INVESTED_IN_US_HEADER;Foreign Investment;x
 INVESTED_IN_US_1;$ICOUNTRY$ has invested in us!;x
 INVESTED_IN_US_2;$INVESTED_IN_US_MESSAGE$;x
@@ -238,9 +238,9 @@ INVESTED_IN_US_UPGRADE;Upgraded $INAME$ in $ILOCATION$ for $IAMOUNT$§!;x
 INVESTED_IN_US_UNKNOWN;Invested $IAMOUNT$§! in us.;x
 MODIFY_RELATION_EFFECT;§Y$SOURCE$§!'s relation with §Y$TARGET$§! changed with a value of $VALUE$.;x
 RANK_PRESTIGE;Prestige;x
-RANK_PRESTIGE_D;Prestige is accumulated through cultural development and performing well with your country;x
+RANK_PRESTIGE_D;Prestige is accumulated through cultural development and performing well with your realm;x
 RANK_INDUSTRY;Industrial Power;x
-RANK_INDUSTRY_D;Industry score is a measure of your level of industrialization. It is a combination of the number of factories and the total value of the goods output of your country. §RYou gain 1 point for every 2500 Guild Artisans employed§!;x
+RANK_INDUSTRY_D;Industry score is a measure of your level of industrialization. It is a combination of the number of factories and the total value of the goods output of your realm. §RYou gain 1 point for every 2500 Guild Artisans employed§!;x
 RANK_MILITARY;Military Power;x
 RANK_MILITARY_D;The Military score is a measure of the power of your army, it scores your military by both size and equipment.;x
 TYPE_SPECIAL;Other;x
@@ -326,7 +326,7 @@ SHIP_BUILD_LIMIT_MAX;§Y(Limit: $LIM$)§!;x
 BUILDING_ONE_PER_STATE;Only one per state;x
 DIPLOMACY_CRISIS_INFO;Crisis;x
 CRISIS_CANT_DECLARE_WAR;You can not declare war or be declared war upon if you are involved in a crisis.;x
-LEDGER_COUNTRY_NAME;Country;x
+LEDGER_COUNTRY_NAME;Realm;x
 LEDGER_COUNTRY_MILSCORE;Military Score;x
 LEDGER_COUNTRY_INDSCORE;Industrial Score;x
 LEDGER_COUNTRY_PRESTIGE;Prestige;x
@@ -359,7 +359,7 @@ LEDGER_HEADER_COUNTRYPARTY;Political systems;x
 LEDGER_COUNTRY_GOVERNMENT;Government;x
 LEDGER_HEADER_COUNTRYPOLITICALREFORMS;Nobility reforms;x
 LEDGER_HEADER_COUNTRYSOCIALREFORMS;Burgher reforms;x
-LEDGER_HEADER_COUNTRY_POPS;Country population;x
+LEDGER_HEADER_COUNTRY_POPS;Realm population;x
 LEDGER_HEADER_PROVINCEPRODUCTION;Province production;x
 LEDGER_STATE_NAME;State;x
 LEDGER_GOODS;Goods;x
@@ -420,7 +420,7 @@ BUDGET_ADMIN_EFFICIENCY_DESC;§Y$PERC$%§W of our population are §Ybureaucrats§W.\
 ADM_EXPLAIN_DESC;This needed percentage is based on the following.\n;x
 SHADOWY_INVESTOR;Private Investors;x
 GUNBOAT_ALERT;$COUNTRY$ has used their naval might to force us to pay back our loans with $VALUE$§!per day.;x
-BUDGET_COUNTRY;Country;x
+BUDGET_COUNTRY;Realm;x
 BUDGET_AMOUNT;Amount;x
 BUDGET_LOANS_TAKEN;Loans Taken;x
 BUDGET_LOANS_GIVEN;Loans Given;x
@@ -428,8 +428,8 @@ DIPLOMATIC_BALANCE_DESC;Diplomatic Balance;x
 BUDGET_LOAN_CANT_REPAY;We have no money to pay back loans with;x
 BUDGET_CANT_LOAN;No money available to you for loaning;x
 #;;x
-FE_PLAYABLE_COUNTRIES;Playable Countries;x
-FE_COUNTRY;Country;x
+FE_PLAYABLE_COUNTRIES;Playable Realms;x
+FE_COUNTRY;Realm;x
 FE_WARS;Wars:;x
 FE_POP;Pop.;x
 FE_IDEOLOGY;Ideology;x
@@ -527,13 +527,13 @@ FE_MULTI_PLAYER;Multi Player;x
 FE_OPTIONS;Options;x
 FE_CREDITS;Credits;x
 FE_EXIT;Exit;x
-FE_NATION_TO_PLAY;Click the country you wish to play...;x
+FE_NATION_TO_PLAY;Click the realm you wish to play...;x
 FE_NEW_GAME;New Game;x
 FE_SAVE_GAME;Save Games;x
 FE_HISTORICAL_START;Historical Start;x
 FE_SAVED_GAMES;Saved Games;x
-FE_SELECT_NATION;Click on the map to select a country...;x
-FE_NO_COUNTRY_SELECTED;No country selected;x
+FE_SELECT_NATION;Click on the map to select a realm...;x
+FE_NO_COUNTRY_SELECTED;No realm selected;x
 FE_MILITARY;Military;x
 FE_ECONOMY;Economy;x
 FE_DIPLOMACY;Diplomacy;x
@@ -875,7 +875,7 @@ REB_SIZE_DESC;Number of possible brigades: §Y$VAL$§W;x
 REB_ACTUAL_SIZE_DESC;Number of brigades ready to join general rising: §Y$VAL$§W;x
 REB_CURRENT_SIZE_DESC;Number of brigades in revolt: §Y$VAL$§W;x
 REB_REVOLT_RISK;Revolt risk: §Y$VAL$§W;x
-PARTISANS_SETUP;When a rebellion springs up in your country.;x
+PARTISANS_SETUP;When a rebellion springs up in your realm.;x
 PARTISANS_HEADER;The Secret Police reports;x
 PARTISANS_1;Rebellion!;x
 PARTISANS_2;the §Y$FACTION$§W;x
@@ -890,7 +890,7 @@ PARTISANS_BTN3;Goto;x
 PARTISANS_MAP;Rebellion!;x
 DIPLOMACY;Diplomacy;x
 DIPLOMACY_CLOSE_WINDOW;Closes diplomacy window;x
-DIPLOMACY_COUNTRY;Country;x
+DIPLOMACY_COUNTRY;Realm;x
 DIPLOMACY_PRIO;Prio;x
 DIPLOMACY_BOSS;Boss;x
 DIPLOMACY_PRESTIGE;Pres.;x
@@ -914,18 +914,18 @@ DIPLOMACY_FILTER_NEIGHBOURS;Neighbours;x
 DIPLOMACY_FILTER_ENEMIES;Enemies;x
 DIPLOMACY_FILTER_ALLIES;Allies;x
 DIPLOMACY_FILTER_SPHERE;Sphere;x
-DIPLOMACY_FILTER_ALL_TOOLTIP;List all countries;x
-DIPLOMACY_FILTER_NORTH_AMERICA_TOOLTIP;List §YEriador§W countries;x
-DIPLOMACY_FILTER_SOUTH_AMERICA_TOOLTIP;List §YGondor§W and §YRohan§W countries;x
-DIPLOMACY_FILTER_EUROPE_TOOLTIP;List §YRhovanion§W countries;x
-DIPLOMACY_FILTER_AFRICA_TOOLTIP;List §YMordor§W countries;x
-DIPLOMACY_FILTER_ASIA_TOOLTIP;List §YRhûn§W countries;x
-DIPLOMACY_FILTER_OCEANIA_TOOLTIP;List countries in §YHarad§W;x
-DIPLOMACY_FILTER_NEIGHBOURS_TOOLTIP;List your neighbouring countries;x
+DIPLOMACY_FILTER_ALL_TOOLTIP;List all realms;x
+DIPLOMACY_FILTER_NORTH_AMERICA_TOOLTIP;List §YEriador§W realms;x
+DIPLOMACY_FILTER_SOUTH_AMERICA_TOOLTIP;List §YGondor§W and §YRohan§W realms;x
+DIPLOMACY_FILTER_EUROPE_TOOLTIP;List §YRhovanion§W realms;x
+DIPLOMACY_FILTER_AFRICA_TOOLTIP;List §YMordor§W realms;x
+DIPLOMACY_FILTER_ASIA_TOOLTIP;List §YRhûn§W realms;x
+DIPLOMACY_FILTER_OCEANIA_TOOLTIP;List realms in §YHarad§W;x
+DIPLOMACY_FILTER_NEIGHBOURS_TOOLTIP;List your neighbouring realms;x
 DIPLOMACY_FILTER_ENEMIES_TOOLTIP;List our current enemies;x
 DIPLOMACY_FILTER_ALLIES_TOOLTIP;List our current allies;x
-DIPLOMACY_FILTER_SPHERE_TOOLTIP;List countries in our §YSphere of Influence§W;x
-DIPLOMACY_SORT_BY_COUNTRY_NAME_TOOLTIP;Sort by country name;x
+DIPLOMACY_FILTER_SPHERE_TOOLTIP;List realms in our §YSphere of Influence§W;x
+DIPLOMACY_SORT_BY_COUNTRY_NAME_TOOLTIP;Sort by realm name;x
 DIPLOMACY_SORT_BY_PRIORITY_TOOLTIP;Sort by influence priority;x
 DIPLOMACY_SORT_BY_BOSS_TOOLTIP;Sort by §YSphere of Influence§W;x
 DIPLOMACY_SORT_BY_PRESTIGE_TOOLTIP;Sort by §YPrestige rank§W;x
@@ -956,7 +956,7 @@ DIPLOMACY_CORDIAL_LABEL;Cordial:;x
 DIPLOMACY_SPHERE_LABEL;Sphere:;x
 DIPLOMACY_COLONIALNATION_STATUS;Secondary Power;x
 NEED_POSITIVE_WARSCORE;The War is not going well enough;x
-WARGOAL_LACK_JINGO;We require $REQUIRED$ support for jingoism in our country, but have only $VALUE$;x
+WARGOAL_LACK_JINGO;We require $REQUIRED$ support for jingoism in our realm, but have only $VALUE$;x
 ISDISCREDITED_DESC;Discredited until §Y$UNTIL$§W. We suspect §Y$WHO$§W is behind this.;x
 ISBANNEDEMBASSY_DESC;Banned embassy until §Y$UNTIL$§W. We suspect §Y$WHO$§W is behind this.;x
 DIPLOMACY_CANNOT_SET_PRIO;We're not a §YGreat Power§W, thus we cannot influence other nations;x
@@ -1132,18 +1132,18 @@ DIP_ENOUGH_DIPLO;This will cost us §Y$NEEDED$§W of our §Y$CURRENT$§W diplomatic 
 DIP_NO_INFLUENCE;You only have §R$CURRENT$§W of the §Y$NEEDED$§W influence required;x
 DIP_ENOUGH_INFLUENCE;This will cost us §Y$NEEDED$§W of our §Y$CURRENT$§W influence.;x
 CANNOT_TARGET_GREATNATION;We cannot influence other Great Powers;x
-NOT_ENOUGH_RELATION;In order to influence this country, their opinion of us must be at least §Y$NEEDED$§W. Their current opinion is §Y$CURRENT$§W.;x
+NOT_ENOUGH_RELATION;In order to influence this realm, their opinion of us must be at least §Y$NEEDED$§W. Their current opinion is §Y$CURRENT$§W.;x
 ENOUGH_RELATION;Their opinion of us is as good as it can be.;x
 ALREADY_BAD_RELATION;§Y$RECIPIENT$§W already has a §Y$OPINION$§W opinion of §Y$TARGET$§W.;x
-ALREADY_IN_SPHERE;This country is already in the sphere of influence of §Y$LEADER$§W.;x
-IN_NO_SPHERE;This country is not in a sphere of influence.;x
-IN_OUR_SPHERE;This country is in our sphere of influence.;x
-CALL_MUST_BE_ALLIES;We must be allied with country to call them into a war.;x
+ALREADY_IN_SPHERE;This realm is already in the sphere of influence of §Y$LEADER$§W.;x
+IN_NO_SPHERE;This realm is not in a sphere of influence.;x
+IN_OUR_SPHERE;This realm is in our sphere of influence.;x
+CALL_MUST_BE_ALLIES;We must be allied with realm to call them into a war.;x
 CALL_MUST_BE_AT_WAR;We must be at war to call our allies.;x
 CALL_MUST_HAVE_JOINABLE_WAR;There is no suitable war for our allies to join.;x
 FIGHTING_WAR_TOGETHER;We cannot break our alliance during a mutual war against our enemies.;x
-EMBASSY_IS_BANNED;We cannot influence this country because our ambassadors are banned. We suspect §Y$COUNTRY$§W is behind this. Our new ambassadors will arrive at §Y$DATE$§W.;x
-WARSUB_MUST_BE_AT_WAR;Country must be at war in order to receive war subsidies.;x
+EMBASSY_IS_BANNED;We cannot influence this realm because our ambassadors are banned. We suspect §Y$COUNTRY$§W is behind this. Our new ambassadors will arrive at §Y$DATE$§W.;x
+WARSUB_MUST_BE_AT_WAR;Realm must be at war in order to receive war subsidies.;x
 WARSUBSIDIES_THEY_ACCEPT_LOG;We are now giving war subsidies to $RECIPIENT$;x
 WARSUBSIDIES_WE_ACCEPT_LOG;We are now receiving war subsidies from $ACTOR$;x
 WARSUBSIDIES_OTHER_ACCEPT_LOG;$ACTOR$ are now giving war subsidies to $RECIPIENT$;x
@@ -1151,7 +1151,7 @@ WARSUBSIDIES_BUTTON;War Subsidies;x
 CANCEL_WARSUBSIDIES_THEY_ACCEPT_LOG;We stopped giving war subsidies to $RECIPIENT$;x
 CANCEL_WARSUBSIDIES_WE_ACCEPT_LOG;$ACTOR$ stopped giving war subsidies to us;x
 CANCEL_WARSUBSIDIES_OTHER_ACCEPT_LOG;$ACTOR$ stopped giving war subsidies to $RECIPIENT$;x
-CANCEL_WARSUBSIDIES_DESC;Cancel monetary help to this country;x
+CANCEL_WARSUBSIDIES_DESC;Cancel monetary help to this realm;x
 CANCEL_WARSUBSIDIES_BUTTON;Cancel War Subsidies;x
 ASKMILITARYACCESS_THEY_ACCEPT_LOG;$RECIPIENT$ decided to grant us Military Access.;x
 ASKMILITARYACCESS_WE_ACCEPT_LOG;We decided to grant $ACTOR$ Military Access.;x
@@ -1159,13 +1159,13 @@ ASKMILITARYACCESS_OTHER_ACCEPT_LOG;$RECIPIENT$ decided to grant $ACTOR$ Military
 ASKMILITARYACCESS_THEY_DECLINE_LOG;$RECIPIENT$ denied us Military Access.;x
 ASKMILITARYACCESS_WE_DECLINE_LOG;We denied $ACTOR$ Military Access.;x
 ASKMILITARYACCESS_OTHER_DECLINE_LOG;$RECIPIENT$ denied $ACTOR$ Military Access.;x
-ASKMILITARYACCESS_DESC;Allows our troops to move through their country.;x
+ASKMILITARYACCESS_DESC;Allows our troops to move through their realm.;x
 ASKMILITARYACCESS_BUTTON;Military Access;x
 ASKMILITARYACCESS_OFFER;$ACTOR$ is requesting Military Access from us. Accepting will allow them to move ships and armies into our territory.;x
 CANCELASKMILITARYACCESS_THEY_ACCEPT_LOG;We decided we no longer need Military Access through $RECIPIENT$;x
-CANCELASKMILITARYACCESS_WE_ACCEPT_LOG;$ACTOR$ decided they no longer need Military Access through our country;x
+CANCELASKMILITARYACCESS_WE_ACCEPT_LOG;$ACTOR$ decided they no longer need Military Access through our realm;x
 CANCELASKMILITARYACCESS_OTHER_ACCEPT_LOG;$ACTOR$ decided they no longer need Military Access through $RECIPIENT$;x
-CANCELASKMILITARYACCESS_DESC;Removes our Military Access to this country;x
+CANCELASKMILITARYACCESS_DESC;Removes our Military Access to this realm;x
 CANCELASKMILITARYACCESS_BUTTON;Cancel Military Access;x
 GIVEMILITARYACCESS_THEY_ACCEPT_LOG;$RECIPIENT$ accepted our offer of Military Access.;x
 GIVEMILITARYACCESS_WE_ACCEPT_LOG;We accepted the Military Access offer from $ACTOR$.;x
@@ -1173,26 +1173,26 @@ GIVEMILITARYACCESS_OTHER_ACCEPT_LOG;$RECIPIENT$ accepted the Military Access off
 GIVEMILITARYACCESS_THEY_DECLINE_LOG;$RECIPIENT$ declined our offer of Military Access.;x
 GIVEMILITARYACCESS_WE_DECLINE_LOG;We declined a Military Access offer from $ACTOR$.;x
 GIVEMILITARYACCESS_OTHER_DECLINE_LOG;$RECIPIENT$ declined a Military Access offer from $ACTOR$.;x
-GIVEMILITARYACCESS_DESC;Allows this country's troops to move through our territory.;x
+GIVEMILITARYACCESS_DESC;Allows this realm's troops to move through our territory.;x
 GIVEMILITARYACCESS_BUTTON;Give Military Access;x
 GIVEMILITARYACCESS_OFFER;$ACTOR$ is offering us Military Access. Accepting will allow us to move ships and armies into their territory.;x
 CANCELGIVEMILITARYACCESS_THEY_ACCEPT_LOG;We decided to revoke the Military Access we granted to $RECIPIENT$.;x
 CANCELGIVEMILITARYACCESS_WE_ACCEPT_LOG;$ACTOR$ revoked our Military Access through their territory.;x
 CANCELGIVEMILITARYACCESS_OTHER_ACCEPT_LOG;$ACTOR$ revoked the Military Access they granted to $RECIPIENT$.;x
-CANCELGIVEMILITARYACCESS_DESC;Removes the Military Access we are granting to this country.;x
+CANCELGIVEMILITARYACCESS_DESC;Removes the Military Access we are granting to this realm.;x
 CANCELGIVEMILITARYACCESS_BUTTON;Remove Military Access;x
 ALLIANCE_THEY_ACCEPT_LOG;$RECIPIENT$ entered our Military Alliance.;x
 ALLIANCE_WE_ACCEPT_LOG;We entered a Military Alliance with $ACTOR$.;x
 ALLIANCE_THEY_DECLINE_LOG;$RECIPIENT$ declined our Military Alliance offer.;x
 ALLIANCE_WE_DECLINE_LOG;We declined a Military Alliance offer from $ACTOR$.;x
 ALLIANCE_OTHER_DECLINE_LOG;$RECIPIENT$ declined a Military Alliance offer from $ACTOR$.;x
-ALLIANCE_DESC;If a country accepts our Alliance offer, it may come to our assistance during wars.;x
+ALLIANCE_DESC;If a realm accepts our Alliance offer, it may come to our assistance during wars.;x
 ALLIANCE_BUTTON;Form Alliance;x
 ALLIANCE_OFFER;$ACTOR$ offers us an Alliance. By accepting it we are promising to help each other in times of war.;x
 CANCELALLIANCE_THEY_ACCEPT_LOG;We have broken our Alliance with $RECIPIENT$.;x
 CANCELALLIANCE_WE_ACCEPT_LOG;$ACTOR$ broke their Alliance with us.;x
 CANCELALLIANCE_OTHER_ACCEPT_LOG;$ACTOR$ broke their Alliance with $RECIPIENT$.;x
-CANCELALLIANCE_DESC;Ends our current Alliance with this country and will adversely affect relations.;x
+CANCELALLIANCE_DESC;Ends our current Alliance with this realm and will adversely affect relations.;x
 CANCELALLIANCE_BUTTON;Dissolve Alliance;x
 CALLALLY_THEY_ACCEPT_LOG;$RECIPIENT$ has come to aid us in our war.;x
 CALLALLY_WE_ACCEPT_LOG;We've agreed to aid $ACTOR$ in their war.;x
@@ -1204,32 +1204,32 @@ CALLALLY_BUTTON;Call Ally;x
 DISCREDIT_THEY_ACCEPT_LOG;We have discredited $TARGET$, which lessens their influence on $RECIPIENT$;x
 DISCREDIT_WE_ACCEPT_LOG;$ACTOR$ has discredited $TARGET$, we will be less influenced by them;x
 DISCREDIT_OTHER_ACCEPT_LOG;$ACTOR$ has discredited $TARGET$, which lessens their influence on $RECIPIENT$;x
-DISCREDIT_DESC;Discredit another Great Power, making it harder for them to influence this country. Lasts §Y$DAYS$§W days.;x
+DISCREDIT_DESC;Discredit another Great Power, making it harder for them to influence this realm. Lasts §Y$DAYS$§W days.;x
 DISCREDIT_BUTTON;Discredit;x
 EXPELADVISORS_THEY_ACCEPT_LOG;We convinced $RECIPIENT$ to expel all advisors from $TARGET$.;x
 EXPELADVISORS_WE_ACCEPT_LOG;We were convinced by $ACTOR$ to expel all advisors from $TARGET$.;x
 EXPELADVISORS_OTHER_ACCEPT_LOG;$ACTOR$ convinced $RECIPIENT$ to expel all advisors from $TARGET$.;x
-EXPELADVISORS_DESC;This removes all influence from a Great Power in this country. Also removes Discredit effect.;x
+EXPELADVISORS_DESC;This removes all influence from a Great Power in this realm. Also removes Discredit effect.;x
 EXPELADVISORS_BUTTON;Expel Advisors;x
 BANEMBASSY_THEY_ACCEPT_LOG;We convinced $RECIPIENT$ to ban the ambassadors of $TARGET$.;x
 BANEMBASSY_WE_ACCEPT_LOG;We were convinced by $ACTOR$ to ban the ambassadors from $TARGET$.;x
 BANEMBASSY_OTHER_ACCEPT_LOG;$ACTOR$ convinced $RECIPIENT$ to ban the ambassadors from $TARGET$.;x
-BANEMBASSY_DESC;This removes all influence from a Great Power in this country, and prevents them from doing any diplomatic actions there for §Y$DAYS$§W days. Also removes Discredit effect.;x
+BANEMBASSY_DESC;This removes all influence from a Great Power in this realm, and prevents them from doing any diplomatic actions there for §Y$DAYS$§W days. Also removes Discredit effect.;x
 BANEMBASSY_BUTTON;Ban Embassy;x
 INCREASEOPINION_THEY_ACCEPT_LOG;We increased the opinion of us in $RECIPIENT$ to $OPINION$.;x
 INCREASEOPINION_WE_ACCEPT_LOG;Our opinion of $ACTOR$ has increased to $OPINION$.;x
 INCREASEOPINION_OTHER_ACCEPT_LOG;$RECIPIENT$'s opinion of $ACTOR$ has increased to $OPINION$.;x
-INCREASEOPINION_DESC;Increases the opinion of us in this country.;x
+INCREASEOPINION_DESC;Increases the opinion of us in this realm.;x
 INCREASEOPINION_BUTTON;Increase Opinion;x
 DECREASEOPINION_THEY_ACCEPT_LOG;We decreased the opinion of $TARGET$ in $RECIPIENT$ to $OPINION$.;x
 DECREASEOPINION_WE_ACCEPT_LOG;$ACTOR$ has lowered our opinion of $TARGET$ to $OPINION$.;x
 DECREASEOPINION_OTHER_ACCEPT_LOG;$ACTOR$ has lowered the opinion of $TARGET$ in $RECIPIENT$ to $OPINION$.;x
-DECREASEOPINION_DESC;Decreases the opinion of another Great Power in this country.;x
+DECREASEOPINION_DESC;Decreases the opinion of another Great Power in this realm.;x
 DECREASEOPINION_BUTTON;Decrease Opinion;x
 ADDTOSPHERE_THEY_ACCEPT_LOG;We have included $RECIPIENT$ in our Sphere of Influence.;x
 ADDTOSPHERE_WE_ACCEPT_LOG;$ACTOR$ has included us in their Sphere of Influence.;x
 ADDTOSPHERE_OTHER_ACCEPT_LOG;$ACTOR$ has included $RECIPIENT$ in their Sphere of Influence.;x
-ADDTOSPHERE_DESC;Adds this country to our Sphere of Influence.;x
+ADDTOSPHERE_DESC;Adds this realm to our Sphere of Influence.;x
 ADDTOSPHERE_BUTTON;Add to Sphere;x
 REMOVEFROMSPHERE_THEY_ACCEPT_LOG;We have removed $RECIPIENT$ from the Sphere of Influence of $TARGET$.;x
 REMOVEFROMSPHERE_WE_ACCEPT_LOG;$ACTOR$ has removed us from the Sphere of Influence of $TARGET$.;x
@@ -1237,10 +1237,10 @@ REMOVEFROMSPHERE_OTHER_ACCEPT_LOG;$ACTOR$ has removed $RECIPIENT$ from the Spher
 REMOVEFROMSPHERE_BUTTON;Remove from Sphere;x
 INCREASERELATION_THEY_ACCEPT_LOG;We have increased our relations with $RECIPIENT$.;x
 INCREASERELATION_OTHER_ACCEPT_LOG;$ACTOR$ has increased their relations with $RECIPIENT$.;x
-INCREASERELATION_DESC;Increases the relations between our countries.;x
+INCREASERELATION_DESC;Increases the relations between our realms.;x
 DECREASERELATION_THEY_ACCEPT_LOG;We have decreased our relations with $RECIPIENT$.;x
 DECREASERELATION_OTHER_ACCEPT_LOG;$ACTOR$ has decreased their relations with $RECIPIENT$.;x
-DECREASERELATION_DESC;Decreases the relations between our countries.;x
+DECREASERELATION_DESC;Decreases the relations between our realms.;x
 po_disarmament;Prohibited from raising armies and lose §Y$PERCENTAGE$%§b of their forces for §Y$YEARS$§b years;x
 po_reparations;Must pay §Y$PERCENTAGE$%§b of tax income for §Y$YEARS$§b years;x
 po_reduce_prestige;Prestige is reduced by §R$VALUE$§b;x
@@ -1275,8 +1275,8 @@ OFFER_PEACE;Offer peace terms;x
 WARGOAL_DESC;Add war goal;x
 WAR_SCORE;War score;x
 CALCULATED_WARSCORE;Peaceoffer value: $VAL$;x
-VALID_WARTARGET;We are allowed to declare war against this country.;x
-INVALID_WARTARGET_SHARED_WAR;We are fighting alongside this country in another war.;x
+VALID_WARTARGET;We are allowed to declare war against this realm.;x
+INVALID_WARTARGET_SHARED_WAR;We are fighting alongside this realm in another war.;x
 TOTAL_MILITARY_STRENGTH;Total Military Strength: §Y$VALUE$§W;x
 GUNBOAT_SETUP_DESC;$RECIPIENT$ will be forced to start paying back their loans with §Y$AMOUNT$§W amounts. Furthermore their taxes will be locked between §Y$LOW_TAX$§W and §Y$HIGH_TAX$§W.;x
 GUNBOAT_BUTTON;Gunboat Diplomacy;x
@@ -1409,7 +1409,7 @@ ASKMILITARYACCESS_WE_ACCEPT_HEADER;The Foreign Minister reports;x
 ASKMILITARYACCESS_WE_ACCEPT_1;Military Access.;x
 ASKMILITARYACCESS_WE_ACCEPT_2;$MONARCHTITLE$, we have decided to allow;x
 ASKMILITARYACCESS_WE_ACCEPT_3;§Y$ACTOR$§W;x
-ASKMILITARYACCESS_WE_ACCEPT_4;Military Access to our country.;x
+ASKMILITARYACCESS_WE_ACCEPT_4;Military Access to our realm.;x
 ASKMILITARYACCESS_WE_ACCEPT_5;*;x
 ASKMILITARYACCESS_WE_ACCEPT_6;As long as we remain useful, they won't attack us.;x
 ASKMILITARYACCESS_WE_ACCEPT_BTN1;OK;x
@@ -1518,7 +1518,7 @@ GIVEMILITARYACCESS_THEY_ACCEPT_HEADER;The Foreign Minister reports;x
 GIVEMILITARYACCESS_THEY_ACCEPT_1;§Y$RECIPIENT$§W;x
 GIVEMILITARYACCESS_THEY_ACCEPT_2;$MONARCHTITLE$, in order to further our goals, we have decided that the troops of;x
 GIVEMILITARYACCESS_THEY_ACCEPT_3;§Y$RECIPIENT$§W;x
-GIVEMILITARYACCESS_THEY_ACCEPT_4;should be allowed Military Access to our country.;x
+GIVEMILITARYACCESS_THEY_ACCEPT_4;should be allowed Military Access to our realm.;x
 GIVEMILITARYACCESS_THEY_ACCEPT_5;*;x
 GIVEMILITARYACCESS_THEY_ACCEPT_6;We hope they all perish in a pointless war.;x
 GIVEMILITARYACCESS_THEY_ACCEPT_BTN1;OK;x
@@ -1588,7 +1588,7 @@ DISCREDIT_WE_ACCEPT_HEADER;The Foreign Minister reports;x
 DISCREDIT_WE_ACCEPT_1;§Y$ACTOR$§W;x
 DISCREDIT_WE_ACCEPT_2;$MONARCHTITLE$, §Y$ACTOR$§W has told;x
 DISCREDIT_WE_ACCEPT_3;us that §Y$TARGET$§W has bad intentions;x
-DISCREDIT_WE_ACCEPT_4;regarding our country!;x
+DISCREDIT_WE_ACCEPT_4;regarding our realm!;x
 DISCREDIT_WE_ACCEPT_5;We should limit their influence and watch them closely.;x
 DISCREDIT_WE_ACCEPT_6;*;x
 DISCREDIT_WE_ACCEPT_BTN1;OK;x
@@ -1853,7 +1853,7 @@ INCREASERELATION_OTHER_ACCEPT_HEADER;The Foreign Minister reports;x
 INCREASERELATION_OTHER_ACCEPT_1;§Y$RECIPIENT$§W;x
 INCREASERELATION_OTHER_ACCEPT_2;$MONARCHTITLE$, we heard;x
 INCREASERELATION_OTHER_ACCEPT_3;that §Y$ACTOR$§W has shown a nice gesture towards §Y$RECIPIENT$§W.;x
-INCREASERELATION_OTHER_ACCEPT_4;The relation between their countries has increased somewhat.;x
+INCREASERELATION_OTHER_ACCEPT_4;The relation between their realms has increased somewhat.;x
 INCREASERELATION_OTHER_ACCEPT_5;*;x
 INCREASERELATION_OTHER_ACCEPT_6;*;x
 INCREASERELATION_OTHER_ACCEPT_BTN1;OK;x
@@ -1864,7 +1864,7 @@ DECREASERELATION_THEY_ACCEPT_1;§Y$RECIPIENT$§W;x
 DECREASERELATION_THEY_ACCEPT_2;$MONARCHTITLE$, we all know that we really despise;x
 DECREASERELATION_THEY_ACCEPT_3;§Y$RECIPIENT$§W. Which we had no trouble telling them.;x
 DECREASERELATION_THEY_ACCEPT_4;They seemed shocked by the news,;x
-DECREASERELATION_THEY_ACCEPT_5;which have led to increased tension between our countries.;x
+DECREASERELATION_THEY_ACCEPT_5;which have led to increased tension between our realms.;x
 DECREASERELATION_THEY_ACCEPT_BTN1;OK;x
 DECREASERELATION_THEY_ACCEPT_BTN2;OK;x
 DECREASERELATION_THEY_ACCEPT_BTN3;Go to;x
@@ -2009,7 +2009,7 @@ PEACE_WE_ACCEPT_BTN1;Fine!;x
 PEACE_WE_ACCEPT_BTN2;Fine!;x
 PEACE_WE_ACCEPT_BTN3;Goto;x
 PEACE_WE_ACCEPT_MAP;Peace!;x
-PEACE_THEY_ACCEPT_SETUP;When a country accepts your peace offer;x
+PEACE_THEY_ACCEPT_SETUP;When a realm accepts your peace offer;x
 PEACE_THEY_ACCEPT_HEADER;$MESSENGER$;x
 PEACE_THEY_ACCEPT_1;$RECIPIENT$;x
 PEACE_THEY_ACCEPT_2;$RECIPIENT$;x
@@ -2022,7 +2022,7 @@ PEACE_THEY_ACCEPT_BTN1;Fine!;x
 PEACE_THEY_ACCEPT_BTN2;Fine!;x
 PEACE_THEY_ACCEPT_BTN3;Goto;x
 PEACE_THEY_ACCEPT_MAP;Peace!;x
-PEACE_OTHER_ACCEPT_SETUP;When a country accepts a peace with another country;x
+PEACE_OTHER_ACCEPT_SETUP;When a realm accepts a peace with another realm;x
 PEACE_OTHER_ACCEPT_HEADER;$MESSENGER$;x
 PEACE_OTHER_ACCEPT_1;$RECIPIENT$;x
 PEACE_OTHER_ACCEPT_2;$RECIPIENT$;x
@@ -2047,7 +2047,7 @@ PEACE_WE_DECLINE_BTN1;Fine!;x
 PEACE_WE_DECLINE_BTN2;Fine!;x
 PEACE_WE_DECLINE_BTN3;Goto;x
 PEACE_WE_DECLINE_MAP;Declined!;x
-PEACE_THEY_DECLINE_SETUP;When a country declines your peace offer;x
+PEACE_THEY_DECLINE_SETUP;When a realm declines your peace offer;x
 PEACE_THEY_DECLINE_HEADER;$MESSENGER$;x
 PEACE_THEY_DECLINE_1;$RECIPIENT$;x
 PEACE_THEY_DECLINE_2;$RECIPIENT$;x
@@ -2059,7 +2059,7 @@ PEACE_THEY_DECLINE_BTN1;Fine!;x
 PEACE_THEY_DECLINE_BTN2;Fine!;x
 PEACE_THEY_DECLINE_BTN3;Goto;x
 PEACE_THEY_DECLINE_MAP;Declined!;x
-PEACE_OTHER_DECLINE_SETUP;When a country rejects a peace with another country;x
+PEACE_OTHER_DECLINE_SETUP;When a realm rejects a peace with another realm;x
 PEACE_OTHER_DECLINE_HEADER;$MESSENGER$;x
 PEACE_OTHER_DECLINE_1;$RECIPIENT$;x
 PEACE_OTHER_DECLINE_2;$RECIPIENT$;x
@@ -2072,7 +2072,7 @@ PEACE_OTHER_DECLINE_BTN2;Fine!;x
 PEACE_OTHER_DECLINE_BTN3;Goto;x
 PEACE_OTHER_DECLINE_MAP;Declined!;x
 PEACEOFFERDESC;We have received an offer of peace from $COUNTRY$. They are offering us the following terms: ;x
-INTERVENTION_OUR_SIDE_SETUP;When a country intervenes on our side in a war;x
+INTERVENTION_OUR_SIDE_SETUP;When a realm intervenes on our side in a war;x
 INTERVENTION_OUR_SIDE_HEADER;$MESSENGER$;x
 INTERVENTION_OUR_SIDE_1;$RECIPIENT$;x
 INTERVENTION_OUR_SIDE_2;$RECIPIENT$;x
@@ -2084,7 +2084,7 @@ INTERVENTION_OUR_SIDE_LOG;$RECIPIENT$ intervened in the $WAR$.;x
 INTERVENTION_OUR_SIDE_BTN1;Yay!;x
 INTERVENTION_OUR_SIDE_BTN2;Yay!;x
 INTERVENTION_OUR_SIDE_BTN3;Goto;x
-INTERVENTION_THEIR_SIDE_SETUP;When a country intervenes against us in a war;x
+INTERVENTION_THEIR_SIDE_SETUP;When a realm intervenes against us in a war;x
 INTERVENTION_THEIR_SIDE_HEADER;$MESSENGER$;x
 INTERVENTION_THEIR_SIDE_1;$RECIPIENT$;x
 INTERVENTION_THEIR_SIDE_2;$RECIPIENT$;x
@@ -2096,7 +2096,7 @@ INTERVENTION_THEIR_SIDE_LOG;$RECIPIENT$ intervened in the $WAR$.;x
 INTERVENTION_THEIR_SIDE_BTN1;Oh no!;x
 INTERVENTION_THEIR_SIDE_BTN2;Oh no!;x
 INTERVENTION_THEIR_SIDE_BTN3;Goto;x
-INTERVENTION_OTHER_SIDE_SETUP;When a country intervenes in a war;x
+INTERVENTION_OTHER_SIDE_SETUP;When a realm intervenes in a war;x
 INTERVENTION_OTHER_SIDE_HEADER;$MESSENGER$;x
 INTERVENTION_OTHER_SIDE_1;$RECIPIENT$;x
 INTERVENTION_OTHER_SIDE_2;$RECIPIENT$;x
@@ -2175,12 +2175,12 @@ ALLYTAKEOVERWE_BTN1;OK;x
 ALLYTAKEOVERWE_BTN2;OK;x
 ALLYTAKEOVERWE_BTN3;Go to;x
 ALLYTAKEOVERWE_MAP;*;x
-ANNEX_SETUP;When a country Annexes another country;x
+ANNEX_SETUP;When a realm Annexes another realm;x
 ANNEX_HEADER;The Foreign Ministry reports;x
 ANNEX_1;$ACTOR$;x
 ANNEX_2;$MONARCHTITLE$,;x
 ANNEX_3;$ACTOR$ annexed $RECIPIENT$;x
-ANNEX_4;which now is part of their country.;x
+ANNEX_4;which now is part of their realm.;x
 ANNEX_5;*;x
 ANNEX_6;*;x
 ANNEX_LOG;$ACTOR$ annexed $RECIPIENT$.;x
@@ -2324,7 +2324,7 @@ MAXIMUM_STOCKPILE_TARGET;Maximum stockpile:;x
 GOV_NEED_DETAIL;Need $VAL$ for government;x
 FACTORY_NEED_DETAIL;Need $VAL$ for producers;x
 POP_NEED_DETAIL;Need $VAL$ for pops;x
-PRODUCED_DETAIL_REMOVE;$VAL$ produced in our country;x
+PRODUCED_DETAIL_REMOVE;$VAL$ produced in our realm;x
 PLURALITY_CHANGE;Monthly Change;x
 TOO_SOON_FOR_REFORM;The Upper House can only enact a new reform once every six months. We have to wait until §Y$DATE$§W until we can enact another reform.;x
 IS_NEXT_STEP_ONLY;In this category of reforms, only gradual change can be done, so only one step back or forward can be done at any time.;x
@@ -2392,9 +2392,9 @@ MESSAGE_SETTING_FALSE;is not;x
 MESSAGE_IS_ICON;This message type $TRUTH$ currently displayed as a message icon.;x
 UW_ATEMPT_GUNBOAT;Attempt gunboat diplomacy against §Y$OTHER$§W;x
 UW_NO_GUNBOAT_POSSIBLE;No valid target for gunboat diplomacy;x
-UW_GUNBOAT_DESC;To perform gunboat diplomacy you must place a fleet close to a port of a country in default to you.;x
+UW_GUNBOAT_DESC;To perform gunboat diplomacy you must place a fleet close to a port of a realm in default to you.;x
 LOG_SETTING_ICON;Icon;x
-GOTO_SEARCH_COUNTRIES_AND_PROVINCES;Search Countries and Provinces;x
+GOTO_SEARCH_COUNTRIES_AND_PROVINCES;Search Realms and Provinces;x
 REGION_NAME;$NAME$ Region;x
 #;;x
 POP_SIZE_INFO_ON_SEL;There are $VAL$ $WHO$ in $WHERE$.;x
@@ -2425,7 +2425,7 @@ BUILDING_DONE_BTN3;GOTO;x
 BUILDING_DONE_MAP;$NAME$ has been built in $PROV$.;x
 WE_NO_LONGER_GREAT_POWER_SETUP;When we are no longer a great power;x
 WE_NO_LONGER_GREAT_POWER_HEADER;$MESSENGER$;x
-WE_NO_LONGER_GREAT_POWER_1;Our country has fallen in status;x
+WE_NO_LONGER_GREAT_POWER_1;Our realm has fallen in status;x
 WE_NO_LONGER_GREAT_POWER_3;$NEWCOUNTRY$;x
 WE_NO_LONGER_GREAT_POWER_4;*;x
 WE_NO_LONGER_GREAT_POWER_5;*;x
@@ -2580,8 +2580,8 @@ NAPWITH;Non-Aggression Pact with $LIST$;x
 ###################################################################;;x
 # Actions;;x
 ###################################################################;;x
-NO_WAR_ALLIED;You may not declare war upon a country with which you have an Alliance. Break the Alliance first.;x
-ACT_WARDESC;Declaring war will allow our troops to attack theirs and allow us to enter their country. War will continue until either party surrenders.;x
+NO_WAR_ALLIED;You may not declare war upon a realm with which you have an Alliance. Break the Alliance first.;x
+ACT_WARDESC;Declaring war will allow our troops to attack theirs and allow us to enter their realm. War will continue until either party surrenders.;x
 DECWARREQDESC2;Declare war on $COUNTRY$.;x
 DIP_INFLUENCECOST;This will cost us §Y$COST$§W diplomatic influence points.;x
 DIP_THREAT;This will generate §Y$AMOUNT$§W threat in §Y$PROV$§W;x
@@ -2589,8 +2589,8 @@ DIP_NO_INFL;You do not have the §Y$INF$§W diplomatic influence required;x
 DIP_WAR_NEUTR;We cannot declare war because our neutrality is higher than the present threat. Our neutrality is currently §Y$NEUT$§W and the effective threat between us and $THEM$ allows us to declare war when our neutrality is at §Y$THREAT$§W.;x
 DIP_TO_NEUTR;Our neutrality is too high. It is currently §Y$NOW$§W and needs to be below §Y$LIM$§W.;x
 DIP_THEY_TO_NEUTR;Their neutrality is too high. It is currently §Y$NOW$§W and needs to be below §Y$LIM$§W.;x
-OFFERALLIANCEDESC;If a country accepts our Alliance offer, it may come to our assistance during wars.;x
-CANCELALLIANCEDESC;Dissolving the current Alliance will, of course, end the current Alliance you have with this country, and will adversely affect relations.;x
+OFFERALLIANCEDESC;If a realm accepts our Alliance offer, it may come to our assistance during wars.;x
+CANCELALLIANCEDESC;Dissolving the current Alliance will, of course, end the current Alliance you have with this realm, and will adversely affect relations.;x
 ALLIANCETITLE;Offer Alliance;x
 CANCELALIANCETITLE;Dissolve this Alliance;x
 ALLIANCENEWDESC;Do you wish to offer an Alliance to $COUNTRY$? Doing so will oblige us to assist each other in times of war.;x
@@ -2601,7 +2601,7 @@ GUARANTNEWDESC;Do you wish to proclaim a guarantee for $COUNTRY$? If they are at
 GUARANTDESC;Proclaiming a guarantee will give us a chance to defend them against those who declare war on them.;x
 HASGUARANT;We are already guaranteeing them.;x
 CALLTITLE;A Call to Arms!;x
-CALLREQDESC;The country of $COUNTRY$, your faithful ally, is requesting that you come to their aid in the conflict against $LIST$. ;x
+CALLREQDESC;The realm of $COUNTRY$, your faithful ally, is requesting that you come to their aid in the conflict against $LIST$. ;x
 CALLDESC;Call on your partner to aid you in this conflict.;x
 CALLNEWDESC;Do you wish to call upon your Allies in these times of war?;x
 WARTITLE;Declare War;x
@@ -2619,14 +2619,14 @@ MILACCTITLE;Ask for Military Access;x
 MILACCNEWDESC;Do you wish to request Military Access from $COUNTRY$, thereby allowing our ships and armies access to their territories?;x
 MILACCDESC;Request access to their territory.;x
 MILACCREQDESC;$COUNTRY$ is requesting Military Access from us. Accepting will allow them to move ships and armies into our territory.;x
-CANCELMILACCDESC;Cancel our Military Access in their country.;x
+CANCELMILACCDESC;Cancel our Military Access in their realm.;x
 CANCELMILACCTITLE;Cancel Military Access;x
 OFFERMILACCTITLE;Give Military Access;x
 OFFERMILACCNEWDESC;Do you wish to give Military Access to $COUNTRY$? This will enable them to station troops in our territories and ports.;x
-OFFERMILACCDESC;Enable them to station troops and ships in our country.;x
+OFFERMILACCDESC;Enable them to station troops and ships in our realm.;x
 REVOKEMILACCTITLE;Revoke Military Access.;x
-REVOKEMILACCNEWDESC;Do you wish to revoke the Military Access given to $COUNTRY$? Doing so will prevent their troops from accessing our country and ports.;x
-REVOKEMILACCDESC;Revoke their ability to station troops and ships in our country.;x
+REVOKEMILACCNEWDESC;Do you wish to revoke the Military Access given to $COUNTRY$? Doing so will prevent their troops from accessing our realm and ports.;x
+REVOKEMILACCDESC;Revoke their ability to station troops and ships in our realm.;x
 CANCELMILACCNEWDESC;Do you wish to cancel the Military Access given to us by $COUNTRY$? Doing so will prevent our troops from having access to their territory and ports.;x
 CANCELMILACCDESC_NOPES_TROOPS;We cannot cancel Military Access while we still have forces inside their borders.;x
 TRADETITLE;Offer Trade Agreement;x
@@ -2656,17 +2656,17 @@ EXP_SQUADRON;Air wing;x
 EXP_SHIP;Ships;x
 BUYLICENCETITLE;Buy Production Licence;x
 BUYLICENCENEWDESC;Do you wish to request a production licence for §Y$RUNS$§W parallel production runs of §Y$NUM$§W §Y$TYPE$§W?\nWe will agree to pay §Y$PAY$§W.;x
-BUYLICENCEDESC;Request to build a number of units developed by another country.;x
+BUYLICENCEDESC;Request to build a number of units developed by another realm.;x
 SELLLICENCETITLE;Sell Production Licence;x
 SELLLICENCENEWDESC;Do you wish to offer a production licence for §Y$RUNS$§W production runs of §Y$NUM$§W §Y$TYPE$§W?\nWe will agree to pay §Y$PAY$§W.;x
-SELLLICENCEDESC;Request to build a number of units developed by another country.;x
+SELLLICENCEDESC;Request to build a number of units developed by another realm.;x
 BUYLICENCENONE;Select a unit to build on licence.;x
 ASKBUYLICENCEREQDESC;§Y$ACTOR$§W is requesting our permission and technical expertise in producing §Y$NUM$§W units of $TYPE$§W\nFor this they are willing to pay us§Y$CASH$§W.;x
 BUYLICENCE_MPCOST;We lack the $COST$ necessary manpower;x
 ALLOWDEBTTITLE;Allow Debt;x
 REVOKEDEBTTITLE;Revoke Debt;x
-ALLOWDEBTDESC_BAD;Allow the country to accumulate debt during wartime when trading with you.;x
-REVOKEDEBTDESC;No longer allow the country to go into debt when trading with you during wartime.;x
+ALLOWDEBTDESC_BAD;Allow the realm to accumulate debt during wartime when trading with you.;x
+REVOKEDEBTDESC;No longer allow the realm to go into debt when trading with you during wartime.;x
 ALLOWDEBTNEWDESC;Do you wish to request permission to accumulate debt when trading with §Y$NAME$§W? \n This will allow us to trade at a deficit during wartime, a debt that will be repaid over §Y$YEAR$§W years when peace resumes.\nThis action will cost us §Y$COST$§W influence points.;x
 REVOKEDEBTNEWDESC;Do you wish revoke §Y$NAME$§W's permission to accumulated debt in their dealings with us?\nThis action will cost us §Y$COST$§W influence points.;x
 ASKDEBTREQDESC;§Y$ACTOR$§W is requesting to be allowed to run a debt when trading with us.\nThis means that when they trade with us during wartime, we do not get paid in cash but instead they will owe us. The debt will be paid over time after the war.\nShould we allow them this?;x
@@ -2682,11 +2682,11 @@ PEACENONE;no provinces;x
 PEACEREQDESC;$COUNTRY$ is requesting an end to hostilities. If we accept, the war will end.\n$RESULT$\nDo you wish to accept their offer?;x
 TRADENO_PORTS;You cannot initiate overseas trading without both partners having a port to ship it through.;x
 PEACE_NOT_LEADER;You can only negotiate with the leader of your enemy;x
-STOPNFLDESC;Stop Improving relations with country.;x
+STOPNFLDESC;Stop Improving relations with realm.;x
 UNLIMITED;Unlimited;x
-STOPINFLTITLE;Stop influencing country;x
+STOPINFLTITLE;Stop influencing realm;x
 STOPINFLNEWDESC;Do you wish to stop exerting influence on $RECIPIENT$?;x
-STOPINFLDESC;Stop improving relations with country.;x
+STOPINFLDESC;Stop improving relations with realm.;x
 INFLUENCING_WITH;Influencing;x
 ICON_LICENCE;Production Licence Inquiry;x
 ICON_ALLIANCE;An §Yalliance§W offer;x
@@ -2701,7 +2701,7 @@ MESS_BADWORDS1;the fools;x
 MESS_BADWORDS2;the traitors;x
 MESS_BADWORDS3;the warmongers;x
 MESS_BADWORDS4;the imbeciles;x
-DECLWAR_GUARACANCELNTEE;You cannot declare war on a country you guarantee;x
+DECLWAR_GUARACANCELNTEE;You cannot declare war on a realm you guarantee;x
 ##################################################;;x
 # Buliding Names;;x
 ##################################################;;x
@@ -2756,7 +2756,7 @@ UW_UNLOAD_NOT_VALID;You can only unload if your fleet is located in a port.;x
 UW_UNLOAD_VALID;Unload this unit from the fleet;x
 UW_LOAD_NO_FLEET_FOUND;There is no fleet here that this unit can be loaded onto.;x
 UW_LOAD_IS_VALID;Click to load this unit onto a transport fleet.;x
-UW_DUGIN;This unit is dug in, and has been digging in for §Y$CURR$§W days. The maximum preparation possible for our country is §Y$CAP$§W days.;x
+UW_DUGIN;This unit is dug in, and has been digging in for §Y$CURR$§W days. The maximum preparation possible for our realm is §Y$CAP$§W days.;x
 UW_SUPPLY_STATUS;This unit received §Y$VAL$§W% of the supplies needed in the last day. The current daily supply consumption is: $CON$;x
 UNIT_COMBAT_WIDTH;Combat Width;x
 ARMIES;Land Units;x
@@ -2808,10 +2808,10 @@ WEGUARANTEED;We are guaranteeing their independence.;x
 THEYGUARANTING;They are guaranteeing our independence.;x
 NEUTRAL;We are neutral towards them.;x
 RELATION;Current relation: $RELATION$;x
-SUBJECT;We are a subject country. It is not up to us.;x
+SUBJECT;We are a subject realm. It is not up to us.;x
 NODIPLOMATS;You have no diplomats to send.;x
 NO_REBELS;You are always at war with rebels.;x
-CV_NORELATION;We currently have no diplomatic relations with this country.;x
+CV_NORELATION;We currently have no diplomatic relations with this realm.;x
 CV_GOVTTYPE;$COUNTRY$ is a $GOVT$;x
 BASE;Base:;x
 COUNTRY_MORALE_TECH;From technology:;x
@@ -2827,13 +2827,13 @@ ENABLES;Enables $WHICH$.\n;x
 NOT_FROM_THIS_GOV;It is not possible to convert to this government type from our current form of government.;x
 NO_SHIPS;No ships;x
 NOT_EXIST;$TAG$ does not exist at this time.;x
-NOT_SELECT;All players must select a country.;x
+NOT_SELECT;All players must select a realm.;x
 NOALLIES;No Allies;x
 ALLIES;Allies:;x
 SHORTCUT_SHIELD;$TAG$ is an interesting choice during this period. Click to select it.;x
 I Do.;Let's Do it;x
 Run away!;I'm not sure, maybe later;x
-DECWARREQDESC;Declaring war is, sometimes, the last resort of diplomacy. The act of declaring war will reduce the view other countries have of you, especially if you do not have a legitimate reason to do so. It may also reduce your stability. Are you sure you wish to do this?;x
+DECWARREQDESC;Declaring war is, sometimes, the last resort of diplomacy. The act of declaring war will reduce the view other realms have of you, especially if you do not have a legitimate reason to do so. It may also reduce your stability. Are you sure you wish to do this?;x
 IN;in;x
 MORE_THAN_THREE_PROV;more than 3 provinces.;x
 DECWARDESC;Selecting this option will allow you to offer a peace deal to your enemy;x
@@ -2846,7 +2846,7 @@ WARTAX_TIP;Raise War Taxes;x
 INCREASED;increased;x
 DECREASED;decreased;x
 NO_ADVISORS;No Advisors available.;x
-NO_WAR_MIL_ACC;We have Military Access to their country.;x
+NO_WAR_MIL_ACC;We have Military Access to their realm.;x
 NAVY_COMBAT_TOOLTIP;Type: $TYPE$ \n Strength: $STR$;x
 ISATWAR;You can not ask for Military Access when you are at war.;x
 DIPLOICON_TIP;$TYPE$ from §Y$NATION$§W. \n If we do not respond before §Y$DATE$§W we will autodecline.;x
@@ -2879,7 +2879,7 @@ notechgroup;notechgroup;x
 culture_ideas;culture_ideas;x
 neighbor_bonus;Neighbour bonus;x
 PLAY;PLAY;x
-DOMESTIC_NATION;country;x
+DOMESTIC_NATION;realm;x
 DOMESTIC_RELATION;relation;x
 PW_POPULATION;Population ;x
 PW_UNITS;Units;x
@@ -2898,7 +2898,7 @@ UV_REGIMENTS;Brigades:;x
 SM_WATER;Advanced Water;x
 ARMY;Army;x
 NAVY;Navy;x
-CORE_IS_REVOLTER;This country may be created from this province, or appear as a new country if a revolt grows strong enough.;x
+CORE_IS_REVOLTER;This realm may be created from this province, or appear as a new realm if a revolt grows strong enough.;x
 AMBIENT;Ambient;x
 WCRD_ATT;This is a war that they have started.;x
 WCRD_DEF;This is a defensive war, where we need to help our ally.;x
@@ -2938,9 +2938,9 @@ ONLY_HOST_SPEED;Only the host can change the gamespeed.;x
 PW_GROWTH;Growth;x
 NOPORTOTHERCONTINENT;This province cannot be reached via any ports connected to our capital.;x
 RELATION_CHANGE_VALUE;Estimated yearly change:;x
-TAG_CHANGE;Country changes to $NEW$.\n;x
+TAG_CHANGE;Realm changes to $NEW$.\n;x
 PV_OCCUPIED_BY;§YOccupied by $NAME$§W;x
-BG_COUNTRY;COUNTRY:;x
+BG_COUNTRY;REALM:;x
 LOAD_GAME_FAILED;Failed to load game.;x
 MP_FEW_PLAYERS;You need more than one player to start a game.;x
 NATIONALISM_LASTS;Nationalism lasts until;x
@@ -3066,7 +3066,7 @@ IS_AI;Is AI;x
 THEN_NUMBER_OF_REVOLTS_ARE_LESS_THAN;Fewer rebel provinces than ;x
 THEN_NUMBER_OF_REVOLTS_ARE_MORE_THAN;Number of rebel provinces at least ;x
 OR_TRIGGER_STARTS;One of the following must be true;x
-NEIGHBOR_COUNTRY_STARTS;Neighboring country;x
+NEIGHBOR_COUNTRY_STARTS;Neighboring realm;x
 TRIGGER_NUM;Scope Num;x
 TRIGGER_ALLY;Any Ally;x
 TRIGGER_OWNER;Province Owner;x
@@ -3077,7 +3077,7 @@ TRIGGER_THIS;This;x
 TRIGGER_FROM;From;x
 TRIGGER_LOCAL_ENEMY;Local Enemy;x
 CONFIRMBUILDTEXTLEDGER;Are you sure you wish to build $BUILDING$ in $PROVINCE$?;x
-CORE_IS_REVOLTER_CAPITAL;This is the potential capital of this country.;x
+CORE_IS_REVOLTER_CAPITAL;This is the potential capital of this realm.;x
 REVOLTRISK_EFFECT;$DIRECTION$ $VALUE$ revoltrisk in $WHERE$.\n;x
 LEDGER_CANT_BUILD_THIS_TECH;Your current technology level does not allow you to build this building;x
 LEDGER_CANT_BUILD_THIS_FULL;Already built by all provinces;x
@@ -3100,7 +3100,7 @@ OCCUPIED_PROVINCES;Occupied Provinces;x
 CREATE_REBELS;§R$SIZE$§Y $TYPE$§W brigade(s) rise up in revolt in §Y$WHERE$§W.\n;x
 NATIONALISM_LOWER_THAN;Nationalism lower than ;x
 NATIONALISM_HIGHER_THAN;Nationalism higher than ;x
-KNOWN_COUNTRY_STARTS;Known country;x
+KNOWN_COUNTRY_STARTS;Known realm;x
 EXTRA_NATIONALISM_DESC;$DIRECTION$ $VALUE$ years of nationalism in $WHERE$.\n;x
 HAVE_DIPLOMATIC_RELATION;has a relation of;x
 WITHL;with;x
@@ -3116,8 +3116,8 @@ HAVE_UNITS_IN;$COUNTRY$ have units in $PROVINCE$.;x
 NEIGHBOR_PROVINCE_STARTS;Any neighboring province;x
 AT_LEAST;At least;x
 IMMEDIATEEFFECT;Immediate Effect: \n;x
-IS_SUBJECT;Is a subject country;x
-IS_NOT_SUBJECT;Is not a subject country;x
+IS_SUBJECT;Is a subject realm;x
+IS_NOT_SUBJECT;Is not a subject realm;x
 DEFINE_RULER_EFFECT;§Y$NAME$§W becomes ruler.\n;x
 friendly_regiments;Friendly Troops;x
 ANY_ALL;Any/All;x
@@ -3154,7 +3154,7 @@ FOW_IS_NOT_LIFTED;The Fog of War is not lifted;x
 FOW_IS_LIFTED;The Fog of War is lifted;x
 HAVE_GLOBAL_FLAG;Have the global flag ;x
 HAVE_NOT_GLOBAL_FLAG;Do NOT have the global flag ;x
-ANY_CORE_STARTS;Any Core Country;x
+ANY_CORE_STARTS;Any Core Realm;x
 ANY_POP_IN_PROVINCE_STARTS;Any pop in province;x
 LIKELY_REBELS;Likely Rebels;x
 PROFIT_GAIN;gain;x
@@ -3354,7 +3354,7 @@ POP_CON_LITERACY;Literacy;x
 POP_CON_LUXURY_GOODS;Luxury Goods Bought;x
 POP_CON_CLERGY;Loremasters;x
 #;;x
-EVENTHAPPENOTHEROPTION_SETUP;When a historical event with multiple choice happens to another country.;x
+EVENTHAPPENOTHEROPTION_SETUP;When a historical event with multiple choice happens to another realm.;x
 EVENTHAPPENOTHEROPTION_HEADER;The Foreign Minister reports;x
 EVENTHAPPENOTHEROPTION_1;$COUNTRY$;x
 EVENTHAPPENOTHEROPTION_2;They tell us about the events of;x
@@ -3367,12 +3367,12 @@ EVENTHAPPENOTHEROPTION_BTN1;OK;x
 EVENTHAPPENOTHEROPTION_BTN2;OK;x
 EVENTHAPPENOTHEROPTION_BTN3;GOTO;x
 EVENTHAPPENOTHEROPTION_MAP;*;x
-EVENTHAPPENOTHER_SETUP;When a historical event with a single choice happens to another country.;x
+EVENTHAPPENOTHER_SETUP;When a historical event with a single choice happens to another realm.;x
 EVENTHAPPENOTHER_HEADER;The Foreign Minister reports;x
 EVENTHAPPENOTHER_1;$COUNTRY$;x
 EVENTHAPPENOTHER_2;They tell us about the events of;x
 EVENTHAPPENOTHER_3;$EVENT$;x
-EVENTHAPPENOTHER_4;which has happened to their country recently.;x
+EVENTHAPPENOTHER_4;which has happened to their realm recently.;x
 EVENTHAPPENOTHER_5;*;x
 EVENTHAPPENOTHER_6;*;x
 EVENTHAPPENOTHER_LOG;Event: '$EVENT$' in $COUNTRY$.;x
@@ -3393,7 +3393,7 @@ EVENTHAPPENUS_BTN1;OK;x
 EVENTHAPPENUS_BTN2;OK;x
 EVENTHAPPENUS_BTN3;*;x
 EVENTHAPPENUS_MAP;*;x
-DECISIONOTHER_SETUP;When another country executes a decision.;x
+DECISIONOTHER_SETUP;When another realm executes a decision.;x
 DECISIONOTHER_HEADER;The Foreign Minister reports;x
 DECISIONOTHER_2;They have decided to;x
 DECISIONOTHER_3;$EVENT$!;x
@@ -3418,7 +3418,7 @@ DECISIONUS_BTN1;OK;x
 DECISIONUS_BTN2;OK;x
 DECISIONUS_BTN3;*;x
 DECISIONUS_MAP;*;x
-INDEPENDANCE_SETUP;When a country declares independence;x
+INDEPENDANCE_SETUP;When a realm declares independence;x
 INDEPENDANCE_HEADER;The Foreign Minister reports;x
 INDEPENDANCE_1;$ACTOR$;x
 INDEPENDANCE_2;Has;x
@@ -3457,7 +3457,7 @@ THEYDEFECT_BTN1;OK;x
 THEYDEFECT_BTN2;OK;x
 THEYDEFECT_BTN3;GOTO;x
 THEYDEFECT_MAP;Defection!;x
-OTHERDEFECT_SETUP;When a province of one country defects to another (neither is us).;x
+OTHERDEFECT_SETUP;When a province of one realm defects to another (neither is us).;x
 OTHERDEFECT_HEADER;Defection!;x
 OTHERDEFECT_1;The province of;x
 OTHERDEFECT_2;$PROV$;x
@@ -3470,7 +3470,7 @@ OTHERDEFECT_BTN1;OK;x
 OTHERDEFECT_BTN2;OK;x
 OTHERDEFECT_BTN3;GOTO;x
 OTHERDEFECT_MAP;Defection!;x
-MAJOREVENTHAPPENOTHEROPTION_SETUP;When a Major event with multiple choice happens to another country.;x
+MAJOREVENTHAPPENOTHEROPTION_SETUP;When a Major event with multiple choice happens to another realm.;x
 MAJOREVENTHAPPENOTHEROPTION_HEADER;The Foreign Ministry reports;x
 MAJOREVENTHAPPENOTHEROPTION_1;$COUNTRY$;x
 MAJOREVENTHAPPENOTHEROPTION_2;Our Embassy has heard that;x
@@ -3483,7 +3483,7 @@ MAJOREVENTHAPPENOTHEROPTION_BTN1;OK;x
 MAJOREVENTHAPPENOTHEROPTION_BTN2;OK;x
 MAJOREVENTHAPPENOTHEROPTION_BTN3;GOTO;x
 MAJOREVENTHAPPENOTHEROPTION_MAP;*;x
-MAJOREVENTHAPPENOTHER_SETUP;When a Major event with a single choice happens to another country.;x
+MAJOREVENTHAPPENOTHER_SETUP;When a Major event with a single choice happens to another realm.;x
 MAJOREVENTHAPPENOTHER_HEADER;The Foreign Ministry reports;x
 MAJOREVENTHAPPENOTHER_1;$COUNTRY$;x
 MAJOREVENTHAPPENOTHER_2; ;x
@@ -3798,7 +3798,7 @@ IS_GUARANTEEING_TRIGGER;§Y$COUNTRY$§W Is guaranteeing §Y$TARGET_COUNTRY$§W.\n;x
 DISSENT_IS_ATLEAST_TRIGGER;Dissent is at least §Y$VALUE$§W.\n;x
 ORGANISATION_IS_ATLEAST_TRIGGER;§Y$IDEOLOGY$§W has at least §Y$VALUE$§W in organisation§W.\n;x
 POPULARITY_IS_ATLEAST_TRIGGER;§Y$IDEOLOGY$§W has popularity at least §Y$VALUE$§W.\n;x
-IS_THREATEND_TRIGGER;§Y$COUNTRY$§W is threatened by countries with threat value at least §Y$VALUE$§W.\n;x
+IS_THREATEND_TRIGGER;§Y$COUNTRY$§W is threatened by realms with threat value at least §Y$VALUE$§W.\n;x
 THREAT_IS_NOT_TRIGGER;§Y$COUNTRY$§W threat with §Y$TARGET_COUNTRY$§W is not §Y$VALUE$§W.\n;x
 UNITY_IS_NOT_TRIGGER;Unity is not §Y$VALUE$§W.\n;x
 AMOUNT_OF_DIVISIONS_IS_NOT_TRIGGER;§Y$COUNTRY$§W number of divisions is not §Y$VALUE$§W.\n;x
@@ -3817,7 +3817,7 @@ LOST_IC_IS_NOT_TRIGGER;§Y$COUNTRY$§W has not lost §Y$VALUE$%§W IC §W.\n;x
 DISSENT_IS_NOT_TRIGGER;Dissent is not §Y$VALUE$§W.\n;x
 ORGANISATION_IS_NOT_TRIGGER;§Y$IDEOLOGY$§W does not have §Y$VALUE$§W in organisation§W.\n;x
 POPULARITY_IS_NOT_TRIGGER;§Y$IDEOLOGY$§W does not have §Y$VALUE$§W in popularity§W.\n;x
-IS_NOT_THREATEND_TRIGGER;§Y$COUNTRY$§W Is not threatened by countries with threat value §Y$VALUE$§W.\n;x
+IS_NOT_THREATEND_TRIGGER;§Y$COUNTRY$§W Is not threatened by realms with threat value §Y$VALUE$§W.\n;x
 IS_NOT_GUARANTEEING_TRIGGER;§Y$COUNTRY$§W is not guaranteeing §Y$TARGET_COUNTRY$§W.\n;x
 COUNTRY_HAS_UNITS_IN_PROVINCE_TRIGGER;§Y$COUNTRY$§W has units in province §Y$PROVINCE$§W.\n;x
 COUNTRY_HAS_NO_UNITS_IN_PROVINCE_TRIGGER;§Y$COUNTRY$§W has no units in province §Y$PROVINCE$§W.\n;x
@@ -4253,7 +4253,7 @@ CRISIS_OFFER_OTHER_DECLINE_BTN1;OK;x
 CRISIS_OFFER_OTHER_DECLINE_BTN2;OK;x
 CRISIS_OFFER_OTHER_DECLINE_BTN3;Go to;x
 CRISIS_OFFER_OTHER_DECLINE_LOG;$RECIPIENT$ declined to join the current crisis.;x
-BACK_CRISISTITLE;Back country in crisis;x
+BACK_CRISISTITLE;Back realm in crisis;x
 BACK_CRISIS_OFFER;$ACTOR$ ask us to back their side in the current crisis.;x
 BACK_CRISIS_WE_ACCEPT_SETUP;When we accept backing a side of a crisis;x
 BACK_CRISIS_WE_ACCEPT_HEADER;The Foreign Minister reports;x
@@ -4349,7 +4349,7 @@ CRISIS_BACK_DOWN_WE_ACCEPT_BTN1;Fine!;x
 CRISIS_BACK_DOWN_WE_ACCEPT_BTN2;Fine!;x
 CRISIS_BACK_DOWN_WE_ACCEPT_BTN3;Goto;x
 CRISIS_BACK_DOWN_WE_ACCEPT_MAP;Peace!;x
-CRISIS_BACK_DOWN_THEY_ACCEPT_SETUP;When a country accepts your offer of solving a crisis;x
+CRISIS_BACK_DOWN_THEY_ACCEPT_SETUP;When a realm accepts your offer of solving a crisis;x
 CRISIS_BACK_DOWN_THEY_ACCEPT_HEADER;$MESSENGER$;x
 CRISIS_BACK_DOWN_THEY_ACCEPT_1;$RECIPIENT$;x
 CRISIS_BACK_DOWN_THEY_ACCEPT_2;$RECIPIENT$;x
@@ -4362,7 +4362,7 @@ CRISIS_BACK_DOWN_THEY_ACCEPT_BTN1;Fine!;x
 CRISIS_BACK_DOWN_THEY_ACCEPT_BTN2;Fine!;x
 CRISIS_BACK_DOWN_THEY_ACCEPT_BTN3;Goto;x
 CRISIS_BACK_DOWN_THEY_ACCEPT_MAP;*;x
-CRISIS_BACK_DOWN_OTHER_ACCEPT_SETUP;When a country accepts an offer of solving a crisis;x
+CRISIS_BACK_DOWN_OTHER_ACCEPT_SETUP;When a realm accepts an offer of solving a crisis;x
 CRISIS_BACK_DOWN_OTHER_ACCEPT_HEADER;$MESSENGER$;x
 CRISIS_BACK_DOWN_OTHER_ACCEPT_1;$RECIPIENT$;x
 CRISIS_BACK_DOWN_OTHER_ACCEPT_2;$RECIPIENT$;x
@@ -4388,7 +4388,7 @@ CRISIS_BACK_DOWN_WE_DECLINE_BTN1;Fine!;x
 CRISIS_BACK_DOWN_WE_DECLINE_BTN2;Fine!;x
 CRISIS_BACK_DOWN_WE_DECLINE_BTN3;Goto;x
 CRISIS_BACK_DOWN_WE_DECLINE_MAP;*;x
-CRISIS_BACK_DOWN_THEY_DECLINE_SETUP;When a country declines your offer to resolve a crisis;x
+CRISIS_BACK_DOWN_THEY_DECLINE_SETUP;When a realm declines your offer to resolve a crisis;x
 CRISIS_BACK_DOWN_THEY_DECLINE_HEADER;$MESSENGER$;x
 CRISIS_BACK_DOWN_THEY_DECLINE_1;$RECIPIENT$;x
 CRISIS_BACK_DOWN_THEY_DECLINE_2;$RECIPIENT$;x
@@ -4401,7 +4401,7 @@ CRISIS_BACK_DOWN_THEY_DECLINE_BTN1;Fine!;x
 CRISIS_BACK_DOWN_THEY_DECLINE_BTN2;Fine!;x
 CRISIS_BACK_DOWN_THEY_DECLINE_BTN3;Goto;x
 CRISIS_BACK_DOWN_THEY_DECLINE_MAP;*;x
-CRISIS_BACK_DOWN_OTHER_DECLINE_SETUP;When another country rejects a crisis offer;x
+CRISIS_BACK_DOWN_OTHER_DECLINE_SETUP;When another realm rejects a crisis offer;x
 CRISIS_BACK_DOWN_OTHER_DECLINE_HEADER;$MESSENGER$;x
 CRISIS_BACK_DOWN_OTHER_DECLINE_1;$RECIPIENT$;x
 CRISIS_BACK_DOWN_OTHER_DECLINE_2;$RECIPIENT$;x
@@ -4470,7 +4470,7 @@ CRISIS_BECAME_WAR_LOG;A crisis has escalated into war.;x
 CRISIS_BECAME_WAR_BTN1;Ok;x
 IS_IN_CRISIS;is involved in a crisis.;x
 IS_NOT_IN_CRISIS;is not involved in a crisis.;x
-BACK_CRISIS_DI;Offer of backing a country in a crisis;x
+BACK_CRISIS_DI;Offer of backing a realm in a crisis;x
 CRISIS_NOBODY_BACKED_SETUP;When nobody backs a crisis;x
 CRISIS_NOBODY_BACKED_HEADER;$MESSENGER$;x
 CRISIS_NOBODY_BACKED_1;Crisis averted for now;x
@@ -4506,7 +4506,7 @@ CB_ALLOWED_CONCESSION;Concede Defeat;x
 MAINTENANCE_DESC;Maintenance goods need:;x
 PROCEED;Proceed;x
 ENDGAME_HEADLINE;Game Over;x
-ENDGAME_DESC;One hundred Momentous years have passed and we have entered the modern age. The world is a radically different place, how did your country do?;x
+ENDGAME_DESC;One hundred Momentous years have passed and we have entered the fourth age. The world is a radically different place, how did your realm do?;x
 NEEDS_BOUGHT;Estimated needs for today:;x
 TOTAL_NEEDS_BOUGHT;Estimated needs cost:;x
 TOTAL_SOLD_FOR;Yesterday we produced $NUM$ §Y$GOOD$§W which sold for $CASH$;x
@@ -4569,7 +4569,7 @@ MAX_REINF_UNITVIEW;Reinforcing at §G100%§W speed.;x
 POP_IMPACT_UNITVIEW;Due to losses in the reserves, this unit reinforces at §Y$VAL$%§W speed.;x
 ATPEACE;At Peace;x
 POP_DETAILS_EXPENSES;Expenses:;x
-CONFIRM_CREATE_VASSAL;Release country;x
+CONFIRM_CREATE_VASSAL;Release realm;x
 CONFIRM_CREATE_VASSAL_DESC;Do you want to release §Y$COUNTRY$§W as a §Y$TYPE$§W\n §Y$COUNTRY$§W will receive the following §Y$NUM$§W province(s): §Y$PROVINCES$§W.;x
 CB_DESC_HEAD;This Casus Belli allows us to demand: ;x
 CB_ALLOWED_DISARMAMENT;Forced Disarmament;x
@@ -4602,13 +4602,13 @@ MILITARY_DIG_IN_CAP;Dig-in cap;x
 MILITARY_MILITARY_TACTICS;Military tactics;x
 COUNTRYALERT_NO_CanDoDecisions;There are no decisions that presently demand our attention.;x
 POP_OTHER_LABEL;Other;x
-WARSUBSIDIES_DESC;Offer §Y$MONEY$§W each day to help this country;x
+WARSUBSIDIES_DESC;Offer §Y$MONEY$§W each day to help this realm;x
 IS_NOT_OUR_VASSAL; is NOT our Puppet;x
 IS_OUR_VASSAL; is our Puppet;x
-COUNTRYALERT_HaveOrganizingRebels;Rebel Factions are organizing in our country!;x
+COUNTRYALERT_HaveOrganizingRebels;Rebel Factions are organizing in our realm!;x
 TOTAL_REBEL_POP;Rebel Faction Members;x
-NUMBER_OF_EMIREES;§Y$NUM$§W have left our country for other countries this month;x
-NUMBER_OF_IMMIGREES;§Y$NUM$§W have arrived our country from other countries this month;x
+NUMBER_OF_EMIREES;§Y$NUM$§W have left our realm for other realms this month;x
+NUMBER_OF_IMMIGREES;§Y$NUM$§W have arrived our realm from other realms this month;x
 IS_DISARMED;is disarmed;x
 IS_NOT_DISARMED;is not disarmed;x
 TRUCE_LASTS_UNTIL;Truce lasts until §Y$DATE$§W;x
@@ -4617,8 +4617,8 @@ LOBBY_WAITING;You must wait for all players to start, or kick the ones who are m
 NO_UNIT_TECH;We must discover §Y$TECH$§W to build §Y$UNIT$§W;x
 NO_UNIT_REGIMENTS;We cannot build §Y$UNIT$§W anywhere. Get more §YSoldiers§W.;x
 NO_UNIT_PORTS;We cannot build §Y$UNIT$§W anywhere. Get a §YCoastal§W province.;x
-DIPLOMACY_WARDIALOG_ALLIES;§Y$COUNTRY$§W is protected by the following country(s):;x
-DIPLOMACY_WARDIALOG_NUM_ALLIES;§Y$COUNTRY$§W is protected by §Y$NUM$§W country(s);x
+DIPLOMACY_WARDIALOG_ALLIES;§Y$COUNTRY$§W is protected by the following realms(s):;x
+DIPLOMACY_WARDIALOG_NUM_ALLIES;§Y$COUNTRY$§W is protected by §Y$NUM$§W realm(s);x
 DIPLOMACY_WARDIALOG_ALLY;Ally;x
 WARGOAL_WE_ACCEPT_HEADER;The Foreign Minister reports;x
 WARGOAL_WE_ACCEPT_1;$MONARCHTITLE$;x
@@ -4664,10 +4664,10 @@ PRODUCTION_DAILY_OUTPUT;Daily output:;x
 ANY_STATE_STARTS;Any State;x
 REMOVED_BUDGET_CANT_LOAN_DESC;Banks will only loan you money if you have been meeting your interest payments and are not hostile. Foreign banks will also never loan you more than $MAXLOAN$% of their total available funds for security reasons.;x
 WE_ARE_DISCREDITED;We are discredited;x
-INFLUENCE_NEIGHBOUR;Neighbouring country;x
-INFLUENCE_OTHER_CONTINENT;Country is on another continent;x
-INFLUENCE_RELATIVE;Total score of country relative to our total score;x
-INFLUENCE_AT_MAX;We cannot have more than §Y$MAX$§W influence in a single country;x
+INFLUENCE_NEIGHBOUR;Neighbouring realm;x
+INFLUENCE_OTHER_CONTINENT;Realm is on another continent;x
+INFLUENCE_RELATIVE;Total score of realm relative to our total score;x
+INFLUENCE_AT_MAX;We cannot have more than §Y$MAX$§W influence in a single realm;x
 DIPLOMACY_DAILYINFLULENCE_GAIN;We gain §Y$NUM$§W influence in §Y$COUNTRY$§W each day. Our base influence gain is §Y$BASE$§W;x
 DECL_WAR_NO_VASSAL;We are not allowed to declare war against §Yvassals§W or §Ydominions§W.;x
 OL_HOSTILE_SIEGES;Hostile occupation;x
@@ -4680,7 +4680,7 @@ MIDDLE_MILITANCY_LESS_THAN;Middle strata militancy less than ;x
 RICH_MILITANCY_LESS_THAN;Rich strata militancy less than ;x
 PRODUCTION_SORT_BY_AVAILABLE_WORKFORCE_TOOLTIP;Sort by unemployed §Y$TYPE$§W;x
 PRODUCTION_SORT_BY_AVG_INVESTORS_TOOLTIP;Sort by average §Y$TYPE$§W in state;x
-PRODUCED_DETAIL;$VAL$ available for our country;x
+PRODUCED_DETAIL;$VAL$ available for our realm;x
 TRADE_AVAILABLE;Available;x
 UNIT_BUILD_TIME_IW;$VAL$ days.;x
 SUPPLY_OWNER;Owner:;x
@@ -4723,7 +4723,7 @@ COMBAT_LEADER_MOD;Leader;x
 IS_NOT_OVERSEAS;Is NOT overseas;x
 IS_OVERSEAS;Is overseas;x
 SHIP_SUB_NAME;$NUM$$ORDER$ $HOME$ $TYPE$;x
-FOLLOWING_HAVE_CLAIMS;The following countries have claims here.;x
+FOLLOWING_HAVE_CLAIMS;The following realms have claims here.;x
 COUNTRY_IS_NOT_CULTURE;Primary Culture is NOT;x
 COUNTRY_IS_CULTURE;Primary Culture is;x
 NO_ASSIM_NOW;No Current Assimilation;x
@@ -4733,7 +4733,7 @@ REGIMENT_SIZE;Current Size: §Y$SIZE$§W\n;x
 CURRENT_MORALE;Organisation: §Y$SIZE$§W of $MAX$.\n;x
 SUPPLY_COST;Supply Costs;x
 ALL_CORE_PROVINCE_THAT;For all core provinces ;x
-BREAKCOUNTRY_SETUP;When a rebel faction enforces its demands in our country;x
+BREAKCOUNTRY_SETUP;When a rebel faction enforces its demands in our realm;x
 BREAKCOUNTRY_HEADER;Report from $CAPITAL$;x
 BREAKCOUNTRY_1;$FACTION$ Win!;x
 BREAKCOUNTRY_2;$MONARCHTITLE$, the $FACTION$ have enforced their demands!;x
@@ -4746,7 +4746,7 @@ BREAKCOUNTRY_BTN1;Horror!;x
 BREAKCOUNTRY_BTN2;Horror!;x
 BREAKCOUNTRY_BTN3;Goto;x
 BREAKCOUNTRY_MAP;*;x
-BREAKCOUNTRYOTHER_SETUP;When a rebel faction enforces its demands in another country;x
+BREAKCOUNTRYOTHER_SETUP;When a rebel faction enforces its demands in another realm;x
 BREAKCOUNTRYOTHER_HEADER;Ambassador from;x
 BREAKCOUNTRYOTHER_1;$OTHER$;x
 BREAKCOUNTRYOTHER_2;$FACTION$ have enforced their demands in;x
@@ -4762,7 +4762,7 @@ BREAKCOUNTRYOTHER_MAP;*;x
 INVENTION_SETUP;When you have gained an invention.;x
 INVENTION_HEADER;Reports on;x
 INVENTION_1;Major Discovery;x
-INVENTION_2;Scientists in our country have discovered;x
+INVENTION_2;Loremasters in our realm have discovered;x
 INVENTION_3;$INVENTION$;x
 INVENTION_4;$DESC$;x
 INVENTION_5;EFFECT:;x
@@ -4782,8 +4782,8 @@ IS_NOT_PRIMARY_CULTURE;§Y$NAME$§W is NOT primary culture.\n;x
 IS_PRIMARY_CULTURE;§Y$NAME$§W is primary culture.\n;x
 IS_NOT_ACCEPTED_CULTURE2;§Y$NAME$§W is NOT an accepted culture.\n;x
 IS_ACCEPTED_CULTURE2;§Y$NAME$§W is an accepted culture.\n;x
-ALL_COUNTRIES_EFF;All countries;x
-ALL_COUNTRIES_THAT_EFF;All countries that;x
+ALL_COUNTRIES_EFF;All realms;x
+ALL_COUNTRIES_THAT_EFF;All realms that;x
 GETTING_ONLY_NEEDS;Getting only $NEED$: §Y$VAL$%§W;x
 ISSUE_MOVE_EFFECT;§Y$PERCENTAGE$%§W of pops move from §YFROM§W to §YTO§W;x
 ADD_WARGOAL_EFFECT;When we add this war goal, we will gain:;x
@@ -4799,8 +4799,8 @@ NO_RELEASEABLE_NATIONS;We have no nations that we can grant sovereignty;x
 DIPLOMACY_CALL_ALLIES_NOT_LEADER;We are not a leader of this war and cannot call our allies into it;x
 LEDGER_NEXT;Next;x
 LEDGER_PREV;Previous;x
-COUNTRYALERT_CanIncreaseOpinion;We can §YIncrease Opinion§W of our country or add nations to our §YSphere of Influence§W:;x
-COUNTRYALERT_NO_CanIncreaseOpinion;We cannot increase the opinion of our country or add nations to our §YSphere of Influence§W;x
+COUNTRYALERT_CanIncreaseOpinion;We can §YIncrease Opinion§W of our realm or add nations to our §YSphere of Influence§W:;x
+COUNTRYALERT_NO_CanIncreaseOpinion;We cannot increase the opinion of our realm or add nations to our §YSphere of Influence§W;x
 CANT_USE_LAST_WAR_GOALS;Selecting this war goal would end the war and can only be done in a peace deal with the war leader;x
 CANCELALLIANCE_THEY_ACCEPT_BTN2;OK;x
 CANCELALLIANCE_THEY_ACCEPT_BTN3;Go to;x
@@ -4842,7 +4842,7 @@ BANKRUPTCY_5;and we have lost much prestige in the eyes of the world.;x
 BANKRUPTCY_6;In the future banks will be more hesitant to loan us money.;x
 BANKRUPTCY_LOG;We went bankrupt.;x
 BANKRUPTCY_BTN1;This is not good;x
-THEY_BANKRUPTCY_SETUP;another country has a bankruptcy;x
+THEY_BANKRUPTCY_SETUP;another realm has a bankruptcy;x
 THEY_BANKRUPTCY_HEADER;$MESSENGER$;x
 THEY_BANKRUPTCY_1;Bankruptcy!;x
 THEY_BANKRUPTCY_2;$COUNTRY$;x
@@ -4854,7 +4854,7 @@ THEY_BANKRUPTCY_LOG;$COUNTRY$ went bankrupt.;x
 THEY_BANKRUPTCY_BTN1;Ok;x
 LIT_CHANGE;Monthly Change;x
 precious_metal_desc;Precious Metals are not sold as normal goods but directly converted to money.;x
-DIPLOMACY_CANNOT_SET_PRIO_BANNED;We cannot influence this country since our embassy is banned;x
+DIPLOMACY_CANNOT_SET_PRIO_BANNED;We cannot influence this realm since our embassy is banned;x
 BE_TECH;Technologies:;x
 BE_INVENT;Inventions:;x
 TOPBAR_DIPLOPOINTS_GAIN;We gain §Y$VALUE$§W diplomatic points each month;x
@@ -4877,7 +4877,7 @@ PROVINCE_CONTROL_DAYS_LATER_THAN;Province control not changed in the last §Y$DAY
 PROVINCE_CONTROL_DAYS;Province control changed in the last §Y$DAYS$§W days.\n;x
 ENFORCE_DEMANDS_TRIGGER;These rebels will win if the following is true:;x
 POLITICS_REFORMS;Reforms;x
-POLITICS_RELEASE_NATIONS;Release countries;x
+POLITICS_RELEASE_NATIONS;Release realms;x
 MILITARY_LEADER_NAME_TOOLTIP;§Y$NAME$§W is in command of §Y$ARMY$§W in §Y$LOCATION$§W;x
 BE_SECOND_RANK;Secondary Power;x
 COUNTRYALERT_HasUnemployedWorkers;The following states have unemployed factory workers:;x
@@ -4885,7 +4885,7 @@ TOPBAR_POPULATION_VISUAL;Our total population times four is $CURR$.;x
 REL_SPHERE_OF_INFLUENCE;In Sphere;x
 TOTAL_AMOUNT_OF_SHIPS;Total amount of ships: $COUNT$;x
 LESS_AMOUNT_OF_SHIPS;Less amount of ships than: $COUNT$;x
-REVANCHISM_EXPLANATION;Revanchism, from the French word for 'revenge', is the yearning for the return of land lost to the country. In love, war, and peace alike, our people will be willing to make greater sacrifices for the return of our sacred soil.;x
+REVANCHISM_EXPLANATION;Revanchism, from the French word for 'revenge', is the yearning for the return of land lost to the realm. In love, war, and peace alike, our people will be willing to make greater sacrifices for the return of our sacred soil.;x
 BE_GREAT_POWER;Great Power;x
 DIPLOMACY_GREATNATION_STATUS;Great Power;x
 WE_NO_LONGER_GREAT_POWER_2;and lost its position as a Great Power to;x
@@ -4948,8 +4948,8 @@ CONT_AI;Replace w. AI;x
 CONT_CONTINUE;Continue (no AI);x
 ASKMILITARYACCESS_THEY_ACCEPT_6;We can move our troops freely across their territory while this treaty is in effect.;x
 ASKMILITARYACCESS_THEY_DECLINE_6;How they fail to see the benefits of having our troops on the streets of their capital is one of life's little mysteries.;x
-DISBAND_UNIT_DRO;Disbanding a brigade will remove it from the game, and thus reduce the amount of supplies your country has to spend on maintenance.;x
-residency_desc;Only people of your country's primary culture are allowed the vote.;x
+DISBAND_UNIT_DRO;Disbanding a brigade will remove it from the game, and thus reduce the amount of supplies your realm has to spend on maintenance.;x
+residency_desc;Only people of your realm's primary culture are allowed the vote.;x
 PO_PD_70;You have won a devastating victory, and can expect the fulfillment of several war goals in a peace settlement.;x
 PO_PD_40;You have won a total victory, and should demand the fulfillment of at least one major war goal in a peace settlement.;x
 PO_PD_10;You have won a victory. The enemy would most likely accept a white peace, or the fulfillment of at least a limited war goal in a peace settlement.;x
@@ -4971,9 +4971,9 @@ BUDGET_STOCKPILE_YESTERDAYS;Yesterdays purchases for stockpile:;x
 LAG_PAUSE;$PLAYER$ is lagging behind, pausing game.;x
 LAG_DECREASE_SPEED;$PLAYER$ is lagging behind, decreasing speed.;x
 PAUSED_BY;§Y$PLAYER$§W paused the game.;x
-WARGOAL_OTHER_ACCEPT_SETUP;When a country adds a wargoal in a war.;x
-WARGOAL_THEY_ACCEPT_SETUP;When we add a wargoal against another country.;x
-WARGOAL_WE_ACCEPT_SETUP;When a country adds a wargoal against us..;x
+WARGOAL_OTHER_ACCEPT_SETUP;When a realm adds a wargoal in a war.;x
+WARGOAL_THEY_ACCEPT_SETUP;When we add a wargoal against another realm.;x
+WARGOAL_WE_ACCEPT_SETUP;When a realm adds a wargoal against us..;x
 GUNBOAT_OTHER_ACCEPT_LOG;$ACTOR$ is using gunboats to force $RECIPIENT$ to pay their debt!;x
 GUNBOAT_THEY_ACCEPT_LOG;We are using gunboats to force $RECIPIENT$ to pay their debt!;x
 GUNBOAT_WE_ACCEPT_LOG;$ACTOR$ is using gunboats to force us to pay back our debt!;x
@@ -4985,7 +4985,7 @@ TOTAL_POPS_NOT_TR;Less than §Y$VAL$§W pops in $WHERE$.\n;x
 TOTAL_POPS_TR;At least §Y$VAL$§W pops in $WHERE$.\n;x
 IS_CRIME_NOT_HIGHER_THAN_EDU_TR;More is spent on §Yeducation§W than on administration.\n;x
 IS_CRIME_HIGHER_THAN_EDU_TR;More is spent on §Yadministration§W than on education.\n;x
-ANY_AT_WAR_STARTS;Any country at war with.;x
+ANY_AT_WAR_STARTS;Any realm at war with.;x
 REBEL_POWER_LESS_THAN;Rebel threat is less than §Y$VAL$§W percent.;x
 REBEL_POWER_MORE_THAN;Rebel threat is at least §Y$VAL$§W percent.;x
 POP_TYPE_PERC_NOT;$NAME$ is less than §Y$VAL$%§W.\n;x
@@ -4997,7 +4997,7 @@ ANY_CORE_NORMAL;All core provinces will get\n;x
 RELEASE_PRESTIGE;Prestige: ;x
 RELEASE_INFAMY;Infamy: ;x
 SOMEONE_HAS_ADDED_STATUS_QUO;We cannot add a wargoal if someone has added a §YStatus Quo§W wargoal;x
-NO_INTERVENTION_NOT_ENOUGH_OPINION;In order to intervene, a country targeted by a wargoal need to have at least §Y$REQLEVEL$§W opinion of us;x
+NO_INTERVENTION_NOT_ENOUGH_OPINION;In order to intervene, a realm targeted by a wargoal need to have at least §Y$REQLEVEL$§W opinion of us;x
 OL_SIEGES;Occupations;x
 IS_NOT_BIG_PROD_TRIG;Is NOT a big producer of §Y$VAL$§W.\n;x
 IS_BIG_PROD_TRIG;Is a big producer of §Y$VAL$§W.\n;x
@@ -5010,10 +5010,10 @@ PV_CLERGY_LIT_NUM;$NUM$ of your population are Loremasters (Optimal $OPT$): $VAL
 PV_CLERGY_SETTING;Educational spending at $SETTING$: $VAL$;x
 PV_CLERGY_TECH;From technology: $VAL$;x
 DIFFICULTY_LABEL;Difficulty;x
-REVOLTALLIANCE_SETUP;When a country breaks their alliances with us due to revolution.;x
+REVOLTALLIANCE_SETUP;When a realm breaks their alliances with us due to revolution.;x
 REVOLTALLIANCE_HEADER;The Foreign Minister reports;x
 REVOLTALLIANCE_1;Foreign Revolution!;x
-REVOLTALLIANCE_2;$MONARCHTITLE$ the country of;x
+REVOLTALLIANCE_2;$MONARCHTITLE$ the realm of;x
 REVOLTALLIANCE_3;§Y$ACTOR$§W;x
 REVOLTALLIANCE_4;is in revolution!;x
 REVOLTALLIANCE_5;All our alliances with them are broken and our influences with them has gone to waste.;x
@@ -5033,10 +5033,10 @@ OL_VIEW_GP_INFLUENCE;Toggles §YInfluence§W view;x
 CB_EXPIRE_DATE;Expires §Y$DATE$§W;x
 BUDGET_CANT_LOAN_DESC;Banks will only loan you money if you have been meeting your interest payments and are not hostile. Foreign banks will currently never loan you more than §Y$MAXLOAN$§! of their total available funds for security reasons.;x
 MUST_NEGOTIATE_WITH_WAR_LEADER_STATUS_QUO_OUR_SIDE;We cannot negotiate with the enemy §YWar leader§W since we are target of a wargoal and our leader has added a §YStatus Quo§W wargoal;x
-DIPLOMACY_CANNOT_SET_PRIO_TRUCE;We cannot influence this country while we have a truce with them;x
+DIPLOMACY_CANNOT_SET_PRIO_TRUCE;We cannot influence this realm while we have a truce with them;x
 HAS_NOT_RECENTLY_LOST_WAR;Have NOT lost a war in the last five years.;x
 HAS_RECENTLY_LOST_WAR;Have lost a war in the last five years.;x
-IN_SAME_SPHERE;This country is in the same sphere of influence as us.;x
+IN_SAME_SPHERE;This realm is in the same sphere of influence as us.;x
 DIPLOMACY_CHANCE_JOIN_WAR;Likelyhood of joining the war: §Y$VAL$§W;x
 PO_ISBETTER;If we refuse this offer we will suffer the following:\n §R+$MIL$§W Militancy, §R+$WE$§W War exhaustion;x
 NEW_PARTY_AVAIL_1;$PARTY$ has been formed;x
@@ -5080,8 +5080,8 @@ BLOCKADE_SCORE;Blockade: ;x
 OUTLINER_TOOLTIP_EMPLOYED;§Y$COUNT$§! Employed in factories (§Y$PERC$§!%);x
 TRADE_SUPPLY_NEED_A;$VAL$ to supply army each day.\n;x
 TRADE_SUPPLY_NEED_N;$VAL$ to supply navy each day.\n;x
-DIPLOMACY_CANNOT_SET_PRIO_WAR;We cannot influence this country while we have a war with them.;x
-DIPLOMACY_INFLUENCE_NOT_WORTH;We are already influencing this country at maximum, and there is no other country influencing it. No points are spent for now.;x
+DIPLOMACY_CANNOT_SET_PRIO_WAR;We cannot influence this realm while we have a war with them.;x
+DIPLOMACY_INFLUENCE_NOT_WORTH;We are already influencing this realm at maximum, and there is no other realm influencing it. No points are spent for now.;x
 COLONY_ABORT_3;§Y$TARGET$§b.;x
 COLONY_ABORT_4;has been aborted!;x
 COLONY_ABORT_6;*;x
@@ -5089,18 +5089,18 @@ COLONY_ABORT_BTN1;OK;x
 COLONY_ABORT_BTN2;OK;x
 COLONY_ABORT_BTN3;Go to;x
 DIPRELCH_VALID_CB;Valid Casus Belli;x
-BRIGADES_COMPARE_GREATER;Brigades comparison factor of two countries is at least §Y$VAL$§!;x
-BRIGADES_COMPARE_SMALLER;Brigades comparison factor of two countries is less than §Y$VAL$§!;x
+BRIGADES_COMPARE_GREATER;Brigades comparison factor of two realms is at least §Y$VAL$§!;x
+BRIGADES_COMPARE_SMALLER;Brigades comparison factor of two realms is less than §Y$VAL$§!;x
 CONFIRM_CREATE_STATE_DESC2;(All local effects will be removed.);x
 UNIT_ENABLE_REBEL_HUNT;Hunt Rebels;x
 UNIT_DISABLE_REBEL_HUNT;(hunting rebels);x
 UNIT_REBEL_HUNT_WILL_HUNT;§GArmy is ready for rebel hunting.§!;x
 UNIT_REBEL_HUNT_LOW_MORALE;§RArmy has too low morale, and will not hunt any rebels right now.§!;x
 UNIT_REBEL_HUNT_NO_VALID;§REnemy rebels has been detected, but our army will not attack them, because they are too strong for us, or couldn't find a safe path to get there.§!;x
-NOT_RELEASE_AT_WAR;§R(It is not possible to release countries when at war.)§W;x
+NOT_RELEASE_AT_WAR;§R(It is not possible to release realms when at war.)§W;x
 COLONY_SUCCESS_5;§Y$PRESTIGE$§! prestige gained.;x
 COLONY_SUCCESS_6;(Base value §Y$BASE$§! x §Y$PROV$§! provinces.);x
-COUNTRY_PUPPETS_LIST;Puppets: ;x
+COUNTRY_PUPPETS_LIST;Vassals: ;x
 POLL_ESTIMATED_ELECTION;In an election we estimate the following result.;x
 MODIFIER_MOVEMENT_COST;Troop Movement Cost;x
 SPEED_IMPACT_ON_CB;Speed of generation is changed by §Y$VAL$§W.;x
@@ -5119,7 +5119,7 @@ CB_JUSTIFY_NO_LONGER_VALID_BTN1;OK;x
 CB_JUSTIFY_NO_LONGER_VALID_BTN2;OK;x
 CB_JUSTIFY_NO_LONGER_VALID_BTN3;Goto;x
 CB_JUSTIFY_NO_LONGER_VALID_MAP;*;x
-NO_ALLOWED_COUNTRIES;(There is no applicable country).;x
+NO_ALLOWED_COUNTRIES;(There is no applicable realm).;x
 NO_ALLOWED_STATES;(There is no applicable states).;x
 HAS_LESS_STATE_THAN;Has number of States < ;x
 HAS_STATES_GREATER_EQ;Has number of States >= ;x
@@ -5145,7 +5145,7 @@ CB_ALLOWED_UNINSTALL_COMMUNIST_GOV_TYPE;Uninstall communist government;x
 PRESTIGE_MORALE_BONUS;Morale bonus: §Y$VAL$§!;x
 PRESTIGE_MAX_ORG_BONUS;Organization bonus: §Y$VAL$§!;x
 PRESTIGE_PENALTY_ON_LEADER_TRANSFER_TITLE;Prestige penalty.;x
-PRESTIGE_PENALTY_ON_LEADER_TRANSFER_DESC;Our country will suffer §R$VAL$§! prestige loss, if we unassign the current leader §Y$NAME$§! from that unit, while at war.\nDo you still want to do that?;x
+PRESTIGE_PENALTY_ON_LEADER_TRANSFER_DESC;Our realm will suffer §R$VAL$§! prestige loss, if we unassign the current leader §Y$NAME$§! from that unit, while at war.\nDo you still want to do that?;x
 REORG_PANEL_BALANCE_UNITS;Balance;x
 INVEST_PROJECT_NOT_ENOUGH_MONEY;§RWe have not enough funds to do that.§!;x
 INVEST_PROJECT_SHORTCUT_MAX;§RCtrl + Left mouse click§! to invest max amount into this project. (§Y$AMOUNT$§!);x
@@ -5226,7 +5226,7 @@ PRODUCTION_FACTORY_PROFITABILITY;Avg. profitability (last $DAYS$ days): $VALUE$;
 PRODUCTION_FACTORY_CURRENT_BUDGET;Current factory budget: $VALUE$;x
 PRODUCTION_FACTORY_INVESTMENT;From investments: $VALUE$;x
 PRODUCTION_FACTORY_SUBSIDIES;From investments: $VALUE$;x
-INFLUENCE_OVERFLOW_TOOLTIP;We are spending §Y$VALUE$§! of influence points each day, to reduce the influence of other countries.;x
+INFLUENCE_OVERFLOW_TOOLTIP;We are spending §Y$VALUE$§! of influence points each day, to reduce the influence of other realm.;x
 TRADE_FLOW_PRODUCED;§YProduced by:§W;x
 TRADE_FLOW_USED;§YUsed by:§W;x
 TRADE_FLOW_MAY_BE_USED;§YMay be used for:§W;x
@@ -5240,10 +5240,10 @@ TRADE_FLOW_MILITARY_SUPPLY;Military Consumption;x
 TRADE_FLOW_CURRENT_PRICE;Current Price:;x
 TRADE_FLOW_DETAILS;Details;x
 TRADE_FLOW_PART_OF_WORLD_PROD;§Y$PERC$%§W of world production.;x
-NO_MIGRATIONS_FOUND2_TOOLTIP;No migration between countries has been noticed.;x
+NO_MIGRATIONS_FOUND2_TOOLTIP;No migration between realms has been noticed.;x
 NO_MIGRATIONS_FOUND3_TOOLTIP;(Select province to see details);x
 PROVINCE_VIEW_BUILD_ALL_TOOLTIP;(Click + CTRL to build in all provinces in state);x
-CB_GENERATION_BONUS_TOOLTIP;The CB generation speed bonus §Y$BONUS$§! between competing countries: §Y$COUNTRIES$§!;x
+CB_GENERATION_BONUS_TOOLTIP;The CB generation speed bonus §Y$BONUS$§! between competing realms: §Y$COUNTRIES$§!;x
 CB_GENERATION_BONUS_TROOPS_PRESENCE_TOOLTIP;(§Y$BONUS$§! for presence of opponents troops);x
 CB_GENERATION_BONUS_OPPONENT_TROOPS_PRESENCE;(§Y$BONUS$§! for §Y$FOR$§! against §Y$AGAINST$§! for presence of their troops);x
 MODIFIER_CB_GENERATION_SPEED_MODIFIER;Casus Belli acquisition speed;x
@@ -5299,16 +5299,16 @@ RALLY_POINT_PROVINCE_INFO;$PROV$ is a §Yrally point§!;x
 RALLY_POINT_PROVINCE_MERGE_INFO;All recruited units will merge up to §Y$LIMIT$§! when arrive here.;x
 CB_ALLOWED_MAKE_PUPPET;Make a Puppet;x
 DIPLOMACY_NEGOTIATE_SUBSTATE;We are not allowed to negotiate with §YSubstates§W;x
-DIPLOMACY_NEGOTIATE_WE_SUBSTATE;We are not allowed to negotiate with countries if we are a §YSubstate§W;x
+DIPLOMACY_NEGOTIATE_WE_SUBSTATE;We are not allowed to negotiate with realms if we are a §YSubstate§W;x
 DECL_WAR_NO_SUBSTATE;We are not allowed to declare war against §Ysubstates§W;x
 DIPLO_WE_SUBSTATE;We are a substate of theirs;x
-DIPLO_THEY_SUBSTATE;They are a substate of our country;x
+DIPLO_THEY_SUBSTATE;They are a substate of our realms;x
 SELECT_CB_CREATION_TYPE;Select the type of justification we want to manufacture;x
 CB_MANUFACTURE_TECH;War justification efficiency;x
 CB_CREATE_TECH;War justification efficiency: $VAL$;x
 SUPPRESSION_TECH_DESC;Suppression efficiency: $VAL$;x
 CB_NOT_ON_PUPPETS;We can't justify war against §Ypuppets§W and §Ysubstates§W.;x
-CB_NOT_ON_SPHERES;We can't justify war against a country that is in our sphere.;x
+CB_NOT_ON_SPHERES;We can't justify war against a realm that is in our sphere.;x
 NO_WAR_JUSTIFICATION;We are missing a valid justification for declaring war on them.;x
 NOT_HOSTILE_BUILD;Not Hostile;x
 VOTER_ISSUES;Voter Issues;x
@@ -5349,9 +5349,9 @@ OTHERS_CB_DETECTED_BTN3;Goto;x
 OTHERS_CB_DETECTED_MAP;*;x
 BUILDING_AT_MAX_TERRAIN;Level $CURR$/$MAX$ (§R$TERRAINMOD$§! $TERRAIN$);x
 PRODUCTION_INVEST;Foreign Investment;x
-PRODUCTION_TAB_INVEST;Shows overview of investment in foreign countries;x
-FLAG_SUBMENU_INTERESTING;Set country as interesting.;x
-FLAG_SUBMENU_NOTINTERESTING;Set country as §Ynot§! interesting.;x
+PRODUCTION_TAB_INVEST;Shows overview of investment in foreign realms;x
+FLAG_SUBMENU_INTERESTING;Set realm as interesting.;x
+FLAG_SUBMENU_NOTINTERESTING;Set realm as §Ynot§! interesting.;x
 MESSAGE_TYPE_INTERESTING;Interesting;x
 MESSAGE_TYPE_NOT_INTERESTING;Other;x
 MESSAGE_SEARCH;Search:;x
@@ -5372,16 +5372,16 @@ MSG_FILTER_NEIGHBOURS;Neighbors;x
 MSG_FILTER_SPHERE;Sphere;x
 PRODUCTION_BROWSE_INVEST;Other;x
 DIPLOMACY_OPINION_INVESTMENT;§Y$GP_ADJ$§W investment: §Y$VALUE$§!;x
-MSG_FILTER_TOOLTIP_HEADER;In message filter settings window, you can select countries that you are interested in. All the messages and alerts will be shown only for those important countries.;x
+MSG_FILTER_TOOLTIP_HEADER;In message filter settings window, you can select realms that you are interested in. All the messages and alerts will be shown only for those important realms.;x
 MSG_FILTER_TOOLTIP_DELAYED;§YLeft click§! replaces current selection.\n§YRight click§! adds to current selection.\n§YLeft click + SHIFT§! toggles filter.;x
-MSG_FILTER_TOOLTIP_DESELECT;Deselect all countries from the list.;x
-MSG_FILTER_TOOLTIP_BESTGUESS;Select countries by using best guess method.;x
-MSG_FILTER_TOOLTIP_ENEMIES;Select countries that are your enemies.;x
-MSG_FILTER_TOOLTIP_ALLIES;Select countries that are your allies.;x
-MSG_FILTER_TOOLTIP_NEIGHBOURS;Select countries that are your neighbors.;x
-MSG_FILTER_TOOLTIP_SPHERE;Select countries that are in your sphere. (if you are a great power);x
-MSG_FILTER_TOOLTIP_CONTINENT;Select countries that owns any province on the continent.;x
-PRODUCTION_NOT_DESTROY_FACTORY_BECAUSE_FOREIGN_TOOLTIP;We don't have the right to do that in a foreign country;x
+MSG_FILTER_TOOLTIP_DESELECT;Deselect all realms from the list.;x
+MSG_FILTER_TOOLTIP_BESTGUESS;Select realms by using best guess method.;x
+MSG_FILTER_TOOLTIP_ENEMIES;Select realms that are your enemies.;x
+MSG_FILTER_TOOLTIP_ALLIES;Select realms that are your allies.;x
+MSG_FILTER_TOOLTIP_NEIGHBOURS;Select realms that are your neighbors.;x
+MSG_FILTER_TOOLTIP_SPHERE;Select realms that are in your sphere. (if you are a great power);x
+MSG_FILTER_TOOLTIP_CONTINENT;Select realms that owns any province on the continent.;x
+PRODUCTION_NOT_DESTROY_FACTORY_BECAUSE_FOREIGN_TOOLTIP;We don't have the right to do that in a foreign realm;x
 INVESTMENT_PENALTY_FACTOR;Other national investors;x
 SPHERE_SHARE_NOT_IN_SPHERE;Not in a sphere so free to sell on the world market;x
 RULE_ALLOW_FOREIGN_INVESTMENT;Allow foreign investment;x
@@ -5493,7 +5493,7 @@ MOVEMENT_RADICALISM_ADJUST;§Y$MOVEMENT$§! Radicalism: $AMOUNT$;x
 MILITARY_REFORM_COST_DESC;Cost modifier for military reforms: ;x
 ECONOMIC_REFORM_COST_DESC;Cost modifier for economic reforms: ;x
 MOVEMENT_RADICALISM;Movement Radicalism;x
-MOVEMENT_RADICALISM_DESC;This describes how much the people of the movement trust the political process in your country to get them what they want. A movement with a high value (§Y100§!) will convert to a rebel uprising if not suppressed;x
+MOVEMENT_RADICALISM_DESC;This describes how much the people of the movement trust the political process in your realm to get them what they want. A movement with a high value (§Y100§!) will convert to a rebel uprising if not suppressed;x
 NUMBER_MOVEMENT_SUPPORTERS;Number of supporters;x
 NUMBER_MOVEMENT_SUPPORTERS_DESC;The larger the movement the harder it is to suppress. If you enact a reform with less support all movements with more support will become more radical;x
 CAN_NATIONALIZE;Have foreign investors;x
@@ -5559,7 +5559,7 @@ COUNTRYALERT_ColonialBad_influence;§RWe are losing the race in §Y$REGION$§!;x
 COLONY_TENSION_DRIFT;Drift: §Y$VAL$§!;x
 PV_INTERNAL_IMMIGRATION;Internal Migration: ;x
 PV_EXTERNAL_IMMIGRATION;External Migration: ;x
-COUNTRYALERT_CanRemoveFromSphere;We can remove countries from our §YSphere of Influence§!:;x
+COUNTRYALERT_CanRemoveFromSphere;We can remove realms from our §YSphere of Influence§!:;x
 PV_CLERGY_LIT_DESC1;$NUM$ of your population in $LOC$ are Loremasters.;x
 PV_CLERGY_LIT_DESC2;Optimal is $OPT$.;x
 PV_CLERGY_LIT_DESC3;Monthly change base value: $VAL$;x
@@ -5629,7 +5629,7 @@ war_we_lose_medium_desc;On $DATE_LONG_1$, the War between $TAG_0_0$ and $TAG_1_0
 war_we_lose_small_title;Peace with $TAG_2_0$;x
 war_we_lose_small_desc;$STRING_0_0$ has ended with our defeat at the hands of $TAG_2_0$;x
 rebels_win_small_title;Revolution!;x
-rebels_win_small_desc;$STRING_0_0$ have defeated $TAG_0_0$ and broken the country, what will the $STRING_0_3$ $STRING_0_4$ do now?;x
+rebels_win_small_desc;$STRING_0_0$ have defeated $TAG_0_0$ and broken the realm, what will the $STRING_0_3$ $STRING_0_4$ do now?;x
 GOODS_PRICE_UP_TITLE_LARGE;PRICES RISE!;x
 GOODS_PRICE_UP_LARGE;In the last $VALUE_INT_0_0$ months the price of $STRING_0_1$ has steadily risen. Capitalists and Artisans worldwide scramble to produce more $STRING_0_1$ to meet the ever-increasing demands of the market.;x
 GOODS_PRICE_UP_TITLE_MEDIUM;PRICES RISE!;x
@@ -5643,11 +5643,11 @@ GOODS_PRICE_DOWN_MEDIUM;In the last $VALUE_INT_0_0$ months the price of $STRING_
 GOODS_PRICE_DOWN_TITLE_SMALL;PRICES COLLAPSE!;x
 GOODS_PRICE_DOWN_SMALL;In the last $VALUE_INT_0_0$ months the price of $STRING_0_1$ has dropped like a rock!;x
 REVOLUTION_NEWS_TITLE_LARGE;REVOLUTION IN $TAG_0_0_UPPER$!;x
-REVOLUTION_NEWS_LARGE;A revolution has taken place in $TAG_0_0$! $STRING_0_0$ have defeated the government's forces and broken the country. $TAG_0_0$ is now under the control of the $STRING_0_4$. 'As we take over the government, citizens can expect immediate reforms reflecting our $STRING_0_3$ values', they announced. 'We are not a rogue state, we only plan to pursue more equal relations with our international partners', a government official commented, challenged about new ruling party's intentions to back down on the agreements and assurances issued by the previous administration.;x
+REVOLUTION_NEWS_LARGE;A revolution has taken place in $TAG_0_0$! $STRING_0_0$ have defeated the government's forces and broken the realm. $TAG_0_0$ is now under the control of the $STRING_0_4$. 'As we take over the government, citizens can expect immediate reforms reflecting our $STRING_0_3$ values', they announced. 'We are not a rogue state, we only plan to pursue more equal relations with our international partners', a government official commented, challenged about new ruling party's intentions to back down on the agreements and assurances issued by the previous administration.;x
 REVOLUTION_NEWS_TITLE_MEDIUM;REVOLUTION IN $TAG_0_0_UPPER$!;x
-REVOLUTION_NEWS_MEDIUM;A revolution has taken place in $TAG_0_0$! $STRING_0_0$ have defeated the government's forces and broken the country. $TAG_0_0$ is now under the control of the $STRING_0_4$. 'Citizens can expect immediate reforms reflecting our $STRING_0_3$ values', they announced.;x
+REVOLUTION_NEWS_MEDIUM;A revolution has taken place in $TAG_0_0$! $STRING_0_0$ have defeated the government's forces and broken the realm. $TAG_0_0$ is now under the control of the $STRING_0_4$. 'Citizens can expect immediate reforms reflecting our $STRING_0_3$ values', they announced.;x
 REVOLUTION_NEWS_TITLE_SMALL;REVOLUTION!;x
-REVOLUTION_NEWS_SMALL;A revolution has taken place in $TAG_0_0$! $STRING_0_0$ have defeated the government's forces and broken the country.;x
+REVOLUTION_NEWS_SMALL;A revolution has taken place in $TAG_0_0$! $STRING_0_0$ have defeated the government's forces and broken the realm.;x
 INVENTION_NEWS_TITLE_LARGE;INVENTION!;x
 INVENTION_NEWS_LARGE;Scientists and engineers in $TAG_0_0$ are reported to have invented $STRING_0_1$. ;x
 INVENTION_NEWS_TITLE_MEDIUM;INVENTION!;x
@@ -5686,55 +5686,55 @@ WAR_NEWS_TITLE_SMALL;$TAG_0_0_$ at War!;x
 WAR_NEWS_SMALL;On $DATE_LONG_0$ $TAG_0_0$ announced that a state of war now exists with $TAG_0_1$.;x
 AI_FEARS_US_TITLE1;$TAG_0_0_UPPER$ FEARS OUR MIGHT!;x
 AI_FEARS_US_DESC1_LONG;Reports of rumours are coming in from our correspondent in $TAG_0_0$. An unnamed source informs that a series of meetings involving top military officers have taken place in their capital in the last few months. The top theme of these meetings involves a possible fictitious scenario where war is declared and our military invades them. Measures of counter-attack and, if needed, even guerrilla warfare methods were discussed. Apparently the top command of the $TAG_0_0_ADJ$ army is preparing for the worst. It seems we are feared by them!;x
-AI_FEARS_US_DESC1_MEDIUM;An unnamed source in $TAG_0_0$ reports that the government there is preparing for the worst. A fictitious scenario involving a war declaration by our country against them is deemed possible, and top military officers consider our military might frightening!;x
+AI_FEARS_US_DESC1_MEDIUM;An unnamed source in $TAG_0_0$ reports that the government there is preparing for the worst. A fictitious scenario involving a war declaration by our realm against them is deemed possible, and top military officers consider our military might frightening!;x
 AI_FEARS_US_DESC1_SHORT;Reports are coming in from an unnamed source in $TAG_0_0$ of a series of military meetings in their capital. It seems they deem an invasion by our troops a serious possibility! ;x
 AI_FEARS_US_TITLE2;$TAG_0_0$ fears we are coming!;x
-AI_FEARS_US_DESC2_LONG;A recent article in a $TAG_0_0_ADJ$ newspaper startled their country! A detailed analysis of the chilly relations between our countries and a careful comparison of our relative military strengths led the editor to the conclusion that our countries might soon find themselves in a state of war, and when that day comes, $TAG_0_0$'s very existence might be threatened. The elite and the commoners alike, the citizens of $TAG_0_0$ demand their government to seek alliance with a greater power to diminish the unavoidable threat we are posing.;x
-AI_FEARS_US_DESC2_MEDIUM;A recent article in a $TAG_0_0_ADJ$ newspaper startled their country! A detailed analysis of the chilly relations between our countries led the editor to the conclusion that absent new guarantees, our countries might soon find themselves in a state of war.;x
-AI_FEARS_US_DESC2_SHORT;A recent article in a $TAG_0_0_ADJ$ newspaper startled their country! Analysis of chilly relations between our countries led the editor to the conclusion that war might be unavoidable.;x
+AI_FEARS_US_DESC2_LONG;A recent article in a $TAG_0_0_ADJ$ newspaper startled their realm! A detailed analysis of the chilly relations between our realms and a careful comparison of our relative military strengths led the editor to the conclusion that our realms might soon find themselves in a state of war, and when that day comes, $TAG_0_0$'s very existence might be threatened. The elite and the commoners alike, the citizens of $TAG_0_0$ demand their government to seek alliance with a greater power to diminish the unavoidable threat we are posing.;x
+AI_FEARS_US_DESC2_MEDIUM;A recent article in a $TAG_0_0_ADJ$ newspaper startled their realm! A detailed analysis of the chilly relations between our realms led the editor to the conclusion that absent new guarantees, our realms might soon find themselves in a state of war.;x
+AI_FEARS_US_DESC2_SHORT;A recent article in a $TAG_0_0_ADJ$ newspaper startled their realm! Analysis of chilly relations between our realms led the editor to the conclusion that war might be unavoidable.;x
 AI_FEARS_US_TITLE3;$TAG_0_0_ADJ$ insults!;x
 AI_FEARS_US_DESC3_LONG;Prejudice and hatred reign in $TAG_0_0$. The growing chorus of insults reached new lows on Monday as the $TAG_0_0_ADJ$ foreign minister slapped our ambassador on the lawn of our embassy in $TAG_0_0$. When asked for comment, our minister for foreign affairs said that this was 'More proof, as if any was needed, that they cannot be trusted to behave in a civilised manner. Savages and cads govern in $TAG_0_0$, and the sooner these wretches are rooted out the better'. Diplomatic channels remain open for now, but war may be inevitable.;x
 AI_FEARS_US_DESC3_MEDIUM;Prejudice and hatred reign supreme in $TAG_0_0$. On Monday the $TAG_0_0_ADJ$ foreign minister slapped our ambassador. Our minister for foreign affairs said that 'savages and cads govern in $TAG_0_0$, and the sooner these wretches are rooted out, the better'.;x
 AI_FEARS_US_DESC3_SHORT;On Monday the $TAG_0_0_ADJ$ foreign minister slapped our ambassador. Savages and bounders govern in $TAG_0_0$, and the sooner these wretches are rooted out, the better.;x
 AI_FEARS_OTHER_TITLE1;The fears of $TAG_0_0$;x
-AI_FEARS_OTHER_DESC1_LONG;A recent article in a $TAG_0_0_ADJ$ newspaper startled their country! A detailed analysis of their chilly relations with $TAG_0_1$ and a comparison of their relative military strengths led the editor to the conclusion that both countries might soon find themselves in a state of war, and when that day comes, $TAG_0_0$'s very existence might be threatened. The elite and the commoners alike, the citizens of $TAG_0_0$ demand their government to seek alliances to diminish the unavoidable threat the $TAG_0_1_ADJ$ pose.;x
-AI_FEARS_OTHER_DESC1_MEDIUM;A recent article in a $TAG_0_0_ADJ$ newspaper startled their country! A detailed analysis of their chilly relations with $TAG_0_1$ led the editor to the conclusion that absent new guarantees, both countries might soon find themselves in the state of war.;x
-AI_FEARS_OTHER_DESC1_SHORT;A recent article in a $TAG_0_0_ADJ$ newspaper startled their country! Analysis of their chilly relations with $TAG_0_1$ led to the conclusion that war might be unavoidable.;x
+AI_FEARS_OTHER_DESC1_LONG;A recent article in a $TAG_0_0_ADJ$ newspaper startled their realm! A detailed analysis of their chilly relations with $TAG_0_1$ and a comparison of their relative military strengths led the editor to the conclusion that both realms might soon find themselves in a state of war, and when that day comes, $TAG_0_0$'s very existence might be threatened. The elite and the commoners alike, the citizens of $TAG_0_0$ demand their government to seek alliances to diminish the unavoidable threat the $TAG_0_1_ADJ$ pose.;x
+AI_FEARS_OTHER_DESC1_MEDIUM;A recent article in a $TAG_0_0_ADJ$ newspaper startled their realm! A detailed analysis of their chilly relations with $TAG_0_1$ led the editor to the conclusion that absent new guarantees, both realms might soon find themselves in the state of war.;x
+AI_FEARS_OTHER_DESC1_SHORT;A recent article in a $TAG_0_0_ADJ$ newspaper startled their realm! Analysis of their chilly relations with $TAG_0_1$ led to the conclusion that war might be unavoidable.;x
 AI_FEARS_OTHER_TITLE2;The $TAG_0_0_ADJ$ fear;x
 AI_FEARS_OTHER_DESC2_LONG;According to reports from the inner circles of the $TAG_0_0_ADJ$ government, the prevalent mood of all top officials is one of deep apprehension and fear. Many predict that rivalries between $TAG_0_1$ and them will spark an international conflict, one which $TAG_0_0$ might well lose. Therefore, it is rumoured they are considering the possibility that war might come to their doorstep, and are making concrete preparations should this happen. Fear seems to also be spreading to the population, who expect the worst: A cruel defeat.;x
-AI_FEARS_OTHER_DESC2_MEDIUM;The mood of $TAG_0_0_ADJ$ officials is one of frightful apprehension when it comes to the actions of $TAG_0_1$. Being ever watchful of their actions, many fear that an eventual war between both countries will result in a cruel defeat to $TAG_0_0$.;x
+AI_FEARS_OTHER_DESC2_MEDIUM;The mood of $TAG_0_0_ADJ$ officials is one of frightful apprehension when it comes to the actions of $TAG_0_1$. Being ever watchful of their actions, many fear that an eventual war between both realms will result in a cruel defeat to $TAG_0_0$.;x
 AI_FEARS_OTHER_DESC2_SHORT;Through local press reports, it seems the $TAG_0_0_ADJ$ population and government are suffering from a widespread fear of $TAG_0_1$'s military power. More on page 4.;x
 AI_LOVES_US_TITLE1;$TAG_0_0$: Our best friend;x
-AI_LOVES_US_DESC1_LONG;Have you ever considered fellow $TAG_0_0_ADJ$ citizens your best friends? Perhaps. However, it certainly seems they consider us as a target, not to fight against, but to befriend! A series of diplomats and envoys in our capital have been outspoken in their support for an alliance between our two great countries, should war break out. 'It is no wonder that we must pledge support to each other in these troubled times. When everyone around you is at each other's throats, a friend in need is a friend indeed!' said a diplomat in an interview.;x
-AI_LOVES_US_DESC1_MEDIUM;$TAG_0_0_ADJ$ diplomats in our capital are outspoken in their support for an alliance between our two great countries. According to governmental sources, relations between us and them are at an all time high and may even lead to a mutual pledge of military support soon.;x
+AI_LOVES_US_DESC1_LONG;Have you ever considered fellow $TAG_0_0_ADJ$ citizens your best friends? Perhaps. However, it certainly seems they consider us as a target, not to fight against, but to befriend! A series of diplomats and envoys in our capital have been outspoken in their support for an alliance between our two great realms, should war break out. 'It is no wonder that we must pledge support to each other in these troubled times. When everyone around you is at each other's throats, a friend in need is a friend indeed!' said a diplomat in an interview.;x
+AI_LOVES_US_DESC1_MEDIUM;$TAG_0_0_ADJ$ diplomats in our capital are outspoken in their support for an alliance between our two great realms. According to governmental sources, relations between us and them are at an all time high and may even lead to a mutual pledge of military support soon.;x
 AI_LOVES_US_DESC1_SHORT;The relations between the $TAG_0_0_ADJ$ government and ours have never been better. Political analysts say that they consider us as a potential ally and friend for peace and war.;x
 AI_LOVES_US_TITLE2;$TAG_0_0$ stands with us!;x
-AI_LOVES_US_DESC2_LONG;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of amiable relations between our countries. Calling on numerous examples of peaceful cooperation based on trust and friendship, the editor declared both our countries to stand as friends and brothers. Using words like 'trustworthy', 'reliable' and 'steadfast' to describe our relations, the newspaper encouraged $TAG_0_0$'s government to continue aligning themselves with our policies to pursue common interests and goals, and to strengthen mutual guarantees and assurances.;x
-AI_LOVES_US_DESC2_MEDIUM;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of amiable relations between our countries. Calling on numerous examples of peaceful cooperation based on trust and friendship, the editor declared both our countries to stand as friends and brothers.;x
-AI_LOVES_US_DESC2_SHORT;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of amiable relations between our countries. Editor encouraged their government to continue aligning themselves with our policies.;x
+AI_LOVES_US_DESC2_LONG;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of amiable relations between our realms. Calling on numerous examples of peaceful cooperation based on trust and friendship, the editor declared both our realms to stand as friends and brothers. Using words like 'trustworthy', 'reliable' and 'steadfast' to describe our relations, the newspaper encouraged $TAG_0_0$'s government to continue aligning themselves with our policies to pursue common interests and goals, and to strengthen mutual guarantees and assurances.;x
+AI_LOVES_US_DESC2_MEDIUM;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of amiable relations between our realms. Calling on numerous examples of peaceful cooperation based on trust and friendship, the editor declared both our realms to stand as friends and brothers.;x
+AI_LOVES_US_DESC2_SHORT;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of amiable relations between our realms. Editor encouraged their government to continue aligning themselves with our policies.;x
 AI_LOVES_US_TITLE3;$TAG_0_0$ knows its place!;x
-AI_LOVES_US_DESC3_LONG;"Common sense is the order of the day in $TAG_0_0$, as their government and people continue to be enamoured with all things $OURCOUNTRY_ADJ$. In the political, military and cultural spheres, our obviously apparent superiority is readily acknowledged by the snivelling wretches. The $TAG_0_0_ADJ$ foreign minister, in a shameful attempt to ingratiate himself with our elites, said ""We welcome the paternal and guiding hand of $OURCOUNTRY_ADJ$. Long may our countries' friendship continue, to our mutual benefit"". Whether that will be the case remains to be seen.";x
+AI_LOVES_US_DESC3_LONG;"Common sense is the order of the day in $TAG_0_0$, as their government and people continue to be enamoured with all things $OURCOUNTRY_ADJ$. In the political, military and cultural spheres, our obviously apparent superiority is readily acknowledged by the snivelling wretches. The $TAG_0_0_ADJ$ foreign minister, in a shameful attempt to ingratiate himself with our elites, said ""We welcome the paternal and guiding hand of $OURCOUNTRY_ADJ$. Long may our realms' friendship continue, to our mutual benefit"". Whether that will be the case remains to be seen.";x
 AI_LOVES_US_DESC3_MEDIUM;Common sense is the order of the day in the $TAG_0_0_ADJ$ capital, as their government and people continue to be enamoured with all things $OURCOUNTRY_ADJ$. In the political, military and cultural spheres, our obvious superiority is acknowledged by the wretches.;x
 AI_LOVES_US_DESC3_SHORT;The $TAG_0_0_ADJ$ government and people continue to be enamoured with $OURCOUNTRY$. In all spheres, our obvious superiority is readily acknowledged.;x
 AI_LOVES_OTHER_TITLE1;$TAG_0_0$'s relations;x
-AI_LOVES_OTHER_DESC1_LONG;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of their amiable relations with $TAG_0_1$. Calling on numerous examples of peaceful cooperation based on trust and friendship, the editor declared both countries to stand as friends and brothers. Using words like 'trustworthy', 'steadfast' and 'reliable' to describe their relations, the newspaper encouraged $TAG_0_0$'s government to continue aligning themselves with $TAG_0_1$'s policies to pursue common interests, and to strengthen mutual guarantees and assurances.;x
-AI_LOVES_OTHER_DESC1_MEDIUM;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of their amiable relations with $TAG_0_1$. Calling on numerous examples of peaceful cooperation based on trust and friendship, the editor declared both countries to stand as friends and brothers.;x
+AI_LOVES_OTHER_DESC1_LONG;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of their amiable relations with $TAG_0_1$. Calling on numerous examples of peaceful cooperation based on trust and friendship, the editor declared both realms to stand as friends and brothers. Using words like 'trustworthy', 'steadfast' and 'reliable' to describe their relations, the newspaper encouraged $TAG_0_0$'s government to continue aligning themselves with $TAG_0_1$'s policies to pursue common interests, and to strengthen mutual guarantees and assurances.;x
+AI_LOVES_OTHER_DESC1_MEDIUM;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of their amiable relations with $TAG_0_1$. Calling on numerous examples of peaceful cooperation based on trust and friendship, the editor declared both realms to stand as friends and brothers.;x
 AI_LOVES_OTHER_DESC1_SHORT;An article in a $TAG_0_0_ADJ$ newspaper paints a picture of their great relations with $TAG_0_1$. The editor called on the league with $TAG_0_1$ to be maintained.;x
 AI_LOVES_OTHER_TITLE2;$TAG_0_0_ADJ$-$TAG_0_1_ADJ$ relations;x
-AI_LOVES_OTHER_DESC2_LONG;Although history might have put our two countries at odds sometimes, it is clear that fate herself decided to bring us together!', said the $TAG_0_0_ADJ$ government spokesman yesterday in their country's capital, referring to the recent increase of cooperation with $TAG_0_1$. The abolition of some custom duties between both lands last year and the frequent visits of ambassadors from $TAG_0_0$ seem to show that a guarantee of friendship through a military alliance is indeed a solid possibility.;x
+AI_LOVES_OTHER_DESC2_LONG;Although history might have put our two realms at odds sometimes, it is clear that fate herself decided to bring us together!', said the $TAG_0_0_ADJ$ government spokesman yesterday in their realm's capital, referring to the recent increase of cooperation with $TAG_0_1$. The abolition of some custom duties between both lands last year and the frequent visits of ambassadors from $TAG_0_0$ seem to show that a guarantee of friendship through a military alliance is indeed a solid possibility.;x
 AI_LOVES_OTHER_DESC2_MEDIUM;Smiling $TAG_0_0_ADJ$ diplomats were seen yesterday at a summit in the $TAG_0_1_ADJ$ capital. '$TAG_0_1$ is our natural ally', mentioned one $TAG_0_0_ADJ$ official. Political analysts predict an alliance pact might be signed soon.;x
 OTHER_NEW_GP_TITLE1;The Rise of $TAG_0_1$;x
-OTHER_NEW_GP_DESC_LONG1;Following $TAG_0_0$'s decline, $TAG_0_1$ assumes higher standing among the countries of the world by ascending to the position of one of the great powers. Many a proof of $TAG_0_0$'s struggling economy, feeble military and waning prestige unveiled over the recent months, as their allies couldn't rely on their assistance and their government became a subject to foreign ploys. Their fall from the ranks of the worthy comes as benefit to $TAG_0_1$, expanding their global esteem, proving that nature doesn't tolerate a vacuum.;x
-OTHER_NEW_GP_DESC_MEDIUM1;Following $TAG_0_0$'s persisting decline, $TAG_0_1$ assumes higher standing among the countries of the world by ascending to the position of one of the great powers, expanding their global esteem, proving that nature doesn't tolerate a vacuum.;x
-OTHER_NEW_GP_DESC_SHORT1;Following $TAG_0_0$'s persisting decline, $TAG_0_1$ assumes higher standing among the countries of the world by ascending to the position of one of the great powers.;x
+OTHER_NEW_GP_DESC_LONG1;Following $TAG_0_0$'s decline, $TAG_0_1$ assumes higher standing among the realms of the world by ascending to the position of one of the great powers. Many a proof of $TAG_0_0$'s struggling economy, feeble military and waning prestige unveiled over the recent months, as their allies couldn't rely on their assistance and their government became a subject to foreign ploys. Their fall from the ranks of the worthy comes as benefit to $TAG_0_1$, expanding their global esteem, proving that nature doesn't tolerate a vacuum.;x
+OTHER_NEW_GP_DESC_MEDIUM1;Following $TAG_0_0$'s persisting decline, $TAG_0_1$ assumes higher standing among the realms of the world by ascending to the position of one of the great powers, expanding their global esteem, proving that nature doesn't tolerate a vacuum.;x
+OTHER_NEW_GP_DESC_SHORT1;Following $TAG_0_0$'s persisting decline, $TAG_0_1$ assumes higher standing among the realms of the world by ascending to the position of one of the great powers.;x
 WE_BECOME_GP_TITLE1;We benefit from $TAG_0_0$'s decline;x
-WE_BECOME_GP_DESC_LONG1;Following $TAG_0_0$'s decline, we assume our rightful standing among the countries of the world by ascending to the position of one of the great powers. Many a proof of $TAG_0_0$'s struggling economy, feeble military and waning prestige unveiled over the recent months, as their allies couldn't rely on their assistance and their government became subject to foreign ploys. Their demise from the ranks of the worthy comes as benefit to us, with our global influence and leadership replacing theirs, proving that nature does not tolerate a vacuum.;x
-WE_BECOME_GP_DESC_MEDIUM1;Following $TAG_0_0$'s decline, we assume our rightful standing among the countries of the world by ascending to the position of one of the great powers. Their demise from the ranks of the worthy comes as benefit to us, with our global influence replacing theirs.;x
-WE_BECOME_GP_DESC_SHORT1;Following $TAG_0_0$'s decline, we assume our rightful standing among the countries of the world by ascending to the position of one of the great powers.;x
+WE_BECOME_GP_DESC_LONG1;Following $TAG_0_0$'s decline, we assume our rightful standing among the realms of the world by ascending to the position of one of the great powers. Many a proof of $TAG_0_0$'s struggling economy, feeble military and waning prestige unveiled over the recent months, as their allies couldn't rely on their assistance and their government became subject to foreign ploys. Their demise from the ranks of the worthy comes as benefit to us, with our global influence and leadership replacing theirs, proving that nature does not tolerate a vacuum.;x
+WE_BECOME_GP_DESC_MEDIUM1;Following $TAG_0_0$'s decline, we assume our rightful standing among the realms of the world by ascending to the position of one of the great powers. Their demise from the ranks of the worthy comes as benefit to us, with our global influence replacing theirs.;x
+WE_BECOME_GP_DESC_SHORT1;Following $TAG_0_0$'s decline, we assume our rightful standing among the realms of the world by ascending to the position of one of the great powers.;x
 WE_LOSE_GP_TITLE1;$TAG_0_1$ benefits from our decline;x
-WE_LOSE_GP_DESC_LONG1;Following our country's persisting decline, $TAG_0_1$ assumes higher standing among the countries of the world by ascending to the position of one of the great powers. Many a proof of our struggling economy, feeble military and waning prestige unveiled over the recent months, as our allies couldn't rely on our assistance and our government became a subject to foreign ploys. Our demise from the ranks of the worthy comes as benefit to $TAG_0_1$, expanding their global esteem, proving that nature doesn't tolerate a vacuum.;x
-WE_LOSE_GP_DESC_MEDIUM1;Following our country's persisting decline, $TAG_0_1$ assumes higher standing among the countries of the world by ascending to the position of one of the great powers, expanding their global esteem, proving that nature doesn't tolerate a vacuum.;x
-WE_LOSE_GP_DESC_SHORT1;Following our country's persisting decline, $TAG_0_1$ assumes higher standing among the countries of the world by ascending to the position of one of the great powers.;x
+WE_LOSE_GP_DESC_LONG1;Following our realm's persisting decline, $TAG_0_1$ assumes higher standing among the realms of the world by ascending to the position of one of the great powers. Many a proof of our struggling economy, feeble military and waning prestige unveiled over the recent months, as our allies couldn't rely on our assistance and our government became a subject to foreign ploys. Our demise from the ranks of the worthy comes as benefit to $TAG_0_1$, expanding their global esteem, proving that nature doesn't tolerate a vacuum.;x
+WE_LOSE_GP_DESC_MEDIUM1;Following our realm's persisting decline, $TAG_0_1$ assumes higher standing among the realms of the world by ascending to the position of one of the great powers, expanding their global esteem, proving that nature doesn't tolerate a vacuum.;x
+WE_LOSE_GP_DESC_SHORT1;Following our realm's persisting decline, $TAG_0_1$ assumes higher standing among the realms of the world by ascending to the position of one of the great powers.;x
 CRISIS_START_TITLE1;Crisis set in motion!;x
 CRISIS_START_DESC_LONG1;Whether there still remains any hope to resolve the matter peacefully, noone is able to tell at this point, as great powers of the world lock themselves in the power struggle of the commencing international crisis. A diplomatic settlement of the matter might still remain within reach, but the clock on reaching one quickly runs out, and as the belligerent participants delay the resolution by drawing lines in sand and flexing their muscles in politics of attrition and coercion to reduce or avoid concessions, they might soon find themselves in the dreaded state of war.;x
 CRISIS_START_DESC_MEDIUM1;Great powers of the world lock themselves in a power struggle. A diplomatic settlement of the matter might still remain within reach, but the clock on reaching one quickly runs out, as the belligerent parties delay the resolution by drawing lines in sand and flexing their muscles.;x
@@ -5744,7 +5744,7 @@ CRISIS_END_DESC_LONG1;It is peace for our time', great powers announce, emerging
 CRISIS_END_DESC_MEDIUM1;It is peace for our time', great powers announce, emerging from the summit negotiations with a diplomatic resolution to the brewing international crisis, which many claimed might have plunged them into the dreaded state of war if a compromise was not reached.;x
 CRISIS_END_DESC_SHORT1;It is peace for our time', great powers announce, emerging from the summit negotiations with a diplomatic resolution to the brewing international crisis, averting the possiblity of war.;x
 RESEARCH_NEWS_TITLE_LARGE2;Breakthrough in $TAG_0_0$!;x
-RESEARCH_NEWS_LARGE2;$TAG_0_0_ADJ$ scientists have announced yesterday that after months of dedicated and focused research, a new breakthrough in the field of $STRING_0_1$ has been made. It is expected that the entrepreneurs and government of $TAG_0_0$ will soon start putting this newly acquired knowledge to good use, applying it in practical ways throughout the country.;x
+RESEARCH_NEWS_LARGE2;$TAG_0_0_ADJ$ scientists have announced yesterday that after months of dedicated and focused research, a new breakthrough in the field of $STRING_0_1$ has been made. It is expected that the entrepreneurs and government of $TAG_0_0$ will soon start putting this newly acquired knowledge to good use, applying it in practical ways throughout the realm.;x
 RESEARCH_NEWS_TITLE_MEDIUM2;Breakthrough in $TAG_0_0$!;x
 RESEARCH_NEWS_MEDIUM2;$TAG_0_0_ADJ$ scientists have announced a breakthrough in the field of $STRING_0_1$. This new knowledge will soon be applied in practical ways, said one of the researchers.;x
 RESEARCH_NEWS_TITLE_SMALL2;Breakthrough in $TAG_0_0$!;x
@@ -5782,8 +5782,8 @@ OTHER_NEW_GP_DESC_LONG2;$TAG_0_1$ has been growing in status for a number of yea
 OTHER_NEW_GP_DESC_MEDIUM2;$TAG_0_1$ has been widely accepted as a Great Power by the international community. This recognises the steady growth in power of the state, but has not been universally welcomed. $TAG_0_0$ is now considered a mere secondary power, much to their dismay.;x
 OTHER_NEW_GP_DESC_SHORT2;The rising state of $TAG_0_1$ has displaced $TAG_0_0$ as a Great Power in the eyes of the international community, following shifts in status and international influence. ;x
 AI_LOVES_US_TITLE4;Warm Relations;x
-AI_LOVES_US_DESC4_LONG;Our correspondent has been told by his sources within the Foreign office that in the last few weeks, the leader of $TAG_0_0$ made a grand speech to his people praising our country and the achievements of our people. It is believed that the speech is an attempt by $TAG_0_0$ to draw closer to our mighty country and it we must response to these overtures with the courtesy typical of the $TAG_0_1_ADJ$ people. We praise these attempts and hope that they will lead to a continued period of collaboration between our two glorious countries.;x
-AI_LOVES_US_DESC4_MEDIUM;After a reportedly very productive meeting with our ambassador last week, a representative of the $TAG_0_0_ADJ$ people gave a speech on the steps of the Foreign office praising our country and government, opening the door to a new dialogue of collaboration and partnership.;x
+AI_LOVES_US_DESC4_LONG;Our correspondent has been told by his sources within the Foreign office that in the last few weeks, the leader of $TAG_0_0$ made a grand speech to his people praising our realm and the achievements of our people. It is believed that the speech is an attempt by $TAG_0_0$ to draw closer to our mighty realm and it we must response to these overtures with the courtesy typical of the $TAG_0_1_ADJ$ people. We praise these attempts and hope that they will lead to a continued period of collaboration between our two glorious realms.;x
+AI_LOVES_US_DESC4_MEDIUM;After a reportedly very productive meeting with our ambassador last week, a representative of the $TAG_0_0_ADJ$ people gave a speech on the steps of the Foreign office praising our realm and government, opening the door to a new dialogue of collaboration and partnership.;x
 AI_LOVES_US_DESC4_SHORT;A new era of Friendship between our nations has begun' These were the words of the $TAG_0_0_ADJ$ Ambassador as he spoke to assembled journalists following talks in the capital.;x
 INVENTION_NEWS_TITLE_LARGE2;New patent!;x
 INVENTION_NEWS_LARGE2;Science Report: Improvements and innovations in the field of $STRING_0_1$ have been patented and registered by researchers in $TAG_0_0$. The documentation of these advancements, although currently a secret kept behind closed doors, is expected to progressively spread to other lands and in time contribute to the progress of science in the world. ;x
@@ -5792,7 +5792,7 @@ INVENTION_NEWS_MEDIUM2;Improvements and innovations in the field of $STRING_0_1$
 INVENTION_NEWS_TITLE_SMALL2;New patent!;x
 INVENTION_NEWS_SMALL2;New improvements and innovations in the field of $STRING_0_1$ have been patented in $TAG_0_0$. ;x
 EDITORIAL_ABSMON;Editorial: why it is right and proper to hate anti-legitimists - providence itself demands it! Why, these ne’er-do-wells would have the peasant rabble govern themselves (see page 10) ;x
-EDITORIAL_PRUCON;Editorial: why it is right to hate reformists of every stripe - the natural order demands it! Why, these liberal speculators and cosmopolitans would run our country as a whorehouse (see page 10);x
+EDITORIAL_PRUCON;Editorial: why it is right to hate reformists of every stripe - the natural order demands it! Why, these liberal speculators and cosmopolitans would run our realm as a whorehouse (see page 10);x
 EDITORIAL_CONMON;Editorial: why it is right to hate republicans - stability demands it! Why, without a figurehead to smile benevolently upon us, intrigue and the guillotine will destroy us all (page 10);x
 EDITORIAL_DEMOCRACY;Editorial: why it is right to hate revolutionaries of every stripe - because they cannot be bribed! Why, men of such zeal and ridgid doctrinism show no respect for the rule of law (pg. 10);x
 EDITORIAL_PRESDICT;Editorial: why it is right to hate subversives - the President demands it! Why, these criminals only yesterday crudely vandalised a marble statue of his Excellency in the capital (see page 10);x
@@ -5817,7 +5817,7 @@ WAR_WE_ACCEPT_BTN1;OK;x
 WAR_WE_ACCEPT_BTN2;OK;x
 WAR_WE_ACCEPT_BTN3;Go to;x
 WAR_WE_ACCEPT_MAP;WAR!;x
-WAR_OTHER_ACCEPT_SETUP;When a country declares war on another country;x
+WAR_OTHER_ACCEPT_SETUP;When a realm declares war on another realm;x
 WAR_OTHER_ACCEPT_HEADER;The Foreign Minister reports;x
 WAR_OTHER_ACCEPT_1;$AGRESSOR$;x
 WAR_OTHER_ACCEPT_2;$MONARCHTITLE$, $AGRESSOR$;x
@@ -5830,7 +5830,7 @@ WAR_OTHER_ACCEPT_BTN1;OK;x
 WAR_OTHER_ACCEPT_BTN2;OK;x
 WAR_OTHER_ACCEPT_BTN3;Go to;x
 DECLWAR_LIMITED;This war is a limited war.;x
-WAR_THEY_ACCEPT_SETUP;When we declare war on another country;x
+WAR_THEY_ACCEPT_SETUP;When we declare war on another realm;x
 WAR_THEY_ACCEPT_HEADER;The Foreign Minister reports;x
 WAR_THEY_ACCEPT_1;We declared war on;x
 WAR_THEY_ACCEPT_2;$DEFENDER$;x
@@ -5901,9 +5901,9 @@ DIPLOMACY_CAN_INTERVENE;Intervene in War;x
 DIPLOMACY_CANNOT_INTERVENE;Intervene in War\nWe cannot join this side because:;x
 DIPLOMACY_OPINION_INFLUENCE;Opinion of §Y$GP$§W: §Y$OPINION$§W;x
 DIPLOMACY_OPINION_INFLUENCE2;§Y$GP_ADJ$§W influence: §Y$VALUE$§W;x
-DIPLOMACY_SET_PRIO_DESC;Influence represents a §YGreat Power§W's clout inside a country.;x
-DIPLOMACY_PRIMARYCULTURE_DESC;The primary culture represents people who are first-class citizens in our country;x
-DIPLOMACY_ACCEPTEDCULTURE_DESC;Our accepted culture(s) are people that are tolerated in our country;x
+DIPLOMACY_SET_PRIO_DESC;Influence represents a §YGreat Power§W's clout inside a realm.;x
+DIPLOMACY_PRIMARYCULTURE_DESC;The primary culture represents people who are first-class citizens in our realm;x
+DIPLOMACY_ACCEPTEDCULTURE_DESC;Our accepted culture(s) are people that are tolerated in our realm;x
 PROJECT_BUILD;Build;x
 PROJECT_REOPEN;Reopen;x
 PROJECT_EXPAND;Expand;x
@@ -5919,7 +5919,7 @@ TAX_MIDDLE_DESC;This controls how much of the middle strata's income will be col
 TAX_RICH_DESC;This controls how much of the rich strata's income will be collected as tax. Too heavy taxation will leave them less money to spend on their own needs and less likely to invest in projects like building new factories.;x
 MIL_COST_DESC;Supply costs for your military.;x
 NAT_STOCK_DESC;Costs of trades to fill our national stockpile.;x
-TARIFFS_DESC;Tariffs impose an extra cost on imported goods, with the proceeds going to the national treasury. Negative tariffs can be used to help subsidize imports for anyone in your country;x
+TARIFFS_DESC;Tariffs impose an extra cost on imported goods, with the proceeds going to the national treasury. Negative tariffs can be used to help subsidize imports for anyone in your realm;x
 WARSUBSIDIES_EXPENSE;War subsidies: §R$VAL$§W;x
 WARINDEMNITIES_EXPENSE;War indemnities: §R$VAL$§W;x
 WARSUBSIDIES_INCOME;War subsidies: §G$VAL$§W;x
@@ -5998,12 +5998,12 @@ BUILDING_INFRASTRUCTURE;Infrastructure: §Y$VALUE$§W;x
 UNITVIEW_POP_INFO;§Y$TYPE$§W from §Y$LOC$§W.;x
 UNITVIEW_POP_INFO_FACTION;Part of §Y$FACTION$§W.;x
 SCHOOL_EFFECT;Change to §Y$NAME$§W!\n;x
-SOCIAL_DESC2;The social spending budget goes towards funding your enacted social reforms. The amount of money to distribute depends on your §YCountry administrative efficiency§W;x
+SOCIAL_DESC2;The social spending budget goes towards funding your enacted social reforms. The amount of money to distribute depends on your §YRealm administrative efficiency§W;x
 HAVE_INDUSTRIAL_SCORE_MORE_THAN;Have a higher Industrial Score than: ;x
 STATE_NONCORES;Non-core provinces in state: §R$VALUE$§W;x
-DIPLOMACY_CANNOT_SET_PRIO_VASSAL;We cannot influence other countries' §YVassals§W or §YDominions§W;x
+DIPLOMACY_CANNOT_SET_PRIO_VASSAL;We cannot influence other realms' §YVassals§W or §YDominions§W;x
 DIPLOMACY_NEGOTIATE_VASSAL;We are not allowed to negotiate with §YVassals§W or §YDominions§W;x
-DIPLOMACY_NEGOTIATE_WE_VASSAL;We are not allowed to negotiate with countries if we are a §YVassal§W or §YDominion§W;x
+DIPLOMACY_NEGOTIATE_WE_VASSAL;We are not allowed to negotiate with realms if we are a §YVassal§W or §YDominion§W;x
 PW_OPEN_POPSCREEN;View population statistics for §Y$LOC$§W;x
 HAVE_MILITARY_SCORE_MORE_THAN;Have a higher Military Score than: ;x
 PRODUCTIONVIEW_FACTORY;§YFactory§W;x
@@ -6018,8 +6018,8 @@ BUDGET_CONSUMED_OVERSEAS;Estimated cost of last day's Overseas goods consumption
 BUDGET_OVERSEAS_PROVINCES;Number of overseas provinces: §Y$VALUE$§W;x
 BUDGET_AVG_TAX_EFFICIENCY;Average State Administrative Efficiency: §Y$VALUE$%§W;x
 BUDGET_AVG_TAX_EFFECT;Average effective tax: §Y$VALUE$%§W;x
-BUDGET_ADMIN_EFFICIENCY2;Country administrative efficiency: §Y$PERC$%§W;x
-BUDGET_ADMIN_EFFICIENCY_DESC2;Our §YCountry administrative efficiency§W determines the effectiveness of social reforms and tariffs;x
+BUDGET_ADMIN_EFFICIENCY2;Realm administrative efficiency: §Y$PERC$%§W;x
+BUDGET_ADMIN_EFFICIENCY_DESC2;Our §YRealm administrative efficiency§W determines the effectiveness of social reforms and tariffs;x
 PV_STATE_ADM_EFF;Our §YState administrative efficiency§W determines how effective we are at collecting taxes;x
 PV_STATE_ADM_EFF_CURRENT;§Y$STRATA$§W Effective tax: §Y$PERC2$%§W (Current tax setting: §Y$PERC$%§W);x
 BUDGET_TARIFFS_MODIFIED;Effective tariffs: §Y$PERC$%§W;x
@@ -6037,82 +6037,82 @@ PRODUCTION_BUILDING_FACTORY_PROGRESS_TOOLTIP;§G$PERC$%§W done, §Y$DAYS$§W days l
 PRODUCTION_CURRENT_PRIORITY_TOOLTIP;Current priority: §Y$VALUE$§W;x
 PRODUCTION_CANCEL_SUBSIDIES;Cancel subsidies;x
 PRODUCTION_MONEY_NEEDED;Money needed: $VALUE$;x
-PRODUCTION_TAB_PRODUCTION;Shows production overview of our country. Also shows the production output of each of our producers;x
+PRODUCTION_TAB_PRODUCTION;Shows production overview of our realm. Also shows the production output of each of our producers;x
 PRODUCTION_TAB_PROJECTS;Shows what our §Y$POPTYPE$§W are planning to build;x
-PRODUCTION_NOTHING_PRODUCED;We are not producing any §Y$GOOD$§W in our country;x
+PRODUCTION_NOTHING_PRODUCED;We are not producing any §Y$GOOD$§W in our realm;x
 PRODUCTION_PRODUCING_EACH_DAY;Our §Y$TYPE$§W are producing §Y$VALUE$ $GOOD$§W each day;x
 PRODUCTION_WANTS_EACH_DAY;Our §Y$TYPE$§W needs §Y$VALUE$ $GOOD$§W each day;x
-WARSUBSIDIES_THEY_ACCEPT_SETUP;When we start giving war subsidies to a country;x
-WARSUBSIDIES_WE_ACCEPT_SETUP;When a country start giving us war subsidies;x
-WARSUBSIDIES_OTHER_ACCEPT_SETUP;When a country start giving war subsidies to another nation;x
-CANCEL_WARSUBSIDIES_THEY_ACCEPT_SETUP;When we cancel our war subsidies to a country;x
-CANCEL_WARSUBSIDIES_WE_ACCEPT_SETUP;When a country cancels their war subsidies to us;x
-CANCEL_WARSUBSIDIES_OTHER_ACCEPT_SETUP;When a country cancels their war subsidies to another nation;x
-ASKMILITARYACCESS_THEY_ACCEPT_SETUP;When a country accept our military access request;x
-ASKMILITARYACCESS_WE_ACCEPT_SETUP;When we accept a country's military access request;x
-ASKMILITARYACCESS_OTHER_ACCEPT_SETUP;When a country accepts another countries's military access request;x
-ASKMILITARYACCESS_THEY_DECLINE_SETUP;When a country declines our military access request;x
-ASKMILITARYACCESS_WE_DECLINE_SETUP;When we decline a country's military access request;x
-ASKMILITARYACCESS_OTHER_DECLINE_SETUP;When a country declines another country's military access request;x
-CANCELASKMILITARYACCESS_THEY_ACCEPT_SETUP;When we cancel military access rights to another country;x
-CANCELASKMILITARYACCESS_WE_ACCEPT_SETUP;When a country cancels their military access rights to our country;x
-CANCELASKMILITARYACCESS_OTHER_ACCEPT_SETUP;When a country cancels their military access rights to another nation;x
-GIVEMILITARYACCESS_THEY_ACCEPT_SETUP;When we grant another country military access rights to our country;x
-GIVEMILITARYACCESS_WE_ACCEPT_SETUP;When a country grants us military access rights to their country;x
-GIVEMILITARYACCESS_OTHER_ACCEPT_SETUP;When a country grants another country military access rights to their country;x
+WARSUBSIDIES_THEY_ACCEPT_SETUP;When we start giving war subsidies to a realm;x
+WARSUBSIDIES_WE_ACCEPT_SETUP;When a realm start giving us war subsidies;x
+WARSUBSIDIES_OTHER_ACCEPT_SETUP;When a realm start giving war subsidies to another nation;x
+CANCEL_WARSUBSIDIES_THEY_ACCEPT_SETUP;When we cancel our war subsidies to a realm;x
+CANCEL_WARSUBSIDIES_WE_ACCEPT_SETUP;When a realm cancels their war subsidies to us;x
+CANCEL_WARSUBSIDIES_OTHER_ACCEPT_SETUP;When a realm cancels their war subsidies to another nation;x
+ASKMILITARYACCESS_THEY_ACCEPT_SETUP;When a realm accept our military access request;x
+ASKMILITARYACCESS_WE_ACCEPT_SETUP;When we accept a realm's military access request;x
+ASKMILITARYACCESS_OTHER_ACCEPT_SETUP;When a realm accepts another realm's military access request;x
+ASKMILITARYACCESS_THEY_DECLINE_SETUP;When a realm declines our military access request;x
+ASKMILITARYACCESS_WE_DECLINE_SETUP;When we decline a realm's military access request;x
+ASKMILITARYACCESS_OTHER_DECLINE_SETUP;When a realm declines another realm's military access request;x
+CANCELASKMILITARYACCESS_THEY_ACCEPT_SETUP;When we cancel military access rights to another realm;x
+CANCELASKMILITARYACCESS_WE_ACCEPT_SETUP;When a realm cancels their military access rights to our realm;x
+CANCELASKMILITARYACCESS_OTHER_ACCEPT_SETUP;When a realm cancels their military access rights to another nation;x
+GIVEMILITARYACCESS_THEY_ACCEPT_SETUP;When we grant another realm military access rights to our realm;x
+GIVEMILITARYACCESS_WE_ACCEPT_SETUP;When a realm grants us military access rights to their realm;x
+GIVEMILITARYACCESS_OTHER_ACCEPT_SETUP;When a realm grants another realm military access rights to their realm;x
 GIVEMILITARYACCESS_THEY_DECLINE_SETUP;When our military access offer is rejected;x
-GIVEMILITARYACCESS_WE_DECLINE_SETUP;When we reject a military access offer from another country;x
-GIVEMILITARYACCESS_OTHER_DECLINE_SETUP;When a country rejects a military access offer from another country;x
-CANCELGIVEMILITARYACCESS_THEY_ACCEPT_SETUP;When we cancel military access rights to our country;x
-CANCELGIVEMILITARYACCESS_WE_ACCEPT_SETUP;When a country cancels our military access rights to their country;x
-CANCELGIVEMILITARYACCESS_OTHER_ACCEPT_SETUP;When a country cancels another country's military access rights to their country;x
-ALLIANCE_THEY_ACCEPT_SETUP;When a country accepts our alliance offer;x
-ALLIANCE_OTHER_ACCEPT_SETUP;When a country accepts another country's alliance offer;x
-ALLIANCE_THEY_DECLINE_SETUP;When a country declines our alliance offer;x
-ALLIANCE_WE_DECLINE_SETUP;When we decline another country's alliance offer;x
-ALLIANCE_OTHER_DECLINE_SETUP;When a country declines another country's alliance offer;x
-CANCELALLIANCE_THEY_ACCEPT_SETUP;When we cancel an alliance with another country;x
-CANCELALLIANCE_WE_ACCEPT_SETUP;When a country cancels their alliance with us;x
-CANCELALLIANCE_OTHER_ACCEPT_SETUP;When a country cancels their alliance with another country;x
-CALLALLY_THEY_ACCEPT_SETUP;When a country accepts our call to arms;x
-CALLALLY_WE_ACCEPT_SETUP;When we accept a country's call to arms;x
-CALLALLY_OTHER_ACCEPT_SETUP;When a country accepts another country's call to arms;x
-CALLALLY_THEY_DECLINE_SETUP;When a country declines our call to arms;x
-CALLALLY_WE_DECLINE_SETUP;When we decline a country's call to arms;x
-CALLALLY_OTHER_DECLINE_SETUP;When a country declines another country's call to arms;x
-DISCREDIT_THEY_ACCEPT_SETUP;When we discredit a country;x
-DISCREDIT_WE_ACCEPT_SETUP;When a country discredits another country in our country;x
-DISCREDIT_OTHER_ACCEPT_SETUP;When a country discredits another country;x
-EXPELADVISORS_THEY_ACCEPT_SETUP;When we expel the advisers of a country;x
-EXPELADVISORS_WE_ACCEPT_SETUP;When a country expels the advisers of another country in our country;x
-EXPELADVISORS_OTHER_ACCEPT_SETUP;When a country expels the advisers of another country;x
-BANEMBASSY_THEY_ACCEPT_SETUP;When we ban the embassy of a country;x
-BANEMBASSY_WE_ACCEPT_SETUP;When a country bans the embassy of another country in our country;x
-BANEMBASSY_OTHER_ACCEPT_SETUP;When a country bans the embassy of another country;x
-INCREASEOPINION_THEY_ACCEPT_SETUP;When we increase the opinion of us in a country;x
-INCREASEOPINION_WE_ACCEPT_SETUP;When a country increases the opinion of themselves in our country;x
-INCREASEOPINION_OTHER_ACCEPT_SETUP;When a country increases the opinion of themselves in another country;x
-DECREASEOPINION_THEY_ACCEPT_SETUP;When we decrease the opinion of another country;x
-DECREASEOPINION_WE_ACCEPT_SETUP;When a country decreases the opinion of another country in our country;x
-DECREASEOPINION_OTHER_ACCEPT_SETUP;When a country decreases the opinion of another country;x
-ADDTOSPHERE_THEY_ACCEPT_SETUP;When we add a country to our Sphere of Influence;x
-ADDTOSPHERE_WE_ACCEPT_SETUP;When we are added to a country's Sphere of Influence;x
-ADDTOSPHERE_OTHER_ACCEPT_SETUP;When a country is added to another country's Sphere of Influence;x
-REMOVEFROMSPHERE_THEY_ACCEPT_SETUP;When we remove a country from another country's Sphere of Influence;x
-REMOVEFROMSPHERE_WE_ACCEPT_SETUP;When we are removed from another country's Sphere of Influence;x
-REMOVEFROMSPHERE_OTHER_ACCEPT_SETUP;When a country is removed from another country's Sphere of Influence;x
-INCREASERELATION_THEY_ACCEPT_SETUP;When we increase our relations with a country;x
-INCREASERELATION_WE_ACCEPT_SETUP;When a country increases their relations with us;x
-INCREASERELATION_OTHER_ACCEPT_SETUP;When a country increases their relations with another country;x
-DECREASERELATION_THEY_ACCEPT_SETUP;When we decrease our relations with a country;x
-DECREASERELATION_WE_ACCEPT_SETUP;When a country decreases their relations with us;x
-DECREASERELATION_OTHER_ACCEPT_SETUP;When a country decreases their relations with another nation;x
-WETARGET_DISCREDIT_SETUP;When we have been discredited by another country;x
-WETARGET_EXPELADVISORS_SETUP;When our advisers have been expelled by another country;x
-WETARGET_BANEMBASSY_SETUP;When our embassy has been banned by another country;x
-WETARGET_DECREASEOPINION_SETUP;When a country lowers the opinion of us in another country;x
-WETARGET_REMOVEFROMSPHERE_SETUP;When a country removes another country from our Sphere of Influence;x
-WAR_WE_ACCEPT_SETUP;When a country declares war on us;x
+GIVEMILITARYACCESS_WE_DECLINE_SETUP;When we reject a military access offer from another realm;x
+GIVEMILITARYACCESS_OTHER_DECLINE_SETUP;When a realm rejects a military access offer from another realm;x
+CANCELGIVEMILITARYACCESS_THEY_ACCEPT_SETUP;When we cancel military access rights to our realm;x
+CANCELGIVEMILITARYACCESS_WE_ACCEPT_SETUP;When a realm cancels our military access rights to their realm;x
+CANCELGIVEMILITARYACCESS_OTHER_ACCEPT_SETUP;When a realm cancels another realm's military access rights to their realm;x
+ALLIANCE_THEY_ACCEPT_SETUP;When a realm accepts our alliance offer;x
+ALLIANCE_OTHER_ACCEPT_SETUP;When a realm accepts another realm's alliance offer;x
+ALLIANCE_THEY_DECLINE_SETUP;When a realm declines our alliance offer;x
+ALLIANCE_WE_DECLINE_SETUP;When we decline another realm's alliance offer;x
+ALLIANCE_OTHER_DECLINE_SETUP;When a realm declines another realm's alliance offer;x
+CANCELALLIANCE_THEY_ACCEPT_SETUP;When we cancel an alliance with another realm;x
+CANCELALLIANCE_WE_ACCEPT_SETUP;When a realm cancels their alliance with us;x
+CANCELALLIANCE_OTHER_ACCEPT_SETUP;When a realm cancels their alliance with another realm;x
+CALLALLY_THEY_ACCEPT_SETUP;When a realm accepts our call to arms;x
+CALLALLY_WE_ACCEPT_SETUP;When we accept a realm's call to arms;x
+CALLALLY_OTHER_ACCEPT_SETUP;When a realm accepts another realm's call to arms;x
+CALLALLY_THEY_DECLINE_SETUP;When a realm declines our call to arms;x
+CALLALLY_WE_DECLINE_SETUP;When we decline a realm's call to arms;x
+CALLALLY_OTHER_DECLINE_SETUP;When a realm declines another realm's call to arms;x
+DISCREDIT_THEY_ACCEPT_SETUP;When we discredit a realm;x
+DISCREDIT_WE_ACCEPT_SETUP;When a realm discredits another realm in our realm;x
+DISCREDIT_OTHER_ACCEPT_SETUP;When a realm discredits another realm;x
+EXPELADVISORS_THEY_ACCEPT_SETUP;When we expel the advisers of a realm;x
+EXPELADVISORS_WE_ACCEPT_SETUP;When a realm expels the advisers of another realm in our realm;x
+EXPELADVISORS_OTHER_ACCEPT_SETUP;When a realm expels the advisers of another realm;x
+BANEMBASSY_THEY_ACCEPT_SETUP;When we ban the embassy of a realm;x
+BANEMBASSY_WE_ACCEPT_SETUP;When a realm bans the embassy of another realm in our realm;x
+BANEMBASSY_OTHER_ACCEPT_SETUP;When a realm bans the embassy of another realm;x
+INCREASEOPINION_THEY_ACCEPT_SETUP;When we increase the opinion of us in a realm;x
+INCREASEOPINION_WE_ACCEPT_SETUP;When a realm increases the opinion of themselves in our realm;x
+INCREASEOPINION_OTHER_ACCEPT_SETUP;When a realm increases the opinion of themselves in another realm;x
+DECREASEOPINION_THEY_ACCEPT_SETUP;When we decrease the opinion of another realm;x
+DECREASEOPINION_WE_ACCEPT_SETUP;When a realm decreases the opinion of another realm in our realm;x
+DECREASEOPINION_OTHER_ACCEPT_SETUP;When a realm decreases the opinion of another realm;x
+ADDTOSPHERE_THEY_ACCEPT_SETUP;When we add a realm to our Sphere of Influence;x
+ADDTOSPHERE_WE_ACCEPT_SETUP;When we are added to a realm's Sphere of Influence;x
+ADDTOSPHERE_OTHER_ACCEPT_SETUP;When a realm is added to another realm's Sphere of Influence;x
+REMOVEFROMSPHERE_THEY_ACCEPT_SETUP;When we remove a realm from another realm's Sphere of Influence;x
+REMOVEFROMSPHERE_WE_ACCEPT_SETUP;When we are removed from another realm's Sphere of Influence;x
+REMOVEFROMSPHERE_OTHER_ACCEPT_SETUP;When a realm is removed from another realm's Sphere of Influence;x
+INCREASERELATION_THEY_ACCEPT_SETUP;When we increase our relations with a realm;x
+INCREASERELATION_WE_ACCEPT_SETUP;When a realm increases their relations with us;x
+INCREASERELATION_OTHER_ACCEPT_SETUP;When a realm increases their relations with another realm;x
+DECREASERELATION_THEY_ACCEPT_SETUP;When we decrease our relations with a realm;x
+DECREASERELATION_WE_ACCEPT_SETUP;When a realm decreases their relations with us;x
+DECREASERELATION_OTHER_ACCEPT_SETUP;When a realm decreases their relations with another nation;x
+WETARGET_DISCREDIT_SETUP;When we have been discredited by another realm;x
+WETARGET_EXPELADVISORS_SETUP;When our advisers have been expelled by another realm;x
+WETARGET_BANEMBASSY_SETUP;When our embassy has been banned by another realm;x
+WETARGET_DECREASEOPINION_SETUP;When a realm lowers the opinion of us in another realm;x
+WETARGET_REMOVEFROMSPHERE_SETUP;When a realm removes another realm from our Sphere of Influence;x
+WAR_WE_ACCEPT_SETUP;When a realm declares war on us;x
 PEACE_WE_ACCEPT_SETUP;When we accept a peace offer;x
 HAVE_MORE_NATIONAL_PROVINCES_OCCUPIED_THAN;The percentage of occupied national provinces is greater than: ;x
 BLOCKADE_PENALTY_MORE_THAN;The percentage of blockaded ports is greater than: ;x
@@ -6122,8 +6122,8 @@ PEACE_THEY_DECLINE_5;Terms: $TERMS$;x
 PEACE_OTHER_DECLINE_6;Terms: $TERMS$;x
 INCREASERELATION_WE_ACCEPT_LOG;$ACTOR$ has increased their relations with us.;x
 DECREASERELATION_WE_ACCEPT_LOG;$ACTOR$ has decreased their relations with us.;x
-WAR_DESC;Declaring war will allow our troops to attack theirs and allow us to enter their country. War will continue until either party surrenders.;x
-ATWAR;The country is at war;x
+WAR_DESC;Declaring war will allow our troops to attack theirs and allow us to enter their realm. War will continue until either party surrenders.;x
+ATWAR;The realm is at war;x
 ADD_WARGOAL_DESC;Require $COST$ war score to demand;x
 ADD_WARGOAL_PEACE_COST;Costs $COST$ war score to demand in a peace deal;x
 ADD_WARGOAL_INFAMY;If we add this war goal to our war, we will gain $COST$ §Yinfamy§W;x
@@ -6134,15 +6134,15 @@ PROVINCEVIEW_FROM_LOCAL_TAX;From State administrative efficiency: §Y+;x
 INCREASERELATIONTITLE;Increase Relations;x
 POLITICS_PEOPLE_IDEOLOGIES;Peoples' Ideologies;x
 POLITICS_VOTERS_IDEOLOGIES;Voters' Ideologies;x
-THIS_IS_SPARTA;This province is part of our glorious country;x
+THIS_IS_SPARTA;This province is part of our glorious realm;x
 DIPLO_WE_DOMINION;We are a dominion of theirs;x
 DIPLO_WE_SATELLITE;We are a vassal of theirs;x
-DIPLO_THEY_DOMINION;They are a dominion of our country;x
-DIPLO_THEY_SATELLITE;They are a vassal of our country;x
-BUY_FROM_STOCKPILE_DESC;Allow pops/factories to buy from country stockpile;x
+DIPLO_THEY_DOMINION;They are a dominion of our realm;x
+DIPLO_THEY_SATELLITE;They are a vassal of our realm;x
+BUY_FROM_STOCKPILE_DESC;Allow pops/factories to buy from realm stockpile;x
 FOCUS_OWNED_BY;You can not place national focus in someone elses province unless it is a potential flashpoint for your cores.;x
 NO_CB_EFFECT;§RWe lack proper justification for this and will incur an infamy penalty§W;x
-M_GOTO_BUTTON;Find Country or Province;x
+M_GOTO_BUTTON;Find realm or Province;x
 RECENT_IMIGRATION_DAYS_LATER_THAN;No immigration for §Y$DAYS$§W days.\n;x
 RECENT_IMIGRATION_DAYS;Immigration in the last §Y$DAYS$§W days.\n;x
 IS_NOT_GREAT_NATION;is not a Great Power.\n;x
