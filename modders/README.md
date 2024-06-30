@@ -33,8 +33,8 @@ They can essentially be boiled down to the following:
 	
 3. What are these decision sections?\
    ![Decision Sections](decision_section.png)
-   - All they are are `political_decision` blocks within the file. Because of how the engine parses decision files, it is completely fine looking at multiple `political_decision` blocks within the same file, allowing for greater organization to be done in the decision files. Above each block is a comment with a name either matching or closely matching a name in the top of the decision file. Additionally, they are in *the same order* as stated at the top of the file. 
-  
+   - All they are are `political_decision` blocks within the file. Because of how the engine parses decision files, it is completely fine looking at multiple `political_decision` blocks within the same file, allowing for greater organization to be done in the decision files. Above each block is a comment with a name either matching or closely matching a name in the top of the decision file. Additionally, they are in *the same order* as stated at the top of the file.
+	
 4. What syntax should be used when making decisions?\
    ![Good Decision](good_decision.png)
    - Have the opening bracket on the same line as the "=".
@@ -54,18 +54,18 @@ They can essentially be boiled down to the following:
 	 - If it's for a specific nation or culture group, look at the \_\_Realms file in the Google Drive, in the "Event File" column. Generally speaking, there is a file specific to each nation, or, if the nation does not have many events, they are in the largest realm in the culture group. e.g. the flavor for Lossarnach is in the `Gondor.txt` file.
 	 - If the event is triggered by something else, such as the events Gondor gets for Dol Amroth's response to Gondor's annexation of Amrothian land, then it should go in the file where the triggering event came from. In the provided example, the events that Gondor gets for Dol Amroth's response should be placed right after the "Dol Amroth gets Annexed?" event in `Gondor.txt`.
 	 - If the event isn't really associated with any country, but rather, a large chain, great powers, or something along those lines, put it in the provided file. For instance, a these could be something such as `War of the Ring.txt`, `Military Leader Recruitment.txt` or `Great Powers.txt`. Each of these file names give the idea of what events they have: `War of the Ring.txt` would hold the events directly related to the War of the Ring, `Military Leader Recruitment.txt`, the events related to the standard leader recruitment, and `Great Powers.txt`, events that any Great Power can do.
-	 
+	
 2. What is the file structure?
    - Like decisions, there is a short description top section of the file:\
 	 ![Event Top](event_top.png)
 	 - The first line is another reminder of what file you are in. The second line is the event ids that are reserved for this file. It is likely that there are some ids in that range that are not used.\
 	 ![Event Structure](event_structure.png)
-	 - Generally, the events are in order of their ids. The exception is where an event directly related to another event (such as getting called by the second event) is added. For instance, if there were to be an event called by `Dol Amroth Refuses Annexation` (id 50006), the new event (id 50012), it would be placed after `Dol Amroth Refuses Annexation`, rather than after `Birth of Faramir`. Prior to the definition of each event, there is a comment with the title or the general idea of the event. 
-	 
+	 - Generally, the events are in order of their ids. The exception is where an event directly related to another event (such as getting called by the second event) is added. For instance, if there were to be an event called by `Dol Amroth Refuses Annexation` (id 50006), the new event (id 50012), it would be placed after `Dol Amroth Refuses Annexation`, rather than after `Birth of Faramir`. Prior to the definition of each event, there is a comment with the title or the general idea of the event.
+	
 3. What syntax should be used when making events?\
    ![Good Event](good_event.png)
    - The same rules as used when making decisions (see point 5 in the `Decisions` section).
-   
+	
 4. Anything else that should be done before committing the event?
    - Test it! Ensure that it's working as intended.
    - Go to the flavor folder in the Google Drive folder and add it to the flavor chains if it is not there anymore, and color code it in the following way: green if the decision is done, yellow if it is missing things, yet still functional, red if there are still issues.
@@ -75,13 +75,13 @@ They can essentially be boiled down to the following:
 1. What is up with all of these comments having an obnoxious amount of `#`'s?\
    ![Modifiers](modifiers.png)
    - There are two types: the three-line category headers. There are only two: `Vanilla Modifiers` and `TTA Modifiers`. They just let one know if the modifier comes from vanilla or if it was added by TTA. The other is the section headers, such as `##### RGO MODIFIERS #####`. This section defines the general idea of the modifiers in the section. In the `RGO MODIFIERS` section, I would expect general modifiers that only affect rgos be placed in there. However, if a modifier was meant for one nation, such as Gondor, it would be in the `##### GONDOR #####` section.
-   
+	
 2. What syntax should be used?
    - Have the opening bracket on the same line as the "=".
    - After an opening bracket, tab over one more time than the previous line.
    - Have the closing bracket start on the same tab level as the line with the corresponding opening bracket.
    - When creating a new section, follow the `##### SECTION NAME ##### {` pattern. Also ensure that the section ends with `# }` to allow easy folding of the sections.
-   
+	
 3. Anything else that should be done before committing the decision?
    - Test it! Ensure that it's working as intended.
    - See the *Localisation* section.
@@ -89,13 +89,13 @@ They can essentially be boiled down to the following:
 ### Localisation
 1. Why are there an obnoxious amount of comments again?\
    ![Localisation](localisation.png)
-   - Each of these groups of three lines tells of a new section in that localisation file. For example, in the above image, the Country Information Events localisation is collapsed, line 1023 is the Military Leader event text, and all the lines after 1026 are for Gondor events. 
-   
+   - Each of these groups of three lines tells of a new section in that localisation file. For example, in the above image, the Country Information Events localisation is collapsed, line 1023 is the Military Leader event text, and all the lines after 1026 are for Gondor events.
+	
 2. Is there any order to the localisation?
    - Generally speaking, yes. The event localisation file is ordered by the files, then the ids used in that file. Pretty much all other localisation files are in the order that the things, whether the be modifiers, decisions, or something else, show up. The exception are the two "Vanilla Text" files, which are an almagamation of all of the localisation from vanilla that has not yet been changed.
-   
+	
 3. What file should I put the localisation?
-   - Generally speaking, all of the localisation files state exactly what they are to be used for. `Events.csv` is meant for event localisation, `Decisions.csv` for decisions, etc. 
+   - Generally speaking, all of the localisation files state exactly what they are to be used for. `Events.csv` is meant for event localisation, `Decisions.csv` for decisions, etc.
 
 ### History Files
 1. Why is there a section on History Files? Isn't that pretty straight forward?
