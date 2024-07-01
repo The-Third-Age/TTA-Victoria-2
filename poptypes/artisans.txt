@@ -320,7 +320,7 @@ promote_to = {
 			}
 			modifier = {
 				factor = -2
-				state_scope = { bureaucrats = 0.010 }
+				state_scope = { bureaucrats = 0.01 }
 			}
 			modifier = {
 				factor = -2
@@ -743,7 +743,7 @@ ideologies = {
 		}
 		modifier = {
 			factor = 1.1
-			social_reform_want = 0.50
+			social_reform_want = 0.5
 		}
 		modifier = {
 			factor = 2
@@ -775,7 +775,7 @@ ideologies = {
 		}
 		modifier = {
 			factor = 1.1
-			political_reform_want = 0.50
+			political_reform_want = 0.5
 		}
 		modifier = {
 			factor = 1.1
@@ -791,7 +791,7 @@ ideologies = {
 		}
 		modifier = {
 			factor = 1.1
-			social_reform_want = 0.50
+			social_reform_want = 0.5
 		}
 		modifier = {
 			factor = 2
@@ -817,11 +817,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1.0
-			country = { good_evil_alignment = good_alignment }
-		}
-		modifier = {
-			factor = 1.1
 			everyday_needs = 0.25
 			country = { good_evil_alignment = good_alignment }
 		}
@@ -833,6 +828,11 @@ issues = {
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.75
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
 			country = { good_evil_alignment = good_alignment }
 		}
 		modifier = {
@@ -875,11 +875,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1.0
-			country = {good_evil_alignment = neutral_alignment }
-		}
-		modifier = {
-			factor = 1.1
 			everyday_needs = 0.25
 			country = { good_evil_alignment = neutral_alignment }
 		}
@@ -891,6 +886,11 @@ issues = {
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.75
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
 			country = { good_evil_alignment = neutral_alignment }
 		}
 		modifier = {
@@ -925,11 +925,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1.0
-			country = { good_evil_alignment = evil_alignment }
-		}
-		modifier = {
-			factor = 1.1
 			everyday_needs = 0.25
 			country = { good_evil_alignment = evil_alignment }
 		}
@@ -941,6 +936,11 @@ issues = {
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.75
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
 			country = { good_evil_alignment = evil_alignment }
 		}
 		modifier = {
@@ -981,12 +981,12 @@ issues = {
 		factor = 0.9
 		modifier = {
 			factor = 0
-			NOT = { life_needs = 1.0 }
+			NOT = { life_needs = 1 }
 			country = { guild_autonomy_policy = independent_guilds }
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1.0
+			everyday_needs = 1
 			country = { guild_autonomy_policy = independent_guilds }
 		}
 		modifier = {
@@ -1009,12 +1009,12 @@ issues = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { life_needs = 1.0 }
+			NOT = { life_needs = 1 }
 			country = { guild_autonomy_policy = oversight_guilds }
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1.0
+			everyday_needs = 1
 			country = { guild_autonomy_policy = oversight_guilds }
 		}
 		modifier = {
@@ -1037,12 +1037,12 @@ issues = {
 		factor = 1.2
 		modifier = {
 			factor = 0
-			NOT = { life_needs = 1.0 }
+			NOT = { life_needs = 1 }
 			country = { guild_autonomy_policy = controlled_guilds }
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1.0
+			everyday_needs = 1
 			country = { guild_autonomy_policy = controlled_guilds }
 		}
 		modifier = {
@@ -1244,7 +1244,7 @@ issues = {
 		factor = 1.1
 		modifier = {
 			factor = 1.1
-			NOT = { life_needs = 1.0 }
+			NOT = { life_needs = 1 }
 			NOT = { country = { diplomatic_policy = isolationist } }
 		}
 		modifier = {
@@ -1272,7 +1272,7 @@ issues = {
 		factor = 1.1
 		modifier = {
 			factor = 1.1
-			NOT = { life_needs = 1.0 }
+			NOT = { life_needs = 1 }
 			NOT = { country = { diplomatic_policy = reactive } }
 		}
 		modifier = {
@@ -1300,12 +1300,12 @@ issues = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { life_needs = 1.0 }
+			NOT = { life_needs = 1 }
 			NOT = { country = { diplomatic_policy = proactive } }
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1.0
+			everyday_needs = 1
 			country = { diplomatic_policy = proactive }
 		}
 		modifier = {
@@ -1328,12 +1328,12 @@ issues = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { life_needs = 1.0 }
+			NOT = { life_needs = 1 }
 			NOT = { country = { diplomatic_policy = interactive } }
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1.0
+			everyday_needs = 1
 			country = { diplomatic_policy = interactive }
 		}
 		modifier = {
@@ -1376,7 +1376,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			revanchism = 0.10
+			revanchism = 0.1
 		}
 		modifier = {
 			factor = 4
@@ -1384,42 +1384,32 @@ issues = {
 		}
 		modifier = {
 			factor = 8
-			revanchism = 0.20
+			revanchism = 0.2
 		}
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 10
-			}
+			NOT = { war_exhaustion = 10 }
 		}
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 20
-			}
+			NOT = { war_exhaustion = 20 }
 		}
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 30
-			}
+			NOT = { war_exhaustion = 30 }
 		}
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 40
-			}
+			NOT = { war_exhaustion = 40 }
 		}
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 50
-			}
+			NOT = { war_exhaustion = 50 }
 		}
 		modifier = {
 			factor = 1.1
@@ -1456,37 +1446,27 @@ issues = {
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 10
-			}
+			NOT = { war_exhaustion = 10 }
 		}
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 20
-			}
+			NOT = { war_exhaustion = 20 }
 		}
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 30
-			}
+			NOT = { war_exhaustion = 30 }
 		}
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 40
-			}
+			NOT = { war_exhaustion = 40 }
 		}
 		modifier = {
 			factor = 1.1
 			war = yes
-			NOT = {
-				war_exhaustion = 50
-			}
+			NOT = { war_exhaustion = 50 }
 		}
 		modifier = {
 			factor = 1.1
@@ -1642,7 +1622,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = landed_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs = 1.0
+				luxury_needs = 1
 				NOT = { life_needs = 0.7 }
 				AND = {
 					NOT = { country = { has_country_flag = attempting_to_democratic } }
@@ -1661,39 +1641,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
@@ -1715,7 +1695,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = wealth_weighted_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs = 1.0
+				luxury_needs = 1
 				NOT = { life_needs = 0.7 }
 				NOT = { country = { has_country_flag = democratic } }
 			}
@@ -1730,39 +1710,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
@@ -1784,7 +1764,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = wealth_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs = 1.0
+				luxury_needs = 1
 				NOT = { life_needs = 0.7 }
 				NOT = { country = { has_country_flag = democratic } }
 			}
@@ -1801,39 +1781,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
@@ -1855,7 +1835,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = universal_weighted_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs = 1.0
+				luxury_needs = 1
 				NOT = { life_needs = 0.7 }
 				NOT = { country = { has_country_flag = democratic } }
 			}
@@ -1870,39 +1850,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
@@ -1924,7 +1904,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = universal_voting }
 				NOT = { consciousness = 6 }
-				luxury_needs = 1.0
+				luxury_needs = 1
 				NOT = { life_needs = 0.7 }
 				NOT = { country = { has_country_flag = democratic } }
 			}
@@ -1939,39 +1919,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
@@ -1993,7 +1973,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = appointed }
 				NOT = { consciousness = 6 }
-				luxury_needs = 1.0
+				luxury_needs = 1
 				NOT = { life_needs = 0.7 }
 			}
 		}
@@ -2017,7 +1997,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = state_equal_weight }
 				NOT = { consciousness = 6 }
-				luxury_needs = 1.0
+				luxury_needs = 1
 				NOT = { life_needs = 0.7 }
 				vote_franschise = none_voting
 			}
@@ -2042,7 +2022,7 @@ issues = {
 			OR = {
 				NOT = { is_next_reform = population_equal_weight }
 				NOT = { consciousness = 6 }
-				luxury_needs = 1.0
+				luxury_needs = 1
 				NOT = { life_needs = 0.7 }
 				vote_franschise = none_voting
 			}
@@ -2093,11 +2073,11 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 	}
 	proportional_representation = {
@@ -2133,11 +2113,11 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 	}
 	meeting_curfew = {
@@ -2155,39 +2135,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2225,39 +2205,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2300,39 +2280,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2375,39 +2355,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2451,39 +2431,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2527,39 +2507,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2603,39 +2583,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2679,39 +2659,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2755,39 +2735,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2831,39 +2811,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -2902,12 +2882,12 @@ issues = {
 		modifier = {
 			factor = 1.1
 			country = { serfdom = enforced_serfdom }
-			NOT = { life_needs = 1.0 }
+			NOT = { life_needs = 1 }
 		}
 		modifier = {
 			factor = 1.1
 			country = { serfdom = enforced_serfdom }
-			NOT = { everyday_needs = 1.0 }
+			NOT = { everyday_needs = 1 }
 		}
 		modifier = {
 			factor = 1.2
@@ -2953,20 +2933,20 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			life_needs = 1.0
-			everyday_needs = 1.0
+			life_needs = 1
+			everyday_needs = 1
 		}
 		modifier = {
 			factor = 1.1
-			life_needs = 1.0
-			everyday_needs = 1.0
+			life_needs = 1
+			everyday_needs = 1
 			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.1
-			life_needs = 1.0
-			everyday_needs = 1.0
-			luxury_needs = 1.0
+			life_needs = 1
+			everyday_needs = 1
+			luxury_needs = 1
 		}
 		modifier = {
 			factor = 1.5
@@ -3009,39 +2989,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -3084,39 +3064,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -3159,39 +3139,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -3234,39 +3214,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -3309,39 +3289,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
@@ -3385,12 +3365,12 @@ issues = {
 		modifier = {
 			factor = 1.1
 			country = { slavery = yes_slavery }
-			NOT = { life_needs = 1.0 }
+			NOT = { life_needs = 1 }
 		}
 		modifier = {
 			factor = 1.1
 			country = { slavery = yes_slavery }
-			NOT = { everyday_needs = 1.0 }
+			NOT = { everyday_needs = 1 }
 		}
 		modifier = {
 			factor = 1.5
@@ -3428,20 +3408,20 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			life_needs = 1.0
-			everyday_needs = 1.0
+			life_needs = 1
+			everyday_needs = 1
 		}
 		modifier = {
 			factor = 1.1
-			life_needs = 1.0
-			everyday_needs = 1.0
+			life_needs = 1
+			everyday_needs = 1
 			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.1
-			life_needs = 1.0
-			everyday_needs = 1.0
-			luxury_needs = 1.0
+			life_needs = 1
+			everyday_needs = 1
+			luxury_needs = 1
 		}
 		modifier = {
 			factor = 1.5
@@ -3480,39 +3460,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
@@ -3543,39 +3523,39 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.70 }
+			NOT = { agree_with_ruling_party = 0.7 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.60 }
+			NOT = { agree_with_ruling_party = 0.6 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.50 }
+			NOT = { agree_with_ruling_party = 0.5 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.40 }
+			NOT = { agree_with_ruling_party = 0.4 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.30 }
+			NOT = { agree_with_ruling_party = 0.3 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.20 }
+			NOT = { agree_with_ruling_party = 0.2 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.10 }
+			NOT = { agree_with_ruling_party = 0.1 }
 		}
 		modifier = {
 			factor = 1.25
@@ -3631,11 +3611,11 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 	}
 	all_vote = {
@@ -3683,11 +3663,11 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.90 }
+			NOT = { agree_with_ruling_party = 0.9 }
 		}
 		modifier = {
 			factor = 1.25
-			NOT = { agree_with_ruling_party = 0.80 }
+			NOT = { agree_with_ruling_party = 0.8 }
 		}
 	}
 	###########################
@@ -3698,7 +3678,7 @@ issues = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { life_needs = 1.0 }
+				NOT = { life_needs = 1 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = limited_exclusive_tr }
 			}
@@ -3725,7 +3705,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3741,7 +3721,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3757,7 +3737,7 @@ issues = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { life_needs = 1.0 }
+				NOT = { life_needs = 1 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = abolished_exclusive_tr }
 			}
@@ -3784,7 +3764,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3800,7 +3780,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3816,7 +3796,7 @@ issues = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { life_needs = 1.0 }
+				NOT = { life_needs = 1 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = allowed_state_supplies }
 			}
@@ -3843,7 +3823,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3859,7 +3839,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3875,7 +3855,7 @@ issues = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { life_needs = 1.0 }
+				NOT = { life_needs = 1 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = restricted_state_supplies }
 			}
@@ -3902,7 +3882,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3918,7 +3898,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3934,7 +3914,7 @@ issues = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { life_needs = 1.0 }
+				NOT = { life_needs = 1 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = chartered_cities }
 			}
@@ -3961,7 +3941,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3977,7 +3957,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -3993,7 +3973,7 @@ issues = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { life_needs = 1.0 }
+				NOT = { life_needs = 1 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = territorial_cities }
 			}
@@ -4020,7 +4000,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4036,7 +4016,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4052,7 +4032,7 @@ issues = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { life_needs = 1.0 }
+				NOT = { life_needs = 1 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = royal_cities }
 			}
@@ -4079,7 +4059,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4095,7 +4075,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4137,7 +4117,7 @@ issues = {
 		}
 		modifier = {
 			factor = 0.25
-			NOT = { life_needs = 0.50 }
+			NOT = { life_needs = 0.5 }
 		}
 		modifier = {
 			factor = 0.25
@@ -4153,7 +4133,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4169,7 +4149,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4211,7 +4191,7 @@ issues = {
 		}
 		modifier = {
 			factor = 0.25
-			NOT = { life_needs = 0.50 }
+			NOT = { life_needs = 0.5 }
 		}
 		modifier = {
 			factor = 0.25
@@ -4227,7 +4207,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4243,7 +4223,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4285,7 +4265,7 @@ issues = {
 		}
 		modifier = {
 			factor = 0.25
-			NOT = { life_needs = 0.50 }
+			NOT = { life_needs = 0.5 }
 		}
 		modifier = {
 			factor = 0.25
@@ -4301,7 +4281,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4317,7 +4297,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4359,7 +4339,7 @@ issues = {
 		}
 		modifier = {
 			factor = 0.25
-			NOT = { life_needs = 0.50 }
+			NOT = { life_needs = 0.5 }
 		}
 		modifier = {
 			factor = 0.25
@@ -4375,7 +4355,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4391,7 +4371,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4407,7 +4387,7 @@ issues = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { life_needs = 1.0 }
+				NOT = { life_needs = 1 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = appointment }
 			}
@@ -4434,7 +4414,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4450,7 +4430,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4466,7 +4446,7 @@ issues = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { life_needs = 1.0 }
+				NOT = { life_needs = 1 }
 				NOT = { consciousness = 6 }
 				NOT = { is_next_reform = guild_school }
 			}
@@ -4493,7 +4473,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			everyday_needs = 0.50
+			everyday_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
@@ -4509,7 +4489,7 @@ issues = {
 		}
 		modifier = {
 			factor = 1.25
-			luxury_needs = 0.50
+			luxury_needs = 0.5
 		}
 		modifier = {
 			factor = 1.25
