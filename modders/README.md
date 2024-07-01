@@ -63,7 +63,32 @@ They can essentially be boiled down to the following:
 	 - Generally, the events are in order of their ids. The exception is where an event directly related to another event (such as getting called by the second event) is added. For instance, if there were to be an event called by `Dol Amroth Refuses Annexation` (id 50006), the new event (id 50012), it would be placed after `Dol Amroth Refuses Annexation`, rather than after `Birth of Faramir`. Prior to the definition of each event, there is a comment with the title or the general idea of the event.
 	
 3. What syntax should be used when making events?\
-   ![Good Event](good_event.png)
+   id
+   title
+   desc
+   picture
+   news
+   news_desc_long
+   news_desc_medium
+   news_desc_short
+
+   election
+   issue_group
+   major
+   fire_only_once
+   is_triggered_only
+   allow_multiple_instances
+
+   trigger
+   - Conditions that are easy to check and least likely to be true should come first, like tag = GON, owns = 16 or is_greater_power = yes, because once these are not fulfilled the rest wont have to be checked anymore.
+
+   mean_time_to_happen
+   - The default value is 1 day.
+
+   immediate
+
+   options
+
    - The same rules as used when making decisions (see point 5 in the `Decisions` section).
 	
 4. Anything else that should be done before committing the event?

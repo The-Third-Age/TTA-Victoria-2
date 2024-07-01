@@ -499,9 +499,7 @@ promote_to = {
 		factor = 0.01
 		modifier = {
 			factor = -1
-			state_scope = {
-				has_factories = no
-			}
+			state_scope = { has_factories = no }
 			NOT = { total_pops = 200000 }
 		}
 		modifier = {
@@ -573,12 +571,8 @@ promote_to = {
 		modifier = {
 			factor = -100
 			OR = {
-				location = {
-					is_colonial = yes
-				}
-				country = {
-					civilized = no
-				}
+				location = { is_colonial = yes }
+				country = { civilized = no }
 			}
 		}
 	}
@@ -627,10 +621,8 @@ promote_to = {
 			}
 		}
 		modifier = {
-				factor = 10
-				state_scope = {
-					has_factories = yes
-				}
+			factor = 10
+			state_scope = { has_factories = yes }
 		}
 		modifier = {
 			factor = -40
@@ -641,41 +633,33 @@ promote_to = {
 			factor = -100
 			NOT = {
 				location = {
-					work_available = {
-						worker = craftsmen
-					}
+					work_available = { worker = craftsmen }
 				}
 			}
 		}
 		modifier = {
 			factor = -100
 			OR = {
-				location = {
-					is_colonial = yes
-				}
-				country = {
-					civilized = no
-				}
+				location = { is_colonial = yes }
+				country = { civilized = no }
 			}
 		}
 	}
 	labourers = {
 		factor = 0.01
 		modifier = {
-			factor = 5.0
+			factor = 5
 			soldiers = 0.03
 		}
 		modifier = {
-			factor = 5.0
+			factor = 5
 			NOT = { luxury_needs = 0.1 }
 		}
 		modifier = {
-			factor = 5.0
+			factor = 5
 			NOT = {
 				location = {
-					work_available = {
-						worker = craftsmen
-					}
+					work_available = { worker = craftsmen }
 				}
 			}
 		}

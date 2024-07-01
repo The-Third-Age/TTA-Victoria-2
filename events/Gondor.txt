@@ -122,8 +122,8 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_global_flag = da_independence_war
 		tag = AMR
+		has_global_flag = da_independence_war
 		NOT = { war_with = GON }
 		NOT = { vassal_of = GON }
 		truce_with = GON
@@ -151,8 +151,8 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_global_flag = da_independence_war
 		tag = GON
+		has_global_flag = da_independence_war
 		NOT = { exists = AMR }
 	}
 	
@@ -304,8 +304,8 @@ country_event = {
 	picture = wedding
 	
 	trigger = {
-		year = 2976
 		tag = GON
+		year = 2976
 		nationalvalue = ecthelion_ii
 		OR = {
 			AND = {
@@ -377,8 +377,8 @@ country_event = {
 	picture = birth
 	
 	trigger = {
-		year = 2978
 		tag = GON
+		year = 2978
 		has_global_flag = denethor_ii_alive
 		has_global_flag = wedding_denethor_finduilas
 		NOT = { has_global_flag = birth_of_boromir }
@@ -406,8 +406,8 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		year = 2983
 		tag = GON
+		year = 2983
 		has_global_flag = denethor_ii_alive
 		has_global_flag = birth_of_boromir
 	}
@@ -475,6 +475,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		province_id = 45
 		OR = {
 			owner = { tag = GON }
 			AND = {
@@ -482,7 +483,6 @@ province_event = {
 				owner = { is_culture_group = dunedain }
 			}
 		}
-		province_id = 45
 		has_building = fort
 	}
 
@@ -671,12 +671,12 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		province_id = 23
 		owner = {
 			tag = GON
 			owns = 16
 			flavor_1 = 1
 		}
-		province_id = 23
 	}
 	
 	mean_time_to_happen = {
@@ -849,8 +849,8 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		year = 2980
 		nationalvalue = ecthelion_ii
+		year = 2980
 		NOT = { is_substate = yes }
 	}
 	
@@ -2163,8 +2163,8 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		year = 3025
 		nationalvalue = denethor_ii
+		year = 3025
 		NOT = { is_substate = yes }
 	}
 	
@@ -2458,8 +2458,8 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		year = 3000
 		owns = 16
+		year = 3000
 		is_culture_group = dunedain
 	}
 	
