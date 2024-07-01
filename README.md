@@ -13,7 +13,7 @@ Join the [Victoria 2: The Third Age Discord](https://discord.gg/t98UUdHETw)! Joi
 5. Launch the game. You should see Lord of the Rings as one of the options. Tick it and the mod should load.
 
 ## Development Credits
-Modders: 
+Modders:
  - SirRunner
  - DerpAnarchist (Glariamn)
  - Cheese (s-williams)
@@ -30,11 +30,11 @@ Loremasters (researchers and contributers):
  - Wyrms (joelAVS)
  - IsaacHhyphenR [mod leader of Ride for Ruin: A Lord of the Rings mod for HOI4](https://steamcommunity.com/sharedfiles/filedetails/?id=2853663729)
  - Dean200027, Equan [modders of Chronicles of the Third Age](TBD) a submod to [Lord of the Rings mod for HOI4](https://steamcommunity.com/sharedfiles/filedetails/?id=1314446921)
- 
+
 ### Integrated Graphics Mods
  - Mish Mash Map Mod
  - Big Flags Mod
- 
+
 ## Asset Credits
 ### Graphic Assets
 - Terrain textures

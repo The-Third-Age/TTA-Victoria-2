@@ -109,7 +109,7 @@ All notable changes will be documented in this file.
 ### Content
  - Slave to you heart's desire! For a realm with some sort of slavery, different options can be set for what pops get enslaved when conquering land.
  - Add filler news: mainly memes
- 
+
 ### Tweaks
  - Timber production has been increased
  - Rock/cut_stone production/good price has been changed for better balance
@@ -119,10 +119,10 @@ All notable changes will be documented in this file.
  - Shortened construction times for roads, castles and ports
  - Increased "High Quality Goods" MTTH (was spammy)
  - Slightly changed how many research points on are what pops
- 
+
 ### Graphics
  - Army tech pictures added
  - Unit icons redone
- 
+
 ## [v0.1](https://github.com/The-Third-Age/TTA-Victoria-2/releases/tag/v0.1) - 20 Aug 2021
  - Initial release
