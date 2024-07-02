@@ -986,11 +986,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1
-			country = { guild_autonomy_policy = independent_guilds }
-		}
-		modifier = {
-			factor = 1.1
 			everyday_needs = 0.25
 			country = { guild_autonomy_policy = independent_guilds }
 		}
@@ -1002,6 +997,11 @@ issues = {
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.75
+			country = { guild_autonomy_policy = independent_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
 			country = { guild_autonomy_policy = independent_guilds }
 		}
 	}
@@ -1014,11 +1014,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1
-			country = { guild_autonomy_policy = oversight_guilds }
-		}
-		modifier = {
-			factor = 1.1
 			everyday_needs = 0.25
 			country = { guild_autonomy_policy = oversight_guilds }
 		}
@@ -1030,6 +1025,11 @@ issues = {
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.75
+			country = { guild_autonomy_policy = oversight_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
 			country = { guild_autonomy_policy = oversight_guilds }
 		}
 	}
@@ -1042,11 +1042,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1
-			country = { guild_autonomy_policy = controlled_guilds }
-		}
-		modifier = {
-			factor = 1.1
 			everyday_needs = 0.25
 			country = { guild_autonomy_policy = controlled_guilds }
 		}
@@ -1058,6 +1053,11 @@ issues = {
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.75
+			country = { guild_autonomy_policy = controlled_guilds }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
 			country = { guild_autonomy_policy = controlled_guilds }
 		}
 	}
@@ -1160,7 +1160,7 @@ issues = {
 		factor = 1.1
 		modifier = {
 			factor = 0
-			NOT = { consciousness = 5}
+			NOT = { consciousness = 5 }
 		}
 		modifier = {
 			factor = 0
@@ -1179,7 +1179,7 @@ issues = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { consciousness = 5}
+			NOT = { consciousness = 5 }
 		}
 		modifier = {
 			factor = 0
@@ -1199,7 +1199,7 @@ issues = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { consciousness = 5}
+			NOT = { consciousness = 5 }
 		}
 		modifier = {
 			factor = 1.1
@@ -1305,11 +1305,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1
-			country = { diplomatic_policy = proactive }
-		}
-		modifier = {
-			factor = 1.1
 			everyday_needs = 0.25
 			country = { diplomatic_policy = proactive }
 		}
@@ -1321,6 +1316,11 @@ issues = {
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.75
+			country = { diplomatic_policy = proactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
 			country = { diplomatic_policy = proactive }
 		}
 	}
@@ -1333,11 +1333,6 @@ issues = {
 		}
 		modifier = {
 			factor = 1.1
-			everyday_needs = 1
-			country = { diplomatic_policy = interactive }
-		}
-		modifier = {
-			factor = 1.1
 			everyday_needs = 0.25
 			country = { diplomatic_policy = interactive }
 		}
@@ -1349,6 +1344,11 @@ issues = {
 		modifier = {
 			factor = 1.1
 			everyday_needs = 0.75
+			country = { diplomatic_policy = interactive }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
 			country = { diplomatic_policy = interactive }
 		}
 	}
@@ -1771,9 +1771,7 @@ issues = {
 		}
 		modifier = {
 			factor = 0.25
-			country = {
-				civilized = no
-			}
+			country = { civilized = no }
 		}
 		modifier = {
 			factor = 1.25
