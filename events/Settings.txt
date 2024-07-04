@@ -1,0 +1,1136 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
+# Settings Events: {
+# 10000 - 10499 }
+
+# Settings Main Menu
+country_event = {
+	id = 10000
+	title = "Settings"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		uncentralized_soldier_pop_percentages_loc = {}
+		currently_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = unciv_5 }
+			}
+			five_percent_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = unciv_7 }
+			}
+			seven_point_five_percent_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = unciv_10 }
+			}
+			10_percent_loc = {}
+		}
+		end_color_loc = {}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		border_control_loc = {}
+		currently_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = borders_closed }
+			}
+			closed_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = borders_alignment }
+			}
+			alignment_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = borders_race }
+			}
+			racial_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = borders_open }
+			}
+			open_loc = {}
+		}
+		end_color_loc = {}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		debugging_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		flavor_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		country_event = { id = 10001 days = 0 }
+	}
+	
+	option = {
+		name = ""
+		
+		country_event = { id = 10002 days = 0 }
+	}
+	
+	option = {
+		name = ""
+		
+		country_event = { id = 10003 days = 0 }
+	}
+	
+	option = {
+		name = ""
+		
+		country_event = { id = 10004 days = 0 }
+	}
+	
+	option = {
+		name = "§RDisable Settings§!"
+		
+		set_global_flag = no_settings
+		
+		settings_disable_settings_loc = {}
+	}
+	
+	option = {
+		name = "§RExit§!"
+	}
+}
+
+# Unciv Soldier Pop Percentages
+country_event = {
+	id = 10001
+	title = "Unciv Soldier Pop Percentages"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		unciv_5_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = unciv_5 }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = unciv_5 } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		unciv_7_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = unciv_7 }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = unciv_7 } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		unciv_10_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = unciv_10 }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = unciv_10 } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		set_global_flag = unciv_5
+		clr_global_flag = unciv_7
+		clr_global_flag = unciv_10
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10000 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_unciv_5_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		clr_global_flag = unciv_5
+		set_global_flag = unciv_7
+		clr_global_flag = unciv_10
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10000 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_unciv_7_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		clr_global_flag = unciv_5
+		clr_global_flag = unciv_7
+		set_global_flag = unciv_10
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10000 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_unciv_10_loc = {}
+	}
+}
+
+# Border Settings
+country_event = {
+	id = 10002
+	title = "Border Settings"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		borders_closed_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = borders_closed }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = borders_closed } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		borders_alignment_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = borders_alignment }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = borders_alignment } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		borders_race_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = borders_race }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = borders_race } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		borders_open_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = borders_open }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = borders_open } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		set_global_flag = borders_closed
+		clr_global_flag = borders_alignment
+		clr_global_flag = borders_race
+		clr_global_flag = borders_open
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10000 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_borders_closed_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		clr_global_flag = borders_closed
+		set_global_flag = borders_alignment
+		clr_global_flag = borders_race
+		clr_global_flag = borders_open
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10000 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_borders_alignment_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		clr_global_flag = borders_closed
+		clr_global_flag = borders_alignment
+		set_global_flag = borders_race
+		clr_global_flag = borders_open
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10000 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_borders_race_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		clr_global_flag = borders_closed
+		clr_global_flag = borders_alignment
+		clr_global_flag = borders_race
+		set_global_flag = borders_open
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10000 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_borders_open_loc = {}
+	}
+}
+
+# Debugging Settings
+country_event = {
+	id = 10003
+	title = "Debugging Settings"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		observer_mode_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = observer_mode }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_country_modifier = observer_mode } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		annexed_all_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = annexed_all }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = annexed_all } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		pop_management_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = pop_management }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = pop_management } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		infamy_loc = {}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = removed_infamy } }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = removed_infamy }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+				NOT = { has_country_modifier = observer_mode }
+			}
+			owner = {
+				add_country_modifier = {
+					name = observer_mode
+					duration = -1
+				}
+				treasury = 2147483
+				capital_scope = {
+					trade_goods = precious_metal
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10003 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_observer_mode_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+				NOT = { has_global_flag = annexed_all }
+			}
+			owner = {
+				set_global_flag = annexed_all
+				
+				any_country = {
+					limit = {
+						NOT = { tag = FOR }
+						NOT = { tag = THIS }
+					}
+					annex_to = THIS
+				}
+				
+				LOS_1158 = { secede_province = THIS }
+				DND_1015 = { secede_province = THIS }
+				DND_1026 = { secede_province = THIS }
+				DND_1007 = { secede_province = THIS }
+				BRE_1014 = { secede_province = THIS }
+				BRE_1013 = { secede_province = THIS }
+				BLU_975 = { secede_province = THIS }
+				BLU_972 = { secede_province = THIS }
+				BLU_940 = { secede_province = THIS }
+				LIN_962 = { secede_province = THIS }
+				LIN_964 = { secede_province = THIS }
+				IML_865 = { secede_province = THIS }
+				IML_874 = { secede_province = THIS }
+				CAR_883 = { secede_province = THIS }
+				CAR_905 = { secede_province = THIS }
+				CAR_912 = { secede_province = THIS }
+				ROH_780 = { secede_province = THIS }
+				ERE_291 = { secede_province = THIS }
+				ERE_668 = { secede_province = THIS }
+				ERE_686 = { secede_province = THIS }
+				DAL_640 = { secede_province = THIS }
+				DAL_642 = { secede_province = THIS }
+				DAL_643 = { secede_province = THIS }
+				RHO_458 = { secede_province = THIS }
+				RHO_461 = { secede_province = THIS }
+				RHO_462 = { secede_province = THIS }
+				RHO_465 = { secede_province = THIS }
+				RHO_472 = { secede_province = THIS }
+				RHO_474 = { secede_province = THIS }
+				KHA_362 = { secede_province = THIS }
+				KHA_366 = { secede_province = THIS }
+				KHA_364 = { secede_province = THIS }
+				KHA_348 = { secede_province = THIS }
+				GON_216 = { secede_province = THIS }
+				GON_226 = { secede_province = THIS }
+				GON_228 = { secede_province = THIS }
+				GON_232 = { secede_province = THIS }
+				GON_238 = { secede_province = THIS }
+				GON_249 = { secede_province = THIS }
+				GON_253 = { secede_province = THIS }
+				GON_175 = { secede_province = THIS }
+				GON_186 = { secede_province = THIS }
+				GON_188 = { secede_province = THIS }
+				GON_160 = { secede_province = THIS }
+				DND_1009 = { secede_province = THIS }
+				DND_1269 = { secede_province = THIS }
+				DND_1007 = { secede_province = THIS }
+				DND_1005 = { secede_province = THIS }
+				BRE_1013 = { secede_province = THIS }
+				BRE_1284 = { secede_province = THIS }
+				BRE_1014 = { secede_province = THIS }
+				SHI_1034 = { secede_province = THIS }
+				SHI_1036 = { secede_province = THIS }
+				SHI_1040 = { secede_province = THIS }
+				SHI_1031 = { secede_province = THIS }
+				SHI_1030 = { secede_province = THIS }
+				SHI_1041 = { secede_province = THIS }
+				DND_1309 = { secede_province = THIS }
+				DND_1028 = { secede_province = THIS }
+				DND_1022 = { secede_province = THIS }
+				DND_1023 = { secede_province = THIS }
+				DND_1323 = { secede_province = THIS }
+				DND_1026 = { secede_province = THIS }
+				DND_1328 = { secede_province = THIS }
+				DND_1025 = { secede_province = THIS }
+				DND_1335 = { secede_province = THIS }
+				DND_1015 = { secede_province = THIS }
+				DND_1341 = { secede_province = THIS }
+				LOS_1343 = { secede_province = THIS }
+				ANG_1371 = { secede_province = THIS }
+				LOS_1346 = { secede_province = THIS }
+				DND_1355 = { secede_province = THIS }
+				DND_1358 = { secede_province = THIS }
+				ANG_1004 = { secede_province = THIS }
+				LOS_977 = { secede_province = THIS }
+				LOS_980 = { secede_province = THIS }
+				LOS_979 = { secede_province = THIS }
+				ANG_999 = { secede_province = THIS }
+				ANG_985 = { secede_province = THIS }
+				ANG_996 = { secede_province = THIS }
+				ANG_987 = { secede_province = THIS }
+				ANG_988 = { secede_province = THIS }
+				DND_307 = { secede_province = THIS }
+				BRE_148 = { secede_province = THIS }
+				RHU_1264 = { secede_province = THIS }
+				RHU_1260 = { secede_province = THIS }
+				RHU_1257 = { secede_province = THIS }
+				RHU_1253 = { secede_province = THIS }
+				CAR_1224 = { secede_province = THIS }
+				CAR_1208 = { secede_province = THIS }
+				CAR_1207 = { secede_province = THIS }
+				CAR_1204 = { secede_province = THIS }
+				CAR_1202 = { secede_province = THIS }
+				CAR_1179 = { secede_province = THIS }
+				IML_1239 = { secede_province = THIS }
+				DND_862 = { secede_province = THIS }
+				RHU_855 = { secede_province = THIS }
+				RHU_859 = { secede_province = THIS }
+				DND_863 = { secede_province = THIS }
+				IML_865 = { secede_province = THIS }
+				IML_868 = { secede_province = THIS }
+				IML_871 = { secede_province = THIS }
+				IML_874 = { secede_province = THIS }
+				IML_875 = { secede_province = THIS }
+				CAR_878 = { secede_province = THIS }
+				CAR_882 = { secede_province = THIS }
+				CAR_883 = { secede_province = THIS }
+				CAR_365 = { secede_province = THIS }
+				CAR_886 = { secede_province = THIS }
+				CAR_891 = { secede_province = THIS }
+				CAR_890 = { secede_province = THIS }
+				CAR_900 = { secede_province = THIS }
+				CAR_893 = { secede_province = THIS }
+				CAR_894 = { secede_province = THIS }
+				CAR_902 = { secede_province = THIS }
+				CAR_905 = { secede_province = THIS }
+				CAR_907 = { secede_province = THIS }
+				CAR_912 = { secede_province = THIS }
+				LOR_769 = { secede_province = THIS }
+				STO_757 = { secede_province = THIS }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10003 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_annex_all_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = pop_management } }
+			}
+			owner = {
+				set_global_flag = pop_management
+				set_global_flag = updated_setting # To prevent the below random_owned from firing
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = pop_management
+					NOT = { has_global_flag = updated_setting }
+				}
+			}
+			owner = { clr_global_flag = pop_management }
+		}
+		
+		clr_global_flag = updated_setting
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10003 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_pop_management_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = removed_infamy } }
+			}
+			owner = {
+				set_global_flag = removed_infamy
+				set_global_flag = updated_setting # To prevent the below random_owned from firing
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = removed_infamy
+					NOT = { has_global_flag = updated_setting }
+				}
+			}
+			owner = { clr_global_flag = removed_infamy }
+		}
+		
+		clr_global_flag = updated_setting
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10003 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_toggle_infamy_removal_loc = {}
+	}
+	
+	option = {
+		name = "§BBack§!"
+		
+		country_event = { id = 10000 days = 0 }
+	}
+}
+
+# Flavor Settings
+country_event = {
+	id = 10004
+	title = "Flavor Settings"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		memes_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = memes_enabled }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = memes_enabled } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		gondor_own_mouths_entwash_loc = {}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = gondor_own_mouths_entwash }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = gondor_own_mouths_entwash } }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		fluff_loc = {}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = fluff_disabled } }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = fluff_disabled }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		province_wealth_intervention_loc = {}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = province_wealth_intervention_disabled } }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = province_wealth_intervention_disabled }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+		
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		generic_rgo_changing_loc = {}
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = generic_rgo_changing_disabled } }
+			}
+			enabled_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = generic_rgo_changing_disabled }
+			}
+			disabled_loc = {}
+		}
+		close_parenthesis_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		set_global_flag = memes_enabled
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10004 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_enable_memes_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = gondor_own_mouths_entwash }
+					NOT = { year = 2955 }
+					has_global_flag = hidden_effects
+				}
+			}
+			owner = {
+				set_global_flag = gondor_own_mouths_entwash
+				ROH_785 = {
+					add_core = GON
+					remove_core = ROH
+				}
+				ROH = {
+					release = GON
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10004 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_gondor_own_mouths_entwash_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = fluff_disabled } }
+			}
+			owner = {
+				set_global_flag = fluff_disabled
+				set_global_flag = updated_setting # To prevent the below random_owned from firing
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = fluff_disabled
+					NOT = { has_global_flag = updated_setting }
+				}
+			}
+			owner = { clr_global_flag = fluff_disabled }
+		}
+		
+		clr_global_flag = updated_setting
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10004 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_toggle_fluff_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = province_wealth_intervention_disabled } }
+			}
+			owner = {
+				set_global_flag = province_wealth_intervention_disabled
+				set_global_flag = updated_setting # To prevent the below random_owned from firing
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = province_wealth_intervention_disabled
+					NOT = { has_global_flag = updated_setting }
+				}
+			}
+			owner = { clr_global_flag = province_wealth_intervention_disabled }
+		}
+		
+		clr_global_flag = updated_setting
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10004 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_province_wealth_intervention_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = {
+			limit = {
+				owner = { NOT = { has_global_flag = generic_rgo_changing_disabled } }
+			}
+			owner = {
+				set_global_flag = generic_rgo_changing_disabled
+				set_global_flag = updated_setting # To prevent the below random_owned from firing
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = generic_rgo_changing_disabled
+					NOT = { has_global_flag = updated_setting }
+				}
+			}
+			owner = { clr_global_flag = generic_rgo_changing_disabled }
+		}
+		
+		clr_global_flag = updated_setting
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_global_flag = hidden_effects
+			}
+			owner = { country_event = { id = 10004 days = 0 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		settings_generic_rgo_changing_loc = {}
+	}
+	
+	option = {
+		name = "§BBack§!"
+		
+		country_event = { id = 10000 days = 0 }
+	}
+}

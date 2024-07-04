@@ -1,5 +1,38 @@
 # Dwarves of the White Mountains Decisions {
-# Expansion }
+#	Play As
+#	Expansion }
+
+# Play As
+political_decisions = {
+	play_as_DWM = {
+		potential = {
+			ai = no
+			has_global_flag = memes_enabled
+			NOT = { year = 2955 }
+			NOT = { month = 1 }
+			NOT = { exists = DWM }
+		}
+		
+		allow = { }
+		
+		effect = {
+			FOR = {
+				any_neighbor_country = {
+					limit = {
+						any_owned_province = { is_core = DWM }
+					}
+					release = DWM
+				}
+			}
+			
+			DWM = {
+				capital = 116
+			}
+			
+			change_tag_no_core_switch = DWM
+		}
+	}
+}
 
 # Expansion
 political_decisions = {
