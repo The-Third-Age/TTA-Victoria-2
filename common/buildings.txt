@@ -1,7 +1,7 @@
 # Audax Validator "!" Ignore_NEXT
 # Remove the above line to have the Validator run over this file
 
-### Factories #####################################################################################
+##### Factories #####
 
 will_never_be_unlocked = {
 	type = factory
@@ -17,9 +17,184 @@ will_never_be_unlocked = {
 	pop_build_factory = no
 }
 
-##### MILITARY FACTORIES #####
+##### RAW MATERIALS FACTORIES #####
 
-artillery_factory = {
+charcoal_factory = {
+	type = factory
+	
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+	
+	production_type = charcoal_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+dye_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+	
+	production_type = dye_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+##### INDUSTRIAL GOODS FACTORIES #####
+
+cut_stone_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		rock = 50
+		timber = 25
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = cut_stone_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+glass_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+	
+	production_type = glass_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+steel_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+	
+	production_type = steel_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+lumber_mill = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		rock = 50
+		timber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+
+	production_type = lumber_mill
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+fabric_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+
+	production_type = fabric_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+fabric_factory_wool = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+
+	production_type = fabric_factory_wool
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+##### CONSUMER GOODS FACTORIES #####
+
+horse_abattoir = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+	
+	production_type = horse_abattoir
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+liquor_distillery = {
 	type = factory
 
 	on_completion = factory
@@ -33,12 +208,127 @@ artillery_factory = {
 	time = 365
 	visibility = yes
 	onmap = no
-
-	production_type = artillery_factory
+	
+	production_type = liquor_distillery
 	pop_build_factory = yes
-	strategic_factory = yes
 	default_enabled = yes
 }
+
+paper_mill = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+	
+	production_type = paper_mill
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+literature_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+	
+	production_type = literature_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+furniture_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = furniture_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+luxury_furniture_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = luxury_furniture_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+clothes_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = clothes_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+luxury_clothes_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = luxury_clothes_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+##### MILITARY FACTORIES #####
 
 melee_gear_factory = {
 	type = factory
@@ -82,6 +372,27 @@ ranged_gear_factory = {
 	default_enabled = yes
 }
 
+artillery_factory = {
+	type = factory
+
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 365
+	visibility = yes
+	onmap = no
+
+	production_type = artillery_factory
+	pop_build_factory = yes
+	strategic_factory = yes
+	default_enabled = yes
+}
+
 clipper_shipyard = {
 	type = factory
 	
@@ -106,261 +417,7 @@ clipper_shipyard = {
 	advanced_factory = yes
 }
 
-##### CONSTRUCTION GOODS FACTORIES #####
-
-cut_stone_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		rock = 50
-		timber = 25
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = cut_stone_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-lumber_mill = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		rock = 50
-		timber = 25
-	}
-	time = 180
-	visibility = yes
-	onmap = no
-
-	production_type = lumber_mill
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-steel_factory = {
-	type = factory
-
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 180
-	visibility = yes
-	onmap = no
-	
-	production_type = steel_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-##### BASE GOODS FACTORIES #####
-
-charcoal_factory = {
-	type = factory
-	
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 180
-	visibility = yes
-	onmap = no
-	
-	production_type = charcoal_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-##### CONSUMER GOODS FACTORIES #####
-
-furniture_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = furniture_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-paper_mill = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-	
-	production_type = paper_mill
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-clothes_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-
-	production_type = clothes_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-liquor_distillery = {
-	type = factory
-
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 365
-	visibility = yes
-	onmap = no
-	
-	production_type = liquor_distillery
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-fabric_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 180
-	visibility = yes
-	onmap = no
-
-	production_type = fabric_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-fabric_factory_wool = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 180
-	visibility = yes
-	onmap = no
-
-	production_type = fabric_factory_wool
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-glass_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 180
-	visibility = yes
-	onmap = no
-	
-	production_type = glass_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-dye_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 180
-	visibility = yes
-	onmap = no
-	
-	production_type = dye_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-horse_abattoir = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 180
-	visibility = yes
-	onmap = no
-	
-	production_type = horse_abattoir
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-### OTHER BUILDINGS #####################################################################################
+##### OTHER BUILDINGS #####
 
 fort = {
 	type = fort
