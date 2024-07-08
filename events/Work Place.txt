@@ -3541,6 +3541,7 @@ province_event = {
 	desc = "EVTDESC12057"
 	
 	trigger = {
+		owner = { ai = no }
 		NOT = { owner = { has_global_flag = generic_rgo_changing_disabled } }
 		NOT = { has_province_modifier = locked_rgo }
 		has_pop_type = labourers
@@ -3551,12 +3552,9 @@ province_event = {
 		owner = { war = no }
 		NOT = { trade_goods = precious_metal }
 		NOT = { trade_goods = precious_goods }
-		owner = { ai = no }
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	mean_time_to_happen = { months = 500 }
 	
 	immediate = {
 		add_province_modifier = { name = province_target_rgo_change_modifier duration = 1 }
