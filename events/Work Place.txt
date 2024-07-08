@@ -1279,7 +1279,7 @@ province_event = {
 	
 	immediate = {
 		add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
-		add_province_modifier = { name = province_target_modifier duration = -1 }
+		add_province_modifier = { name = province_target_bovine_fever_modifier duration = 1 }
 	}
 	
 	option = {
@@ -1288,14 +1288,14 @@ province_event = {
 			food = -15
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_bovine_fever_modifier
 					NOT = { total_pops = 10000 }
 				}
 				owner = { treasury = -5000 }
 			}
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_bovine_fever_modifier
 					total_pops = 10000
 					NOT = { total_pops = 30000 }
 				}
@@ -1303,7 +1303,7 @@ province_event = {
 			}
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_bovine_fever_modifier
 					total_pops = 30000
 					NOT = { total_pops = 60000 }
 				}
@@ -1311,7 +1311,7 @@ province_event = {
 			}
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_bovine_fever_modifier
 					total_pops = 60000
 					NOT = { total_pops = 100000 }
 				}
@@ -1319,7 +1319,7 @@ province_event = {
 			}
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_bovine_fever_modifier
 					total_pops = 100000
 				}
 				owner = { treasury = -50000 }
@@ -1329,10 +1329,10 @@ province_event = {
 			
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_bovine_fever_modifier
 					owner = { has_global_flag = hidden_effects }
 				}
-				remove_province_modifier = province_target_modifier
+				remove_province_modifier = province_target_bovine_fever_modifier
 			}
 			
 			clr_global_flag = hidden_effects
@@ -3503,7 +3503,7 @@ province_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		add_province_modifier = { name = province_target_modifier duration = -1 }
+		add_province_modifier = { name = province_target_great_haul_modifier duration = 1 }
 	}
 	
 	option = {
@@ -3517,10 +3517,10 @@ province_event = {
 			random_owned = {
 				limit = {
 					owner = { has_global_flag = hidden_effects }
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_great_haul_modifier
 				}
 				add_province_modifier = { name = province_wealth_increase_2_target_modifier duration = -1 }
-				remove_province_modifier = province_target_modifier
+				remove_province_modifier = province_target_great_haul_modifier
 			}
 			
 			clr_global_flag = hidden_effects
@@ -3551,6 +3551,7 @@ province_event = {
 		owner = { war = no }
 		NOT = { trade_goods = precious_metal }
 		NOT = { trade_goods = precious_goods }
+		owner = { ai = no }
 	}
 	
 	mean_time_to_happen = {
@@ -3558,7 +3559,7 @@ province_event = {
 	}
 	
 	immediate = {
-		add_province_modifier = { name = province_target_modifier duration = -1 }
+		add_province_modifier = { name = province_target_rgo_change_modifier duration = 1 }
 	}
 	
 	option = {
@@ -3568,7 +3569,7 @@ province_event = {
 			# "Hills" RGOs
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 					NOT = { life_rating = 30 }
 					OR = {
 						trade_goods = rock
@@ -3578,11 +3579,12 @@ province_event = {
 					}
 				}
 				province_event = { id = 12058 days = 0 }
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			# "Woods" RGOs in Mordor and Harad
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 					NOT = { life_rating = 30 }
 					OR = {
 						continent = africa # Mordor
@@ -3598,11 +3600,12 @@ province_event = {
 					}
 				}
 				province_event = { id = 12059 days = 0 }
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			# "Woods" RGOs in Gondor
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 					NOT = { life_rating = 30 }
 					continent = south_america # Gondor/Rohan
 					OR = {
@@ -3616,11 +3619,12 @@ province_event = {
 					}
 				}
 				province_event = { id = 12060 days = 0 }
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			# "Woods" RGOs in Eriador
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 					NOT = { life_rating = 30 }
 					continent = north_america # Eriador
 					OR = {
@@ -3633,11 +3637,12 @@ province_event = {
 					}
 				}
 				province_event = { id = 12061 days = 0 }
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			# "Woods" RGOs in Rhovanion and Rhun
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 					NOT = { life_rating = 30 }
 					OR = {
 						continent = europe # Rhovanion
@@ -3652,11 +3657,12 @@ province_event = {
 					}
 				}
 				province_event = { id = 12062 days = 0 }
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			# "Flatland" RGOs in Mordor and Harad
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 					life_rating = 30
 					OR = {
 						continent = africa # Mordor
@@ -3671,11 +3677,12 @@ province_event = {
 					}
 				}
 				province_event = { id = 12063 days = 0 }
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			# "Flatland" RGOs in Gondor
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 					life_rating = 30
 					continent = south_america # Gondor/Rohan
 					OR = {
@@ -3688,11 +3695,12 @@ province_event = {
 					}
 				}
 				province_event = { id = 12064 days = 0 }
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			# "Flatland" RGOs in Eriador
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 					life_rating = 30
 					continent = north_america # Eriador
 					OR = {
@@ -3704,11 +3712,12 @@ province_event = {
 					}
 				}
 				province_event = { id = 12065 days = 0 }
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			# "Flatland" RGOs in Rhovanion and Rhun
 			random_owned = {
 				limit = {
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 					life_rating = 30
 					OR = {
 						continent = europe # Rhovanion
@@ -3722,6 +3731,7 @@ province_event = {
 					}
 				}
 				province_event = { id = 12066 days = 0 }
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 		}
 		
@@ -3734,10 +3744,10 @@ province_event = {
 			random_owned = {
 				limit = {
 					owner = { has_global_flag = hidden_effects }
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 				}
 				add_province_modifier = { name = province_wealth_decrease_2_target_modifier duration = -1 }
-				remove_province_modifier = province_target_modifier
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			
 			clr_global_flag = hidden_effects
@@ -3755,9 +3765,9 @@ province_event = {
 			random_owned = {
 				limit = {
 					owner = { has_global_flag = hidden_effects }
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 				}
-				remove_province_modifier = province_target_modifier
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			
 			clr_global_flag = hidden_effects
@@ -3775,9 +3785,9 @@ province_event = {
 			random_owned = {
 				limit = {
 					owner = { has_global_flag = hidden_effects }
-					has_province_modifier = province_target_modifier
+					has_province_modifier = province_target_rgo_change_modifier
 				}
-				remove_province_modifier = province_target_modifier
+				remove_province_modifier = province_target_rgo_change_modifier
 			}
 			
 			clr_global_flag = hidden_effects
