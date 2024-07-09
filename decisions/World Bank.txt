@@ -248,8 +248,8 @@ political_decisions = {
 			# Firing Mod Changes Fluff event
 			any_country = {
 				limit = {
-					exists = yes
 					ai = no
+					exists = yes
 				}
 				country_event = { id = 29000 days = 3 }
 			}
@@ -683,6 +683,7 @@ political_decisions = {
 political_decisions = {
 	democratic_flag_clean_up = {
 		potential = {
+			tag = FOR
 			OR = {
 				# Has democratic flag but not a democracy
 				any_neighbor_country = {
@@ -703,7 +704,6 @@ political_decisions = {
 					}
 				}
 			}
-			tag = FOR
 		}
 		
 		allow = {}
@@ -1130,7 +1130,6 @@ political_decisions = {
 		potential = {
 			tag = FOR
 			ai = no
-			
 			any_neighbor_country = {
 				NOT = { has_country_flag = infantry_focused }
 				NOT = { has_country_flag = ranged_focused }
@@ -1138,8 +1137,7 @@ political_decisions = {
 			}
 		}
 		
-		allow = {
-		}
+		allow = {}
 		
 		effect = {
 			any_neighbor_country = {
