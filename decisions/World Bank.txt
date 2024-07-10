@@ -245,6 +245,10 @@ political_decisions = {
 			# Start Daily Generic Cleanup Event
 			country_event = 99250
 			
+			# Start Weekly Generic Cleanup Event
+			set_variable = { which = season_randomizer value = 0 }
+			country_event = 99002
+			
 			# Firing Mod Changes Fluff event
 			any_country = {
 				limit = {

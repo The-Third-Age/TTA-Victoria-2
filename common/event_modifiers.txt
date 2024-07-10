@@ -42,6 +42,10 @@
 # Autumn					36						38
 # Winter					37						39
 # Spring					38						40
+# Clouds					39						41
+# Rain						40						42
+# Wind						41						43
+# Sand						42						44
 
 #############################
 ##### VANILLA MODIFIERS #####
@@ -314,7 +318,67 @@ wet_season_modifier = {
 }
 
 # }
+##### WEATHER MODIFIERS ##### {
+# Provinder Modifier
+sunny_modifier_4_season = {
+	farm_rgo_eff = 0.02
+	
+	icon = 37
+}
+
+# Provinder Modifier
+sunny_modifier_desert = {
+	farm_rgo_eff = -0.02
+	
+	icon = 37
+}
+
+# Province Modifier
+cloudy_modifier = {
+	# Purposefully no effects
+	
+	icon = 41
+}
+
+# Province Modifier
+rainy_modifier_4_season = {
+	movement_cost = 0.05
+	
+	icon = 42
+}
+
+# Province Modifier
+rainy_modifier_desert = {
+	farm_rgo_eff = 0.02
+	movement_cost = 0.05
+	
+	icon = 42
+}
+
+# Province Modifier
+snowy_modifier = {
+	movement_cost = 0.05
+	
+	icon = 39
+}
+
+# Province Modifier
+windy_modifier = {
+	# Purposefully no effects
+	
+	icon = 43
+}
+
+# Province Modifier
+sandy_modifier = {
+	movement_cost = 0.05
+	
+	icon = 44
+}
+
+# }
 ##### CORING MODIFIERS ##### {
+# Province Modifier
 core_integration = {
 	assimilation_rate = 0.25
 	pop_consciousness_modifier = 0.01
@@ -322,6 +386,7 @@ core_integration = {
 	icon = 7
 }
 
+# Province Modifier
 cultural_core_integration = {
 	assimilation_rate = 0.5
 	pop_consciousness_modifier = 0.01

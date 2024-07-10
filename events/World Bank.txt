@@ -1560,6 +1560,1874 @@ country_event = {
 	}
 }
 
+# Generic Weekly Cleanup
+country_event = {
+	id = 99002
+	title = "Generic Cleanup -- Weekly"
+	desc = "EVTDESC99002"
+	picture = "production"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fix it please"
+		
+		# Weather {
+		# Remove the old modifiers if they currently exist
+		random_owned = {
+			any_neighbor_province = {
+				remove_province_modifier = sunny_modifier_4_season
+				remove_province_modifier = sunny_modifier_desert
+				remove_province_modifier = cloudy_modifier
+				remove_province_modifier = rainy_modifier_4_season
+				remove_province_modifier = rainy_modifier_desert
+				remove_province_modifier = snowy_modifier
+				remove_province_modifier = windy_modifier
+				remove_province_modifier = sandy_modifier
+			}
+		}
+		
+		# Option 1
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = season_randomizer value = 0.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+			}
+		}
+		
+		# Option 2
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 0.9 }
+					NOT = { check_variable = { which = season_randomizer value = 1.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 1 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 1 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 1 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 1 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 1 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 1 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 1 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 1 }
+			}
+		}
+		
+		# Option 3
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 1.9 }
+					NOT = { check_variable = { which = season_randomizer value = 2.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 2 }
+				random = { chance = 2 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 2 }
+				random = { chance = 2 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 2 }
+				random = { chance = 2 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 2 }
+				random = { chance = 2 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 2 }
+				random = { chance = 2 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 2 }
+				random = { chance = 2 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 2 }
+				random = { chance = 2 }
+			}
+		}
+		
+		# Option 4
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 2.9 }
+					NOT = { check_variable = { which = season_randomizer value = 3.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 3 }
+				random = { chance = 3 }
+				random = { chance = 3 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 3 }
+				random = { chance = 3 }
+				random = { chance = 3 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 3 }
+				random = { chance = 3 }
+				random = { chance = 3 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 3 }
+				random = { chance = 3 }
+				random = { chance = 3 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 3 }
+				random = { chance = 3 }
+				random = { chance = 3 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 3 }
+				random = { chance = 3 }
+				random = { chance = 3 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 3 }
+				random = { chance = 3 }
+				random = { chance = 3 }
+			}
+		}
+		
+		# Option 5
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 3.9 }
+					NOT = { check_variable = { which = season_randomizer value = 4.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+				random = { chance = 4 }
+			}
+		}
+		
+		# Option 6
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 4.9 }
+					NOT = { check_variable = { which = season_randomizer value = 5.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+				random = { chance = 5 }
+			}
+		}
+		
+		# Option 7
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 5.9 }
+					NOT = { check_variable = { which = season_randomizer value = 6.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+				random = { chance = 6 }
+			}
+		}
+		
+		# Option 8
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 6.9 }
+					NOT = { check_variable = { which = season_randomizer value = 7.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+				random = { chance = 7 }
+			}
+		}
+		
+		# Option 9
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 7.9 }
+					NOT = { check_variable = { which = season_randomizer value = 8.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+				random = { chance = 8 }
+			}
+		}
+		
+		# Option 10
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 8.9 }
+					NOT = { check_variable = { which = season_randomizer value = 9.1 } }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+				random = { chance = 9 }
+			}
+		}
+		
+		# Option 11
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = season_randomizer value = 9.9 }
+				}
+			}
+			
+			# Summer - North/South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = summer_modifier_north
+						has_province_modifier = summer_modifier_south
+					}
+				}
+				random_list = {
+					45 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+			}
+			
+			# Autumn/Spring - North
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_north
+						has_province_modifier = autumn_modifier_rhun
+						has_province_modifier = spring_modifier_north
+						has_province_modifier = spring_modifier_rhun
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					20 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					5 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+			}
+			
+			# Autumn/Spring - South
+			any_neighbor_province = {
+				limit = {
+					OR = {
+						has_province_modifier = autumn_modifier_south
+						has_province_modifier = spring_modifier_south
+					}
+				}
+				random_list = {
+					20 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					45 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+			}
+			
+			# Winter - North
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_north
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					5 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					30 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+			}
+			
+			# Winter - South
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = winter_modifier_south
+				}
+				random_list = {
+					30 = { add_province_modifier = { name = sunny_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = rainy_modifier_4_season duration = 7 } }
+					10 = { add_province_modifier = { name = snowy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+			}
+			
+			# Dry
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dry_season_modifier
+				}
+				random_list = {
+					50 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					9 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					1 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					30 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+			}
+			
+			# Wet
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = wet_season_modifier
+				}
+				random_list = {
+					40 = { add_province_modifier = { name = sunny_modifier_desert duration = 7 } }
+					15 = { add_province_modifier = { name = cloudy_modifier duration = 7 } }
+					10 = { add_province_modifier = { name = rainy_modifier_desert duration = 7 } }
+					10 = { add_province_modifier = { name = windy_modifier duration = 7 } }
+					25 = { add_province_modifier = { name = sandy_modifier duration = 7 } }
+				}
+				
+				# DO NOT REMOVE THESE RANDOMS - THEY ARE WHAT MAKE THE RESULTS DIFFERENT IN EACH RANDOM_OWNED
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+				random = { chance = 10 }
+			}
+			owner = { set_variable = { which = season_randomizer value = -1 } }
+		}
+		
+		change_variable = { which = season_randomizer value = 1 }
+		# }
+		
+		# Refire the cleanup event in a week
+		country_event = { id = 99002 days = 7 }
+	}
+}
+
 # Generic Daily Cleanup
 country_event = {
 	id = 99250
