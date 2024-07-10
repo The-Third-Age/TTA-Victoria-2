@@ -46,6 +46,8 @@ All notable changes will be documented in this file.
  - Updated major event look
  - "Major Decision" -- decision images can stretch across the entire decision block now
  - Updated country and province font to be the same (and be able to display special characters)
+ - Updated country and major events to allow for more personalized images and backgrounds
+   - This unfortunately does remove the ability to move these events. The team is working on getting movement back, but it doesn't seem possible at the moment
 !
 
 ## [v0.4](https://github.com/The-Third-Age/TTA-Victoria-2/releases/tag/v0.4) - 20 Aug 2023
