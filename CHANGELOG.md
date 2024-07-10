@@ -10,7 +10,7 @@ All notable changes will be documented in this file.
  - Plurality reworked into Popular Anxiety
  - Dynamic Localisation for select events
  - Province Wealth mechanic
- - Seasons mechanic
+ - Seasons and Weather mechanics
 
 ### New Tags
  - In Eriador: House of the Wind, Windan Elves, Dourhands of Ered Luin, Emyn Beriad, Eagles of the Eerie, Girithlin, Henlan, Fonntir, Saerlann, Caladir, Enedbund, Dol Tinereb, Mirobel, Mount Gram, Skuthruga Clan, Kosh Clan, Snow Orcs of Angmar
@@ -35,7 +35,7 @@ All notable changes will be documented in this file.
  - Dynamic Localisation
  - Popular Anxiety (replacing Plurality)
  - Province Wealth (replacing Crime)
- - Seasons
+ - Seasons and Weather
  - Beginning of Economy Rework
 
 ### Graphics
