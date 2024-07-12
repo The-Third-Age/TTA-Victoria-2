@@ -1,9 +1,9 @@
 # Audax Validator "!" Ignore_NEXT
 # Remove the above line to have the validator run over this tile
 
-# Icon						Country Icon Number		Province Icon Number
-# Green Gavel				-						1
-# Red Gavel					-						2
+# Icon						Country Icon Number		Province Icon Number	Notes
+# Green Gavel				-1						1
+# Red Gavel					0						2
 # Green Pie Chart			1						3
 # Red Pie Chart				2						4
 # Green Lightbulb			3						5
@@ -46,11 +46,20 @@
 # Rain						40						42
 # Wind						41						43
 # Sand						42						44
+# Grey Gavel				43						45						Reserved for "triggered" modifiers
+# Grey Pie Chart			44						46						Reserved for "triggered" modifiers
+# Grey Lightbulb			45						47						Reserved for "triggered" modifiers
+# Grey Legal Document		46						48						Reserved for "triggered" modifiers
+# Grey Globe				47						49						Reserved for "triggered" modifiers
+# Grey Money				48						50						Reserved for "triggered" modifiers
+# Grey Factory				49						51						Reserved for "triggered" modifiers
+# Grey Artwork				50						52						Reserved for "triggered" modifiers
+# Grey Guns					51						53						Reserved for "triggered" modifiers
+# Grey People				52						54						Reserved for "triggered" modifiers
 
 #############################
-##### VANILLA MODIFIERS #####
+##### VANILLA MODIFIERS ##### {
 #############################
-
 ##### TECH SCHOOLS ###### {
 academic_confusion = {
 	research_points_modifier = -0.01
@@ -143,8 +152,8 @@ CB_gen_minus = {
 }
 
 # }
-#########################
-##### TTA MODIFIERS #####
+######################### }
+##### TTA MODIFIERS ##### {
 #########################
 ##### TARGETTING MODIFIERS ##### {
 # Province Modifier
@@ -1560,5 +1569,235 @@ goblin_industry = {
 saruman_engineers = {
 	research_points_modifier = 0.1
 	icon = 5
+}
+# }
+############################### }
+##### TRIGGERED MODIFIERS ##### {
+###############################
+##### Settings ##### {
+# Country Modifier
+no_infamy = {
+	badboy = -999
+	
+	icon = 46
+}
+# }
+##### Vassals #####
+# Country Modifier
+vassal_nation = {
+	prestige = -0.3
+	
+	icon = 50
+}
+
+# Country Modifier
+small_puppet_master = {
+	prestige = 0.1
+	diplomatic_points_modifier = 0.1
+	
+	icon = 43
+}
+
+# Country Modifier
+medium_puppet_master = {
+	prestige = 0.2
+	diplomatic_points_modifier = 0.15
+	
+	icon = 43
+}
+
+# Country Modifier
+great_puppet_master = {
+	prestige = 0.3
+	diplomatic_points_modifier = 0.2
+	
+	icon = 43
+}
+# }
+##### Conquest ##### {
+# Country Modifier
+control_of_anduin_mouth = {
+	prestige = 0.5
+	
+	icon = 46
+}
+
+# Country Modifier
+control_of_gwathlo_mouth = {
+	prestige = 0.25
+	
+	icon = 46
+}
+
+# Country Modifier
+control_of_celduin_mouth = {
+	prestige = 0.25
+	
+	icon = 46
+}
+
+# Country Modifier
+control_of_rhunaer = {
+	prestige = 0.75
+	
+	icon = 46
+}
+# }
+##### Races ##### {
+# Country Modifier
+men_culture_nation = {
+	cb_generation_speed_modifier = 0.1
+	
+	icon = 52
+}
+
+# Country Modifier
+elven_culture_nation = {
+	prestige = 0.01
+	cb_generation_speed_modifier = -0.4
+	
+	icon = 52
+}
+
+# Country Modifier
+dwarven_culture_nation = {
+	cb_generation_speed_modifier = -0.1
+	mine_rgo_eff = 0.05
+	
+	icon = 52
+}
+
+# Country Modifier
+orc_culture_nation = {
+	mine_rgo_eff = 0.02
+	
+	icon = 52
+}
+
+# Country Modifier
+hobbit_culture_nation = {
+	cb_generation_speed_modifier = -0.5
+	farm_rgo_eff = 0.05
+	
+	icon = 52
+}
+
+# Country Modifier
+ent_culture_nation = {
+	cb_generation_speed_modifier = -0.8
+	
+	icon = 52
+}
+
+# Country Modifier
+troll_culture_nation = {
+	icon = 52
+}
+
+# Country Modifier
+eagle_culture_nation = {
+	cb_generation_speed_modifier = -0.3
+	
+	icon = 52
+}
+
+# Country Modifier
+spider_culture_nation = {
+	icon = 52
+}
+
+# Country Modifier
+undead_culture_nation = {
+	cb_generation_speed_modifier = -0.2
+	
+	icon = 52
+}
+# }
+##### Realm Size ##### {
+# Country Modifier
+small_but_efficient = {
+	tax_efficiency = 0.4
+	administrative_efficiency_modifier = 0.3
+	tariff_efficiency_modifier = 0.3
+	education_efficiency_modifier = 0.05
+	supply_consumption = -0.9
+	poor_income_modifier = 1
+	middle_income_modifier = 3
+	rich_income_modifier = 5
+	
+	icon = 48
+}
+# }
+##### Money hoarding ##### {
+# Country Modifier
+money_hoarder_1 = {
+	tax_efficiency = -0.05
+	tariff_efficiency_modifier = -0.20
+	min_social_spending = 1
+	min_military_spending = 1
+	
+	icon = 48
+}
+
+# Country Modifier
+money_hoarder_2 = {
+	tax_efficiency = -0.10
+	tariff_efficiency_modifier = -0.40
+	min_social_spending = 1
+	min_military_spending = 1
+	
+	icon = 48
+}
+
+# Country Modifier
+money_hoarder_3 = {
+	tax_efficiency = -0.20
+	tariff_efficiency_modifier = -0.60
+	min_social_spending = 1
+	min_military_spending = 1
+	
+	icon = 48
+}
+
+# Country Modifier
+money_hoarder_4 = {
+	tax_efficiency = -0.25
+	tariff_efficiency_modifier = -0.80
+	min_social_spending = 1
+	min_military_spending = 1
+	
+	icon = 48
+}
+
+# Country Modifier
+money_hoarder_5 = {
+	tax_efficiency = -0.40
+	tariff_efficiency_modifier = -1.0
+	min_social_spending = 1
+	min_military_spending = 1
+	
+	icon = 48
+}
+
+# Country Modifier
+money_hoarder_6 = {
+	tax_efficiency = -0.75
+	tariff_efficiency_modifier = -1.25
+	min_social_spending = 1
+	min_military_spending = 1
+	
+	icon = 48
+}
+
+# Country Modifier
+money_hoarder_7 = {
+	max_tariff = -1
+	max_tax = -1
+	tax_efficiency = -1
+	tariff_efficiency_modifier = -1.5
+	min_social_spending = 1
+	min_military_spending = 1
+	
+	icon = 48
 }
 # }

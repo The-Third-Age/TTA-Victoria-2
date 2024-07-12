@@ -631,6 +631,522 @@ country_event = {
 			}
 		}
 		
+		# Triggered Modifiers {
+		# No Infamy
+		random_owned = {
+			limit = { owner = { has_global_flag = removed_infamy } }
+			owner = { any_country = { add_country_modifier = { name = no_infamy duration = -1 } } }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = removed_infamy } } }
+			owner = { any_country = { remove_country_modifier = no_infamy } }
+		}
+		
+		# Vassal Nation
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = vassal_nation }
+				is_vassal = yes
+			}
+			add_country_modifier = { name = vassal_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = vassal_nation
+				is_vassal = no
+			}
+			remove_country_modifier = vassal_nation
+		}
+		
+		# Small Puppet Master
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = small_puppet_master }
+				num_of_vassals = 3
+				NOT = { num_of_vassals = 6 }
+			}
+			add_country_modifier = { name = small_puppet_master duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = small_puppet_master
+				OR = {
+					NOT = { num_of_vassals = 3 }
+					num_of_vassals = 6
+				}
+			}
+			remove_country_modifier = small_puppet_master
+		}
+		
+		# Medium Puppet Master
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = medium_puppet_master }
+				num_of_vassals = 6
+				NOT = { num_of_vassals = 9 }
+			}
+			add_country_modifier = { name = medium_puppet_master duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = medium_puppet_master
+				OR = {
+					NOT = { num_of_vassals = 6 }
+					num_of_vassals = 9
+				}
+			}
+			remove_country_modifier = medium_puppet_master
+		}
+		
+		# Great Puppet Master
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = great_puppet_master }
+				num_of_vassals = 9
+			}
+			add_country_modifier = { name = great_puppet_master duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = great_puppet_master
+				NOT = { num_of_vassals = 9 }
+			}
+			remove_country_modifier = great_puppet_master
+		}
+		
+		# Control of Anduin Mouth
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = control_of_anduin_mouth }
+				controls = 49 # Ethir
+				controls = 50 # Fanuilond
+				controls = 51 # Tol Forethir
+				controls = 15 # Benish Armon
+				controls = 226 # Methir
+			}
+			add_country_modifier = { name = control_of_anduin_mouth duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = control_of_anduin_mouth
+				OR = {
+					NOT = { controls = 49 } # Ethir
+					NOT = { controls = 50 } # Fanuilond
+					NOT = { controls = 51 } # Tol Forethir
+					NOT = { controls = 15 } # Benish Armon
+					NOT = { controls = 226 } # Methir
+				}
+			}
+			remove_country_modifier = control_of_anduin_mouth
+		}
+		
+		# Control of Gwathlo Mouth
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = control_of_gwathlo_mouth }
+				controls = 825 # Lond Daer
+				controls = 906 # Ilfin
+				controls = 1186 # Minas Mellon
+			}
+			add_country_modifier = { name = control_of_gwathlo_mouth duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = control_of_gwathlo_mouth
+				OR = {
+					NOT = { controls = 825 } # Lond Daer
+					NOT = { controls = 906 } # Ilfin
+					NOT = { controls = 1186 } # Minas Mellon
+				}
+			}
+			remove_country_modifier = control_of_gwathlo_mouth
+		}
+		
+		# Control of Celduin Mouth
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = control_of_celduin_mouth }
+				controls = 544 # Szrel-kain
+				controls = 1404 # Tundera Var
+				controls = 622 # Winterion Iaur
+			}
+			add_country_modifier = { name = control_of_celduin_mouth duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = control_of_celduin_mouth
+				OR = {
+					NOT = { controls = 544 } # Szrel-kain
+					NOT = { controls = 1404 } # Tundera Var
+					NOT = { controls = 622 } # Winterion Iaur
+				}
+			}
+			remove_country_modifier = control_of_celduin_mouth
+		}
+		
+		# Control of Rhunaer
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = control_of_rhunaer }
+				controls = 545 # Riavod
+				controls = 550 # Scarakikot
+				controls = 559 # Lest
+				controls = 560 # Dourband
+				controls = 564 # Dilgul
+				controls = 566 # Mistrand
+				controls = 598 # Larkar
+				controls = 1395 # Elgaer
+				controls = 601 # Egil Dorn
+				controls = 602 # Tset-Hedren
+				controls = 604 # Burh Kuga
+				controls = 622 # Winterion Iaur
+			}
+			add_country_modifier = { name = control_of_rhunaer duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = control_of_rhunaer
+				OR = {
+					NOT = { controls = 545 } # Riavod
+					NOT = { controls = 550 } # Scarakikot
+					NOT = { controls = 559 } # Lest
+					NOT = { controls = 560 } # Dourband
+					NOT = { controls = 564 } # Dilgul
+					NOT = { controls = 566 } # Mistrand
+					NOT = { controls = 598 } # Larkar
+					NOT = { controls = 1395 } # Elgaer
+					NOT = { controls = 601 } # Egil Dorn
+					NOT = { controls = 602 } # Tset-Hedren
+					NOT = { controls = 604 } # Burh Kuga
+					NOT = { controls = 622 } # Winterion Iaur
+				}
+			}
+			remove_country_modifier = control_of_rhunaer
+		}
+		
+		# Men Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = men_culture_nation }
+				accepted_culture = men_culture
+			}
+			add_country_modifier = { name = men_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = men_culture_nation
+				NOT = { accepted_culture = men_culture }
+			}
+			remove_country_modifier = men_culture_nation
+		}
+		
+		# Elven Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = elven_culture_nation }
+				accepted_culture = elven_culture
+			}
+			add_country_modifier = { name = elven_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = elven_culture_nation
+				NOT = { accepted_culture = elven_culture }
+			}
+			remove_country_modifier = elven_culture_nation
+		}
+		
+		# Dwarven Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = dwarven_culture_nation }
+				accepted_culture = dwarven_culture
+			}
+			add_country_modifier = { name = dwarven_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = dwarven_culture_nation
+				NOT = { accepted_culture = dwarven_culture }
+			}
+			remove_country_modifier = dwarven_culture_nation
+		}
+		
+		# Orc Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = orc_culture_nation }
+				accepted_culture = orc_culture
+			}
+			add_country_modifier = { name = orc_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = orc_culture_nation
+				NOT = { accepted_culture = orc_culture }
+			}
+			remove_country_modifier = orc_culture_nation
+		}
+		
+		# Hobbit Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = hobbit_culture_nation }
+				accepted_culture = hobbit_culture
+			}
+			add_country_modifier = { name = hobbit_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = hobbit_culture_nation
+				NOT = { accepted_culture = hobbit_culture }
+			}
+			remove_country_modifier = hobbit_culture_nation
+		}
+		
+		# Ent Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = ent_culture_nation }
+				accepted_culture = ent_culture
+			}
+			add_country_modifier = { name = ent_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = ent_culture_nation
+				NOT = { accepted_culture = ent_culture }
+			}
+			remove_country_modifier = ent_culture_nation
+		}
+		
+		# Troll Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = troll_culture_nation }
+				accepted_culture = troll_culture
+			}
+			add_country_modifier = { name = troll_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = troll_culture_nation
+				NOT = { accepted_culture = troll_culture }
+			}
+			remove_country_modifier = troll_culture_nation
+		}
+		
+		# Eagle Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = eagle_culture_nation }
+				accepted_culture = eagle_culture
+			}
+			add_country_modifier = { name = eagle_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = eagle_culture_nation
+				NOT = { accepted_culture = eagle_culture }
+			}
+			remove_country_modifier = eagle_culture_nation
+		}
+		
+		# Spider Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = spider_culture_nation }
+				accepted_culture = spider_culture
+			}
+			add_country_modifier = { name = spider_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = spider_culture_nation
+				NOT = { accepted_culture = spider_culture }
+			}
+			remove_country_modifier = spider_culture_nation
+		}
+		
+		# Undead Culture Boost
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = undead_culture_nation }
+				accepted_culture = undead_culture
+			}
+			add_country_modifier = { name = undead_culture_nation duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = undead_culture_nation
+				NOT = { accepted_culture = undead_culture }
+			}
+			remove_country_modifier = undead_culture_nation
+		}
+		
+		# Small but Efficient
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = small_but_efficient }
+				civilized = yes
+				NOT = { number_of_states = 4 }
+				NOT = { num_of_cities = 8 }
+				NOT = { total_pops = 500000 }
+				NOT = { money = 1000000 }
+			}
+			add_country_modifier = { name = small_but_efficient duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = small_but_efficient
+				OR = {
+					civilized = no
+					number_of_states = 4
+					num_of_cities = 8
+					total_pops = 500000
+					money = 1000000
+				}
+			}
+			remove_country_modifier = small_but_efficient
+		}
+		
+		# Money Hoarder 1
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = money_hoarder_1 }
+				money = 10000000
+				NOT = { money = 20000000 }
+			}
+			add_country_modifier = { name = money_hoarder_1 duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = money_hoarder_1
+				OR = {
+					NOT = { money = 10000000 }
+					money = 20000000
+				}
+			}
+			remove_country_modifier = money_hoarder_1
+		}
+		
+		# Money Hoarder 2
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = money_hoarder_2 }
+				money = 20000000
+				NOT = { money = 30000000 }
+			}
+			add_country_modifier = { name = money_hoarder_2 duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = money_hoarder_2
+				OR = {
+					NOT = { money = 20000000 }
+					money = 30000000
+				}
+			}
+			remove_country_modifier = money_hoarder_2
+		}
+		
+		# Money Hoarder 3
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = money_hoarder_3 }
+				money = 30000000
+				NOT = { money = 40000000 }
+			}
+			add_country_modifier = { name = money_hoarder_3 duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = money_hoarder_3
+				OR = {
+					NOT = { money = 30000000 }
+					money = 40000000
+				}
+			}
+			remove_country_modifier = money_hoarder_3
+		}
+		
+		# Money Hoarder 4
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = money_hoarder_4 }
+				money = 40000000
+				NOT = { money = 50000000 }
+			}
+			add_country_modifier = { name = money_hoarder_4 duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = money_hoarder_4
+				OR = {
+					NOT = { money = 40000000 }
+					money = 50000000
+				}
+			}
+			remove_country_modifier = money_hoarder_4
+		}
+		
+		# Money Hoarder 5
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = money_hoarder_5 }
+				money = 50000000
+				NOT = { money = 60000000 }
+			}
+			add_country_modifier = { name = money_hoarder_5 duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = money_hoarder_5
+				OR = {
+					NOT = { money = 50000000 }
+					money = 60000000
+				}
+			}
+			remove_country_modifier = money_hoarder_5
+		}
+		
+		# Money Hoarder 6
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = money_hoarder_6 }
+				money = 60000000
+				NOT = { money = 100000000 }
+			}
+			add_country_modifier = { name = money_hoarder_6 duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = money_hoarder_6
+				OR = {
+					NOT = { money = 60000000 }
+					money = 100000000
+				}
+			}
+			remove_country_modifier = money_hoarder_6
+		}
+		
+		# Money Hoarder 7
+		any_neighbor_country = {
+			limit = {
+				NOT = { has_country_modifier = money_hoarder_7 }
+				money = 100000000
+			}
+			add_country_modifier = { name = money_hoarder_7 duration = -1 }
+		}
+		any_neighbor_country = {
+			limit = {
+				has_country_modifier = money_hoarder_7
+				NOT = { money = 100000000 }
+			}
+			remove_country_modifier = money_hoarder_7
+		}
+		# }
+		
 		# Refire the cleanup event next month {
 		random_owned = {
 			limit = {
