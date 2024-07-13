@@ -780,20 +780,15 @@ promote_to = {
 		modifier = {
 			factor = -100
 			soldiers = 0.05
-			country = {
-				OR = {
-					has_global_flag = unciv_5
-					civilized = yes
-				}
+			OR = {
+				country = { civilized = yes }
+				country = { has_country_flag = unciv_nation_5 }
 			}
 		}
 		modifier = {
 			factor = -100
 			soldiers = 0.075
-			country = {
-				has_global_flag = unciv_7
-				civilized = no
-			}
+			country = { has_country_flag = unciv_nation_7 }
 		}
 	}
 }

@@ -660,20 +660,15 @@ promote_to = {
 		modifier = {
 			factor = -100
 			soldiers = 0.05
-			country = {
-				OR = {
-					has_global_flag = unciv_5
-					civilized = yes
-				}
+			OR = {
+				country = { civilized = yes }
+				country = { has_country_flag = unciv_nation_5 }
 			}
 		}
 		modifier = {
 			factor = -100
 			soldiers = 0.075
-			country = {
-				has_global_flag = unciv_7
-				civilized = no
-			}
+			country = { has_country_flag = unciv_nation_7 }
 		}
 	}
 	craftsmen = {
@@ -731,11 +726,11 @@ promote_to = {
 		}
 		modifier = {
 			factor = -100
-			NOT = {
-				location = {
-					work_available = { worker = craftsmen }
-				}
-			}
+			NOT = { location = { work_available = { worker = craftsmen } } }
+		}
+		modifier = {
+			factor = -100
+			unemployment_by_type = { value = 0.001 type = craftsmen }
 		}
 		modifier = {
 			factor = -100

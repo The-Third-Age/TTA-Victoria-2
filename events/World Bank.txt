@@ -562,7 +562,7 @@ country_event = {
 				remove_province_modifier = summer_modifier_south
 				remove_province_modifier = autumn_modifier_south
 			}
-			#  March, April, May
+			# March, April, May
 			any_neighbor_province = {
 				limit = {
 					month = 2
@@ -640,6 +640,56 @@ country_event = {
 		random_owned = {
 			limit = { owner = { NOT = { has_global_flag = removed_infamy } } }
 			owner = { any_country = { remove_country_modifier = no_infamy } }
+		}
+
+		# Recruitment limit for uncentralized nations
+		random_owned = {
+			limit = { owner = { has_global_flag = unciv_5 } }
+			owner = {
+				any_country = {
+					limit = { civilized = no }
+					set_country_flag = unciv_nation_5
+					add_country_modifier = { name = unciv_nation_5 duration = -1 }
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = unciv_5 } } }
+			owner = {
+				any_country = {
+					clr_country_flag = unciv_nation_5
+					remove_country_modifier = unciv_nation_5
+				}
+			}
+		}
+		any_country = {
+			limit = { civilized = yes }
+			clr_country_flag = unciv_nation_5
+			remove_country_modifier = unciv_nation_5
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = unciv_7 } }
+			owner = {
+				any_country = {
+					limit = { civilized = no }
+					set_country_flag = unciv_nation_7
+					add_country_modifier = { name = unciv_nation_7 duration = -1 }
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = unciv_7 } } }
+			owner = {
+				any_country = {
+					clr_country_flag = unciv_nation_7
+					remove_country_modifier = unciv_nation_7
+				}
+			}
+		}
+		any_country = {
+			limit = { civilized = yes }
+			clr_country_flag = unciv_nation_7
+			remove_country_modifier = unciv_nation_7
 		}
 		
 		# Vassal Nation

@@ -631,11 +631,11 @@ promote_to = {
 		}
 		modifier = {
 			factor = -100
-			NOT = {
-				location = {
-					work_available = { worker = craftsmen }
-				}
-			}
+			NOT = { location = { work_available = { worker = craftsmen } } }
+		}
+		modifier = {
+			factor = -100
+			unemployment_by_type = { value = 0.001 type = craftsmen }
 		}
 		modifier = {
 			factor = -100
