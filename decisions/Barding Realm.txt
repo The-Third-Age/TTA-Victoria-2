@@ -172,7 +172,7 @@ political_decisions = {
 	}
 	
 	rivermen_join_DAL = {
-		picture = "RIV_rivermen_dale"
+		picture = "Barding Realm/RIV_rivermen_dale"
 		potential = {
 			primary_culture = rivermen
 			ai = yes
@@ -200,7 +200,7 @@ political_decisions = {
 	}
 	
 	form_rivermen = {
-		picture = "RIV_rivermen_unite"
+		picture = "Barding Realm/RIV_rivermen_unite"
 		potential = {
 			primary_culture = rivermen
 			NOT = { tag = RIV }
@@ -253,7 +253,7 @@ political_decisions = {
 	}
 	
 	claim_nether_marches = {
-		picture = "RIV_claim_nether_marches"
+		picture = "Barding Realm/RIV_claim_nether_marches"
 		potential = {
 			tag = RIV
 			NOT = { has_global_flag = DAL_rivermen_claimed_nether_marches }
@@ -269,7 +269,7 @@ political_decisions = {
 	}
 	
 	break_DAL_hegemony = {
-		picture = "RIV_break_DAL_hegemony"
+		picture = "Barding Realm/RIV_break_DAL_hegemony"
 		potential = {
 			tag = RIV
 			has_global_flag = DAL_rivermen_claimed_nether_marches
@@ -317,7 +317,7 @@ political_decisions = {
 # Marsh Wights
 political_decisions = {
 	awaken_the_marsh_wights = {
-		picture = "Barding Realm/DAL_marsh_wights"
+		picture = "Barding Realm/DAL_marsh_wights_rise"
 		potential = {
 			OR = {
 				nationalvalue = sauron
@@ -565,7 +565,7 @@ political_decisions = {
 	}
 	
 	protect_the_rivermen = {
-		picture=  "Barding Realm/DAL_barding_diplomats_rivermen"
+		picture = "Barding Realm/DAL_barding_diplomats_rivermen"
 		
 		potential = {
 			tag = DAL
@@ -631,7 +631,7 @@ political_decisions = {
 	}
 	
 	proclaim_lordship_over_the_rivermen = {
-		picture = "Barding Realm/DAL_barding_diplomats"
+		picture = "Barding Realm/DAL_barding_diplomats_rivermen"
 		
 		potential = {
 			tag = DAL
