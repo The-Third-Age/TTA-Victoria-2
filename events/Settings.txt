@@ -30,19 +30,19 @@ country_event = {
 		currently_loc = {}
 		random_owned = {
 			limit = {
-				owner = { has_global_flag = unciv_5 }
+				FOR = { has_country_flag = unciv_5 }
 			}
 			five_percent_loc = {}
 		}
 		random_owned = {
 			limit = {
-				owner = { has_global_flag = unciv_7 }
+				FOR = { has_country_flag = unciv_7 }
 			}
 			seven_point_five_percent_loc = {}
 		}
 		random_owned = {
 			limit = {
-				owner = { has_global_flag = unciv_10 }
+				FOR = { has_country_flag = unciv_10 }
 			}
 			10_percent_loc = {}
 		}
@@ -154,13 +154,13 @@ country_event = {
 		unciv_5_loc = {}
 		random_owned = {
 			limit = {
-				owner = { has_global_flag = unciv_5 }
+				FOR = { has_country_flag = unciv_5 }
 			}
 			enabled_loc = {}
 		}
 		random_owned = {
 			limit = {
-				owner = { NOT = { has_global_flag = unciv_5 } }
+				FOR = { NOT = { has_country_flag = unciv_5 } }
 			}
 			disabled_loc = {}
 		}
@@ -172,13 +172,13 @@ country_event = {
 		unciv_7_loc = {}
 		random_owned = {
 			limit = {
-				owner = { has_global_flag = unciv_7 }
+				FOR = { has_country_flag = unciv_7 }
 			}
 			enabled_loc = {}
 		}
 		random_owned = {
 			limit = {
-				owner = { NOT = { has_global_flag = unciv_7 } }
+				FOR = { NOT = { has_country_flag = unciv_7 } }
 			}
 			disabled_loc = {}
 		}
@@ -190,13 +190,13 @@ country_event = {
 		unciv_10_loc = {}
 		random_owned = {
 			limit = {
-				owner = { has_global_flag = unciv_10 }
+				FOR = { has_country_flag = unciv_10 }
 			}
 			enabled_loc = {}
 		}
 		random_owned = {
 			limit = {
-				owner = { NOT = { has_global_flag = unciv_10 } }
+				FOR = { NOT = { has_country_flag = unciv_10 } }
 			}
 			disabled_loc = {}
 		}
@@ -206,9 +206,9 @@ country_event = {
 	option = {
 		name = ""
 		
-		set_global_flag = unciv_5
-		clr_global_flag = unciv_7
-		clr_global_flag = unciv_10
+		FOR = { set_country_flag = unciv_5 }
+		FOR = { clr_country_flag = unciv_7 }
+		FOR = { clr_country_flag = unciv_10 }
 		
 		set_global_flag = hidden_effects
 		
@@ -227,9 +227,9 @@ country_event = {
 	option = {
 		name = ""
 		
-		clr_global_flag = unciv_5
-		set_global_flag = unciv_7
-		clr_global_flag = unciv_10
+		FOR = { clr_country_flag = unciv_5 }
+		FOR = { set_country_flag = unciv_7 }
+		FOR = { clr_country_flag = unciv_10 }
 		
 		set_global_flag = hidden_effects
 		
@@ -248,9 +248,9 @@ country_event = {
 	option = {
 		name = ""
 		
-		clr_global_flag = unciv_5
-		clr_global_flag = unciv_7
-		set_global_flag = unciv_10
+		FOR = { clr_country_flag = unciv_5 }
+		FOR = { clr_country_flag = unciv_7 }
+		FOR = { set_country_flag = unciv_10 }
 		
 		set_global_flag = hidden_effects
 		

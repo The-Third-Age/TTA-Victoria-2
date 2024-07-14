@@ -644,7 +644,7 @@ country_event = {
 
 		# Recruitment limit for uncentralized nations
 		random_owned = {
-			limit = { owner = { has_global_flag = unciv_5 } }
+			limit = { FOR = { has_country_flag = unciv_5 } }
 			owner = {
 				any_country = {
 					limit = { civilized = no }
@@ -654,7 +654,7 @@ country_event = {
 			}
 		}
 		random_owned = {
-			limit = { owner = { NOT = { has_global_flag = unciv_5 } } }
+			limit = { FOR = { NOT = { has_country_flag = unciv_5 } } }
 			owner = {
 				any_country = {
 					clr_country_flag = unciv_nation_5
@@ -668,7 +668,7 @@ country_event = {
 			remove_country_modifier = unciv_nation_5
 		}
 		random_owned = {
-			limit = { owner = { has_global_flag = unciv_7 } }
+			limit = { FOR = { has_country_flag = unciv_7 } }
 			owner = {
 				any_country = {
 					limit = { civilized = no }
@@ -678,7 +678,7 @@ country_event = {
 			}
 		}
 		random_owned = {
-			limit = { owner = { NOT = { has_global_flag = unciv_7 } } }
+			limit = { FOR = { NOT = { has_country_flag = unciv_7 } } }
 			owner = {
 				any_country = {
 					clr_country_flag = unciv_nation_7
@@ -690,6 +690,31 @@ country_event = {
 			limit = { civilized = yes }
 			clr_country_flag = unciv_nation_7
 			remove_country_modifier = unciv_nation_7
+		}
+		
+		random_owned = {
+			limit = { FOR = { has_country_flag = unciv_10 } }
+			owner = {
+				any_country = {
+					limit = { civilized = no }
+					set_country_flag = unciv_nation_10
+					add_country_modifier = { name = unciv_nation_10 duration = -1 }
+				}
+			}
+		}
+		random_owned = {
+			limit = { FOR = { NOT = { has_country_flag = unciv_10 } } }
+			owner = {
+				any_country = {
+					clr_country_flag = unciv_nation_10
+					remove_country_modifier = unciv_nation_10
+				}
+			}
+		}
+		any_country = {
+			limit = { civilized = yes }
+			clr_country_flag = unciv_nation_10
+			remove_country_modifier = unciv_nation_10
 		}
 		
 		# Vassal Nation
@@ -839,7 +864,7 @@ country_event = {
 			limit = {
 				NOT = { has_country_modifier = control_of_rhunaer }
 				controls = 545 # Riavod
-				controls = 550 # Scarakikot
+				controls = 549 # Scarakikot
 				controls = 559 # Lest
 				controls = 560 # Dourband
 				controls = 564 # Dilgul
