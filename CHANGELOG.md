@@ -36,6 +36,7 @@ All notable changes will be documented in this file.
  - Popular Anxiety (replacing Plurality)
  - Province Wealth (replacing Crime)
  - Seasons and Weather
+ - Triggered modifiers removed, all replaced with standard country modifiers
  - Beginning of Economy Rework
 
 ### Graphics
