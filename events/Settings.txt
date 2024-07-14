@@ -30,19 +30,19 @@ country_event = {
 		currently_loc = {}
 		random_owned = {
 			limit = {
-				FOR = { has_country_flag = unciv_5 }
+				owner = { has_country_flag = unciv_5 }
 			}
 			five_percent_loc = {}
 		}
 		random_owned = {
 			limit = {
-				FOR = { has_country_flag = unciv_7 }
+				owner = { has_country_flag = unciv_7 }
 			}
 			seven_point_five_percent_loc = {}
 		}
 		random_owned = {
 			limit = {
-				FOR = { has_country_flag = unciv_10 }
+				owner = { has_country_flag = unciv_10 }
 			}
 			10_percent_loc = {}
 		}
@@ -154,13 +154,13 @@ country_event = {
 		unciv_5_loc = {}
 		random_owned = {
 			limit = {
-				FOR = { has_country_flag = unciv_5 }
+				owner = { has_country_flag = unciv_5 }
 			}
 			enabled_loc = {}
 		}
 		random_owned = {
 			limit = {
-				FOR = { NOT = { has_country_flag = unciv_5 } }
+				owner = { NOT = { has_country_flag = unciv_5 } }
 			}
 			disabled_loc = {}
 		}
@@ -172,13 +172,13 @@ country_event = {
 		unciv_7_loc = {}
 		random_owned = {
 			limit = {
-				FOR = { has_country_flag = unciv_7 }
+				owner = { has_country_flag = unciv_7 }
 			}
 			enabled_loc = {}
 		}
 		random_owned = {
 			limit = {
-				FOR = { NOT = { has_country_flag = unciv_7 } }
+				owner = { NOT = { has_country_flag = unciv_7 } }
 			}
 			disabled_loc = {}
 		}
@@ -190,13 +190,13 @@ country_event = {
 		unciv_10_loc = {}
 		random_owned = {
 			limit = {
-				FOR = { has_country_flag = unciv_10 }
+				owner = { has_country_flag = unciv_10 }
 			}
 			enabled_loc = {}
 		}
 		random_owned = {
 			limit = {
-				FOR = { NOT = { has_country_flag = unciv_10 } }
+				owner = { NOT = { has_country_flag = unciv_10 } }
 			}
 			disabled_loc = {}
 		}
@@ -206,9 +206,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		FOR = { set_country_flag = unciv_5 }
-		FOR = { clr_country_flag = unciv_7 }
-		FOR = { clr_country_flag = unciv_10 }
+		set_country_flag = unciv_5
+		clr_country_flag = unciv_7
+		clr_country_flag = unciv_10
+		
+		any_country = {
+			set_country_flag = unciv_5
+			clr_country_flag = unciv_7
+			clr_country_flag = unciv_10
+		}
 		
 		set_global_flag = hidden_effects
 		
@@ -227,9 +233,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		FOR = { clr_country_flag = unciv_5 }
-		FOR = { set_country_flag = unciv_7 }
-		FOR = { clr_country_flag = unciv_10 }
+		clr_country_flag = unciv_5
+		set_country_flag = unciv_7
+		clr_country_flag = unciv_10
+		
+		any_country = {
+			clr_country_flag = unciv_5
+			set_country_flag = unciv_7
+			clr_country_flag = unciv_10
+		}
 		
 		set_global_flag = hidden_effects
 		
@@ -248,9 +260,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		FOR = { clr_country_flag = unciv_5 }
-		FOR = { clr_country_flag = unciv_7 }
-		FOR = { set_country_flag = unciv_10 }
+		clr_country_flag = unciv_5
+		clr_country_flag = unciv_7
+		set_country_flag = unciv_10
+		
+		any_country = {
+			clr_country_flag = unciv_5
+			clr_country_flag = unciv_7
+			set_country_flag = unciv_10
+		}
 		
 		set_global_flag = hidden_effects
 		
