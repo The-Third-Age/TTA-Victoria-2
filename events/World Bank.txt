@@ -648,48 +648,40 @@ country_event = {
 			owner = {
 				any_country = {
 					limit = { civilized = no }
-					set_country_flag = unciv_nation_5
-					add_country_modifier = { name = unciv_nation_5 duration = -1 }
+					set_country_flag = unciv_5
 				}
 			}
 		}
 		random_owned = {
 			limit = { FOR = { NOT = { has_country_flag = unciv_5 } } }
-			owner = {
-				any_country = {
-					clr_country_flag = unciv_nation_5
-					remove_country_modifier = unciv_nation_5
-				}
-			}
+			owner = { any_country = { clr_country_flag = unciv_5 } }
 		}
 		any_country = {
-			limit = { civilized = yes }
-			clr_country_flag = unciv_nation_5
-			remove_country_modifier = unciv_nation_5
+			limit = {
+				civilized = yes
+				NOT = { tag = FOR }
+			}
+			clr_country_flag = unciv_5
 		}
 		random_owned = {
 			limit = { FOR = { has_country_flag = unciv_7 } }
 			owner = {
 				any_country = {
 					limit = { civilized = no }
-					set_country_flag = unciv_nation_7
-					add_country_modifier = { name = unciv_nation_7 duration = -1 }
+					set_country_flag = unciv_7
 				}
 			}
 		}
 		random_owned = {
 			limit = { FOR = { NOT = { has_country_flag = unciv_7 } } }
-			owner = {
-				any_country = {
-					clr_country_flag = unciv_nation_7
-					remove_country_modifier = unciv_nation_7
-				}
-			}
+			owner = { any_country = { clr_country_flag = unciv_7 } }
 		}
 		any_country = {
-			limit = { civilized = yes }
-			clr_country_flag = unciv_nation_7
-			remove_country_modifier = unciv_nation_7
+			limit = {
+				civilized = yes
+				NOT = { tag = FOR }
+			}
+			clr_country_flag = unciv_7
 		}
 		
 		random_owned = {
@@ -697,8 +689,7 @@ country_event = {
 			owner = {
 				any_country = {
 					limit = { civilized = no }
-					set_country_flag = unciv_nation_10
-					add_country_modifier = { name = unciv_nation_10 duration = -1 }
+					set_country_flag = unciv_10
 				}
 			}
 		}
@@ -706,15 +697,16 @@ country_event = {
 			limit = { FOR = { NOT = { has_country_flag = unciv_10 } } }
 			owner = {
 				any_country = {
-					clr_country_flag = unciv_nation_10
-					remove_country_modifier = unciv_nation_10
+					clr_country_flag = unciv_10
 				}
 			}
 		}
 		any_country = {
-			limit = { civilized = yes }
-			clr_country_flag = unciv_nation_10
-			remove_country_modifier = unciv_nation_10
+			limit = {
+				civilized = yes
+				NOT = { tag = FOR }
+			}
+			clr_country_flag = unciv_10
 		}
 		
 		# Vassal Nation
