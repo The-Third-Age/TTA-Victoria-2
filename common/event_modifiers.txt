@@ -1,6 +1,9 @@
 # Audax Validator "!" Ignore_NEXT
 # Remove the above line to have the validator run over this tile
 
+# When adding new modifiers, don't forget to mark them as a country or province modifier
+# When adding new country modifiers, update the daily update event accordingly (99250 in World Bank.txt)
+
 # Icon						Country Icon Number		Province Icon Number	Notes
 # Green Gavel				-1						1
 # Red Gavel					0						2
@@ -60,39 +63,29 @@
 #############################
 ##### VANILLA MODIFIERS ##### {
 #############################
-##### TECH SCHOOLS ###### {
-academic_confusion = {
-	research_points_modifier = -0.01
-	prestige = -0.01
-	icon = 6
-}
-
-# }
 ##### NATIONALIST UPRISINGS ##### {
+# Country Modifier
 minority_building_restrictions = {
 	non_accepted_pop_militancy_modifier = 0.05
 	assimilation_rate = 0.05
 	icon = 16
 }
 
+# Province Modifier
 dryzymalas_wagon = {
 	pop_militancy_modifier = 0.05
 	pop_consciousness_modifier = 0.02
 	icon = 8
 }
 
+# Country Modifier
 discriminatory_school_system = {
 	research_points_modifier = -0.02
 	assimilation_rate = 0.05
 	icon = 8
 }
 
-nationalist_agitation = {
-	pop_consciousness_modifier = 0.25
-	pop_militancy_modifier = 0.05
-	icon = 4
-}
-
+# Province Modifier
 flying_university = {
 	research_points_modifier = 0.02
 	pop_consciousness_modifier = 0.2
@@ -100,6 +93,7 @@ flying_university = {
 	icon = 5
 }
 
+# Province Modifier
 nationalist_resistance = {
 	# Audax Validator "." Ignore_1007
 	local_artisan_output = -0.25
@@ -109,6 +103,7 @@ nationalist_resistance = {
 	icon = 2
 }
 
+# Province Modifier
 patriot_uprising = {
 	pop_consciousness_modifier = 0.2
 	pop_militancy_modifier = 0.25
@@ -117,24 +112,21 @@ patriot_uprising = {
 
 # }
 ##### Economic Events ##### {
-
-central_bank_established = {
-	loan_interest = -0.02
-	icon = 11
-}
-
+# Country Modifier
 economic_boom = {
 	factory_throughput = 0.05
 	rgo_output = 0.05
 	icon = 11
 }
 
+# Province Modifier
 local_economic_downturn = {
 	local_RGO_output = -0.2
 	pop_consciousness_modifier = 0.5
 	icon = 12
 }
 
+# Country Modifier
 national_economic_downturn = {
 	# Audax Validator "." Ignore_1007
 	RGO_output = -0.2
@@ -144,9 +136,11 @@ national_economic_downturn = {
 
 # }
 ###### CB generation ###### {
+# Country Modifier
 CB_gen_plus = {
 	cb_generation_speed_modifier = 0.25
 }
+# Country Modifier
 CB_gen_minus = {
 	cb_generation_speed_modifier = -0.25
 }
@@ -155,6 +149,118 @@ CB_gen_minus = {
 ######################### }
 ##### TTA MODIFIERS ##### {
 #########################
+##### ORGANIZATION MODIFIERS ##### {
+# Country Modifier - Organization
+alliance_of_dwarves_and_men = {
+	icon = 5
+}
+# }
+##### ORGANIZATION SEPARATION MODIFIERS ##### {
+# Country Modifier -- Organization Separator
+organization_separator_1 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_2 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_3 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_4 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_5 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_6 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_7 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_8 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_9 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_10 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_11 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_12 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_13 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_14 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_15 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_16 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_17 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_18 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_19 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_20 = {
+	icon = 34
+}
+
+# Country Modifier -- Organization Separator
+organization_separator_21 = {
+	icon = 34
+}
+# }
 ##### TARGETTING MODIFIERS ##### {
 # Province Modifier
 province_target_bovine_fever_modifier = {
@@ -576,6 +682,7 @@ hunting_outlaws = {
 
 # }
 ##### COLONIAL MODIFIERS ##### {
+# Province Modifier
 colonial_push = {
 	immigrant_push = 0.25
 	
@@ -583,10 +690,12 @@ colonial_push = {
 }
 
 # This modifier should never be seen. It is purely used as a targeting mechanism
+# Province Modifier
 colonization_target = {
 	icon = 1
 }
 
+# Province Modifier
 colonial_attraction = {
 	immigrant_attract = 1
 	
@@ -595,6 +704,7 @@ colonial_attraction = {
 
 # }
 ##### BANK MODIFIER ##### {
+# Province Modifier
 bank_cheats = {
 	local_rgo_output = 99.9
 	mine_rgo_size = 99.9
@@ -602,6 +712,7 @@ bank_cheats = {
 	icon = 11
 }
 
+# Country Modifier
 no_points_for_you = {
 	prestige = -100
 	# Audax Validator "." Ignore_1007
@@ -612,12 +723,9 @@ no_points_for_you = {
 	icon = 14
 }
 
-good_evil_relations_cleanup_timer = {
-	icon = 11
-}
-
 # }
 ##### OBSERVER MODIFIER ##### {
+# Country Modifier
 observer_mode = {
 	mine_rgo_size = 10
 	mine_rgo_eff = 10
@@ -629,14 +737,17 @@ observer_mode = {
 
 # }
 ##### MILITARY ##### {
+# Country Modifier
 recruited_admirals = {
 	icon = 18
 }
 
+# Country Modifier
 recruited_generals = {
 	icon = 18
 }
 
+# Country Modifier
 low_military_recruitment = {
 	cb_generation_speed_modifier = -0.1
 	
@@ -645,6 +756,7 @@ low_military_recruitment = {
 
 # }
 #### WAR OF THE RING ##### {
+# Country Modifier
 one_ring = {
 	global_pop_militancy_modifier = -0.1
 	global_pop_consciousness_modifier = 0.15
@@ -663,6 +775,8 @@ one_ring = {
 	
 	icon = 20
 }
+
+# Country Modifier
 ring_hunters = {
 	badboy = 0.1
 	prestige = 0.5
@@ -672,12 +786,14 @@ ring_hunters = {
 	icon = 20
 }
 
+# Country Modifier
 fellowship_member = {
 	prestige = 0.1
 	
 	icon = 19
 }
 
+# Country Modifier
 remembered_sacrifice = {
 	prestige = 0.1
 	pop_consciousness_modifier = 0.02
@@ -685,18 +801,22 @@ remembered_sacrifice = {
 	icon = 19
 }
 
+# Country Modifier
 dont_peace_out = {
 	icon = 19
 }
 
+# Country Modifier
 wotr_countdown = {
 	icon = 19
 }
 
+# Country Modifier
 wotr_end_countdown = {
 	icon = 19
 }
 
+# Country Modifier
 no_more_war = {
 	war_exhaustion = 0.5
 	icon = 16
@@ -705,24 +825,28 @@ no_more_war = {
 #}
 ##### DYNAMIC LEADER TRAITS ##### {
 # Personality (randomly assigned)
+# Country Modifier
 kind = {
 	global_pop_militancy_modifier = -0.01
 	
 	icon = 5
 }
 
+# Country Modifier
 smart_modifier = {
 	research_points = 0.01
 	
 	icon = 5
 }
 
+# Country Modifier
 of_noble_house = {
 	global_pop_consciousness_modifier = -0.01
 	
 	icon = 5
 }
 
+# Country Modifier
 defensive_modifier = { # cannot also have "aggressive_modifier"
 	cb_generation_speed_modifier = -0.25
 	min_military_spending = 0.25
@@ -730,6 +854,7 @@ defensive_modifier = { # cannot also have "aggressive_modifier"
 	icon = 5
 }
 
+# Country Modifier
 aggressive_modifier = { # cannot also have "defensive_modifier"
 	cb_generation_speed_modifier = 0.25
 	min_military_spending = 0.25
@@ -737,12 +862,14 @@ aggressive_modifier = { # cannot also have "defensive_modifier"
 	icon = 5
 }
 
+# Country Modifier
 strong = {
 	diplomatic_points_modifier = 0.1
 	
 	icon = 5
 }
 
+# Country Modifier
 honest = { # cannot also have "deceitful"
 	global_pop_consciousness_modifier = -0.01
 	diplomatic_points_modifier = 0.1
@@ -750,6 +877,7 @@ honest = { # cannot also have "deceitful"
 	icon = 5
 }
 
+# Country Modifier
 deceitful = { # cannot also have "honest"
 	global_pop_consciousness_modifier = 0.01
 	diplomatic_points_modifier = -0.1
@@ -758,6 +886,7 @@ deceitful = { # cannot also have "honest"
 }
 
 # Spectrum (variable)
+# Country Modifier
 aristocrat_modifier = { # opposite is "of_the_people"
 	global_pop_militancy_modifier = 0.01
 	rgo_output = 0.05
@@ -766,6 +895,7 @@ aristocrat_modifier = { # opposite is "of_the_people"
 	icon = 5
 }
 
+# Country Modifier
 of_the_people = { # opposite if "aristocrat"
 	global_pop_militancy_modifier = -0.01
 	tax_efficiency = -0.03
@@ -773,6 +903,7 @@ of_the_people = { # opposite if "aristocrat"
 	icon = 5
 }
 
+# Country Modifier
 charlatan = { # opposite is "wise_ruler"
 	global_pop_consciousness_modifier = 0.01
 	political_reform_desire = 0.1
@@ -781,6 +912,7 @@ charlatan = { # opposite is "wise_ruler"
 	icon = 5
 }
 
+# Country Modifier
 wise_ruler = { # opposite is "charlatan"
 	global_pop_consciousness_modifier = -0.01
 	political_reform_desire = -0.1
@@ -789,6 +921,7 @@ wise_ruler = { # opposite is "charlatan"
 	icon = 5
 }
 
+# Country Modifier
 lazy = { # opposite is "diligent"
 	rgo_output = -0.05
 	factory_output = -0.05
@@ -797,6 +930,7 @@ lazy = { # opposite is "diligent"
 	icon = 5
 }
 
+# Country Modifier
 diligent = { # opposite is "lazy"
 	rgo_output = 0.05
 	factory_output = 0.05
@@ -804,6 +938,7 @@ diligent = { # opposite is "lazy"
 	icon = 5
 }
 
+# Country Modifier
 greedy = { # opposite is "generous"
 	tax_efficiency = 0.05
 	global_assimilation_rate = -0.1
@@ -811,6 +946,7 @@ greedy = { # opposite is "generous"
 	icon = 5
 }
 
+# Country Modifier
 generous = { # opposite is "greedy"
 	global_assimilation_rate = 0.1
 	tax_efficiency = -0.05
@@ -818,12 +954,14 @@ generous = { # opposite is "greedy"
 	icon = 5
 }
 
+# Country Modifier
 corrupt = { # opposite is "just"
 	tax_efficiency = -0.05
 	
 	icon = 5
 }
 
+# Country Modifier
 just = { # opposite is "corrupt"
 	global_assimilation_rate = 0.1
 	
@@ -832,6 +970,7 @@ just = { # opposite is "corrupt"
 
 # }
 ##### Artefacts, and Exploration ##### {
+# Country Modifier
 palantir_madness = {
 	global_pop_consciousness_modifier = 0.05
 	diplomatic_points_modifier = -0.5
@@ -841,6 +980,7 @@ palantir_madness = {
 	icon = 21
 }
 
+# Country Modifier
 pallando_influence = {
 	global_pop_consciousness_modifier = -0.01
 	global_pop_militancy_modifier = -0.01
@@ -848,12 +988,16 @@ pallando_influence = {
 	research_points_modifier = 0.5
 	icon = 19
 }
+
+# Country Modifier
 silmaril = {
 	diplomatic_points_modifier = 1
 	influence_modifier = 1
 	prestige = 1
 	icon = 19
 }
+
+# Country Modifier
 anor_palantir = { # The Palantir currently being held in Minas Tirith
 	diplomatic_points_modifier = 1
 	influence_modifier = 1
@@ -861,6 +1005,8 @@ anor_palantir = { # The Palantir currently being held in Minas Tirith
 	global_pop_militancy_modifier = -0.01
 	icon = 19
 }
+
+# Country Modifier
 orthanc_palantir = { # The Palantir currently being held in Isengard
 	diplomatic_points_modifier = 1
 	influence_modifier = 1
@@ -868,6 +1014,8 @@ orthanc_palantir = { # The Palantir currently being held in Isengard
 	global_pop_militancy_modifier = -0.01
 	icon = 19
 }
+
+# Country Modifier
 ithil_palantir = { # The Palantir currently being held in Barad-dur
 	diplomatic_points_modifier = 1
 	influence_modifier = 1
@@ -875,6 +1023,8 @@ ithil_palantir = { # The Palantir currently being held in Barad-dur
 	global_pop_militancy_modifier = -0.01
 	icon = 19
 }
+
+# Country Modifier
 elostirion_palantir = { # The Palantir currently being held in Lindon
 	diplomatic_points_modifier = 1
 	influence_modifier = 1
@@ -882,6 +1032,8 @@ elostirion_palantir = { # The Palantir currently being held in Lindon
 	global_pop_militancy_modifier = -0.01
 	icon = 19
 }
+
+# Country Modifier
 osgiliath_palantir = { # A lost Palantir
 	diplomatic_points_modifier = 1
 	influence_modifier = 1
@@ -889,6 +1041,8 @@ osgiliath_palantir = { # A lost Palantir
 	global_pop_militancy_modifier = -0.01
 	icon = 19
 }
+
+# Country Modifier
 amonsul_palantir = { # A lost Palantir
 	diplomatic_points_modifier = 1
 	influence_modifier = 1
@@ -896,6 +1050,8 @@ amonsul_palantir = { # A lost Palantir
 	global_pop_militancy_modifier = -0.01
 	icon = 19
 }
+
+# Country Modifier
 annuminas_palantir = { # A lost Palantir
 	diplomatic_points_modifier = 1
 	influence_modifier = 1
@@ -903,29 +1059,41 @@ annuminas_palantir = { # A lost Palantir
 	global_pop_militancy_modifier = -0.01
 	icon = 19
 }
+
+# Country Modifier
 lesser_ring_of_might = {
 	land_organisation = 0.1
 	naval_organisation = 0.1
 	icon = 19
 }
+
+# Country Modifier
 lesser_ring_of_courage = {
 	land_unit_start_experience = 5
 	naval_unit_start_experience = 5
 	icon = 19
 }
+
+# Country Modifier
 lesser_ring_of_wit = {
 	research_points_modifier = 0.1
 	icon = 19
 }
+
+# Country Modifier
 lesser_ring_of_calm = {
 	global_pop_consciousness_modifier = -0.01
 	global_pop_militancy_modifier = -0.01
 	icon = 19
 }
+
+# Country Modifier
 lesser_ring_of_plenty = {
 	rgo_output = 0.1
 	icon = 19
 }
+
+# Country Modifier
 lesser_ring_of_glory = {
 	prestige = 0.1
 	icon = 19
@@ -933,10 +1101,12 @@ lesser_ring_of_glory = {
 
 # }
 ##### GOVERNMENT ##### {
+# Country Modifier
 political_neutrality = {
 	icon = 26
 }
 
+# Country Modifier
 great_advisor = {
 	administrative_efficiency_modifier = 0.05
 	global_pop_consciousness_modifier = -0.02
@@ -945,6 +1115,7 @@ great_advisor = {
 	icon = 5
 }
 
+# Country Modifier
 great_diplomat = {
 	badboy = -0.05
 	cb_generation_speed_modifier = 0.15
@@ -954,11 +1125,13 @@ great_diplomat = {
 }
 # }
 ##### GONDOR ##### {
+# Province Modifier
 houses_of_healing = {
 	pop_militancy_modifier = -0.01
 	icon = 19
 }
 
+# Province Modifier
 stonewain_valley_modifier = {
 	# Audax Validator "." Ignore_1007
 	movement_cost = -0.40
@@ -966,6 +1139,7 @@ stonewain_valley_modifier = {
 	icon = 17
 }
 
+# Country Modifier
 encouraging_outside_military_recruitment = {
 	non_accepted_pop_consciousness_modifier = -0.01
 	non_accepted_pop_militancy_modifier = -0.01
@@ -977,6 +1151,7 @@ encouraging_outside_military_recruitment = {
 	icon = 15
 }
 
+# Country Modifier
 thorongil = {
 	supply_consumption = 0.05
 	land_organisation = 0.1
@@ -985,6 +1160,7 @@ thorongil = {
 	icon = 17
 }
 
+# Province Modifier
 gondorification = {
 	assimilation_rate = 1
 	immigrant_attract = 0.5
@@ -992,6 +1168,7 @@ gondorification = {
 	icon = 1
 }
 
+# Province Modifier
 fear_of_mount_doom = {
 	immigrant_push = 2
 	immigrant_attract = -1
@@ -999,6 +1176,7 @@ fear_of_mount_doom = {
 	icon = 20
 }
 
+# Province Modifier
 harondor_farm_expansions = {
 	immigrant_attract = 0.25
 	farm_rgo_size = 0.25
@@ -1007,6 +1185,7 @@ harondor_farm_expansions = {
 	icon = 11
 }
 
+# Province Modifier
 ithilien_immigrants = {
 	immigrant_attract = 0.75
 	pop_consciousness_modifier = 0.02
@@ -1014,18 +1193,21 @@ ithilien_immigrants = {
 	icon = 9
 }
 
+# Province Modifier
 center_of_the_realm = {
 	immigrant_attract = 0.1
 	
 	icon = 9
 }
 
+# Country Modifier
 ithilien_rangers = {
 	tax_efficiency = -0.05
 	
 	icon = 15
 }
 
+# Province Modifier
 ithilien_rangers_province = {
 	immigrant_push = -0.1
 	life_rating = 0.1
@@ -1038,6 +1220,7 @@ ithilien_rangers_province = {
 	icon = 17
 }
 
+# Province Modifier
 ithilien_rangers_enemy_province = {
 	immigrant_push = 0.1
 	life_rating = -0.1
@@ -1050,12 +1233,14 @@ ithilien_rangers_enemy_province = {
 	icon = 18
 }
 
+# Country Modifier
 council_of_gondor = {
 	global_pop_consciousness_modifier = -0.02
 	
 	icon = 5
 }
 
+# Province Modifier
 crossroads_fallen_king = {
 	prestige = 0.1
 	immigrant_attract = 0.01
@@ -1063,12 +1248,14 @@ crossroads_fallen_king = {
 	icon = 9
 }
 
+# Province Modifier
 flowers_expedition = {
 	local_RGO_output = 0.05
 	
 	icon = 11
 }
 
+# Province Modifier
 resettle_ithilien = {
 	immigrant_attract = 0.10
 	population_growth = 0.01
@@ -1076,6 +1263,7 @@ resettle_ithilien = {
 	icon = 9
 }
 
+# Country Modifier
 the_dead_tree = {
 	diplomatic_points_modifier = -0.05
 	global_immigrant_attract = -0.1
@@ -1085,6 +1273,7 @@ the_dead_tree = {
 	icon = 14
 }
 
+# Province Modifier
 the_mesta = {
 	farm_rgo_size = 0.1
 	farm_rgo_eff = 0.1
@@ -1092,30 +1281,35 @@ the_mesta = {
 	icon = 1
 }
 
+# Province Modifier
 college_of_spoken_word = {
 	research_points_modifier = 0.02
 	
 	icon = 15
 }
 
+# Country Modifier
 constructing_river_defenses = {
 	tax_efficiency = -0.05
 	
 	icon = 10
 }
 
+# Province Modifier
 building_rammas_echor = {
 	tax_efficiency = -0.02
 	
 	icon = 2
 }
 
+# Country Modifier
 building_pelargir_fortifications = {
 	tax_efficiency = -0.02
 	
 	icon = 10
 }
 
+# Country Modifier
 GON_increased_naval_concern = {
 	# Audax Validator "." Ignore_1007
 	military_theory_tech_research_bonus = 0.05
@@ -1127,6 +1321,7 @@ GON_increased_naval_concern = {
 	icon = 15
 }
 
+# Country Modifier
 harondor_lost = {
 	prestige = -0.015
 	badboy = -0.01
@@ -1135,6 +1330,7 @@ harondor_lost = {
 
 # }
 ##### HARAD ##### {
+# Province Modifier
 major_slave_hub = {
 	immigrant_attract = 0.1
 	farm_rgo_size = 0.25
@@ -1145,6 +1341,7 @@ major_slave_hub = {
 }
 # }
 ##### RHUN ##### {
+# Country Modifier
 legacy_of_the_wainriders = {
 	land_organisation = 0.05
 	prestige = 0.05
@@ -1153,6 +1350,7 @@ legacy_of_the_wainriders = {
 }
 # }
 ##### BREELAND ##### {
+# Province Modifier
 friggin_bree_mod = {
 	tax_efficiency = 0.01
 	icon = 11
@@ -1160,11 +1358,13 @@ friggin_bree_mod = {
 
 # }
 ##### ISENGARD ##### {
+# Country Modifier
 breeding_uruk_hai = {
 	icon = 11
 }
 # }
 ##### OATHBREAKERS ##### {
+# Province Modifier
 haunted_by_oathbreakers = {
 	pop_militancy_modifier = 0.03
 	immigrant_attract = -0.5
@@ -1175,12 +1375,15 @@ haunted_by_oathbreakers = {
 
 # }
 ##### EREBOR ##### {
+# Country Modifier
 good_raven_influence = {
 	diplomatic_points_modifier = 0.5
 	prestige = 0.1
 
 	icon = 5
 }
+
+# Country Modifier
 bad_raven_influence = {
 	diplomatic_points_modifier = -0.1
 	pop_consciousness_modifier = 0.01
@@ -1280,18 +1483,21 @@ wonder_of_the_north = {
 }
 
 # Esgaroth Trade Levels - Province Modifiers {
+# Province Modifier
 esgaroth_trade_i = {
 	local_RGO_output = 0.05
 	
 	icon = 11
 }
 
+# Province Modifier
 esgaroth_trade_ii = {
 	local_RGO_output = 0.10
 	
 	icon = 11
 }
 
+# Province Modifier
 esgaroth_trade_iii = {
 	local_RGO_output = 0.20
 	pop_consciousness_modifier = -0.01
@@ -1299,6 +1505,7 @@ esgaroth_trade_iii = {
 	icon = 11
 }
 
+# Province Modifier
 esgaroth_trade_iv = {
 	local_RGO_output = 0.30
 	pop_consciousness_modifier = -0.01
@@ -1306,6 +1513,7 @@ esgaroth_trade_iv = {
 	icon = 11
 }
 
+# Province Modifier
 esgaroth_trade_v = {
 	local_RGO_output = 0.50
 	pop_consciousness_modifier = -0.01
@@ -1340,6 +1548,7 @@ DAL_merchant_power_10 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_power_9 = {
 	factory_output = 0.09
 	artisan_output = 0.09
@@ -1349,6 +1558,7 @@ DAL_merchant_power_9 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_power_8 = {
 	factory_output = 0.08
 	artisan_output = 0.08
@@ -1358,6 +1568,7 @@ DAL_merchant_power_8 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_power_7 = {
 	factory_output = 0.07
 	artisan_output = 0.07
@@ -1367,6 +1578,7 @@ DAL_merchant_power_7 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_power_6 = {
 	factory_output = 0.06
 	artisan_output = 0.06
@@ -1376,6 +1588,7 @@ DAL_merchant_power_6 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_power_5 = {
 	factory_output = 0.05
 	artisan_output = 0.05
@@ -1385,6 +1598,7 @@ DAL_merchant_power_5 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_power_4 = {
 	factory_output = 0.04
 	artisan_output = 0.04
@@ -1394,6 +1608,7 @@ DAL_merchant_power_4 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_power_3 = {
 	factory_output = 0.03
 	artisan_output = 0.03
@@ -1403,6 +1618,7 @@ DAL_merchant_power_3 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_power_2 = {
 	factory_output = 0.02
 	artisan_output = 0.02
@@ -1412,6 +1628,7 @@ DAL_merchant_power_2 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_power_1 = {
 	factory_output = 0.01
 	artisan_output = 0.01
@@ -1421,10 +1638,12 @@ DAL_merchant_power_1 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_merchant_guild_balanced = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_1 = {
 	factory_output = -0.01
 	artisan_output = -0.01
@@ -1434,6 +1653,7 @@ DAL_guild_power_1 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_2 = {
 	factory_output = -0.02
 	artisan_output = -0.02
@@ -1443,6 +1663,7 @@ DAL_guild_power_2 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_3 = {
 	factory_output = -0.03
 	artisan_output = -0.03
@@ -1452,6 +1673,7 @@ DAL_guild_power_3 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_4 = {
 	factory_output = -0.04
 	artisan_output = -0.04
@@ -1461,6 +1683,7 @@ DAL_guild_power_4 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_5 = {
 	factory_output = -0.05
 	artisan_output = -0.05
@@ -1470,6 +1693,7 @@ DAL_guild_power_5 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_6 = {
 	factory_output = -0.06
 	artisan_output = -0.06
@@ -1479,6 +1703,7 @@ DAL_guild_power_6 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_7 = {
 	factory_output = -0.07
 	artisan_output = -0.07
@@ -1488,6 +1713,7 @@ DAL_guild_power_7 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_8 = {
 	factory_output = -0.08
 	artisan_output = -0.08
@@ -1497,6 +1723,7 @@ DAL_guild_power_8 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_9 = {
 	factory_output = -0.09
 	artisan_output = -0.09
@@ -1506,6 +1733,7 @@ DAL_guild_power_9 = {
 	icon = 23
 }
 
+# Country Modifier
 DAL_guild_power_10 = {
 	factory_output = -0.10
 	artisan_output = -0.10
@@ -1561,11 +1789,13 @@ smaugs_desolation_country = {
 
 # }
 ##### URUKDURBZAGH ##### {
+# Country Modifier
 goblin_industry = {
 	factory_throughput = 0.05
 	icon = 11
 }
 
+# Country Modifier
 saruman_engineers = {
 	research_points_modifier = 0.1
 	icon = 5
@@ -1582,7 +1812,7 @@ no_infamy = {
 	icon = 46
 }
 # }
-##### Vassals #####
+##### Vassals ##### {
 # Country Modifier
 vassal_nation = {
 	prestige = -0.3

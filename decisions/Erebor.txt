@@ -10,7 +10,18 @@ political_decisions = {
 			always = no
 		}
 		allow = {}
-		effect = {}
+		effect = {
+			# Setup Alliance of Dwarves and Men
+			add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+			DAL = { add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 } }
+			any_country = {
+				limit = {
+					vassal_of = THIS
+					is_culture_group = dwarves
+				}
+				add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 } }
+			}
+		}
 	}
 	ravens_of_erebor = {
 		picture = "raven"
