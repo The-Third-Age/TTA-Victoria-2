@@ -5,7 +5,7 @@ party_issues = {
 	guild_autonomy_policy = {
 		independent_guilds = {
 			factory_owner_cost = 0.3
-			factory_output = 0.05
+			factory_throughput = 0.05
 			min_tariff = -1
 			max_tariff = 1
 			
@@ -387,12 +387,12 @@ political_reforms = {
 		
 		enforced_serfdom = {
 			rgo_output = 0.1
-			factory_output = -0.1
+			factory_throughput = -0.1
 			global_pop_militancy_modifier = 0.03
 		}
 		discouraged_serfdom = {
 			rgo_output = 0.05
-			factory_output = -0.05
+			factory_throughput = -0.05
 			global_pop_militancy_modifier = 0.01
 		}
 		banned_serfdom = {
@@ -662,7 +662,7 @@ social_reforms = {
 		administrative = yes
 		
 		hereditary = {
-			factory_output = -0.05
+			factory_throughput = -0.05
 			
 			allow = {
 				NOT = { has_country_flag = DAL_merchant_supported_by_realm }
@@ -680,7 +680,7 @@ social_reforms = {
 		}
 		guild_school = {
 			social_reform_desire = 0.2
-			factory_output = 0.05
+			factory_throughput = 0.05
 			education_efficiency_modifier = 0.05
 			research_points_modifier = 0.01
 			administrative_multiplier = 2

@@ -135,7 +135,12 @@ steel_factory = {
 	value = 6
 	
 	bonus = {
-		trigger = { trade_goods_in_state = iron }
+		trigger = {
+			OR = {
+				trade_goods_in_state = iron
+				state_id = 449
+			}
+		}
 		value = 0.2
 	}
 	bonus = {
@@ -143,9 +148,14 @@ steel_factory = {
 			OR = {
 				trade_goods_in_state = coal
 				has_building = charcoal_factory
+				state_id = 449
 			}
 		}
 		value = 0.05
+	}
+	bonus = {
+		trigger = { state_id = 449 }
+		value = 0.1
 	}
 }
 
@@ -173,7 +183,12 @@ fabric_factory = {
 	value = 12
 	
 	bonus = {
-		trigger = { trade_goods_in_state = cotton }
+		trigger = {
+			OR = {
+				trade_goods_in_state = cotton
+				state_id = 16
+			}
+		}
 		value = 0.2
 	}
 	bonus = {
@@ -181,9 +196,14 @@ fabric_factory = {
 			OR = {
 				trade_goods_in_state = dye
 				has_building = dye_factory
+				state_id = 16
 			}
 		}
 		value = 0.05
+	}
+	bonus = {
+		trigger = { state_id = 16 }
+		value = 0.1
 	}
 }
 
@@ -237,11 +257,25 @@ liquor_distillery = {
 	value = 30
 	
 	bonus = {
-		trigger = { has_building = glass_factory }
+		trigger = {
+			OR = {
+				has_building = glass_factory
+				state_id = 545
+			}
+		}
 		value = 0.15
 	}
 	bonus = {
-		trigger = { trade_goods_in_state = food }
+		trigger = {
+			OR = {
+				trade_goods_in_state = food
+				state_id = 545
+			}
+		}
+		value = 0.1
+	}
+	bonus = {
+		trigger = { state_id = 545 }
 		value = 0.1
 	}
 }
@@ -274,13 +308,23 @@ literature_factory = {
 			OR = {
 				trade_goods_in_state = dye
 				has_building = dye_factory
+				state_id = 865
 			}
 		}
 		value = 0.05
 	}
 	bonus = {
-		trigger = { has_building = paper_mill }
+		trigger = {
+			OR = {
+				has_building = paper_mill
+				state_id = 865
+			}
+		}
 		value = 0.2
+	}
+	bonus = {
+		trigger = { state_id = 865 }
+		value = 0.1
 	}
 }
 
@@ -345,9 +389,14 @@ clothes_factory = {
 			OR = {
 				has_building = fabric_factory
 				has_building = fabric_factory_wool
+				state_id = 16
 			}
 		}
 		value = 0.25
+	}
+	bonus = {
+		trigger = { state_id = 16 }
+		value = 0.1
 	}
 }
 
@@ -365,6 +414,7 @@ luxury_clothes_factory = {
 			OR = {
 				trade_goods_in_state = dye
 				has_building = dye_factory
+				state_id = 16
 			}
 		}
 		value = 0.05
@@ -374,9 +424,14 @@ luxury_clothes_factory = {
 			OR = {
 				has_building = fabric_factory
 				has_building = fabric_factory_wool
+				state_id = 16
 			}
 		}
 		value = 0.2
+	}
+	bonus = {
+		trigger = { state_id = 16 }
+		value = 0.1
 	}
 }
 
@@ -391,8 +446,17 @@ melee_gear_factory = {
 	value = 1.5
 	
 	bonus = {
-		trigger = { has_building = steel_factory }
+		trigger = {
+			OR = {
+				has_building = steel_factory
+				state_id = 449
+			}
+		}
 		value = 0.25
+	}
+	bonus = {
+		trigger = { state_id = 449 }
+		value = 0.1
 	}
 }
 
@@ -427,15 +491,11 @@ artillery_factory = {
 	
 	bonus = {
 		trigger = { has_building = steel_factory }
-		value = 0.09
+		value = 0.1
 	}
 	bonus = {
 		trigger = { has_building = lumber_mill }
 		value = 0.15
-	}
-	bonus = {
-		trigger = { trade_goods_in_state = rock }
-		value = 0.01
 	}
 }
 
@@ -455,13 +515,33 @@ clipper_shipyard = {
 			OR = {
 				has_building = fabric_factory
 				has_building = fabric_factory_wool
+				state_id = 44
+				state_id = 270
+				state_id = 936
 			}
 		}
 		value = 0.1
 	}
 	bonus = {
-		trigger = { has_building = lumber_mill }
+		trigger = {
+			OR = {
+				has_building = lumber_mill
+				state_id = 44
+				state_id = 270
+				state_id = 936
+			}
+		}
 		value = 0.15
+	}
+	bonus = {
+		trigger = {
+			OR = {
+				state_id = 44
+				state_id = 270
+				state_id = 936
+			}
+		}
+		value = 0.1
 	}
 }
 
