@@ -18,10 +18,10 @@ Modders:
  - DerpAnarchist (Glariamn)
  - Cheese (s-williams)
  - Kvopper
+ - RandomPerson
 
 Loremasters (researchers and contributers):
  - Jorde
- - RandomPerson
 
 ### Special Thanks To
  - Radsterman
