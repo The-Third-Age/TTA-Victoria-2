@@ -96,8 +96,8 @@ flying_university = {
 # Province Modifier
 nationalist_resistance = {
 	# Audax Validator "." Ignore_1007
-	local_artisan_output = -0.25
-	local_factory_output = -0.25
+	local_artisan_throughput = -0.25
+	local_factory_throughput = -0.25
 	local_rgo_output = -0.25
 	pop_militancy_modifier = 0.01
 	icon = 2
@@ -526,9 +526,9 @@ new_vein = {
 # Province Modifier
 high_production = {
 	local_RGO_output = 1
-	local_factory_output = 1
+	local_factory_throughput = 1
 	# Audax Validator "." Ignore_1007
-	local_artisan_output = 1
+	local_artisan_throughput = 1
 	immigrant_attract = 0.5
 	population_growth = 0.001
 	icon = 13
@@ -557,7 +557,7 @@ sacked_large_road = {
 # Province Modifier
 major_road = {
 	local_rgo_output = 0.25
-	local_factory_output = 0.25
+	local_factory_throughput = 0.25
 	# Audax Validator "." Ignore_1007
 	local_artisan_throughput = 0.25
 	immigrant_attract = 0.25
@@ -601,8 +601,8 @@ orc_raids = {
 	life_rating = -0.25
 	local_RGO_output = -0.5
 	# Audax Validator "." Ignore_1007
-	local_artisan_output = -0.5
-	local_factory_output = -0.5
+	local_artisan_throughput = -0.5
+	local_factory_throughput = -0.5
 	population_growth = -0.001
 	
 	icon = 20
@@ -614,8 +614,8 @@ tribal_outpost = {
 	immigrant_push = 0.1
 	local_RGO_output = -0.2
 	# Audax Validator "." Ignore_1007
-	local_artisan_output = -0.2
-	local_factory_output = -0.2
+	local_artisan_throughput = -0.2
+	local_factory_throughput = -0.2
 
 	icon = 20
 }
@@ -636,8 +636,8 @@ recent_raid = {
 	immigrant_push = 0.1
 	local_RGO_output = -0.2
 	# Audax Validator "." Ignore_1007
-	local_artisan_output = -0.2
-	local_factory_output = -0.2
+	local_artisan_throughput = -0.2
+	local_factory_throughput = -0.2
 	pop_militancy_modifier = 0.02
 	
 	icon = 20
@@ -665,8 +665,8 @@ dome_of_stars = {
 outlaws = {
 	movement_cost = 0.05
 	local_RGO_output = -0.1
-	local_artisan_output = -0.1
-	local_factory_output = -0.1
+	local_artisan_throughput = -0.1
+	local_factory_throughput = -0.1
 	
 	icon = 34
 }
@@ -674,8 +674,8 @@ outlaws = {
 # Province Modifier
 hunting_outlaws = {
 	local_RGO_output = -0.05
-	local_artisan_output = -0.05
-	local_factory_output = -0.05
+	local_artisan_throughput = -0.05
+	local_factory_throughput = -0.05
 	
 	icon = 34
 }
@@ -890,13 +890,13 @@ deceitful = { # cannot also have "honest"
 aristocrat_modifier = { # opposite is "of_the_people"
 	global_pop_militancy_modifier = 0.01
 	rgo_output = 0.05
-	factory_output = 0.05
+	factory_throughput = 0.05
 	
 	icon = 5
 }
 
 # Country Modifier
-of_the_people = { # opposite if "aristocrat"
+of_the_people = { # opposite is "aristocrat"
 	global_pop_militancy_modifier = -0.01
 	tax_efficiency = -0.03
 	
@@ -924,7 +924,7 @@ wise_ruler = { # opposite is "charlatan"
 # Country Modifier
 lazy = { # opposite is "diligent"
 	rgo_output = -0.05
-	factory_output = -0.05
+	factory_throughput = -0.05
 	global_pop_militancy_modifier = -0.01
 	
 	icon = 5
@@ -933,7 +933,7 @@ lazy = { # opposite is "diligent"
 # Country Modifier
 diligent = { # opposite is "lazy"
 	rgo_output = 0.05
-	factory_output = 0.05
+	factory_throughput = 0.05
 	
 	icon = 5
 }
@@ -1213,8 +1213,8 @@ ithilien_rangers_province = {
 	life_rating = 0.1
 	local_RGO_output = 0.25
 	# Audax Validator "." Ignore_1007
-	local_artisan_output = 0.25
-	local_factory_output = 0.25
+	local_artisan_throughput = 0.25
+	local_factory_throughput = 0.25
 	population_growth = 0.001
 	
 	icon = 17
@@ -1226,8 +1226,8 @@ ithilien_rangers_enemy_province = {
 	life_rating = -0.1
 	local_RGO_output = -0.25
 	# Audax Validator "." Ignore_1007
-	local_artisan_output = -0.25
-	local_factory_output = -0.25
+	local_artisan_throughput = -0.25
+	local_factory_throughput = -0.25
 	population_growth = -0.001
 	
 	icon = 18
@@ -1403,7 +1403,7 @@ king_of_lakemen = {
 
 # Country Modifier
 king_of_adhalling = {
-	factory_output = 0.05
+	factory_throughput = 0.05
 	prestige = 0.1
 	
 	icon = 5
@@ -1474,8 +1474,8 @@ funding_celduin_pirates = {
 wonder_of_the_north = {
 	immigrant_attract = 0.1
 	# Audax Validator "." Ignore_1007
-	local_artisan_output = 0.05
-	local_factory_output = 0.05
+	local_artisan_throughput = 0.05
+	local_factory_throughput = 0.05
 	local_RGO_output = 0.05
 	tariff_efficiency_modifier = 0.02
 	
@@ -1541,8 +1541,8 @@ royal_lord = {
 
 # Merchant/Guild Balance of Power - Country Modifiers {
 DAL_merchant_power_10 = {
-	factory_output = 0.10
-	artisan_output = 0.10
+	factory_throughput = 0.10
+	artisan_throughput = 0.10
 	rgo_output = -0.10
 	
 	icon = 23
@@ -1550,8 +1550,8 @@ DAL_merchant_power_10 = {
 
 # Country Modifier
 DAL_merchant_power_9 = {
-	factory_output = 0.09
-	artisan_output = 0.09
+	factory_throughput = 0.09
+	artisan_throughput = 0.09
 	rgo_output = -0.09
 	global_pop_militancy_modifier = 0.05
 	
@@ -1560,8 +1560,8 @@ DAL_merchant_power_9 = {
 
 # Country Modifier
 DAL_merchant_power_8 = {
-	factory_output = 0.08
-	artisan_output = 0.08
+	factory_throughput = 0.08
+	artisan_throughput = 0.08
 	rgo_output = -0.08
 	global_pop_militancy_modifier = 0.04
 	
@@ -1570,8 +1570,8 @@ DAL_merchant_power_8 = {
 
 # Country Modifier
 DAL_merchant_power_7 = {
-	factory_output = 0.07
-	artisan_output = 0.07
+	factory_throughput = 0.07
+	artisan_throughput = 0.07
 	rgo_output = -0.07
 	global_pop_militancy_modifier = 0.04
 	
@@ -1580,8 +1580,8 @@ DAL_merchant_power_7 = {
 
 # Country Modifier
 DAL_merchant_power_6 = {
-	factory_output = 0.06
-	artisan_output = 0.06
+	factory_throughput = 0.06
+	artisan_throughput = 0.06
 	rgo_output = -0.06
 	global_pop_militancy_modifier = 0.03
 	
@@ -1590,8 +1590,8 @@ DAL_merchant_power_6 = {
 
 # Country Modifier
 DAL_merchant_power_5 = {
-	factory_output = 0.05
-	artisan_output = 0.05
+	factory_throughput = 0.05
+	artisan_throughput = 0.05
 	rgo_output = -0.05
 	global_pop_militancy_modifier = 0.03
 	
@@ -1600,8 +1600,8 @@ DAL_merchant_power_5 = {
 
 # Country Modifier
 DAL_merchant_power_4 = {
-	factory_output = 0.04
-	artisan_output = 0.04
+	factory_throughput = 0.04
+	artisan_throughput = 0.04
 	rgo_output = -0.04
 	global_pop_militancy_modifier = 0.02
 	
@@ -1610,8 +1610,8 @@ DAL_merchant_power_4 = {
 
 # Country Modifier
 DAL_merchant_power_3 = {
-	factory_output = 0.03
-	artisan_output = 0.03
+	factory_throughput = 0.03
+	artisan_throughput = 0.03
 	rgo_output = -0.03
 	global_pop_militancy_modifier = 0.02
 	
@@ -1620,8 +1620,8 @@ DAL_merchant_power_3 = {
 
 # Country Modifier
 DAL_merchant_power_2 = {
-	factory_output = 0.02
-	artisan_output = 0.02
+	factory_throughput = 0.02
+	artisan_throughput = 0.02
 	rgo_output = -0.02
 	global_pop_militancy_modifier = 0.01
 	
@@ -1630,8 +1630,8 @@ DAL_merchant_power_2 = {
 
 # Country Modifier
 DAL_merchant_power_1 = {
-	factory_output = 0.01
-	artisan_output = 0.01
+	factory_throughput = 0.01
+	artisan_throughput = 0.01
 	rgo_output = -0.01
 	global_pop_militancy_modifier = 0.01
 	
@@ -1645,8 +1645,8 @@ DAL_merchant_guild_balanced = {
 
 # Country Modifier
 DAL_guild_power_1 = {
-	factory_output = -0.01
-	artisan_output = -0.01
+	factory_throughput = -0.01
+	artisan_throughput = -0.01
 	rgo_output = 0.01
 	global_pop_militancy_modifier = -0.01
 	
@@ -1655,8 +1655,8 @@ DAL_guild_power_1 = {
 
 # Country Modifier
 DAL_guild_power_2 = {
-	factory_output = -0.02
-	artisan_output = -0.02
+	factory_throughput = -0.02
+	artisan_throughput = -0.02
 	rgo_output = 0.02
 	global_pop_militancy_modifier = -0.01
 	
@@ -1665,8 +1665,8 @@ DAL_guild_power_2 = {
 
 # Country Modifier
 DAL_guild_power_3 = {
-	factory_output = -0.03
-	artisan_output = -0.03
+	factory_throughput = -0.03
+	artisan_throughput = -0.03
 	rgo_output = 0.03
 	global_pop_militancy_modifier = -0.02
 	
@@ -1675,8 +1675,8 @@ DAL_guild_power_3 = {
 
 # Country Modifier
 DAL_guild_power_4 = {
-	factory_output = -0.04
-	artisan_output = -0.04
+	factory_throughput = -0.04
+	artisan_throughput = -0.04
 	rgo_output = 0.04
 	global_pop_militancy_modifier = -0.02
 	
@@ -1685,8 +1685,8 @@ DAL_guild_power_4 = {
 
 # Country Modifier
 DAL_guild_power_5 = {
-	factory_output = -0.05
-	artisan_output = -0.05
+	factory_throughput = -0.05
+	artisan_throughput = -0.05
 	rgo_output = 0.05
 	global_pop_militancy_modifier = -0.03
 	
@@ -1695,8 +1695,8 @@ DAL_guild_power_5 = {
 
 # Country Modifier
 DAL_guild_power_6 = {
-	factory_output = -0.06
-	artisan_output = -0.06
+	factory_throughput = -0.06
+	artisan_throughput = -0.06
 	rgo_output = 0.06
 	global_pop_militancy_modifier = -0.03
 	
@@ -1705,8 +1705,8 @@ DAL_guild_power_6 = {
 
 # Country Modifier
 DAL_guild_power_7 = {
-	factory_output = -0.07
-	artisan_output = -0.07
+	factory_throughput = -0.07
+	artisan_throughput = -0.07
 	rgo_output = 0.07
 	global_pop_militancy_modifier = -0.04
 	
@@ -1715,8 +1715,8 @@ DAL_guild_power_7 = {
 
 # Country Modifier
 DAL_guild_power_8 = {
-	factory_output = -0.08
-	artisan_output = -0.08
+	factory_throughput = -0.08
+	artisan_throughput = -0.08
 	rgo_output = 0.08
 	global_pop_militancy_modifier = -0.04
 	
@@ -1725,8 +1725,8 @@ DAL_guild_power_8 = {
 
 # Country Modifier
 DAL_guild_power_9 = {
-	factory_output = -0.09
-	artisan_output = -0.09
+	factory_throughput = -0.09
+	artisan_throughput = -0.09
 	rgo_output = 0.09
 	global_pop_militancy_modifier = -0.05
 	
@@ -1735,8 +1735,8 @@ DAL_guild_power_9 = {
 
 # Country Modifier
 DAL_guild_power_10 = {
-	factory_output = -0.10
-	artisan_output = -0.10
+	factory_throughput = -0.10
+	artisan_throughput = -0.10
 	rgo_output = 0.10
 	global_pop_militancy_modifier = -0.05
 	
@@ -1769,8 +1769,8 @@ hunting_marsh_wights = {
 # Province Modifier
 celduin_pirates = {
 	local_RGO_output = -0.1
-	local_artisan_output = -0.1
-	local_factory_output = -0.1
+	local_artisan_throughput = -0.1
+	local_factory_throughput = -0.1
 	pop_militancy_modifier = 0.01
 	pop_consciousness_modifier = 0.01
 	
