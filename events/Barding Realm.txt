@@ -16,8 +16,8 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		owner = { tag = DAL }
 		province_id = 652 # Dale
+		owner = { tag = DAL }
 		650 = { empty = yes } # Odriksdun
 	}
 	
@@ -169,6 +169,7 @@ province_event = {
 	desc = "EVTDESC50904"
 	
 	trigger = {
+		province_id = 652 # Dale
 		owner = {
 			tag = DAL
 			has_global_flag = DAL_invited_the_grammas
@@ -186,7 +187,6 @@ province_event = {
 				}
 			}
 		}
-		province_id = 652 # Dale
 	}
 	
 	mean_time_to_happen = { months = 12 }
@@ -294,8 +294,8 @@ province_event = {
 	desc = "EVTDESC50908"
 	
 	trigger = {
-		owner = { is_culture_group = northmen }
 		province_id = 652 # Dale
+		owner = { is_culture_group = northmen }
 	}
 	
 	mean_time_to_happen = {
@@ -2077,9 +2077,8 @@ country_event = {
 	
 	trigger = {
 		tag = DAL
-		has_global_flag = DAL_bryn_brandson_born
 		year = 3005
-		
+		has_global_flag = DAL_bryn_brandson_born
 	}
 	
 	option = {
@@ -2125,9 +2124,8 @@ country_event = {
 	
 	trigger = {
 		tag = DAL
-		has_global_flag = DAL_girloth_bard2son_born
 		year = 3045
-		
+		has_global_flag = DAL_girloth_bard2son_born
 	}
 	
 	option = {
