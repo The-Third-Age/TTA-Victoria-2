@@ -803,15 +803,15 @@ country_event = {
 		create_alliance = FROM
 		
 		FROM = {
+			relation = {
+				who = THIS
+				value = 400
+			}
 			war = {
 				attacker_goal = { casus_belli = call_allies_cb }
 				call_ally = yes
 				# Audax Validator "." Ignore_NEXT
 				target = ---
-			}
-			relation = {
-				who = THIS
-				value = 50
 			}
 		}
 		prestige = 5
