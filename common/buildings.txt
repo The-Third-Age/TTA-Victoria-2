@@ -135,25 +135,6 @@ lumber_mill = {
 	default_enabled = yes
 }
 
-fabric_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 99
-	goods_cost = {
-		cut_stone = 50
-		iron = 5
-		lumber = 25
-	}
-	time = 180
-	visibility = yes
-	onmap = no
-
-	production_type = fabric_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
 fabric_factory_wool = {
 	type = factory
 	on_completion = factory
@@ -169,6 +150,25 @@ fabric_factory_wool = {
 	onmap = no
 
 	production_type = fabric_factory_wool
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+fabric_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 99
+	goods_cost = {
+		cut_stone = 50
+		iron = 5
+		lumber = 25
+	}
+	time = 180
+	visibility = yes
+	onmap = no
+
+	production_type = fabric_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }

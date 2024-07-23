@@ -173,6 +173,30 @@ lumber_mill = {
 	}
 }
 
+fabric_factory_wool = {
+	template = factory_template
+	input_goods = {
+		wool = 28
+		dye = 0.5
+	}
+	output_goods = fabric
+	value = 12
+	
+	bonus = {
+		trigger = { trade_goods_in_state = wool }
+		value = 0.2
+	}
+	bonus = {
+		trigger = {
+			OR = {
+				trade_goods_in_state = dye
+				has_building = dye_factory
+			}
+		}
+		value = 0.05
+	}
+}
+
 fabric_factory = {
 	template = factory_template
 	input_goods = {
@@ -204,30 +228,6 @@ fabric_factory = {
 	bonus = {
 		trigger = { state_id = 16 }
 		value = 0.1
-	}
-}
-
-fabric_factory_wool = {
-	template = factory_template
-	input_goods = {
-		wool = 28
-		dye = 0.5
-	}
-	output_goods = fabric
-	value = 12
-	
-	bonus = {
-		trigger = { trade_goods_in_state = wool }
-		value = 0.2
-	}
-	bonus = {
-		trigger = {
-			OR = {
-				trade_goods_in_state = dye
-				has_building = dye_factory
-			}
-		}
-		value = 0.05
 	}
 }
 
