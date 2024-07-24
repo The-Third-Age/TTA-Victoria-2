@@ -26,7 +26,7 @@ guiTypes = {
 			shortcut = "ESCAPE"
 		}
 		
-		## Header
+		##### Header #####
 		
 		windowType = {
 			name = "province_view_header"
@@ -186,7 +186,7 @@ guiTypes = {
 			}
 		}
 		
-		## All statistics of province
+		##### All statistics of province #####
 		
 		windowType = {
 			name = "province_statistics"
@@ -216,7 +216,7 @@ guiTypes = {
 			#	rotation = 0 #-1.571 < pi/2 dvs 90 degrees
 			#}
 			
-			######## production
+			##### production #####
 			
 			iconType = {
 				name = "goods_type"
@@ -271,7 +271,7 @@ guiTypes = {
 				format = left
 			}
 			
-			######## CRIME / REVOLT
+			##### CRIME / REVOLT #####
 			
 			iconType = {
 				name = "crime_icon"
@@ -324,7 +324,7 @@ guiTypes = {
 				format = left
 			}
 			
-			######## POPULATION
+			##### POPULATION #####
 			iconType = {
 				name = "total_population_icon"
 				spriteType = "GFX_province_pop"
@@ -471,7 +471,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			######## CORES+supply limit
+			##### CORES+supply limit #####
 			
 			instantTextBoxType = {
 				name = "supply_limit_label"
@@ -513,7 +513,7 @@ guiTypes = {
 		}
 
 		##################################
-		## colonial province view
+		##### colonial province view #####
 		##################################
 		
 		windowType = {
@@ -535,7 +535,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			### uncolonized interface.
+			##### uncolonized interface. #####
 			instantTextBoxType = {
 				name = "uncolonized_label"
 				position = { x = 41 y = 12 }
@@ -597,7 +597,7 @@ guiTypes = {
 				position = { x= 194 y = 69 }
 			}
 
-			######## production
+			##### production #####
 
 			iconType = {
 				name = "goods_type"
@@ -605,7 +605,7 @@ guiTypes = {
 				position = { x = 235 y = 321 }
 			}
 			
-			######## POPULATION
+			##### POPULATION #####
 
 			iconType = {
 				name = "total_population_icon"
@@ -637,7 +637,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			### Rally Point (other nation province view)
+			##### Rally Point (other nation province view) #####
 			iconType = {
 				name ="rally_land_icon"
 				spriteType = "GFX_rally_land_icon"
@@ -693,9 +693,9 @@ guiTypes = {
 			}
 		}
 
-		##################################
-		## Other nation province view
-		##################################
+		######################################
+		##### Other nation province view #####
+		######################################
 		
 		windowType = {
 			name = "province_other"
@@ -716,7 +716,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			######## CORES+ supply limit
+			##### CORES+ supply limit #####
 			
 			instantTextBoxType = {
 				name = "supply_limit_label"
@@ -756,7 +756,7 @@ guiTypes = {
 				spacing = 1.0
 			}
 			
-			######## production
+			##### production #####
 			
 			iconType = {
 				name = "goods_type"
@@ -764,7 +764,7 @@ guiTypes = {
 				position = { x = 20 y = 48 }
 			}
 			
-			######## POPULATION
+			##### POPULATION #####
 
 			iconType = {
 				name = "total_population_icon"
@@ -853,7 +853,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			## Country Info
+			##### Country Info #####
 			guiButtonType = {
 				name = "country_flag"
 				position = { x= 12 y = 150 }
@@ -924,7 +924,7 @@ guiTypes = {
 				fixedsize = yes
 			}
 			
-			### RANKINGS
+			##### RANKINGS #####
 			instantTextBoxType = {
 				name = "selected_score_label"
 				position = { x = 290 y = 134 }
@@ -948,7 +948,7 @@ guiTypes = {
 				format = right
 			}
 				
-			### ranking prestige
+			##### ranking prestige #####
 			iconType = {
 				name ="selected_prestige_icon"
 				spriteType = "GFX_topbar_prestige"
@@ -974,7 +974,7 @@ guiTypes = {
 				format = right
 			}
 				
-			### ranking industry
+			##### ranking industry #####
 			iconType = {
 				name ="selected_industry_icon"
 				spriteType = "GFX_topbar_production"
@@ -1000,7 +1000,7 @@ guiTypes = {
 				format = right
 			}
 			
-			### ranking military
+			##### ranking military #####
 			iconType = {
 				name ="selected_military_icon"
 				spriteType = "GFX_army_icon_2"
@@ -1026,7 +1026,7 @@ guiTypes = {
 				format = right
 			}
 
-			### total rank
+			##### total rank #####
 
 			instantTextBoxType = {
 				name = "country_total"
@@ -1082,7 +1082,7 @@ guiTypes = {
 				maxHeight = 20
 			}
 			
-			## flags
+			##### flags #####
 			OverlappingElementsBoxType = {
 				name = "sphere_targets"
 				position = { x = 115 y = 224 }
@@ -1151,7 +1151,7 @@ guiTypes = {
 				position = { x= 270 y = 88 }
 				Orientation = "UPPER_LEFT"
 			}
-			### progressbar when investing in railroad.
+			##### progressbar when investing in railroad. #####
 			windowType = {
 				name = "infra_progress_win"
 				position = { x= 270 y = 119 }
@@ -1241,7 +1241,7 @@ guiTypes = {
 			}
 		}
 		
-		## Province buildings and military
+		##### Province buildings and military #####
 		
 		windowType = {
 			name = "province_buildings"
@@ -1341,7 +1341,7 @@ guiTypes = {
 				format = centre
 			}
 			
-			### Rally Point (our nation province view)
+			##### Rally Point (our nation province view) #####
 			iconType = {
 				name ="rally_land_icon"
 				spriteType = "GFX_rally_land_icon"
@@ -1396,9 +1396,9 @@ guiTypes = {
 			}
 		}
 
-		########################
-		#### National Focus ####
-		########################
+		##########################
+		##### National Focus #####
+		##########################
 		windowType = {
 			name = "national_focus_window"
 			backGround =""
@@ -1435,7 +1435,7 @@ guiTypes = {
 		}
 	}
 	
-	## building entries
+	##### building entries #####
 	
 	windowType = {
 		name = "building"
@@ -1513,9 +1513,9 @@ guiTypes = {
 		}
 	}
 	
-	###################
-	###### CORES ######
-	###################
+	#################
+	##### CORES #####
+	#################
 	windowType = {
 		name = "province_core"
 		backGround =""
@@ -1536,9 +1536,9 @@ guiTypes = {
 		}
 	}
 	
-	###################
-	#### MODIFIERS ####
-	###################
+	#####################
+	##### MODIFIERS #####
+	#####################
 	windowType = {
 		name = "prov_state_modifier"
 		backGround =""
@@ -1559,9 +1559,9 @@ guiTypes = {
 		}
 	}
 	
-	########################
-	# National focus items #
-	########################
+	################################
+	##### National focus items #####
+	################################
 	
 	positionType = {
 		name = "focuscategory_start"
@@ -1603,7 +1603,7 @@ guiTypes = {
 		}
 	}
 		
-	### FOCUS ITEM
+	##### FOCUS ITEM #####
 	windowType = {
 		name = "focus_item"
 		backGround =""
@@ -1623,7 +1623,7 @@ guiTypes = {
 		}
 	}
 		
-	### COLONIST ITEM
+	##### COLONIST ITEM #####
 	windowType = {
 		name = "colonist_item"
 		position = { x=0 y=0 }
@@ -1682,7 +1682,7 @@ guiTypes = {
 		}
 	}
 
-	## Province buildings and military
+	##### Province buildings and military #####
 	windowType = {
 		name = "province_buildings"
 		backGround=""
@@ -1781,7 +1781,7 @@ guiTypes = {
 			format = centre
 		}
 		
-		### Rally Point (our nation province view)
+		##### Rally Point (our nation province view) #####
 		iconType = {
 			name ="rally_land_icon"
 			spriteType = "GFX_rally_land_icon"
