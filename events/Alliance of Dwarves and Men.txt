@@ -1,0 +1,1327 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
+# Alliance of Dwarves and Men: {
+#	110000 - 110199 }
+
+# Alliance of Dwarves and Men Main Menu - 0 options
+country_event = {
+	id = 110000
+	title = "  Alliance of Dwarves and Men"
+	desc = "EVTDESC110000"
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "§RExit§!"
+	}
+}
+
+# Alliance of Dwarves and Men Main Menu - 1 option
+country_event = {
+	id = 110001
+	title = "  Alliance of Dwarves and Men"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_2"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			empty_line_loc = {}
+			call_to_arms_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu } }
+			empty_line_loc = {}
+			core_dispute_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm } }
+			empty_line_loc = {}
+			invite_realm_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach } }
+			empty_line_loc = {}
+			expand_culture_reach_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu } }
+			empty_line_loc = {}
+			specific_flavor_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
+			empty_line_loc = {}
+			economic_union_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_political_union } }
+			empty_line_loc = {}
+			political_union_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			
+			owner = {
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_vassal = no
+						NOT = { tag = THIS }
+					}
+					create_alliance = THIS
+					relation = { who = THIS value = 400 }
+				}
+				
+				FOR = { country_event = 110101 }
+			}
+		}
+	}
+	
+	option = {
+		name = "§RExit§!"
+	}
+}
+
+# Alliance of Dwarves and Men Main Menu - 2 options
+country_event = {
+	id = 110002
+	title = "  Alliance of Dwarves and Men"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_3"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			empty_line_loc = {}
+			call_to_arms_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu } }
+			empty_line_loc = {}
+			core_dispute_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm } }
+			empty_line_loc = {}
+			invite_realm_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach } }
+			empty_line_loc = {}
+			expand_culture_reach_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu } }
+			empty_line_loc = {}
+			specific_flavor_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
+			empty_line_loc = {}
+			economic_union_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_political_union } }
+			empty_line_loc = {}
+			political_union_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			
+			owner = {
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_vassal = no
+						NOT = { tag = THIS }
+					}
+					create_alliance = THIS
+					relation = { who = THIS value = 400 }
+				}
+				
+				FOR = { country_event = 110101 }
+			}
+		}
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = "§RExit§!"
+	}
+}
+
+# Alliance of Dwarves and Men Main Menu - 3 options
+country_event = {
+	id = 110003
+	title = "  Alliance of Dwarves and Men"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_4"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			empty_line_loc = {}
+			call_to_arms_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu } }
+			empty_line_loc = {}
+			core_dispute_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm } }
+			empty_line_loc = {}
+			invite_realm_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach } }
+			empty_line_loc = {}
+			expand_culture_reach_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu } }
+			empty_line_loc = {}
+			specific_flavor_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
+			empty_line_loc = {}
+			economic_union_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_political_union } }
+			empty_line_loc = {}
+			political_union_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			
+			owner = {
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_vassal = no
+						NOT = { tag = THIS }
+					}
+					create_alliance = THIS
+					relation = { who = THIS value = 400 }
+				}
+				
+				FOR = { country_event = 110101 }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
+					has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
+				}
+			}
+			owner = {
+				clr_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
+				
+				FOR = {
+					# Setup Detecting Conflicting Cores
+					any_neighbor_country = {
+						limit = {
+							NOT = { tag = THIS }
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { is_core = THIS }
+						}
+						set_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
+					}
+					country_event = 110102
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = "§RExit§!"
+	}
+}
+
+# Alliance of Dwarves and Men Main Menu - 4 options
+country_event = {
+	id = 110004
+	title = "  Alliance of Dwarves and Men"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_5"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			empty_line_loc = {}
+			call_to_arms_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu } }
+			empty_line_loc = {}
+			core_dispute_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm } }
+			empty_line_loc = {}
+			invite_realm_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach } }
+			empty_line_loc = {}
+			expand_culture_reach_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu } }
+			empty_line_loc = {}
+			specific_flavor_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
+			empty_line_loc = {}
+			economic_union_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_political_union } }
+			empty_line_loc = {}
+			political_union_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			
+			owner = {
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_vassal = no
+						NOT = { tag = THIS }
+					}
+					create_alliance = THIS
+					relation = { who = THIS value = 400 }
+				}
+				
+				FOR = { country_event = 110101 }
+			}
+		}
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = "§RExit§!"
+	}
+}
+
+# Alliance of Dwarves and Men Main Menu - 5 options
+country_event = {
+	id = 110005
+	title = "  Alliance of Dwarves and Men"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_6"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			empty_line_loc = {}
+			call_to_arms_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu } }
+			empty_line_loc = {}
+			core_dispute_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm } }
+			empty_line_loc = {}
+			invite_realm_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach } }
+			empty_line_loc = {}
+			expand_culture_reach_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu } }
+			empty_line_loc = {}
+			specific_flavor_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
+			empty_line_loc = {}
+			economic_union_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_political_union } }
+			empty_line_loc = {}
+			political_union_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			
+			owner = {
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_vassal = no
+						NOT = { tag = THIS }
+					}
+					create_alliance = THIS
+					relation = { who = THIS value = 400 }
+				}
+				
+				FOR = { country_event = 110101 }
+			}
+		}
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = "§RExit§!"
+	}
+}
+
+# Alliance of Dwarves and Men Main Menu - 6 options
+country_event = {
+	id = 110006
+	title = "  Alliance of Dwarves and Men"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_7"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			empty_line_loc = {}
+			call_to_arms_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu } }
+			empty_line_loc = {}
+			core_dispute_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm } }
+			empty_line_loc = {}
+			invite_realm_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach } }
+			empty_line_loc = {}
+			expand_culture_reach_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu } }
+			empty_line_loc = {}
+			specific_flavor_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
+			empty_line_loc = {}
+			economic_union_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_political_union } }
+			empty_line_loc = {}
+			political_union_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = "" # Call to Arms
+		
+		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			
+			owner = {
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_vassal = no
+						NOT = { tag = THIS }
+					}
+					create_alliance = THIS
+					relation = { who = THIS value = 400 }
+				}
+				
+				FOR = { country_event = 110101 }
+			}
+		}
+	}
+	
+	option = {
+		name = "" # Core Dispute
+	}
+	
+	option = {
+		name = "" # Invite Realm
+	}
+	
+	option = {
+		name = "" # Expand Culture Reach
+	}
+	
+	option = {
+		name = "" # Specific Flavor
+	}
+	
+	option = {
+		name = "" # Propose an Economic/Political Union
+	}
+	
+	option = {
+		name = "§RExit§!"
+	}
+}
+
+# Core Dispute Menu - 1 option
+country_event = {
+	id = 110010
+	title = "  Alliance of Dwarves and Men - Core Disputes"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_2"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
+			empty_line_loc = {}
+			resolve_conflicting_cores_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+			empty_line_loc = {}
+			request_return_of_cores_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+			empty_line_loc = {}
+			return_cores_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
+			
+			# TODO: Calculate the regions with conflicting cores, assign them to the option regions, then give the options to the player
+			# TODO: From here, hold the vote
+		}
+	}
+	
+	option = {
+		name = "§RBack to main Alliance of Dwarves and Men menu§!"
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = { FOR = { country_event = 110100 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		triggered_event_alliance_of_dwarves_and_men_loc = {}
+	}
+}
+
+# Core Dispute Menu - 2 option
+country_event = {
+	id = 110011
+	title = "  Alliance of Dwarves and Men - Core Disputes"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_3"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
+			empty_line_loc = {}
+			resolve_conflicting_cores_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+			empty_line_loc = {}
+			request_return_of_cores_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+			empty_line_loc = {}
+			return_cores_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = "§RBack to main Alliance of Dwarves and Men menu§!"
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = { FOR = { country_event = 110100 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		triggered_event_alliance_of_dwarves_and_men_loc = {}
+	}
+}
+
+# Core Dispute Menu - 3 option
+country_event = {
+	id = 110012
+	title = "  Alliance of Dwarves and Men - Core Disputes"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_4"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
+			empty_line_loc = {}
+			resolve_conflicting_cores_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+			empty_line_loc = {}
+			request_return_of_cores_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+			empty_line_loc = {}
+			return_cores_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = "§RBack to main Alliance of Dwarves and Men menu§!"
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = { FOR = { country_event = 110100 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		triggered_event_alliance_of_dwarves_and_men_loc = {}
+	}
+}
+
+# Alliance of Dwarves and Men Main Menu Setup/Option Calculator
+country_event = {
+	id = 110100
+	title = "Alliance of Dwarves and Men Setup"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Continue"
+		
+		# Cleanup from previous
+		random_owned = { any_neighbor_province = { remove_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } }
+		
+		# Setup Request Return of Cores {
+		FROM = {
+			all_core = { 
+				limit = {
+					NOT = { owned_by = FROM }
+					owner = { has_country_modifier = alliance_of_dwarves_and_men }
+				}
+				add_province_modifier = { name = province_target_alliance_men_dwarves_request_return_of_cores duration = 1 }
+			}
+		}
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				NOT = { tag = FROM }
+			}
+			all_core = { remove_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } # The only provinces retaining the modifier are those that are cores of the decision taker, but not of the owner
+		}
+		# }
+		
+		# Calculate the number of options that should be shown
+		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button
+		
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_economic_union
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_political_union
+		
+		# Call to Arms
+		random_owned = {
+			limit = {
+				FROM = { war = yes }
+				owner = {
+					any_neighbor_country = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						war = no
+						is_vassal = no
+					}
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms
+			}
+		}
+		
+		# Core Dispute Menu
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						# Resolve Conflicting Cores
+						has_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
+						# Request Return of Cores
+						FROM = { any_core = { has_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } }
+						# Return Cores
+						FROM = {
+							any_owned_province = {
+								NOT = { is_core = FROM }
+								any_core = {
+									exists = yes
+									has_country_modifier = alliance_of_dwarves_and_men
+								}
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
+			}
+		}
+		
+		# Invite Realm
+		random_owned = {
+			limit = {
+				owner = {
+					any_neighbor_country = {
+						capital_scope = { continent = europe } # Rhovanion
+						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+						relation = { who = FROM value = 100 }
+						OR = {
+							good_evil_alignment = good_alignment
+							good_evil_alignment = neutral_alignment
+						}
+						OR = {
+							is_culture_group = dwarves
+							is_culture_group = northmen
+							AND = {
+								is_culture_group = teleri
+								has_global_flag = alliance_of_dwarves_and_men_accept_teleri
+							}
+							AND = {
+								is_culture_group = avari
+								has_global_flag = alliance_of_dwarves_and_men_accept_avari
+							}
+							AND = {
+								is_culture_group = anduinrim
+								has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim
+							}
+							AND = {
+								is_culture_group = rohirrim
+								has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm
+			}
+		}
+		
+		# Expand Cultural Reach
+		random_owned = {
+			limit = {
+				owner = {
+					any_neighbor_country = {
+						rank = 12 # Great or Secondary power
+						capital_scope = { continent = europe } # Rhovanion
+						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+						relation = { who = FROM value = 100 }
+						OR = {
+							AND = {
+								is_culture_group = teleri
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_teleri }
+							}
+							AND = {
+								is_culture_group = avari
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_avari }
+							}
+							AND = {
+								is_culture_group = anduinrim
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim }
+							}
+							AND = {
+								is_culture_group = rohirrim
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim }
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach
+			}
+		}
+		
+		# Specific Flavor Menu
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						OR = {
+							AND = { # Settle the Cores of Dahdrik's Gap
+								OR = {
+									tag = DAL
+									tag = RHO
+								}
+								OR = {
+									primary_culture = adhalling
+									accepted_culture = adhalling
+								}
+								ERE_657 = { owned_by = ERE } # Dádhrik's Gap
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap }
+							}
+							AND = { # Settle the Cores of Mountainlands
+								OR = {
+									tag = DAL
+									tag = RHO
+								}
+								OR = {
+									primary_culture = adhalling
+									accepted_culture = adhalling
+								}
+								ERE_660 = { owned_by = ERE } # Mountainlands
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_settled_mountainlands }
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu
+			}
+		}
+		
+		# Propose an Economic Union
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = { is_greater_power = yes }
+					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_economic_union }
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_economic_union
+			}
+		}
+		
+		# Propose a Political Union
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = { is_greater_power = yes }
+					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
+					has_global_flag = alliance_of_dwarves_and_men_economic_union
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_political_union
+			}
+		}
+		# }
+		
+		# Fire the menu (based upon the number of potential options) for the triggering realm
+		random_owned = {
+			limit = { owner = { NOT = { check_variable = { which = menu_option_number value = 1.1 } } } }
+			owner = { FROM = { country_event = 110000 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = menu_option_number value = 1.9 }
+					NOT = { check_variable = { which = menu_option_number value = 2.1 } }
+				}
+			}
+			owner = { FROM = { country_event = 110001 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = menu_option_number value = 2.9 }
+					NOT = { check_variable = { which = menu_option_number value = 3.1 } }
+				}
+			}
+			owner = { FROM = { country_event = 110002 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = menu_option_number value = 3.9 }
+					NOT = { check_variable = { which = menu_option_number value = 4.1 } }
+				}
+			}
+			owner = { FROM = { country_event = 110003 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = menu_option_number value = 4.9 }
+					NOT = { check_variable = { which = menu_option_number value = 5.1 } }
+				}
+			}
+			owner = { FROM = { country_event = 110004 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = menu_option_number value = 5.9 }
+					NOT = { check_variable = { which = menu_option_number value = 6.1 } }
+				}
+			}
+			owner = { FROM = { country_event = 110005 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { check_variable = { which = menu_option_number value = 6.9 } }
+			}
+			owner = { FROM = { country_event = 110006 } }
+		}
+	}
+}
+
+# Alliance of Dwarves and Men Call Allies
+country_event = {
+	id = 110101
+	title = "A Call to Arms"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		FROM = {
+			
+			war = {
+				attacker_goal = { casus_belli = call_allies_cb }
+				call_ally = yes
+				# Audax Validator "." Ignore_NEXT
+				target = ---
+			}
+		}
+	}
+}
+
+# Alliance oF Dwarves and Men Core Dispute Menu Setup/Option Calculator
+country_event = {
+	id = 110102
+	title = "Alliance of Dwarves and Men - Cores Disputes"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Continue"
+		
+		# Cleanup from previous
+		random_owned = { any_neighbor_province = { remove_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } }
+		
+		# Setup Request Return of Cores {
+		FROM = {
+			all_core = { 
+				limit = {
+					NOT = { owned_by = FROM }
+					owner = { has_country_modifier = alliance_of_dwarves_and_men }
+				}
+				add_province_modifier = { name = province_target_alliance_men_dwarves_request_return_of_cores duration = 1 }
+			}
+		}
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				NOT = { tag = FROM }
+			}
+			all_core = { remove_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } # The only provinces retaining the modifier are those that are cores of the decision taker, but not of the owner
+		}
+		# }
+		
+		# Calculate the number of options that should be shown
+		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button
+		
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
+		
+		# Resolve Conflicting Cores
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected } }
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores
+			}
+		}
+		
+		# Request Return of Cores
+		random_owned = {
+			limit = { owner = { FROM = { any_core = { has_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } } } }
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
+			}
+		}
+		
+		# Return Cores
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						any_owned_province = {
+							NOT = { is_core = FROM }
+							any_core = {
+								exists = yes
+								has_country_modifier = alliance_of_dwarves_and_men
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
+			}
+		}
+		# }
+		
+		# Fire the menu (based upon the number of potential options) for the triggering realm
+		random_owned = {
+			limit = {
+				owner = { NOT = { check_variable = { which = menu_option_number value = 2.1 } } }
+			}
+			owner = { FROM = { country_event = 110010 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = menu_option_number value = 2.9 }
+					NOT = { check_variable = { which = menu_option_number value = 3.1 } }
+				}
+			}
+			owner = { FROM = { country_event = 110011 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { check_variable = { which = menu_option_number value = 3.9 } }
+			}
+			owner = { FROM = { country_event = 110012 } }
+		}
+	}
+}

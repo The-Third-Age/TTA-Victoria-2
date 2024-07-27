@@ -4075,6 +4075,14 @@ country_event = {
 			}
 			
 			random_owned = {
+				limit = { owner = { has_country_modifier = province_target_alliance_men_dwarves_request_return_of_cores } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
 				limit = { owner = { has_country_modifier = no_points_for_you } }
 				owner = {
 					change_variable = { which = modifier_count value = 1 }

@@ -1,0 +1,28 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
+# Dynamic Loc Country Selection: {
+#	300000 }
+
+# Dynamic Loc Country Selection
+country_event = {
+	id = 300000
+	title = "Dynamic Loc Country Selection"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assign Loc"
+		
+		random_country = {
+			limit = {
+				tag = ERE
+				government = monarchy
+				NOT = { has_global_flag 
+				has_country_flag = dynamic_loc_country_target
+			}
+			railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "@ERE Kingdom of Erebor" } }
+		}
+	}
