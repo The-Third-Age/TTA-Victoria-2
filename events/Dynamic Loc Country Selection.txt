@@ -2,7 +2,7 @@
 # Audax Validator "!" Ignore_1004
 
 # Dynamic Loc Country Selection: {
-#	300000 }
+#	300000 - 300007 }
 
 # Dynamic Loc Country Selection
 country_event = {
@@ -16,13 +16,18 @@ country_event = {
 	option = {
 		name = "Assign Loc"
 		
+		clr_global_flag = dynamic_loc_option_1_found
+		
 		random_country = {
 			limit = {
 				tag = ERE
 				government = monarchy
-				NOT = { has_global_flag 
-				has_country_flag = dynamic_loc_country_target
+				has_country_flag = dynamic_loc_potential_country_target
+				NOT = { owner = { has_global_flag = dynamic_loc_option_1_found } }
 			}
 			railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "@ERE Kingdom of Erebor" } }
+			clr_country_flag = dynamic_loc_potential_country_target
+			set_country_flag = dynamic_loc_country_target_1
+			set_global_flag = dynamic_loc_option_1_found
 		}
 	}

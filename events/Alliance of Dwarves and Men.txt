@@ -733,8 +733,27 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
 			
-			# TODO: Calculate the regions with conflicting cores, assign them to the option regions, then give the options to the player
-			# TODO: From here, hold the vote
+			owner = {
+				FOR = {
+					set_variable = { which = dynamic_loc_region_count value = 0 }
+					
+					random_owned = {
+						any_neighbor_province = {
+							limit = {
+								is_core = THIS
+								any_core = {
+									NOT = { tag = THIS }
+									has_country_modifier = alliance_of_dwarves_and_men
+								}
+							}
+							add_province_modifier = { name = dynamic_loc_potential_province_target duration = 1 }
+							change_variable = { which = dynamic_loc_region_count value = 1 }
+						}
+					}
+					country_event = 300008 # Loc setting
+					country_event = 110103 # Getting the callback
+				}
+			}
 		}
 	}
 	
@@ -887,6 +906,92 @@ country_event = {
 		clr_global_flag = hidden_effects
 		
 		triggered_event_alliance_of_dwarves_and_men_loc = {}
+	}
+}
+
+# Alliance of Men and Dwarves Region Selection
+country_event = {
+	id = 110020
+	title = "  Alliance of Dwarves and Men - Region Selection"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_7"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
+		empty_line_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		all_core = {
+			limit = { has_province_modifier = dynamic_loc_province_target_1 }
+			remove_province_modifier = dynamic_loc_province_target_1
+			add_province_modifier = { name = alliance_dwarves_men_selected_province duration = -1 }
+		}
+		
+		FOR = {
+			set_variable = { which = dynamic_loc_country_count value = 0 }
+			
+			any_neighbor_country = {
+				limit = {
+					has_country_modifier = alliance_of_dwarves_and_men
+					any_core = { has_province_modifier = alliance_dwarves_men_selected_province }
+				}
+				set_country_flag = dynamic_loc_potential_country_target
+				change_variable = { which = dynamic_loc_country_count value = 1 }
+			}
+			country_event = 300000 # Loc setting
+			country_event = 110104 # Getting the callback
+		}
+	}
+}
+
+# Alliance of Men and Dwarves Country Selection
+country_event = {
+	id = 110021
+	title = "  Alliance of Dwarves and Men - Country Selection"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_7"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
+		empty_line_loc = {}
+	}
+	
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_1 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
 	}
 }
 
@@ -1217,7 +1322,7 @@ country_event = {
 	}
 }
 
-# Alliance oF Dwarves and Men Core Dispute Menu Setup/Option Calculator
+# Alliance of Dwarves and Men Core Dispute Menu Setup/Option Calculator
 country_event = {
 	id = 110102
 	title = "Alliance of Dwarves and Men - Cores Disputes"
@@ -1323,5 +1428,37 @@ country_event = {
 			}
 			owner = { FROM = { country_event = 110012 } }
 		}
+	}
+}
+
+# Alliance of Dwarves and Men Core Region Callback
+country_event = {
+	id = 110103
+	title = "Alliance of Dwarves and Men - Region Callback"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Continue"
+		
+		FROM = { country_event = 110020 } # Choosing the region
+	}
+}
+
+# Alliance of Dwarves and Men Core Country Callback
+country_event = {
+	id = 110104
+	title = "Alliance of Dwarves and Men - Country Callback"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Continue"
+		
+		FROM = { country_event = 110021 } # Choosing the country
 	}
 }

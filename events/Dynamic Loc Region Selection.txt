@@ -1,0 +1,34 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
+# Dynamic Loc Region Selection: {
+#	300008 - 300016 }
+
+# Dynamic Loc Region Selection
+country_event = {
+	id = 300008
+	title = "Dynamic Loc Region Selection 1"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assign Loc"
+		
+		clr_global_flag = dynamic_loc_option_1_found
+		
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dynamic_loc_potential_province_target
+					region = DAL_654
+					NOT = { owner = { has_global_flag = dynamic_loc_option_1_found } }
+				}
+				railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "Nan Annen" } }
+				remove_province_modifier = dynamic_loc_potential_province_target
+				add_province_modifier = { name = dynamic_loc_province_target_1 duration = -1 }
+				owner = { set_global_flag = dynamic_loc_option_1_found
+			}
+		}
+	}
