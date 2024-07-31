@@ -296,34 +296,20 @@ patriot_rebels = {
 		modifier = {
 			factor = 0
 			NOT = {
-				AND = {
-					country = {
-						any_neighbor_country = {
+				location = {
+					any_core = {
+						OR = {
+							is_primary_culture = THIS
 							# Audax Validator "." Ignore_1007
-							have_core_in = THIS
+							is_accepted_culture = THIS
 						}
-					}
-					location = {
-						any_core = {
-							OR = {
-								is_primary_culture = THIS
-								# Audax Validator "." Ignore_1007
-								is_accepted_culture = THIS
-							}
-							exists = yes
-						}
+						exists = yes
 					}
 				}
 			}
 		}
 		modifier = {
 			factor = 1.3
-			country = {
-				any_neighbor_country = {
-					# Audax Validator "." Ignore_1007
-					have_core_in = THIS
-				}
-			}
 			location = {
 				any_core = {
 					OR = {
