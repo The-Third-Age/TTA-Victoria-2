@@ -766,17 +766,67 @@ country_event = {
 						any_neighbor_province = {
 							limit = {
 								is_core = THIS
-								NOT = { state_scope = { has_province_modifier = dynamic_loc_potential_region_target } } # Limits this to one province per state to ensure that dynamic_loc_region_count is calculated correctly
 								any_core = {
 									NOT = { tag = THIS }
 									has_country_modifier = alliance_of_dwarves_and_men
 								}
 							}
 							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
-							change_variable = { which = dynamic_loc_region_count value = 1 }
+						}
+						any_neighbor_province = {
+							limit = {
+								is_state_capital = yes
+								state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+							}
+							owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
 						}
 					}
+					
+					# It can be assumed that there is at least 1 potential region
 					country_event = 300008 # Region 1 Loc Setting
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 1.9 } } }
+						owner = { country_event = 300009 } # Region 2 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 2.9 } } }
+						owner = { country_event = 300010 } # Region 3 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 3.9 } } }
+						owner = { country_event = 300011 } # Region 4 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 4.9 } } }
+						owner = { country_event = 300012 } # Region 5 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 5.9 } } }
+						owner = { country_event = 300013 } # Region 6 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 6.9 } } }
+						owner = { country_event = 300014 } # Region 7 Loc Setting
+					}
+					
+					# We only want to display the 8th option if there are exactly 8 potential regions
+					# If there are more than 8, we want this last option to be "Back" -- the callback handles setting this
+					random_owned = {
+						limit = {
+							owner = {
+								check_variable = { which = dynamic_loc_region_count value = 7.9 }
+								NOT = { check_variable = { which = dynamic_loc_region_count value = 8.1 }
+							}
+						}
+						owner = { country_event = 300015 } # Region 8 Loc Setting
+					}
+					
 					country_event = 110103 # Getting the callback
 				}
 			}
@@ -958,8 +1008,13 @@ country_event = {
 		empty_line_loc = {}
 		railroading_tag_specific_description_loc_1 = {}
 		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_2 = {}
+		empty_line_loc = {}
 	}
 	
+	# First
 	option = {
 		name = ""
 		
@@ -981,10 +1036,87 @@ country_event = {
 					NOT = { tag = THIS }
 				}
 				set_country_flag = dynamic_loc_potential_country_target
-				change_variable = { which = dynamic_loc_country_count value = 1 }
+				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
 			country_event = 300000 # Country 1 Loc Setting
 			country_event = 110104 # Getting the callback
+		}
+		
+		# Clean up for next time
+		all_core = {
+			remove_province_modifier = dynamic_loc_potential_region_target
+			remove_province_modifier = dynamic_loc_region_target_1
+			remove_province_modifier = dynamic_loc_region_target_2
+			remove_province_modifier = dynamic_loc_region_target_3
+			remove_province_modifier = dynamic_loc_region_target_4
+			remove_province_modifier = dynamic_loc_region_target_5
+			remove_province_modifier = dynamic_loc_region_target_6
+			remove_province_modifier = dynamic_loc_region_target_7
+			remove_province_modifier = dynamic_loc_region_target_8
+		}
+		
+		FOR = {
+			clr_global_flag = dynamic_loc_option_1_found
+			clr_global_flag = dynamic_loc_option_2_found
+			clr_global_flag = dynamic_loc_option_3_found
+			clr_global_flag = dynamic_loc_option_4_found
+			clr_global_flag = dynamic_loc_option_5_found
+			clr_global_flag = dynamic_loc_option_6_found
+			clr_global_flag = dynamic_loc_option_7_found
+			clr_global_flag = dynamic_loc_option_8_found
+		}
+	}
+	
+	# Second
+	option = {
+		name = ""
+		
+		all_core = {
+			limit = {
+				has_province_modifier = dynamic_loc_region_target_2
+			}
+			remove_province_modifier = dynamic_loc_region_target_2
+			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+		}
+		
+		FOR = {
+			set_variable = { which = dynamic_loc_country_count value = 0 }
+			
+			any_neighbor_country = {
+				limit = {
+					has_country_modifier = alliance_of_dwarves_and_men
+					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					NOT = { tag = THIS }
+				}
+				set_country_flag = dynamic_loc_potential_country_target
+				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			country_event = 300000 # Country 1 Loc Setting
+			country_event = 110104 # Getting the callback
+		}
+		
+		# Clean up for next time
+		all_core = {
+			remove_province_modifier = dynamic_loc_potential_region_target
+			remove_province_modifier = dynamic_loc_region_target_1
+			remove_province_modifier = dynamic_loc_region_target_2
+			remove_province_modifier = dynamic_loc_region_target_3
+			remove_province_modifier = dynamic_loc_region_target_4
+			remove_province_modifier = dynamic_loc_region_target_5
+			remove_province_modifier = dynamic_loc_region_target_6
+			remove_province_modifier = dynamic_loc_region_target_7
+			remove_province_modifier = dynamic_loc_region_target_8
+		}
+		
+		FOR = {
+			clr_global_flag = dynamic_loc_option_1_found
+			clr_global_flag = dynamic_loc_option_2_found
+			clr_global_flag = dynamic_loc_option_3_found
+			clr_global_flag = dynamic_loc_option_4_found
+			clr_global_flag = dynamic_loc_option_5_found
+			clr_global_flag = dynamic_loc_option_6_found
+			clr_global_flag = dynamic_loc_option_7_found
+			clr_global_flag = dynamic_loc_option_8_found
 		}
 	}
 }
@@ -1020,6 +1152,27 @@ country_event = {
 		random_country = {
 			limit = { has_country_flag = dynamic_loc_country_target_1 }
 			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		# Cleanup for next time
+		any_country = {
+			clr_country_flag = dynamic_loc_potential_country_target
+			clr_country_flag = dynamic_loc_country_target_1
+			clr_country_flag = dynamic_loc_country_target_2
+			clr_country_flag = dynamic_loc_country_target_3
+			clr_country_flag = dynamic_loc_country_target_4
+			clr_country_flag = dynamic_loc_country_target_5
+			clr_country_flag = dynamic_loc_country_target_6
+			clr_country_flag = dynamic_loc_country_target_7
+			clr_country_flag = dynamic_loc_country_target_8
+			clr_global_flag = dynamic_loc_option_1_found
+			clr_global_flag = dynamic_loc_option_2_found
+			clr_global_flag = dynamic_loc_option_3_found
+			clr_global_flag = dynamic_loc_option_4_found
+			clr_global_flag = dynamic_loc_option_5_found
+			clr_global_flag = dynamic_loc_option_6_found
+			clr_global_flag = dynamic_loc_option_7_found
+			clr_global_flag = dynamic_loc_option_8_found
 		}
 	}
 }
@@ -1472,6 +1625,11 @@ country_event = {
 	option = {
 		name = "Continue"
 		
+		random_owned = {
+			limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 8.9 } } }
+			railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "§RBack§!" } }
+		}
+		
 		FROM = { country_event = 110020 } # Choosing the region
 	}
 }
@@ -1487,6 +1645,11 @@ country_event = {
 	
 	option = {
 		name = "Continue"
+		
+		random_owned = {
+			limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 8.9 } } }
+			railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "§RBack§!" } }
+		}
 		
 		FROM = { country_event = 110021 } # Choosing the country
 	}

@@ -4,7 +4,7 @@
 # Dynamic Loc Region Selection: {
 #	300008 - 300016 }
 
-# Dynamic Loc Region Selection
+# Dynamic Loc Region Selection 1
 country_event = {
 	id = 300008
 	title = "Dynamic Loc Region Selection 1"
@@ -26,6 +26,7 @@ country_event = {
 					NOT = { owner = { has_global_flag = dynamic_loc_option_1_found } }
 				}
 				railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "Nan Annen" } }
+				DAL_654 = { remove_province_modifier = dynamic_loc_potential_region_target }
 				DAL_654 = {
 					limit = {
 						any_core = {
@@ -33,10 +34,48 @@ country_event = {
 							has_country_modifier = alliance_of_dwarves_and_men
 						}
 					}
-					remove_province_modifier = dynamic_loc_potential_region_target
 					add_province_modifier = { name = dynamic_loc_region_target_1 duration = -1 }
 				}
-				owner = { set_global_flag = dynamic_loc_option_1_found
+				owner = { set_global_flag = dynamic_loc_option_1_found }
 			}
 		}
 	}
+}
+
+# Dynamic Loc Region Selection 2
+country_event = {
+	id = 300009
+	title = "Dynamic Loc Region Selection 2"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assign Loc"
+		
+		clr_global_flag = dynamic_loc_option_2_found
+		
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dynamic_loc_potential_region_target
+					region = DAL_652
+					NOT = { owner = { has_global_flag = dynamic_loc_option_2_found } }
+				}
+				railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "Dalelands" } }
+				DAL_652 = { remove_province_modifier = dynamic_loc_potential_region_target }
+				DAL_652 = {
+					limit = {
+						any_core = {
+							NOT = { tag = FROM }
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					add_province_modifier = { name = dynamic_loc_region_target_2 duration = -1 }
+				}
+				owner = { set_global_flag = dynamic_loc_option_2_found }
+			}
+		}
+	}
+}
