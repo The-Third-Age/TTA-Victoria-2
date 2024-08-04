@@ -21,13 +21,21 @@ country_event = {
 		random_owned = {
 			any_neighbor_province = {
 				limit = {
-					has_province_modifier = dynamic_loc_potential_province_target
+					has_province_modifier = dynamic_loc_potential_region_target
 					region = DAL_654
 					NOT = { owner = { has_global_flag = dynamic_loc_option_1_found } }
 				}
 				railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "Nan Annen" } }
-				remove_province_modifier = dynamic_loc_potential_province_target
-				add_province_modifier = { name = dynamic_loc_province_target_1 duration = -1 }
+				DAL_654 = {
+					limit = {
+						any_core = {
+							NOT = { tag = FROM }
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					remove_province_modifier = dynamic_loc_potential_region_target
+					add_province_modifier = { name = dynamic_loc_region_target_1 duration = -1 }
+				}
 				owner = { set_global_flag = dynamic_loc_option_1_found
 			}
 		}
