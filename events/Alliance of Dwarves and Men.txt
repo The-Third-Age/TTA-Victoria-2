@@ -761,6 +761,7 @@ country_event = {
 			owner = {
 				FOR = {
 					set_variable = { which = dynamic_loc_region_count value = 0 }
+					country_event = 402000 # Resets the region names
 					
 					random_owned = {
 						any_neighbor_province = {
@@ -821,7 +822,7 @@ country_event = {
 						limit = {
 							owner = {
 								check_variable = { which = dynamic_loc_region_count value = 7.9 }
-								NOT = { check_variable = { which = dynamic_loc_region_count value = 8.1 }
+								NOT = { check_variable = { which = dynamic_loc_region_count value = 8.1 } }
 							}
 						}
 						owner = { country_event = 300015 } # Region 8 Loc Setting
@@ -1012,6 +1013,30 @@ country_event = {
 		empty_line_loc = {}
 		railroading_tag_specific_description_loc_2 = {}
 		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_3 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_4 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_5 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_6 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_7 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_8 = {}
+		empty_line_loc = {}
 	}
 	
 	# First
@@ -1028,6 +1053,7 @@ country_event = {
 		
 		FOR = {
 			set_variable = { which = dynamic_loc_country_count value = 0 }
+			country_event = 402000 # Resets the region names
 			
 			any_neighbor_country = {
 				limit = {
@@ -1038,32 +1064,11 @@ country_event = {
 				set_country_flag = dynamic_loc_potential_country_target
 				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
+			
+			# TODO: HANDLE MORE THAN ONE COUNTRY SELECTION
 			country_event = 300000 # Country 1 Loc Setting
 			country_event = 110104 # Getting the callback
-		}
-		
-		# Clean up for next time
-		all_core = {
-			remove_province_modifier = dynamic_loc_potential_region_target
-			remove_province_modifier = dynamic_loc_region_target_1
-			remove_province_modifier = dynamic_loc_region_target_2
-			remove_province_modifier = dynamic_loc_region_target_3
-			remove_province_modifier = dynamic_loc_region_target_4
-			remove_province_modifier = dynamic_loc_region_target_5
-			remove_province_modifier = dynamic_loc_region_target_6
-			remove_province_modifier = dynamic_loc_region_target_7
-			remove_province_modifier = dynamic_loc_region_target_8
-		}
-		
-		FOR = {
-			clr_global_flag = dynamic_loc_option_1_found
-			clr_global_flag = dynamic_loc_option_2_found
-			clr_global_flag = dynamic_loc_option_3_found
-			clr_global_flag = dynamic_loc_option_4_found
-			clr_global_flag = dynamic_loc_option_5_found
-			clr_global_flag = dynamic_loc_option_6_found
-			clr_global_flag = dynamic_loc_option_7_found
-			clr_global_flag = dynamic_loc_option_8_found
+			country_event = 400001 # Region cleanup
 		}
 	}
 	
@@ -1081,6 +1086,7 @@ country_event = {
 		
 		FOR = {
 			set_variable = { which = dynamic_loc_country_count value = 0 }
+			country_event = 402000 # Resets the region names
 			
 			any_neighbor_country = {
 				limit = {
@@ -1091,39 +1097,281 @@ country_event = {
 				set_country_flag = dynamic_loc_potential_country_target
 				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
+			
+			# TODO: HANDLE MORE THAN ONE COUNTRY SELECTION
 			country_event = 300000 # Country 1 Loc Setting
 			country_event = 110104 # Getting the callback
+			country_event = 400001 # Region cleanup
 		}
+	}
+	
+	# Third
+	option = {
+		name = ""
 		
-		# Clean up for next time
 		all_core = {
-			remove_province_modifier = dynamic_loc_potential_region_target
-			remove_province_modifier = dynamic_loc_region_target_1
-			remove_province_modifier = dynamic_loc_region_target_2
+			limit = {
+				has_province_modifier = dynamic_loc_region_target_3
+			}
 			remove_province_modifier = dynamic_loc_region_target_3
-			remove_province_modifier = dynamic_loc_region_target_4
-			remove_province_modifier = dynamic_loc_region_target_5
-			remove_province_modifier = dynamic_loc_region_target_6
-			remove_province_modifier = dynamic_loc_region_target_7
-			remove_province_modifier = dynamic_loc_region_target_8
+			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
 		}
 		
 		FOR = {
-			clr_global_flag = dynamic_loc_option_1_found
-			clr_global_flag = dynamic_loc_option_2_found
-			clr_global_flag = dynamic_loc_option_3_found
-			clr_global_flag = dynamic_loc_option_4_found
-			clr_global_flag = dynamic_loc_option_5_found
-			clr_global_flag = dynamic_loc_option_6_found
-			clr_global_flag = dynamic_loc_option_7_found
-			clr_global_flag = dynamic_loc_option_8_found
+			set_variable = { which = dynamic_loc_country_count value = 0 }
+			country_event = 402000 # Resets the region names
+			
+			any_neighbor_country = {
+				limit = {
+					has_country_modifier = alliance_of_dwarves_and_men
+					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					NOT = { tag = THIS }
+				}
+				set_country_flag = dynamic_loc_potential_country_target
+				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			# TODO: HANDLE MORE THAN ONE COUNTRY SELECTION
+			country_event = 300000 # Country 1 Loc Setting
+			country_event = 110104 # Getting the callback
+			country_event = 400001 # Region cleanup
+		}
+	}
+	
+	# Fourth
+	option = {
+		name = ""
+		
+		all_core = {
+			limit = {
+				has_province_modifier = dynamic_loc_region_target_4
+			}
+			remove_province_modifier = dynamic_loc_region_target_4
+			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+		}
+		
+		FOR = {
+			set_variable = { which = dynamic_loc_country_count value = 0 }
+			country_event = 402000 # Resets the region names
+			
+			any_neighbor_country = {
+				limit = {
+					has_country_modifier = alliance_of_dwarves_and_men
+					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					NOT = { tag = THIS }
+				}
+				set_country_flag = dynamic_loc_potential_country_target
+				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			# TODO: HANDLE MORE THAN ONE COUNTRY SELECTION
+			country_event = 300000 # Country 1 Loc Setting
+			country_event = 110104 # Getting the callback
+			country_event = 400001 # Region cleanup
+		}
+	}
+	
+	# Fifth
+	option = {
+		name = ""
+		
+		all_core = {
+			limit = {
+				has_province_modifier = dynamic_loc_region_target_5
+			}
+			remove_province_modifier = dynamic_loc_region_target_5
+			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+		}
+		
+		FOR = {
+			set_variable = { which = dynamic_loc_country_count value = 0 }
+			country_event = 402000 # Resets the region names
+			
+			any_neighbor_country = {
+				limit = {
+					has_country_modifier = alliance_of_dwarves_and_men
+					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					NOT = { tag = THIS }
+				}
+				set_country_flag = dynamic_loc_potential_country_target
+				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			# TODO: HANDLE MORE THAN ONE COUNTRY SELECTION
+			country_event = 300000 # Country 1 Loc Setting
+			country_event = 110104 # Getting the callback
+			country_event = 400001 # Region cleanup
+		}
+	}
+	
+	# Sixth
+	option = {
+		name = ""
+		
+		all_core = {
+			limit = {
+				has_province_modifier = dynamic_loc_region_target_6
+			}
+			remove_province_modifier = dynamic_loc_region_target_6
+			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+		}
+		
+		FOR = {
+			set_variable = { which = dynamic_loc_country_count value = 0 }
+			country_event = 402000 # Resets the region names
+			
+			any_neighbor_country = {
+				limit = {
+					has_country_modifier = alliance_of_dwarves_and_men
+					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					NOT = { tag = THIS }
+				}
+				set_country_flag = dynamic_loc_potential_country_target
+				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			# TODO: HANDLE MORE THAN ONE COUNTRY SELECTION
+			country_event = 300000 # Country 1 Loc Setting
+			country_event = 110104 # Getting the callback
+			country_event = 400001 # Region cleanup
+		}
+	}
+	
+	# Seventh
+	option = {
+		name = ""
+		
+		all_core = {
+			limit = {
+				has_province_modifier = dynamic_loc_region_target_7
+			}
+			remove_province_modifier = dynamic_loc_region_target_7
+			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+		}
+		
+		FOR = {
+			set_variable = { which = dynamic_loc_country_count value = 0 }
+			country_event = 402000 # Resets the region names
+			
+			any_neighbor_country = {
+				limit = {
+					has_country_modifier = alliance_of_dwarves_and_men
+					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					NOT = { tag = THIS }
+				}
+				set_country_flag = dynamic_loc_potential_country_target
+				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			# TODO: HANDLE MORE THAN ONE COUNTRY SELECTION
+			country_event = 300000 # Country 1 Loc Setting
+			country_event = 110104 # Getting the callback
+			country_event = 400001 # Region cleanup
+		}
+	}
+	
+	# Eighth
+	option = {
+		name = ""
+		
+		# Exactly 8 options
+		random_owned = {
+			limit = { NOT = { FOR = { check_variable = { which = dynamic_loc_region_count value = 8.1 } } } }
+			all_core = {
+				limit = {
+					has_province_modifier = dynamic_loc_region_target_8
+				}
+				remove_province_modifier = dynamic_loc_region_target_8
+				add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+			}
+			
+			FOR = {
+				set_variable = { which = dynamic_loc_country_count value = 0 }
+				country_event = 402000 # Resets the region names
+				
+				any_neighbor_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+						NOT = { tag = THIS }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
+				
+				# TODO: HANDLE MORE THAN ONE COUNTRY SELECTION
+				country_event = 300000 # Country 1 Loc Setting
+				country_event = 110104 # Getting the callback
+				country_event = 400001 # Region cleanup
+			}
+		}
+		
+		# More than 8 options
+		random_owned = {
+			limit = { FOR = { check_variable = { which = dynamic_loc_region_count value = 8.1 } } }
+			owner = {
+				FOR = {
+					# Account for the 8 that just got handled
+					change_variable = { which = dynamic_loc_region_count value = -8 }
+					country_event = 401001 # Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+					country_event = 402000 # Resets the region names
+					
+					# Reset the region selection names
+					# It can be assumed that there is at least 1 potential region
+					country_event = 300008 # Region 1 Loc Setting
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 1.9 } } }
+						owner = { country_event = 300009 } # Region 2 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 2.9 } } }
+						owner = { country_event = 300010 } # Region 3 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 3.9 } } }
+						owner = { country_event = 300011 } # Region 4 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 4.9 } } }
+						owner = { country_event = 300012 } # Region 5 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 5.9 } } }
+						owner = { country_event = 300013 } # Region 6 Loc Setting
+					}
+					
+					random_owned = {
+						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 6.9 } } }
+						owner = { country_event = 300014 } # Region 7 Loc Setting
+					}
+					
+					# We only want to display the 8th option if there are exactly 8 potential regions
+					# If there are more than 8, we want this last option to be "Back" -- the callback handles setting this
+					random_owned = {
+						limit = {
+							owner = {
+								check_variable = { which = dynamic_loc_region_count value = 7.9 }
+								NOT = { check_variable = { which = dynamic_loc_region_count value = 8.1 } }
+							}
+						}
+						owner = { country_event = 300015 } # Region 8 Loc Setting
+					}
+				}
+				
+				country_event = 110103 # Getting the callback
+			}
 		}
 	}
 }
 
 # Alliance of Men and Dwarves Country Selection
 country_event = {
-	id = 110021
+	id = 110030
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
 	picture = "organizations/alliance_dwarves_men_7"
@@ -1154,26 +1402,7 @@ country_event = {
 			set_country_flag = alliance_dwarves_men_selected_country
 		}
 		
-		# Cleanup for next time
-		any_country = {
-			clr_country_flag = dynamic_loc_potential_country_target
-			clr_country_flag = dynamic_loc_country_target_1
-			clr_country_flag = dynamic_loc_country_target_2
-			clr_country_flag = dynamic_loc_country_target_3
-			clr_country_flag = dynamic_loc_country_target_4
-			clr_country_flag = dynamic_loc_country_target_5
-			clr_country_flag = dynamic_loc_country_target_6
-			clr_country_flag = dynamic_loc_country_target_7
-			clr_country_flag = dynamic_loc_country_target_8
-			clr_global_flag = dynamic_loc_option_1_found
-			clr_global_flag = dynamic_loc_option_2_found
-			clr_global_flag = dynamic_loc_option_3_found
-			clr_global_flag = dynamic_loc_option_4_found
-			clr_global_flag = dynamic_loc_option_5_found
-			clr_global_flag = dynamic_loc_option_6_found
-			clr_global_flag = dynamic_loc_option_7_found
-			clr_global_flag = dynamic_loc_option_8_found
-		}
+		FOR = { country_event = 400000 } # Region cleanup
 	}
 }
 
@@ -1627,9 +1856,10 @@ country_event = {
 		
 		random_owned = {
 			limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 8.9 } } }
-			railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "§RBack§!" } }
+			railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "§BNext§!" } }
 		}
 		
+		# TODO: CALL AN EVENT BASED UPON THE NUMBER OF POTENTIAL REGION CHOICES
 		FROM = { country_event = 110020 } # Choosing the region
 	}
 }
@@ -1651,6 +1881,7 @@ country_event = {
 			railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "§BNext§!" } }
 		}
 		
-		FROM = { country_event = 110021 } # Choosing the country
+		# TODO: CALL AN EVENT BASED UPON THE NUMBER OF POTENTIAL COUNTRY CHOICES
+		FROM = { country_event = 110030 } # Choosing the country
 	}
 }

@@ -1,0 +1,138 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
+# Dynamic Loc Functions: {
+#	400000 - 499999 }
+
+# Dynamic Loc Country Cleanup - FIRE THIS AFTER COUNTRY SELECTION
+country_event = {
+	id = 400000
+	title = "Dynamic Loc Country Cleanup"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		# Cleanup for next time
+		any_country = {
+			clr_country_flag = dynamic_loc_potential_country_target
+			clr_country_flag = dynamic_loc_country_target_1
+			clr_country_flag = dynamic_loc_country_target_2
+			clr_country_flag = dynamic_loc_country_target_3
+			clr_country_flag = dynamic_loc_country_target_4
+			clr_country_flag = dynamic_loc_country_target_5
+			clr_country_flag = dynamic_loc_country_target_6
+			clr_country_flag = dynamic_loc_country_target_7
+			clr_country_flag = dynamic_loc_country_target_8
+			clr_global_flag = dynamic_loc_option_1_found
+			clr_global_flag = dynamic_loc_option_2_found
+			clr_global_flag = dynamic_loc_option_3_found
+			clr_global_flag = dynamic_loc_option_4_found
+			clr_global_flag = dynamic_loc_option_5_found
+			clr_global_flag = dynamic_loc_option_6_found
+			clr_global_flag = dynamic_loc_option_7_found
+			clr_global_flag = dynamic_loc_option_8_found
+		}
+	}
+}
+
+# Dynamic Loc Region Cleanup -- FIRE THIS AFTER REGION SELECTION
+country_event = {
+	id = 400001
+	title = "Dynamic Loc Region Cleanup"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		# Clean up for next time
+		FROM = {
+			all_core = {
+				remove_province_modifier = dynamic_loc_potential_region_target
+				remove_province_modifier = dynamic_loc_region_target_1
+				remove_province_modifier = dynamic_loc_region_target_2
+				remove_province_modifier = dynamic_loc_region_target_3
+				remove_province_modifier = dynamic_loc_region_target_4
+				remove_province_modifier = dynamic_loc_region_target_5
+				remove_province_modifier = dynamic_loc_region_target_6
+				remove_province_modifier = dynamic_loc_region_target_7
+				remove_province_modifier = dynamic_loc_region_target_8
+			}
+		}
+		
+		clr_global_flag = dynamic_loc_option_1_found
+		clr_global_flag = dynamic_loc_option_2_found
+		clr_global_flag = dynamic_loc_option_3_found
+		clr_global_flag = dynamic_loc_option_4_found
+		clr_global_flag = dynamic_loc_option_5_found
+		clr_global_flag = dynamic_loc_option_6_found
+		clr_global_flag = dynamic_loc_option_7_found
+		clr_global_flag = dynamic_loc_option_8_found
+	}
+}
+
+# Dynamic Loc Region Cleanup -- Clearing out old options only
+country_event = {
+	id = 401001
+	title = "Dynamic Loc Region Cleanup"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		# Clean up for next time
+		FROM = {
+			all_core = {
+				remove_province_modifier = dynamic_loc_region_target_1
+				remove_province_modifier = dynamic_loc_region_target_2
+				remove_province_modifier = dynamic_loc_region_target_3
+				remove_province_modifier = dynamic_loc_region_target_4
+				remove_province_modifier = dynamic_loc_region_target_5
+				remove_province_modifier = dynamic_loc_region_target_6
+				remove_province_modifier = dynamic_loc_region_target_7
+				remove_province_modifier = dynamic_loc_region_target_8
+			}
+		}
+		
+		clr_global_flag = dynamic_loc_option_1_found
+		clr_global_flag = dynamic_loc_option_2_found
+		clr_global_flag = dynamic_loc_option_3_found
+		clr_global_flag = dynamic_loc_option_4_found
+		clr_global_flag = dynamic_loc_option_5_found
+		clr_global_flag = dynamic_loc_option_6_found
+		clr_global_flag = dynamic_loc_option_7_found
+		clr_global_flag = dynamic_loc_option_8_found
+	}
+}
+
+# Reset Names
+country_event = {
+	id = 402000
+	title = "Dynamic Loc Reset Names"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "" } }
+		railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "" } }
+		railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "" } }
+		railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "" } }
+		railroading_tag_specific_description_loc_5 = { state_scope = { change_region_name = "" } }
+		railroading_tag_specific_description_loc_6 = { state_scope = { change_region_name = "" } }
+		railroading_tag_specific_description_loc_7 = { state_scope = { change_region_name = "" } }
+		railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "" } }
+	}
+}

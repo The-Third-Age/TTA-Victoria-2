@@ -79,3 +79,231 @@ country_event = {
 		}
 	}
 }
+
+# Dynamic Loc Region Selection 3
+country_event = {
+	id = 300010
+	title = "Dynamic Loc Region Selection 3"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assign Loc"
+		
+		clr_global_flag = dynamic_loc_option_3_found
+		
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dynamic_loc_potential_region_target
+					region = DAL_654
+					NOT = { owner = { has_global_flag = dynamic_loc_option_3_found } }
+				}
+				railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "Nan Annen" } }
+				DAL_654 = { remove_province_modifier = dynamic_loc_potential_region_target }
+				DAL_654 = {
+					limit = {
+						any_core = {
+							NOT = { tag = FROM }
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					add_province_modifier = { name = dynamic_loc_region_target_3 duration = -1 }
+				}
+				owner = { set_global_flag = dynamic_loc_option_3_found }
+			}
+		}
+	}
+}
+
+# Dynamic Loc Region Selection 4
+country_event = {
+	id = 300011
+	title = "Dynamic Loc Region Selection 4"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assign Loc"
+		
+		clr_global_flag = dynamic_loc_option_4_found
+		
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dynamic_loc_potential_region_target
+					region = DAL_654
+					NOT = { owner = { has_global_flag = dynamic_loc_option_4_found } }
+				}
+				railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "Nan Annen" } }
+				DAL_654 = { remove_province_modifier = dynamic_loc_potential_region_target }
+				DAL_654 = {
+					limit = {
+						any_core = {
+							NOT = { tag = FROM }
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					add_province_modifier = { name = dynamic_loc_region_target_4 duration = -1 }
+				}
+				owner = { set_global_flag = dynamic_loc_option_4_found }
+			}
+		}
+	}
+}
+
+# Dynamic Loc Region Selection 5
+country_event = {
+	id = 300012
+	title = "Dynamic Loc Region Selection 5"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assign Loc"
+		
+		clr_global_flag = dynamic_loc_option_5_found
+		
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dynamic_loc_potential_region_target
+					region = DAL_654
+					NOT = { owner = { has_global_flag = dynamic_loc_option_5_found } }
+				}
+				railroading_tag_specific_description_loc_5 = { state_scope = { change_region_name = "Nan Annen" } }
+				DAL_654 = { remove_province_modifier = dynamic_loc_potential_region_target }
+				DAL_654 = {
+					limit = {
+						any_core = {
+							NOT = { tag = FROM }
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					add_province_modifier = { name = dynamic_loc_region_target_5 duration = -1 }
+				}
+				owner = { set_global_flag = dynamic_loc_option_5_found }
+			}
+		}
+	}
+}
+
+# Dynamic Loc Region Selection 6
+country_event = {
+	id = 300013
+	title = "Dynamic Loc Region Selection 6"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assign Loc"
+		
+		clr_global_flag = dynamic_loc_option_6_found
+		
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dynamic_loc_potential_region_target
+					region = DAL_654
+					NOT = { owner = { has_global_flag = dynamic_loc_option_6_found } }
+				}
+				railroading_tag_specific_description_loc_6 = { state_scope = { change_region_name = "Nan Annen" } }
+				DAL_654 = { remove_province_modifier = dynamic_loc_potential_region_target }
+				DAL_654 = {
+					limit = {
+						any_core = {
+							NOT = { tag = FROM }
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					add_province_modifier = { name = dynamic_loc_region_target_6 duration = -1 }
+				}
+				owner = { set_global_flag = dynamic_loc_option_6_found }
+			}
+		}
+	}
+}
+
+# Dynamic Loc Region Selection 7
+country_event = {
+	id = 300014
+	title = "Dynamic Loc Region Selection 7"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assign Loc"
+		
+		clr_global_flag = dynamic_loc_option_7_found
+		
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dynamic_loc_potential_region_target
+					region = DAL_654
+					NOT = { owner = { has_global_flag = dynamic_loc_option_7_found } }
+				}
+				railroading_tag_specific_description_loc_7 = { state_scope = { change_region_name = "Nan Annen" } }
+				DAL_654 = { remove_province_modifier = dynamic_loc_potential_region_target }
+				DAL_654 = {
+					limit = {
+						any_core = {
+							NOT = { tag = FROM }
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					add_province_modifier = { name = dynamic_loc_region_target_7 duration = -1 }
+				}
+				owner = { set_global_flag = dynamic_loc_option_7_found }
+			}
+		}
+	}
+}
+
+# Dynamic Loc Region Selection 8
+country_event = {
+	id = 300015
+	title = "Dynamic Loc Region Selection 8"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Assign Loc"
+		
+		clr_global_flag = dynamic_loc_option_8_found
+		
+		random_owned = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = dynamic_loc_potential_region_target
+					region = DAL_654
+					NOT = { owner = { has_global_flag = dynamic_loc_option_8_found } }
+				}
+				railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "Nan Annen" } }
+				DAL_654 = { remove_province_modifier = dynamic_loc_potential_region_target }
+				DAL_654 = {
+					limit = {
+						any_core = {
+							NOT = { tag = FROM }
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					add_province_modifier = { name = dynamic_loc_region_target_8 duration = -1 }
+				}
+				owner = { set_global_flag = dynamic_loc_option_8_found }
+			}
+		}
+	}
+}
