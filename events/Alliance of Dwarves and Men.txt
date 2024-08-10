@@ -1579,13 +1579,13 @@ country_event = {
 		
 		# Exactly 8 options
 		random_owned = {
-			limit = { NOT = { FOR = { check_variable = { which = dynamic_loc_region_count value = 8.1 } } } }
-			all_core = {
-				limit = {
-					has_province_modifier = dynamic_loc_region_target_8
+			limit = { owner = { NOT = { FOR = { check_variable = { which = dynamic_loc_region_count value = 8.1 } } } } }
+			state_scope = {
+				any_owned_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_8 }
+					remove_province_modifier = dynamic_loc_region_target_8
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
 				}
-				remove_province_modifier = dynamic_loc_region_target_8
-				add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
 			}
 			
 			FOR = {
