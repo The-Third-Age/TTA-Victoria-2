@@ -1657,8 +1657,8 @@ country_event = {
 			limit = { FOR = { check_variable = { which = dynamic_loc_region_count value = 8.1 } } }
 			owner = {
 				FOR = {
-					# Account for the 8 that just got handled
-					change_variable = { which = dynamic_loc_region_count value = -8 }
+					# Account for the 7 that just got handled -- slot 8 is "next" (that just got selected)
+					change_variable = { which = dynamic_loc_region_count value = -7 }
 					country_event = 401001 # Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
 					country_event = 402000 # Resets the region names
 					
@@ -1874,8 +1874,8 @@ country_event = {
 			limit = { FOR = { check_variable = { which = dynamic_loc_country_count value = 8.1 } } }
 			owner = {
 				FOR = {
-					# Account for the 8 that just got handled
-					change_variable = { which = dynamic_loc_country_count value = -8 }
+					# Account for the 7 that just got handled -- slot 8 is "next" (that just got selected)
+					change_variable = { which = dynamic_loc_country_count value = -7 }
 					country_event = 400001 # Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
 					country_event = 402000 # Resets the region names
 					
