@@ -3073,6 +3073,37 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = {
+						# [northmen, anduinrim, rohirrim] - Greylin Vale
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = greylin_vale_name value = -0.1 } } }
+								FOR = { check_variable = { which = greylin_vale_name value = 0.1 } }
+							}
+						}
+						# [wicked_dwarves, dwarves] - Greylin Vale
+						AND = {
+							OR = {
+								is_culture_group = wicked_dwarves
+								is_culture_group = dwarves
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = greylin_vale_name value = 0.9 } } }
+								FOR = { check_variable = { which = greylin_vale_name value = 1.1 } }
+							}
+						}
+					}
+					owns = 740
+					owns = 741
+					owns = 742
+					owns = 685
+				}
+				AND = {
+					OR = {
 						# [breelander, hobbits] - Upper Carrock
 						AND = {
 							OR = {
@@ -3280,6 +3311,62 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
+						# [northmen] - Langflood
+						AND = {
+							is_culture_group = northmen
+							OR = {
+								FOR = { NOT = { check_variable = { which = langflood_name value = -0.1 } } }
+								FOR = { check_variable = { which = langflood_name value = 0.1 } }
+							}
+						}
+						# [anduinrim] - Langflood
+						AND = {
+							is_culture_group = anduinrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = langflood_name value = 0.9 } } }
+								FOR = { check_variable = { which = langflood_name value = 1.1 } }
+							}
+						}
+						# [breelander, hobbits] - Langflood
+						AND = {
+							OR = {
+								is_culture_group = breelander
+								is_culture_group = hobbits
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = langflood_name value = 1.9 } } }
+								FOR = { check_variable = { which = langflood_name value = 2.1 } }
+							}
+						}
+						# [rohirrim] - Langflood
+						AND = {
+							is_culture_group = rohirrim
+							OR = {
+								FOR = { NOT = { check_variable = { which = langflood_name value = 2.9 } } }
+								FOR = { check_variable = { which = langflood_name value = 3.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Langflood
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = langflood_name value = 3.9 } } }
+								FOR = { check_variable = { which = langflood_name value = 4.1 } }
+							}
+						}
+					}
+					owns = 746
+					owns = 747
+					owns = 748
+					owns = 749
+					owns = 1439
+				}
+				AND = {
+					OR = {
 						# [northmen] - Rónen-in-Anduin
 						AND = {
 							is_culture_group = northmen
@@ -3351,6 +3438,49 @@ political_decisions = {
 			war = no
 		}
 		effect = {
+			# [northmen, anduinrim, rohirrim] - Greylin Vale
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 685
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = greylin_vale_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = greylin_vale_name value = 0.1 } } }
+					}
+				}
+				740 = { change_province_name = "Eágdúru" }
+				741 = { change_province_name = "Skarháld" }
+				742 = { change_province_name = "Wealdasbér" }
+				685 = { change_province_name = "Thornholt" }
+				owner = { FOR = { set_variable = { which = greylin_vale_name value = 0 } } }
+			}
+			# [wicked_dwarves, dwarves] - Greylin Vale
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = wicked_dwarves
+							is_culture_group = dwarves
+						}
+					}
+					province_id = 685
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = greylin_vale_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = greylin_vale_name value = 1.1 } } }
+					}
+				}
+				740 = { change_province_name = "Annâk-khurfu" }
+				741 = { change_province_name = "Tharrazhâr" }
+				742 = { change_province_name = "Zarkul-sulûn" }
+				685 = { change_province_name = "Dôm Goru" }
+				owner = { FOR = { set_variable = { which = greylin_vale_name value = 1 } } }
+			}
 			# [breelander, hobbits] - Upper Carrock
 			random_owned = {
 				limit = {
@@ -3654,6 +3784,85 @@ political_decisions = {
 				755 = { state_scope = { change_region_name = "Loeg Ningloron" } }
 				756 = { change_province_name = "Nan Sîr Ninglor" }
 				owner = { FOR = { set_variable = { which = gladden_fields_name value = 4 } } }
+			}
+			# [northmen] - Langflood
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = northmen }
+					province_id = 746
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = langflood_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = langflood_name value = 0.1 } } }
+					}
+				}
+				748 = { change_province_name = "Mathleisborg" }
+				749 = { change_province_name = "Thingastathborg" }
+				owner = { FOR = { set_variable = { which = langflood_name value = 0 } } }
+			}
+			# [anduinrim] - Langflood
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = anduinrim }
+					province_id = 746
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = langflood_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = langflood_name value = 1.1 } } }
+					}
+				}
+				748 = { change_province_name = "Mathleisbaurg" }
+				749 = { change_province_name = "Thingastathbaurg" }
+				owner = { FOR = { set_variable = { which = langflood_name value = 1 } } }
+			}
+			# [breelander, hobbits] - Langflood
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = breelander
+							is_culture_group = hobbits
+						}
+					}
+					province_id = 746
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = langflood_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = langflood_name value = 2.1 } } }
+					}
+				}
+				749 = { change_province_name = "Lyndelby" }
+				owner = { FOR = { set_variable = { which = langflood_name value = 2 } } }
+			}
+			# [rohirrim] - Langflood
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = rohirrim }
+					province_id = 746
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = langflood_name value = 2.9 } } } }
+						owner = { FOR = { check_variable = { which = langflood_name value = 3.1 } } }
+					}
+				}
+				748 = { change_province_name = "Melburg" }
+				749 = { change_province_name = "Thingastathburg" }
+				owner = { FOR = { set_variable = { which = langflood_name value = 3 } } }
+			}
+			# [teleri, dunedain, eldar] - Langflood
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 746
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = langflood_name value = 3.9 } } } }
+						owner = { FOR = { check_variable = { which = langflood_name value = 4.1 } } }
+					}
+				}
+				749 = { change_province_name = "Athrad Rhimdath" }
+				owner = { FOR = { set_variable = { which = langflood_name value = 4 } } }
 			}
 			# [northmen] - Rónen-in-Anduin
 			random_owned = {
@@ -6863,6 +7072,105 @@ political_decisions = {
 				}
 				26 = { state_scope = { change_region_name = "Arnach" } }
 				owner = { FOR = { set_variable = { which = lossarnach_name value = 1 } } }
+			}
+		}
+	}
+	rename_wasteland = {
+		picture = "renaming"
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						# [wicked_dwarves, dwarves] - White Mountains
+						AND = {
+							OR = {
+								is_culture_group = wicked_dwarves
+								is_culture_group = dwarves
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = white_mountains_name value = -0.1 } } }
+								FOR = { check_variable = { which = white_mountains_name value = 0.1 } }
+							}
+						}
+						# [teleri, eldar] - White Mountains
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = white_mountains_name value = 0.9 } } }
+								FOR = { check_variable = { which = white_mountains_name value = 1.1 } }
+							}
+						}
+						# [dunedain] - White Mountains
+						AND = {
+							is_culture_group = dunedain
+							OR = {
+								FOR = { NOT = { check_variable = { which = white_mountains_name value = 1.9 } } }
+								FOR = { check_variable = { which = white_mountains_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 193
+					owns = 116
+					owns = 796
+					owns = 191
+				}
+			}
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			# [wicked_dwarves, dwarves] - White Mountains
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = wicked_dwarves
+							is_culture_group = dwarves
+						}
+					}
+					province_id = 116
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = white_mountains_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = white_mountains_name value = 0.1 } } }
+					}
+				}
+				116 = { change_province_name = "Forbidden Halls" }
+				owner = { FOR = { set_variable = { which = white_mountains_name value = 0 } } }
+			}
+			# [teleri, eldar] - White Mountains
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = eldar
+						}
+					}
+					province_id = 116
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = white_mountains_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = white_mountains_name value = 1.1 } } }
+					}
+				}
+				116 = { change_province_name = "Ered Nimrais" }
+				owner = { FOR = { set_variable = { which = white_mountains_name value = 1 } } }
+			}
+			# [dunedain] - White Mountains
+			random_owned = {
+				limit = {
+					owner = { is_culture_group = dunedain }
+					province_id = 116
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = white_mountains_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = white_mountains_name value = 2.1 } } }
+					}
+				}
+				116 = { change_province_name = "White Mountains" }
+				owner = { FOR = { set_variable = { which = white_mountains_name value = 2 } } }
 			}
 		}
 	}
@@ -10671,7 +10979,7 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
-						# [breelander, hobbits] - Gwathlo Marches
+						# [breelander, hobbits] - Gwathló Marches
 						AND = {
 							OR = {
 								is_culture_group = breelander
@@ -10682,7 +10990,7 @@ political_decisions = {
 								FOR = { check_variable = { which = gwathlo_marches_name value = 0.1 } }
 							}
 						}
-						# [teleri] - Gwathlo Marches
+						# [teleri] - Gwathló Marches
 						AND = {
 							is_culture_group = teleri
 							OR = {
@@ -10690,7 +10998,7 @@ political_decisions = {
 								FOR = { check_variable = { which = gwathlo_marches_name value = 1.1 } }
 							}
 						}
-						# [dunedain, eldar] - Gwathlo Marches
+						# [dunedain, eldar] - Gwathló Marches
 						AND = {
 							OR = {
 								is_culture_group = dunedain
@@ -10701,7 +11009,7 @@ political_decisions = {
 								FOR = { check_variable = { which = gwathlo_marches_name value = 2.1 } }
 							}
 						}
-						# [northern_goblins, trolls, angmarrim, wildmen] - Gwathlo Marches
+						# [northern_goblins, trolls, angmarrim, wildmen] - Gwathló Marches
 						AND = {
 							OR = {
 								is_culture_group = northern_goblins
@@ -11126,7 +11434,7 @@ political_decisions = {
 				1212 = { change_province_name = "Maurlan" }
 				owner = { FOR = { set_variable = { which = dol_tinereb_name value = 1 } } }
 			}
-			# [breelander, hobbits] - Gwathlo Marches
+			# [breelander, hobbits] - Gwathló Marches
 			random_owned = {
 				limit = {
 					owner = {
@@ -11141,11 +11449,11 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = gwathlo_marches_name value = 0.1 } } }
 					}
 				}
-				1224 = { state_scope = { change_region_name = "Gwathlo Marches" } }
+				1224 = { state_scope = { change_region_name = "Gwathló Marches" } }
 				1226 = { change_province_name = "Soas" }
 				owner = { FOR = { set_variable = { which = gwathlo_marches_name value = 0 } } }
 			}
-			# [teleri] - Gwathlo Marches
+			# [teleri] - Gwathló Marches
 			random_owned = {
 				limit = {
 					owner = { is_culture_group = teleri }
@@ -11158,7 +11466,7 @@ political_decisions = {
 				1226 = { change_province_name = "Cardhath Tawaren" }
 				owner = { FOR = { set_variable = { which = gwathlo_marches_name value = 1 } } }
 			}
-			# [dunedain, eldar] - Gwathlo Marches
+			# [dunedain, eldar] - Gwathló Marches
 			random_owned = {
 				limit = {
 					owner = {
@@ -11173,11 +11481,11 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = gwathlo_marches_name value = 2.1 } } }
 					}
 				}
-				1224 = { state_scope = { change_region_name = "Gwathlo Marches" } }
+				1224 = { state_scope = { change_region_name = "Gwathló Marches" } }
 				1226 = { change_province_name = "Cardhath Tawaren" }
 				owner = { FOR = { set_variable = { which = gwathlo_marches_name value = 2 } } }
 			}
-			# [northern_goblins, trolls, angmarrim, wildmen] - Gwathlo Marches
+			# [northern_goblins, trolls, angmarrim, wildmen] - Gwathló Marches
 			random_owned = {
 				limit = {
 					owner = {
@@ -12425,6 +12733,52 @@ political_decisions = {
 				}
 				AND = {
 					OR = {
+						# [breelander, hobbits] - Elven Fells
+						AND = {
+							OR = {
+								is_culture_group = breelander
+								is_culture_group = hobbits
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = elven_fells_name value = -0.1 } } }
+								FOR = { check_variable = { which = elven_fells_name value = 0.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Elven Fells
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = elven_fells_name value = 0.9 } } }
+								FOR = { check_variable = { which = elven_fells_name value = 1.1 } }
+							}
+						}
+						# [northern_goblins, trolls, angmarrim, wildmen] - Elven Fells
+						AND = {
+							OR = {
+								is_culture_group = northern_goblins
+								is_culture_group = trolls
+								is_culture_group = angmarrim
+								is_culture_group = wildmen
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = elven_fells_name value = 1.9 } } }
+								FOR = { check_variable = { which = elven_fells_name value = 2.1 } }
+							}
+						}
+					}
+					owns = 865
+					owns = 866
+					owns = 1243
+					owns = 1244
+					owns = 1245
+					owns = 1246
+				}
+				AND = {
+					OR = {
 						# [breelander, hobbits] - Sruth Líath Marches
 						AND = {
 							OR = {
@@ -12601,6 +12955,69 @@ political_decisions = {
 				}
 				867 = { state_scope = { change_region_name = "Foreregion" } }
 				owner = { FOR = { set_variable = { which = foreregion_name value = 1 } } }
+			}
+			# [breelander, hobbits] - Elven Fells
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = breelander
+							is_culture_group = hobbits
+						}
+					}
+					province_id = 865
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = elven_fells_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = elven_fells_name value = 0.1 } } }
+					}
+				}
+				865 = { change_province_name = "Rivendell" }
+				1244 = { change_province_name = "Forest of Curses" }
+				owner = { FOR = { set_variable = { which = elven_fells_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Elven Fells
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 865
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = elven_fells_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = elven_fells_name value = 1.1 } } }
+					}
+				}
+				865 = { change_province_name = "Imladris" }
+				1244 = { change_province_name = "Lúthaglad" }
+				1245 = { change_province_name = "Etraim" }
+				1246 = { change_province_name = "Tum Dincelon" }
+				owner = { FOR = { set_variable = { which = elven_fells_name value = 1 } } }
+			}
+			# [northern_goblins, trolls, angmarrim, wildmen] - Elven Fells
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northern_goblins
+							is_culture_group = trolls
+							is_culture_group = angmarrim
+							is_culture_group = wildmen
+						}
+					}
+					province_id = 865
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = elven_fells_name value = 1.9 } } } }
+						owner = { FOR = { check_variable = { which = elven_fells_name value = 2.1 } } }
+					}
+				}
+				1244 = { change_province_name = "Caill Maldacht" }
+				1245 = { change_province_name = "Garkash" }
+				1246 = { change_province_name = "Gairbuinne" }
+				owner = { FOR = { set_variable = { which = elven_fells_name value = 2 } } }
 			}
 			# [breelander, hobbits] - Sruth Líath Marches
 			random_owned = {
@@ -16883,7 +17300,7 @@ political_decisions = {
 						owner = { FOR = { check_variable = { which = nan_curunir_name value = 0.1 } } }
 					}
 				}
-				1446 = { state_scope = { change_region_name = "Wizard?s Vale" } }
+				1446 = { state_scope = { change_region_name = "Wizard’s Vale" } }
 				1447 = { change_province_name = "Blackmarch Fort" }
 				811 = { change_province_name = "Isengard" }
 				owner = { FOR = { set_variable = { which = nan_curunir_name value = 0 } } }
