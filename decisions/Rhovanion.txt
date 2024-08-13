@@ -162,8 +162,8 @@ political_decisions = {
 	form_rhovanion_GP = {
 		picture = "form_rhovanion"
 		potential = {
-			NOT = { is_culture_group = northmen }
 			is_greater_power = yes
+			NOT = { is_culture_group = northmen }
 			NOT = { exists = RHO }
 			RHO = {
 				any_core = {
@@ -310,12 +310,12 @@ political_decisions = {
 	RHO_core_removal = {
 		picture = "form_rhovanion"
 		potential = {
+			tag = RHO
 			OR = {
 				DAL = { all_core = { owned_by = RHO is_core = RHO } }
 				DOR = { all_core = { owned_by = RHO is_core = RHO } }
 				EHW = { all_core = { owned_by = RHO is_core = RHO } }
 			}
-			tag = RHO
 		}
 		
 		allow = {

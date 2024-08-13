@@ -124,9 +124,9 @@ political_decisions = {
 	
 	send_ring_hunters = {
 		potential = {
+			good_evil_alignment = evil_alignment
 			NOT = { tag = MOR }
 			NOT = { has_country_modifier = ring_hunters }
-			good_evil_alignment = evil_alignment
 			has_global_flag = findings_of_gandalf
 			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
@@ -135,7 +135,6 @@ political_decisions = {
 		}
 		
 		allow = {
-			good_evil_alignment = evil_alignment
 			OR = {
 				is_greater_power = yes
 				is_secondary_power = yes
@@ -663,7 +662,6 @@ political_decisions = {
 		
 		allow = {
 			is_greater_power = yes
-			good_evil_alignment = evil_alignment
 			expansion_5 = 1
 		}
 		
