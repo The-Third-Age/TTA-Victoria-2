@@ -2,6 +2,7 @@
 # Audax Validator "!" Ignore_1004
 
 # TODO: Loc some of these events (like the main menus)
+# TODO: Rework dynamic loc targetting to work like what Bob showed
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -1009,35 +1010,35 @@ country_event = {
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_1 = {}
+		dynamic_loc_region_slot_1 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_2 = {}
+		dynamic_loc_region_slot_2 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_3 = {}
+		dynamic_loc_region_slot_3 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_4 = {}
+		dynamic_loc_region_slot_4 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_5 = {}
+		dynamic_loc_region_slot_5 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_6 = {}
+		dynamic_loc_region_slot_6 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_7 = {}
+		dynamic_loc_region_slot_7 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_8 = {}
+		dynamic_loc_region_slot_8 = {}
 		empty_line_loc = {}
 	}
 	
@@ -1580,8 +1581,8 @@ country_event = {
 		# Exactly 8 options
 		random_owned = {
 			limit = { owner = { NOT = { FOR = { check_variable = { which = dynamic_loc_region_count value = 8.1 } } } } }
-			state_scope = {
-				any_owned_province = {
+			owner = {
+				all_core = {
 					limit = { has_province_modifier = dynamic_loc_region_target_8 }
 					remove_province_modifier = dynamic_loc_region_target_8
 					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
@@ -1736,35 +1737,35 @@ country_event = {
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_1 = {}
+		dynamic_loc_country_slot_1 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_2 = {}
+		dynamic_loc_country_slot_2 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_3 = {}
+		dynamic_loc_country_slot_3 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_4 = {}
+		dynamic_loc_country_slot_4 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_5 = {}
+		dynamic_loc_country_slot_5 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_6 = {}
+		dynamic_loc_country_slot_6 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_7 = {}
+		dynamic_loc_country_slot_7 = {}
 		empty_line_loc = {}
 		
 		empty_line_loc = {}
-		railroading_tag_specific_description_loc_8 = {}
+		dynamic_loc_country_slot_8 = {}
 		empty_line_loc = {}
 	}
 	
@@ -2380,6 +2381,7 @@ country_event = {
 	option = {
 		name = "Continue"
 		
+		# When there are exactly 8 options, we want to display the option, "Next"
 		random_owned = {
 			limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 8.9 } } }
 			railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "§BNext§!" } }
@@ -2402,6 +2404,7 @@ country_event = {
 	option = {
 		name = "Continue"
 		
+		# When there are exactly 8 options, we want to display the option, "Next"
 		random_owned = {
 			limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 8.9 } } }
 			railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "§BNext§!" } }
