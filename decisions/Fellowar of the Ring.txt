@@ -90,12 +90,12 @@ political_decisions = {
 		potential = {
 			tag = MOR
 			NOT = { has_country_modifier = ring_hunters }
-			good_evil_alignment = evil_alignment
+			NOT = { has_global_flag = nine_hunting_frodo }
 			has_global_flag = findings_of_gandalf
+			good_evil_alignment = evil_alignment
 			nationalvalue = sauron
 			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
-			NOT = { has_global_flag = nine_hunting_frodo }
 		}
 		
 		allow = {
@@ -125,13 +125,13 @@ political_decisions = {
 	send_ring_hunters = {
 		potential = {
 			good_evil_alignment = evil_alignment
-			NOT = { tag = MOR }
 			NOT = { has_country_modifier = ring_hunters }
+			NOT = { has_global_flag = frodo_fled_shire }
 			has_global_flag = findings_of_gandalf
 			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
-			NOT = { has_global_flag = frodo_fled_shire }
 			NOT = { owns = 1040 }
+			NOT = { tag = MOR }
 		}
 		
 		allow = {
@@ -165,10 +165,11 @@ political_decisions = {
 	# Special council_of_capital for Imladris
 	council_of_elrond = {
 		potential = {
+			nationalvalue = elrond
+			NOT = { has_global_flag = the_council_of_elrond }
 			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
 			NOT = { good_evil_alignment = evil_alignment }
-			nationalvalue = elrond
 			OR = {
 				has_country_flag = frodo_chose_us
 				FOR = {
@@ -178,7 +179,6 @@ political_decisions = {
 					}
 				}
 			}
-			NOT = { has_global_flag = the_council_of_elrond }
 		}
 		
 		allow = {
@@ -224,9 +224,10 @@ political_decisions = {
 	council_of_capital = {
 		picture = "council_of_elrond"
 		potential = {
+			NOT = { good_evil_alignment = evil_alignment }
 			FOR = { check_variable = { which = ring_controller value = 0.9 } } # Frodo
 			FOR = { NOT = { check_variable = { which = ring_controller value = 1.1 } } } # Frodo
-			NOT = { good_evil_alignment = evil_alignment }
+			NOT = { has_global_flag = the_council_of_elrond }
 			NOT = { nationalvalue = elrond }
 			OR = {
 				has_country_flag = frodo_chose_us
@@ -237,7 +238,6 @@ political_decisions = {
 					}
 				}
 			}
-			NOT = { has_global_flag = the_council_of_elrond }
 		}
 		
 		allow = {
@@ -608,14 +608,14 @@ political_decisions = {
 	give_ring_to_mordor = {
 		picture = "war_of_the_ring"
 		potential = {
-			NOT = { tag = MOR }
+			has_country_flag = has_one_ring
 			good_evil_alignment = evil_alignment
+			NOT = { war_with = MOR }
+			NOT = { tag = MOR }
 			MOR = {
 				nationalvalue = sauron
 				good_evil_alignment = evil_alignment
 			}
-			NOT = { war_with = MOR }
-			has_country_flag = has_one_ring
 		}
 		
 		allow = {}
@@ -655,8 +655,8 @@ political_decisions = {
 		potential = {
 			tag = MOR
 			NOT = { has_global_flag = wotr_started }
-			good_evil_alignment = evil_alignment
 			has_global_flag = the_council_of_elrond
+			good_evil_alignment = evil_alignment
 			NOT = { GON = { good_evil_alignment = evil_alignment } }
 		}
 		

@@ -892,6 +892,7 @@ political_decisions = {
 		}
 		
 		allow = {
+			money = 50000
 			OR = {
 				AND = {
 					merchant_marine_3 = 1
@@ -907,7 +908,6 @@ political_decisions = {
 					alliance_with = ERE
 				}
 			}
-			money = 50000
 		}
 		
 		effect = {
@@ -936,8 +936,8 @@ political_decisions = {
 	rebuild_dale_toy_market = {
 		picture = "Barding Realm/DAL_dale"
 		potential = {
-			is_culture_group = northmen
 			owns = 652 # Dale
+			is_culture_group = northmen
 			NOT = { 652 = { has_province_modifier = wonder_of_the_north } }
 		}
 		
@@ -1079,8 +1079,8 @@ political_decisions = {
 			OR = {
 				population_2 = 1
 				AND = {
-					ai = yes
 					year = 2970
+					ai = yes
 				}
 			}
 		}
