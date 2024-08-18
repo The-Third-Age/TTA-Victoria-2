@@ -762,9 +762,31 @@ country_event = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
 			
 			owner = {
+				set_country_flag = dynamic_loc_initiator
+				
 				FOR = {
 					set_variable = { which = dynamic_loc_region_count value = 0 }
-					country_event = 402000 # Resets the region names
+					
+					# Resets the naming count
+					set_variable = { which = dynamic_loc_names value = 0 }
+					
+					# Resets the region names
+					# Cannot call 402000 as it will not fire in the necessary order
+					set_global_flag = hidden_effects
+					
+					random_owned = {
+						limit = { owner = { has_global_flag = hidden_effects } }
+						dynamic_loc_region_slot_1 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_2 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_3 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_4 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_5 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_6 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_7 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_8 = { state_scope = { change_region_name = "" } }
+					}
+					
+					clr_global_flag = hidden_effects
 					
 					random_owned = {
 						any_neighbor_province = {
@@ -786,50 +808,7 @@ country_event = {
 						}
 					}
 					
-					# It can be assumed that there is at least 1 potential region
-					country_event = 300008 # Region 1 Loc Setting
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 1.9 } } }
-						owner = { country_event = 300009 } # Region 2 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 2.9 } } }
-						owner = { country_event = 300010 } # Region 3 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 3.9 } } }
-						owner = { country_event = 300011 } # Region 4 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 4.9 } } }
-						owner = { country_event = 300012 } # Region 5 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 5.9 } } }
-						owner = { country_event = 300013 } # Region 6 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 6.9 } } }
-						owner = { country_event = 300014 } # Region 7 Loc Setting
-					}
-					
-					# We only want to display the 8th option if there are exactly 8 potential regions
-					# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-					random_owned = {
-						limit = {
-							owner = {
-								check_variable = { which = dynamic_loc_region_count value = 7.9 }
-								NOT = { check_variable = { which = dynamic_loc_region_count value = 8.1 } }
-							}
-						}
-						owner = { country_event = 300015 } # Region 8 Loc Setting
-					}
+					country_event = 300008 # Region Loc Setting
 					
 					country_event = 110103 # Getting the callback
 				}
@@ -1660,54 +1639,45 @@ country_event = {
 				FOR = {
 					# Account for the 7 that just got handled -- slot 8 is "next" (that just got selected)
 					change_variable = { which = dynamic_loc_region_count value = -7 }
-					country_event = 401001 # Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
-					country_event = 402000 # Resets the region names
+					
+					# Resets the naming count
+					set_variable = { which = dynamic_loc_names value = 0 }
+					
+					# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+					# Cannot call 401001 as it will not fire in the necessary order
+					random_owned = {
+						any_neighbor_province = {
+							remove_province_modifier = dynamic_loc_region_target_1
+							remove_province_modifier = dynamic_loc_region_target_2
+							remove_province_modifier = dynamic_loc_region_target_3
+							remove_province_modifier = dynamic_loc_region_target_4
+							remove_province_modifier = dynamic_loc_region_target_5
+							remove_province_modifier = dynamic_loc_region_target_6
+							remove_province_modifier = dynamic_loc_region_target_7
+							remove_province_modifier = dynamic_loc_region_target_8
+						}
+					}
+					
+					# Resets the region names
+					# Cannot call 402000 as it will not fire in the necessary order
+					set_global_flag = hidden_effects
+					
+					random_owned = {
+						limit = { owner = { has_global_flag = hidden_effects } }
+						dynamic_loc_region_slot_1 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_2 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_3 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_4 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_5 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_6 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_7 = { state_scope = { change_region_name = "" } }
+						dynamic_loc_region_slot_8 = { state_scope = { change_region_name = "" } }
+					}
+					
+					clr_global_flag = hidden_effects
 					
 					# Reset the region selection names
-					# It can be assumed that there is at least 1 potential region
-					country_event = 300008 # Region 1 Loc Setting
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 1.9 } } }
-						owner = { country_event = 300009 } # Region 2 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 2.9 } } }
-						owner = { country_event = 300010 } # Region 3 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 3.9 } } }
-						owner = { country_event = 300011 } # Region 4 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 4.9 } } }
-						owner = { country_event = 300012 } # Region 5 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 5.9 } } }
-						owner = { country_event = 300013 } # Region 6 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 6.9 } } }
-						owner = { country_event = 300014 } # Region 7 Loc Setting
-					}
-					
-					# We only want to display the 8th option if there are exactly 8 potential regions
-					# If there are more than 8, we want this last option to be "Back" -- the callback handles setting this
-					random_owned = {
-						limit = {
-							owner = {
-								check_variable = { which = dynamic_loc_region_count value = 7.9 }
-								NOT = { check_variable = { which = dynamic_loc_region_count value = 8.1 } }
-							}
-						}
-						owner = { country_event = 300015 } # Region 8 Loc Setting
-					}
+					country_event = { id = 300008 days = 0 } # Region Loc Setting
 				}
 				
 				country_event = 110103 # Getting the callback
@@ -2381,14 +2351,24 @@ country_event = {
 	option = {
 		name = "Continue"
 		
-		# When there are exactly 8 options, we want to display the option, "Next"
-		random_owned = {
-			limit = { owner = { check_variable = { which = dynamic_loc_region_count value = 8.9 } } }
-			railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "§BNext§!" } }
+		# When there are more than 8 options, we want to display the last option as "Next"
+		random_country = {
+			limit = {
+				tag = FOR
+				check_variable = { which = dynamic_loc_region_count value = 8.9 }
+			}
+			dynamic_loc_region_slot_8 = { state_scope = { change_region_name = "§BNext§!" } }
 		}
 		
 		# TODO: CALL AN EVENT BASED UPON THE NUMBER OF POTENTIAL REGION CHOICES
-		FROM = { country_event = 110020 } # Choosing the region
+		
+		# Cannot use FROM as country_event = { id = [id] days = 0 } resets FROM to the realm that got the event fired via this syntax. When setting the dynamic loc names, a bunch of events are called for FOR this way to ensure that the player doesn't need to wait a tick to see the loced names
+		random_country = {
+			limit = {
+				has_country_flag = dynamic_loc_initiator
+			}
+			country_event = 110020
+		}
 	}
 }
 
@@ -2404,10 +2384,10 @@ country_event = {
 	option = {
 		name = "Continue"
 		
-		# When there are exactly 8 options, we want to display the option, "Next"
+		# When there are more than 8 options, we want to display the last option as "Next"
 		random_owned = {
 			limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 8.9 } } }
-			railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "§BNext§!" } }
+			dynamic_loc_country_slot_8 = { state_scope = { change_region_name = "§BNext§!" } }
 		}
 		
 		# TODO: CALL AN EVENT BASED UPON THE NUMBER OF POTENTIAL COUNTRY CHOICES

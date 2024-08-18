@@ -90,8 +90,8 @@ country_event = {
 		name = "Clean up"
 		
 		# Clean up for next time
-		FROM = {
-			all_core = {
+		random_owned = {
+			any_neighbor_province = {
 				remove_province_modifier = dynamic_loc_region_target_1
 				remove_province_modifier = dynamic_loc_region_target_2
 				remove_province_modifier = dynamic_loc_region_target_3
@@ -126,6 +126,9 @@ country_event = {
 	option = {
 		name = "Clean up"
 		
+		# Resets the counter so regions get properly loced
+		FOR = { set_variable = { which = dynamic_loc_names value = 0 } }
+		
 		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "" } }
 		railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "" } }
 		railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "" } }
@@ -134,5 +137,21 @@ country_event = {
 		railroading_tag_specific_description_loc_6 = { state_scope = { change_region_name = "" } }
 		railroading_tag_specific_description_loc_7 = { state_scope = { change_region_name = "" } }
 		railroading_tag_specific_description_loc_8 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_country_slot_1 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_country_slot_2 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_country_slot_3 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_country_slot_4 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_country_slot_5 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_country_slot_6 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_country_slot_7 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_country_slot_8 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_region_slot_1 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_region_slot_2 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_region_slot_3 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_region_slot_4 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_region_slot_5 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_region_slot_6 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_region_slot_7 = { state_scope = { change_region_name = "" } }
+		dynamic_loc_region_slot_8 = { state_scope = { change_region_name = "" } }
 	}
 }
