@@ -770,23 +770,7 @@ country_event = {
 					# Resets the naming count
 					set_variable = { which = dynamic_loc_names value = 0 }
 					
-					# Resets the region names
-					# Cannot call 402000 as it will not fire in the necessary order
-					set_global_flag = hidden_effects
-					
-					random_owned = {
-						limit = { owner = { has_global_flag = hidden_effects } }
-						dynamic_loc_region_slot_1 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_2 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_3 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_4 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_5 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_6 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_7 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_8 = { state_scope = { change_region_name = "" } }
-					}
-					
-					clr_global_flag = hidden_effects
+					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
 						any_neighbor_province = {
@@ -1658,21 +1642,7 @@ country_event = {
 						}
 					}
 					
-					# Resets the region names
-					# Cannot call 402000 as it will not fire in the necessary order
-					set_global_flag = hidden_effects
-					
-					random_owned = {
-						limit = { owner = { has_global_flag = hidden_effects } }
-						dynamic_loc_region_slot_1 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_2 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_3 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_4 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_5 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_6 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_7 = { state_scope = { change_region_name = "" } }
-						dynamic_loc_region_slot_8 = { state_scope = { change_region_name = "" } }
-					}
+					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					clr_global_flag = hidden_effects
 					
