@@ -27,14 +27,6 @@ country_event = {
 			clr_country_flag = dynamic_loc_country_target_6
 			clr_country_flag = dynamic_loc_country_target_7
 			clr_country_flag = dynamic_loc_country_target_8
-			clr_global_flag = dynamic_loc_option_1_found
-			clr_global_flag = dynamic_loc_option_2_found
-			clr_global_flag = dynamic_loc_option_3_found
-			clr_global_flag = dynamic_loc_option_4_found
-			clr_global_flag = dynamic_loc_option_5_found
-			clr_global_flag = dynamic_loc_option_6_found
-			clr_global_flag = dynamic_loc_option_7_found
-			clr_global_flag = dynamic_loc_option_8_found
 		}
 	}
 }
@@ -52,8 +44,8 @@ country_event = {
 		name = "Clean up"
 		
 		# Clean up for next time
-		FROM = {
-			all_core = {
+		random_owned = {
+			any_neighbor_province = {
 				remove_province_modifier = dynamic_loc_potential_region_target
 				remove_province_modifier = dynamic_loc_region_target_1
 				remove_province_modifier = dynamic_loc_region_target_2
@@ -65,15 +57,6 @@ country_event = {
 				remove_province_modifier = dynamic_loc_region_target_8
 			}
 		}
-		
-		clr_global_flag = dynamic_loc_option_1_found
-		clr_global_flag = dynamic_loc_option_2_found
-		clr_global_flag = dynamic_loc_option_3_found
-		clr_global_flag = dynamic_loc_option_4_found
-		clr_global_flag = dynamic_loc_option_5_found
-		clr_global_flag = dynamic_loc_option_6_found
-		clr_global_flag = dynamic_loc_option_7_found
-		clr_global_flag = dynamic_loc_option_8_found
 	}
 }
 
@@ -102,15 +85,6 @@ country_event = {
 				remove_province_modifier = dynamic_loc_region_target_8
 			}
 		}
-		
-		clr_global_flag = dynamic_loc_option_1_found
-		clr_global_flag = dynamic_loc_option_2_found
-		clr_global_flag = dynamic_loc_option_3_found
-		clr_global_flag = dynamic_loc_option_4_found
-		clr_global_flag = dynamic_loc_option_5_found
-		clr_global_flag = dynamic_loc_option_6_found
-		clr_global_flag = dynamic_loc_option_7_found
-		clr_global_flag = dynamic_loc_option_8_found
 	}
 }
 
@@ -153,5 +127,23 @@ country_event = {
 		dynamic_loc_region_slot_6 = { state_scope = { change_region_name = "" } }
 		dynamic_loc_region_slot_7 = { state_scope = { change_region_name = "" } }
 		dynamic_loc_region_slot_8 = { state_scope = { change_region_name = "" } }
+	}
+}
+
+# Reset Everything
+country_event = {
+	id = 402001
+	title = "Dynamic Loc Reset Everything"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		country_event = 400000
+		country_event = 400001
+		country_event = 402000
 	}
 }

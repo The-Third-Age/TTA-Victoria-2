@@ -1019,7 +1019,25 @@ country_event = {
 		
 		FOR = {
 			set_variable = { which = dynamic_loc_country_count value = 0 }
-			country_event = 402000 # Resets the option names
+			
+			# Resets the naming count
+			set_variable = { which = dynamic_loc_names value = 0 }
+			
+			# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+			# Cannot call 400000 as it will not fire in the necessary order
+			any_country = {
+				clr_country_flag = dynamic_loc_potential_country_target
+				clr_country_flag = dynamic_loc_country_target_1
+				clr_country_flag = dynamic_loc_country_target_2
+				clr_country_flag = dynamic_loc_country_target_3
+				clr_country_flag = dynamic_loc_country_target_4
+				clr_country_flag = dynamic_loc_country_target_5
+				clr_country_flag = dynamic_loc_country_target_6
+				clr_country_flag = dynamic_loc_country_target_7
+				clr_country_flag = dynamic_loc_country_target_8
+			}
+			
+			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
 			any_neighbor_country = {
 				limit = {
@@ -1028,53 +1046,10 @@ country_event = {
 					NOT = { tag = THIS }
 				}
 				set_country_flag = dynamic_loc_potential_country_target
-				FOR = {change_variable = { which = dynamic_loc_country_count value = 1 } }
+				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
 			
-			# It can be assumed that there is at least 1 potential country
-			country_event = 300000 # Country 1 Loc Setting
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 1.9 } } }
-				owner = { country_event = 300001 } # Country 2 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 2.9 } } }
-				owner = { country_event = 300002 } # Country 3 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 3.9 } } }
-				owner = { country_event = 300003 } # Country 4 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 4.9 } } }
-				owner = { country_event = 300004 } # Country 5 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 5.9 } } }
-				owner = { country_event = 300005 } # Country 6 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 6.9 } } }
-				owner = { country_event = 300006 } # Country 7 Loc Setting
-			}
-			
-			# We only want to display the 8th option if there are exactly 8 potential countries
-			# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = { which = dynamic_loc_country_count value = 7.9 }
-						NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
-					}
-				}
-				owner = { country_event = 300007 } # Country 8 Loc Setting
-			}
+			country_event = 300000 # Country Loc Setting
 			
 			country_event = 110104 # Getting the callback
 			country_event = 400001 # Region cleanup
@@ -1095,7 +1070,25 @@ country_event = {
 		
 		FOR = {
 			set_variable = { which = dynamic_loc_country_count value = 0 }
-			country_event = 402000 # Resets the region names
+			
+			# Resets the naming count
+			set_variable = { which = dynamic_loc_names value = 0 }
+			
+			# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+			# Cannot call 400000 as it will not fire in the necessary order
+			any_country = {
+				clr_country_flag = dynamic_loc_potential_country_target
+				clr_country_flag = dynamic_loc_country_target_1
+				clr_country_flag = dynamic_loc_country_target_2
+				clr_country_flag = dynamic_loc_country_target_3
+				clr_country_flag = dynamic_loc_country_target_4
+				clr_country_flag = dynamic_loc_country_target_5
+				clr_country_flag = dynamic_loc_country_target_6
+				clr_country_flag = dynamic_loc_country_target_7
+				clr_country_flag = dynamic_loc_country_target_8
+			}
+			
+			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
 			any_neighbor_country = {
 				limit = {
@@ -1107,50 +1100,7 @@ country_event = {
 				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
 			
-			# It can be assumed that there is at least 1 potential country
-			country_event = 300000 # Country 1 Loc Setting
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 1.9 } } }
-				owner = { country_event = 300001 } # Country 2 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 2.9 } } }
-				owner = { country_event = 300002 } # Country 3 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 3.9 } } }
-				owner = { country_event = 300003 } # Country 4 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 4.9 } } }
-				owner = { country_event = 300004 } # Country 5 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 5.9 } } }
-				owner = { country_event = 300005 } # Country 6 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 6.9 } } }
-				owner = { country_event = 300006 } # Country 7 Loc Setting
-			}
-			
-			# We only want to display the 8th option if there are exactly 8 potential countries
-			# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = { which = dynamic_loc_country_count value = 7.9 }
-						NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
-					}
-				}
-				owner = { country_event = 300007 } # Country 8 Loc Setting
-			}
+			country_event = 300000 # Country Loc Setting
 			
 			country_event = 110104 # Getting the callback
 			country_event = 400001 # Region cleanup
@@ -1171,7 +1121,25 @@ country_event = {
 		
 		FOR = {
 			set_variable = { which = dynamic_loc_country_count value = 0 }
-			country_event = 402000 # Resets the region names
+			
+			# Resets the naming count
+			set_variable = { which = dynamic_loc_names value = 0 }
+			
+			# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+			# Cannot call 400000 as it will not fire in the necessary order
+			any_country = {
+				clr_country_flag = dynamic_loc_potential_country_target
+				clr_country_flag = dynamic_loc_country_target_1
+				clr_country_flag = dynamic_loc_country_target_2
+				clr_country_flag = dynamic_loc_country_target_3
+				clr_country_flag = dynamic_loc_country_target_4
+				clr_country_flag = dynamic_loc_country_target_5
+				clr_country_flag = dynamic_loc_country_target_6
+				clr_country_flag = dynamic_loc_country_target_7
+				clr_country_flag = dynamic_loc_country_target_8
+			}
+			
+			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
 			any_neighbor_country = {
 				limit = {
@@ -1183,50 +1151,7 @@ country_event = {
 				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
 			
-			# It can be assumed that there is at least 1 potential country
-			country_event = 300000 # Country 1 Loc Setting
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 1.9 } } }
-				owner = { country_event = 300001 } # Country 2 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 2.9 } } }
-				owner = { country_event = 300002 } # Country 3 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 3.9 } } }
-				owner = { country_event = 300003 } # Country 4 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 4.9 } } }
-				owner = { country_event = 300004 } # Country 5 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 5.9 } } }
-				owner = { country_event = 300005 } # Country 6 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 6.9 } } }
-				owner = { country_event = 300006 } # Country 7 Loc Setting
-			}
-			
-			# We only want to display the 8th option if there are exactly 8 potential countries
-			# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = { which = dynamic_loc_country_count value = 7.9 }
-						NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
-					}
-				}
-				owner = { country_event = 300007 } # Country 8 Loc Setting
-			}
+			country_event = 300000 # Country Loc Setting
 			
 			country_event = 110104 # Getting the callback
 			country_event = 400001 # Region cleanup
@@ -1247,7 +1172,25 @@ country_event = {
 		
 		FOR = {
 			set_variable = { which = dynamic_loc_country_count value = 0 }
-			country_event = 402000 # Resets the region names
+			
+			# Resets the naming count
+			set_variable = { which = dynamic_loc_names value = 0 }
+			
+			# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+			# Cannot call 400000 as it will not fire in the necessary order
+			any_country = {
+				clr_country_flag = dynamic_loc_potential_country_target
+				clr_country_flag = dynamic_loc_country_target_1
+				clr_country_flag = dynamic_loc_country_target_2
+				clr_country_flag = dynamic_loc_country_target_3
+				clr_country_flag = dynamic_loc_country_target_4
+				clr_country_flag = dynamic_loc_country_target_5
+				clr_country_flag = dynamic_loc_country_target_6
+				clr_country_flag = dynamic_loc_country_target_7
+				clr_country_flag = dynamic_loc_country_target_8
+			}
+			
+			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
 			any_neighbor_country = {
 				limit = {
@@ -1259,50 +1202,7 @@ country_event = {
 				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
 			
-			# It can be assumed that there is at least 1 potential country
-			country_event = 300000 # Country 1 Loc Setting
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 1.9 } } }
-				owner = { country_event = 300001 } # Country 2 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 2.9 } } }
-				owner = { country_event = 300002 } # Country 3 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 3.9 } } }
-				owner = { country_event = 300003 } # Country 4 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 4.9 } } }
-				owner = { country_event = 300004 } # Country 5 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 5.9 } } }
-				owner = { country_event = 300005 } # Country 6 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 6.9 } } }
-				owner = { country_event = 300006 } # Country 7 Loc Setting
-			}
-			
-			# We only want to display the 8th option if there are exactly 8 potential countries
-			# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = { which = dynamic_loc_country_count value = 7.9 }
-						NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
-					}
-				}
-				owner = { country_event = 300007 } # Country 8 Loc Setting
-			}
+			country_event = 300000 # Country Loc Setting
 			
 			country_event = 110104 # Getting the callback
 			country_event = 400001 # Region cleanup
@@ -1323,7 +1223,25 @@ country_event = {
 		
 		FOR = {
 			set_variable = { which = dynamic_loc_country_count value = 0 }
-			country_event = 402000 # Resets the region names
+			
+			# Resets the naming count
+			set_variable = { which = dynamic_loc_names value = 0 }
+			
+			# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+			# Cannot call 400000 as it will not fire in the necessary order
+			any_country = {
+				clr_country_flag = dynamic_loc_potential_country_target
+				clr_country_flag = dynamic_loc_country_target_1
+				clr_country_flag = dynamic_loc_country_target_2
+				clr_country_flag = dynamic_loc_country_target_3
+				clr_country_flag = dynamic_loc_country_target_4
+				clr_country_flag = dynamic_loc_country_target_5
+				clr_country_flag = dynamic_loc_country_target_6
+				clr_country_flag = dynamic_loc_country_target_7
+				clr_country_flag = dynamic_loc_country_target_8
+			}
+			
+			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
 			any_neighbor_country = {
 				limit = {
@@ -1335,50 +1253,7 @@ country_event = {
 				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
 			
-			# It can be assumed that there is at least 1 potential country
-			country_event = 300000 # Country 1 Loc Setting
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 1.9 } } }
-				owner = { country_event = 300001 } # Country 2 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 2.9 } } }
-				owner = { country_event = 300002 } # Country 3 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 3.9 } } }
-				owner = { country_event = 300003 } # Country 4 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 4.9 } } }
-				owner = { country_event = 300004 } # Country 5 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 5.9 } } }
-				owner = { country_event = 300005 } # Country 6 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 6.9 } } }
-				owner = { country_event = 300006 } # Country 7 Loc Setting
-			}
-			
-			# We only want to display the 8th option if there are exactly 8 potential countries
-			# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = { which = dynamic_loc_country_count value = 7.9 }
-						NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
-					}
-				}
-				owner = { country_event = 300007 } # Country 8 Loc Setting
-			}
+			country_event = 300000 # Country Loc Setting
 			
 			country_event = 110104 # Getting the callback
 			country_event = 400001 # Region cleanup
@@ -1399,7 +1274,25 @@ country_event = {
 		
 		FOR = {
 			set_variable = { which = dynamic_loc_country_count value = 0 }
-			country_event = 402000 # Resets the region names
+			
+			# Resets the naming count
+			set_variable = { which = dynamic_loc_names value = 0 }
+			
+			# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+			# Cannot call 400000 as it will not fire in the necessary order
+			any_country = {
+				clr_country_flag = dynamic_loc_potential_country_target
+				clr_country_flag = dynamic_loc_country_target_1
+				clr_country_flag = dynamic_loc_country_target_2
+				clr_country_flag = dynamic_loc_country_target_3
+				clr_country_flag = dynamic_loc_country_target_4
+				clr_country_flag = dynamic_loc_country_target_5
+				clr_country_flag = dynamic_loc_country_target_6
+				clr_country_flag = dynamic_loc_country_target_7
+				clr_country_flag = dynamic_loc_country_target_8
+			}
+			
+			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
 			any_neighbor_country = {
 				limit = {
@@ -1411,50 +1304,7 @@ country_event = {
 				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
 			
-			# It can be assumed that there is at least 1 potential country
-			country_event = 300000 # Country 1 Loc Setting
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 1.9 } } }
-				owner = { country_event = 300001 } # Country 2 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 2.9 } } }
-				owner = { country_event = 300002 } # Country 3 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 3.9 } } }
-				owner = { country_event = 300003 } # Country 4 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 4.9 } } }
-				owner = { country_event = 300004 } # Country 5 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 5.9 } } }
-				owner = { country_event = 300005 } # Country 6 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 6.9 } } }
-				owner = { country_event = 300006 } # Country 7 Loc Setting
-			}
-			
-			# We only want to display the 8th option if there are exactly 8 potential countries
-			# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = { which = dynamic_loc_country_count value = 7.9 }
-						NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
-					}
-				}
-				owner = { country_event = 300007 } # Country 8 Loc Setting
-			}
+			country_event = 300000 # Country Loc Setting
 			
 			country_event = 110104 # Getting the callback
 			country_event = 400001 # Region cleanup
@@ -1475,7 +1325,25 @@ country_event = {
 		
 		FOR = {
 			set_variable = { which = dynamic_loc_country_count value = 0 }
-			country_event = 402000 # Resets the region names
+			
+			# Resets the naming count
+			set_variable = { which = dynamic_loc_names value = 0 }
+			
+			# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+			# Cannot call 400000 as it will not fire in the necessary order
+			any_country = {
+				clr_country_flag = dynamic_loc_potential_country_target
+				clr_country_flag = dynamic_loc_country_target_1
+				clr_country_flag = dynamic_loc_country_target_2
+				clr_country_flag = dynamic_loc_country_target_3
+				clr_country_flag = dynamic_loc_country_target_4
+				clr_country_flag = dynamic_loc_country_target_5
+				clr_country_flag = dynamic_loc_country_target_6
+				clr_country_flag = dynamic_loc_country_target_7
+				clr_country_flag = dynamic_loc_country_target_8
+			}
+			
+			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
 			any_neighbor_country = {
 				limit = {
@@ -1487,50 +1355,7 @@ country_event = {
 				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 			}
 			
-			# It can be assumed that there is at least 1 potential country
-			country_event = 300000 # Country 1 Loc Setting
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 1.9 } } }
-				owner = { country_event = 300001 } # Country 2 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 2.9 } } }
-				owner = { country_event = 300002 } # Country 3 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 3.9 } } }
-				owner = { country_event = 300003 } # Country 4 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 4.9 } } }
-				owner = { country_event = 300004 } # Country 5 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 5.9 } } }
-				owner = { country_event = 300005 } # Country 6 Loc Setting
-			}
-			
-			random_owned = {
-				limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 6.9 } } }
-				owner = { country_event = 300006 } # Country 7 Loc Setting
-			}
-			
-			# We only want to display the 8th option if there are exactly 8 potential countries
-			# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-			random_owned = {
-				limit = {
-					owner = {
-						check_variable = { which = dynamic_loc_country_count value = 7.9 }
-						NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
-					}
-				}
-				owner = { country_event = 300007 } # Country 8 Loc Setting
-			}
+			country_event = 300000 # Country Loc Setting
 			
 			country_event = 110104 # Getting the callback
 			country_event = 400001 # Region cleanup
@@ -1554,7 +1379,25 @@ country_event = {
 			
 			FOR = {
 				set_variable = { which = dynamic_loc_country_count value = 0 }
-				country_event = 402000 # Resets the region names
+				
+				# Resets the naming count
+				set_variable = { which = dynamic_loc_names value = 0 }
+				
+				# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+				# Cannot call 400001 as it will not fire in the necessary order
+				any_country = {
+					clr_country_flag = dynamic_loc_potential_country_target
+					clr_country_flag = dynamic_loc_country_target_1
+					clr_country_flag = dynamic_loc_country_target_2
+					clr_country_flag = dynamic_loc_country_target_3
+					clr_country_flag = dynamic_loc_country_target_4
+					clr_country_flag = dynamic_loc_country_target_5
+					clr_country_flag = dynamic_loc_country_target_6
+					clr_country_flag = dynamic_loc_country_target_7
+					clr_country_flag = dynamic_loc_country_target_8
+				}
+				
+				# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 				
 				any_neighbor_country = {
 					limit = {
@@ -1566,50 +1409,7 @@ country_event = {
 					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 				}
 				
-				# It can be assumed that there is at least 1 potential country
-				country_event = 300000 # Country 1 Loc Setting
-				
-				random_owned = {
-					limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 1.9 } } }
-					owner = { country_event = 300001 } # Country 2 Loc Setting
-				}
-				
-				random_owned = {
-					limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 2.9 } } }
-					owner = { country_event = 300002 } # Country 3 Loc Setting
-				}
-				
-				random_owned = {
-					limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 3.9 } } }
-					owner = { country_event = 300003 } # Country 4 Loc Setting
-				}
-				
-				random_owned = {
-					limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 4.9 } } }
-					owner = { country_event = 300004 } # Country 5 Loc Setting
-				}
-				
-				random_owned = {
-					limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 5.9 } } }
-					owner = { country_event = 300005 } # Country 6 Loc Setting
-				}
-				
-				random_owned = {
-					limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 6.9 } } }
-					owner = { country_event = 300006 } # Country 7 Loc Setting
-				}
-				
-				# We only want to display the 8th option if there are exactly 8 potential countries
-				# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-				random_owned = {
-					limit = {
-						owner = {
-							check_variable = { which = dynamic_loc_country_count value = 7.9 }
-							NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
-						}
-					}
-					owner = { country_event = 300007 } # Country 8 Loc Setting
-				}
+				country_event = 300000 # Country Loc Setting
 				
 				country_event = 110104 # Getting the callback
 				country_event = 400001 # Region cleanup
@@ -1643,8 +1443,6 @@ country_event = {
 					}
 					
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
-					
-					clr_global_flag = hidden_effects
 					
 					# Reset the region selection names
 					country_event = { id = 300008 days = 0 } # Region Loc Setting
@@ -1718,7 +1516,7 @@ country_event = {
 			set_country_flag = alliance_dwarves_men_selected_country
 		}
 		
-		FOR = { country_event = 400000 } # Country cleanup
+		FOR = { country_event = 402001 } # Everything cleanup
 	}
 	
 	# Second
@@ -1730,7 +1528,7 @@ country_event = {
 			set_country_flag = alliance_dwarves_men_selected_country
 		}
 		
-		FOR = { country_event = 400000 } # Country cleanup
+		FOR = { country_event = 402001 } # Everything cleanup
 	}
 	
 	# Third
@@ -1742,7 +1540,7 @@ country_event = {
 			set_country_flag = alliance_dwarves_men_selected_country
 		}
 		
-		FOR = { country_event = 400000 } # Country cleanup
+		FOR = { country_event = 402001 } # Everything cleanup
 	}
 	
 	# Fourth
@@ -1754,7 +1552,7 @@ country_event = {
 			set_country_flag = alliance_dwarves_men_selected_country
 		}
 		
-		FOR = { country_event = 400000 } # Country cleanup
+		FOR = { country_event = 402001 } # Everything cleanup
 	}
 	
 	# Fifth
@@ -1766,7 +1564,7 @@ country_event = {
 			set_country_flag = alliance_dwarves_men_selected_country
 		}
 		
-		FOR = { country_event = 400000 } # Country cleanup
+		FOR = { country_event = 402001 } # Everything cleanup
 	}
 	
 	# Sixth
@@ -1778,7 +1576,7 @@ country_event = {
 			set_country_flag = alliance_dwarves_men_selected_country
 		}
 		
-		FOR = { country_event = 400000 } # Country cleanup
+		FOR = { country_event = 402001 } # Everything cleanup
 	}
 	
 	# Seventh
@@ -1790,7 +1588,7 @@ country_event = {
 			set_country_flag = alliance_dwarves_men_selected_country
 		}
 		
-		FOR = { country_event = 400000 } # Country cleanup
+		FOR = { country_event = 402001 } # Everything cleanup
 	}
 	
 	# Eighth
@@ -1805,8 +1603,8 @@ country_event = {
 					limit = { has_country_flag = dynamic_loc_country_target_8 }
 					set_country_flag = alliance_dwarves_men_selected_country
 				}
-		
-				FOR = { country_event = 400000 } # Country cleanup
+				
+				FOR = { country_event = 402001 } # Everything cleanup
 			}
 		}
 		
@@ -1817,54 +1615,26 @@ country_event = {
 				FOR = {
 					# Account for the 7 that just got handled -- slot 8 is "next" (that just got selected)
 					change_variable = { which = dynamic_loc_country_count value = -7 }
-					country_event = 400001 # Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
-					country_event = 402000 # Resets the region names
 					
-					# Reset the country selection names
-					# It can be assumed that there is at least 1 potential country
-					country_event = 300000 # Country 1 Loc Setting
+					# Resets the naming count
+					set_variable = { which = dynamic_loc_names value = 0 }
 					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 1.9 } } }
-						owner = { country_event = 300001 } # Country 2 Loc Setting
+					# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+					# Cannot call 400000 as it will not fire in the necessary order
+					any_country = {
+						clr_country_flag = dynamic_loc_country_target_1
+						clr_country_flag = dynamic_loc_country_target_2
+						clr_country_flag = dynamic_loc_country_target_3
+						clr_country_flag = dynamic_loc_country_target_4
+						clr_country_flag = dynamic_loc_country_target_5
+						clr_country_flag = dynamic_loc_country_target_6
+						clr_country_flag = dynamic_loc_country_target_7
+						clr_country_flag = dynamic_loc_country_target_8
 					}
 					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 2.9 } } }
-						owner = { country_event = 300002 } # Country 3 Loc Setting
-					}
+					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 3.9 } } }
-						owner = { country_event = 300003 } # Country 4 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 4.9 } } }
-						owner = { country_event = 300004 } # Country 5 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 5.9 } } }
-						owner = { country_event = 300005 } # Country 6 Loc Setting
-					}
-					
-					random_owned = {
-						limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 6.9 } } }
-						owner = { country_event = 300006 } # Country 7 Loc Setting
-					}
-					
-					# We only want to display the 8th option if there are exactly 8 potential countries
-					# If there are more than 8, we want this last option to be "Next" -- the callback handles setting this
-					random_owned = {
-						limit = {
-							owner = {
-								check_variable = { which = dynamic_loc_country_count value = 7.9 }
-								NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
-							}
-						}
-						owner = { country_event = 300007 } # Country 8 Loc Setting
-					}
+					country_event = 300000 # Country Loc Setting
 				}
 				
 				country_event = 110104 # Getting the callback
@@ -2361,6 +2131,13 @@ country_event = {
 		}
 		
 		# TODO: CALL AN EVENT BASED UPON THE NUMBER OF POTENTIAL COUNTRY CHOICES
-		FROM = { country_event = 110030 } # Choosing the country
+		
+		# Cannot use FROM as country_event = { id = [id] days = 0 } resets FROM to the realm that got the event fired via this syntax. When setting the dynamic loc names, a bunch of events are called for FOR this way to ensure that the player doesn't need to wait a tick to see the loced names
+		random_country = {
+			limit = {
+				has_country_flag = dynamic_loc_initiator
+			}
+			country_event = 110030
+		}
 	}
 }
