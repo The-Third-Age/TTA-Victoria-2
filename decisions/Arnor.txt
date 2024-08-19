@@ -34,8 +34,6 @@ political_decisions = {
 		}
 		allow = {
 			is_greater_power = yes
-			civilized = yes
-			is_independant = yes
 			war = no
 			ARN = {
 				all_core = {
@@ -228,6 +226,8 @@ political_decisions = {
 			NOT = { has_country_flag = fate_of_the_shire }
 		}
 		allow = {
+			owns = 1026		# Annuminas
+			owns = 1013		# Bree
 			is_greater_power = yes
 			SHI = {
 				OR = {
@@ -235,12 +235,7 @@ political_decisions = {
 					in_sphere = THIS
 				}
 			}
-			is_independant = yes
 			war = no
-			# Annuminas
-			owns = 1026
-			# Bree
-			owns = 1013
 		}
 		effect = {
 			country_event = 50620
@@ -258,8 +253,6 @@ political_decisions = {
 		}
 		allow = {
 			is_greater_power = yes
-			civilized = yes
-			is_independant = yes
 			war = no
 			all_core = { owned_by = THIS }
 		}
@@ -283,8 +276,6 @@ political_decisions = {
 		}
 		allow = {
 			is_greater_power = yes
-			civilized = yes
-			is_independant = yes
 			war = no
 			all_core = { owned_by = THIS }
 		}

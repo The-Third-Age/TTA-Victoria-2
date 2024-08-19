@@ -40,11 +40,11 @@ political_decisions = {
 			NOT = { has_global_flag = OBS_expanded_haunt }
 		}
 		allow = {
-			all_core = { owned_by = THIS }
 			OR = {
 				is_secondary_power = yes
 				is_greater_power = yes
 			}
+			all_core = { owned_by = THIS }
 		}
 		effect = {
 			91 = { add_core = OBS }

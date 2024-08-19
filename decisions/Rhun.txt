@@ -4,7 +4,7 @@
 # Rhun Decisions: {
 #	Forming Rhun
 #	Core Adding/Removal
-#   Flavour }
+#	Flavour }
 
 # Forming Rhun
 political_decisions = {
@@ -136,8 +136,8 @@ political_decisions = {
 	form_rhun_GP = {
 		picture = "form_rhun"
 		potential = {
-			NOT = { is_culture_group = easterlings }
 			is_greater_power = yes
+			NOT = { is_culture_group = easterlings }
 			NOT = { exists = RHU }
 			RHU = {
 				any_core = {
@@ -283,6 +283,7 @@ political_decisions = {
 political_decisions = {
 	RHU_core_removal = {
 		potential = {
+			tag = RHU
 			OR = {
 				SEK = { all_core = { owned_by = RHU is_core = RHU } }
 				SAG = { all_core = { owned_by = RHU is_core = RHU } }
@@ -290,7 +291,6 @@ political_decisions = {
 				KUG = { all_core = { owned_by = RHU is_core = RHU } }
 				LGV = { all_core = { owned_by = RHU is_core = RHU } }
 			}
-			tag = RHU
 		}
 		
 		allow = {
@@ -385,9 +385,7 @@ political_decisions = {
 		picture = "wainriders"
 		potential = {
 			is_culture_group = easterlings
-			NOT = {
-				has_country_modifier = legacy_of_the_wainriders
-			}
+			NOT = { has_country_modifier = legacy_of_the_wainriders }
 		}
 
 		allow = {

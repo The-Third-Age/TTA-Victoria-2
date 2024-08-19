@@ -135,16 +135,16 @@ political_decisions = {
 		}
 		allow = {
 			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			OR = {
 				crown_land_ownership = ten_land_ownership
 				crown_land_ownership = thirty_land_ownership
 				crown_land_ownership = half_land_ownership
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
 				ai = yes
-			}
-			OR = {
-				city_jurisdiction = territorial_cities
-				city_jurisdiction = royal_cities
 			}
 			war = no
 		}
@@ -211,15 +211,15 @@ political_decisions = {
 		}
 		allow = {
 			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			OR = {
 				crown_land_ownership = thirty_land_ownership
 				crown_land_ownership = half_land_ownership
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
 				ai = yes
-			}
-			OR = {
-				city_jurisdiction = territorial_cities
-				city_jurisdiction = royal_cities
 			}
 			war = no
 		}
@@ -300,15 +300,15 @@ political_decisions = {
 		
 		allow = {
 			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			OR = {
 				crown_land_ownership = thirty_land_ownership
 				crown_land_ownership = half_land_ownership
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
 				ai = yes
-			}
-			OR = {
-				city_jurisdiction = territorial_cities
-				city_jurisdiction = royal_cities
 			}
 			war = no
 		}
@@ -334,8 +334,7 @@ political_decisions = {
 			NOT = { has_global_flag = da_independence_war }
 		}
 		
-		allow = {
-		}
+		allow = {}
 		
 		effect = {
 			prestige = 10
@@ -375,14 +374,14 @@ political_decisions = {
 		
 		allow = {
 			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			OR = {
 				crown_land_ownership = half_land_ownership
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
 				ai = yes
-			}
-			OR = {
-				city_jurisdiction = territorial_cities
-				city_jurisdiction = royal_cities
 			}
 			war = no
 		}
@@ -409,7 +408,7 @@ political_decisions = {
 			}
 			
 			random_owned = {
-				limit = {  has_global_flag = angbor_lord_of_lamedon }
+				limit = { has_global_flag = angbor_lord_of_lamedon }
 				
 				# Audax Validator "." Ignore_1007
 				owner = {
@@ -488,13 +487,13 @@ political_decisions = {
 		
 		allow = {
 			OR = {
+				city_jurisdiction = territorial_cities
+				city_jurisdiction = royal_cities
+			}
+			OR = {
 				crown_land_ownership = seventy_land_ownership
 				crown_land_ownership = all_land_ownership
 				ai = yes
-			}
-			OR = {
-				city_jurisdiction = territorial_cities
-				city_jurisdiction = royal_cities
 			}
 			war = no
 		}
@@ -581,11 +580,11 @@ political_decisions = {
 		}
 		
 		allow = {
+			city_jurisdiction = royal_cities
 			OR = {
 				crown_land_ownership = all_land_ownership
 				ai = yes
 			}
-			city_jurisdiction = royal_cities
 			war = no
 			diplomacy_3 = 1
 		}
@@ -618,9 +617,7 @@ political_decisions = {
 			NOT = { flavor_1 = 1 }
 		}
 		
-		allow = {
-			population_1 = 1
-		}
+		allow = { population_1 = 1 }
 		
 		effect = {
 			16 = {
@@ -666,15 +663,15 @@ political_decisions = {
 	destroy_crossroads_fallen_king = {
 		picture = "crossroads_fallen_king"
 		potential = {
+			controls = 204
 			NOT = { owns = 204 }
 			204 = {
 				owner = { war_with = THIS }
 				has_province_modifier = crossroads_fallen_king
 			}
-			controls = 204
 		}
 		
-		allow = { }
+		allow = {}
 		
 		effect = {
 			prestige = 5
@@ -810,11 +807,11 @@ political_decisions = {
 	rebuild_osgiliath = {
 		picture = "osgiliath"
 		potential = {
-			is_culture_group = dunedain
 			OR = {
 				owns = 14
 				owns = 198
 			}
+			is_culture_group = dunedain
 			198 = { NOT = { has_province_modifier = orc_raids } }
 			14 = { NOT = { has_province_modifier = rebuilt_city } }
 			198 = { NOT = { has_province_modifier = rebuilt_city } }
@@ -827,7 +824,6 @@ political_decisions = {
 			198 = { total_pops = 50000 }
 			war = no
 			money = 100000
-		
 		}
 		
 		effect = {
@@ -841,6 +837,7 @@ political_decisions = {
 	rebuild_dome_of_stars = {
 		picture = "rebuild_dome_of_stars"
 		potential = {
+			owns = 14
 			is_culture_group = dunedain
 			14 = { has_province_modifier = rebuilt_city }
 			14 = { NOT = { has_province_modifier = dome_of_stars } }
@@ -966,8 +963,8 @@ political_decisions = {
 	recognize_college_of_spoken_word = {
 		picture = "recognize_college_of_spoken_word"
 		potential = {
-			is_culture_group = dunedain
 			owns = 16
+			is_culture_group = dunedain
 			16 = { NOT = { has_province_modifier = college_of_spoken_word } }
 		}
 		
@@ -992,8 +989,8 @@ political_decisions = {
 	gondor_military_resurgence = {
 		picture = "gondor_military_resurgence"
 		potential = {
-			has_country_modifier = low_military_recruitment
 			tag = GON
+			has_country_modifier = low_military_recruitment
 		}
 		
 		allow = {
@@ -1313,7 +1310,7 @@ political_decisions = {
 				}
 				remove_core = PUK
 				remove_core = DRA
-				remove_core =  DRH
+				remove_core = DRH
 			}
 			any_owned = {
 				limit = {
@@ -1336,13 +1333,13 @@ political_decisions = {
 	druwaith_iaur_rebellion_end_GON = {
 		picture = "druwaith_iaur"
 		potential = {
+			owns = 38
+			owns = 189
+			owns = 197
 			has_global_flag = PUK_rebellion
 			has_country_flag = PUK_rebelling_from
 			NOT = { exists = DRU }
 			war = no
-			owns = 38
-			owns = 189
-			owns = 197
 		}
 		
 		allow = {
@@ -1383,9 +1380,9 @@ political_decisions = {
 	druwaith_iaur_rebellion_end_PUK = {
 		picture = "druwaith_iaur"
 		potential = {
+			tag = PUK
 			has_global_flag = PUK_rebellion
 			war = no
-			tag = PUK
 		}
 		
 		allow = {
@@ -1467,9 +1464,9 @@ political_decisions = {
 	druadan_forest_rebellion_end_GON = {
 		picture = "free_druadan_forest"
 		potential = {
+			owns = 11
 			has_country_flag = DRU_rebelling_from
 			has_global_flag = DRU_rebellion
-			owns = 11
 			NOT = { exists = DRU }
 			war = no
 		}
@@ -1511,10 +1508,10 @@ political_decisions = {
 	druadan_forest_rebellion_end_DRU = {
 		picture = "free_druadan_forest"
 		potential = {
-			has_global_flag = DRU_rebellion
-			owns = 11
-			war = no
 			tag = DRU
+			owns = 11
+			has_global_flag = DRU_rebellion
+			war = no
 		}
 		
 		allow = {
@@ -1586,13 +1583,13 @@ political_decisions = {
 	return_to_south_gondor = {
 		picture = "south_gondor_map"
 		potential = {
-			NOT = { exists = HRD }
 			tag = GON
+			226 = { empty = yes }
+			NOT = { exists = HRD }
 			OR = {
 				NOT = { has_country_modifier = low_military_recruitment }
 				any_owned_province = { is_core = HRD }
 			}
-			226 = { empty = yes }
 		}
 		
 		allow = {
@@ -1672,6 +1669,7 @@ political_decisions = {
 	reconquer_south_gondor = {
 		picture = "south_gondor_military"
 		potential = {
+			tag = GON
 			HRD = {
 				vassal_of = GON
 				any_core = {
@@ -1687,7 +1685,6 @@ political_decisions = {
 					}
 				}
 			}
-			tag = GON
 			NOT = { has_country_modifier = low_military_recruitment }
 			has_recently_lost_war = no
 		}
@@ -2117,9 +2114,9 @@ political_decisions = {
 	visit_tomb_of_elendil = {
 		picture = "tomb_of_elendil"
 		potential = {
+			owns = 2
 			is_culture_group = dunedain
 			NOT = { has_country_flag = leader_visited_tomb_of_elendil }
-			owns = 2
 		}
 		
 		allow = {
@@ -2146,6 +2143,7 @@ political_decisions = {
 	restore_haudh_in_gwanur = {
 		picture = "restore_haudh_in_gwanur"
 		potential = {
+			owns = 212
 			OR = {
 				tag = ROH
 				AND = {
@@ -2154,7 +2152,6 @@ political_decisions = {
 				}
 			}
 			NOT = { has_global_flag = restored_the_haudh_in_gwanur }
-			owns = 212
 		}
 		
 		allow = {
@@ -2467,15 +2464,15 @@ political_decisions = {
 	restore_bar_iaur_dinen = {
 		picture = "restore_bar_iaur_dinen"
 		potential = {
+			OR = {
+				owns = 54
+				54 = { owner = { vassal_of = THIS } }
+			}
 			NOT = { has_global_flag = bar_iaur_dinen_restored }
 			OR = {
 				nationalvalue = aragorn_elessar
 				# # Audax Validator "." Ignore_NEXT
 				# nationalvalue = imrahil_1 # Has not yet been created
-			}
-			OR = {
-				owns = 54
-				54 = { owner = { vassal_of = THIS } }
 			}
 			OR = {
 				is_vassal = no
