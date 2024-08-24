@@ -2,7 +2,6 @@
 # Audax Validator "!" Ignore_1004
 
 # TODO: Loc some of these events (like the main menus)
-# TODO: Rework dynamic loc targetting to work like what Bob showed
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -3153,6 +3152,608 @@ country_event = {
 	id = 110030
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_1 = {}
+		empty_line_loc = {}
+	}
+	
+	# First
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_1 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+}
+
+# Alliance of Men and Dwarves Country Selection
+country_event = {
+	id = 110031
+	title = "  Alliance of Dwarves and Men - Country Selection"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_2"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_1 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_2 = {}
+		empty_line_loc = {}
+	}
+	
+	# First
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_1 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Second
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_2 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+}
+
+# Alliance of Men and Dwarves Country Selection
+country_event = {
+	id = 110032
+	title = "  Alliance of Dwarves and Men - Country Selection"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_3"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_1 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_2 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_3 = {}
+		empty_line_loc = {}
+	}
+	
+	# First
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_1 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Second
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_2 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Third
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_3 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+}
+
+# Alliance of Men and Dwarves Country Selection
+country_event = {
+	id = 110033
+	title = "  Alliance of Dwarves and Men - Country Selection"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_4"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_1 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_2 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_3 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_4 = {}
+		empty_line_loc = {}
+	}
+	
+	# First
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_1 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Second
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_2 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Third
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_3 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Fourth
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_4 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+}
+
+# Alliance of Men and Dwarves Country Selection
+country_event = {
+	id = 110034
+	title = "  Alliance of Dwarves and Men - Country Selection"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_5"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_1 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_2 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_3 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_4 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_5 = {}
+		empty_line_loc = {}
+	}
+	
+	# First
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_1 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Second
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_2 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Third
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_3 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Fourth
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_4 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Fifth
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_5 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+}
+
+# Alliance of Men and Dwarves Country Selection
+country_event = {
+	id = 110035
+	title = "  Alliance of Dwarves and Men - Country Selection"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_6"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_1 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_2 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_3 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_4 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_5 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_6 = {}
+		empty_line_loc = {}
+	}
+	
+	# First
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_1 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Second
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_2 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Third
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_3 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Fourth
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_4 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Fifth
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_5 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Sixth
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_6 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+}
+
+# Alliance of Men and Dwarves Country Selection
+country_event = {
+	id = 110036
+	title = "  Alliance of Dwarves and Men - Country Selection"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_7"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_1 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_2 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_3 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_4 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_5 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_6 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_country_slot_7 = {}
+		empty_line_loc = {}
+	}
+	
+	# First
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_1 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Second
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_2 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Third
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_3 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Fourth
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_4 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Fifth
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_5 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Sixth
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_6 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+	
+	# Seventh
+	option = {
+		name = ""
+		
+		random_country = {
+			limit = { has_country_flag = dynamic_loc_country_target_7 }
+			set_country_flag = alliance_dwarves_men_selected_country
+		}
+		
+		FOR = { country_event = 402001 } # Everything cleanup
+	}
+}
+
+# Alliance of Men and Dwarves Country Selection
+country_event = {
+	id = 110037
+	title = "  Alliance of Dwarves and Men - Country Selection"
+	desc = ""
 	picture = "organizations/alliance_dwarves_men_8"
 	
 	is_triggered_only = yes
@@ -3794,8 +4395,6 @@ country_event = {
 			dynamic_loc_region_slot_8 = { state_scope = { change_region_name = "§BNext§!" } }
 		}
 		
-		# TODO: CALL AN EVENT BASED UPON THE NUMBER OF POTENTIAL REGION CHOICES
-		
 		# Cannot use FROM as country_event = { id = [id] days = 0 } resets FROM to the realm that got the event fired via this syntax. When setting the dynamic loc names, a bunch of events are called for FOR this way to ensure that the player doesn't need to wait a tick to see the loced names
 		random_country = {
 			limit = {
@@ -3808,7 +4407,6 @@ country_event = {
 			country_event = 110020
 		}
 		
-		
 		random_country = {
 			limit = {
 				has_country_flag = dynamic_loc_initiator
@@ -3819,7 +4417,6 @@ country_event = {
 			}
 			country_event = 110021
 		}
-		
 		
 		random_country = {
 			limit = {
@@ -3832,7 +4429,6 @@ country_event = {
 			country_event = 110022
 		}
 		
-		
 		random_country = {
 			limit = {
 				has_country_flag = dynamic_loc_initiator
@@ -3843,7 +4439,6 @@ country_event = {
 			}
 			country_event = 110023
 		}
-		
 		
 		random_country = {
 			limit = {
@@ -3856,7 +4451,6 @@ country_event = {
 			country_event = 110024
 		}
 		
-		
 		random_country = {
 			limit = {
 				has_country_flag = dynamic_loc_initiator
@@ -3868,7 +4462,6 @@ country_event = {
 			country_event = 110025
 		}
 		
-		
 		random_country = {
 			limit = {
 				has_country_flag = dynamic_loc_initiator
@@ -3879,7 +4472,6 @@ country_event = {
 			}
 			country_event = 110026
 		}
-		
 		
 		random_country = {
 			limit = {
@@ -3912,14 +4504,90 @@ country_event = {
 			dynamic_loc_country_slot_8 = { state_scope = { change_region_name = "§BNext§!" } }
 		}
 		
-		# TODO: CALL AN EVENT BASED UPON THE NUMBER OF POTENTIAL COUNTRY CHOICES
-		
 		# Cannot use FROM as country_event = { id = [id] days = 0 } resets FROM to the realm that got the event fired via this syntax. When setting the dynamic loc names, a bunch of events are called for FOR this way to ensure that the player doesn't need to wait a tick to see the loced names
 		random_country = {
 			limit = {
 				has_country_flag = dynamic_loc_initiator
+				FOR = {
+					check_variable = { which = dynamic_loc_country_count value = 0.9 }
+					NOT = { check_variable = { which = dynamic_loc_country_count value = 1.1 } }
+				}
 			}
 			country_event = 110030
+		}
+		
+		random_country = {
+			limit = {
+				has_country_flag = dynamic_loc_initiator
+				FOR = {
+					check_variable = { which = dynamic_loc_country_count value = 1.9 }
+					NOT = { check_variable = { which = dynamic_loc_country_count value = 2.1 } }
+				}
+			}
+			country_event = 110031
+		}
+		
+		random_country = {
+			limit = {
+				has_country_flag = dynamic_loc_initiator
+				FOR = {
+					check_variable = { which = dynamic_loc_country_count value = 2.9 }
+					NOT = { check_variable = { which = dynamic_loc_country_count value = 3.1 } }
+				}
+			}
+			country_event = 110032
+		}
+		
+		random_country = {
+			limit = {
+				has_country_flag = dynamic_loc_initiator
+				FOR = {
+					check_variable = { which = dynamic_loc_country_count value = 3.9 }
+					NOT = { check_variable = { which = dynamic_loc_country_count value = 4.1 } }
+				}
+			}
+			country_event = 110033
+		}
+		
+		random_country = {
+			limit = {
+				has_country_flag = dynamic_loc_initiator
+				FOR = {
+					check_variable = { which = dynamic_loc_country_count value = 4.9 }
+					NOT = { check_variable = { which = dynamic_loc_country_count value = 5.1 } }
+				}
+			}
+			country_event = 110034
+		}
+		
+		random_country = {
+			limit = {
+				has_country_flag = dynamic_loc_initiator
+				FOR = {
+					check_variable = { which = dynamic_loc_country_count value = 5.9 }
+					NOT = { check_variable = { which = dynamic_loc_country_count value = 6.1 } }
+				}
+			}
+			country_event = 110035
+		}
+		
+		random_country = {
+			limit = {
+				has_country_flag = dynamic_loc_initiator
+				FOR = {
+					check_variable = { which = dynamic_loc_country_count value = 6.9 }
+					NOT = { check_variable = { which = dynamic_loc_country_count value = 7.1 } }
+				}
+			}
+			country_event = 110036
+		}
+		
+		random_country = {
+			limit = {
+				has_country_flag = dynamic_loc_initiator
+				FOR = { check_variable = { which = dynamic_loc_country_count value = 7.9 } }
+			}
+			country_event = 110037
 		}
 	}
 }
