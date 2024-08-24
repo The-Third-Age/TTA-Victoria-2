@@ -2125,8 +2125,11 @@ country_event = {
 		name = "Continue"
 		
 		# When there are more than 8 options, we want to display the last option as "Next"
-		random_owned = {
-			limit = { owner = { check_variable = { which = dynamic_loc_country_count value = 8.9 } } }
+		random_country = {
+			limit = {
+				tag = FOR
+				check_variable = { which = dynamic_loc_country_count value = 8.9 }
+			}
 			dynamic_loc_country_slot_8 = { state_scope = { change_region_name = "§BNext§!" } }
 		}
 		
