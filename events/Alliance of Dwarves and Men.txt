@@ -757,6 +757,9 @@ country_event = {
 	option = {
 		name = ""
 		
+		# There shouldn't be anything with the modifier. But just in case
+		# FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
+		
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
 			
@@ -782,6 +785,100 @@ country_event = {
 							}
 							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
 						}
+						any_neighbor_province = {
+							limit = {
+								is_state_capital = yes
+								state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+							}
+							owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+						}
+					}
+					
+					country_event = 300008 # Region Loc Setting
+					
+					country_event = 110103 # Getting the callback
+				}
+			}
+		}
+		
+		# TODO: Update country selection to work with this (currently doesn't get fired)
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+			
+			owner = {
+				set_country_flag = dynamic_loc_initiator
+					
+				# Sets the targeting modifier on every core of THIS where the owner is not us and is part of the organization
+				all_core = {
+					limit = {
+						NOT = { owned_by = THIS }
+						owner = { has_country_modifier = alliance_of_dwarves_and_men }
+					}
+					add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+				}
+				
+				# Removes the modifier if the province is a core of the owner
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						NOT = { tag = THIS }
+					}
+					all_core = { remove_province_modifier = dynamic_loc_potential_region_target } # The only provinces retaining the modifier are those that are cores of the decision taker, but not of the owner
+				}
+				
+				FOR = {
+					set_variable = { which = dynamic_loc_region_count value = 0 }
+					
+					# Resets the naming count
+					set_variable = { which = dynamic_loc_names value = 0 }
+					
+					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+					
+					random_owned = {
+						any_neighbor_province = {
+							limit = {
+								is_state_capital = yes
+								state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+							}
+							owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+						}
+					}
+					
+					country_event = 300008 # Region Loc Setting
+					
+					country_event = 110103 # Getting the callback
+				}
+			}
+		}
+		
+		# TODO: Update country selection to work with this (currently doesn't get fired)
+		# TODO: Update region selection to work with this (doesn't apply the alliance of men and dwarves specific targetting modifier)
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+			
+			owner = {
+				set_country_flag = dynamic_loc_initiator
+				
+				any_owned = {
+					limit = {
+						NOT = { is_core = THIS }
+						any_core = {
+							exists = yes
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+				}
+				
+				FOR = {
+					set_variable = { which = dynamic_loc_region_count value = 0 }
+					
+					# Resets the naming count
+					set_variable = { which = dynamic_loc_names value = 0 }
+					
+					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+					
+					random_owned = {
 						any_neighbor_province = {
 							limit = {
 								is_state_capital = yes
@@ -3950,9 +4047,6 @@ country_event = {
 	option = {
 		name = "Continue"
 		
-		# Cleanup from previous
-		random_owned = { any_neighbor_province = { remove_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } }
-		
 		# Setup Request Return of Cores {
 		FROM = {
 			all_core = { 
@@ -4028,6 +4122,7 @@ country_event = {
 				change_variable = { which = menu_option_number value = 1 }
 				set_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
 			}
+			any_neighbor_province = { remove_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores }
 		}
 		
 		# Invite Realm
@@ -4277,9 +4372,6 @@ country_event = {
 	option = {
 		name = "Continue"
 		
-		# Cleanup from previous
-		random_owned = { any_neighbor_province = { remove_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } }
-		
 		# Setup Request Return of Cores {
 		FROM = {
 			all_core = { 
@@ -4323,6 +4415,7 @@ country_event = {
 				change_variable = { which = menu_option_number value = 1 }
 				set_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
 			}
+			any_neighbor_province = { remove_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores }
 		}
 		
 		# Return Cores
