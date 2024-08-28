@@ -2,6 +2,8 @@
 # Audax Validator "!" Ignore_1004
 
 # TODO: Loc some of these events (like the main menus)
+# TODO: Setup the post-country selection effects for the core dispute options
+# TODO: Make sure flags and modifiers are cleared accordingly afterwards
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -752,19 +754,35 @@ country_event = {
 			return_cores_loc = {}
 			empty_line_loc = {}
 		}
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			
+			# There shouldn't be anything with the modifier. But just in case
+			FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
+			
+			# Shouldn' be any global flags around. But just in case
+			clr_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores
+			clr_global_flag = alliances_of_dwarves_and_men_requesting_return_of_cores
+			clr_global_flag = alliances_of_dwarves_and_men_returning_cores
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		
 	}
 	
 	option = {
 		name = ""
-		
-		# There shouldn't be anything with the modifier. But just in case
-		# FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
 		
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
 			
 			owner = {
 				set_country_flag = dynamic_loc_initiator
+				set_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores
 				
 				FOR = {
 					set_variable = { which = dynamic_loc_region_count value = 0 }
@@ -801,12 +819,12 @@ country_event = {
 			}
 		}
 		
-		# TODO: Update country selection to work with this (currently doesn't get fired)
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
 			
 			owner = {
 				set_country_flag = dynamic_loc_initiator
+				set_global_flag = alliances_of_dwarves_and_men_requesting_return_of_cores
 					
 				# Sets the targeting modifier on every core of THIS where the owner is not us and is part of the organization
 				all_core = {
@@ -851,13 +869,12 @@ country_event = {
 			}
 		}
 		
-		# TODO: Update country selection to work with this (currently doesn't get fired)
-		# TODO: Update region selection to work with this (doesn't apply the alliance of men and dwarves specific targetting modifier)
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
 			
 			owner = {
 				set_country_flag = dynamic_loc_initiator
+				set_global_flag = alliances_of_dwarves_and_men_returning_cores
 				
 				any_owned = {
 					limit = {
@@ -952,6 +969,22 @@ country_event = {
 			return_cores_loc = {}
 			empty_line_loc = {}
 		}
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			
+			# There shouldn't be anything with the modifier. But just in case
+			FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
+			
+			# Shouldn' be any global flags around. But just in case
+			clr_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores
+			clr_global_flag = alliances_of_dwarves_and_men_requesting_return_of_cores
+			clr_global_flag = alliances_of_dwarves_and_men_returning_cores
+		}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
@@ -1018,6 +1051,22 @@ country_event = {
 			return_cores_loc = {}
 			empty_line_loc = {}
 		}
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			
+			# There shouldn't be anything with the modifier. But just in case
+			FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
+			
+			# Shouldn' be any global flags around. But just in case
+			clr_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores
+			clr_global_flag = alliances_of_dwarves_and_men_requesting_return_of_cores
+			clr_global_flag = alliances_of_dwarves_and_men_returning_cores
+		}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
@@ -1048,7 +1097,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Region Selection
+# Alliance of Men and Dwarves Region Selection 1
 country_event = {
 	id = 110020
 	title = "  Alliance of Dwarves and Men - Region Selection"
@@ -1077,15 +1126,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_1
-			}
-			remove_province_modifier = dynamic_loc_region_target_1
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_1 }
+					remove_province_modifier = dynamic_loc_region_target_1
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1107,14 +1156,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1125,7 +1206,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Region Selection
+# Alliance of Men and Dwarves Region Selection 2
 country_event = {
 	id = 110021
 	title = "  Alliance of Dwarves and Men - Region Selection"
@@ -1158,15 +1239,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_1
-			}
-			remove_province_modifier = dynamic_loc_region_target_1
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_1 }
+					remove_province_modifier = dynamic_loc_region_target_1
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1188,14 +1269,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1209,15 +1322,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_2
-			}
-			remove_province_modifier = dynamic_loc_region_target_2
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_2 }
+					remove_province_modifier = dynamic_loc_region_target_2
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1239,14 +1352,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1257,7 +1402,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Region Selection
+# Alliance of Men and Dwarves Region Selection 3
 country_event = {
 	id = 110022
 	title = "  Alliance of Dwarves and Men - Region Selection"
@@ -1294,15 +1439,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_1
-			}
-			remove_province_modifier = dynamic_loc_region_target_1
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_1 }
+					remove_province_modifier = dynamic_loc_region_target_1
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1324,14 +1469,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1345,15 +1522,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_2
-			}
-			remove_province_modifier = dynamic_loc_region_target_2
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_2 }
+					remove_province_modifier = dynamic_loc_region_target_2
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1375,14 +1552,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1396,15 +1605,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_3
-			}
-			remove_province_modifier = dynamic_loc_region_target_3
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_3 }
+					remove_province_modifier = dynamic_loc_region_target_3
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1426,14 +1635,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1444,7 +1685,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Region Selection
+# Alliance of Men and Dwarves Region Selection 4
 country_event = {
 	id = 110023
 	title = "  Alliance of Dwarves and Men - Region Selection"
@@ -1485,15 +1726,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_1
-			}
-			remove_province_modifier = dynamic_loc_region_target_1
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_1 }
+					remove_province_modifier = dynamic_loc_region_target_1
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1515,14 +1756,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1536,15 +1809,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_2
-			}
-			remove_province_modifier = dynamic_loc_region_target_2
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_2 }
+					remove_province_modifier = dynamic_loc_region_target_2
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1566,14 +1839,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1587,15 +1892,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_3
-			}
-			remove_province_modifier = dynamic_loc_region_target_3
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_3 }
+					remove_province_modifier = dynamic_loc_region_target_3
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1617,14 +1922,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1638,15 +1975,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_4
-			}
-			remove_province_modifier = dynamic_loc_region_target_4
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_4 }
+					remove_province_modifier = dynamic_loc_region_target_4
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1668,14 +2005,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1686,7 +2055,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Region Selection
+# Alliance of Men and Dwarves Region Selection 5
 country_event = {
 	id = 110024
 	title = "  Alliance of Dwarves and Men - Region Selection"
@@ -1731,15 +2100,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_1
-			}
-			remove_province_modifier = dynamic_loc_region_target_1
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_1 }
+					remove_province_modifier = dynamic_loc_region_target_1
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1761,14 +2130,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1782,15 +2183,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_2
-			}
-			remove_province_modifier = dynamic_loc_region_target_2
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_2 }
+					remove_province_modifier = dynamic_loc_region_target_2
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1812,14 +2213,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1833,15 +2266,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_3
-			}
-			remove_province_modifier = dynamic_loc_region_target_3
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_3 }
+					remove_province_modifier = dynamic_loc_region_target_3
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1863,14 +2296,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1884,15 +2349,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_4
-			}
-			remove_province_modifier = dynamic_loc_region_target_4
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_4 }
+					remove_province_modifier = dynamic_loc_region_target_4
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1914,14 +2379,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1935,15 +2432,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_5
-			}
-			remove_province_modifier = dynamic_loc_region_target_5
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_5 }
+					remove_province_modifier = dynamic_loc_region_target_5
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -1965,14 +2462,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -1983,7 +2512,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Region Selection
+# Alliance of Men and Dwarves Region Selection 6
 country_event = {
 	id = 110025
 	title = "  Alliance of Dwarves and Men - Region Selection"
@@ -2032,15 +2561,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_1
-			}
-			remove_province_modifier = dynamic_loc_region_target_1
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_1 }
+					remove_province_modifier = dynamic_loc_region_target_1
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2062,14 +2591,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2083,15 +2644,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_2
-			}
-			remove_province_modifier = dynamic_loc_region_target_2
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_2 }
+					remove_province_modifier = dynamic_loc_region_target_2
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2113,14 +2674,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2134,15 +2727,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_3
-			}
-			remove_province_modifier = dynamic_loc_region_target_3
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_3 }
+					remove_province_modifier = dynamic_loc_region_target_3
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2164,14 +2757,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2185,15 +2810,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_4
-			}
-			remove_province_modifier = dynamic_loc_region_target_4
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_4 }
+					remove_province_modifier = dynamic_loc_region_target_4
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2215,14 +2840,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2236,15 +2893,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_5
-			}
-			remove_province_modifier = dynamic_loc_region_target_5
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_5 }
+					remove_province_modifier = dynamic_loc_region_target_5
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2266,14 +2923,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2287,15 +2976,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_6
-			}
-			remove_province_modifier = dynamic_loc_region_target_6
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_6 }
+					remove_province_modifier = dynamic_loc_region_target_6
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2317,14 +3006,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2335,7 +3056,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Region Selection
+# Alliance of Men and Dwarves Region Selection 7
 country_event = {
 	id = 110026
 	title = "  Alliance of Dwarves and Men - Region Selection"
@@ -2388,15 +3109,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_1
-			}
-			remove_province_modifier = dynamic_loc_region_target_1
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_1 }
+					remove_province_modifier = dynamic_loc_region_target_1
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2418,14 +3139,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2439,15 +3192,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_2
-			}
-			remove_province_modifier = dynamic_loc_region_target_2
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_2 }
+					remove_province_modifier = dynamic_loc_region_target_2
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2469,14 +3222,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2490,15 +3275,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_3
-			}
-			remove_province_modifier = dynamic_loc_region_target_3
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_3 }
+					remove_province_modifier = dynamic_loc_region_target_3
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2520,14 +3305,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2541,15 +3358,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_4
-			}
-			remove_province_modifier = dynamic_loc_region_target_4
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_4 }
+					remove_province_modifier = dynamic_loc_region_target_4
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2571,14 +3388,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2592,15 +3441,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_5
-			}
-			remove_province_modifier = dynamic_loc_region_target_5
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_5 }
+					remove_province_modifier = dynamic_loc_region_target_5
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2622,14 +3471,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2643,15 +3524,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_6
-			}
-			remove_province_modifier = dynamic_loc_region_target_6
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_6 }
+					remove_province_modifier = dynamic_loc_region_target_6
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2673,14 +3554,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2694,15 +3607,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_7
-			}
-			remove_province_modifier = dynamic_loc_region_target_7
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_7 }
+					remove_province_modifier = dynamic_loc_region_target_7
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2724,14 +3637,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2742,7 +3687,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Region Selection
+# Alliance of Men and Dwarves Region Selection 8
 country_event = {
 	id = 110027
 	title = "  Alliance of Dwarves and Men - Region Selection"
@@ -2799,15 +3744,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_1
-			}
-			remove_province_modifier = dynamic_loc_region_target_1
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_1 }
+					remove_province_modifier = dynamic_loc_region_target_1
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2829,14 +3774,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2850,15 +3827,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_2
-			}
-			remove_province_modifier = dynamic_loc_region_target_2
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_2 }
+					remove_province_modifier = dynamic_loc_region_target_2
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2880,14 +3857,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2901,15 +3910,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_3
-			}
-			remove_province_modifier = dynamic_loc_region_target_3
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_3 }
+					remove_province_modifier = dynamic_loc_region_target_3
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2931,14 +3940,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -2952,15 +3993,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_4
-			}
-			remove_province_modifier = dynamic_loc_region_target_4
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_4 }
+					remove_province_modifier = dynamic_loc_region_target_4
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -2982,14 +4023,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -3003,15 +4076,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_5
-			}
-			remove_province_modifier = dynamic_loc_region_target_5
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_5 }
+					remove_province_modifier = dynamic_loc_region_target_5
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -3033,14 +4106,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -3054,15 +4159,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_6
-			}
-			remove_province_modifier = dynamic_loc_region_target_6
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_6 }
+					remove_province_modifier = dynamic_loc_region_target_6
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -3084,14 +4189,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -3105,15 +4242,15 @@ country_event = {
 	option = {
 		name = ""
 		
-		all_core = {
-			limit = {
-				has_province_modifier = dynamic_loc_region_target_7
-			}
-			remove_province_modifier = dynamic_loc_region_target_7
-			add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-		}
-		
 		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = dynamic_loc_region_target_7 }
+					remove_province_modifier = dynamic_loc_region_target_7
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+			}
+			
 			set_variable = { which = dynamic_loc_country_count value = 0 }
 			
 			# Resets the naming count
@@ -3135,14 +4272,46 @@ country_event = {
 			
 			# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 			
-			any_neighbor_country = {
-				limit = {
-					has_country_modifier = alliance_of_dwarves_and_men
-					any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-					NOT = { tag = THIS }
+			random_owned = {
+				limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
 				}
-				set_country_flag = dynamic_loc_potential_country_target
-				FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+				owner = {
+					any_neighbor_country = {
+						limit = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+							NOT = { tag = THIS }
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = dynamic_loc_potential_country_target
+					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+				}
 			}
 			
 			country_event = 300000 # Country Loc Setting
@@ -3160,49 +4329,83 @@ country_event = {
 		random_owned = {
 			limit = { owner = { NOT = { FOR = { check_variable = { which = dynamic_loc_region_count value = 8.1 } } } } }
 			owner = {
-				all_core = {
-					limit = { has_province_modifier = dynamic_loc_region_target_8 }
-					remove_province_modifier = dynamic_loc_region_target_8
-					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
-				}
-			}
-			
-			FOR = {
-				set_variable = { which = dynamic_loc_country_count value = 0 }
-				
-				# Resets the naming count
-				set_variable = { which = dynamic_loc_names value = 0 }
-				
-				# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
-				# Cannot call 400001 as it will not fire in the necessary order
-				any_country = {
-					clr_country_flag = dynamic_loc_potential_country_target
-					clr_country_flag = dynamic_loc_country_target_1
-					clr_country_flag = dynamic_loc_country_target_2
-					clr_country_flag = dynamic_loc_country_target_3
-					clr_country_flag = dynamic_loc_country_target_4
-					clr_country_flag = dynamic_loc_country_target_5
-					clr_country_flag = dynamic_loc_country_target_6
-					clr_country_flag = dynamic_loc_country_target_7
-					clr_country_flag = dynamic_loc_country_target_8
-				}
-				
-				# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
-				
-				any_neighbor_country = {
-					limit = {
-						has_country_modifier = alliance_of_dwarves_and_men
-						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
-						NOT = { tag = THIS }
+				FOR = {
+					random_owned = {
+						any_neighbor_province = {
+							limit = { has_province_modifier = dynamic_loc_region_target_8 }
+							remove_province_modifier = dynamic_loc_region_target_8
+							add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+						}
 					}
-					set_country_flag = dynamic_loc_potential_country_target
-					FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					
+					set_variable = { which = dynamic_loc_country_count value = 0 }
+					
+					# Resets the naming count
+					set_variable = { which = dynamic_loc_names value = 0 }
+					
+					# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+					# Cannot call 400000 as it will not fire in the necessary order
+					any_country = {
+						clr_country_flag = dynamic_loc_potential_country_target
+						clr_country_flag = dynamic_loc_country_target_1
+						clr_country_flag = dynamic_loc_country_target_2
+						clr_country_flag = dynamic_loc_country_target_3
+						clr_country_flag = dynamic_loc_country_target_4
+						clr_country_flag = dynamic_loc_country_target_5
+						clr_country_flag = dynamic_loc_country_target_6
+						clr_country_flag = dynamic_loc_country_target_7
+						clr_country_flag = dynamic_loc_country_target_8
+					}
+					
+					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+					
+					random_owned = {
+						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						owner = {
+							any_neighbor_country = {
+								limit = {
+									has_country_modifier = alliance_of_dwarves_and_men
+									any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+									NOT = { tag = THIS }
+								}
+								set_country_flag = dynamic_loc_potential_country_target
+								FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+							}
+						}
+					}
+					
+					random_owned = {
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+						owner = {
+							any_neighbor_country = {
+								limit = {
+									has_country_modifier = alliance_of_dwarves_and_men
+									any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+									NOT = { tag = THIS }
+								}
+								set_country_flag = dynamic_loc_potential_country_target
+								FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+							}
+						}
+					}
+					
+					random_owned = {
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+						any_country = {
+							limit = {
+								has_country_modifier = alliance_of_dwarves_and_men
+								any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+							}
+							set_country_flag = dynamic_loc_potential_country_target
+							FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+						}
+					}
+					
+					country_event = 300000 # Country Loc Setting
+					
+					country_event = 110104 # Getting the callback
+					country_event = 400001 # Region cleanup
 				}
-				
-				country_event = 300000 # Country Loc Setting
-				
-				country_event = 110104 # Getting the callback
-				country_event = 400001 # Region cleanup
 			}
 		}
 		
@@ -3244,7 +4447,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Country Selection
+# Alliance of Men and Dwarves Country Selection 1
 country_event = {
 	id = 110030
 	title = "  Alliance of Dwarves and Men - Country Selection"
@@ -3282,7 +4485,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Country Selection
+# Alliance of Men and Dwarves Country Selection 2
 country_event = {
 	id = 110031
 	title = "  Alliance of Dwarves and Men - Country Selection"
@@ -3336,7 +4539,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Country Selection
+# Alliance of Men and Dwarves Country Selection 3
 country_event = {
 	id = 110032
 	title = "  Alliance of Dwarves and Men - Country Selection"
@@ -3406,7 +4609,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Country Selection
+# Alliance of Men and Dwarves Country Selection 4
 country_event = {
 	id = 110033
 	title = "  Alliance of Dwarves and Men - Country Selection"
@@ -3492,7 +4695,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Country Selection
+# Alliance of Men and Dwarves Country Selection 5
 country_event = {
 	id = 110034
 	title = "  Alliance of Dwarves and Men - Country Selection"
@@ -3594,7 +4797,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Country Selection
+# Alliance of Men and Dwarves Country Selection 6
 country_event = {
 	id = 110035
 	title = "  Alliance of Dwarves and Men - Country Selection"
@@ -3712,7 +4915,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Country Selection
+# Alliance of Men and Dwarves Country Selection 7
 country_event = {
 	id = 110036
 	title = "  Alliance of Dwarves and Men - Country Selection"
@@ -3846,7 +5049,7 @@ country_event = {
 	}
 }
 
-# Alliance of Men and Dwarves Country Selection
+# Alliance of Men and Dwarves Country Selection 8
 country_event = {
 	id = 110037
 	title = "  Alliance of Dwarves and Men - Country Selection"
