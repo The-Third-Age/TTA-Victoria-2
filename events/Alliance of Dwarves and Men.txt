@@ -2,9 +2,10 @@
 # Audax Validator "!" Ignore_1004
 
 # TODO: Loc some of these events (like the main menus)
-# TODO: Setup the post-country selection effects for the core dispute options
+# TODO: Setup the post-country selection effects for the core dispute options (voting)
 	# TODO: Make sure flags and modifiers are cleared accordingly afterwards
 # TODO: Add a "leave allaince" option for main menu
+# TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -113,6 +114,229 @@ country_event = {
 				FOR = { country_event = 110101 }
 			}
 		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
+					has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
+				}
+			}
+			owner = {
+				clr_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
+				
+				FOR = {
+					# Setup Detecting Conflicting Cores
+					any_neighbor_country = {
+						limit = {
+							NOT = { tag = THIS }
+							has_country_modifier = alliance_of_dwarves_and_men
+							any_core = { is_core = THIS }
+						}
+						set_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
+					}
+					country_event = 110102
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu }
+					has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm
+				}
+			}
+			owner = {
+				set_country_flag = dynamic_loc_initiator
+				set_global_flag = alliances_of_dwarves_and_men_invite_realm
+				
+				FOR = {
+					set_variable = { which = dynamic_loc_country_count value = 0 }
+					
+					# Resets the naming count
+					set_variable = { which = dynamic_loc_names value = 0 }
+					
+					# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+					# Cannot call 400000 as it will not fire in the necessary order
+					any_country = {
+						clr_country_flag = dynamic_loc_potential_country_target
+						clr_country_flag = dynamic_loc_country_target_1
+						clr_country_flag = dynamic_loc_country_target_2
+						clr_country_flag = dynamic_loc_country_target_3
+						clr_country_flag = dynamic_loc_country_target_4
+						clr_country_flag = dynamic_loc_country_target_5
+						clr_country_flag = dynamic_loc_country_target_6
+						clr_country_flag = dynamic_loc_country_target_7
+						clr_country_flag = dynamic_loc_country_target_8
+					}
+					
+					any_neighbor_country = {
+						limit = {
+							capital_scope = { continent = europe } # Rhovanion
+							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+							alliance_with = THIS
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+							OR = {
+								is_culture_group = dwarves
+								is_culture_group = northmen
+								AND = {
+									is_culture_group = teleri
+									has_global_flag = alliance_of_dwarves_and_men_accept_teleri
+								}
+								AND = {
+									is_culture_group = avari
+									has_global_flag = alliance_of_dwarves_and_men_accept_avari
+								}
+								AND = {
+									is_culture_group = anduinrim
+									has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim
+								}
+								AND = {
+									is_culture_group = rohirrim
+									has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim
+								}
+							}
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+					
+					country_event = 300000 # Country Loc Setting
+					
+					country_event = 110104 # Getting the callback
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm }
+					has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach
+				}
+			}
+			owner = {
+				set_country_flag = dynamic_loc_initiator
+				set_global_flag = alliances_of_dwarves_and_men_expand_cultural_reach
+				
+				FOR = {
+					set_variable = { which = dynamic_loc_country_count value = 0 }
+					
+					# Resets the naming count
+					set_variable = { which = dynamic_loc_names value = 0 }
+					
+					# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+					# Cannot call 400000 as it will not fire in the necessary order
+					any_country = {
+						clr_country_flag = dynamic_loc_potential_country_target
+						clr_country_flag = dynamic_loc_country_target_1
+						clr_country_flag = dynamic_loc_country_target_2
+						clr_country_flag = dynamic_loc_country_target_3
+						clr_country_flag = dynamic_loc_country_target_4
+						clr_country_flag = dynamic_loc_country_target_5
+						clr_country_flag = dynamic_loc_country_target_6
+						clr_country_flag = dynamic_loc_country_target_7
+						clr_country_flag = dynamic_loc_country_target_8
+					}
+					
+					any_neighbor_country = {
+						limit = {
+							rank = 12 # Great or Secondary power
+							capital_scope = { continent = europe } # Rhovanion
+							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+							alliance_with = THIS
+							OR = {
+								AND = {
+									is_culture_group = teleri
+									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_teleri }
+								}
+								AND = {
+									is_culture_group = avari
+									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_avari }
+								}
+								AND = {
+									is_culture_group = anduinrim
+									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim }
+								}
+								AND = {
+									is_culture_group = rohirrim
+									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim }
+								}
+							}
+						}
+						set_country_flag = dynamic_loc_potential_country_target
+						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+					}
+					
+					country_event = 300000 # Country Loc Setting
+					
+					country_event = 110104 # Getting the callback
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach }
+					has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu
+				}
+			}
+			# TODO: Send to menu
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu }
+					has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union
+				}
+			}
+			owner = {
+				FOR = {
+					any_country = {
+						limit = { has_country_modifier = alliance_of_dwarves_and_men }
+						# TODO: Trigger voting
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union }
+					has_global_flag = alliance_of_dwarves_and_men_can_access_political_union
+				}
+			}
+			owner = {
+				FOR = {
+					any_country = {
+						limit = { has_country_modifier = alliance_of_dwarves_and_men }
+						# TODO: Trigger voting
+					}
+				}
+			}
+		}
 	}
 	
 	option = {
@@ -192,49 +416,6 @@ country_event = {
 	
 	option = {
 		name = ""
-		
-		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
-			
-			owner = {
-				any_country = {
-					limit = {
-						has_country_modifier = alliance_of_dwarves_and_men
-						is_vassal = no
-						NOT = { tag = THIS }
-					}
-					create_alliance = THIS
-					relation = { who = THIS value = 400 }
-				}
-				
-				FOR = { country_event = 110101 }
-			}
-		}
-		
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
-					has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
-				}
-			}
-			owner = {
-				clr_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
-				
-				FOR = {
-					# Setup Detecting Conflicting Cores
-					any_neighbor_country = {
-						limit = {
-							NOT = { tag = THIS }
-							has_country_modifier = alliance_of_dwarves_and_men
-							any_core = { is_core = THIS }
-						}
-						set_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
-					}
-					country_event = 110102
-				}
-			}
-		}
 	}
 	
 	option = {
@@ -318,49 +499,6 @@ country_event = {
 	
 	option = {
 		name = ""
-		
-		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
-			
-			owner = {
-				any_country = {
-					limit = {
-						has_country_modifier = alliance_of_dwarves_and_men
-						is_vassal = no
-						NOT = { tag = THIS }
-					}
-					create_alliance = THIS
-					relation = { who = THIS value = 400 }
-				}
-				
-				FOR = { country_event = 110101 }
-			}
-		}
-		
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
-					has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
-				}
-			}
-			owner = {
-				clr_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
-				
-				FOR = {
-					# Setup Detecting Conflicting Cores
-					any_neighbor_country = {
-						limit = {
-							NOT = { tag = THIS }
-							has_country_modifier = alliance_of_dwarves_and_men
-							any_core = { is_core = THIS }
-						}
-						set_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
-					}
-					country_event = 110102
-				}
-			}
-		}
 	}
 	
 	option = {
@@ -448,24 +586,6 @@ country_event = {
 	
 	option = {
 		name = ""
-		
-		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
-			
-			owner = {
-				any_country = {
-					limit = {
-						has_country_modifier = alliance_of_dwarves_and_men
-						is_vassal = no
-						NOT = { tag = THIS }
-					}
-					create_alliance = THIS
-					relation = { who = THIS value = 400 }
-				}
-				
-				FOR = { country_event = 110101 }
-			}
-		}
 	}
 	
 	option = {
@@ -557,24 +677,6 @@ country_event = {
 	
 	option = {
 		name = ""
-		
-		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
-			
-			owner = {
-				any_country = {
-					limit = {
-						has_country_modifier = alliance_of_dwarves_and_men
-						is_vassal = no
-						NOT = { tag = THIS }
-					}
-					create_alliance = THIS
-					relation = { who = THIS value = 400 }
-				}
-				
-				FOR = { country_event = 110101 }
-			}
-		}
 	}
 	
 	option = {
@@ -670,24 +772,6 @@ country_event = {
 	
 	option = {
 		name = "" # Call to Arms
-		
-		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
-			
-			owner = {
-				any_country = {
-					limit = {
-						has_country_modifier = alliance_of_dwarves_and_men
-						is_vassal = no
-						NOT = { tag = THIS }
-					}
-					create_alliance = THIS
-					relation = { who = THIS value = 400 }
-				}
-				
-				FOR = { country_event = 110101 }
-			}
-		}
 	}
 	
 	option = {
@@ -5480,7 +5564,7 @@ country_event = {
 					any_neighbor_country = {
 						capital_scope = { continent = europe } # Rhovanion
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
-						relation = { who = FROM value = 100 }
+						alliance_with = FROM
 						OR = {
 							good_evil_alignment = good_alignment
 							good_evil_alignment = neutral_alignment
@@ -5522,7 +5606,7 @@ country_event = {
 						rank = 12 # Great or Secondary power
 						capital_scope = { continent = europe } # Rhovanion
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
-						relation = { who = FROM value = 100 }
+						alliance_with = FROM
 						OR = {
 							AND = {
 								is_culture_group = teleri
