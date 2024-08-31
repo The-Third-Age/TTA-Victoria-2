@@ -3,7 +3,8 @@
 
 # TODO: Loc some of these events (like the main menus)
 # TODO: Setup the post-country selection effects for the core dispute options
-# TODO: Make sure flags and modifiers are cleared accordingly afterwards
+	# TODO: Make sure flags and modifiers are cleared accordingly afterwards
+# TODO: Add a "leave allaince" option for main menu
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -1102,7 +1103,7 @@ country_event = {
 	id = 110020
 	title = "  Alliance of Dwarves and Men - Region Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_1"
+	picture = "organizations/alliance_dwarves_men_2"
 	
 	is_triggered_only = yes
 	
@@ -1204,6 +1205,15 @@ country_event = {
 			country_event = 400001 # Region cleanup
 		}
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Region Selection 2
@@ -1211,7 +1221,7 @@ country_event = {
 	id = 110021
 	title = "  Alliance of Dwarves and Men - Region Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_2"
+	picture = "organizations/alliance_dwarves_men_3"
 	
 	is_triggered_only = yes
 	
@@ -1400,6 +1410,15 @@ country_event = {
 			country_event = 400001 # Region cleanup
 		}
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Region Selection 3
@@ -1407,7 +1426,7 @@ country_event = {
 	id = 110022
 	title = "  Alliance of Dwarves and Men - Region Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_3"
+	picture = "organizations/alliance_dwarves_men_4"
 	
 	is_triggered_only = yes
 	
@@ -1683,6 +1702,15 @@ country_event = {
 			country_event = 400001 # Region cleanup
 		}
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Region Selection 4
@@ -1690,7 +1718,7 @@ country_event = {
 	id = 110023
 	title = "  Alliance of Dwarves and Men - Region Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_4"
+	picture = "organizations/alliance_dwarves_men_5"
 	
 	is_triggered_only = yes
 	
@@ -2053,6 +2081,15 @@ country_event = {
 			country_event = 400001 # Region cleanup
 		}
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Region Selection 5
@@ -2060,7 +2097,7 @@ country_event = {
 	id = 110024
 	title = "  Alliance of Dwarves and Men - Region Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_5"
+	picture = "organizations/alliance_dwarves_men_6"
 	
 	is_triggered_only = yes
 	
@@ -2510,6 +2547,15 @@ country_event = {
 			country_event = 400001 # Region cleanup
 		}
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Region Selection 6
@@ -2517,7 +2563,7 @@ country_event = {
 	id = 110025
 	title = "  Alliance of Dwarves and Men - Region Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_6"
+	picture = "organizations/alliance_dwarves_men_7"
 	
 	is_triggered_only = yes
 	
@@ -3054,6 +3100,15 @@ country_event = {
 			country_event = 400001 # Region cleanup
 		}
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Region Selection 7
@@ -3061,7 +3116,7 @@ country_event = {
 	id = 110026
 	title = "  Alliance of Dwarves and Men - Region Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_7"
+	picture = "organizations/alliance_dwarves_men_8"
 	
 	is_triggered_only = yes
 	
@@ -3685,6 +3740,15 @@ country_event = {
 			country_event = 400001 # Region cleanup
 		}
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Region Selection 8
@@ -3692,7 +3756,7 @@ country_event = {
 	id = 110027
 	title = "  Alliance of Dwarves and Men - Region Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_8"
+	picture = "organizations/alliance_dwarves_men_9"
 	
 	is_triggered_only = yes
 	
@@ -4445,6 +4509,15 @@ country_event = {
 			}
 		}
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Country Selection 1
@@ -4452,7 +4525,7 @@ country_event = {
 	id = 110030
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_1"
+	picture = "organizations/alliance_dwarves_men_2"
 	
 	is_triggered_only = yes
 	
@@ -4483,6 +4556,15 @@ country_event = {
 		
 		FOR = { country_event = 402001 } # Everything cleanup
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Country Selection 2
@@ -4490,7 +4572,7 @@ country_event = {
 	id = 110031
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_2"
+	picture = "organizations/alliance_dwarves_men_3"
 	
 	is_triggered_only = yes
 	
@@ -4537,6 +4619,15 @@ country_event = {
 		
 		FOR = { country_event = 402001 } # Everything cleanup
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Country Selection 3
@@ -4544,7 +4635,7 @@ country_event = {
 	id = 110032
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_3"
+	picture = "organizations/alliance_dwarves_men_4"
 	
 	is_triggered_only = yes
 	
@@ -4607,6 +4698,15 @@ country_event = {
 		
 		FOR = { country_event = 402001 } # Everything cleanup
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Country Selection 4
@@ -4614,7 +4714,7 @@ country_event = {
 	id = 110033
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_4"
+	picture = "organizations/alliance_dwarves_men_5"
 	
 	is_triggered_only = yes
 	
@@ -4693,6 +4793,15 @@ country_event = {
 		
 		FOR = { country_event = 402001 } # Everything cleanup
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Country Selection 5
@@ -4700,7 +4809,7 @@ country_event = {
 	id = 110034
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_5"
+	picture = "organizations/alliance_dwarves_men_6"
 	
 	is_triggered_only = yes
 	
@@ -4795,6 +4904,15 @@ country_event = {
 		
 		FOR = { country_event = 402001 } # Everything cleanup
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Country Selection 6
@@ -4802,7 +4920,7 @@ country_event = {
 	id = 110035
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_6"
+	picture = "organizations/alliance_dwarves_men_7"
 	
 	is_triggered_only = yes
 	
@@ -4913,6 +5031,15 @@ country_event = {
 		
 		FOR = { country_event = 402001 } # Everything cleanup
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Country Selection 7
@@ -4920,7 +5047,7 @@ country_event = {
 	id = 110036
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_7"
+	picture = "organizations/alliance_dwarves_men_8"
 	
 	is_triggered_only = yes
 	
@@ -5047,6 +5174,15 @@ country_event = {
 		
 		FOR = { country_event = 402001 } # Everything cleanup
 	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+		}
+	}
 }
 
 # Alliance of Men and Dwarves Country Selection 8
@@ -5054,7 +5190,7 @@ country_event = {
 	id = 110037
 	title = "  Alliance of Dwarves and Men - Country Selection"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_8"
+	picture = "organizations/alliance_dwarves_men_9"
 	
 	is_triggered_only = yes
 	
@@ -5234,6 +5370,15 @@ country_event = {
 				
 				country_event = 110104 # Getting the callback
 			}
+		}
+	}
+	
+	option = {
+		name = "§RExit§!"
+		
+		FOR = {
+			country_event = 402001 # Clears dynamic loc modifiers and flags
+			country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
 		}
 	}
 }
@@ -5884,6 +6029,35 @@ country_event = {
 				FOR = { check_variable = { which = dynamic_loc_country_count value = 7.9 } }
 			}
 			country_event = 110037
+		}
+	}
+}
+
+# Alliance of Dwarves and Men Cleanup
+country_event = {
+	id = 110110
+	title = "Alliance of Dwarves and Men Cleanup"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = alliance_dwarves_men_selected_region } } }
+		any_country = {
+			clr_country_flag alliance_dwarves_men_selected_country
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_economic_union
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_political_union
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
 		}
 	}
 }
