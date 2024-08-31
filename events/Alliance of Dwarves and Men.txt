@@ -4,8 +4,8 @@
 # TODO: Loc some of these events (like the main menus)
 # TODO: Setup the post-country selection effects for the core dispute options (voting)
 	# TODO: Make sure flags and modifiers are cleared accordingly afterwards
-# TODO: Add a "leave allaince" option for main menu
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
+# TODO: Update invite realm and expand reach to consider if a realm cannot join due to the presence of a country modifier
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -15,9 +15,40 @@ country_event = {
 	id = 110000
 	title = "  Alliance of Dwarves and Men"
 	desc = "EVTDESC110000"
-	picture = "organizations/alliance_dwarves_men_1"
+	picture = "organizations/alliance_dwarves_men_2"
 	
 	is_triggered_only = yes
+	
+	option = {
+		name = "§MLeave Alliance§!"
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 60
+			}
+		}
+		
+		remove_country_modifier = alliance_of_dwarves_and_men
+		
+		any_country = {
+			limit = { vassal_of = THIS }
+			remove_country_modifier = alliance_of_dwarves_and_men
+		}
+		
+		# TODO: Remove all targetting province modifiers and country flags
+		# TODO: Add some modifier about not being able to rejoin for 10 years
+	}
 	
 	option = {
 		name = "§RExit§!"
@@ -29,7 +60,7 @@ country_event = {
 	id = 110001
 	title = "  Alliance of Dwarves and Men"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_2"
+	picture = "organizations/alliance_dwarves_men_3"
 	
 	is_triggered_only = yes
 	
@@ -182,6 +213,10 @@ country_event = {
 								good_evil_alignment = neutral_alignment
 							}
 							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
+							OR = {
 								is_culture_group = dwarves
 								is_culture_group = northmen
 								AND = {
@@ -252,6 +287,10 @@ country_event = {
 							capital_scope = { continent = europe } # Rhovanion
 							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 							alliance_with = THIS
+							OR = {
+								is_vassal = no
+								vassal_of = THIS
+							}
 							OR = {
 								AND = {
 									is_culture_group = teleri
@@ -340,6 +379,37 @@ country_event = {
 	}
 	
 	option = {
+		name = "§MLeave Alliance§!"
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 60
+			}
+		}
+		
+		remove_country_modifier = alliance_of_dwarves_and_men
+		
+		any_country = {
+			limit = { vassal_of = THIS }
+			remove_country_modifier = alliance_of_dwarves_and_men
+		}
+		
+		# TODO: Remove all targetting province modifiers and country flags
+		# TODO: Add some modifier about not being able to rejoin for 10 years
+	}
+	
+	option = {
 		name = "§RExit§!"
 	}
 }
@@ -347,89 +417,6 @@ country_event = {
 # Alliance of Dwarves and Men Main Menu - 2 options
 country_event = {
 	id = 110002
-	title = "  Alliance of Dwarves and Men"
-	desc = ""
-	picture = "organizations/alliance_dwarves_men_3"
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		end_color_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		
-		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
-			empty_line_loc = {}
-			call_to_arms_loc = {}
-			empty_line_loc = {}
-		}
-		
-		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu } }
-			empty_line_loc = {}
-			core_dispute_loc = {}
-			empty_line_loc = {}
-		}
-		
-		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm } }
-			empty_line_loc = {}
-			invite_realm_loc = {}
-			empty_line_loc = {}
-		}
-		
-		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach } }
-			empty_line_loc = {}
-			expand_culture_reach_loc = {}
-			empty_line_loc = {}
-		}
-		
-		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu } }
-			empty_line_loc = {}
-			specific_flavor_loc = {}
-			empty_line_loc = {}
-		}
-		
-		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
-			empty_line_loc = {}
-			economic_union_loc = {}
-			empty_line_loc = {}
-		}
-		
-		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_political_union } }
-			empty_line_loc = {}
-			political_union_loc = {}
-			empty_line_loc = {}
-		}
-	}
-	
-	option = {
-		name = ""
-	}
-	
-	option = {
-		name = ""
-	}
-	
-	option = {
-		name = "§RExit§!"
-	}
-}
-
-# Alliance of Dwarves and Men Main Menu - 3 options
-country_event = {
-	id = 110003
 	title = "  Alliance of Dwarves and Men"
 	desc = ""
 	picture = "organizations/alliance_dwarves_men_4"
@@ -506,7 +493,34 @@ country_event = {
 	}
 	
 	option = {
-		name = ""
+		name = "§MLeave Alliance§!"
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 60
+			}
+		}
+		
+		remove_country_modifier = alliance_of_dwarves_and_men
+		
+		any_country = {
+			limit = { vassal_of = THIS }
+			remove_country_modifier = alliance_of_dwarves_and_men
+		}
+		
+		# TODO: Remove all targetting province modifiers and country flags
+		# TODO: Add some modifier about not being able to rejoin for 10 years
 	}
 	
 	option = {
@@ -514,9 +528,9 @@ country_event = {
 	}
 }
 
-# Alliance of Dwarves and Men Main Menu - 4 options
+# Alliance of Dwarves and Men Main Menu - 3 options
 country_event = {
-	id = 110004
+	id = 110003
 	title = "  Alliance of Dwarves and Men"
 	desc = ""
 	picture = "organizations/alliance_dwarves_men_5"
@@ -597,7 +611,34 @@ country_event = {
 	}
 	
 	option = {
-		name = ""
+		name = "§MLeave Alliance§!"
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 60
+			}
+		}
+		
+		remove_country_modifier = alliance_of_dwarves_and_men
+		
+		any_country = {
+			limit = { vassal_of = THIS }
+			remove_country_modifier = alliance_of_dwarves_and_men
+		}
+		
+		# TODO: Remove all targetting province modifiers and country flags
+		# TODO: Add some modifier about not being able to rejoin for 10 years
 	}
 	
 	option = {
@@ -605,9 +646,9 @@ country_event = {
 	}
 }
 
-# Alliance of Dwarves and Men Main Menu - 5 options
+# Alliance of Dwarves and Men Main Menu - 4 options
 country_event = {
-	id = 110005
+	id = 110004
 	title = "  Alliance of Dwarves and Men"
 	desc = ""
 	picture = "organizations/alliance_dwarves_men_6"
@@ -692,7 +733,160 @@ country_event = {
 	}
 	
 	option = {
+		name = "§MLeave Alliance§!"
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 60
+			}
+		}
+		
+		remove_country_modifier = alliance_of_dwarves_and_men
+		
+		any_country = {
+			limit = { vassal_of = THIS }
+			remove_country_modifier = alliance_of_dwarves_and_men
+		}
+		
+		# TODO: Remove all targetting province modifiers and country flags
+		# TODO: Add some modifier about not being able to rejoin for 10 years
+	}
+	
+	option = {
+		name = "§RExit§!"
+	}
+}
+
+# Alliance of Dwarves and Men Main Menu - 5 options
+country_event = {
+	id = 110005
+	title = "  Alliance of Dwarves and Men"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_7"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
+			empty_line_loc = {}
+			call_to_arms_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu } }
+			empty_line_loc = {}
+			core_dispute_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm } }
+			empty_line_loc = {}
+			invite_realm_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach } }
+			empty_line_loc = {}
+			expand_culture_reach_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu } }
+			empty_line_loc = {}
+			specific_flavor_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
+			empty_line_loc = {}
+			economic_union_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_political_union } }
+			empty_line_loc = {}
+			political_union_loc = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
 		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = "§MLeave Alliance§!"
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 60
+			}
+		}
+		
+		remove_country_modifier = alliance_of_dwarves_and_men
+		
+		any_country = {
+			limit = { vassal_of = THIS }
+			remove_country_modifier = alliance_of_dwarves_and_men
+		}
+		
+		# TODO: Remove all targetting province modifiers and country flags
+		# TODO: Add some modifier about not being able to rejoin for 10 years
 	}
 	
 	option = {
@@ -705,7 +899,7 @@ country_event = {
 	id = 110006
 	title = "  Alliance of Dwarves and Men"
 	desc = ""
-	picture = "organizations/alliance_dwarves_men_7"
+	picture = "organizations/alliance_dwarves_men_8"
 	
 	is_triggered_only = yes
 	
@@ -792,6 +986,37 @@ country_event = {
 	
 	option = {
 		name = "" # Propose an Economic/Political Union
+	}
+	
+	option = {
+		name = "§MLeave Alliance§!"
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 60
+			}
+		}
+		
+		remove_country_modifier = alliance_of_dwarves_and_men
+		
+		any_country = {
+			limit = { vassal_of = THIS }
+			remove_country_modifier = alliance_of_dwarves_and_men
+		}
+		
+		# TODO: Remove all targetting province modifiers and country flags
+		# TODO: Add some modifier about not being able to rejoin for 10 years
 	}
 	
 	option = {
@@ -5566,6 +5791,10 @@ country_event = {
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 						alliance_with = FROM
 						OR = {
+							is_vassal = no
+							vassal_of = FROM
+						}
+						OR = {
 							good_evil_alignment = good_alignment
 							good_evil_alignment = neutral_alignment
 						}
@@ -5607,6 +5836,10 @@ country_event = {
 						capital_scope = { continent = europe } # Rhovanion
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 						alliance_with = FROM
+						OR = {
+							is_vassal = no
+							vassal_of = FROM
+						}
 						OR = {
 							AND = {
 								is_culture_group = teleri
