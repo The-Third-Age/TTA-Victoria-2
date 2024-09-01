@@ -6,6 +6,8 @@
 	# TODO: Make sure flags and modifiers are cleared accordingly afterwards
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update invite realm and expand reach to consider if a realm cannot join due to the presence of a country modifier
+# TODO: Update ai chances to select various options
+# TODO: Only allow new realms to join if they are at peace
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -331,7 +333,7 @@ country_event = {
 					has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu
 				}
 			}
-			# TODO: Send to menu
+			FOR = { country_event = 110105 }
 		}
 		
 		random_owned = {
@@ -5692,6 +5694,667 @@ country_event = {
 	}
 }
 
+# Alliance of Dwarves and Men Specific Flavor - 1 option
+country_event = {
+	id = 110040
+	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_2"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap } }
+			empty_line_loc = {}
+			settle_cores_of_dahdriks_gap_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands } }
+			empty_line_loc = {}
+			settle_cores_of_mountainlands_loc = {}
+			empty_line_loc = {}
+		}
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			
+			# There shouldn't be anything with the modifier. But just in case
+			FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
+		}
+		
+		clr_global_flag = hidden_effects
+	}
+	
+	option = {
+		name = ""
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap } }
+			owner = {
+				ERE_657 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Dádhrik's Gap
+				country_event = 110042
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands } }
+			owner = {
+				ERE_660 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Mountainlands
+				country_event = 110042
+			}
+		}
+	}
+	
+	option = {
+		name = "§RBack to main Alliance of Dwarves and Men menu§!"
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = { FOR = { country_event = 110100 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		triggered_event_alliance_of_dwarves_and_men_loc = {}
+	}
+}
+
+# Alliance of Dwarves and Men Specific Flavor - 2 option
+country_event = {
+	id = 110041
+	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_3"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap } }
+			empty_line_loc = {}
+			settle_cores_of_dahdriks_gap_loc = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands } }
+			empty_line_loc = {}
+			settle_cores_of_mountainlands_loc = {}
+			empty_line_loc = {}
+		}
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			
+			# There shouldn't be anything with the modifier. But just in case
+			FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
+		}
+		
+		clr_global_flag = hidden_effects
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = ""
+	}
+	
+	option = {
+		name = "§RBack to main Alliance of Dwarves and Men menu§!"
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = { FOR = { country_event = 110100 } }
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		triggered_event_alliance_of_dwarves_and_men_loc = {}
+	}
+}
+
+country_event = {
+	id = 110042
+	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_4"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Drop the claim completely (§BHistorical§!)"
+		
+		badboy = -5
+		plurality = 3
+		
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+			}
+			relation = { who = THIS value = 50 }
+			# TODO: Fire country event letting the owner of the provinces know about the dropped claim
+		}
+		
+		random_country = {
+			limit = {
+				THIS = { is_greater_power = yes }
+				has_country_modifier = alliance_of_dwarves_and_men
+				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+			}
+			diplomatic_influence = { who = THIS value = 50 }
+		}
+		
+		# Doing this outside the random_country in case somehow one of the provinces in the region is not owned by the same owner
+		FOR = {
+			random_owned = {
+				random_neighbor_province = {
+					limit = {
+						has_province_modifier = alliance_dwarves_men_selected_region
+						region = ERE_657 # Dádhrik's Gap
+					}
+					owner = { set_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap }
+				}
+				random_neighbor_province = {
+					limit = {
+						has_province_modifier = alliance_dwarves_men_selected_region
+						region = ERE_660 # Mountainlands
+					}
+					owner = { set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands }
+				}
+				any_neighbor_province = {
+					limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+					remove_core = DAL
+					remove_core = RHO
+					remove_core = GRA
+					remove_core = ADH
+				}
+			}
+			
+			country_event = 110110 # Alliance of Dwarves and Men cleanup
+		}
+	}
+	
+	option = {
+		name = "Drop the claim, but only for resettlement of our people"
+		
+		badboy = 2
+		plurality = 2
+		
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+			}
+			country_event = 110043
+		}
+	}
+	
+	option = {
+		name = "Press the claim"
+		
+		badboy = 7
+		plurality = 1
+		
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+			}
+			country_event = 110047
+		}
+	}
+	
+	option = {
+		name = "We will revisit this claim"
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+}
+
+# Alliance of Dwarves and Men - Specific Flavor -- Dwarves asked to send Northmen back to Northmen realms
+country_event = {
+	id = 110043
+	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_2"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This is acceptable"
+		
+		badboy = -2
+		plurality = -1
+		
+		# Mimicking the results of following the historical option with a little bit of forced migration
+		relation = { who = FROM value = 50 }
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = alliance_dwarves_men_selected_region
+				region = ERE_657 # Dádhrik's Gap
+			}
+			owner = {
+				FROM = { country_event = 110044 }
+				set_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = alliance_dwarves_men_selected_region
+				region = ERE_660 # Mountainlands
+			}
+			owner = {
+				FROM = { country_event = 110045 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
+			}
+		}
+		
+		# Doing this outside the random_country in case somehow one of the provinces in the region is not owned by the same owner
+		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+					remove_core = DAL
+					remove_core = RHO
+					remove_core = GRA
+					remove_core = ADH
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Unacceptable"
+		
+		plurality = 1
+		FROM = { country_event = 110046 }
+	}
+}
+
+# Alliance of Dwarves and Men - Specific Flavor --Dwarves transfer Dádhrik's Gap Northmen to Dalelands
+country_event = {
+	id = 110044
+	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_5"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Kotstó"
+		
+		plurality = -0.5
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { region = ERE_657 } # Dádhrik's Gap
+				}
+				move_pop = 141 # Kotstó
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+	
+	option = {
+		name = "Dale"
+		
+		plurality = -0.5
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { region = ERE_657 } # Dádhrik's Gap
+				}
+				move_pop = 652 # Dale
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+	
+	option = {
+		name = "Felagsgard"
+		
+		plurality = -0.5
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { region = ERE_657 } # Dádhrik's Gap
+				}
+				move_pop = 655 # Felagsgard
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+	
+	option = {
+		name = "Alduringard"
+		
+		plurality = -0.5
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { region = ERE_657 } # Dádhrik's Gap
+				}
+				move_pop = 141 # Alduringard
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+	
+	option = {
+		name = "Let the people decide"
+		
+		plurality = -1
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = {
+						OR = {
+							province_id = 658 # Setborg
+							province_id = 689 # Enrungagard
+							province_id = 1170 # Mordolt
+						}
+					}
+				}
+				move_pop = 655 # Felagsgard
+			}
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = {
+						OR = {
+							province_id = 657 # Thurasigborg
+							province_id = 1169 # Shieldwall
+						}
+					}
+				}
+				move_pop = 656 # Alduringard
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+}
+
+# # Alliance of Dwarves and Men - Specific Flavor --Dwarves transfer Mountainlands Northmen to Dalelands
+country_event = {
+	id = 110045
+	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_5"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Flyiarstadur"
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { region = ERE_660 } # Mountainlands
+				}
+				move_pop = 355 # Flyiarstadur
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+	
+	option = {
+		name = "Withibord"
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { region = ERE_660 } # Mountainlands
+				}
+				move_pop = 651 # Withibord
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+	
+	option = {
+		name = "Pennstó"
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { region = ERE_660 } # Mountainlands
+				}
+				move_pop = 661 # Pennstó
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+	
+	option = {
+		name = "Thliuhanastath"
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { region = ERE_660 } # Mountainlands
+				}
+				move_pop = 1377 # Thliuhanastath
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+	
+	option = {
+		name = "Let the people decide"
+		
+		FROM = {
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = {
+						OR = {
+							province_id = 396 # Steinholl
+							province_id = 660 # Erebor
+						}
+					}
+				}
+				move_pop = 355 # Flyiarstadur
+			}
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { province_id = 664 } # Weniaborg
+				}
+				move_pop = 651 # Withibord
+			}
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { province_id = 659 } # Vargurat
+				}
+				move_pop = 661 # Pennstó
+			}
+			any_pop = {
+				limit = {
+					is_culture_group = northmen
+					location = { province_id = 1168 } # Barad Draug
+				}
+				move_pop = 1377 # Thliuhanastath
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+}
+
+# # Alliance of Dwarves and Men - Specific Flavor --Dwarves refused Northman offer
+country_event = {
+	id = 110046
+	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_2"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will back down"
+		
+		plurality = 0.5
+		
+		FROM = {
+			any_owned = {
+				limit = {
+					has_province_modifier = alliance_dwarves_men_selected_region
+				}
+				add_province_modifier = { name = alliance_dwarves_men_diplomacy_stalled duration = 3650 }
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+	
+	option = {
+		name = "We will ask the alliance for a vote"
+		
+		# TODO: Setup and call voting
+		# TODO: Set the right global flag to mark the region as having it's cored settled (alliance_of_dwarves_and_men_settled_dadhriks_gap or alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands) in the event
+		# TODO: Make sure to clear flags
+	}
+}
+
+# Alliance of Dwarves and Men - Specific Flavor -- Dwarves asked to send Northmen back to Northmen realms
+country_event = {
+	id = 110047
+	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_2"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This is acceptable"
+		
+		badboy = -5
+		plurality = 3
+		
+		relation = { who = FROM value = 50 }
+		
+		any_owned = {
+			limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+			remove_core = THIS
+		}
+		
+		# Doing this outside the random_country in case somehow one of the provinces in the region is not owned by the same owner
+		FOR = {
+			random_owned = {
+				random_neighbor_province = {
+					limit = {
+						has_province_modifier = alliance_dwarves_men_selected_region
+						region = ERE_657 # Dádhrik's Gap
+					}
+					owner = { set_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap }
+				}
+				random_neighbor_province = {
+					limit = {
+						has_province_modifier = alliance_dwarves_men_selected_region
+						region = ERE_660 # Mountainlands
+					}
+					owner = { set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands }
+				}
+			}
+		}
+		
+		FROM = { country_event = 110048 }
+	}
+	
+	option = {
+		name = "Unacceptable"
+		
+		plurality = 1
+		FROM = { country_event = 110046 }
+	}
+}
+
+# Alliance of Dwarves and Men - Specific Flavor -- Northman realm gains control of region
+country_event = {
+	id = 110048
+	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They accept!"
+		
+		plurality = -0.5
+		
+		FROM = {
+			any_owned = {
+				limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+				add_core = THIS
+				secede_province = THIS
+			}
+		}
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+	}
+}
+
 # Alliance of Dwarves and Men Main Menu Setup/Option Calculator
 country_event = {
 	id = 110100
@@ -5725,7 +6388,7 @@ country_event = {
 		# }
 		
 		# Calculate the number of options that should be shown
-		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button
+		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button. For some reason I decided to not update this to handle "Leave Alliance", so all of the background images are 1 higher than one might expect (given the corresponding value of menu_option_number)
 		
 		clr_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms
 		clr_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
@@ -5878,11 +6541,15 @@ country_event = {
 									tag = DAL
 									tag = RHO
 								}
+								ERE = { has_country_modifier = alliance_of_dwarves_and_men }
 								OR = {
 									primary_culture = adhalling
 									accepted_culture = adhalling
 								}
-								ERE_657 = { owned_by = ERE } # Dádhrik's Gap
+								ERE_657 = { # Dádhrik's Gap
+									owned_by = ERE
+									NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+								}
 								NOT = { has_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap }
 							}
 							AND = { # Settle the Cores of Mountainlands
@@ -5890,11 +6557,15 @@ country_event = {
 									tag = DAL
 									tag = RHO
 								}
+								ERE = { has_country_modifier = alliance_of_dwarves_and_men }
 								OR = {
-									primary_culture = adhalling
-									accepted_culture = adhalling
+									primary_culture = grammas
+									accepted_culture = grammas
 								}
-								ERE_660 = { owned_by = ERE } # Mountainlands
+								ERE_660 = { # Mountainlands
+									owned_by = ERE
+									NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+								}
 								NOT = { has_global_flag = alliance_of_dwarves_and_men_settled_mountainlands }
 							}
 						}
@@ -6350,6 +7021,97 @@ country_event = {
 	}
 }
 
+# Alliance of Dwarves and Men Specific Flavor Menu Setup/Option Calculator
+country_event = {
+	id = 110105
+	title = "Alliance of Dwarves and Men - Specific Flavor"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Continue"
+		
+		# Calculate the number of options that should be shown
+		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button.
+		
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
+		
+		# Settle the Cores of Dahdrik's Gap
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						OR = {
+							tag = DAL
+							tag = RHO
+						}
+						ERE = { has_country_modifier = alliance_of_dwarves_and_men }
+						OR = {
+							primary_culture = adhalling
+							accepted_culture = adhalling
+						}
+						ERE_657 = { # Dádhrik's Gap
+							owned_by = ERE
+							NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+						}
+						NOT = { has_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap }
+					}
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap
+			}
+		}
+		
+		# Settle the Cores of Mountainlands
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						OR = {
+							tag = DAL
+							tag = RHO
+						}
+						ERE = { has_country_modifier = alliance_of_dwarves_and_men }
+						OR = {
+							primary_culture = grammas
+							accepted_culture = grammas
+						}
+						ERE_660 = { # Mountainlands
+							owned_by = ERE
+							NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+						}
+						NOT = { has_global_flag = alliance_of_dwarves_and_men_settled_mountainlands }
+					}
+				}
+			}
+			owner = {
+				change_variable = { which = menu_option_number value = 1 }
+				set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
+			}
+		}
+		
+		# Fire the menu (based upon the number of potential options) for the triggering realm. We can assume that there is at least one option, as the only way to enter this menu is via passing through at least one option's condtions
+		random_owned = {
+			limit = {
+				owner = { NOT = { check_variable = { which = menu_option_number value = 2.1 } } }
+			}
+			owner = { FROM = { country_event = 110040 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { check_variable = { which = menu_option_number value = 2.9 } }
+			}
+			owner = { FROM = { country_event = 110041 } }
+		}
+	}
+}
+
 # Alliance of Dwarves and Men Cleanup
 country_event = {
 	id = 110110
@@ -6364,7 +7126,7 @@ country_event = {
 		
 		FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = alliance_dwarves_men_selected_region } } }
 		any_country = {
-			clr_country_flag alliance_dwarves_men_selected_country
+			clr_country_flag = alliance_dwarves_men_selected_country
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm
@@ -6375,6 +7137,8 @@ country_event = {
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
 		}
 	}
 }
