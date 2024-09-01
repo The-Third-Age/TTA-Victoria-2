@@ -7,7 +7,6 @@
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update invite realm and expand reach to consider if a realm cannot join due to the presence of a country modifier
 # TODO: Update ai chances to select various options
-# TODO: Only allow new realms to join if they are at peace
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -210,6 +209,7 @@ country_event = {
 							capital_scope = { continent = europe } # Rhovanion
 							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 							alliance_with = THIS
+							war = no
 							OR = {
 								good_evil_alignment = good_alignment
 								good_evil_alignment = neutral_alignment
@@ -289,6 +289,7 @@ country_event = {
 							capital_scope = { continent = europe } # Rhovanion
 							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 							alliance_with = THIS
+							war = no
 							OR = {
 								is_vassal = no
 								vassal_of = THIS
@@ -5846,6 +5847,7 @@ country_event = {
 	}
 }
 
+# Alliance of Dwarves and Men Specific Flavor - Northman realm deciding how to handle claims to land
 country_event = {
 	id = 110042
 	title = "  Alliance of Dwarves and Men - Specific Flavor"
@@ -6453,6 +6455,7 @@ country_event = {
 						capital_scope = { continent = europe } # Rhovanion
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 						alliance_with = FROM
+						war = no
 						OR = {
 							is_vassal = no
 							vassal_of = FROM
@@ -6499,6 +6502,7 @@ country_event = {
 						capital_scope = { continent = europe } # Rhovanion
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 						alliance_with = FROM
+						war = no
 						OR = {
 							is_vassal = no
 							vassal_of = FROM
