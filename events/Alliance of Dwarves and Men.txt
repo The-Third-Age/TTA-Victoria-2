@@ -3,7 +3,6 @@
 
 # TODO: Loc some of these events (like the main menus)
 # TODO: Setup the post-country selection effects for the core dispute options (voting)
-	# TODO: Make sure flags and modifiers are cleared accordingly afterwards
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update invite realm and expand reach to consider if a realm cannot join due to the presence of a country modifier
 # TODO: Update ai chances to select various options
@@ -43,7 +42,7 @@ country_event = {
 		remove_country_modifier = alliance_of_dwarves_and_men
 		
 		any_country = {
-			limit = { vassal_of = THIS }
+			limit = { vassal_of = THIS } # There shouldn't be any. But just in case
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
@@ -136,7 +135,7 @@ country_event = {
 				any_country = {
 					limit = {
 						has_country_modifier = alliance_of_dwarves_and_men
-						is_vassal = no
+						is_vassal = no # There shouldn't be any. But just in case
 						NOT = { tag = THIS }
 					}
 					create_alliance = THIS
@@ -181,7 +180,7 @@ country_event = {
 				}
 			}
 			owner = {
-				set_country_flag = dynamic_loc_initiator
+				set_country_flag = alliance_dwarves_men_voting_initiator
 				set_global_flag = alliances_of_dwarves_and_men_invite_realm
 				
 				FOR = {
@@ -214,10 +213,7 @@ country_event = {
 								good_evil_alignment = good_alignment
 								good_evil_alignment = neutral_alignment
 							}
-							OR = {
-								is_vassal = no
-								vassal_of = THIS
-							}
+							is_vassal = no
 							OR = {
 								is_culture_group = dwarves
 								is_culture_group = northmen
@@ -260,7 +256,7 @@ country_event = {
 				}
 			}
 			owner = {
-				set_country_flag = dynamic_loc_initiator
+				set_country_flag = alliance_dwarves_men_voting_initiator
 				set_global_flag = alliances_of_dwarves_and_men_expand_cultural_reach
 				
 				FOR = {
@@ -290,10 +286,7 @@ country_event = {
 							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 							alliance_with = THIS
 							war = no
-							OR = {
-								is_vassal = no
-								vassal_of = THIS
-							}
+							is_vassal = no
 							OR = {
 								AND = {
 									is_culture_group = teleri
@@ -349,11 +342,11 @@ country_event = {
 				}
 			}
 			owner = {
+				set_country_flag = alliance_dwarves_men_voting_initiator
+				set_country_flag = alliance_dwarves_men_selected_country # The initiator is the "defender" in order to get the loc right
 				FOR = {
-					any_country = {
-						limit = { has_country_modifier = alliance_of_dwarves_and_men }
-						# TODO: Trigger voting
-					}
+					set_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union
+					country_event = 110150 # Voting Handler
 				}
 			}
 		}
@@ -404,7 +397,7 @@ country_event = {
 		remove_country_modifier = alliance_of_dwarves_and_men
 		
 		any_country = {
-			limit = { vassal_of = THIS }
+			limit = { vassal_of = THIS } # There shouldn't be any. But just in case
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
@@ -518,7 +511,7 @@ country_event = {
 		remove_country_modifier = alliance_of_dwarves_and_men
 		
 		any_country = {
-			limit = { vassal_of = THIS }
+			limit = { vassal_of = THIS } # There shouldn't be any. But just in case
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
@@ -636,7 +629,7 @@ country_event = {
 		remove_country_modifier = alliance_of_dwarves_and_men
 		
 		any_country = {
-			limit = { vassal_of = THIS }
+			limit = { vassal_of = THIS } # There shouldn't be any. But just in case
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
@@ -758,7 +751,7 @@ country_event = {
 		remove_country_modifier = alliance_of_dwarves_and_men
 		
 		any_country = {
-			limit = { vassal_of = THIS }
+			limit = { vassal_of = THIS } # There shouldn't be any. But just in case
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
@@ -884,7 +877,7 @@ country_event = {
 		remove_country_modifier = alliance_of_dwarves_and_men
 		
 		any_country = {
-			limit = { vassal_of = THIS }
+			limit = { vassal_of = THIS } # There shouldn't be any. But just in case
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
@@ -1014,7 +1007,7 @@ country_event = {
 		remove_country_modifier = alliance_of_dwarves_and_men
 		
 		any_country = {
-			limit = { vassal_of = THIS }
+			limit = { vassal_of = THIS } # There shouldn't be any. But just in case
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
@@ -1094,7 +1087,7 @@ country_event = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
 			
 			owner = {
-				set_country_flag = dynamic_loc_initiator
+				set_country_flag = alliance_dwarves_men_voting_initiator
 				set_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores
 				
 				FOR = {
@@ -1136,7 +1129,7 @@ country_event = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
 			
 			owner = {
-				set_country_flag = dynamic_loc_initiator
+				set_country_flag = alliance_dwarves_men_voting_initiator
 				set_global_flag = alliances_of_dwarves_and_men_requesting_return_of_cores
 					
 				# Sets the targeting modifier on every core of THIS where the owner is not us and is part of the organization
@@ -1186,7 +1179,7 @@ country_event = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
 			
 			owner = {
-				set_country_flag = dynamic_loc_initiator
+				set_country_flag = alliance_dwarves_men_voting_initiator
 				set_global_flag = alliances_of_dwarves_and_men_returning_cores
 				
 				any_owned = {
@@ -6408,7 +6401,7 @@ country_event = {
 					any_neighbor_country = {
 						has_country_modifier = alliance_of_dwarves_and_men
 						war = no
-						is_vassal = no
+						is_vassal = no # There shouldn't be any. But just in case
 					}
 				}
 			}
@@ -6422,6 +6415,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
 					OR = {
 						# Resolve Conflicting Cores
 						has_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
@@ -6451,15 +6445,13 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
 					any_neighbor_country = {
 						capital_scope = { continent = europe } # Rhovanion
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 						alliance_with = FROM
 						war = no
-						OR = {
-							is_vassal = no
-							vassal_of = FROM
-						}
+						is_vassal = no
 						OR = {
 							good_evil_alignment = good_alignment
 							good_evil_alignment = neutral_alignment
@@ -6497,16 +6489,14 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
 					any_neighbor_country = {
 						rank = 12 # Great or Secondary power
 						capital_scope = { continent = europe } # Rhovanion
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 						alliance_with = FROM
 						war = no
-						OR = {
-							is_vassal = no
-							vassal_of = FROM
-						}
+						is_vassal = no
 						OR = {
 							AND = {
 								is_culture_group = teleri
@@ -6538,6 +6528,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
 					FROM = {
 						OR = {
 							AND = { # Settle the Cores of Dahdrik's Gap
@@ -6586,6 +6577,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
 					FROM = { is_greater_power = yes }
 					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
 					NOT = { has_global_flag = alliance_of_dwarves_and_men_economic_union }
@@ -6601,6 +6593,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
 					FROM = { is_greater_power = yes }
 					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
 					has_global_flag = alliance_of_dwarves_and_men_economic_union
@@ -6831,7 +6824,7 @@ country_event = {
 		# Cannot use FROM as country_event = { id = [id] days = 0 } resets FROM to the realm that got the event fired via this syntax. When setting the dynamic loc names, a bunch of events are called for FOR this way to ensure that the player doesn't need to wait a tick to see the loced names
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_region_count value = 0.9 }
 					NOT = { check_variable = { which = dynamic_loc_region_count value = 1.1 } }
@@ -6842,7 +6835,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_region_count value = 1.9 }
 					NOT = { check_variable = { which = dynamic_loc_region_count value = 2.1 } }
@@ -6853,7 +6846,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_region_count value = 2.9 }
 					NOT = { check_variable = { which = dynamic_loc_region_count value = 3.1 } }
@@ -6864,7 +6857,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_region_count value = 3.9 }
 					NOT = { check_variable = { which = dynamic_loc_region_count value = 4.1 } }
@@ -6875,7 +6868,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_region_count value = 4.9 }
 					NOT = { check_variable = { which = dynamic_loc_region_count value = 5.1 } }
@@ -6886,7 +6879,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_region_count value = 5.9 }
 					NOT = { check_variable = { which = dynamic_loc_region_count value = 6.1 } }
@@ -6897,7 +6890,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_region_count value = 6.9 }
 					NOT = { check_variable = { which = dynamic_loc_region_count value = 7.1 } }
@@ -6908,7 +6901,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = { check_variable = { which = dynamic_loc_region_count value = 7.9 } }
 			}
 			country_event = 110027
@@ -6940,7 +6933,7 @@ country_event = {
 		# Cannot use FROM as country_event = { id = [id] days = 0 } resets FROM to the realm that got the event fired via this syntax. When setting the dynamic loc names, a bunch of events are called for FOR this way to ensure that the player doesn't need to wait a tick to see the loced names
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_country_count value = 0.9 }
 					NOT = { check_variable = { which = dynamic_loc_country_count value = 1.1 } }
@@ -6951,7 +6944,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_country_count value = 1.9 }
 					NOT = { check_variable = { which = dynamic_loc_country_count value = 2.1 } }
@@ -6962,7 +6955,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_country_count value = 2.9 }
 					NOT = { check_variable = { which = dynamic_loc_country_count value = 3.1 } }
@@ -6973,7 +6966,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_country_count value = 3.9 }
 					NOT = { check_variable = { which = dynamic_loc_country_count value = 4.1 } }
@@ -6984,7 +6977,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_country_count value = 4.9 }
 					NOT = { check_variable = { which = dynamic_loc_country_count value = 5.1 } }
@@ -6995,7 +6988,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_country_count value = 5.9 }
 					NOT = { check_variable = { which = dynamic_loc_country_count value = 6.1 } }
@@ -7006,7 +6999,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = {
 					check_variable = { which = dynamic_loc_country_count value = 6.9 }
 					NOT = { check_variable = { which = dynamic_loc_country_count value = 7.1 } }
@@ -7017,7 +7010,7 @@ country_event = {
 		
 		random_country = {
 			limit = {
-				has_country_flag = dynamic_loc_initiator
+				has_country_flag = alliance_dwarves_men_voting_initiator
 				FOR = { check_variable = { which = dynamic_loc_country_count value = 7.9 } }
 			}
 			country_event = 110037
@@ -7128,9 +7121,15 @@ country_event = {
 	option = {
 		name = "Clean up"
 		
-		FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = alliance_dwarves_men_selected_region } } }
+		FOR = {
+			random_owned = { any_neighbor_province = { remove_province_modifier = alliance_dwarves_men_selected_region } }
+			set_variable = { which = alliance_dwarves_men_total_for value = 0 }
+			set_variable = { which = alliance_dwarves_men_total_abstained value = 0 }
+			set_variable = { which = alliance_dwarves_men_total_against value = 0 }
+		}
 		any_country = {
 			clr_country_flag = alliance_dwarves_men_selected_country
+			clr_country_flag = alliance_dwarves_men_voting_initiator
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm
@@ -7143,6 +7142,987 @@ country_event = {
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union
+			clr_global_flag = alliance_of_dwarves_and_men_in_voting
+			clr_country_flag = alliance_dwarves_men_voted_for
+			clr_country_flag = alliance_dwarves_men_abstained
+			clr_country_flag = alliance_dwarves_men_voted_against
+		}
+	}
+}
+
+# Voting Handler
+country_event = {
+	id = 110150
+	title = "Alliance of Dwarves and Men Voting Handler"
+	desc = ""
+	picture = "organization/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fire Voting"
+		
+		set_global_flag = alliance_of_dwarves_and_men_in_voting
+		
+		random_country = {
+			limit = { has_country_flag = alliance_dwarves_men_voting_initiator } # The "aggressor"
+			country_event = { id = 110151 days = 3 } # The strategy that the initator will use to influence the AI TODO: Make
+		}
+		
+		random_country = {
+			limit = { has_country_flag = alliance_dwarves_men_selected_country } # The "defender"
+			country_event = { id = 110151 days = 3 } # The strategy that the defender will use to influence the AI TODO: Make
+		}
+		
+		country_event = { id = 110152 days = 7 } # Handler 2
+	}
+}
+
+# Voting Handler 2
+country_event = {
+	id = 110152
+	title = "Alliance of Dwarves and Men Voting Handler 2"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fire Voting"
+		
+		country_event = { id = 110175 days = 0 } # Voting Loc Setting
+		
+		# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+		# Cannot call 400000 as it will not fire in the necessary order
+		any_country = {
+			clr_country_flag = dynamic_loc_potential_country_target
+			clr_country_flag = dynamic_loc_country_target_1
+		}
+		
+		set_variable = { which = dynamic_loc_country_count value = 0 }
+		
+		# Resets the naming count
+		set_variable = { which = dynamic_loc_names value = 0 }
+	
+		random_country = {
+			limit = { has_country_flag = alliance_dwarves_men_selected_country }
+			FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			set_country_flag = dynamic_loc_potential_country_target
+		}
+		
+		country_event = 300000 # Country Loc Setting
+		
+		country_event = 110153 # Hander 3 (to make sure that loc shows up correctly)
+	}
+}
+
+# Voting Handler 3
+country_event = {
+	id = 110153
+	title = "Alliance of Dwarves and Men Voting Handler 3"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fire Voting"
+		
+		# Reset the voting count
+		set_variable = { which = alliance_dwarves_men_voting_results value = 0 }
+		set_variable = { which = alliance_dwarves_men_total_for value = 0 }
+		set_variable = { which = alliance_dwarves_men_total_abstained value = 0 }
+		set_variable = { which = alliance_dwarves_men_total_against value = 0 }
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no # There shouldn't be any. But just in case
+			}
+			country_event = 110154
+		}
+	}
+}
+
+# Individual Voting
+country_event = {
+	id = 110154
+	title = "  Alliance of Dwarves and Men Voting"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_3"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union } }
+			end_color_loc = {}
+			railroading_tag_specific_description_loc_1 = {}
+			dynamic_loc_country_slot_1 = {}
+			railroading_tag_specific_description_loc_2 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			railroading_tag_specific_description_loc_3 = {}
+			railroading_tag_specific_description_loc_4 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_option_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_option_slot_2 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_option_slot_3 = {}
+			empty_line_loc = {}
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		# Vote for
+		FOR = {
+			change_variable = { which = alliance_dwarves_men_voting_results value = 1 }
+			change_variable = { which = alliance_dwarves_men_total_for value = 1 }
+		}
+		set_country_flag = alliance_dwarves_men_voted_for
+		
+		random_owned = {
+			limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
+			owner = { FOR = { country_event = 110155 } } # Calculate the results
+		}
+		
+		ai_chance = {
+			factor = 33
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		# Doesn't vote
+		FOR = { change_variable = { which = alliance_dwarves_men_total_abstained value = 1 } }
+		set_country_flag = alliance_dwarves_men_abstained
+		
+		random_owned = {
+			limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
+			owner = { FOR = { country_event = 110155 } } # Calculate the results
+		}
+		
+		ai_chance = {
+			factor = 33
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		# Vote against
+		FOR = {
+			change_variable = { which = alliance_dwarves_men_voting_results value = -1 }
+			change_variable = { which = alliance_dwarves_men_total_against value = 1 }
+		}
+		set_country_flag = alliance_dwarves_men_voted_against
+		
+		random_owned = {
+			limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
+			owner = { FOR = { country_event = 110155 } } # Calculate the results
+		}
+		
+		ai_chance = {
+			factor = 33
+		}
+	}
+}
+
+# Calculating Vote 1 -- countries 1 - 8 (for)
+country_event = {
+	id = 110155
+	title = "  Alliance of Dwarves and Men Calculating Vote 1"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ""
+		
+		# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+		# Cannot call 400000 as it will not fire in the necessary order
+		any_country = {
+			clr_country_flag = dynamic_loc_potential_country_target
+			clr_country_flag = dynamic_loc_country_target_1
+			clr_country_flag = dynamic_loc_country_target_2
+			clr_country_flag = dynamic_loc_country_target_3
+			clr_country_flag = dynamic_loc_country_target_4
+			clr_country_flag = dynamic_loc_country_target_5
+			clr_country_flag = dynamic_loc_country_target_6
+			clr_country_flag = dynamic_loc_country_target_7
+			clr_country_flag = dynamic_loc_country_target_8
+		}
+		
+		set_variable = { which = dynamic_loc_country_count value = 0 }
+		
+		# Resets the naming count
+		set_variable = { which = dynamic_loc_names value = 0 }
+	
+		any_country = {
+			limit = { has_country_flag = alliance_dwarves_men_voted_for }
+			FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			set_country_flag = dynamic_loc_potential_country_target
+		}
+		
+		country_event = 300000 # Country Loc Setting
+		
+		country_event = 110156 # Calculating Vote 2
+	}
+}
+
+# Calculating Vote 2 -- countries 9 - 16 (abstain)
+country_event = {
+	id = 110156
+	title = "  Alliance of Dwarves and Men Calculating Vote 2"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ""
+		
+		# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+		# Cannot call 400000 as it will not fire in the necessary order
+		any_country = {
+			clr_country_flag = dynamic_loc_potential_country_target
+			clr_country_flag = dynamic_loc_country_target_9
+			clr_country_flag = dynamic_loc_country_target_10
+			clr_country_flag = dynamic_loc_country_target_11
+			clr_country_flag = dynamic_loc_country_target_12
+			clr_country_flag = dynamic_loc_country_target_13
+			clr_country_flag = dynamic_loc_country_target_14
+			clr_country_flag = dynamic_loc_country_target_15
+			clr_country_flag = dynamic_loc_country_target_16
+		}
+		
+		set_variable = { which = dynamic_loc_country_count value = 8 }
+		
+		# Resets the naming count
+		set_variable = { which = dynamic_loc_names value = 8 }
+	
+		any_country = {
+			limit = { has_country_flag = alliance_dwarves_men_abstained }
+			FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			set_country_flag = dynamic_loc_potential_country_target
+		}
+		
+		country_event = 300000 # Country Loc Setting
+		
+		country_event = 110157 # Calculating Vote 3
+	}
+}
+
+# Calculating Vote 3 -- countries 17 - 24 (against)
+country_event = {
+	id = 110157
+	title = "  Alliance of Dwarves and Men Calculating Vote 3"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ""
+		
+		# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
+		# Cannot call 400000 as it will not fire in the necessary order
+		any_country = {
+			clr_country_flag = dynamic_loc_potential_country_target
+			clr_country_flag = dynamic_loc_country_target_17
+			clr_country_flag = dynamic_loc_country_target_18
+			clr_country_flag = dynamic_loc_country_target_19
+			clr_country_flag = dynamic_loc_country_target_20
+			clr_country_flag = dynamic_loc_country_target_21
+			clr_country_flag = dynamic_loc_country_target_22
+			clr_country_flag = dynamic_loc_country_target_23
+			clr_country_flag = dynamic_loc_country_target_24
+		}
+		
+		set_variable = { which = dynamic_loc_country_count value = 16 }
+		
+		# Resets the naming count
+		set_variable = { which = dynamic_loc_names value = 16 }
+	
+		any_country = {
+			limit = { has_country_flag = alliance_dwarves_men_voted_against }
+			FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
+			set_country_flag = dynamic_loc_potential_country_target
+		}
+		
+		country_event = 300000 # Country Loc Setting
+		
+		country_event = 110158 # Calculating Vote 4 (to make sure that loc shows up correctly)
+	}
+}
+
+# Calculating Vote 4 -- description and firing for the player(s)
+country_event = {
+	id = 110158
+	title = "  Alliance of Dwarves and Men Calculating Vote 4"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ""
+		
+		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "The vote is in! With a vote of" } }
+		railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = ", the resolution of" } }
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union } }
+			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "create an economic union" } } }
+		}
+		random_owned = {
+			limit = { owner = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+			owner = { railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "has passed!" } } }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } } }
+			owner = { railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "has failed!" } } }
+		}
+		railroading_tag_specific_description_loc_5 = { state_scope = { change_region_name = "The following realms voted for the resolution|" } }
+		railroading_tag_specific_description_loc_6 = { state_scope = { change_region_name = "The following realms voted against the resolution|" } }
+		railroading_tag_specific_description_loc_7 = { state_scope = { change_region_name = "The following realms abstained|" } }
+		dynamic_loc_option_slot_1 = { state_scope = { change_region_name = "Good" } }
+		dynamic_loc_option_slot_2 = { state_scope = { change_region_name = "Drat" } }
+		dynamic_loc_option_slot_3 = { state_scope = { change_region_name = "Okay" } }
+		
+		any_country = {
+			limit = {
+				ai = no
+				has_country_modifier = alliance_of_dwarves_and_men
+			}
+			country_event = 110159 # The results
+		}
+	}
+}
+
+# Voting Results
+country_event = {
+	id = 110159
+	title = "  Alliance of Dwarves and Men Voting Results"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
+		
+		random_owned = {
+			limit = { owner = { FOR = { NOT = { check_variable = { which = alliance_dwarves_men_total_for value = 0.9 } } } } }
+			zero_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_for value = 0.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_for value = 1.1 } }
+					}
+				}
+			}
+			one_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_for value = 1.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_for value = 2.1 } }
+					}
+				}
+			}
+			two_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_for value = 2.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_for value = 3.1 } }
+					}
+				}
+			}
+			three_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_for value = 3.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_for value = 4.1 } }
+					}
+				}
+			}
+			four_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_for value = 4.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_for value = 5.1 } }
+					}
+				}
+			}
+			five_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_for value = 5.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_for value = 6.1 } }
+					}
+				}
+			}
+			six_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_for value = 6.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_for value = 7.1 } }
+					}
+				}
+			}
+			seven_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 7.9 } } } }
+			eight_loc = {}
+		}
+		
+		hyphen_loc = {}
+		
+		random_owned = {
+			limit = { owner = { FOR = { NOT = { check_variable = { which = alliance_dwarves_men_total_against value = 0.9 } } } } }
+			zero_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_against value = 0.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_against value = 1.1 } }
+					}
+				}
+			}
+			one_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_against value = 1.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_against value = 2.1 } }
+					}
+				}
+			}
+			two_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_against value = 2.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_against value = 3.1 } }
+					}
+				}
+			}
+			three_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_against value = 3.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_against value = 4.1 } }
+					}
+				}
+			}
+			four_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_against value = 4.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_against value = 5.1 } }
+					}
+				}
+			}
+			five_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_against value = 5.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_against value = 6.1 } }
+					}
+				}
+			}
+			six_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_against value = 6.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_against value = 7.1 } }
+					}
+				}
+			}
+			seven_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 7.9 } } } }
+			eight_loc = {}
+		}
+		
+		hyphen_loc = {}
+		
+		random_owned = {
+			limit = { owner = { FOR = { NOT = { check_variable = { which = alliance_dwarves_men_total_abstained value = 0.9 } } } } }
+			zero_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_abstained value = 0.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_abstained value = 1.1 } }
+					}
+				}
+			}
+			one_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_abstained value = 1.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_abstained value = 2.1 } }
+					}
+				}
+			}
+			two_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_abstained value = 2.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_abstained value = 3.1 } }
+					}
+				}
+			}
+			three_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_abstained value = 3.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_abstained value = 4.1 } }
+					}
+				}
+			}
+			four_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_abstained value = 4.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_abstained value = 5.1 } }
+					}
+				}
+			}
+			five_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_abstained value = 5.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_abstained value = 6.1 } }
+					}
+				}
+			}
+			six_loc = {}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = {
+						check_variable = { which = alliance_dwarves_men_total_abstained value = 6.9 }
+						NOT = { check_variable = { which = alliance_dwarves_men_total_abstained value = 7.1 } }
+					}
+				}
+			}
+			seven_loc = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 7.9 } } } }
+			eight_loc = {}
+		}
+		
+		railroading_tag_specific_description_loc_2 = {}
+		railroading_tag_specific_description_loc_3 = {}
+		railroading_tag_specific_description_loc_4 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_5 = {}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 0.9 } } } }
+			dynamic_loc_country_slot_1 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 1.9 } } } }
+			dynamic_loc_country_slot_2 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 2.9 } } } }
+			dynamic_loc_country_slot_3 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 3.9 } } } }
+			dynamic_loc_country_slot_4 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 4.9 } } } }
+			dynamic_loc_country_slot_5 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 5.9 } } } }
+			dynamic_loc_country_slot_6 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 6.9 } } } }
+			dynamic_loc_country_slot_7 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 7.9 } } } }
+			dynamic_loc_country_slot_8 = {}
+		}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_6 = {}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 0.9 } } } }
+			dynamic_loc_country_slot_17 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 1.9 } } } }
+			dynamic_loc_country_slot_18 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 2.9 } } } }
+			dynamic_loc_country_slot_19 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 3.9 } } } }
+			dynamic_loc_country_slot_20 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 4.9 } } } }
+			dynamic_loc_country_slot_21 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 5.9 } } } }
+			dynamic_loc_country_slot_22 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 6.9 } } } }
+			dynamic_loc_country_slot_23 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 7.9 } } } }
+			dynamic_loc_country_slot_24 = {}
+		}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_7 = {}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 0.9 } } } }
+			dynamic_loc_country_slot_9 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 1.9 } } } }
+			dynamic_loc_country_slot_10 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 2.9 } } } }
+			dynamic_loc_country_slot_11 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 3.9 } } } }
+			dynamic_loc_country_slot_12 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 4.9 } } } }
+			dynamic_loc_country_slot_13 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 5.9 } } } }
+			dynamic_loc_country_slot_14 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 6.9 } } } }
+			dynamic_loc_country_slot_15 = {}
+		}
+		random_owned = {
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 7.9 } } } }
+			dynamic_loc_country_slot_16 = {}
+		}
+		
+		# 3 realms is enough to kick each list into the second line. We only want the extra whitespace when there's only one line
+		random_owned = {
+			limit = { owner = { NOT = { FOR = { check_variable = { which = alliance_dwarves_men_total_for value = 2.9 } } } } }
+			empty_line_loc = {}
+		}
+		
+		# 3 realms is enough to kick each list into the second line. We only want the extra whitespace when there's only one line
+		random_owned = {
+			limit = { owner = { NOT = { FOR = { check_variable = { which = alliance_dwarves_men_total_abstained value = 2.9 } } } } }
+			empty_line_loc = {}
+		}
+		
+		# 3 realms is enough to kick each list into the second line. We only want the extra whitespace when there's only one line
+		random_owned = {
+			limit = { owner = { NOT = { FOR = { check_variable = { which = alliance_dwarves_men_total_against value = 2.9 } } } } }
+			empty_line_loc = {}
+		}
+		
+		empty_line_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						AND = {
+							has_country_flag = alliance_dwarves_men_voted_for
+							FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
+						}
+						AND = {
+							has_country_flag = alliance_dwarves_men_voted_against
+							NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+						}
+					}
+				}
+			}
+			dynamic_loc_option_slot_1 = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						AND = {
+							has_country_flag = alliance_dwarves_men_voted_for
+							NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+						}
+						AND = {
+							has_country_flag = alliance_dwarves_men_voted_against
+							FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
+						}
+					}
+				}
+			}
+			dynamic_loc_option_slot_2 = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = alliance_dwarves_men_voted_for }
+					NOT = { has_country_flag = alliance_dwarves_men_voted_against }
+				}
+			}
+			dynamic_loc_option_slot_3 = {}
+		}
+	}
+	
+	option = {
+		name = ""
+		
+		FOR = { country_event = 110110 } # Alliance of Dwarves and Men Cleanup
+		FOR = { country_event = 402001 } # Dynamic Loc Cleanup
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
+				}
+			}
+			owner = {
+				set_global_flag = alliance_of_dwarves_and_men_economic_union
+				
+				random_owned = {
+					limit = { owner = { part_of_sphere = yes } }
+					owner = { country_event = 110160 } # Remove from sphere + add to sphere of GP alliance member
+				}
+				
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_greater_power = no
+					}
+					country_event = 110160 # Remove from sphere + add to sphere of GP alliance member
+				}
+			}
+		}
+	}
+}
+
+# Removing from sphere (Economic Union successful)
+country_event = {
+	id = 110160
+	title = "Alliance of Dwarves and Men Economic Union"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Economic Union Demands it"
+		
+		sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+		
+		random_country = {
+			limit = {
+				is_greater_power = yes
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_culture_group = THIS
+				rank = 1
+			}
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+		
+		random_country = {
+			limit = {
+				THIS = { part_of_sphere = no }
+				is_greater_power = yes
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_culture_group = THIS
+				rank = 2
+			}
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+		
+		random_country = {
+			limit = {
+				THIS = { part_of_sphere = no }
+				is_greater_power = yes
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_culture_group = THIS
+				rank = 3
+			}
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+		
+		random_country = {
+			limit = {
+				THIS = { part_of_sphere = no }
+				is_greater_power = yes
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_culture_group = THIS
+				rank = 4
+			}
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+		
+		random_country = {
+			limit = {
+				THIS = { part_of_sphere = no }
+				is_greater_power = yes
+				has_country_modifier = alliance_of_dwarves_and_men
+				rank = 1
+			}
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+		
+		random_country = {
+			limit = {
+				THIS = { part_of_sphere = no }
+				is_greater_power = yes
+				has_country_modifier = alliance_of_dwarves_and_men
+				rank = 2
+			}
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+		
+		random_country = {
+			limit = {
+				THIS = { part_of_sphere = no }
+				is_greater_power = yes
+				has_country_modifier = alliance_of_dwarves_and_men
+				rank = 3
+			}
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+		
+		random_country = {
+			limit = {
+				THIS = { part_of_sphere = no }
+				is_greater_power = yes
+				has_country_modifier = alliance_of_dwarves_and_men
+				rank = 4
+			}
+			diplomatic_influence = { who = THIS value = 400 }
+		}
+	}
+}
+
+# Description Localisation Setting
+country_event = {
+	id = 110175
+	title = "Alliance of Dwarves and Men Localisation Setter"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Set loc"
+		
+		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "After many days of deliberation, the time to vote has come." } }
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union } }
+			owner = {
+				railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "has proposed an economic union." } }
+				railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "§MThis will lock all alliance members into the sphere of the GPs within the alliance. If there are multiple GPs, alliance members will prefer to be in the sphere of a realm of their culture group.§!" } }
+				railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "§MIf there are any ties, rank will be the deciding factor.§!" } }
+				dynamic_loc_option_slot_1 = { state_scope = { change_region_name = "An economic union can only bring prosperity for all" } }
+				dynamic_loc_option_slot_2 = { state_scope = { change_region_name = "We will abstain" } }
+				dynamic_loc_option_slot_3 = { state_scope = { change_region_name = "This is clearly a play at gaining power over us" } }
+			}
 		}
 	}
 }
