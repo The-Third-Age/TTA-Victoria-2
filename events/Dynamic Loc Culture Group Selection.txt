@@ -1,0 +1,726 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
+# Dynamic Loc Culture Group Selection: {
+#	300002 - 300003 }
+country_event = {
+	id = 300002
+	title = "Dynamic Loc Culture Group Selection Handler"
+	desc = ""
+	is_triggered_only = yes
+	immediate = {
+		change_variable = { which = dynamic_loc_names value = 1 }
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 0.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 1.1 } }
+					check_variable = { which = dynamic_loc_culture_group_count value = 0.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300003
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 1.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 2.1 } }
+					check_variable = { which = dynamic_loc_culture_group_count value = 1.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300003
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 2.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 3.1 } }
+					check_variable = { which = dynamic_loc_culture_group_count value = 2.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300003
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 3.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 4.1 } }
+					check_variable = { which = dynamic_loc_culture_group_count value = 3.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300003
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 4.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 5.1 } }
+					check_variable = { which = dynamic_loc_culture_group_count value = 4.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300003
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 5.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 6.1 } }
+					check_variable = { which = dynamic_loc_culture_group_count value = 5.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300003
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 6.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 7.1 } }
+					check_variable = { which = dynamic_loc_culture_group_count value = 6.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300003
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 7.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 8.1 } }
+					check_variable = { which = dynamic_loc_culture_group_count value = 7.9 }
+					NOT = { check_variable = { which = dynamic_loc_culture_group_count value = 8.1 } }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300003
+					days = 0
+				}
+			}
+		}
+	}
+	option = {
+		name = ""
+	}
+}
+country_event = {
+	id = 300003
+	title = "Dynamic Loc Culture Group Selection Renaming"
+	desc = ""
+	is_triggered_only = yes
+	immediate = {
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 0.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 1.1 } }
+				}
+			}
+			dynamic_loc_culture_group_slot_1 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_culture_group_target }
+				set_country_flag = dynamic_loc_culture_group_target_1
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_culture_group_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 1.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 2.1 } }
+				}
+			}
+			dynamic_loc_culture_group_slot_2 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_culture_group_target }
+				set_country_flag = dynamic_loc_culture_group_target_2
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_culture_group_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 2.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 3.1 } }
+				}
+			}
+			dynamic_loc_culture_group_slot_3 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_culture_group_target }
+				set_country_flag = dynamic_loc_culture_group_target_3
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_culture_group_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 3.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 4.1 } }
+				}
+			}
+			dynamic_loc_culture_group_slot_4 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_culture_group_target }
+				set_country_flag = dynamic_loc_culture_group_target_4
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_culture_group_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 4.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 5.1 } }
+				}
+			}
+			dynamic_loc_culture_group_slot_5 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_culture_group_target }
+				set_country_flag = dynamic_loc_culture_group_target_5
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_culture_group_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 5.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 6.1 } }
+				}
+			}
+			dynamic_loc_culture_group_slot_6 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_culture_group_target }
+				set_country_flag = dynamic_loc_culture_group_target_6
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_culture_group_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 6.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 7.1 } }
+				}
+			}
+			dynamic_loc_culture_group_slot_7 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_culture_group_target }
+				set_country_flag = dynamic_loc_culture_group_target_7
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_culture_group_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names value = 7.9 }
+					NOT = { check_variable = { which = dynamic_loc_names value = 8.1 } }
+				}
+			}
+			dynamic_loc_culture_group_slot_8 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_culture_group_target }
+				set_country_flag = dynamic_loc_culture_group_target_8
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_culture_group_target
+			}
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = banker
+					}
+				}
+			}
+			state_scope = { change_region_name = "Banker" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = religions
+					}
+				}
+			}
+			state_scope = { change_region_name = "Cosmetic Race Cultures" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = good_evil
+					}
+				}
+			}
+			state_scope = { change_region_name = "Cosmetic Alignment Culture" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = boromir_culture
+					}
+				}
+			}
+			state_scope = { change_region_name = "Boromir General Portrait" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = faramir_culture
+					}
+				}
+			}
+			state_scope = { change_region_name = "Faramir General Portrait" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = madril_culture
+					}
+				}
+			}
+			state_scope = { change_region_name = "Madril General Portrait" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = bryn_culture
+					}
+				}
+			}
+			state_scope = { change_region_name = "Bryn General Portrait" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = girloth_culture
+					}
+				}
+			}
+			state_scope = { change_region_name = "Girloth General Portrait" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = dunedain
+					}
+				}
+			}
+			state_scope = { change_region_name = "Dúnedain" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = eldar
+					}
+				}
+			}
+			state_scope = { change_region_name = "Eldar" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = teleri
+					}
+				}
+			}
+			state_scope = { change_region_name = "Teleri" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = avari
+					}
+				}
+			}
+			state_scope = { change_region_name = "Avari" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = haradrim
+					}
+				}
+			}
+			state_scope = { change_region_name = "Haradrim" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = kingsmen
+					}
+				}
+			}
+			state_scope = { change_region_name = "Kingsmen" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = khandish
+					}
+				}
+			}
+			state_scope = { change_region_name = "Khandish" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = easterlings
+					}
+				}
+			}
+			state_scope = { change_region_name = "Easterlings" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = northmen
+					}
+				}
+			}
+			state_scope = { change_region_name = "Northmen" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = dwarves
+					}
+				}
+			}
+			state_scope = { change_region_name = "Dwarvish" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = wicked_dwarves
+					}
+				}
+			}
+			state_scope = { change_region_name = "Wicked Dwarves" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = anduinrim
+					}
+				}
+			}
+			state_scope = { change_region_name = "Anduinrim" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = ents
+					}
+				}
+			}
+			state_scope = { change_region_name = "Entish" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = wildmen
+					}
+				}
+			}
+			state_scope = { change_region_name = "Wildmen" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = rohirrim
+					}
+				}
+			}
+			state_scope = { change_region_name = "Rohirrim" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = uruk_hai
+					}
+				}
+			}
+			state_scope = { change_region_name = "Uruk-hai" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = mordorian
+					}
+				}
+			}
+			state_scope = { change_region_name = "Mordorian" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = northern_goblins
+					}
+				}
+			}
+			state_scope = { change_region_name = "Northern Goblins" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = angmarrim
+					}
+				}
+			}
+			state_scope = { change_region_name = "Angmarrim" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = lossoth
+					}
+				}
+			}
+			state_scope = { change_region_name = "Lossoth" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = breelander
+					}
+				}
+			}
+			state_scope = { change_region_name = "Breelander" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = hobbits
+					}
+				}
+			}
+			state_scope = { change_region_name = "Hobbits" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = trolls
+					}
+				}
+			}
+			state_scope = { change_region_name = "Troll" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = eagles
+					}
+				}
+			}
+			state_scope = { change_region_name = "Eagle" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = spiders
+					}
+				}
+			}
+			state_scope = { change_region_name = "Spider" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = {
+					any_neighbor_country = {
+						has_country_flag = dynamic_loc_slot_selector
+						is_culture_group = undead
+					}
+				}
+			}
+			state_scope = { change_region_name = "Undead" }
+		}
+		# Cleans up countries
+		any_country = { clr_country_flag = dynamic_loc_slot_selector }
+		# Cleans up sea provinces
+		dynamic_loc_slots = { remove_province_modifier = dynamic_loc_slot_selector }
+		# Go back to the handler
+		country_event = {
+			id = 300002
+			days = 0
+		}
+	}
+	option = {
+		name = ""
+	}
+}
