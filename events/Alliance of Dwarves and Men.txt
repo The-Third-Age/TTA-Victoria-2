@@ -8276,8 +8276,36 @@ country_event = {
 			}
 			owner = {
 				random_country = {
-					limit = { has_country_flag = alliance_dwarves_men_selected_country }
+					limit = {
+						has_country_flag = alliance_dwarves_men_selected_country
+						is_culture_group = teleri
+					}
 					add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+					set_global_flag = alliance_of_dwarves_and_men_accept_teleri
+				}
+				random_country = {
+					limit = {
+						has_country_flag = alliance_dwarves_men_selected_country
+						is_culture_group = avari
+					}
+					add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+					set_global_flag = alliance_of_dwarves_and_men_accept_avari
+				}
+				random_country = {
+					limit = {
+						has_country_flag = alliance_dwarves_men_selected_country
+						is_culture_group = anduinrim
+					}
+					add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+					set_global_flag = alliance_of_dwarves_and_men_accept_anduinrim
+				}
+				random_country = {
+					limit = {
+						has_country_flag = alliance_dwarves_men_selected_country
+						is_culture_group = rohirrim
+					}
+					add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+					set_global_flag = alliance_of_dwarves_and_men_accept_rohirrim
 				}
 			}
 		}
