@@ -7,6 +7,7 @@
 # TODO: Update invite realm and expand reach to consider if a realm cannot join due to the presence of a country modifier
 # TODO: Update ai chances to select various options
 # TODO: Putting realms in spheres seems broken
+# TODO: Add decision to request to join
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -240,6 +241,8 @@ country_event = {
 						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
 					}
 					
+					set_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
+					
 					country_event = 300000 # Country Loc Setting
 					
 					country_event = 110104 # Getting the callback
@@ -367,11 +370,11 @@ country_event = {
 				}
 			}
 			owner = {
+				set_country_flag = alliance_dwarves_men_voting_initiator
+				set_country_flag = alliance_dwarves_men_selected_country # The initiator is the "defender" in order to get the loc right
 				FOR = {
-					any_country = {
-						limit = { has_country_modifier = alliance_of_dwarves_and_men }
-						# TODO: Trigger voting
-					}
+					set_global_flag = alliance_of_dwarves_and_men_voting_on_political_union
+					country_event = 110150 # Voting Handler
 				}
 			}
 		}
@@ -485,79 +488,6 @@ country_event = {
 	
 	option = {
 		name = ""
-		
-		random_owned = {
-			limit = {
-				owner = {
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms }
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_core_dispute_menu }
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_can_access_invite_realm }
-					has_global_flag = alliance_of_dwarves_and_men_can_access_expand_cultural_reach
-				}
-			}
-			owner = {
-				set_country_flag = alliance_dwarves_men_voting_initiator
-				set_global_flag = alliances_of_dwarves_and_men_expand_cultural_reach
-				
-				FOR = {
-					set_variable = { which = dynamic_loc_country_count value = 0 }
-					
-					# Resets the naming count
-					set_variable = { which = dynamic_loc_names value = 0 }
-					
-					# Clears modifiers on the already selected regions (if the player hits "next", they definitely aren't attempting to choose any of the listed regions)
-					# Cannot call 400000 as it will not fire in the necessary order
-					any_country = {
-						clr_country_flag = dynamic_loc_potential_country_target
-						clr_country_flag = dynamic_loc_country_target_1
-						clr_country_flag = dynamic_loc_country_target_2
-						clr_country_flag = dynamic_loc_country_target_3
-						clr_country_flag = dynamic_loc_country_target_4
-						clr_country_flag = dynamic_loc_country_target_5
-						clr_country_flag = dynamic_loc_country_target_6
-						clr_country_flag = dynamic_loc_country_target_7
-						clr_country_flag = dynamic_loc_country_target_8
-					}
-					
-					any_neighbor_country = {
-						limit = {
-							rank = 12 # Great or Secondary power
-							capital_scope = { continent = europe } # Rhovanion
-							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
-							alliance_with = THIS
-							war = no
-							is_vassal = no
-							OR = {
-								AND = {
-									is_culture_group = teleri
-									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_teleri }
-								}
-								AND = {
-									is_culture_group = avari
-									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_avari }
-								}
-								AND = {
-									is_culture_group = anduinrim
-									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim }
-								}
-								AND = {
-									is_culture_group = rohirrim
-									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim }
-								}
-							}
-						}
-						set_country_flag = dynamic_loc_potential_country_target
-						FOR = { change_variable = { which = dynamic_loc_country_count value = 1 } }
-					}
-					
-					set_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach
-					
-					country_event = 300000 # Country Loc Setting
-					
-					country_event = 110104 # Getting the callback
-				}
-			}
-		}
 	}
 	
 	option = {
@@ -7323,6 +7253,7 @@ country_event = {
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union
 			clr_global_flag = alliance_of_dwarves_and_men_in_voting
@@ -7513,6 +7444,39 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		random_owned = {
+			limit = { owner { has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm } }
+			end_color_loc = {}
+			railroading_tag_specific_description_loc_1 = {}
+			dynamic_loc_country_slot_1 = {}
+			railroading_tag_specific_description_loc_2 = {}
+			dynamic_loc_country_slot_2 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			railroading_tag_specific_description_loc_3 = {}
+			dynamic_loc_country_slot_2 = {}
+			railroading_tag_specific_description_loc_4 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_option_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_option_slot_2 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_option_slot_3 = {}
+			empty_line_loc = {}
+			
+		}
+		
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach } }
 			end_color_loc = {}
@@ -7776,6 +7740,10 @@ country_event = {
 		
 		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "The vote is in! With a vote of" } }
 		railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = ", the resolution to" } }
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm } }
+			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "invite a new realm" } } }
+		}
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach } }
 			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "expand the alliance's cultural reach" } } }
@@ -8212,6 +8180,12 @@ country_event = {
 			empty_line_loc = {}
 		}
 		
+		# Some proposals are short enough to stay on one line
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm } }
+			empty_line_loc = {}
+		}
+		
 		empty_line_loc = {}
 		
 		random_owned = {
@@ -8270,6 +8244,21 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_selected_country }
+					country_event = 110163
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
 					has_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach
 					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
 				}
@@ -8280,7 +8269,7 @@ country_event = {
 						has_country_flag = alliance_dwarves_men_selected_country
 						is_culture_group = teleri
 					}
-					add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+					country_event = 110163
 					set_global_flag = alliance_of_dwarves_and_men_accept_teleri
 				}
 				random_country = {
@@ -8288,7 +8277,7 @@ country_event = {
 						has_country_flag = alliance_dwarves_men_selected_country
 						is_culture_group = avari
 					}
-					add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+					country_event = 110163
 					set_global_flag = alliance_of_dwarves_and_men_accept_avari
 				}
 				random_country = {
@@ -8296,7 +8285,7 @@ country_event = {
 						has_country_flag = alliance_dwarves_men_selected_country
 						is_culture_group = anduinrim
 					}
-					add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+					country_event = 110163
 					set_global_flag = alliance_of_dwarves_and_men_accept_anduinrim
 				}
 				random_country = {
@@ -8304,7 +8293,7 @@ country_event = {
 						has_country_flag = alliance_dwarves_men_selected_country
 						is_culture_group = rohirrim
 					}
-					add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+					country_event = 110163
 					set_global_flag = alliance_of_dwarves_and_men_accept_rohirrim
 				}
 			}
@@ -8438,6 +8427,30 @@ country_event = {
 
 # 110161 and 110162 used above. DO NOT USE AGAIN
 
+# Invitation to the Alliance
+country_event = {
+	id = 110163
+	title = "  An Invitation to the Alliance of Dwarves and Men"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_2"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Yes, we accept"
+		add_country_modifier = { name = alliance_of_dwarves_and_men duration = -1 }
+		
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = "No, we are strong on our own"
+		# TODO: Something about not being able to join/be invited for 10 years
+		
+		ai_chance = { factor = 0 }
+	}
+}
+
 # Description Localisation Setting
 country_event = {
 	id = 110175
@@ -8450,7 +8463,19 @@ country_event = {
 	option = {
 		name = "Set loc"
 		
-		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "After many days of deliberation, the time to vote has come." } }
+		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "After many days of deliberation, the time to vote has come. The" } }
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm } }
+			owner = {
+				railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "has proposed inviting the" } }
+				railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "§MThis will invite the" } }
+				railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "to the alliance. Assuming they accept, they will become full alliance members, being able to vote in all issues.§!" } }
+				dynamic_loc_option_slot_1 = { state_scope = { change_region_name = "There is strength in unity" } }
+				dynamic_loc_option_slot_2 = { state_scope = { change_region_name = "We will abstain" } }
+				dynamic_loc_option_slot_3 = { state_scope = { change_region_name = "No. Inviting a new realm will only weaken the alliance" } }
+			}
+		}
 		
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach } }
