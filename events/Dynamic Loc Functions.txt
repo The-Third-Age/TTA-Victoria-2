@@ -144,7 +144,9 @@ country_event = {
 		name = "Clean up"
 		
 		# Resets the counter so regions get properly loced
-		FOR = { set_variable = { which = dynamic_loc_names value = 0 } }
+		FOR = { set_variable = { which = dynamic_loc_names_country value = 0 } }
+		FOR = { set_variable = { which = dynamic_loc_names_region value = 0 } }
+		FOR = { set_variable = { which = dynamic_loc_names_culture_group value = 0 } }
 		
 		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "" } }
 		railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "" } }

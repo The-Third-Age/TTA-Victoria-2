@@ -9,12 +9,12 @@ country_event = {
 	desc = ""
 	is_triggered_only = yes
 	immediate = {
-		change_variable = { which = dynamic_loc_names value = 1 }
+		change_variable = { which = dynamic_loc_names_region value = 1 }
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 0.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 1.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 0.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 1.1 } }
 					check_variable = { which = dynamic_loc_region_count value = 0.9 }
 				}
 			}
@@ -28,8 +28,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 1.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 2.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 1.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 2.1 } }
 					check_variable = { which = dynamic_loc_region_count value = 1.9 }
 				}
 			}
@@ -43,8 +43,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 2.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 3.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 2.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 3.1 } }
 					check_variable = { which = dynamic_loc_region_count value = 2.9 }
 				}
 			}
@@ -58,8 +58,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 3.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 4.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 3.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 4.1 } }
 					check_variable = { which = dynamic_loc_region_count value = 3.9 }
 				}
 			}
@@ -73,8 +73,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 4.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 5.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 4.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 5.1 } }
 					check_variable = { which = dynamic_loc_region_count value = 4.9 }
 				}
 			}
@@ -88,8 +88,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 5.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 6.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 5.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 6.1 } }
 					check_variable = { which = dynamic_loc_region_count value = 5.9 }
 				}
 			}
@@ -103,8 +103,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 6.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 7.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 6.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 7.1 } }
 					check_variable = { which = dynamic_loc_region_count value = 6.9 }
 				}
 			}
@@ -118,8 +118,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 7.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 8.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 7.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 8.1 } }
 					check_variable = { which = dynamic_loc_region_count value = 7.9 }
 					NOT = { check_variable = { which = dynamic_loc_region_count value = 8.1 } }
 				}
@@ -145,8 +145,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 0.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 1.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 0.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 1.1 } }
 				}
 			}
 			dynamic_loc_region_slot_1 = {
@@ -176,8 +176,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 1.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 2.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 1.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 2.1 } }
 				}
 			}
 			dynamic_loc_region_slot_2 = {
@@ -207,8 +207,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 2.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 3.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 2.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 3.1 } }
 				}
 			}
 			dynamic_loc_region_slot_3 = {
@@ -238,8 +238,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 3.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 4.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 3.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 4.1 } }
 				}
 			}
 			dynamic_loc_region_slot_4 = {
@@ -269,8 +269,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 4.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 5.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 4.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 5.1 } }
 				}
 			}
 			dynamic_loc_region_slot_5 = {
@@ -300,8 +300,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 5.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 6.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 5.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 6.1 } }
 				}
 			}
 			dynamic_loc_region_slot_6 = {
@@ -331,8 +331,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 6.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 7.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 6.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 7.1 } }
 				}
 			}
 			dynamic_loc_region_slot_7 = {
@@ -362,8 +362,8 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					check_variable = { which = dynamic_loc_names value = 7.9 }
-					NOT = { check_variable = { which = dynamic_loc_names value = 8.1 } }
+					check_variable = { which = dynamic_loc_names_region value = 7.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_region value = 8.1 } }
 				}
 			}
 			dynamic_loc_region_slot_8 = {
