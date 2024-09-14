@@ -8,6 +8,7 @@
 # TODO: Update ai chances to select various options
 # TODO: Putting realms in spheres seems broken
 # TODO: Add decision to request to join
+# TODO: https://discord.com/channels/689466155978588176/1001022452987596841/1282554128169570396
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -20,6 +21,27 @@ country_event = {
 	picture = "organizations/alliance_dwarves_men_2"
 	
 	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_2 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		railroading_tag_specific_description_loc_3 = {}
+		maroon_color_loc = {}
+		dynamic_loc_culture_group_slot_3 = {}
+		dynamic_loc_culture_group_slot_4 = {}
+		dynamic_loc_culture_group_slot_5 = {}
+		dynamic_loc_culture_group_slot_6 = {}
+		dynamic_loc_culture_group_slot_7 = {}
+		dynamic_loc_culture_group_slot_8 = {}
+		end_color_loc = {}
+	}
 	
 	option = {
 		name = "§MLeave Alliance§!"
@@ -60,7 +82,7 @@ country_event = {
 # Alliance of Dwarves and Men Main Menu - 1 option
 country_event = {
 	id = 110001
-	title = "  Alliance of Dwarves and Men"
+	title = "  Alliance of Dwarves and Men¤"
 	desc = ""
 	picture = "organizations/alliance_dwarves_men_3"
 	
@@ -68,13 +90,23 @@ country_event = {
 	
 	immediate = {
 		end_color_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
+		railroading_tag_specific_description_loc_2 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
+		railroading_tag_specific_description_loc_3 = {}
+		maroon_color_loc = {}
+		dynamic_loc_culture_group_slot_3 = {}
+		dynamic_loc_culture_group_slot_4 = {}
+		dynamic_loc_culture_group_slot_5 = {}
+		dynamic_loc_culture_group_slot_6 = {}
+		dynamic_loc_culture_group_slot_7 = {}
+		dynamic_loc_culture_group_slot_8 = {}
+		end_color_loc = {}
 		empty_line_loc = {}
 		
 		random_owned = {
@@ -130,22 +162,31 @@ country_event = {
 	option = {
 		name = ""
 		
+		set_global_flag = hidden_effects
+		
 		random_owned = { # Call to Arms will always be first, so if the flag is present, we can assume that it is showing up in the first slot
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_call_to_arms } }
 			
 			owner = {
-				any_country = {
-					limit = {
-						has_country_modifier = alliance_of_dwarves_and_men
-						is_vassal = no # There shouldn't be any. But just in case
-						NOT = { tag = THIS }
+				random_owned = {
+					limit = { owner = { has_global_flag = hidden_effects } }
+					owner = {
+						any_country = {
+							limit = {
+								has_country_modifier = alliance_of_dwarves_and_men
+								is_vassal = no # There shouldn't be any. But just in case
+								NOT = { tag = THIS }
+							}
+							create_alliance = THIS
+							relation = { who = THIS value = 400 }
+						}
+						
+						FOR = { country_event = 110101 }
 					}
-					create_alliance = THIS
-					relation = { who = THIS value = 400 }
 				}
-				
-				FOR = { country_event = 110101 }
 			}
+			
+			call_allies_tooltip_loc = {}
 		}
 		
 		random_owned = {
@@ -378,6 +419,8 @@ country_event = {
 				}
 			}
 		}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
@@ -427,13 +470,23 @@ country_event = {
 	
 	immediate = {
 		end_color_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
+		railroading_tag_specific_description_loc_2 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
+		railroading_tag_specific_description_loc_3 = {}
+		maroon_color_loc = {}
+		dynamic_loc_culture_group_slot_3 = {}
+		dynamic_loc_culture_group_slot_4 = {}
+		dynamic_loc_culture_group_slot_5 = {}
+		dynamic_loc_culture_group_slot_6 = {}
+		dynamic_loc_culture_group_slot_7 = {}
+		dynamic_loc_culture_group_slot_8 = {}
+		end_color_loc = {}
 		empty_line_loc = {}
 		
 		random_owned = {
@@ -541,13 +594,23 @@ country_event = {
 	
 	immediate = {
 		end_color_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
+		railroading_tag_specific_description_loc_2 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
+		railroading_tag_specific_description_loc_3 = {}
+		maroon_color_loc = {}
+		dynamic_loc_culture_group_slot_3 = {}
+		dynamic_loc_culture_group_slot_4 = {}
+		dynamic_loc_culture_group_slot_5 = {}
+		dynamic_loc_culture_group_slot_6 = {}
+		dynamic_loc_culture_group_slot_7 = {}
+		dynamic_loc_culture_group_slot_8 = {}
+		end_color_loc = {}
 		empty_line_loc = {}
 		
 		random_owned = {
@@ -659,13 +722,23 @@ country_event = {
 	
 	immediate = {
 		end_color_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
+		railroading_tag_specific_description_loc_2 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
+		railroading_tag_specific_description_loc_3 = {}
+		maroon_color_loc = {}
+		dynamic_loc_culture_group_slot_3 = {}
+		dynamic_loc_culture_group_slot_4 = {}
+		dynamic_loc_culture_group_slot_5 = {}
+		dynamic_loc_culture_group_slot_6 = {}
+		dynamic_loc_culture_group_slot_7 = {}
+		dynamic_loc_culture_group_slot_8 = {}
+		end_color_loc = {}
 		empty_line_loc = {}
 		
 		random_owned = {
@@ -781,13 +854,23 @@ country_event = {
 	
 	immediate = {
 		end_color_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
+		railroading_tag_specific_description_loc_2 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
+		railroading_tag_specific_description_loc_3 = {}
+		maroon_color_loc = {}
+		dynamic_loc_culture_group_slot_3 = {}
+		dynamic_loc_culture_group_slot_4 = {}
+		dynamic_loc_culture_group_slot_5 = {}
+		dynamic_loc_culture_group_slot_6 = {}
+		dynamic_loc_culture_group_slot_7 = {}
+		dynamic_loc_culture_group_slot_8 = {}
+		end_color_loc = {}
 		empty_line_loc = {}
 		
 		random_owned = {
@@ -907,13 +990,23 @@ country_event = {
 	
 	immediate = {
 		end_color_loc = {}
+		railroading_tag_specific_description_loc_1 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
+		railroading_tag_specific_description_loc_2 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
-		empty_line_loc = {}
+		railroading_tag_specific_description_loc_3 = {}
+		maroon_color_loc = {}
+		dynamic_loc_culture_group_slot_3 = {}
+		dynamic_loc_culture_group_slot_4 = {}
+		dynamic_loc_culture_group_slot_5 = {}
+		dynamic_loc_culture_group_slot_6 = {}
+		dynamic_loc_culture_group_slot_7 = {}
+		dynamic_loc_culture_group_slot_8 = {}
+		end_color_loc = {}
 		empty_line_loc = {}
 		
 		random_owned = {
@@ -6473,6 +6566,29 @@ country_event = {
 	option = {
 		name = "Continue"
 		
+		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "Depending on the state of Middle Earth and the alliance, you may be able to call allies to war, dispute cores, invite realms and culture groups to the alliance, access flavor specific to your realm and alliance, or propose economic and political unions." } }
+		railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "In order to invite realms, you need to have an alliance, and the realm in question must be one of the accepted cultures groups of the alliance." } }
+		railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "The accepted culture groups are|" } }
+		# Using the higher numbers to make sure there's no overlap
+		dynamic_loc_culture_group_slot_3 = { state_scope = { change_region_name = "Dwarven" } }
+		dynamic_loc_culture_group_slot_4 = { state_scope = { change_region_name = "Northmen" } }
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_teleri } }
+			dynamic_loc_culture_group_slot_5 = { state_scope = { change_region_name = "Teleri" } }
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_avari } }
+			dynamic_loc_culture_group_slot_6 = { state_scope = { change_region_name = "Avari" } }
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim } }
+			dynamic_loc_culture_group_slot_7 = { state_scope = { change_region_name = "Anduinrim" } }
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim } }
+			dynamic_loc_culture_group_slot_8 = { state_scope = { change_region_name = "Rohirrim" } }
+		}
+		
 		# Setup Request Return of Cores {
 		FROM = {
 			all_core = { 
@@ -7445,7 +7561,7 @@ country_event = {
 	
 	immediate = {
 		random_owned = {
-			limit = { owner { has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm } }
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm } }
 			end_color_loc = {}
 			railroading_tag_specific_description_loc_1 = {}
 			dynamic_loc_country_slot_1 = {}
