@@ -4,7 +4,6 @@
 # TODO: Loc some of these events (like the main menus)
 # TODO: Setup the post-country selection effects for the core dispute options (voting)
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
-# TODO: Update invite realm and expand reach to consider if a realm cannot join due to the presence of a country modifier
 # TODO: Update ai chances to select various options
 # TODO: Putting realms in spheres seems broken
 # TODO: Add decision to request to join
@@ -69,12 +68,19 @@ country_event = {
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
-		# TODO: Remove all targetting province modifiers and country flags
-		# TODO: Add some modifier about not being able to rejoin for 10 years
+		# Clear out any sort of voting modifiers
+		any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+		clr_country_flag = alliance_dwarves_men_selected_country
+		clr_country_flag = alliance_dwarves_men_voting_initiator
+		
+		# Prevents rejoining for 10 years
+		add_country_modifier = { name = alliance_of_dwarves_and_men_cannot_join duration = 3650 }
 	}
 	
 	option = {
 		name = "§RExit§!"
+		
+		FOR = { country_event = 402001 } # Dynamic Loc Cleanup
 	}
 }
 
@@ -249,6 +255,7 @@ country_event = {
 						limit = {
 							capital_scope = { continent = europe } # Rhovanion
 							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+							NOT = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join }
 							alliance_with = THIS
 							war = no
 							OR = {
@@ -328,6 +335,7 @@ country_event = {
 							rank = 12 # Great or Secondary power
 							capital_scope = { continent = europe } # Rhovanion
 							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+							NOT = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join }
 							alliance_with = THIS
 							war = no
 							is_vassal = no
@@ -449,8 +457,13 @@ country_event = {
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
-		# TODO: Remove all targetting province modifiers and country flags
-		# TODO: Add some modifier about not being able to rejoin for 10 years
+		# Clear out any sort of voting modifiers
+		any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+		clr_country_flag = alliance_dwarves_men_selected_country
+		clr_country_flag = alliance_dwarves_men_voting_initiator
+		
+		# Prevents rejoining for 10 years
+		add_country_modifier = { name = alliance_of_dwarves_and_men_cannot_join duration = 3650 }
 	}
 	
 	option = {
@@ -575,8 +588,13 @@ country_event = {
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
-		# TODO: Remove all targetting province modifiers and country flags
-		# TODO: Add some modifier about not being able to rejoin for 10 years
+		# Clear out any sort of voting modifiers
+		any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+		clr_country_flag = alliance_dwarves_men_selected_country
+		clr_country_flag = alliance_dwarves_men_voting_initiator
+		
+		# Prevents rejoining for 10 years
+		add_country_modifier = { name = alliance_of_dwarves_and_men_cannot_join duration = 3650 }
 	}
 	
 	option = {
@@ -705,8 +723,13 @@ country_event = {
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
-		# TODO: Remove all targetting province modifiers and country flags
-		# TODO: Add some modifier about not being able to rejoin for 10 years
+		# Clear out any sort of voting modifiers
+		any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+		clr_country_flag = alliance_dwarves_men_selected_country
+		clr_country_flag = alliance_dwarves_men_voting_initiator
+		
+		# Prevents rejoining for 10 years
+		add_country_modifier = { name = alliance_of_dwarves_and_men_cannot_join duration = 3650 }
 	}
 	
 	option = {
@@ -839,8 +862,13 @@ country_event = {
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
-		# TODO: Remove all targetting province modifiers and country flags
-		# TODO: Add some modifier about not being able to rejoin for 10 years
+		# Clear out any sort of voting modifiers
+		any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+		clr_country_flag = alliance_dwarves_men_selected_country
+		clr_country_flag = alliance_dwarves_men_voting_initiator
+		
+		# Prevents rejoining for 10 years
+		add_country_modifier = { name = alliance_of_dwarves_and_men_cannot_join duration = 3650 }
 	}
 	
 	option = {
@@ -977,8 +1005,13 @@ country_event = {
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
-		# TODO: Remove all targetting province modifiers and country flags
-		# TODO: Add some modifier about not being able to rejoin for 10 years
+		# Clear out any sort of voting modifiers
+		any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+		clr_country_flag = alliance_dwarves_men_selected_country
+		clr_country_flag = alliance_dwarves_men_voting_initiator
+		
+		# Prevents rejoining for 10 years
+		add_country_modifier = { name = alliance_of_dwarves_and_men_cannot_join duration = 3650 }
 	}
 	
 	option = {
@@ -1119,8 +1152,13 @@ country_event = {
 			remove_country_modifier = alliance_of_dwarves_and_men
 		}
 		
-		# TODO: Remove all targetting province modifiers and country flags
-		# TODO: Add some modifier about not being able to rejoin for 10 years
+		# Clear out any sort of voting modifiers
+		any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+		clr_country_flag = alliance_dwarves_men_selected_country
+		clr_country_flag = alliance_dwarves_men_voting_initiator
+		
+		# Prevents rejoining for 10 years
+		add_country_modifier = { name = alliance_of_dwarves_and_men_cannot_join duration = 3650 }
 	}
 	
 	option = {
@@ -6653,7 +6691,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					OR = {
 						# Resolve Conflicting Cores
 						has_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
@@ -6683,10 +6721,11 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					any_neighbor_country = {
 						capital_scope = { continent = europe } # Rhovanion
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+						NOT = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join }
 						alliance_with = FROM
 						war = no
 						is_vassal = no
@@ -6727,11 +6766,12 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					any_neighbor_country = {
 						rank = 12 # Great or Secondary power
 						capital_scope = { continent = europe } # Rhovanion
 						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+						NOT = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join }
 						alliance_with = FROM
 						war = no
 						is_vassal = no
@@ -6766,7 +6806,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					FROM = {
 						OR = {
 							AND = { # Settle the Cores of Dahdrik's Gap
@@ -6815,7 +6855,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					FROM = { is_greater_power = yes }
 					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
 					NOT = { has_global_flag = alliance_of_dwarves_and_men_economic_union }
@@ -6831,7 +6871,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_in_voting } # Only want to have the potential for one voting resolution at once
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					FROM = { is_greater_power = yes }
 					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
 					has_global_flag = alliance_of_dwarves_and_men_economic_union
@@ -7403,19 +7443,44 @@ country_event = {
 	option = {
 		name = "Fire Voting"
 		
-		set_global_flag = alliance_of_dwarves_and_men_in_voting
-		
-		random_country = {
-			limit = { has_country_flag = alliance_dwarves_men_voting_initiator } # The "aggressor"
-			country_event = { id = 110151 days = 3 } # The strategy that the initator will use to influence the AI TODO: Make
+		# If there's no voting initator or selected country, something went wrong. Don't proceed to voting
+		random_owned = {
+			limit = {
+				OR = {
+					NOT = { FOR = { any_neighbor_country = { has_country_flag = alliance_dwarves_men_voting_initiator } } }
+					NOT = { FOR = { any_neighbor_country = { has_country_flag = alliance_dwarves_men_selected_country } } }
+				}
+			}
+			owner = {
+				FOR = { country_event = 110110 } # Alliance of Dwarves and Men Cleanup
+				FOR = { country_event = 402001 } # Dynamic Loc Cleanup
+			}
 		}
 		
-		random_country = {
-			limit = { has_country_flag = alliance_dwarves_men_selected_country } # The "defender"
-			country_event = { id = 110151 days = 3 } # The strategy that the defender will use to influence the AI TODO: Make
+		random_owned = {
+			limit = {
+				FOR = { any_neighbor_country = { has_country_flag = alliance_dwarves_men_voting_initiator } }
+				FOR = { any_neighbor_country = { has_country_flag = alliance_dwarves_men_selected_country } }
+			}
+			owner = {
+				set_global_flag = alliance_of_dwarves_and_men_in_voting
+				FOR = { add_country_modifier = { name = alliance_of_dwarves_and_men_recently_voted duration = 30 } }
+				
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_voting_initiator } # The "aggressor"
+					country_event = { id = 110151 days = 0 } # The strategy that the initator will use to influence the AI TODO: Make
+				}
+				
+				# TODO: For things where there isn't a defender, it doesn't make sense to fire this for the defender
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_selected_country } # The "defender"
+					country_event = { id = 110151 days = 0 } # The strategy that the defender will use to influence the AI TODO: Make
+				}
+				
+				# TODO: Change this to 15 days between initiating and voting
+				country_event = { id = 110152 days = 7 } # Handler 2
+			}
 		}
-		
-		country_event = { id = 110152 days = 7 } # Handler 2
 	}
 }
 
@@ -8572,7 +8637,9 @@ country_event = {
 	
 	option = {
 		name = "No, we are strong on our own"
-		# TODO: Something about not being able to join/be invited for 10 years
+		
+		# Prevents rejoining for 10 years
+		add_country_modifier = { name = alliance_of_dwarves_and_men_cannot_join duration = 3650 }
 		
 		ai_chance = { factor = 0 }
 	}
