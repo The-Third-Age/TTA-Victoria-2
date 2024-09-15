@@ -1,7 +1,8 @@
 # Remove this line to have the validator check for strings in localisation
 # Audax Validator "!" Ignore_1004
 
-# TODO: Setup the post-country selection effects for the core dispute options (voting)
+# TODO: Setup specific flavor effects
+# TODO: Have return cores skip voting (update to country selection)
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update ai chances to select various options
 # TODO: Putting realms in spheres seems broken
@@ -1361,9 +1362,9 @@ country_event = {
 			FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
 			
 			# Shouldn' be any global flags around. But just in case
-			clr_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores
-			clr_global_flag = alliances_of_dwarves_and_men_requesting_return_of_cores
-			clr_global_flag = alliances_of_dwarves_and_men_returning_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
 		}
 		
 		clr_global_flag = hidden_effects
@@ -1384,7 +1385,7 @@ country_event = {
 					limit = { has_global_flag = hidden_effects }
 					owner = {
 						set_country_flag = alliance_dwarves_men_voting_initiator
-						set_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
 						
 						FOR = {
 							set_variable = { which = dynamic_loc_region_count value = 0 }
@@ -1433,8 +1434,8 @@ country_event = {
 					limit = { has_global_flag = hidden_effects }
 					owner = {
 						set_country_flag = alliance_dwarves_men_voting_initiator
-						set_global_flag = alliances_of_dwarves_and_men_requesting_return_of_cores
-							
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						
 						# Sets the targeting modifier on every core of THIS where the owner is not us and is part of the organization
 						all_core = {
 							limit = {
@@ -1490,7 +1491,7 @@ country_event = {
 					limit = { has_global_flag = hidden_effects }
 					owner = {
 						set_country_flag = alliance_dwarves_men_voting_initiator
-						set_global_flag = alliances_of_dwarves_and_men_returning_cores
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
 						
 						any_owned = {
 							limit = {
@@ -1601,9 +1602,9 @@ country_event = {
 			FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
 			
 			# Shouldn' be any global flags around. But just in case
-			clr_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores
-			clr_global_flag = alliances_of_dwarves_and_men_requesting_return_of_cores
-			clr_global_flag = alliances_of_dwarves_and_men_returning_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
 		}
 		
 		clr_global_flag = hidden_effects
@@ -1683,9 +1684,9 @@ country_event = {
 			FOR = { random_owned = { any_neighbor_province = { remove_province_modifier = dynamic_loc_potential_region_target } } }
 			
 			# Shouldn' be any global flags around. But just in case
-			clr_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores
-			clr_global_flag = alliances_of_dwarves_and_men_requesting_return_of_cores
-			clr_global_flag = alliances_of_dwarves_and_men_returning_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
 		}
 		
 		clr_global_flag = hidden_effects
@@ -1784,7 +1785,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -1927,7 +1928,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -2023,7 +2024,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -2170,7 +2171,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -2265,7 +2266,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -2361,7 +2362,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -2512,7 +2513,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -2607,7 +2608,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -2703,7 +2704,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -2798,7 +2799,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -2953,7 +2954,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3048,7 +3049,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3144,7 +3145,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3239,7 +3240,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3334,7 +3335,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3493,7 +3494,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3588,7 +3589,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3684,7 +3685,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3779,7 +3780,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3874,7 +3875,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -3969,7 +3970,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -4132,7 +4133,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -4227,7 +4228,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -4323,7 +4324,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -4418,7 +4419,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -4513,7 +4514,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -4608,7 +4609,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -4703,7 +4704,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -4870,7 +4871,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -4965,7 +4966,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -5061,7 +5062,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -5156,7 +5157,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -5251,7 +5252,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -5346,7 +5347,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -5441,7 +5442,7 @@ country_event = {
 					# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 					
 					random_owned = {
-						limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+						limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 						owner = {
 							any_neighbor_country = {
 								limit = {
@@ -5540,7 +5541,7 @@ country_event = {
 							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
 							
 							random_owned = {
-								limit = { owner = { has_global_flag = alliances_of_dwarves_and_men_resolving_conflicting_cores } }
+								limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
 								owner = {
 									any_neighbor_country = {
 										limit = {
@@ -8705,9 +8706,13 @@ country_event = {
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_political_union
 			clr_global_flag = alliance_of_dwarves_and_men_in_voting
 			clr_country_flag = alliance_dwarves_men_voted_for
 			clr_country_flag = alliance_dwarves_men_abstained
@@ -8845,7 +8850,7 @@ country_event = {
 	}
 }
 
-# Voting Handler 4 -- sets the defender's culture group to dynamic loc slot 3 -- FIRES FOR FOR, NO NEED TO LOC
+# Voting Handler 4 -- sets the defender's culture group to dynamic loc slot 3, target region to dynamic loc slot 4 -- FIRES FOR FOR, NO NEED TO LOC
 country_event = {
 	id = 110162
 	title = "Alliance of Dwarves and Men Voting Handler 4"
@@ -8878,6 +8883,20 @@ country_event = {
 		}
 		
 		country_event = 300002 # Culture Group Loc Setting
+		
+		set_variable = { which = dynamic_loc_region_count value = 4 }
+		
+		# Resets the naming count
+		set_variable = { which = dynamic_loc_names_region value = 3 } # First two already set by countries, third set by defender culture group
+		
+		random_owned = {
+			random_neighbor_province = {
+				limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+				add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+			}
+		}
+		
+		country_event = 300008 # Region Loc Setting
 		
 		country_event = 110153 # Hander 5 (to make sure that loc shows up correctly)
 	}
@@ -8922,18 +8941,88 @@ country_event = {
 	
 	immediate = {
 		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
+			end_color_loc = {}
+			dynamic_loc_slot_20 = {}
+			dynamic_loc_slot_1 = {}
+			dynamic_loc_slot_21 = {}
+			dynamic_loc_slot_2 = {}
+			dynamic_loc_slot_22 = {}
+			dynamic_loc_slot_4 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_23 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_10 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_11 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_12 = {}
+			dynamic_loc_slot_2 = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores } }
+			end_color_loc = {}
+			dynamic_loc_slot_20 = {}
+			dynamic_loc_slot_1 = {}
+			dynamic_loc_slot_21 = {}
+			dynamic_loc_slot_2 = {}
+			dynamic_loc_slot_22 = {}
+			dynamic_loc_slot_4 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_23 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_10 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_11 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_12 = {}
+			dynamic_loc_slot_2 = {}
+			empty_line_loc = {}
+		}
+		
+		# alliance_of_dwarves_and_men_voting_on_returning_cores should never go to voting, so no need to handle it here
+		
+		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm } }
 			end_color_loc = {}
-			railroading_tag_specific_description_loc_1 = {}
+			dynamic_loc_slot_20 = {}
 			dynamic_loc_slot_1 = {}
-			railroading_tag_specific_description_loc_2 = {}
+			dynamic_loc_slot_21 = {}
 			dynamic_loc_slot_2 = {}
 			empty_line_loc = {}
 			
 			empty_line_loc = {}
-			railroading_tag_specific_description_loc_3 = {}
+			dynamic_loc_slot_22 = {}
 			dynamic_loc_slot_2 = {}
-			railroading_tag_specific_description_loc_4 = {}
+			dynamic_loc_slot_23 = {}
 			empty_line_loc = {}
 			
 			empty_line_loc = {}
@@ -8957,16 +9046,16 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach } }
 			end_color_loc = {}
-			railroading_tag_specific_description_loc_1 = {}
+			dynamic_loc_slot_20 = {}
 			dynamic_loc_slot_1 = {}
-			railroading_tag_specific_description_loc_2 = {}
+			dynamic_loc_slot_21 = {}
 			dynamic_loc_slot_2 = {}
 			empty_line_loc = {}
 			
 			empty_line_loc = {}
-			railroading_tag_specific_description_loc_3 = {}
+			dynamic_loc_slot_22 = {}
 			dynamic_loc_slot_3 = {}
-			railroading_tag_specific_description_loc_4 = {}
+			dynamic_loc_slot_23 = {}
 			empty_line_loc = {}
 			
 			empty_line_loc = {}
@@ -8989,14 +9078,44 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union } }
 			end_color_loc = {}
-			railroading_tag_specific_description_loc_1 = {}
+			dynamic_loc_slot_20 = {}
 			dynamic_loc_slot_1 = {}
-			railroading_tag_specific_description_loc_2 = {}
+			dynamic_loc_slot_21 = {}
 			empty_line_loc = {}
 			
 			empty_line_loc = {}
-			railroading_tag_specific_description_loc_3 = {}
-			railroading_tag_specific_description_loc_4 = {}
+			dynamic_loc_slot_22 = {}
+			dynamic_loc_slot_23 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_10 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_11 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_12 = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union } }
+			end_color_loc = {}
+			dynamic_loc_slot_20 = {}
+			dynamic_loc_slot_1 = {}
+			dynamic_loc_slot_21 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_22 = {}
+			dynamic_loc_slot_1 = {}
+			dynamic_loc_slot_23 = {}
 			empty_line_loc = {}
 			
 			empty_line_loc = {}
@@ -9721,6 +9840,104 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
+				}
+			}
+			# Winner gets the land
+			owner = {
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_voting_initiator }
+					country_event = { id = 110164 duration = 0 }
+				}
+			}
+			
+			# Loser loses cores
+			owner = {
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_selected_country }
+					country_event = { id = 110165 duration = 0 }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+				}
+			}
+			# Winner gets the land
+			owner = {
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_selected_country }
+					country_event = { id = 110164 duration = 0 }
+				}
+			}
+			
+			# Loser loses cores
+			owner = {
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_voting_initiator }
+					country_event = { id = 110165 duration = 0 }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
+				}
+			}
+			# Winner gets the land
+			owner = {
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_voting_initiator }
+					country_event = { id = 110164 duration = 0 }
+				}
+			}
+			
+			# Loser loses cores
+			owner = {
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_selected_country }
+					country_event = { id = 110165 duration = 0 }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+				}
+			}
+			# Winner gets the land
+			owner = {
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_selected_country }
+					country_event = { id = 110164 duration = 0 }
+				}
+			}
+			
+			# Loser loses cores
+			owner = {
+				random_country = {
+					limit = { has_country_flag = alliance_dwarves_men_voting_initiator }
+					country_event = { id = 110165 duration = 0 }
+				}
+			}
+		}
+		
+		# alliance_of_dwarves_and_men_voting_on_returning_cores should never go to voting, so no need to handle it here
+		
+		random_owned = {
+			limit = {
+				owner = {
 					has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
 					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
 				}
@@ -9784,20 +10001,7 @@ country_event = {
 				}
 			}
 			owner = {
-				set_global_flag = alliance_of_dwarves_and_men_economic_union
-				
-				random_owned = {
-					limit = { owner = { part_of_sphere = yes } }
-					owner = { country_event = 110160 } # Remove from sphere + add to sphere of GP alliance member
-				}
-				
-				any_country = {
-					limit = {
-						has_country_modifier = alliance_of_dwarves_and_men
-						is_greater_power = no
-					}
-					country_event = 110160 # Remove from sphere + add to sphere of GP alliance member
-				}
+				# TODO: Set Political Union effects
 			}
 		}
 	}
@@ -9930,6 +10134,52 @@ country_event = {
 	}
 }
 
+# Voting over Region -- Victory
+country_event = {
+	id = 110164
+	title = "  Alliance of Dwarves and Men Voting Results"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Huzzah!"
+		
+		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+					secede_province = THIS
+				}
+			}
+		}
+	}
+}
+
+# Voting over Region -- Defeat
+country_event = {
+	id = 110165
+	title = "  Alliance of Dwarves and Men Voting Results"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Huzzah!"
+		
+		FOR = {
+			random_owned = {
+				any_neighbor_province = {
+					limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+					remove_core = THIS
+				}
+			}
+		}
+	}
+}
+
 # Description Localisation Setting -- FIRES FOR FOR, NO NEED TO LOC
 country_event = {
 	id = 110175
@@ -9939,17 +10189,49 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	# Voting Initiator -- slot 1
+	# Voting "defender" -- slot 2
+	# Voting "defender" culture group -- slot 3
+	# Target region -- slot 4
+	# Options -- slots 10, 11, 12
+	# Other Description -- slots 20+
 	option = {
 		name = "Set loc"
 		
-		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "After many days of deliberation, the time to vote has come. The" } }
+		dynamic_loc_slot_20 = { state_scope = { change_region_name = "After many days of deliberation, the time to vote has come. The" } }
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores } }
+			owner = {
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has proposed resolving their conflicting cores with" } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "over" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "§MThe winning side will take control of the region, and the losing side will lose their cores§!" } }
+				dynamic_loc_slot_10 = { state_scope = { change_region_name = "We will side with" } } # First two slots taken up by countries. Third taken up by culture group
+				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
+				dynamic_loc_slot_12 = { state_scope = { change_region_name = "We will side with" } }
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores } }
+			owner = {
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has requested the return of" } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "from" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "§MThe winning side will take control of the region. If the voting initiator loses this vote, they will lose cores on the region§!" } }
+				dynamic_loc_slot_10 = { state_scope = { change_region_name = "We will side with" } } # First two slots taken up by countries. Third taken up by culture group
+				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
+				dynamic_loc_slot_12 = { state_scope = { change_region_name = "We will side with" } }
+			}
+		}
+		
+		# alliance_of_dwarves_and_men_voting_on_returning_cores should never go to voting, so no need to handle it here
 		
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm } }
 			owner = {
-				railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "has proposed inviting the" } }
-				railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "§MThis will invite the" } }
-				railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "to the alliance. Assuming they accept, they will become full alliance members, being able to vote in all issues.§!" } }
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has proposed inviting the" } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "§MThis will invite the" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "to the alliance. Assuming they accept, they will become full alliance members, being able to vote in all issues.§!" } }
 				dynamic_loc_slot_10 = { state_scope = { change_region_name = "There is strength in unity" } } # First two slots taken up by countries. Third taken up by culture group
 				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
 				dynamic_loc_slot_12 = { state_scope = { change_region_name = "No. Inviting a new realm will only weaken the alliance" } }
@@ -9959,9 +10241,9 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach } }
 			owner = {
-				railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "has proposed expanding our cultural reach by inviting the" } }
-				railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "§MThis will add the" } }
-				railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "culture group to the list of the Alliance's accepted culture groups, allowing us to more easily invite realms within the culture group.§!" } }
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has proposed expanding our cultural reach by inviting the" } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "§MThis will add the" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "culture group to the list of the Alliance's accepted culture groups, allowing us to more easily invite realms within the culture group.§!" } }
 				dynamic_loc_slot_10 = { state_scope = { change_region_name = "There is strength in unity" } } # First two slots taken up by countries. Third taken up by culture group
 				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
 				dynamic_loc_slot_12 = { state_scope = { change_region_name = "No. Extending the cultural reach will only weaken the alliance" } }
@@ -9971,10 +10253,22 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union } }
 			owner = {
-				railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "has proposed an economic union." } }
-				railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "§MThis will lock all alliance members into the sphere of the GPs within the alliance. If there are multiple GPs, alliance members will prefer to be in the sphere of a realm of their culture group.§!" } }
-				railroading_tag_specific_description_loc_4 = { state_scope = { change_region_name = "§MIf there are any ties, rank will be the deciding factor.§!" } }
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has proposed an economic union." } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "§MThis will lock all alliance members into the sphere of the GPs within the alliance. If there are multiple GPs, alliance members will prefer to be in the sphere of a realm of their culture group.§!" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "§MIf there are any ties, rank will be the deciding factor.§!" } }
 				dynamic_loc_slot_10 = { state_scope = { change_region_name = "An economic union can only bring prosperity for all" } } # First two slots taken up by countries. Third taken up by culture group
+				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
+				dynamic_loc_slot_12 = { state_scope = { change_region_name = "This is clearly a play at gaining power over us" } }
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union } }
+			owner = {
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has proposed a political union." } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "§M" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "will become the Free Folk of the North, annexing all members of the alliance that vote for the union. They will still gain cores over any realm that abstained or voted against it.§!" } }
+				dynamic_loc_slot_10 = { state_scope = { change_region_name = "A political union can only bring prosperity for all" } } # First two slots taken up by countries. Third taken up by culture group
 				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
 				dynamic_loc_slot_12 = { state_scope = { change_region_name = "This is clearly a play at gaining power over us" } }
 			}
