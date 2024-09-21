@@ -2,11 +2,20 @@
 # Audax Validator "!" Ignore_1004
 
 # TODO: Setup specific flavor effects
-# TODO: Have return cores skip voting (update to country selection)
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update ai chances to select various options
-# TODO: Putting realms in spheres seems broken
 # TODO: Add decision to request to join
+# TODO: Confirm resolve conflicting cores works and is loced corrected
+# TODO: Confirm request return of cores works and is loced corrected
+# TODO: Confirm return cores works and is loced corrected
+# TODO: 	Have return cores skip voting (update to country selection)
+# TODO: Confirm invite realm works and is loced corrected
+# TODO: Confirm expand cultural reach works and is loced corrected
+# TODO: Confirm settle cores of DG works and is loced corrected
+# TODO: Confirm settle cores of Mountainlands works and is loced corrected
+# TODO: Confirm economic union works and is loced corrected
+# TODO: 	Putting realms in spheres seems broken
+# TODO: Confirm political union works and is loced corrected
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -7960,6 +7969,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				FROM = { war = yes }
+				NOT = { FROM = { has_country_modifier = call_to_arms_cooldown } }
 				owner = {
 					any_neighbor_country = {
 						has_country_modifier = alliance_of_dwarves_and_men
@@ -8253,6 +8263,8 @@ country_event = {
 				# Audax Validator "." Ignore_NEXT
 				target = ---
 			}
+			
+			add_country_modifier = { name = call_to_arms_cooldown duration = 365 }
 		}
 	}
 }
