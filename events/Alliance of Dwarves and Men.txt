@@ -5,7 +5,6 @@
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update ai chances to select various options
 # TODO: Add decision to request to join
-# TODO: Confirm resolve conflicting cores works and is loced corrected
 # TODO: Confirm request return of cores works and is loced corrected
 # TODO: Confirm return cores works and is loced corrected
 # TODO: 	Have return cores skip voting (update to country selection)
@@ -223,7 +222,10 @@ country_event = {
 								limit = {
 									NOT = { tag = THIS }
 									has_country_modifier = alliance_of_dwarves_and_men
-									any_core = { is_core = THIS }
+									any_core = {
+										is_core = THIS
+										NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+									}
 								}
 								set_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
 							}
@@ -8111,7 +8113,12 @@ country_event = {
 						# Resolve Conflicting Cores
 						has_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected
 						# Request Return of Cores
-						FROM = { any_core = { has_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } }
+						FROM = {
+							any_core = {
+								has_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores
+								NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+							}
+						}
 						# Return Cores
 						FROM = {
 							any_owned_province = {
@@ -8119,6 +8126,7 @@ country_event = {
 								any_core = {
 									exists = yes
 									has_country_modifier = alliance_of_dwarves_and_men
+									NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
 								}
 							}
 						}
@@ -8451,7 +8459,16 @@ country_event = {
 		
 		# Request Return of Cores
 		random_owned = {
-			limit = { owner = { FROM = { any_core = { has_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores } } } }
+			limit = {
+				owner = {
+					FROM = {
+						any_core = {
+							has_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores
+							NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+						}
+					}
+				}
+			}
 			owner = {
 				change_variable = { which = menu_option_number value = 1 }
 				set_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
@@ -8469,6 +8486,7 @@ country_event = {
 							any_core = {
 								exists = yes
 								has_country_modifier = alliance_of_dwarves_and_men
+								NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
 							}
 						}
 					}
@@ -9349,13 +9367,13 @@ country_event = {
 		
 		set_global_flag = hidden_effects
 		
+		FOR = { change_variable = { which = alliance_dwarves_men_total_abstained value = 1 } }
+		set_country_flag = alliance_dwarves_men_abstained
+		
 		# Doesn't vote
 		random_owned = {
 			limit = { owner = { has_global_flag = hidden_effects } }
 			owner = {
-				FOR = { change_variable = { which = alliance_dwarves_men_total_abstained value = 1 } }
-				set_country_flag = alliance_dwarves_men_abstained
-				
 				random_owned = {
 					limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
 					owner = { FOR = { country_event = 110155 } } # Calculate the results
@@ -9377,16 +9395,16 @@ country_event = {
 		
 		set_global_flag = hidden_effects
 		
+		FOR = {
+			change_variable = { which = alliance_dwarves_men_voting_results value = -1 }
+			change_variable = { which = alliance_dwarves_men_total_against value = 1 }
+		}
+		set_country_flag = alliance_dwarves_men_voted_against
+		
 		# Vote against
 		random_owned = {
 			limit = { owner = { has_global_flag = hidden_effects } }
 			owner = {
-				FOR = {
-					change_variable = { which = alliance_dwarves_men_voting_results value = -1 }
-					change_variable = { which = alliance_dwarves_men_total_against value = 1 }
-				}
-				set_country_flag = alliance_dwarves_men_voted_against
-				
 				random_owned = {
 					limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
 					owner = { FOR = { country_event = 110155 } } # Calculate the results
@@ -9589,7 +9607,19 @@ country_event = {
 				has_country_modifier = alliance_of_dwarves_and_men
 			}
 			country_event = 110159 # The results
+			set_global_flag = found_player
 		}
+		
+		random_country = {
+			limit = {
+				NOT = { has_global_flag = found_player }
+				has_country_modifier = alliance_of_dwarves_and_men
+				ai = yes
+			}
+			country_event = 110159 # The results
+		}
+		
+		clr_global_flag = found_player
 	}
 }
 
@@ -9998,7 +10028,14 @@ country_event = {
 		
 		# Some proposals are short enough to stay on one line
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm } }
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
+					}
+				}
+			}
 			empty_line_loc = {}
 		}
 		
@@ -10057,6 +10094,7 @@ country_event = {
 		FOR = { country_event = { id = 110110 days = 1 } } # Alliance of Dwarves and Men Cleanup
 		FOR = { country_event = { id = 402001 days = 0 } } # Dynamic Loc Cleanup
 		
+		# Resolve Conflicting Cores {
 		random_owned = {
 			limit = {
 				owner = {
@@ -10064,11 +10102,20 @@ country_event = {
 					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
 				}
 			}
+			
 			# Winner gets the land
 			owner = {
 				random_country = {
 					limit = { has_country_flag = alliance_dwarves_men_voting_initiator }
-					country_event = { id = 110164 days = 0 }
+					country_event = { id = 110164 days = 1 }
+				}
+			}
+			
+			# random_country doesn't target the current country
+			owner = {
+				random_owned = {
+					limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
+					owner = { country_event = { id = 110164 days = 1 } }
 				}
 			}
 			
@@ -10077,6 +10124,14 @@ country_event = {
 				random_country = {
 					limit = { has_country_flag = alliance_dwarves_men_selected_country }
 					country_event = { id = 110165 days = 0 }
+				}
+			}
+			
+			# random_country doesn't target the current country
+			owner = {
+				random_owned = {
+					limit = { owner = { has_country_flag = alliance_dwarves_men_selected_country } }
+					owner = { country_event = { id = 110165 days = 0 } }
 				}
 			}
 		}
@@ -10085,14 +10140,24 @@ country_event = {
 			limit = {
 				owner = {
 					has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
-					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = -0.1 } } }
 				}
 			}
+			
 			# Winner gets the land
 			owner = {
 				random_country = {
 					limit = { has_country_flag = alliance_dwarves_men_selected_country }
-					country_event = { id = 110164 days = 0 }
+					country_event = { id = 110164 days = 1 }
+				}
+			}
+			
+			
+			# random_country doesn't target the current country
+			owner = {
+				random_owned = {
+					limit = { owner = { has_country_flag = alliance_dwarves_men_selected_country } }
+					owner = { country_event = { id = 110164 days = 1 } }
 				}
 			}
 			
@@ -10103,7 +10168,37 @@ country_event = {
 					country_event = { id = 110165 days = 0 }
 				}
 			}
+			
+			
+			# random_country doesn't target the current country
+			owner = {
+				random_owned = {
+					limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
+					owner = { country_event = { id = 110165 days = 0 } }
+				}
+			}
 		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = -0.1 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+				}
+			}
+			owner = {
+				FOR = {
+					random_owned = {
+						any_neighbor_province = {
+							limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+							add_province_modifier = { name = alliance_dwarves_men_diplomacy_stalled duration = 3650 }
+						}
+					}
+				}
+			}
+		}
+		# }
 		
 		random_owned = {
 			limit = {
@@ -10112,11 +10207,20 @@ country_event = {
 					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
 				}
 			}
+			
 			# Winner gets the land
 			owner = {
 				random_country = {
 					limit = { has_country_flag = alliance_dwarves_men_voting_initiator }
-					country_event = { id = 110164 days = 0 }
+					country_event = { id = 110164 days = 1 }
+				}
+			}
+			
+			# random_country doesn't target the current country
+			owner = {
+				random_owned = {
+					limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
+					owner = { country_event = { id = 110164 days = 1 } }
 				}
 			}
 			
@@ -10125,6 +10229,14 @@ country_event = {
 				random_country = {
 					limit = { has_country_flag = alliance_dwarves_men_selected_country }
 					country_event = { id = 110165 days = 0 }
+				}
+			}
+			
+			# random_country doesn't target the current country
+			owner = {
+				random_owned = {
+					limit = { owner = { has_country_flag = alliance_dwarves_men_selected_country } }
+					owner = { country_event = { id = 110165 days = 0 } }
 				}
 			}
 		}
@@ -10136,11 +10248,21 @@ country_event = {
 					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
 				}
 			}
+			
 			# Winner gets the land
 			owner = {
 				random_country = {
 					limit = { has_country_flag = alliance_dwarves_men_selected_country }
-					country_event = { id = 110164 days = 0 }
+					country_event = { id = 110164 days = 1 }
+				}
+			}
+			
+			
+			# random_country doesn't target the current country
+			owner = {
+				random_owned = {
+					limit = { owner = { has_country_flag = alliance_dwarves_men_selected_country } }
+					owner = { country_event = { id = 110164 days = 1 } }
 				}
 			}
 			
@@ -10149,6 +10271,15 @@ country_event = {
 				random_country = {
 					limit = { has_country_flag = alliance_dwarves_men_voting_initiator }
 					country_event = { id = 110165 days = 0 }
+				}
+			}
+			
+			
+			# random_country doesn't target the current country
+			owner = {
+				random_owned = {
+					limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
+					owner = { country_event = { id = 110165 days = 0 } }
 				}
 			}
 		}
@@ -10358,7 +10489,7 @@ country_event = {
 country_event = {
 	id = 110164
 	title = "  Alliance of Dwarves and Men Voting Results"
-	desc = ""
+	desc = "EVTDESC110164"
 	picture = "organizations/alliance_dwarves_men_1"
 	
 	is_triggered_only = yes
@@ -10381,13 +10512,13 @@ country_event = {
 country_event = {
 	id = 110165
 	title = "  Alliance of Dwarves and Men Voting Results"
-	desc = ""
+	desc = "EVTDESC110165"
 	picture = "organizations/alliance_dwarves_men_1"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "Huzzah!"
+		name = "Damn!"
 		
 		FOR = {
 			random_owned = {
