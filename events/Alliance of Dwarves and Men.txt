@@ -5,13 +5,12 @@
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update ai chances to select various options
 # TODO: Add decision to request to join
-# TODO: Confirm invite realm works and is loced corrected
-# TODO: Confirm expand cultural reach works and is loced corrected
 # TODO: Confirm settle cores of DG works and is loced corrected
 # TODO: Confirm settle cores of Mountainlands works and is loced corrected
 # TODO: Confirm economic union works and is loced corrected
 # TODO: 	Putting realms in spheres seems broken
 # TODO: Confirm political union works and is loced corrected
+# TODO: Ensure that the railroading slots aren't used
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -5747,7 +5746,20 @@ country_event = {
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+					}
+				}
+			}
+			empty_line_loc = {}
+		}
 		
 		empty_line_loc = {}
 		dynamic_loc_slot_1 = {}
@@ -5855,7 +5867,20 @@ country_event = {
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+					}
+				}
+			}
+			empty_line_loc = {}
+		}
 		
 		empty_line_loc = {}
 		dynamic_loc_slot_1 = {}
@@ -6028,7 +6053,20 @@ country_event = {
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+					}
+				}
+			}
+			empty_line_loc = {}
+		}
 		
 		empty_line_loc = {}
 		dynamic_loc_slot_1 = {}
@@ -6266,7 +6304,20 @@ country_event = {
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+					}
+				}
+			}
+			empty_line_loc = {}
+		}
 		
 		empty_line_loc = {}
 		dynamic_loc_slot_1 = {}
@@ -6569,7 +6620,20 @@ country_event = {
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+					}
+				}
+			}
+			empty_line_loc = {}
+		}
 		
 		empty_line_loc = {}
 		dynamic_loc_slot_1 = {}
@@ -6937,7 +7001,20 @@ country_event = {
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+					}
+				}
+			}
+			empty_line_loc = {}
+		}
 		
 		empty_line_loc = {}
 		dynamic_loc_slot_1 = {}
@@ -7370,7 +7447,20 @@ country_event = {
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+					}
+				}
+			}
+			empty_line_loc = {}
+		}
 		
 		empty_line_loc = {}
 		dynamic_loc_slot_1 = {}
@@ -7868,7 +7958,20 @@ country_event = {
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+					}
+				}
+			}
+			empty_line_loc = {}
+		}
 		
 		empty_line_loc = {}
 		dynamic_loc_slot_1 = {}
@@ -9497,13 +9600,6 @@ country_event = {
 		# }
 		
 		# TODO: Remove (in place for testing)
-		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu } }
-			owner = {
-				change_variable = { which = menu_option_number value = -1 }
-				clr_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu
-			}
-		}
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
 			owner = {
