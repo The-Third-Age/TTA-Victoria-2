@@ -5,9 +5,6 @@
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update ai chances to select various options
 # TODO: Add decision to request to join
-# TODO: Confirm request return of cores works and is loced corrected
-# TODO: Confirm return cores works and is loced corrected
-# TODO: 	Have return cores skip voting (update to country selection)
 # TODO: Confirm invite realm works and is loced corrected
 # TODO: Confirm expand cultural reach works and is loced corrected
 # TODO: Confirm settle cores of DG works and is loced corrected
@@ -5764,7 +5761,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_1 }
@@ -5778,9 +5780,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_1 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -5843,7 +5873,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_1 }
@@ -5857,9 +5892,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_1 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -5871,7 +5934,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_2 }
@@ -5885,9 +5953,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_2 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -5954,7 +6050,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_1 }
@@ -5968,9 +6069,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_1 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -5982,7 +6111,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_2 }
@@ -5996,9 +6130,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_2 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6010,7 +6172,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_3 }
@@ -6024,9 +6191,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_3 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6097,7 +6292,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_1 }
@@ -6111,9 +6311,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_1 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6125,7 +6353,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_2 }
@@ -6139,9 +6372,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_2 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6153,7 +6414,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_3 }
@@ -6167,9 +6433,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_3 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6181,7 +6475,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_4 }
@@ -6195,9 +6494,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_4 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6272,7 +6599,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_1 }
@@ -6286,9 +6618,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_1 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6300,7 +6660,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_2 }
@@ -6314,9 +6679,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_2 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6328,7 +6721,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_3 }
@@ -6342,9 +6740,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_3 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6356,7 +6782,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_4 }
@@ -6370,9 +6801,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_4 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6384,7 +6843,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_5 }
@@ -6398,9 +6862,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_5 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6479,7 +6971,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_1 }
@@ -6493,9 +6990,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_1 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6507,7 +7032,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_2 }
@@ -6521,9 +7051,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_2 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6535,7 +7093,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_3 }
@@ -6549,9 +7112,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_3 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6563,7 +7154,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_4 }
@@ -6577,9 +7173,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_4 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6591,7 +7215,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_5 }
@@ -6605,9 +7234,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_5 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6619,7 +7276,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_6 }
@@ -6633,9 +7295,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_6 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6718,7 +7408,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_1 }
@@ -6732,9 +7427,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_1 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6746,7 +7469,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_2 }
@@ -6760,9 +7488,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_2 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6774,7 +7530,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_3 }
@@ -6788,9 +7549,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_3 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6802,7 +7591,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_4 }
@@ -6816,9 +7610,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_4 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6830,7 +7652,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_5 }
@@ -6844,9 +7671,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_5 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6858,7 +7713,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_6 }
@@ -6872,9 +7732,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_6 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6886,7 +7774,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_7 }
@@ -6900,9 +7793,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_7 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -6989,7 +7910,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_1 }
@@ -7003,9 +7929,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_1 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -7017,7 +7971,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_2 }
@@ -7031,9 +7990,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_2 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -7045,7 +8032,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_3 }
@@ -7059,9 +8051,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_3 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -7073,7 +8093,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_4 }
@@ -7087,9 +8112,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_4 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -7101,7 +8154,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_5 }
@@ -7115,9 +8173,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_5 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -7129,7 +8215,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_6 }
@@ -7143,9 +8234,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_6 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -7157,7 +8276,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+				}
+			}
 			owner = {
 				random_country = {
 					limit = { has_country_flag = dynamic_loc_country_target_7 }
@@ -7171,9 +8295,37 @@ country_event = {
 			}
 		}
 		
-		alliance_of_dwarves_and_men_country_selection_loc = {}
-		empty_line_loc = {}
-		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = hidden_effects
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+				}
+			}
+			owner = {
+				random_country = {
+					limit = { has_country_flag = dynamic_loc_country_target_7 }
+					set_country_flag = alliance_dwarves_men_selected_country
+					country_event = 110166
+				}
+				FOR = {
+					country_event = 402001 # Dynamic Loc Cleanup
+					country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+			alliance_of_dwarves_and_men_country_selection_loc = {}
+			empty_line_loc = {}
+			triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+			alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
+		}
 		
 		clr_global_flag = hidden_effects
 	}
@@ -7189,18 +8341,55 @@ country_event = {
 			limit = { NOT = { FOR = { check_variable = { which = dynamic_loc_country_count value = 8.1 } } } }
 			owner = {
 				random_owned = {
-					limit = { owner = { has_global_flag = hidden_effects } }
+					limit = {
+						owner = {
+							has_global_flag = hidden_effects
+							NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores }
+						}
+					}
 					owner = {
 						random_country = {
-							limit = { has_country_flag = dynamic_loc_country_target_8 }
+							limit = { has_country_flag = dynamic_loc_country_target_7 }
 							set_country_flag = alliance_dwarves_men_selected_country
 						}
 						
-						owner = { set_country_flag = alliance_dwarves_men_voting_initiator }
+						set_country_flag = alliance_dwarves_men_voting_initiator
 						FOR = { country_event = 110150 } # Voting Handler
 						
 						FOR = { country_event = 402001 } # Everything cleanup
 					}
+				}
+				
+				random_owned = {
+					limit = {
+						owner = {
+							has_global_flag = hidden_effects
+							has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						}
+					}
+					owner = {
+						random_country = {
+							limit = { has_country_flag = dynamic_loc_country_target_7 }
+							set_country_flag = alliance_dwarves_men_selected_country
+							country_event = 110166
+						}
+						FOR = {
+							country_event = 402001 # Dynamic Loc Cleanup
+							country_event = 110110 # Clears Alliance of Dwarves and Men modifiers and flags
+						}
+					}
+				}
+				
+				random_owned = {
+					limit = { owner = { NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } } }
+					alliance_of_dwarves_and_men_country_selection_loc = {}
+					empty_line_loc = {}
+					triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+				}
+				
+				random_owned = {
+					limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores } }
+					alliance_of_dwarves_and_men_country_selection_return_cores_loc = {}
 				}
 			}
 			
@@ -8123,10 +9312,10 @@ country_event = {
 						FROM = {
 							any_owned_province = {
 								NOT = { is_core = FROM }
+								NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
 								any_core = {
 									exists = yes
 									has_country_modifier = alliance_of_dwarves_and_men
-									NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
 								}
 							}
 						}
@@ -8315,6 +9504,13 @@ country_event = {
 				clr_global_flag = alliance_of_dwarves_and_men_can_access_specific_flavor_menu
 			}
 		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
+			owner = {
+				change_variable = { which = menu_option_number value = -1 }
+				clr_global_flag = alliance_of_dwarves_and_men_can_access_economic_union
+			}
+		}
 		
 		# Fire the menu (based upon the number of potential options) for the triggering realm
 		random_owned = {
@@ -8483,10 +9679,10 @@ country_event = {
 					FROM = {
 						any_owned_province = {
 							NOT = { is_core = FROM }
+							NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
 							any_core = {
 								exists = yes
 								has_country_modifier = alliance_of_dwarves_and_men
-								NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
 							}
 						}
 					}
@@ -10033,6 +11229,7 @@ country_event = {
 					OR = {
 						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
 						has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
 					}
 				}
 			}
@@ -10091,7 +11288,7 @@ country_event = {
 	option = {
 		name = ""
 		
-		FOR = { country_event = { id = 110110 days = 1 } } # Alliance of Dwarves and Men Cleanup
+		FOR = { country_event = { id = 110110 days = 2 } } # Alliance of Dwarves and Men Cleanup
 		FOR = { country_event = { id = 402001 days = 0 } } # Dynamic Loc Cleanup
 		
 		# Resolve Conflicting Cores {
@@ -10200,6 +11397,7 @@ country_event = {
 		}
 		# }
 		
+		# Request Return of Cores {
 		random_owned = {
 			limit = {
 				owner = {
@@ -10224,47 +11422,18 @@ country_event = {
 				}
 			}
 			
-			# Loser loses cores
-			owner = {
-				random_country = {
-					limit = { has_country_flag = alliance_dwarves_men_selected_country }
-					country_event = { id = 110165 days = 0 }
-				}
-			}
-			
-			# random_country doesn't target the current country
-			owner = {
-				random_owned = {
-					limit = { owner = { has_country_flag = alliance_dwarves_men_selected_country } }
-					owner = { country_event = { id = 110165 days = 0 } }
-				}
-			}
+			# The defender doesn't have a care
 		}
 		
 		random_owned = {
 			limit = {
 				owner = {
 					has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
-					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = -0.1 } } }
 				}
 			}
 			
-			# Winner gets the land
-			owner = {
-				random_country = {
-					limit = { has_country_flag = alliance_dwarves_men_selected_country }
-					country_event = { id = 110164 days = 1 }
-				}
-			}
-			
-			
-			# random_country doesn't target the current country
-			owner = {
-				random_owned = {
-					limit = { owner = { has_country_flag = alliance_dwarves_men_selected_country } }
-					owner = { country_event = { id = 110164 days = 1 } }
-				}
-			}
+			# The defender already owns the province
 			
 			# Loser loses cores
 			owner = {
@@ -10283,6 +11452,27 @@ country_event = {
 				}
 			}
 		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = -0.1 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+				}
+			}
+			owner = {
+				FOR = {
+					random_owned = {
+						any_neighbor_province = {
+							limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+							add_province_modifier = { name = alliance_dwarves_men_diplomacy_stalled duration = 3650 }
+						}
+					}
+				}
+			}
+		}
+		# }
 		
 		# alliance_of_dwarves_and_men_voting_on_returning_cores should never go to voting, so no need to handle it here
 		
@@ -10488,7 +11678,7 @@ country_event = {
 # Voting over Region -- Victory
 country_event = {
 	id = 110164
-	title = "  Alliance of Dwarves and Men Voting Results"
+	title = "  Alliance of Dwarves and Men Voting Results - Victory"
 	desc = "EVTDESC110164"
 	picture = "organizations/alliance_dwarves_men_1"
 	
@@ -10511,7 +11701,7 @@ country_event = {
 # Voting over Region -- Defeat
 country_event = {
 	id = 110165
-	title = "  Alliance of Dwarves and Men Voting Results"
+	title = "  Alliance of Dwarves and Men Voting Results - Defeat"
 	desc = "EVTDESC110165"
 	picture = "organizations/alliance_dwarves_men_1"
 	
@@ -10527,6 +11717,25 @@ country_event = {
 					remove_core = THIS
 				}
 			}
+		}
+	}
+}
+
+# Release Cores (voluntarily)
+country_event = {
+	id = 110166
+	title = "  Alliance of Dwarves and Men - Release Cores"
+	desc = "EVTDESC100166"
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good"
+		
+		all_core = {
+			limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+			secede_province = THIS
 		}
 	}
 }
