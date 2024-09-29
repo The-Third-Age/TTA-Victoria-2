@@ -6,8 +6,6 @@
 # TODO: Update ai chances to select various options
 # TODO: 	chances for specific flavor is set
 # TODO: Add decision to request to join
-# TODO: Confirm economic union works and is loced corrected
-# TODO: 	Putting realms in spheres seems broken
 # TODO: Confirm political union works and is loced corrected
 # TODO: Ensure that the railroading slots aren't used
 # TODO: Setup background cycling cleanup events
@@ -9874,7 +9872,7 @@ country_event = {
 					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					FROM = { is_greater_power = yes }
 					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
-					NOT = { has_global_flag = alliance_of_dwarves_and_men_economic_union }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_economic_union_enacted }
 				}
 			}
 			owner = {
@@ -9890,7 +9888,8 @@ country_event = {
 					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					FROM = { is_greater_power = yes }
 					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
-					has_global_flag = alliance_of_dwarves_and_men_economic_union
+					has_global_flag = alliance_of_dwarves_and_men_economic_union_enacted
+					FROM = { diplomacy_5 = 1 }
 				}
 			}
 			owner = {
@@ -9899,15 +9898,6 @@ country_event = {
 			}
 		}
 		# }
-		
-		# TODO: Remove (in place for testing)
-		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_economic_union } }
-			owner = {
-				change_variable = { which = menu_option_number value = -1 }
-				clr_global_flag = alliance_of_dwarves_and_men_can_access_economic_union
-			}
-		}
 		
 		# Fire the menu (based upon the number of potential options) for the triggering realm
 		random_owned = {
@@ -10552,6 +10542,11 @@ country_event = {
 			owner = {
 				set_global_flag = alliance_of_dwarves_and_men_in_voting
 				FOR = { add_country_modifier = { name = alliance_of_dwarves_and_men_recently_voted duration = 30 } }
+				add_country_modifier = { name = alliance_of_dwarves_and_men_recently_voted duration = 30 }
+				any_country = {
+					limit = { has_country_modifier = alliance_of_dwarves_and_men }
+					add_country_modifier = { name = alliance_of_dwarves_and_men_recently_voted duration = 30 }
+				}
 				
 				random_country = {
 					limit = { has_country_flag = alliance_dwarves_men_voting_initiator } # The "aggressor"
@@ -11346,6 +11341,10 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union } }
 			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "create an economic union" } } }
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union } }
+			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "create a political union" } } }
 		}
 		random_owned = {
 			limit = { owner = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
@@ -12327,7 +12326,34 @@ country_event = {
 				}
 			}
 			owner = {
-				# TODO: Set Political Union effects
+				random_owned = {
+					limit = { owner = { has_global_flag = hidden_effects } }
+					owner = {
+						set_global_flag = alliance_of_dwarves_and_men_economic_union_enacted
+						any_country = {
+							limit = {
+								has_country_modifier = alliance_of_dwarves_and_men
+								is_greater_power = no
+							}
+							sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+							country_event = 110160
+						}
+						random_owned = {
+							limit = { owner = { is_greater_power = no } }
+							owner = {
+								sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+								country_event = 110160
+							}
+						}
+					}
+				}
+				any_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_greater_power = no
+					}
+					triggered_event_alliance_of_dwarves_and_men_economic_union_loc = {}
+				}
 			}
 		}
 		
@@ -12338,8 +12364,8 @@ country_event = {
 # Removing from sphere (Economic Union successful)
 country_event = {
 	id = 110160
-	title = "Alliance of Dwarves and Men Economic Union"
-	desc = ""
+	title = "  Alliance of Dwarves and Men Economic Union"
+	desc = "EVTDESC110160"
 	picture = "organizations/alliance_dwarves_men_1"
 	
 	is_triggered_only = yes
@@ -12347,90 +12373,126 @@ country_event = {
 	option = {
 		name = "The Economic Union Demands it"
 		
-		sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+		set_global_flag = hidden_effects
 		
-		random_country = {
-			limit = {
-				is_greater_power = yes
-				has_country_modifier = alliance_of_dwarves_and_men
-				is_culture_group = THIS
-				rank = 1
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = {
+				random_country = {
+					limit = {
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_culture_group = THIS
+						rank = 1
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
+				
+				random_country = {
+					limit = {
+						THIS = { part_of_sphere = no }
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_culture_group = THIS
+						NOT = { rank = 1 }
+						rank = 2
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
+				
+				random_country = {
+					limit = {
+						THIS = { part_of_sphere = no }
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_culture_group = THIS
+						NOT = { rank = 2 }
+						rank = 3
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
+				
+				random_country = {
+					limit = {
+						THIS = { part_of_sphere = no }
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_culture_group = THIS
+						NOT = { rank = 3 }
+						rank = 4
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
+				
+				# Just in case there's a GP on the outs
+				random_country = {
+					limit = {
+						THIS = { part_of_sphere = no }
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+						is_culture_group = THIS
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
+				
+				random_country = {
+					limit = {
+						THIS = { part_of_sphere = no }
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+						rank = 1
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
+				
+				random_country = {
+					limit = {
+						THIS = { part_of_sphere = no }
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+						NOT = { rank = 1 }
+						rank = 2
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
+				
+				random_country = {
+					limit = {
+						THIS = { part_of_sphere = no }
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+						NOT = { rank = 2 }
+						rank = 3
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
+				
+				random_country = {
+					limit = {
+						THIS = { part_of_sphere = no }
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+						NOT = { rank = 3 }
+						rank = 4
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
+				
+				# Just in case there's a GP on the outs
+				random_country = {
+					limit = {
+						THIS = { part_of_sphere = no }
+						is_greater_power = yes
+						has_country_modifier = alliance_of_dwarves_and_men
+					}
+					diplomatic_influence = { who = THIS value = 400 }
+				}
 			}
-			diplomatic_influence = { who = THIS value = 400 }
 		}
 		
-		random_country = {
-			limit = {
-				THIS = { part_of_sphere = no }
-				is_greater_power = yes
-				has_country_modifier = alliance_of_dwarves_and_men
-				is_culture_group = THIS
-				rank = 2
-			}
-			diplomatic_influence = { who = THIS value = 400 }
-		}
+		alliance_of_dwarves_and_men_economic_union_sphere_loc = {}
 		
-		random_country = {
-			limit = {
-				THIS = { part_of_sphere = no }
-				is_greater_power = yes
-				has_country_modifier = alliance_of_dwarves_and_men
-				is_culture_group = THIS
-				rank = 3
-			}
-			diplomatic_influence = { who = THIS value = 400 }
-		}
-		
-		random_country = {
-			limit = {
-				THIS = { part_of_sphere = no }
-				is_greater_power = yes
-				has_country_modifier = alliance_of_dwarves_and_men
-				is_culture_group = THIS
-				rank = 4
-			}
-			diplomatic_influence = { who = THIS value = 400 }
-		}
-		
-		random_country = {
-			limit = {
-				THIS = { part_of_sphere = no }
-				is_greater_power = yes
-				has_country_modifier = alliance_of_dwarves_and_men
-				rank = 1
-			}
-			diplomatic_influence = { who = THIS value = 400 }
-		}
-		
-		random_country = {
-			limit = {
-				THIS = { part_of_sphere = no }
-				is_greater_power = yes
-				has_country_modifier = alliance_of_dwarves_and_men
-				rank = 2
-			}
-			diplomatic_influence = { who = THIS value = 400 }
-		}
-		
-		random_country = {
-			limit = {
-				THIS = { part_of_sphere = no }
-				is_greater_power = yes
-				has_country_modifier = alliance_of_dwarves_and_men
-				rank = 3
-			}
-			diplomatic_influence = { who = THIS value = 400 }
-		}
-		
-		random_country = {
-			limit = {
-				THIS = { part_of_sphere = no }
-				is_greater_power = yes
-				has_country_modifier = alliance_of_dwarves_and_men
-				rank = 4
-			}
-			diplomatic_influence = { who = THIS value = 400 }
-		}
+		clr_global_flag = hidden_effects
 	}
 }
 
