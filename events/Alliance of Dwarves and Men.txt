@@ -1,7 +1,6 @@
 # Remove this line to have the validator check for strings in localisation
 # Audax Validator "!" Ignore_1004
 
-# TODO: Setup specific flavor effects
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update ai chances to select various options
 # TODO: 	chances for specific flavor is set
@@ -10,6 +9,7 @@
 # TODO: Ensure that the railroading slots aren't used
 # TODO: Setup background cycling cleanup events
 # TODO: 	Including the ai starting diplomatic plays
+# TODO: Add FFN expansion flavor
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -114,6 +114,7 @@ country_event = {
 		dynamic_loc_slot_6 = {}
 		dynamic_loc_slot_7 = {}
 		dynamic_loc_slot_8 = {}
+		dynamic_loc_slot_9 = {}
 		end_color_loc = {}
 		empty_line_loc = {}
 		
@@ -300,6 +301,10 @@ country_event = {
 											is_culture_group = rohirrim
 											has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim
 										}
+										AND = {
+											is_culture_group = hobbits
+											has_global_flag = alliance_of_dwarves_and_men_accept_hobbits
+										}
 									}
 								}
 								set_country_flag = dynamic_loc_potential_country_target
@@ -381,6 +386,10 @@ country_event = {
 										AND = {
 											is_culture_group = rohirrim
 											NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim }
+										}
+										AND = {
+											is_culture_group = hobbits
+											NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_hobbits }
 										}
 									}
 								}
@@ -570,6 +579,7 @@ country_event = {
 		dynamic_loc_slot_6 = {}
 		dynamic_loc_slot_7 = {}
 		dynamic_loc_slot_8 = {}
+		dynamic_loc_slot_9 = {}
 		end_color_loc = {}
 		empty_line_loc = {}
 		
@@ -717,6 +727,7 @@ country_event = {
 		dynamic_loc_slot_6 = {}
 		dynamic_loc_slot_7 = {}
 		dynamic_loc_slot_8 = {}
+		dynamic_loc_slot_9 = {}
 		end_color_loc = {}
 		empty_line_loc = {}
 		
@@ -868,6 +879,7 @@ country_event = {
 		dynamic_loc_slot_6 = {}
 		dynamic_loc_slot_7 = {}
 		dynamic_loc_slot_8 = {}
+		dynamic_loc_slot_9 = {}
 		end_color_loc = {}
 		empty_line_loc = {}
 		
@@ -1023,6 +1035,7 @@ country_event = {
 		dynamic_loc_slot_6 = {}
 		dynamic_loc_slot_7 = {}
 		dynamic_loc_slot_8 = {}
+		dynamic_loc_slot_9 = {}
 		end_color_loc = {}
 		empty_line_loc = {}
 		
@@ -1182,6 +1195,7 @@ country_event = {
 		dynamic_loc_slot_6 = {}
 		dynamic_loc_slot_7 = {}
 		dynamic_loc_slot_8 = {}
+		dynamic_loc_slot_9 = {}
 		end_color_loc = {}
 		empty_line_loc = {}
 		
@@ -9624,7 +9638,7 @@ country_event = {
 		
 		railroading_tag_specific_description_loc_1 = { state_scope = { change_region_name = "Depending on the state of Middle Earth and the alliance, you may be able to call allies to war, dispute cores, invite realms and culture groups to the alliance, access flavor specific to your realm and alliance, or propose economic and political unions." } }
 		railroading_tag_specific_description_loc_2 = { state_scope = { change_region_name = "In order to invite realms, you need to have an alliance, and the realm in question must be one of the accepted cultures groups of the alliance." } }
-		railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "The accepted culture groups are|" } }
+		railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "The culture groups are|" } }
 		# Using the higher numbers to make sure there's no overlap
 		dynamic_loc_slot_3 = { state_scope = { change_region_name = "Dwarven" } }
 		dynamic_loc_slot_4 = { state_scope = { change_region_name = "Northmen" } }
@@ -9643,6 +9657,10 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim } }
 			dynamic_loc_slot_8 = { state_scope = { change_region_name = "Rohirrim" } }
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_hobbits } }
+			dynamic_loc_slot_9 = { state_scope = { change_region_name = "Hobbits" } }
 		}
 		
 		# Setup Request Return of Cores {
@@ -9766,6 +9784,10 @@ country_event = {
 								is_culture_group = rohirrim
 								has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim
 							}
+							AND = {
+								is_culture_group = hobbits
+								has_global_flag = alliance_of_dwarves_and_men_accept_hobbits
+							}
 						}
 					}
 				}
@@ -9805,6 +9827,10 @@ country_event = {
 							AND = {
 								is_culture_group = rohirrim
 								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim }
+							}
+							AND = {
+								is_culture_group = hobbits
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_hobbits }
 							}
 						}
 					}
@@ -9887,6 +9913,7 @@ country_event = {
 				owner = {
 					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					FROM = { is_greater_power = yes }
+					NOT = { has_global_flag = railroading_enabled }
 					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
 					has_global_flag = alliance_of_dwarves_and_men_economic_union_enacted
 					FROM = { diplomacy_5 = 1 }
@@ -12315,6 +12342,14 @@ country_event = {
 					country_event = 110163
 					set_global_flag = alliance_of_dwarves_and_men_accept_rohirrim
 				}
+				random_country = {
+					limit = {
+						has_country_flag = alliance_dwarves_men_selected_country
+						is_culture_group = hobbits
+					}
+					country_event = 110163
+					set_global_flag = alliance_of_dwarves_and_men_accept_hobbits
+				}
 			}
 		}
 		
@@ -12355,6 +12390,35 @@ country_event = {
 					triggered_event_alliance_of_dwarves_and_men_economic_union_loc = {}
 				}
 			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
+				}
+			}
+			owner = {
+				random_country = {
+					limit = {
+						has_country_flag = alliance_dwarves_men_voting_initiator
+						has_global_flag = hidden_effects
+					}
+					country_event = 110168
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							has_country_flag = alliance_dwarves_men_voting_initiator
+							has_global_flag = hidden_effects
+						}
+					}
+					owner = { country_event = 110168 }
+				}
+				# TODO: Handle those who abstained, and those who voted against the union
+			}
+			triggered_event_alliance_of_dwarves_and_men_political_union_loc = {}
 		}
 		
 		clr_global_flag = hidden_effects
@@ -12656,6 +12720,282 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+	}
+}
+
+# Political Union
+country_event = {
+	id = 110168
+	title = "  Alliance of Dwarves and Men Political Union"
+	desc = "EVTDESC110168"
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "A new day begins. For the Free Peoples of the North!"
+		
+		any_country = {
+			limit = { has_country_flag = alliance_dwarves_men_voted_for }
+			all_core = { add_core = THIS }
+			annex_to = THIS
+		}
+		
+		change_tag = FFN
+		
+		# Northmen and Dwarves are accepted by the alliance by default
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = longbeard
+						accepted_culture = longbeard
+					}
+				}
+			}
+			owner = { add_accepted_culture = longbeard }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = ironfist
+						accepted_culture = ironfist
+					}
+				}
+			}
+			owner = { add_accepted_culture = ironfist }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = barding
+						accepted_culture = barding
+					}
+				}
+			}
+			owner = { add_accepted_culture = barding }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = aivathiuda
+						accepted_culture = aivathiuda
+					}
+				}
+			}
+			owner = { add_accepted_culture = aivathiuda }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = anthar
+						accepted_culture = anthar
+					}
+				}
+			}
+			owner = { add_accepted_culture = anthar }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = gadraught
+						accepted_culture = gadraught
+					}
+				}
+			}
+			owner = { add_accepted_culture = gadraught }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = dorwinrim
+						accepted_culture = dorwinrim
+					}
+				}
+			}
+			owner = { add_accepted_culture = dorwinrim }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = grammas
+						accepted_culture = grammas
+					}
+				}
+			}
+			owner = { add_accepted_culture = grammas }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = rivermen
+						accepted_culture = rivermen
+					}
+				}
+			}
+			owner = { add_accepted_culture = rivermen }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						primary_culture = adhalling
+						accepted_culture = adhalling
+					}
+				}
+			}
+			owner = { add_accepted_culture = adhalling }
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_teleri } }
+			owner = {
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = silvan
+								accepted_culture = silvan
+							}
+						}
+					}
+					owner = { add_accepted_culture = silvan }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = galadhrim
+								accepted_culture = galadhrim
+							}
+						}
+					}
+					owner = { add_accepted_culture = galadhrim }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_avari } }
+			owner = {
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = avari
+								accepted_culture = avari
+							}
+						}
+					}
+					owner = { add_accepted_culture = avari }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_hobbits } }
+			owner = {
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = stoor
+								accepted_culture = stoor
+							}
+						}
+					}
+					owner = { add_accepted_culture = stoor }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim } }
+			owner = {
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = woodsmen
+								accepted_culture = woodsmen
+							}
+						}
+					}
+					owner = { add_accepted_culture = woodsmen }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = beorning
+								accepted_culture = beorning
+							}
+						}
+					}
+					owner = { add_accepted_culture = beorning }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = beiabarnae
+								accepted_culture = beiabarnae
+							}
+						}
+					}
+					owner = { add_accepted_culture = beiabarnae }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = melburgi
+								accepted_culture = melburgi
+							}
+						}
+					}
+					owner = { add_accepted_culture = melburgi }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = herimundi
+								accepted_culture = herimundi
+							}
+						}
+					}
+					owner = { add_accepted_culture = herimundi }
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim } }
+			owner = {
+				random_owned = {
+					limit = {
+						owner = {
+							NOT = {
+								primary_culture = anduinmen
+								accepted_culture = anduinmen
+							}
+						}
+					}
+					owner = { add_accepted_culture = anduinmen }
+				}
+			}
+		}
 	}
 }
 
