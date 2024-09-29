@@ -4,13 +4,14 @@
 # TODO: Setup specific flavor effects
 # TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
 # TODO: Update ai chances to select various options
+# TODO: 	chances for specific flavor is set
 # TODO: Add decision to request to join
-# TODO: Confirm settle cores of DG works and is loced corrected
-# TODO: Confirm settle cores of Mountainlands works and is loced corrected
 # TODO: Confirm economic union works and is loced corrected
 # TODO: 	Putting realms in spheres seems broken
 # TODO: Confirm political union works and is loced corrected
 # TODO: Ensure that the railroading slots aren't used
+# TODO: Setup background cycling cleanup events
+# TODO: 	Including the ai starting diplomatic plays
 
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
@@ -8574,10 +8575,14 @@ country_event = {
 	
 	immediate = {
 		end_color_loc = {}
+		
+		dynamic_loc_slot_3 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
+		dynamic_loc_slot_4 = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
@@ -8612,21 +8617,37 @@ country_event = {
 	option = {
 		name = ""
 		
+		set_global_flag = hidden_effects
+		
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap } }
 			owner = {
-				ERE_657 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Dádhrik's Gap
-				country_event = 110042
+				random_owned = {
+					limit = { owner = { has_global_flag = hidden_effects } }
+					owner = {
+						ERE_657 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Dádhrik's Gap
+						country_event = 110042
+					}
+				}
 			}
 		}
 		
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands } }
 			owner = {
-				ERE_660 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Mountainlands
-				country_event = 110042
+				random_owned = {
+					limit = { owner = { has_global_flag = hidden_effects } }
+					owner = {
+						ERE_660 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Mountainlands
+						country_event = 110042
+					}
+				}
 			}
 		}
+		
+		triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
@@ -8656,10 +8677,14 @@ country_event = {
 	
 	immediate = {
 		end_color_loc = {}
+		
+		dynamic_loc_slot_3 = {}
 		empty_line_loc = {}
+		
 		empty_line_loc = {}
+		dynamic_loc_slot_4 = {}
 		empty_line_loc = {}
-		empty_line_loc = {}
+		
 		empty_line_loc = {}
 		empty_line_loc = {}
 		empty_line_loc = {}
@@ -8715,11 +8740,11 @@ country_event = {
 	}
 }
 
-# Alliance of Dwarves and Men Specific Flavor - Northman realm deciding how to handle claims to land
+# Alliance of Dwarves and Men - Northmen Core Dispute - Northman realm deciding how to handle claims to land
 country_event = {
 	id = 110042
-	title = "  Alliance of Dwarves and Men - Specific Flavor"
-	desc = ""
+	title = "  Alliance of Dwarves and Men - Northmen Core Dispute"
+	desc = "EVTDESC110042"
 	picture = "organizations/alliance_dwarves_men_4"
 	
 	is_triggered_only = yes
@@ -8727,17 +8752,10 @@ country_event = {
 	option = {
 		name = "Drop the claim completely (§BHistorical§!)"
 		
+		set_global_flag = hidden_effects
+		
 		badboy = -5
 		plurality = 3
-		
-		random_country = {
-			limit = {
-				has_country_modifier = alliance_of_dwarves_and_men
-				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
-			}
-			relation = { who = THIS value = 50 }
-			# TODO: Fire country event letting the owner of the provinces know about the dropped claim
-		}
 		
 		random_country = {
 			limit = {
@@ -8755,15 +8773,19 @@ country_event = {
 					limit = {
 						has_province_modifier = alliance_dwarves_men_selected_region
 						region = ERE_657 # Dádhrik's Gap
+						owner = { has_global_flag = hidden_effects }
 					}
 					owner = { set_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap }
+					dynamic_loc_slot_11 = { state_scope = { change_region_name = "The Northmen have decided to drop their claims to Dádhrik's Gap!" } }
 				}
 				random_neighbor_province = {
 					limit = {
 						has_province_modifier = alliance_dwarves_men_selected_region
 						region = ERE_660 # Mountainlands
+						owner = { has_global_flag = hidden_effects }
 					}
 					owner = { set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands }
+					dynamic_loc_slot_11 = { state_scope = { change_region_name = "The Northmen have decided to drop their claims to Mountainlands!" } }
 				}
 				any_neighbor_province = {
 					limit = { has_province_modifier = alliance_dwarves_men_selected_region }
@@ -8774,12 +8796,42 @@ country_event = {
 				}
 			}
 			
-			country_event = 110110 # Alliance of Dwarves and Men cleanup
+			random_owned = {
+				limit = { owner = { has_global_flag = hidden_effects } }
+				country_event = 110110 # Alliance of Dwarves and Men cleanup
+				owner = { dynamic_loc_slot_10 = { state_scope = { change_region_name = "§MThis event is cosmetic, to allow you to know about changing within the Alliance of Dwarves and Men.§!" } } }
+			}
+		}
+		
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+			}
+			relation = { who = THIS value = 50 }
+			triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {}
+		}
+		
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+				has_global_flag = hidden_effects
+			}
+			country_event = 110049
+		}
+		
+		set_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 50
 		}
 	}
 	
 	option = {
 		name = "Drop the claim, but only for resettlement of our people"
+		
+		set_global_flag = hidden_effects
 		
 		badboy = 2
 		plurality = 2
@@ -8788,13 +8840,60 @@ country_event = {
 			limit = {
 				has_country_modifier = alliance_of_dwarves_and_men
 				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+				has_global_flag = hidden_effects
 			}
 			country_event = 110043
+		}
+		
+		triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {}
+		
+		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_global_flag = railroading_enabled
+			}
 		}
 	}
 	
 	option = {
 		name = "Press the claim"
+		
+		set_global_flag = hidden_effects
+			
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = { dynamic_loc_slot_10 = { state_scope = { change_region_name = "The Northmen are requestiong the return of" } } }
+			owner = { dynamic_loc_slot_12 = { state_scope = { change_region_name = "What shoud be our response?" } } }
+		}
+		
+		FOR = {
+			random_owned = {
+				random_neighbor_province = {
+					limit = {
+						has_province_modifier = alliance_dwarves_men_selected_region
+						region = ERE_657 # Dádhrik's Gap
+						owner = { has_global_flag = hidden_effects }
+					}
+					owner = { dynamic_loc_slot_11 = { state_scope = { change_region_name = "Dádhrik's Gap." } } }
+				}
+			}
+		}
+		
+		FOR = {
+			random_owned = {
+				random_neighbor_province = {
+					limit = {
+						has_province_modifier = alliance_dwarves_men_selected_region
+						region = ERE_660 # Mountainlands
+						owner = { has_global_flag = hidden_effects }
+					}
+					owner = { dynamic_loc_slot_11 = { state_scope = { change_region_name = "Mountainlands." } } }
+				}
+			}
+		}
 		
 		badboy = 7
 		plurality = 1
@@ -8803,29 +8902,60 @@ country_event = {
 			limit = {
 				has_country_modifier = alliance_of_dwarves_and_men
 				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+				has_global_flag = hidden_effects
 			}
 			country_event = 110047
+		}
+		
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				any_owned_province = { has_province_modifier = alliance_dwarves_men_selected_region }
+			}
+			triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {}
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
 		}
 	}
 	
 	option = {
 		name = "We will revisit this claim"
 		
-		FOR = { country_event = 110110 } # Alliance of Dwarves and Men cleanup
+		set_global_flag = hidden_effects
+		
+		random_country = {
+			limit = {
+				tag = FOR
+				has_global_flag = hidden_effects
+			}
+			country_event = 110110 # Alliance of Dwarves and Men cleanup
+		}
+		
+		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
-# Alliance of Dwarves and Men - Specific Flavor -- Dwarves asked to send Northmen back to Northmen realms
+# Alliance of Dwarves and Men - Northmen Core Dispute -- Dwarves asked to send Northmen back to Northmen realms
 country_event = {
 	id = 110043
-	title = "  Alliance of Dwarves and Men - Specific Flavor"
-	desc = ""
+	title = "  Alliance of Dwarves and Men - Northmen Core Dispute"
+	desc = "EVTDESC110043"
 	picture = "organizations/alliance_dwarves_men_2"
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = "This is acceptable"
+		
+		set_global_flag = hidden_effects
 		
 		badboy = -2
 		plurality = -1
@@ -8837,6 +8967,7 @@ country_event = {
 			limit = {
 				has_province_modifier = alliance_dwarves_men_selected_region
 				region = ERE_657 # Dádhrik's Gap
+				owner = { has_global_flag = hidden_effects }
 			}
 			owner = {
 				FROM = { country_event = 110044 }
@@ -8848,6 +8979,7 @@ country_event = {
 			limit = {
 				has_province_modifier = alliance_dwarves_men_selected_region
 				region = ERE_660 # Mountainlands
+				owner = { has_global_flag = hidden_effects }
 			}
 			owner = {
 				FROM = { country_event = 110045 }
@@ -8867,21 +8999,68 @@ country_event = {
 				}
 			}
 		}
+		
+		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { relation = { who = FROM value = 200 } }
+			}
+		}
 	}
 	
 	option = {
 		name = "Unacceptable"
 		
+		set_global_flag = hidden_effects
+		
 		plurality = 1
-		FROM = { country_event = 110046 }
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = alliance_dwarves_men_selected_region
+				region = ERE_657 # Dádhrik's Gap
+				owner = { has_global_flag = hidden_effects }
+			}
+			owner = {
+				set_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer
+				FROM = { country_event = 110046 }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = alliance_dwarves_men_selected_region
+				region = ERE_660 # Mountainlands
+				owner = { has_global_flag = hidden_effects }
+			}
+			owner = {
+				set_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer
+				FROM = { country_event = 110046 }
+			}
+		}
+		
+		FROM = { triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {} }
+		
+		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				relation = { who = FROM value = 200 }
+			}
+		}
 	}
 }
 
-# Alliance of Dwarves and Men - Specific Flavor --Dwarves transfer Dádhrik's Gap Northmen to Dalelands
+# Alliance of Dwarves and Men - Northmen Core Dispute --Dwarves transfer Dádhrik's Gap Northmen to Dalelands
 country_event = {
 	id = 110044
-	title = "  Alliance of Dwarves and Men - Specific Flavor"
-	desc = ""
+	title = "  Alliance of Dwarves and Men - Northmen Core Dispute"
+	desc = "EVTDESC110044"
 	picture = "organizations/alliance_dwarves_men_5"
 	
 	is_triggered_only = yes
@@ -8891,12 +9070,9 @@ country_event = {
 		
 		plurality = -0.5
 		
-		FROM = {
+		ERE_657 = { # Dádhrik's Gap
 			any_pop = {
-				limit = {
-					is_culture_group = northmen
-					location = { region = ERE_657 } # Dádhrik's Gap
-				}
+				limit = { is_culture_group = northmen }
 				move_pop = 141 # Kotstó
 			}
 		}
@@ -8909,6 +9085,10 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 	
 	option = {
@@ -8916,12 +9096,9 @@ country_event = {
 		
 		plurality = -0.5
 		
-		FROM = {
+		ERE_657 = { # Dádhrik's Gap
 			any_pop = {
-				limit = {
-					is_culture_group = northmen
-					location = { region = ERE_657 } # Dádhrik's Gap
-				}
+				limit = { is_culture_group = northmen }
 				move_pop = 652 # Dale
 			}
 		}
@@ -8934,6 +9111,10 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 	
 	option = {
@@ -8941,12 +9122,9 @@ country_event = {
 		
 		plurality = -0.5
 		
-		FROM = {
+		ERE_657 = { # Dádhrik's Gap
 			any_pop = {
-				limit = {
-					is_culture_group = northmen
-					location = { region = ERE_657 } # Dádhrik's Gap
-				}
+				limit = { is_culture_group = northmen }
 				move_pop = 655 # Felagsgard
 			}
 		}
@@ -8959,6 +9137,10 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 	
 	option = {
@@ -8966,12 +9148,9 @@ country_event = {
 		
 		plurality = -0.5
 		
-		FROM = {
+		ERE_657 = { # Dádhrik's Gap
 			any_pop = {
-				limit = {
-					is_culture_group = northmen
-					location = { region = ERE_657 } # Dádhrik's Gap
-				}
+				limit = { is_culture_group = northmen }
 				move_pop = 141 # Alduringard
 			}
 		}
@@ -8984,6 +9163,10 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 	
 	option = {
@@ -8991,7 +9174,7 @@ country_event = {
 		
 		plurality = -1
 		
-		FROM = {
+		ERE_657 = { # Dádhrik's Gap
 			any_pop = {
 				limit = {
 					is_culture_group = northmen
@@ -9027,14 +9210,18 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 
-# # Alliance of Dwarves and Men - Specific Flavor --Dwarves transfer Mountainlands Northmen to Dalelands
+# # Alliance of Dwarves and Men - Northmen Core Dispute --Dwarves transfer Mountainlands Northmen to Dalelands
 country_event = {
 	id = 110045
-	title = "  Alliance of Dwarves and Men - Specific Flavor"
-	desc = ""
+	title = "  Alliance of Dwarves and Men - Northmen Core Dispute"
+	desc = "EVTDESC110044"
 	picture = "organizations/alliance_dwarves_men_5"
 	
 	is_triggered_only = yes
@@ -9042,12 +9229,9 @@ country_event = {
 	option = {
 		name = "Flyiarstadur"
 		
-		FROM = {
+		ERE_660 = { # Mountainlands
 			any_pop = {
-				limit = {
-					is_culture_group = northmen
-					location = { region = ERE_660 } # Mountainlands
-				}
+				limit = { is_culture_group = northmen }
 				move_pop = 355 # Flyiarstadur
 			}
 		}
@@ -9060,17 +9244,18 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 	
 	option = {
 		name = "Withibord"
 		
-		FROM = {
+		ERE_660 = { # Mountainlands
 			any_pop = {
-				limit = {
-					is_culture_group = northmen
-					location = { region = ERE_660 } # Mountainlands
-				}
+				limit = { is_culture_group = northmen }
 				move_pop = 651 # Withibord
 			}
 		}
@@ -9083,17 +9268,18 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 	
 	option = {
 		name = "Pennstó"
 		
-		FROM = {
+		ERE_660 = { # Mountainlands
 			any_pop = {
-				limit = {
-					is_culture_group = northmen
-					location = { region = ERE_660 } # Mountainlands
-				}
+				limit = { is_culture_group = northmen }
 				move_pop = 661 # Pennstó
 			}
 		}
@@ -9106,17 +9292,18 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 	
 	option = {
 		name = "Thliuhanastath"
 		
-		FROM = {
+		ERE_660 = { # Mountainlands
 			any_pop = {
-				limit = {
-					is_culture_group = northmen
-					location = { region = ERE_660 } # Mountainlands
-				}
+				limit = { is_culture_group = northmen }
 				move_pop = 1377 # Thliuhanastath
 			}
 		}
@@ -9129,12 +9316,16 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 	
 	option = {
 		name = "Let the people decide"
 		
-		FROM = {
+		ERE_660 = { # Mountainlands
 			any_pop = {
 				limit = {
 					is_culture_group = northmen
@@ -9178,14 +9369,18 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 
-# # Alliance of Dwarves and Men - Specific Flavor --Dwarves refused Northman offer
+# # Alliance of Dwarves and Men - Northmen Core Dispute --Dwarves refused Northman offer
 country_event = {
 	id = 110046
-	title = "  Alliance of Dwarves and Men - Specific Flavor"
-	desc = ""
+	title = "  Alliance of Dwarves and Men - Northmen Core Dispute"
+	desc = "EVTDESC110046"
 	picture = "organizations/alliance_dwarves_men_2"
 	
 	is_triggered_only = yes
@@ -9219,32 +9414,63 @@ country_event = {
 	option = {
 		name = "We will ask the alliance for a vote"
 		
-		# TODO: Setup and call voting
-		# TODO: Set the right global flag to mark the region as having it's cored settled (alliance_of_dwarves_and_men_settled_dadhriks_gap or alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands) in the event
-		# TODO: Make sure to clear flags
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = {
+				set_country_flag = alliance_dwarves_men_voting_initiator # The realm asking for the land is the one getting this event
+				FROM = { set_country_flag = alliance_dwarves_men_selected_country } # FROM is the realm that owns the land
+				FOR = { country_event = 110150 } # Voting Handler
+			}
+		}
+		
+		triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = {}
+		
+		clr_global_flag = hidden_effects
 	}
 }
 
-# Alliance of Dwarves and Men - Specific Flavor -- Dwarves asked to send Northmen back to Northmen realms
+# Alliance of Dwarves and Men - Northmen Core Dispute -- Dwarves asked to send Northmen back to Northmen realms
 country_event = {
 	id = 110047
-	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	title = "  Alliance of Dwarves and Men - Northmen Core Dispute"
 	desc = ""
 	picture = "organizations/alliance_dwarves_men_2"
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		end_color_loc = {}
+		dynamic_loc_slot_10 = {}
+		dynamic_loc_slot_11 = {}
+		dynamic_loc_slot_12 = {}
+	}
+	
 	option = {
 		name = "This is acceptable"
+		
+		set_global_flag = hidden_effects
 		
 		badboy = -5
 		plurality = 3
 		
 		relation = { who = FROM value = 50 }
 		
-		any_owned = {
-			limit = { has_province_modifier = alliance_dwarves_men_selected_region }
-			remove_core = THIS
+		random_owned = {
+			limit = {
+				has_province_modifier = alliance_dwarves_men_selected_region
+				region = ERE_657 # Dádhrik's Gap
+			}
+			owner = { ERE_657 = { remove_core = THIS } }
+		}
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = alliance_dwarves_men_selected_region
+				region = ERE_660 # Mountainlands
+			}
+			owner = { ERE_660 = { remove_core = THIS } }
 		}
 		
 		# Doing this outside the random_country in case somehow one of the provinces in the region is not owned by the same owner
@@ -9254,6 +9480,7 @@ country_event = {
 					limit = {
 						has_province_modifier = alliance_dwarves_men_selected_region
 						region = ERE_657 # Dádhrik's Gap
+						owner = { has_global_flag = hidden_effects }
 					}
 					owner = { set_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap }
 				}
@@ -9261,27 +9488,71 @@ country_event = {
 					limit = {
 						has_province_modifier = alliance_dwarves_men_selected_region
 						region = ERE_660 # Mountainlands
+						owner = { has_global_flag = hidden_effects }
 					}
-					owner = { set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands }
+					owner = { set_global_flag = alliance_of_dwarves_and_men_settled_mountainlands }
 				}
 			}
 		}
 		
-		FROM = { country_event = 110048 }
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = { FROM = { country_event = 110048 } }
+		}
+		
+		FROM = { triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {} }
+		
+		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 	
 	option = {
 		name = "Unacceptable"
 		
+		set_global_flag = hidden_effects
+		
 		plurality = 1
-		FROM = { country_event = 110046 }
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = hidden_effects } }
+			owner = { FROM = { country_event = 110046 } }
+		}
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = alliance_dwarves_men_selected_region
+				region = ERE_657 # Dádhrik's Gap
+				owner = { has_global_flag = hidden_effects }
+			}
+			owner = { set_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer }
+		}
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = alliance_dwarves_men_selected_region
+				region = ERE_660 # Mountainlands
+				owner = { has_global_flag = hidden_effects }
+			}
+			owner = { set_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer }
+		}
+		
+		FROM = { triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {} }
+		
+		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 
-# Alliance of Dwarves and Men - Specific Flavor -- Northman realm gains control of region
+# Alliance of Dwarves and Men - Northmen Core Dispute -- Northman realm gains control of region
 country_event = {
 	id = 110048
-	title = "  Alliance of Dwarves and Men - Specific Flavor"
+	title = "  Alliance of Dwarves and Men - Northmen Core Dispute"
 	desc = ""
 	picture = "organizations/alliance_dwarves_men_1"
 	
@@ -9290,9 +9561,15 @@ country_event = {
 	option = {
 		name = "They accept!"
 		
+		set_global_flag = hidden_effects
+		
 		plurality = -0.5
 		
-		FROM = {
+		random_country = {
+			limit = {
+				tag = FROM
+				has_global_flag = hidden_effects
+			}
 			any_owned = {
 				limit = { has_province_modifier = alliance_dwarves_men_selected_region }
 				add_core = THIS
@@ -9300,14 +9577,38 @@ country_event = {
 			}
 		}
 		
-		set_global_flag = hidden_effects
-		
 		random_owned = {
 			limit = { owner = { has_global_flag = hidden_effects } }
 			owner = { FOR = { country_event = 110110 } } # Alliance of Dwarves and Men cleanup
 		}
 		
+		gain_cores_and_ownership_loc = {}
+		
 		clr_global_flag = hidden_effects
+	}
+}
+
+# Alliance of Dwarves and Men - Northmen Core Dispute
+country_event = {
+	id = 110049
+	title = "  Alliance of Dwarves and Men - Northmen Core Dispute"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		end_color_loc = {}
+		dynamic_loc_slot_10 = {}
+		empty_line_loc = {}
+		
+		empty_line_loc = {}
+		dynamic_loc_slot_11 = {}
+		empty_line_loc = {}
+	}
+	
+	option = {
+		name = "Good"
 	}
 }
 
@@ -10082,6 +10383,10 @@ country_event = {
 	option = {
 		name = "Continue"
 		
+		# Using the higher numbers to make sure there's no overlap
+		dynamic_loc_slot_3 = { state_scope = { change_region_name = "In this menu, you can access any flavor specific to the Alliance of Dwarves and Men. Below are the possible options|" } }
+		dynamic_loc_slot_4 = { state_scope = { change_region_name = "Barding Realm/Rhovanion| Settle the cores of Dadhrik's Gap and the cores of Mountainlands" } }
+		
 		# Calculate the number of options that should be shown
 		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button.
 		
@@ -10199,6 +10504,10 @@ country_event = {
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer
+			clr_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_political_union
 			clr_global_flag = alliance_of_dwarves_and_men_in_voting
@@ -10564,6 +10873,150 @@ country_event = {
 		}
 		
 		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer } }
+			end_color_loc = {}
+			dynamic_loc_slot_20 = {}
+			dynamic_loc_slot_1 = {}
+			dynamic_loc_slot_21 = {}
+			dynamic_loc_slot_2 = {}
+			dynamic_loc_slot_22 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_23 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_10 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_11 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_12 = {}
+			dynamic_loc_slot_2 = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer } }
+			end_color_loc = {}
+			dynamic_loc_slot_20 = {}
+			dynamic_loc_slot_1 = {}
+			dynamic_loc_slot_21 = {}
+			dynamic_loc_slot_2 = {}
+			dynamic_loc_slot_22 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_23 = {}
+			dynamic_loc_slot_24 = {}
+			dynamic_loc_slot_2 = {}
+			dynamic_loc_slot_25 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_10 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_11 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_12 = {}
+			dynamic_loc_slot_2 = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer } }
+			end_color_loc = {}
+			dynamic_loc_slot_20 = {}
+			dynamic_loc_slot_1 = {}
+			dynamic_loc_slot_21 = {}
+			dynamic_loc_slot_2 = {}
+			dynamic_loc_slot_22 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_23 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_10 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_11 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_12 = {}
+			dynamic_loc_slot_2 = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer } }
+			end_color_loc = {}
+			dynamic_loc_slot_20 = {}
+			dynamic_loc_slot_1 = {}
+			dynamic_loc_slot_21 = {}
+			dynamic_loc_slot_2 = {}
+			dynamic_loc_slot_22 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_23 = {}
+			dynamic_loc_slot_24 = {}
+			dynamic_loc_slot_2 = {}
+			dynamic_loc_slot_25 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			empty_line_loc = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_10 = {}
+			dynamic_loc_slot_1 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_11 = {}
+			empty_line_loc = {}
+			
+			empty_line_loc = {}
+			dynamic_loc_slot_12 = {}
+			dynamic_loc_slot_2 = {}
+			empty_line_loc = {}
+		}
+		
+		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union } }
 			end_color_loc = {}
 			dynamic_loc_slot_20 = {}
@@ -10873,6 +11326,22 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach } }
 			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "expand the alliance's cultural reach" } } }
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer } }
+			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "transfer the Northmen of Dádhrik's Gap" } } }
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer } }
+			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "transfer Dádhrik's Gap" } } }
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer } }
+			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "transfer the Northmen of Mountainlands" } } }
+		}
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer } }
+			owner = { railroading_tag_specific_description_loc_3 = { state_scope = { change_region_name = "transfer Mountainlands" } } }
 		}
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union } }
@@ -11326,6 +11795,8 @@ country_event = {
 						has_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
 						has_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
 						has_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer
 					}
 				}
 			}
@@ -11383,6 +11854,8 @@ country_event = {
 	
 	option = {
 		name = ""
+		
+		set_global_flag = hidden_effects
 		
 		FOR = { country_event = { id = 110110 days = 2 } } # Alliance of Dwarves and Men Cleanup
 		FOR = { country_event = { id = 402001 days = 0 } } # Dynamic Loc Cleanup
@@ -11572,6 +12045,222 @@ country_event = {
 		
 		# alliance_of_dwarves_and_men_voting_on_returning_cores should never go to voting, so no need to handle it here
 		
+		# Specific Flavor -- Dádhrik's Gap/Mountainlands Population Transfer {
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer
+					}
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
+				}
+			}
+			owner = {
+				random_owned = {
+					limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer } }
+					owner = {
+						ERE_657 = { # Dádhrik's Gap
+							remove_core = DAL
+							remove_core = RHO
+							remove_core = GRA
+							remove_core = ADH
+						}
+					}
+				}
+				random_owned = {
+					limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer } }
+					owner = {
+						ERE_660 = { # Mountainlands
+							remove_core = DAL
+							remove_core = RHO
+							remove_core = GRA
+							remove_core = ADH
+						}
+					}
+				}
+			}
+			owner = {
+				random_country = {
+					limit = {
+						has_country_flag = alliance_dwarves_men_voting_initiator
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer
+						has_global_flag = hidden_effects
+					}
+					country_event = 110044
+				}
+				# random_country doesn't cover THIS
+				random_owned = {
+					limit = {
+						owner = {
+							has_country_flag = alliance_dwarves_men_voting_initiator
+							has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer
+							has_global_flag = hidden_effects
+						}
+					}
+					owner = { country_event = 110044 }
+				}
+				random_country = {
+					limit = {
+						has_country_flag = alliance_dwarves_men_voting_initiator
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer
+						has_global_flag = hidden_effects
+					}
+					country_event = 110045
+				}
+				# random_country doesn't cover THIS
+				random_owned = {
+					limit = {
+						owner = {
+							has_country_flag = alliance_dwarves_men_voting_initiator
+							has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer
+							has_global_flag = hidden_effects
+						}
+					}
+					owner = { country_event = 110045 }
+				}
+			}
+			triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer
+					}
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = -0.1 } } }
+				}
+			}
+			owner = {
+				random_owned = {
+					limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer } }
+					owner = {
+						ERE_657 = { # Dádhrik's Gap
+							remove_core = DAL
+							remove_core = RHO
+							remove_core = GRA
+							remove_core = ADH
+						}
+					}
+				}
+				random_owned = {
+					limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer } }
+					owner = {
+						ERE_660 = { # Mountainlands
+							remove_core = DAL
+							remove_core = RHO
+							remove_core = GRA
+							remove_core = ADH
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer
+					}
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = -0.1 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+				}
+			}
+			owner = {
+				random_country = {
+					limit = {
+						has_country_flag = alliance_dwarves_men_selected_country
+						has_global_flag = hidden_effects
+					}
+					any_owned = {
+						limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+						add_province_modifier = { name = alliance_dwarves_men_diplomacy_stalled duration = 3650 }
+					}
+				}
+			}
+		}
+		# }
+		
+		# Specific Flavor -- Dádhrik's Gap/Mountainlands Land Transfer {
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer
+					}
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } }
+				}
+			}
+			owner = { country_event = 110167 }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer
+					}
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = -0.1 } } }
+				}
+			}
+			owner = {
+				random_owned = {
+					limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer } }
+					owner = {
+						ERE_657 = { # Dádhrik's Gap
+							remove_core = DAL
+							remove_core = RHO
+							remove_core = GRA
+							remove_core = ADH
+						}
+					}
+				}
+				random_owned = {
+					limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer } }
+					owner = {
+						ERE_660 = { # Mountainlands
+							remove_core = DAL
+							remove_core = RHO
+							remove_core = GRA
+							remove_core = ADH
+						}
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer
+						has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer
+					}
+					FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = -0.1 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_voting_results value = 0.1 } } }
+				}
+			}
+			owner = {
+				random_country = {
+					limit = {
+						has_country_flag = alliance_dwarves_men_selected_country
+						has_global_flag = hidden_effects
+					}
+					any_owned = {
+						limit = { has_province_modifier = alliance_dwarves_men_selected_region }
+						add_province_modifier = { name = alliance_dwarves_men_diplomacy_stalled duration = 3650 }
+					}
+				}
+			}
+		}
+		# }
+		
 		random_owned = {
 			limit = {
 				owner = {
@@ -11641,6 +12330,8 @@ country_event = {
 				# TODO: Set Political Union effects
 			}
 		}
+		
+		clr_global_flag = hidden_effects
 	}
 }
 
@@ -11836,6 +12527,76 @@ country_event = {
 	}
 }
 
+# Northmen Core Dispute -- Northmen Victory
+country_event = {
+	id = 110167
+	title = "  Alliance of Dwarves and Men - Victory"
+	desc = "EVTDESC110167"
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Huzzah!"
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer
+				}
+			}
+			owner = {
+				ERE_657 = { # Dádhrik's Gap
+					secede_province = THIS
+					add_core = THIS
+					remove_core = ERE # Given that it's setup for Erebor to be the only potential target...
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer
+				}
+			}
+			owner = {
+				ERE_657 = { # Dádhrik's Gap
+					secede_province = THIS
+					add_core = THIS
+					remove_core = ERE # Given that it's setup for Erebor to be the only potential target...
+				}
+			}
+		}
+		
+		# Doing this outside the random_country in case somehow one of the provinces in the region is not owned by the same owner
+		FOR = {
+			random_owned = {
+				random_neighbor_province = {
+					limit = {
+						has_province_modifier = alliance_dwarves_men_selected_region
+						region = ERE_657 # Dádhrik's Gap
+						owner = { has_global_flag = hidden_effects }
+					}
+					owner = { set_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap }
+				}
+				random_neighbor_province = {
+					limit = {
+						has_province_modifier = alliance_dwarves_men_selected_region
+						region = ERE_660 # Mountainlands
+						owner = { has_global_flag = hidden_effects }
+					}
+					owner = { set_global_flag = alliance_of_dwarves_and_men_settled_mountainlands }
+				}
+			}
+		}
+		
+		clr_global_flag = hidden_effects
+	}
+}
+
 # Description Localisation Setting -- FIRES FOR FOR, NO NEED TO LOC
 country_event = {
 	id = 110175
@@ -11903,6 +12664,58 @@ country_event = {
 				dynamic_loc_slot_10 = { state_scope = { change_region_name = "There is strength in unity" } } # First two slots taken up by countries. Third taken up by culture group
 				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
 				dynamic_loc_slot_12 = { state_scope = { change_region_name = "No. Extending the cultural reach will only weaken the alliance" } }
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_population_transfer } }
+			owner = {
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has proposed transferring the population of Dádhrik's Gap from" } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "to" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "§MThis will transfer Northmen pops from Dádhrik's Gap to Dalelands.§!" } }
+				dynamic_loc_slot_10 = { state_scope = { change_region_name = "We will support" } } # First two slots taken up by countries. Third taken up by culture group
+				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
+				dynamic_loc_slot_12 = { state_scope = { change_region_name = "We will support" } }
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_dadhriks_gap_land_transfer } }
+			owner = {
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has proposed transferring Dádhrik's Gap from" } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "to" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "§MThis will transfer all provinces of Dádhrik's Gap from§!" } }
+				dynamic_loc_slot_24 = { state_scope = { change_region_name = "§Mowned by§!" } }
+				dynamic_loc_slot_25 = { state_scope = { change_region_name = "§Mto§!" } }
+				dynamic_loc_slot_10 = { state_scope = { change_region_name = "We will support" } } # First two slots taken up by countries. Third taken up by culture group
+				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
+				dynamic_loc_slot_12 = { state_scope = { change_region_name = "We will support" } }
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_population_transfer } }
+			owner = {
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has proposed transferring the population of Mountainlands from" } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "to" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "§MThis will transfer Northmen pops from Mountainlands to Medes.§!" } }
+				dynamic_loc_slot_10 = { state_scope = { change_region_name = "We will support" } } # First two slots taken up by countries. Third taken up by culture group
+				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
+				dynamic_loc_slot_12 = { state_scope = { change_region_name = "We will support" } }
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_voting_on_specific_flavor_mountainlands_land_transfer } }
+			owner = {
+				dynamic_loc_slot_21 = { state_scope = { change_region_name = "has proposed transferring Mountainlands from" } }
+				dynamic_loc_slot_22 = { state_scope = { change_region_name = "to" } }
+				dynamic_loc_slot_23 = { state_scope = { change_region_name = "§MThis will transfer all provinces of Mountainlands§!" } }
+				dynamic_loc_slot_24 = { state_scope = { change_region_name = "§Mowned by§!" } }
+				dynamic_loc_slot_25 = { state_scope = { change_region_name = "§Mto§!" } }
+				dynamic_loc_slot_10 = { state_scope = { change_region_name = "We will support" } } # First two slots taken up by countries. Third taken up by culture group
+				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
+				dynamic_loc_slot_12 = { state_scope = { change_region_name = "We will support" } }
 			}
 		}
 		
