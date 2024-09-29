@@ -8589,9 +8589,9 @@ country_event = {
 		empty_line_loc = {}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap } }
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap } }
 			empty_line_loc = {}
-			settle_cores_of_dahdriks_gap_loc = {}
+			settle_cores_of_dadhriks_gap_loc = {}
 			empty_line_loc = {}
 		}
 		
@@ -8620,7 +8620,7 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap } }
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap } }
 			owner = {
 				random_owned = {
 					limit = { owner = { has_global_flag = hidden_effects } }
@@ -8691,9 +8691,9 @@ country_event = {
 		empty_line_loc = {}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap } }
+			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap } }
 			empty_line_loc = {}
-			settle_cores_of_dahdriks_gap_loc = {}
+			settle_cores_of_dadhriks_gap_loc = {}
 			empty_line_loc = {}
 		}
 		
@@ -9825,7 +9825,7 @@ country_event = {
 					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
 					FROM = {
 						OR = {
-							AND = { # Settle the Cores of Dahdrik's Gap
+							AND = { # Settle the Cores of Dádhrik's Gap
 								OR = {
 									tag = DAL
 									tag = RHO
@@ -10390,10 +10390,10 @@ country_event = {
 		# Calculate the number of options that should be shown
 		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button.
 		
-		clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap
+		clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap
 		clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
 		
-		# Settle the Cores of Dahdrik's Gap
+		# Settle the Cores of Dádhrik's Gap
 		random_owned = {
 			limit = {
 				owner = {
@@ -10417,7 +10417,7 @@ country_event = {
 			}
 			owner = {
 				change_variable = { which = menu_option_number value = 1 }
-				set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap
+				set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap
 			}
 		}
 		
@@ -10497,7 +10497,7 @@ country_event = {
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
-			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dahdriks_gap
+			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap
 			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
