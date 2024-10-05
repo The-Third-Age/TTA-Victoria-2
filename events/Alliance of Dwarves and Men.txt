@@ -5,7 +5,6 @@
 # TODO: Update ai chances to select various options
 # TODO: 	chances for specific flavor is set
 # TODO: Add decision to request to join
-# TODO: Confirm political union works and is loced corrected
 # TODO: Ensure that the railroading slots aren't used
 # TODO: Setup background cycling cleanup events
 # TODO: 	Including the ai starting diplomatic plays
@@ -10575,23 +10574,14 @@ country_event = {
 					add_country_modifier = { name = alliance_of_dwarves_and_men_recently_voted duration = 30 }
 				}
 				
-				random_country = {
-					limit = { has_country_flag = alliance_dwarves_men_voting_initiator } # The "aggressor"
-					country_event = { id = 110151 days = 0 } # The strategy that the initator will use to influence the AI TODO: Make
-				}
-				
-				# TODO: For things where there isn't a defender, it doesn't make sense to fire this for the defender
-				random_country = {
-					limit = { has_country_flag = alliance_dwarves_men_selected_country } # The "defender"
-					country_event = { id = 110151 days = 0 } # The strategy that the defender will use to influence the AI TODO: Make
-				}
-				
 				# TODO: Change this to 15 days between initiating and voting
-				country_event = { id = 110152 days = 7 } # Handler 2
+				country_event = { id = 110152 days = 0 } # Handler 2
 			}
 		}
 	}
 }
+
+# 110151 not used
 
 # Voting Handler 2 -- sets the initiator's loc to dynamic loc slot 1 -- FIRES FOR FOR, NO NEED TO LOC
 country_event = {
@@ -12740,6 +12730,8 @@ country_event = {
 			all_core = { add_core = THIS }
 			annex_to = THIS
 		}
+		
+		# TODO: Remove alliance_of_dwarves_and_men modifier and event to states the alliance is over
 		
 		change_tag = FFN
 		

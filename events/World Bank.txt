@@ -4075,7 +4075,23 @@ country_event = {
 			}
 			
 			random_owned = {
-				limit = { owner = { has_country_modifier = province_target_alliance_men_dwarves_request_return_of_cores } }
+				limit = { owner = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } }
 				owner = {
 					change_variable = { which = modifier_count value = 1 }
 					change_variable = { which = total_modifier_count value = 1 }
