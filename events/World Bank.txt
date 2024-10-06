@@ -4139,6 +4139,14 @@ country_event = {
 			}
 			
 			random_owned = {
+				limit = { owner = { has_country_modifier = call_to_arms_cooldown } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
 				limit = { owner = { has_country_modifier = one_ring } }
 				owner = {
 					change_variable = { which = modifier_count value = 1 }
