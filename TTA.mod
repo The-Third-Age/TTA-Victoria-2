@@ -14,3 +14,6 @@ replace_path = "poptypes"
 replace_path = "units"
 replace_path = "gfx/pictures/decisions"
 replace_path = "gfx/pictures/events"
+
+github = "https://github.com/The-Third-Age/TTA-Victoria-2"
+current_release = "v0.4"
