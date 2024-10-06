@@ -1,8 +1,7 @@
 # Remove this line to have the validator check for strings in localisation
 # Audax Validator "!" Ignore_1004
 
-# TODO: Make every menu work accordingly (right now, only menus with the right number of options work)
-# 		Core Dispute, Specific Flavor
+# TODO: Check out the core dispute options. They don't seem to be working correctly
 # TODO: Update ai chances to select various options
 # TODO: 	chances for specific flavor is set (Confirm this)
 # TODO: Add decision to request to join
@@ -7562,21 +7561,21 @@ country_event = {
 		empty_line_loc = {}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0.9 } } } }
 			empty_line_loc = {}
 			resolve_conflicting_cores_loc = {}
 			empty_line_loc = {}
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0.9 } } } }
 			empty_line_loc = {}
 			request_return_of_cores_loc = {}
 			empty_line_loc = {}
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 0.9 } } } }
 			empty_line_loc = {}
 			return_cores_loc = {}
 			empty_line_loc = {}
@@ -7607,7 +7606,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 1.1 } } }
+				}
+			}
 			
 			owner = {
 				random_owned = {
@@ -7656,7 +7660,12 @@ country_event = {
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 1.1 } } }
+				}
+			}
 			
 			owner = {
 				random_owned = {
@@ -7713,7 +7722,12 @@ country_event = {
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 1.1 } } }
+				}
+			}
 			
 			owner = {
 				random_owned = {
@@ -7802,21 +7816,21 @@ country_event = {
 		empty_line_loc = {}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0.9 } } } }
 			empty_line_loc = {}
 			resolve_conflicting_cores_loc = {}
 			empty_line_loc = {}
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0.9 } } } }
 			empty_line_loc = {}
 			request_return_of_cores_loc = {}
 			empty_line_loc = {}
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 0.9 } } } }
 			empty_line_loc = {}
 			return_cores_loc = {}
 			empty_line_loc = {}
@@ -7837,14 +7851,366 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		
 	}
 	
 	option = {
 		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 1.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_core = THIS
+										any_core = {
+											NOT = { tag = THIS }
+											has_country_modifier = alliance_of_dwarves_and_men
+										}
+									}
+									add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+								}
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+				
+				triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 1.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						
+						# Sets the targeting modifier on every core of THIS where the owner is not us and is part of the organization
+						all_core = {
+							limit = {
+								NOT = { owned_by = THIS }
+								owner = { has_country_modifier = alliance_of_dwarves_and_men }
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						# Removes the modifier if the province is a core of the owner
+						any_country = {
+							limit = {
+								has_country_modifier = alliance_of_dwarves_and_men
+								NOT = { tag = THIS }
+							}
+							all_core = { remove_province_modifier = dynamic_loc_potential_region_target } # The only provinces retaining the modifier are those that are cores of the decision taker, but not of the owner
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 1.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+						any_owned = {
+							limit = {
+								NOT = { is_core = THIS }
+								any_core = {
+									exists = yes
+									has_country_modifier = alliance_of_dwarves_and_men
+								}
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
 		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 1.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 2.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_core = THIS
+										any_core = {
+											NOT = { tag = THIS }
+											has_country_modifier = alliance_of_dwarves_and_men
+										}
+									}
+									add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+								}
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+				
+				triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 1.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 2.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						
+						# Sets the targeting modifier on every core of THIS where the owner is not us and is part of the organization
+						all_core = {
+							limit = {
+								NOT = { owned_by = THIS }
+								owner = { has_country_modifier = alliance_of_dwarves_and_men }
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						# Removes the modifier if the province is a core of the owner
+						any_country = {
+							limit = {
+								has_country_modifier = alliance_of_dwarves_and_men
+								NOT = { tag = THIS }
+							}
+							all_core = { remove_province_modifier = dynamic_loc_potential_region_target } # The only provinces retaining the modifier are those that are cores of the decision taker, but not of the owner
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 1.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 2.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+						any_owned = {
+							limit = {
+								NOT = { is_core = THIS }
+								any_core = {
+									exists = yes
+									has_country_modifier = alliance_of_dwarves_and_men
+								}
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
@@ -7884,21 +8250,21 @@ country_event = {
 		empty_line_loc = {}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0.9 } } } }
 			empty_line_loc = {}
 			resolve_conflicting_cores_loc = {}
 			empty_line_loc = {}
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0.9 } } } }
 			empty_line_loc = {}
 			request_return_of_cores_loc = {}
 			empty_line_loc = {}
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_return_cores } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 0.9 } } } }
 			empty_line_loc = {}
 			return_cores_loc = {}
 			empty_line_loc = {}
@@ -7919,18 +8285,545 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		
 	}
 	
 	option = {
 		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 1.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_core = THIS
+										any_core = {
+											NOT = { tag = THIS }
+											has_country_modifier = alliance_of_dwarves_and_men
+										}
+									}
+									add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+								}
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+				
+				triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 1.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						
+						# Sets the targeting modifier on every core of THIS where the owner is not us and is part of the organization
+						all_core = {
+							limit = {
+								NOT = { owned_by = THIS }
+								owner = { has_country_modifier = alliance_of_dwarves_and_men }
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						# Removes the modifier if the province is a core of the owner
+						any_country = {
+							limit = {
+								has_country_modifier = alliance_of_dwarves_and_men
+								NOT = { tag = THIS }
+							}
+							all_core = { remove_province_modifier = dynamic_loc_potential_region_target } # The only provinces retaining the modifier are those that are cores of the decision taker, but not of the owner
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 1.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+						any_owned = {
+							limit = {
+								NOT = { is_core = THIS }
+								any_core = {
+									exists = yes
+									has_country_modifier = alliance_of_dwarves_and_men
+								}
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
 		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 1.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 2.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_core = THIS
+										any_core = {
+											NOT = { tag = THIS }
+											has_country_modifier = alliance_of_dwarves_and_men
+										}
+									}
+									add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+								}
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+				
+				triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 1.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 2.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						
+						# Sets the targeting modifier on every core of THIS where the owner is not us and is part of the organization
+						all_core = {
+							limit = {
+								NOT = { owned_by = THIS }
+								owner = { has_country_modifier = alliance_of_dwarves_and_men }
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						# Removes the modifier if the province is a core of the owner
+						any_country = {
+							limit = {
+								has_country_modifier = alliance_of_dwarves_and_men
+								NOT = { tag = THIS }
+							}
+							all_core = { remove_province_modifier = dynamic_loc_potential_region_target } # The only provinces retaining the modifier are those that are cores of the decision taker, but not of the owner
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 1.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 2.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+						any_owned = {
+							limit = {
+								NOT = { is_core = THIS }
+								any_core = {
+									exists = yes
+									has_country_modifier = alliance_of_dwarves_and_men
+								}
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
 		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 2.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 3.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_core = THIS
+										any_core = {
+											NOT = { tag = THIS }
+											has_country_modifier = alliance_of_dwarves_and_men
+										}
+									}
+									add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+								}
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+				
+				triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 2.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 3.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
+						
+						# Sets the targeting modifier on every core of THIS where the owner is not us and is part of the organization
+						all_core = {
+							limit = {
+								NOT = { owned_by = THIS }
+								owner = { has_country_modifier = alliance_of_dwarves_and_men }
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						# Removes the modifier if the province is a core of the owner
+						any_country = {
+							limit = {
+								has_country_modifier = alliance_of_dwarves_and_men
+								NOT = { tag = THIS }
+							}
+							all_core = { remove_province_modifier = dynamic_loc_potential_region_target } # The only provinces retaining the modifier are those that are cores of the decision taker, but not of the owner
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 2.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_return_cores_location value = 3.1 } } }
+				}
+			}
+			
+			owner = {
+				random_owned = {
+					limit = { has_global_flag = hidden_effects }
+					owner = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
+						
+						any_owned = {
+							limit = {
+								NOT = { is_core = THIS }
+								any_core = {
+									exists = yes
+									has_country_modifier = alliance_of_dwarves_and_men
+								}
+							}
+							add_province_modifier = { name = dynamic_loc_potential_region_target duration = 1 }
+						}
+						
+						FOR = {
+							set_variable = { which = dynamic_loc_region_count value = 0 }
+							
+							# Resets the naming count
+							set_variable = { which = dynamic_loc_names_region value = 0 }
+							
+							# Cannot call 402000 as it will not fire in the necessary order. Cannot put the standard effects in as this will mess up the renaming
+							
+							random_owned = {
+								any_neighbor_province = {
+									limit = {
+										is_state_capital = yes
+										state_scope = { any_owned_province = { has_province_modifier = dynamic_loc_potential_region_target } }
+									}
+									owner = { FOR = { change_variable = { which = dynamic_loc_region_count value = 1 } } }
+								}
+							}
+							
+							country_event = 300008 # Region Loc Setting
+							
+							country_event = 110103 # Getting the callback
+						}
+					}
+				}
+			}
+			
+			triggered_event_alliance_of_dwarves_and_men_region_selection_loc = {}
+		}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
@@ -14810,14 +15703,14 @@ country_event = {
 		empty_line_loc = {}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 0.9 } } } }
 			empty_line_loc = {}
 			settle_cores_of_dadhriks_gap_loc = {}
 			empty_line_loc = {}
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 0.9 } } } }
 			empty_line_loc = {}
 			settle_cores_of_mountainlands_loc = {}
 			empty_line_loc = {}
@@ -14841,7 +15734,12 @@ country_event = {
 		set_global_flag = hidden_effects
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap } }
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 1.1 } } }
+				}
+			}
 			owner = {
 				random_owned = {
 					limit = { owner = { has_global_flag = hidden_effects } }
@@ -14854,7 +15752,12 @@ country_event = {
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands } }
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 1.1 } } }
+				}
+			}
 			owner = {
 				random_owned = {
 					limit = { owner = { has_global_flag = hidden_effects } }
@@ -14912,14 +15815,14 @@ country_event = {
 		empty_line_loc = {}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 0.9 } } } }
 			empty_line_loc = {}
 			settle_cores_of_dadhriks_gap_loc = {}
 			empty_line_loc = {}
 		}
 		
 		random_owned = {
-			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands } }
+			limit = { owner = { FOR = { check_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 0.9 } } } }
 			empty_line_loc = {}
 			settle_cores_of_mountainlands_loc = {}
 			empty_line_loc = {}
@@ -14939,10 +15842,94 @@ country_event = {
 	
 	option = {
 		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 1.1 } } }
+				}
+			}
+			owner = {
+				random_owned = {
+					limit = { owner = { has_global_flag = hidden_effects } }
+					owner = {
+						ERE_657 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Dádhrik's Gap
+						country_event = 110042
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 0.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 1.1 } } }
+				}
+			}
+			owner = {
+				random_owned = {
+					limit = { owner = { has_global_flag = hidden_effects } }
+					owner = {
+						ERE_660 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Mountainlands
+						country_event = 110042
+					}
+				}
+			}
+		}
+		
+		triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
 		name = ""
+		
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 1.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 2.1 } } }
+				}
+			}
+			owner = {
+				random_owned = {
+					limit = { owner = { has_global_flag = hidden_effects } }
+					owner = {
+						ERE_657 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Dádhrik's Gap
+						country_event = 110042
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FOR = { check_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 1.9 } }
+					NOT = { FOR = { check_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 2.1 } } }
+				}
+			}
+			owner = {
+				random_owned = {
+					limit = { owner = { has_global_flag = hidden_effects } }
+					owner = {
+						ERE_660 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Mountainlands
+						country_event = 110042
+					}
+				}
+			}
+		}
+		
+		triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = {}
+		
+		clr_global_flag = hidden_effects
 	}
 	
 	option = {
@@ -16369,16 +17356,16 @@ country_event = {
 		# Calculate the number of options that should be shown
 		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button
 		
-		clr_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores
-		clr_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
-		clr_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
+		set_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0 }
+		set_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0 }
+		set_variable = { which = alliance_dwarves_men_return_cores_location value = 0 }
 		
 		# Resolve Conflicting Cores
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected } }
 			owner = {
 				change_variable = { which = menu_option_number value = 1 }
-				set_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores
+				change_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 1 }
 			}
 		}
 		
@@ -16396,7 +17383,12 @@ country_event = {
 			}
 			owner = {
 				change_variable = { which = menu_option_number value = 1 }
-				set_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
+				change_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 1 }
+				
+				random_owned = {
+					limit = { owner = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0.9 } } }
+					owner = { change_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 1 } }
+				}
 			}
 			any_neighbor_province = { remove_province_modifier = province_target_alliance_men_dwarves_request_return_of_cores }
 		}
@@ -16419,7 +17411,17 @@ country_event = {
 			}
 			owner = {
 				change_variable = { which = menu_option_number value = 1 }
-				set_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
+				change_variable = { which = alliance_dwarves_men_return_cores_location value = 1 }
+				
+				random_owned = {
+					limit = { owner = { check_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0.9 } } }
+					owner = { change_variable = { which = alliance_dwarves_men_return_cores_location value = 1 } }
+				}
+				
+				random_owned = {
+					limit = { owner = { check_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0.9 } } }
+					owner = { change_variable = { which = alliance_dwarves_men_return_cores_location value = 1 } }
+				}
 			}
 		}
 		# }
@@ -16722,8 +17724,8 @@ country_event = {
 		# Calculate the number of options that should be shown
 		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button.
 		
-		clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap
-		clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
+		set_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 0 }
+		set_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 0 }
 		
 		# Settle the Cores of Dádhrik's Gap
 		random_owned = {
@@ -16749,7 +17751,7 @@ country_event = {
 			}
 			owner = {
 				change_variable = { which = menu_option_number value = 1 }
-				set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap
+				change_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 1 }
 			}
 		}
 		
@@ -16777,7 +17779,12 @@ country_event = {
 			}
 			owner = {
 				change_variable = { which = menu_option_number value = 1 }
-				set_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
+				change_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 1 }
+				
+				random_owned = {
+					limit = { owner = { check_variable = { which = alliance_dwarves_men_resolve_settle_cores_of_dadhriks_gap value = 0.9 } } }
+					owner = { change_variable = { which = alliance_dwarves_men_request_settle_cores_of_mountainlands value = 1 } }
+				}
 			}
 		}
 		
@@ -16819,11 +17826,6 @@ country_event = {
 		any_country = {
 			clr_country_flag = alliance_dwarves_men_selected_country
 			clr_country_flag = alliance_dwarves_men_voting_initiator
-			clr_global_flag = alliance_of_dwarves_and_men_can_access_resolve_conflicting_cores
-			clr_global_flag = alliance_of_dwarves_and_men_can_access_request_return_of_cores
-			clr_global_flag = alliance_of_dwarves_and_men_can_access_return_cores
-			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_dadhriks_gap
-			clr_global_flag = alliance_of_dwarves_and_men_can_access_settle_cores_of_mountainlands
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_requesting_return_of_cores
 			clr_global_flag = alliance_of_dwarves_and_men_voting_on_returning_cores
