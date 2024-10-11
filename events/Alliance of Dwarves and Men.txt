@@ -1,8 +1,6 @@
 # Remove this line to have the validator check for strings in localisation
 # Audax Validator "!" Ignore_1004
 
-# TODO: Update ai chances to select various options
-# TODO: 	chances for specific flavor is set (Confirm this)
 # TODO: Add decision to request to join
 # TODO: Setup background cycling cleanup events
 # TODO: 	Including the ai starting diplomatic plays
@@ -17836,6 +17834,9 @@ country_event = {
 			clr_country_flag = alliance_dwarves_men_voted_for
 			clr_country_flag = alliance_dwarves_men_abstained
 			clr_country_flag = alliance_dwarves_men_voted_against
+			clr_country_flag = alliance_dwarves_men_will_agree
+			clr_country_flag = alliance_dwarves_men_will_disagree
+			clr_country_flag = alliance_dwarves_men_will_abstain
 		}
 	}
 }
@@ -17962,6 +17963,338 @@ country_event = {
 		country_event = 300000 # Country Loc Setting
 		
 		country_event = 110162 # Hander 4
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no # There shouldn't be any. But just in case
+				ai = yes
+			}
+			country_event = 110169
+		}
+	}
+}
+
+# AI deciding how it votes -- FIRES FOR AI REALMS ONLY, NO NEED TO LOC
+country_event = {
+	id = 110169
+	title = "  Alliance of Dwarves and Men AI Voting Decision"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Calculate Choice"
+		
+		clr_country_flag = vote_selected
+		
+		# Highest Tier {
+		# Elves and Dwarves won't vote for each other if railroading enabled
+		random_country = {
+			limit = {
+				has_country_flag = alliance_dwarves_men_voting_initiator
+				has_global_flag = railroading_enabled
+				OR = {
+					AND = {
+						THIS = { accepted_culture = elven_culture }
+						accepted_culture = dwarven_culture
+					}
+					AND = {
+						THIS = { accepted_culture = dwarven_culture }
+						accepted_culture = elven_culture
+					}
+				}
+			}
+			THIS = {
+				clr_country_flag = alliance_dwarves_men_will_agree
+				set_country_flag = alliance_dwarves_men_will_disagree
+				clr_country_flag = alliance_dwarves_men_will_abstain
+				set_country_flag = vote_selected
+			}
+		}
+		
+		# Elves and Dwarves won't vote for each other if railroading enabled
+		random_country = {
+			limit = {
+				THIS = { NOT = { has_country_flag = vote_selected } }
+				has_country_flag = alliance_dwarves_men_selected_country
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union }
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union }
+				has_global_flag = railroading_enabled
+				OR = {
+					AND = {
+						THIS = { accepted_culture = elven_culture }
+						accepted_culture = dwarven_culture
+					}
+					AND = {
+						THIS = { accepted_culture = dwarven_culture }
+						accepted_culture = elven_culture
+					}
+				}
+			}
+			THIS = {
+				set_country_flag = alliance_dwarves_men_will_agree
+				clr_country_flag = alliance_dwarves_men_will_disagree
+				clr_country_flag = alliance_dwarves_men_will_abstain
+				set_country_flag = vote_selected
+			}
+		}
+		
+		# GPs and Secondary Powers that are not the voting initiator will always vote against a political union
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union
+					NOT = { has_country_flag = alliance_dwarves_men_selected_country }
+					rank = 12
+				}
+			}
+			owner = {
+				clr_country_flag = alliance_dwarves_men_will_agree
+				set_country_flag = alliance_dwarves_men_will_disagree
+				clr_country_flag = alliance_dwarves_men_will_abstain
+				set_country_flag = vote_selected
+			}
+		# }
+		
+		# High Tier {
+		# Voting Initiators will always vote for themselves -- purposefully after the defender check to make sure that unions get voted for
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = alliance_dwarves_men_voting_initiator
+					NOT = { has_country_flag = vote_selected }
+				}
+			}
+			owner = {
+				set_country_flag = alliance_dwarves_men_will_agree
+				clr_country_flag = alliance_dwarves_men_will_disagree
+				clr_country_flag = alliance_dwarves_men_will_abstain
+				set_country_flag = vote_selected
+			}
+		}
+		
+		# Voting Defenders will always vote for themselves
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = alliance_dwarves_men_selected_country
+					NOT = { has_country_flag = vote_selected }
+				}
+			}
+			owner = {
+				clr_country_flag = alliance_dwarves_men_will_agree
+				set_country_flag = alliance_dwarves_men_will_disagree
+				clr_country_flag = alliance_dwarves_men_will_abstain
+				set_country_flag = vote_selected
+			}
+		}
+		# }
+		
+		# Middle Tier {
+		# If allied to or spherelord of the initiator
+		random_country = {
+			limit = {
+				THIS = { NOT = { has_country_flag = vote_selected } }
+				has_country_flag = alliance_dwarves_men_voting_initiator
+				OR = {
+					alliance_with = THIS
+					AND = {
+						is_sphere_leader_of = THIS
+						NOT = { has_global_flag = alliance_of_dwarves_and_men_economic_union_enacted }
+					}
+				}
+			}
+			THIS = { set_country_flag = alliance_dwarves_men_will_agree }
+		}
+		
+		# If allied to or spherelord of the defender
+		random_country = {
+			limit = {
+				THIS = { NOT = { has_country_flag = vote_selected } }
+				has_country_flag = alliance_dwarves_men_selected_country
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union }
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union }
+				OR = {
+					alliance_with = THIS
+					AND = {
+						is_sphere_leader_of = THIS
+						NOT = { has_global_flag = alliance_of_dwarves_and_men_economic_union_enacted }
+					}
+				}
+			}
+			THIS = { set_country_flag = alliance_dwarves_men_will_disagree }
+		}
+		
+		# If tied, move onto the next ranking
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = alliance_dwarves_men_will_agree
+					has_country_flag = alliance_dwarves_men_will_disagree
+				}
+			}
+			owner = {
+				clr_country_flag = alliance_dwarves_men_will_agree
+				clr_country_flag = alliance_dwarves_men_will_disagree
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_country_flag = alliance_dwarves_men_will_agree
+						has_country_flag = alliance_dwarves_men_will_disagree
+					}
+				}
+			}
+			owner = { set_country_flag = vote_selected }
+		}
+		# }
+		
+		# Low Tier {
+		# If the same culture group as the initiator
+		random_country = {
+			limit = {
+				THIS = { NOT = { has_country_flag = vote_selected } }
+				has_country_flag = alliance_dwarves_men_voting_initiator
+				is_culture_group = THIS
+			}
+			random = {
+				chance = 25
+				THIS = { set_country_flag = alliance_dwarves_men_will_agree }
+			}
+		}
+		
+		# If the same culture group as the defender
+		random_country = {
+			limit = {
+				THIS = { NOT = { has_country_flag = vote_selected } }
+				has_country_flag = alliance_dwarves_men_selected_country
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union }
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union }
+				is_culture_group = THIS
+			}
+			random = {
+				chance = 25
+				THIS = { set_country_flag = alliance_dwarves_men_will_disagree }
+			}
+			# DO NOT REMOVE THIS RANDOM - IT IS WHAT MAKES THE RESULTS DIFFERENT IN EACH RANDOM BLOCK
+			random = { chance = 1 }
+		}
+		
+		# If tied, move onto the next ranking
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = alliance_dwarves_men_will_agree
+					has_country_flag = alliance_dwarves_men_will_disagree
+				}
+			}
+			owner = {
+				clr_country_flag = alliance_dwarves_men_will_agree
+				clr_country_flag = alliance_dwarves_men_will_disagree
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_country_flag = alliance_dwarves_men_will_agree
+						has_country_flag = alliance_dwarves_men_will_disagree
+					}
+				}
+			}
+			owner = { set_country_flag = vote_selected }
+		}
+		# }
+		
+		# Lowest Tier {
+		# If more than 100 relations with the initiator
+		random_country = {
+			limit = {
+				THIS = { NOT = { has_country_flag = vote_selected } }
+				has_country_flag = alliance_dwarves_men_voting_initiator
+				relation = { who = THIS value = 100 }
+			}
+			THIS = { set_country_flag = alliance_dwarves_men_will_agree }
+		}
+		
+		# If more than 100 relations with the defender
+		random_country = {
+			limit = {
+				THIS = { NOT = { has_country_flag = vote_selected } }
+				has_country_flag = alliance_dwarves_men_selected_country
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union }
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union }
+				relation = { who = THIS value = 100 }
+			}
+			THIS = { set_country_flag = alliance_dwarves_men_will_disagree }
+		}
+		
+		# If less than 0 relations with the initiator
+		random_country = {
+			limit = {
+				THIS = { NOT = { has_country_flag = vote_selected } }
+				has_country_flag = alliance_dwarves_men_voting_initiator
+				NOT = { relation = { who = THIS value = 0 } }
+			}
+			THIS = { set_country_flag = alliance_dwarves_men_will_disagree }
+		}
+		
+		# If less than 0 relations with the defender
+		random_country = {
+			limit = {
+				THIS = { NOT = { has_country_flag = vote_selected } }
+				has_country_flag = alliance_dwarves_men_selected_country
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union }
+				NOT = { has_global_flag = alliance_of_dwarves_and_men_voting_on_political_union }
+				NOT = { relation = { who = THIS value = 0 } }
+			}
+			THIS = { set_country_flag = alliance_dwarves_men_will_agree }
+		}
+		
+		# If tied, move onto the next ranking
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = alliance_dwarves_men_will_agree
+					has_country_flag = alliance_dwarves_men_will_disagree
+				}
+			}
+			owner = {
+				clr_country_flag = alliance_dwarves_men_will_agree
+				clr_country_flag = alliance_dwarves_men_will_disagree
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					OR = {
+						has_country_flag = alliance_dwarves_men_will_agree
+						has_country_flag = alliance_dwarves_men_will_disagree
+					}
+				}
+			}
+			owner = { set_country_flag = vote_selected }
+		}
+		# }
+		
+		# Finally, abstain if no decision was made
+		random_owned = {
+			limit = { owner = { NOT = { has_country_flag = vote_selected } } }
+			owner = {
+				clr_country_flag = alliance_dwarves_men_will_agree
+				clr_country_flag = alliance_dwarves_men_will_disagree
+				set_country_flag = alliance_dwarves_men_will_abstain
+			}
+		}
+		
+		clr_country_flag = vote_selected
 	}
 }
 
@@ -18422,6 +18755,10 @@ country_event = {
 		
 		ai_chance = {
 			factor = 33
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = alliance_dwarves_men_will_agree }
+			}
 		}
 	}
 	
@@ -18450,6 +18787,10 @@ country_event = {
 		
 		ai_chance = {
 			factor = 33
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = alliance_dwarves_men_will_abstain }
+			}
 		}
 	}
 	
@@ -18481,6 +18822,10 @@ country_event = {
 		
 		ai_chance = {
 			factor = 33
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = alliance_dwarves_men_will_disagree }
+			}
 		}
 	}
 }
