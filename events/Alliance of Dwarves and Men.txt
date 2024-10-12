@@ -2,8 +2,6 @@
 # Audax Validator "!" Ignore_1004
 
 # TODO: Add decision to request to join
-# TODO: Setup background cycling cleanup events
-# TODO: 	Including the ai starting diplomatic plays
 # TODO: Add FFN expansion flavor
 
 # Alliance of Dwarves and Men: {
@@ -18056,6 +18054,7 @@ country_event = {
 				clr_country_flag = alliance_dwarves_men_will_abstain
 				set_country_flag = vote_selected
 			}
+		}
 		# }
 		
 		# High Tier {
@@ -20637,6 +20636,78 @@ country_event = {
 					}
 					owner = { add_accepted_culture = anduinmen }
 				}
+			}
+		}
+	}
+}
+
+# 110169 used above. DO NOT USE AGAIN
+
+# Leaving the Alliance
+country_event = {
+	id = 110170
+	title = "  Leaving the Alliance of Dwarves and Men"
+	desc = "EVTDESC110170"
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "When one door closes, another opens"
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no
+			}
+			casus_belli = {
+				target = THIS
+				type = humiliate
+				months = 60
+			}
+			casus_belli = {
+				target = THIS
+				type = cut_down_to_size
+				months = 60
+			}
+		}
+		
+		remove_country_modifier = alliance_of_dwarves_and_men
+		
+		any_country = {
+			limit = { vassal_of = THIS } # There shouldn't be any. But just in case
+			remove_country_modifier = alliance_of_dwarves_and_men
+		}
+		
+		# Clear out any sort of voting modifiers
+		any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+		clr_country_flag = alliance_dwarves_men_selected_country
+		clr_country_flag = alliance_dwarves_men_voting_initiator
+		
+		# Prevents rejoining for 10 years
+		add_country_modifier = { name = alliance_of_dwarves_and_men_cannot_join duration = 3650 }
+	}
+}
+
+# Leaving the Alliance
+country_event = {
+	id = 110171
+	title = "  The Collapse of the Alliance of Dwarves and Men"
+	desc = "EVTDESC110171"
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "and into the history books it goes"
+		
+		random_owned = {
+			limit = { owner = { has_country_modifier = alliance_of_dwarves_and_men } }
+			owner = {
+				remove_country_modifier = alliance_of_dwarves_and_men
+				any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+				clr_country_flag = alliance_dwarves_men_selected_country
+				clr_country_flag = alliance_dwarves_men_voting_initiator
 			}
 		}
 	}
