@@ -12935,6 +12935,10 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 100
+		}
 	}
 	
 	option = {
@@ -12953,6 +12957,10 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+		
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
@@ -18739,9 +18747,36 @@ country_event = {
 		}
 		set_country_flag = alliance_dwarves_men_voted_for
 		
+		any_country = {
+			limit = {
+				ai = no
+				has_country_modifier = alliance_of_dwarves_and_men
+				NOT = { has_country_flag = alliance_dwarves_men_voted_for }
+				NOT = { has_country_flag = alliance_dwarves_men_abstained }
+				NOT = { has_country_flag = alliance_dwarves_men_voted_against }
+			}
+			set_global_flag = found_player
+		}
+		
 		random_owned = {
 			limit = {
 				owner = {
+					ai = no
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = found_player }
+				}
+			}
+			owner = {
+				set_global_flag = found_player
+				FOR = { country_event = 110155 } # Calculate the results
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					ai = yes
+					NOT = { has_global_flag = found_player }
 					has_country_flag = alliance_dwarves_men_voting_initiator
 					has_global_flag = hidden_effects
 				}
@@ -18751,6 +18786,7 @@ country_event = {
 		
 		triggered_event_alliance_of_dwarves_and_men_voting_results_loc = {}
 		
+		clr_global_flag = found_player
 		clr_global_flag = hidden_effects
 		
 		ai_chance = {
@@ -18770,19 +18806,46 @@ country_event = {
 		FOR = { change_variable = { which = alliance_dwarves_men_total_abstained value = 1 } }
 		set_country_flag = alliance_dwarves_men_abstained
 		
-		# Doesn't vote
+		any_country = {
+			limit = {
+				ai = no
+				has_country_modifier = alliance_of_dwarves_and_men
+				NOT = { has_country_flag = alliance_dwarves_men_voted_for }
+				NOT = { has_country_flag = alliance_dwarves_men_abstained }
+				NOT = { has_country_flag = alliance_dwarves_men_voted_against }
+			}
+			set_global_flag = found_player
+		}
+		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
-			owner = {
-				random_owned = {
-					limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
-					owner = { FOR = { country_event = 110155 } } # Calculate the results
+			limit = {
+				owner = {
+					ai = no
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = found_player }
 				}
 			}
+			owner = {
+				set_global_flag = found_player
+				FOR = { country_event = 110155 } # Calculate the results
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					ai = yes
+					NOT = { has_global_flag = found_player }
+					has_country_flag = alliance_dwarves_men_voting_initiator
+					has_global_flag = hidden_effects
+				}
+			}
+			owner = { FOR = { country_event = 110155 } } # Calculate the results
 		}
 		
 		triggered_event_alliance_of_dwarves_and_men_voting_results_loc = {}
 		
+		clr_global_flag = found_player
 		clr_global_flag = hidden_effects
 		
 		ai_chance = {
@@ -18805,19 +18868,46 @@ country_event = {
 		}
 		set_country_flag = alliance_dwarves_men_voted_against
 		
-		# Vote against
+		any_country = {
+			limit = {
+				ai = no
+				has_country_modifier = alliance_of_dwarves_and_men
+				NOT = { has_country_flag = alliance_dwarves_men_voted_for }
+				NOT = { has_country_flag = alliance_dwarves_men_abstained }
+				NOT = { has_country_flag = alliance_dwarves_men_voted_against }
+			}
+			set_global_flag = found_player
+		}
+		
 		random_owned = {
-			limit = { owner = { has_global_flag = hidden_effects } }
-			owner = {
-				random_owned = {
-					limit = { owner = { has_country_flag = alliance_dwarves_men_voting_initiator } }
-					owner = { FOR = { country_event = 110155 } } # Calculate the results
+			limit = {
+				owner = {
+					ai = no
+					has_global_flag = hidden_effects
+					NOT = { has_global_flag = found_player }
 				}
 			}
+			owner = {
+				set_global_flag = found_player
+				FOR = { country_event = 110155 } # Calculate the results
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					ai = yes
+					NOT = { has_global_flag = found_player }
+					has_country_flag = alliance_dwarves_men_voting_initiator
+					has_global_flag = hidden_effects
+				}
+			}
+			owner = { FOR = { country_event = 110155 } } # Calculate the results
 		}
 		
 		triggered_event_alliance_of_dwarves_and_men_voting_results_loc = {}
 		
+		clr_global_flag = found_player
 		clr_global_flag = hidden_effects
 		
 		ai_chance = {
@@ -20207,7 +20297,7 @@ country_event = {
 country_event = {
 	id = 110163
 	title = "  An Invitation to the Alliance of Dwarves and Men"
-	desc = ""
+	desc = "EVTDESC110163"
 	picture = "organizations/alliance_dwarves_men_2"
 	
 	is_triggered_only = yes
@@ -20690,7 +20780,7 @@ country_event = {
 	}
 }
 
-# Leaving the Alliance
+# Collapse of the Alliance
 country_event = {
 	id = 110171
 	title = "  The Collapse of the Alliance of Dwarves and Men"
@@ -20858,6 +20948,309 @@ country_event = {
 				dynamic_loc_slot_11 = { state_scope = { change_region_name = "We will abstain" } }
 				dynamic_loc_slot_12 = { state_scope = { change_region_name = "This is clearly a play at gaining power over us" } }
 			}
+		}
+	}
+}
+
+# AI Call to Arms -- FIRES FOR AI, NO NEED TO LOC
+country_event = {
+	id = 110176
+	title = "Alliance of Dwarves and Men AI Call to Arms"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ""
+		
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				is_vassal = no # There shouldn't be any. But just in case
+				NOT = { tag = THIS }
+			}
+			create_alliance = THIS
+			relation = { who = THIS value = 400 }
+		}
+		
+		FOR = { country_event = 110101 }
+	}
+}
+
+# AI Calling the various options -- FIRES FOR AI, NO NEED TO LOC
+country_event = {
+	id = 110177
+	title = "Alliance of Dwarves and Men Fire Options"
+	desc = ""
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ""
+		
+		set_country_flag = alliance_dwarves_men_attempted_voting_selection
+		
+		# Calling to Arms
+		random_owned = {
+			limit = {
+				owner = {
+					war = yes
+					NOT = { has_country_modifier = call_to_arms_cooldown }
+					FOR = {
+						any_neighbor_country = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							war = no
+							is_vassal = no # There shouldn't be any. But just in case
+						}
+					}
+				}
+			}
+			owner = { country_event = 110176 }
+		}
+		
+		# TODO: Core Dispute
+		
+		# Invite Realm
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_dwarves_men_ai_make_voting_selection } # To prevent the ai choosing to vote on multiple things during the same tick
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
+					FOR = {
+						any_neighbor_country = {
+							capital_scope = { continent = europe } # Rhovanion
+							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+							NOT = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join }
+							alliance_with = THIS
+							war = no
+							is_vassal = no
+							OR = {
+								good_evil_alignment = good_alignment
+								good_evil_alignment = neutral_alignment
+							}
+							OR = {
+								is_culture_group = dwarves
+								is_culture_group = northmen
+								AND = {
+									is_culture_group = teleri
+									has_global_flag = alliance_of_dwarves_and_men_accept_teleri
+								}
+								AND = {
+									is_culture_group = avari
+									has_global_flag = alliance_of_dwarves_and_men_accept_avari
+								}
+								AND = {
+									is_culture_group = anduinrim
+									has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim
+								}
+								AND = {
+									is_culture_group = rohirrim
+									has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim
+								}
+								AND = {
+									is_culture_group = hobbits
+									has_global_flag = alliance_of_dwarves_and_men_accept_hobbits
+								}
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				random_country = {
+					limit = {
+						capital_scope = { continent = europe } # Rhovanion
+						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+						NOT = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join }
+						alliance_with = THIS
+						war = no
+						is_vassal = no
+						OR = {
+							good_evil_alignment = good_alignment
+							good_evil_alignment = neutral_alignment
+						}
+						OR = {
+							is_culture_group = dwarves
+							is_culture_group = northmen
+							AND = {
+								is_culture_group = teleri
+								has_global_flag = alliance_of_dwarves_and_men_accept_teleri
+							}
+							AND = {
+								is_culture_group = avari
+								has_global_flag = alliance_of_dwarves_and_men_accept_avari
+							}
+							AND = {
+								is_culture_group = anduinrim
+								has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim
+							}
+							AND = {
+								is_culture_group = rohirrim
+								has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim
+							}
+							AND = {
+								is_culture_group = hobbits
+								has_global_flag = alliance_of_dwarves_and_men_accept_hobbits
+							}
+						}
+					}
+					set_country_flag = dynamic_loc_country_target_1
+					THIS = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliances_of_dwarves_and_men_invite_realm
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_invite_realm
+						country_event = 110030
+					}
+					set_global_flag = alliance_dwarves_men_ai_make_voting_selection
+				}
+			}
+		}
+		
+		# Expand Cultural Union
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_dwarves_men_ai_make_voting_selection } # To prevent the ai choosing to vote on multiple things during the same tick
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
+					FOR = {
+						any_neighbor_country = {
+							rank = 12 # Great or Secondary power
+							capital_scope = { continent = europe } # Rhovanion
+							NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+							NOT = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join }
+							alliance_with = THIS
+							war = no
+							is_vassal = no
+							OR = {
+								AND = {
+									is_culture_group = teleri
+									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_teleri }
+								}
+								AND = {
+									is_culture_group = avari
+									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_avari }
+								}
+								AND = {
+									is_culture_group = anduinrim
+									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim }
+								}
+								AND = {
+									is_culture_group = rohirrim
+									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim }
+								}
+								AND = {
+									is_culture_group = hobbits
+									NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_hobbits }
+								}
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				random_country = {
+					limit = {
+						rank = 12 # Great or Secondary power
+						capital_scope = { continent = europe } # Rhovanion
+						NOT = { has_country_modifier = alliance_of_dwarves_and_men }
+						NOT = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join }
+						alliance_with = THIS
+						war = no
+						is_vassal = no
+						OR = {
+							AND = {
+								is_culture_group = teleri
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_teleri }
+							}
+							AND = {
+								is_culture_group = avari
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_avari }
+							}
+							AND = {
+								is_culture_group = anduinrim
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_anduinrim }
+							}
+							AND = {
+								is_culture_group = rohirrim
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_rohirrim }
+							}
+							AND = {
+								is_culture_group = hobbits
+								NOT = { has_global_flag = alliance_of_dwarves_and_men_accept_hobbits }
+							}
+						}
+					}
+					set_country_flag = dynamic_loc_country_target_1
+					THIS = {
+						set_country_flag = alliance_dwarves_men_voting_initiator
+						set_global_flag = alliances_of_dwarves_and_men_expand_cultural_reach
+						set_global_flag = alliance_of_dwarves_and_men_voting_on_expand_cultural_reach
+						country_event = 110030
+					}
+					set_global_flag = alliance_dwarves_men_ai_make_voting_selection
+				}
+			}
+		}
+		
+		# TODO: Specific Flavor
+		
+		# Economic Union
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_dwarves_men_ai_make_voting_selection } # To prevent the ai choosing to vote on multiple things during the same tick
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
+					is_greater_power = yes
+					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_economic_union_enacted }
+					year = 2960 # Erebor won't stay as a GP at the start. Making sure that it's a GP that's earned their way into the position
+				}
+			}
+			owner = {
+				set_country_flag = alliance_dwarves_men_voting_initiator
+				set_country_flag = alliance_dwarves_men_selected_country # The initiator is the "defender" in order to get the loc right
+				FOR = {
+					set_global_flag = alliance_of_dwarves_and_men_voting_on_economic_union
+					country_event = 110150 # Voting Handler
+				}
+				set_global_flag = alliance_dwarves_men_ai_make_voting_selection
+			}
+		}
+		
+		# Political Union
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_dwarves_men_ai_make_voting_selection } # To prevent the ai choosing to vote on multiple things during the same tick
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
+					is_greater_power = yes
+					NOT = { has_global_flag = railroading_enabled }
+					NOT = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown }
+					has_global_flag = alliance_of_dwarves_and_men_economic_union_enacted
+					diplomacy_5 = 1
+				}
+			}
+			owner = {
+				set_country_flag = alliance_dwarves_men_voting_initiator
+				set_country_flag = alliance_dwarves_men_selected_country # The initiator is the "defender" in order to get the loc right
+				FOR = {
+					set_global_flag = alliance_of_dwarves_and_men_voting_on_political_union
+					country_event = 110150 # Voting Handler
+				}
+				set_global_flag = alliance_dwarves_men_ai_make_voting_selection
+			}
+		}
+		
+		# Recursively fire event for every country in the alliance, one at a time, until there are no more countries
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				NOT = { has_country_flag = alliance_dwarves_men_attempted_voting_selection }
+				ai = yes
+			}
+			country_event = 110177
 		}
 	}
 }

@@ -3956,6 +3956,10 @@ country_event = {
 	option = {
 		name = "Fix it please"
 		
+		# Resetting from previous month's ai selection
+		clr_global_flag = alliance_dwarves_men_ai_make_voting_selection
+		any_country = { clr_country_flag = alliance_dwarves_men_attempted_voting_selection }
+		
 		# Enforcing the economic union {
 		clr_global_flag = alliance_of_dwarves_and_men_gp_detected
 		
@@ -4033,7 +4037,15 @@ country_event = {
 		}
 		# }
 		
-		# TODO: Have AI start diplomatic plays
+		# Having the ai decide to do things
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				ai = yes
+				NOT = { has_global_flag = end_of_the_alliance_of_dwarves_and_men }
+			}
+			country_event = 110177
+		}
 		
 		# Refire the cleanup event next month {
 		random_owned = {
