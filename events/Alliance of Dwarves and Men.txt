@@ -20147,7 +20147,6 @@ country_event = {
 					}
 					owner = { country_event = 110168 }
 				}
-				# TODO: Handle those who abstained, and those who voted against the union
 			}
 			triggered_event_alliance_of_dwarves_and_men_political_union_loc = {}
 		}
@@ -20472,7 +20471,14 @@ country_event = {
 			annex_to = THIS
 		}
 		
-		# TODO: Remove alliance_of_dwarves_and_men modifier and event to states the alliance is over
+		any_country = {
+			limit = {
+				exist = yes
+				has_country_modifier = alliance_of_dwarves_and_men
+				NOT = { has_country_flag = alliance_dwarves_men_voted_for }
+			}
+			country_event = 110172
+		}
 		
 		change_tag = FFN
 		
@@ -20800,6 +20806,36 @@ country_event = {
 				clr_country_flag = alliance_dwarves_men_selected_country
 				clr_country_flag = alliance_dwarves_men_voting_initiator
 			}
+		}
+	}
+}
+
+# End of the Alliance (Because of the political union, which the realm voted against or abstained)
+country_event = {
+	id = 110172
+	title = "  The End of the Alliance of Dwarves and Men"
+	desc = "EVTDESC110172"
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "and into the history books it goes"
+		
+		remove_country_modifier = alliance_of_dwarves_and_men
+		any_owned = { remove_province_modifier = alliance_dwarves_men_selected_region }
+		clr_country_flag = alliance_dwarves_men_selected_country
+		clr_country_flag = alliance_dwarves_men_voting_initiator
+		set_country_flag = FFN_can_target
+		
+		random_owned = {
+			limit = { owner = { has_country_flag = alliance_dwarves_men_voted_against } }
+			owner = { set_country_flag = voted_against_FFN_formation }
+		}
+		
+		random_owned = {
+			limit = { owner = { has_country_flag = alliance_dwarves_men_abstained } }
+			owner = { set_country_flag = abstained_FFN_formation }
 		}
 	}
 }

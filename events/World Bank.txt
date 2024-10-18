@@ -4023,17 +4023,16 @@ country_event = {
 					country_event = 110171 # The end of the Alliance of Dwarves and Men
 				}
 				set_global_flag = end_of_the_alliance_of_dwarves_and_men
+				country_event = 110110
 			}
 		}
 		
 		random_owned = {
 			limit = { owner = { exists = FFN } }
-			owner = { set_global_flag = end_of_the_alliance_of_dwarves_and_men }
-		}
-		
-		random_owned = {
-			limit = { owner = { has_global_flag = end_of_the_alliance_of_dwarves_and_men } }
-			owner = { country_event = 110110 }
+			owner = {
+				set_global_flag = end_of_the_alliance_of_dwarves_and_men
+				country_event = 110110
+			}
 		}
 		# }
 		
