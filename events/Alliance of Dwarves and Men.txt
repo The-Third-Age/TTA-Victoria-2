@@ -1,9 +1,6 @@
 # Remove this line to have the validator check for strings in localisation
 # Audax Validator "!" Ignore_1004
 
-# TODO: Add decision to request to join
-# TODO: Add FFN expansion flavor
-
 # Alliance of Dwarves and Men: {
 #	110000 - 110199 }
 
@@ -17887,8 +17884,7 @@ country_event = {
 					add_country_modifier = { name = alliance_of_dwarves_and_men_recently_voted duration = 30 }
 				}
 				
-				# TODO: Change this to 15 days between initiating and voting
-				country_event = { id = 110152 days = 1 } # Handler 2
+				country_event = { id = 110152 days = 15 } # Handler 2
 			}
 		}
 	}
@@ -20473,7 +20469,7 @@ country_event = {
 		
 		any_country = {
 			limit = {
-				exist = yes
+				exists = yes
 				has_country_modifier = alliance_of_dwarves_and_men
 				NOT = { has_country_flag = alliance_dwarves_men_voted_for }
 			}
