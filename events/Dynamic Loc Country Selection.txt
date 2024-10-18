@@ -1,0 +1,3647 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
+# Dynamic Loc Country Selection: {
+#	300000 - 300001 }
+country_event = {
+	id = 300000
+	title = "Dynamic Loc Country Selection Handler"
+	desc = ""
+	is_triggered_only = yes
+	immediate = {
+		change_variable = { which = dynamic_loc_names_country value = 1 }
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 0.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 1.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 0.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 1.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 2.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 1.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 2.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 3.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 2.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 3.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 4.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 3.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 4.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 5.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 4.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 5.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 6.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 5.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 6.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 7.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 6.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 7.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 8.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 7.9 }
+					NOT = { check_variable = { which = dynamic_loc_country_count value = 8.1 } }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 8.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 9.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 8.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 9.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 10.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 9.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 10.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 11.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 10.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 11.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 12.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 11.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 12.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 13.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 12.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 13.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 14.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 13.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 14.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 15.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 14.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 15.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 16.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 15.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 16.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 17.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 16.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 17.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 18.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 17.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 18.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 19.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 18.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 19.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 20.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 19.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 20.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 21.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 20.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 21.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 22.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 21.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 22.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 23.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 22.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 23.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 24.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 23.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 24.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 25.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 24.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 25.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 26.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 25.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 26.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 27.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 26.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 27.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 28.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 27.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 28.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 29.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 28.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 29.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 30.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 29.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 30.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 31.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 30.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 31.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 32.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 31.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 32.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 33.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 32.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 33.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 34.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 33.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 34.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 35.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 34.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 35.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 36.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 35.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 36.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 37.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 36.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 37.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 38.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 37.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 38.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 39.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 38.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 39.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 40.1 } }
+					check_variable = { which = dynamic_loc_country_count value = 39.9 }
+				}
+			}
+			owner = {
+				country_event = {
+					id = 300001
+					days = 0
+				}
+			}
+		}
+	}
+	option = {
+		name = ""
+	}
+}
+country_event = {
+	id = 300001
+	title = "Dynamic Loc Country Selection Renaming"
+	desc = ""
+	is_triggered_only = yes
+	immediate = {
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 0.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 1.1 } }
+				}
+			}
+			dynamic_loc_slot_1 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_1
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 1.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 2.1 } }
+				}
+			}
+			dynamic_loc_slot_2 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_2
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 2.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 3.1 } }
+				}
+			}
+			dynamic_loc_slot_3 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_3
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 3.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 4.1 } }
+				}
+			}
+			dynamic_loc_slot_4 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_4
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 4.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 5.1 } }
+				}
+			}
+			dynamic_loc_slot_5 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_5
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 5.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 6.1 } }
+				}
+			}
+			dynamic_loc_slot_6 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_6
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 6.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 7.1 } }
+				}
+			}
+			dynamic_loc_slot_7 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_7
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 7.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 8.1 } }
+				}
+			}
+			dynamic_loc_slot_8 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_8
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 8.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 9.1 } }
+				}
+			}
+			dynamic_loc_slot_9 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_9
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 9.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 10.1 } }
+				}
+			}
+			dynamic_loc_slot_10 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_10
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 10.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 11.1 } }
+				}
+			}
+			dynamic_loc_slot_11 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_11
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 11.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 12.1 } }
+				}
+			}
+			dynamic_loc_slot_12 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_12
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 12.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 13.1 } }
+				}
+			}
+			dynamic_loc_slot_13 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_13
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 13.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 14.1 } }
+				}
+			}
+			dynamic_loc_slot_14 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_14
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 14.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 15.1 } }
+				}
+			}
+			dynamic_loc_slot_15 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_15
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 15.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 16.1 } }
+				}
+			}
+			dynamic_loc_slot_16 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_16
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 16.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 17.1 } }
+				}
+			}
+			dynamic_loc_slot_17 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_17
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 17.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 18.1 } }
+				}
+			}
+			dynamic_loc_slot_18 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_18
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 18.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 19.1 } }
+				}
+			}
+			dynamic_loc_slot_19 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_19
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 19.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 20.1 } }
+				}
+			}
+			dynamic_loc_slot_20 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_20
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 20.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 21.1 } }
+				}
+			}
+			dynamic_loc_slot_21 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_21
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 21.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 22.1 } }
+				}
+			}
+			dynamic_loc_slot_22 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_22
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 22.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 23.1 } }
+				}
+			}
+			dynamic_loc_slot_23 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_23
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 23.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 24.1 } }
+				}
+			}
+			dynamic_loc_slot_24 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_24
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 24.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 25.1 } }
+				}
+			}
+			dynamic_loc_slot_25 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_25
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 25.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 26.1 } }
+				}
+			}
+			dynamic_loc_slot_26 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_26
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 26.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 27.1 } }
+				}
+			}
+			dynamic_loc_slot_27 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_27
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 27.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 28.1 } }
+				}
+			}
+			dynamic_loc_slot_28 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_28
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 28.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 29.1 } }
+				}
+			}
+			dynamic_loc_slot_29 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_29
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 29.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 30.1 } }
+				}
+			}
+			dynamic_loc_slot_30 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_30
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 30.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 31.1 } }
+				}
+			}
+			dynamic_loc_slot_31 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_31
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 31.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 32.1 } }
+				}
+			}
+			dynamic_loc_slot_32 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_32
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 32.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 33.1 } }
+				}
+			}
+			dynamic_loc_slot_33 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_33
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 33.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 34.1 } }
+				}
+			}
+			dynamic_loc_slot_34 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_34
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 34.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 35.1 } }
+				}
+			}
+			dynamic_loc_slot_35 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_35
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 35.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 36.1 } }
+				}
+			}
+			dynamic_loc_slot_36 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_36
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 36.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 37.1 } }
+				}
+			}
+			dynamic_loc_slot_37 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_37
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 37.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 38.1 } }
+				}
+			}
+			dynamic_loc_slot_38 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_38
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 38.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 39.1 } }
+				}
+			}
+			dynamic_loc_slot_39 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_39
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = dynamic_loc_names_country value = 39.9 }
+					NOT = { check_variable = { which = dynamic_loc_names_country value = 40.1 } }
+				}
+			}
+			dynamic_loc_slot_40 = {
+				add_province_modifier = {
+					name = dynamic_loc_slot_selector
+					duration = 1
+				}
+			}
+			random_country = {
+				limit = { has_country_flag = dynamic_loc_potential_country_target }
+				set_country_flag = dynamic_loc_country_target_40
+				set_country_flag = dynamic_loc_slot_selector
+				clr_country_flag = dynamic_loc_potential_country_target
+			}
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				REB = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@REB Rebels" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GON = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@GON Republic of Gondor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GON = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = dark_realm
+						government = sauron_puppet
+						government = sauron_dictatorship
+						government = nazgul_dictatorship
+					}
+				}
+			}
+			state_scope = { change_region_name = "@GON Kingdom of Adûnabâr" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GON = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = stewardship
+						government = galadhrim_monarchy
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = northmen_tribe
+						government = fiefdom
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@GON Kingdom of Gondor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ITH = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ITH Principality of Ithilien" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ITH = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = sauron_puppet
+						government = sauron_dictatorship
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ITH Occupied Ithilien" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ITH = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@ITH Fiefdom of Ithilien" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LOS = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@LOS Lossarnach" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LOS = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@LOS Fiefdom of Lossarnach" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LEB = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@LEB Fiefdom of Lebennin" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LEB = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@LEB Lebennin" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				AMR = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@AMR Fiefdom of Belfalas" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				AMR = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@AMR Principality of Dol Amroth" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				AMR = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@AMR Republic of Belfalas" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LAM = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@LAM Lamedon" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LAM = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@LAM Fiefdom of Lamedon" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ANF = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ANF Anfalas" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ANF = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@ANF Fiefdom of Anfalas" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ANO = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ANO Anórien" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ANO = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@ANO Fiefdom of Anórien" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				TOL = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@TOL Isle of Tolfalas" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				TOL = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@TOL Fiefdom of Tolfalas" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MRN = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@MRN Fiefdom of Mornan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MRN = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@MRN Mornan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DRU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DRU Drúedain of Drúedain Forest" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ADR = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ADR Andrast" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ADR = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@ADR Fiefdom of Andrast" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GNR = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@GNR Republic of Gondor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GNR = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = dark_realm
+						government = sauron_puppet
+						government = sauron_dictatorship
+						government = nazgul_dictatorship
+					}
+				}
+			}
+			state_scope = { change_region_name = "@GNR Kingdom of Adûnabâr" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GNR = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = stewardship
+						government = galadhrim_monarchy
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = northmen_tribe
+						government = fiefdom
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@GNR Turmen Hyallondiéva" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DWM = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DWM Dwarves of the White Mountains" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				OBS = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@OBS Oathbreakers" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				EDH = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@EDH Elves of Edhellond" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				PUK = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@PUK Drúedain of Drúwaith Iaur" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				PUK = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@PUK Fiefdom of Drúwaith Iaur" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DRH = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DRH Wildmen of Haerawreigion" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DRA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DRA Dunir of Angast" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				RUN = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@RUN Reunited Republic" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				RUN = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@RUN Reunited Kingdom" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ADB = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ADB Kingdom of Adûnabâr" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ADB = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@ADB Republic of Adûnabâr" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MOR = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@MOR Scourge of Mordor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MOR = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = sauron_dictatorship
+				}
+			}
+			state_scope = { change_region_name = "@MOR Shadow of Mordor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				NUR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@NUR Variags of Nûrn" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SHE = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SHE Shelob's Domain" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				HAR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@HAR Haradrim Tribes" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				HRD = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@HRD Harondor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				HRD = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@HRD South Gondor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				UMB = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@UMB Corsairs of Umbar" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				HRN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@HRN Harnendor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				HRU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@HRU Harûzan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				PEZ = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@PEZ Pezarsan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LUR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@LUR Lûrmsakûn" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ARY = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ARY Arysis" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				KHA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@KHA Variags of Khand" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				CHE = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@CHE Chelkar" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				RHU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@RHU Realm of the Easterlings" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SAG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SAG Sagath Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SEK = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SEK Sekel Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				URG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@URG Urgath Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ELG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ELG Elgaer Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				PRI = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@PRI Pris Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GAT = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GAT Gathod Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				KUG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@KUG Kug Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				IBR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@IBR Ibar Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				AGA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@AGA Agasha Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LGV = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@LGV Logath Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				NAR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@NAR Narkad Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GOR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GOR Gord Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BRC = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BRC Barak Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				UTA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@UTA Utal Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				AMO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@AMO Amov Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BSH = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BSH Bar Shûal" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DOR = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@DOR Republic of Dorwinion" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DOR = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@DOR Kingdom of Dorwinion" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				RME = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@RME Rómenost" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				EHW = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@EHW Ehwathrumavuld" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				OTH = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@OTH Men of Othlebed" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SAU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SAU Men of Sauthborg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				VID = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@VID Men of Vidusborg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ALN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ALN Men of Alanborg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				TRE = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@TRE Men of Tretoborg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ANT = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ANT Men of Antharsborg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GAD = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GAD Men of Gadraughtsborg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				RHO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@RHO Rhovanion" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				NRN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@NRN Nurunkkhizdín" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DAL = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@DAL Barding Realm" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DAL = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@DAL Republic of Dale" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ESG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ESG Esgaroth-upon-the-Long-Lake" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LMW = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@LMW Marsh-wights" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DA1 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DA1 Realm of Riverrun" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DA2 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DA2 Realm of Kaupaborg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DA3 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DA3 Realm of Myrrborg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DA4 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DA4 Realm of Naertheiaborg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				EDA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@EDA Vassal of Erebor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GRA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GRA Grammas of Gramavuld" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				RIV = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@RIV Rivermen of the Celduin" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ADH = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ADH Adhallings of the Mirkwood Eaves" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ERE = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@ERE Republic of Erebor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ERE = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ERE Kingdom of Erebor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				RAV = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@RAV Ravens of Erebor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				IRO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@IRO Lordship of the Iron Hills" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BRK = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BRK Barukkizdîn" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SNO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SNO Snow Orcs of the North" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LAR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@LAR Snow Orcs of Lar Huz" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GMG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GMG Grey Mountain Goblins" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GGT = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GGT Goblins of Goblin Town" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GMO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GMO Goblins of Moria" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GUN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GUN Orcs of Gundabad" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MTN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@MTN Urukdurbzagh" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				WRM = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@WRM Woodland Realm" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GUL = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = nazgul_dictatorship
+				}
+			}
+			state_scope = { change_region_name = "@GUL Nazgûl Realm of Dol Guldur" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GUL = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@GUL Dol Guldur" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MIR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@MIR Spiders of Mirkwood" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				WOO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@WOO Woodsmen of Mirkwood" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				HRI = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@HRI Herimundi of the Vale" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BEO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BEO Beornings of the Vale" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				STO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@STO Stoors of the Gladden" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LOR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@LOR Realm of Lothlórien" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				EAG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@EAG Eagles of the Eyrie" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LYN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@LYN Stoors of Lyndelby" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				RAD = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@RAD Radagast of Rhosgobel" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MEL = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@MEL Mathleisbuarg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FRA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@FRA Framsburg" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				KHU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@KHU Annâk-khurfu" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FAN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@FAN Ents of Fangorn" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ROH = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@ROH Fiefdom of Calenardhon" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ROH = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ROH Kingdom of Rohan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ISE = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ISE Realm of Isengard" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ISE = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = fiefdom
+				}
+			}
+			state_scope = { change_region_name = "@ISE Fiefdom of Dunfearn" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ENE = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ENE Enedwaithrim" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DUN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DUN United Dunland" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DCA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DCA Caru-Lûth" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DDR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DDR Draig-Lûth" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DHE = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DHE Hebog-Lûth" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DUC = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DUC Uch-Lûth" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DTU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DTU Turch-Lûth" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ALG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ALG Algraig" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GWA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GWA Gwathirim" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				AGR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@AGR Tribes of Angrast" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MAG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@MAG Tribes of Magur" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MAU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@MAU Stoors of Maur Tulhau" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				RHR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@RHR Hillmen of Rhudaur" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MAN = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@MAN Men of Angmar" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MAN = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = nazgul_dictatorship
+				}
+			}
+			state_scope = { change_region_name = "@MAN Witch-Kingdom of Angmar" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SOA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SOA Snow Orcs of Angmar" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SKU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SKU Skuthruga Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GRM = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GRM Orcs of Mount Gram" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				KSH = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@KSH Kosh Clan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ARN = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@ARN Republic of Arnor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ARN = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ARN Kingdom of Arnor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LSF = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@LSF Lossoth of Forochel" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				THA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@THA Tharbad" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				CAR = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@CAR Kingdom of Cardolan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				CAR = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@CAR Republic of Cardolan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MET = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@MET Metraith" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DEV = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DEV Drúedain of Eryn Vorn" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				HEN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@HEN Tribes of Henlan" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FON = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@FON Tribes of Fonntir" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SAE = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SAE Tribes of Saerlann" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				CAL = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@CAL Men of Caladir" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				EDB = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@EDB Men of Enedbund" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				GIR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@GIR Men of Girithlin" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				TNR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@TNR Men of Dol Tinereb" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BOM = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BOM Bombadil of the Old Forest" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BAR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BAR Barrow-wights" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				MRB = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@MRB Dunlendings of Mirobel" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				IML = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@IML Realm of Imladris" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				OST = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@OST Orcs of Ost-in-Edhil" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ETT = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ETT Troll-fells" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				TRO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@TRO Trollshaws" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DND = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DND Dúnedain of the North" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				WEA = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = nazgul_dictatorship
+				}
+			}
+			state_scope = { change_region_name = "@WEA Nazgûl Realm of Weathertop" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				WEA = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@WEA Weathertop" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ROF = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ROF Royal Fold" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ART = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = principality
+						government = lord_monarchy
+						government = monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@ART Kingdom of Arthedain" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ART = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = democracy
+				}
+			}
+			state_scope = { change_region_name = "@ART Republic of Arthedain" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SYL = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SYL Old Sylvana" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				HRV = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@HRV Harvaneth" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SHI = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@SHI Hobbits of the Shire" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BCK = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BCK Hobbits of Buckland" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BRE = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BRE Free Peoples of Bree" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SBU = {
+					has_country_flag = dynamic_loc_slot_selector
+					government = monarchy
+				}
+			}
+			state_scope = { change_region_name = "@SBU United Kingdom of Shire and Breeland" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				SBU = {
+					has_country_flag = dynamic_loc_slot_selector
+					OR = {
+						government = istari_kingdom
+						government = democracy
+						government = principality
+						government = lord_monarchy
+						government = cosmetic_2_govt
+						government = dark_realm
+						government = stewardship
+						government = galadhrim_monarchy
+						government = sauron_puppet
+						government = hobbit_realm
+						government = northmen_democracy
+						government = goblin_tribe
+						government = man_tribe
+						government = sauron_dictatorship
+						government = northmen_tribe
+						government = fiefdom
+						government = nazgul_dictatorship
+						government = cosmetic_1_govt
+					}
+				}
+			}
+			state_scope = { change_region_name = "@SBU Shire-Breeland Union" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				EEL = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@EEL Eagles of Ered Luin" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				EMB = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@EMB Emyn Beriad" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				HWD = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@HWD House of the Wind" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				LIN = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@LIN Realm of Lindon" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				WND = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@WND Windan Elves of Harlindon" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BLG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BLG Belegost" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				BLU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@BLU Dwarves of Ered Luin" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				DOU = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@DOU Dourhands of Ered Luin" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				KHG = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@KHG Khagolabbad Faraku" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				KHZ = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@KHZ Khazadbizar" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				NGD = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@NGD Nogrod" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				THO = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@THO Thorin's Halls" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				NUM = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@NUM Remnants of Númenor" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				STF = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@STF Spiders of Tol Fuin" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				ALA = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@ALA Alatar's Realm" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				FOR = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@FOR World Bank" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D01 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D01 The Kingdom of $REGION$" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D02 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D02 The Confederation of $REGION$" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D03 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D03 Commonwealth of $REGION$" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D04 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D04 The Republic of $REGION$" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D05 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D05 The $REGION$ State" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D06 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D06 The People's Republic of $REGION$" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D07 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D07 The Free State of $REGION$" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D08 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D08 The Grand State of $REGION$" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D09 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D09 The State of $REGION$" }
+		}
+		dynamic_loc_slots = {
+			limit = {
+				has_province_modifier = dynamic_loc_slot_selector
+				D10 = { has_country_flag = dynamic_loc_slot_selector }
+			}
+			state_scope = { change_region_name = "@D10 The Principality of $REGION$" }
+		}
+		# Cleans up countries
+		any_country = { clr_country_flag = dynamic_loc_slot_selector }
+		# Cleans up sea provinces
+		dynamic_loc_slots = { remove_province_modifier = dynamic_loc_slot_selector }
+		# Go back to the handler
+		country_event = {
+			id = 300000
+			days = 0
+		}
+	}
+	option = {
+		name = ""
+	}
+}

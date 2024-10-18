@@ -3944,6 +3944,179 @@ country_event = {
 	}
 }
 
+# Alliance of Dwarves and Men Monthly Cleanup
+country_event = {
+	id = 99003
+	title = "Alliance of Dwarves and Men Monthly Cleanup"
+	desc = "EVTDESC99003"
+	picture = "production"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fix it please"
+		
+		# Resetting from previous month's ai selection
+		clr_global_flag = alliance_dwarves_men_ai_make_voting_selection
+		any_country = { clr_country_flag = alliance_dwarves_men_attempted_voting_selection }
+		
+		# Enforcing the economic union {
+		clr_global_flag = alliance_of_dwarves_and_men_gp_detected
+		
+		any_greater_power = {
+			limit = { has_country_modifier = alliance_of_dwarves_and_men }
+			set_global_flag = alliance_of_dwarves_and_men_gp_detected
+		}
+		
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				has_global_flag = alliance_of_dwarves_and_men_economic_union_enacted
+				has_global_flag = alliance_of_dwarves_and_men_gp_detected
+				is_greater_power = no
+				OR = {
+					ai = yes # hitting every ai realm in case a new alliance member GP shows up. This won't cover a player, but it'll be rare that a not hitting a player-realm will actually affect gameplay
+					sphere_owner = { NOT = { has_country_modifier = alliance_of_dwarves_and_men } }
+					part_of_sphere = no
+				}
+			}
+			sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+			country_event = 110160 # Enforcing spheres
+		}
+		# }
+		
+		# Kicking members who no longer fit the requirements
+		any_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				OR = {
+					is_vassal = yes
+					good_evil_alignment = evil_alignment
+				}
+			}
+			country_event = 110170 # Leaving the Alliance
+		}
+		
+		# Detecting the collapse of the Alliance (0 or 1 members) {
+		set_variable = { which = alliance_of_dwarves_and_men_count value = 0 }
+		
+		any_country = {
+			limit = { has_country_modifier = alliance_of_dwarves_and_men }
+			THIS = { change_variable = { which = alliance_of_dwarves_and_men_count value = 1 } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { check_variable = { which = alliance_of_dwarves_and_men_count value = 1.9 } }
+					NOT = { exists = FFN }
+				}
+			}
+			owner = {
+				any_country = {
+					limit = {
+						OR = {
+							has_country_modifier = alliance_of_dwarves_and_men
+							ai = no
+						}
+					}
+					country_event = 110171 # The end of the Alliance of Dwarves and Men
+				}
+				set_global_flag = end_of_the_alliance_of_dwarves_and_men
+				country_event = 110110
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { exists = FFN } }
+			owner = {
+				set_global_flag = end_of_the_alliance_of_dwarves_and_men
+				country_event = 110110
+			}
+		}
+		# }
+		
+		# Having the ai decide to do things
+		random_country = {
+			limit = {
+				has_country_modifier = alliance_of_dwarves_and_men
+				ai = yes
+				NOT = { has_global_flag = end_of_the_alliance_of_dwarves_and_men }
+			}
+			country_event = 110177
+		}
+		
+		# Refire the cleanup event next month {
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = end_of_the_alliance_of_dwarves_and_men } } }
+			owner = {
+				random_owned = {
+					limit = {
+						OR = {
+							# January
+							NOT = { month = 1 }
+							AND = { # March
+								month = 2
+								NOT = { month = 3 }
+							}
+							AND = { # May
+								month = 4
+								NOT = { month = 5 }
+							}
+							AND = { # July
+								month = 6
+								NOT = { month = 7 }
+							}
+							AND = { # August
+								month = 7
+								NOT = { month = 8 }
+							}
+							AND = { # October
+								month = 9
+								NOT = { month = 10 }
+							}
+							# December
+							month = 11
+						}
+					}
+					owner = { country_event = { id = 99003 days = 31 } }
+				}
+				random_owned = {
+					limit = { # February
+						month = 1
+						NOT = { month = 2 }
+					}
+					owner = { country_event = { id = 99003 days = 28 } }
+				}
+				random_owned = {
+					limit = {
+						OR = {
+							AND = { # April
+								month = 3
+								NOT = { month = 4 }
+							}
+							AND = { # June
+								month = 5
+								NOT = { month = 6 }
+							}
+							AND = { # September
+								month = 8
+								NOT = { month = 9 }
+							}
+							AND = { # November
+								month = 10
+								NOT = { month = 11 }
+							}
+						}
+					}
+					owner = { country_event = { id = 99003 days = 30 } }
+				}
+			}
+		}
+		# }
+	}
+}
+
 # Generic Daily Cleanup
 country_event = {
 	id = 99250
@@ -4075,6 +4248,30 @@ country_event = {
 			}
 			
 			random_owned = {
+				limit = { owner = { has_country_modifier = alliance_of_dwarves_and_men_cannot_join } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_modifier = alliance_of_dwarves_and_men_union_countdown } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
 				limit = { owner = { has_country_modifier = no_points_for_you } }
 				owner = {
 					change_variable = { which = modifier_count value = 1 }
@@ -4108,6 +4305,14 @@ country_event = {
 			
 			random_owned = {
 				limit = { owner = { has_country_modifier = low_military_recruitment } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_modifier = call_to_arms_cooldown } }
 				owner = {
 					change_variable = { which = modifier_count value = 1 }
 					change_variable = { which = total_modifier_count value = 1 }

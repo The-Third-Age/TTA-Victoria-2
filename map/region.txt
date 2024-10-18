@@ -420,12 +420,31 @@ open_loc = { } # Open
 debugging_loc = { } # Debug Settings
 flavor_loc = { } # Flavor Settings
 
+hyphen_loc = { } # -
 close_parenthesis_loc = { } # )
 
+gain_cores_and_ownership_loc = { } # We will gain cores and ownership over the region
+
+# Alliance of Dwarves and Men
 province_wealth_decrease_2_loc = { } # §OProvince Wealth§! §Rdecreases by 2§!
 province_wealth_decrease_1_loc = { } # §OProvince Wealth§! §Rdecreases by 1§!
 province_wealth_increase_1_loc = { } # §OProvince Wealth§! §Rincreases by 1§!
 province_wealth_increase_2_loc = { } # §OProvince Wealth§! §Rincreases by 2§!
+
+call_to_arms_loc = { } # Call to Arms
+core_dispute_loc = { } # Core Dispute
+invite_realm_loc = { } # Invite Realm
+expand_culture_reach_loc = { } # Expand Cultural Reach
+specific_flavor_loc = { } # Realm Specific Flavor
+economic_union_loc = { } # Propose an Economic Union
+political_union_loc = { } # Propose a Political Union
+
+resolve_conflicting_cores_loc = { } # Resolve Conflicting Cores
+request_return_of_cores_loc = { } # Request Return of Cores
+return_cores_loc = { } # Return Cores
+
+settle_cores_of_dadhriks_gap_loc = { } # Settle Cores of Dádhrik's Gap
+settle_cores_of_mountainlands_loc = { } # Settle Cores of Mountainlands
 
 # Static Tooltip Locs - Settings, Event description
 memes_loc = { } # Memes (
@@ -539,6 +558,46 @@ railroading_tag_specific_description_loc_9 = { 1081 } #
 railroading_tag_specific_description_loc_10 = { 1082 } # 
 railroading_tag_specific_description_loc_11 = { 1083 } # 
 railroading_tag_specific_description_loc_12 = { 1084 } # 
+dynamic_loc_slot_1 = { 1085 } # 
+dynamic_loc_slot_2 = { 1086 } # 
+dynamic_loc_slot_3 = { 1087 } # 
+dynamic_loc_slot_4 = { 1088 } # 
+dynamic_loc_slot_5 = { 1089 } # 
+dynamic_loc_slot_6 = { 1090 } # 
+dynamic_loc_slot_7 = { 1091 } # 
+dynamic_loc_slot_8 = { 1092 } # 
+dynamic_loc_slot_9 = { 1093 } # 
+dynamic_loc_slot_10 = { 1094 } # 
+dynamic_loc_slot_11 = { 1095 } # 
+dynamic_loc_slot_12 = { 1096 } # 
+dynamic_loc_slot_13 = { 1097 } # 
+dynamic_loc_slot_14 = { 1098 } # 
+dynamic_loc_slot_15 = { 1099 } # 
+dynamic_loc_slot_16 = { 1100 } # 
+dynamic_loc_slot_17 = { 1101 } #
+dynamic_loc_slot_18 = { 1102 } #
+dynamic_loc_slot_19 = { 1103 } #
+dynamic_loc_slot_20 = { 1104 } #
+dynamic_loc_slot_21 = { 1105 } #
+dynamic_loc_slot_22 = { 1106 } #
+dynamic_loc_slot_23 = { 1107 } #
+dynamic_loc_slot_24 = { 1108 } #
+dynamic_loc_slot_25 = { 1109 } #
+dynamic_loc_slot_26 = { 1110 } #
+dynamic_loc_slot_27 = { 1111 } #
+dynamic_loc_slot_28 = { 1112 } #
+dynamic_loc_slot_29 = { 1113 } #
+dynamic_loc_slot_30 = { 1114 } #
+dynamic_loc_slot_31 = { 1115 } #
+dynamic_loc_slot_32 = { 1116 } #
+dynamic_loc_slot_33 = { 1117 } #
+dynamic_loc_slot_34 = { 1118 } #
+dynamic_loc_slot_35 = { 1119 } #
+dynamic_loc_slot_36 = { 1120 } #
+dynamic_loc_slot_37 = { 1121 } #
+dynamic_loc_slot_38 = { 1122 } #
+dynamic_loc_slot_39 = { 1123 } #
+dynamic_loc_slot_40 = { 1124 } #
 fourth_age_start_date_loc = { 1146 } # The Fourth Age hasn't started yet
 fourth_age_year_loc = { 1147 } # The Fourth Age hasn't started yet
 shire_reckoning_loc = { 1148 } # The year is 0 by Shire Reckoning
@@ -553,11 +612,32 @@ DAL_bard_ii_age_loc = { 1070 } # §TBard II§! has not yet been born
 DAL_brand_i_born_loc = { 1071 } # §TBrand I§! has not yet been born
 DAL_bard_ii_born_loc = { 1072 } # §TBard II§! has not yet been born
 
+dynamic_loc_slots = { 1085 1086 1087 1088 1089 1090 1091 1092 1093 1094 1095 1096 1097 1098 1099 1100 1101 1102 1103 1104 1105 1106 1107 1108 1109 1110 1111 1112 1113 1114 1115 1116 1117 1118 1119 1120 1121 1122 1123 1124 } # Dynamic Loc Slots
+
 # Static Tooltip Locs - Generic
 hunting_outlaws_loc = { } # §GThe local militia and any military units in the area will start searching for the outlaws and their base§!
 outlaws_cleared_loc = { } # §GThe local militia and any military units have cleared the province of outlaws, and as such will no longer suffer the effects§!
 recent_raid_loc = { } # §REven if the tool tip only says that this event removes Recent Raid, the province will get the modifier Recent Raid for 1 year§!
 empty_line_decisions_loc = { } # \n
+
+# Static Tooltops Locs - Alliance of Dwarves and Men
+triggered_event_alliance_of_dwarves_and_men_loc = { } # get the 'Alliance of Dwarves and Men' event.
+triggered_event_alliance_of_dwarves_and_men_core_dispute_loc = { } # get the 'Alliance of Dwarves and Men - Core Dispute' event.
+triggered_event_alliance_of_dwarves_and_men_region_selection_loc = { } # get the 'Alliance of Dwarves and Men - Region Selection' event.
+triggered_event_alliance_of_dwarves_and_men_country_selection_loc = { } # §!get the 'Alliance of Dwarves and Men - Realm Selection' event.
+triggered_event_alliance_of_dwarves_and_men_specific_flavor_loc = { } # get the 'Alliance of Dwarves and Men - Specific Flavor' event.
+triggered_event_alliance_of_dwarves_and_men_specific_flavor_northan_core_dispute_loc = { } # get the 'Alliance of Dwarves and Men - Northmen Core Dispute' event.
+triggered_event_alliance_of_dwarves_and_men_diplomatic_strategy_loc = { } # §!get the 'Alliance of Dwarves and Men - Diplomatic Strategy' event.
+triggered_event_alliance_of_dwarves_and_men_voting_results_loc = { } # get the 'Alliance of Dwarves and Men Voting Results' event.
+triggered_event_alliance_of_dwarves_and_men_economic_union_loc = { } # get the 'Alliance of Dwarves and Men Economic Union' event.
+triggered_event_alliance_of_dwarves_and_men_political_union_loc = { } # get the 'Alliance of Dwarves and Men Political Union' event.
+
+alliance_of_dwarves_and_men_region_selection_loc = { } # The named region will be chosen
+alliance_of_dwarves_and_men_country_selection_loc = { } # The named realm will be chosen
+alliance_of_dwarves_and_men_country_selection_return_cores_loc = { } # We will cede the chosen region to this realm
+alliance_of_dwarves_and_men_economic_union_sphere_loc = { } # We will be placed in the highest-ranked GP in the alliance. If there is a lower rank GP that is of our culture group, that realm will be favored over the higher rank GP
+
+call_allies_tooltip_loc = { } # §WCalls all realms in the alliance into our current conflicts. This call to arms does not bypass truces. The ai is more likely to accept defensive call-to-arms and the ai still may reject the call to arms§!
 
 # Static Tooltip Locs - Settings
 settings_disable_settings_loc = { } # The settings menu will close and the decision to reopen the menu will be disabled. §RThis cannot be undone§!
@@ -581,6 +661,9 @@ settings_annex_all_loc = { } # This option annexes all of colonizable Middle Ear
 
 settings_province_wealth_intervention_loc = { } # For the most part, the Province Wealth mechanic works in the background, without player intervention. However, there are a couple of random events that can fire related to no other mechanic, allowing the realm to intervene in the wealth of a province. This option toggles these events firing
 settings_generic_rgo_changing_loc = { } # Selecting this option will disable the generic RGO switching that can occur when a province has more than 50% of its labourers unemployed
+
+# Static Tooltip Locs - Alliance of Dwarves and Men
+FFN_join_alliance_dwarves_men_loc = { } # If the pass the conditions on this decision (ignoring the always false), we will almost be eligible to be invited to the Alliance of Dwarves and Men -- we also need to be allied to realm that is currently in the alliance. From here, the ai will always attempt to send an invite, however, §Rit is possible for the rest of the alliance to reject the invite proposal§!.\n\nThe full list of conditions is:\nWe are §GGood Aligned§! or §PNeutral Aligned§!\nWe are not a vassal\nWe are either a Dwarven realm, a Northman realm, a secondary power or a great power\nOur capital is in Rhovanion
 
 # Static Tooltip Locs - Barding Realm
 DAL_bard_i_only_loc = { } # §RThis decision can only be taken while §YBard I§R is your leader§!

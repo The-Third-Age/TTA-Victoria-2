@@ -1,0 +1,173 @@
+# Remove this line to have the validator check for strings in localisation
+# Audax Validator "!" Ignore_1004
+
+# Dynamic Loc Functions: {
+#	400000 - 499999 }
+
+# Dynamic Loc Country Cleanup - FIRE THIS AFTER COUNTRY SELECTION
+country_event = {
+	id = 400000
+	title = "Dynamic Loc Country Cleanup"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		# Cleanup for next time
+		any_country = {
+			clr_country_flag = dynamic_loc_potential_country_target
+			clr_country_flag = dynamic_loc_country_target_1
+			clr_country_flag = dynamic_loc_country_target_2
+			clr_country_flag = dynamic_loc_country_target_3
+			clr_country_flag = dynamic_loc_country_target_4
+			clr_country_flag = dynamic_loc_country_target_5
+			clr_country_flag = dynamic_loc_country_target_6
+			clr_country_flag = dynamic_loc_country_target_7
+			clr_country_flag = dynamic_loc_country_target_8
+			clr_country_flag = dynamic_loc_country_target_9
+			clr_country_flag = dynamic_loc_country_target_10
+			clr_country_flag = dynamic_loc_country_target_11
+			clr_country_flag = dynamic_loc_country_target_12
+			clr_country_flag = dynamic_loc_country_target_13
+			clr_country_flag = dynamic_loc_country_target_14
+			clr_country_flag = dynamic_loc_country_target_15
+			clr_country_flag = dynamic_loc_country_target_16
+			clr_country_flag = dynamic_loc_country_target_17
+			clr_country_flag = dynamic_loc_country_target_18
+			clr_country_flag = dynamic_loc_country_target_19
+			clr_country_flag = dynamic_loc_country_target_20
+			clr_country_flag = dynamic_loc_country_target_21
+			clr_country_flag = dynamic_loc_country_target_22
+			clr_country_flag = dynamic_loc_country_target_23
+			clr_country_flag = dynamic_loc_country_target_24
+		}
+	}
+}
+
+# Dynamic Loc Region Cleanup -- FIRE THIS AFTER REGION SELECTION
+country_event = {
+	id = 400001
+	title = "Dynamic Loc Region Cleanup"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		# Clean up for next time
+		random_owned = {
+			any_neighbor_province = {
+				remove_province_modifier = dynamic_loc_potential_region_target
+				remove_province_modifier = dynamic_loc_region_target_1
+				remove_province_modifier = dynamic_loc_region_target_2
+				remove_province_modifier = dynamic_loc_region_target_3
+				remove_province_modifier = dynamic_loc_region_target_4
+				remove_province_modifier = dynamic_loc_region_target_5
+				remove_province_modifier = dynamic_loc_region_target_6
+				remove_province_modifier = dynamic_loc_region_target_7
+				remove_province_modifier = dynamic_loc_region_target_8
+			}
+		}
+	}
+}
+
+# Dynamic Loc Culture Group Cleanup - FIRE THIS AFTER CULTURE GROUP SELECTION
+country_event = {
+	id = 400002
+	title = "Dynamic Loc Culture Group Cleanup"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		# Cleanup for next time
+		any_country = {
+			clr_country_flag = dynamic_loc_potential_culture_group_target
+			clr_country_flag = dynamic_loc_culture_group_target_1
+			clr_country_flag = dynamic_loc_culture_group_target_2
+			clr_country_flag = dynamic_loc_culture_group_target_3
+			clr_country_flag = dynamic_loc_culture_group_target_4
+			clr_country_flag = dynamic_loc_culture_group_target_5
+			clr_country_flag = dynamic_loc_culture_group_target_6
+			clr_country_flag = dynamic_loc_culture_group_target_7
+			clr_country_flag = dynamic_loc_culture_group_target_8
+		}
+	}
+}
+
+# Dynamic Loc Region Cleanup -- Clearing out old options only
+country_event = {
+	id = 401001
+	title = "Dynamic Loc Region Cleanup"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		# Clean up for next time
+		random_owned = {
+			any_neighbor_province = {
+				remove_province_modifier = dynamic_loc_region_target_1
+				remove_province_modifier = dynamic_loc_region_target_2
+				remove_province_modifier = dynamic_loc_region_target_3
+				remove_province_modifier = dynamic_loc_region_target_4
+				remove_province_modifier = dynamic_loc_region_target_5
+				remove_province_modifier = dynamic_loc_region_target_6
+				remove_province_modifier = dynamic_loc_region_target_7
+				remove_province_modifier = dynamic_loc_region_target_8
+			}
+		}
+	}
+}
+
+# Reset Names
+country_event = {
+	id = 402000
+	title = "Dynamic Loc Reset Names"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		# Resets the counter so regions get properly loced
+		FOR = { set_variable = { which = dynamic_loc_names_country value = 0 } }
+		FOR = { set_variable = { which = dynamic_loc_names_region value = 0 } }
+		FOR = { set_variable = { which = dynamic_loc_names_culture_group value = 0 } }
+		
+		dynamic_loc_slots = { state_scope = { change_region_name = "" } }
+	}
+}
+
+# Reset Everything
+country_event = {
+	id = 402001
+	title = "Dynamic Loc Reset Everything"
+	desc = ""
+	# picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Clean up"
+		
+		country_event = 400000
+		country_event = 400001
+		country_event = 400002
+		country_event = 401001
+		country_event = 402000
+	}
+}
