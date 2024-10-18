@@ -34,7 +34,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "§LTo Dol Amroth§!"
+		name = "Â§LTo Dol AmrothÂ§!"
 		AMR = {
 			inherit = TOL
 			any_owned = {
@@ -986,7 +986,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LFarlong, §MLord of Lossarnach§!"
+			name = "Â§LFarlong, Â§MLord of LossarnachÂ§!"
 			background = lord_of_lossarnach
 			personality = stalwart
 		}
@@ -1038,7 +1038,7 @@ country_event = {
 			}
 		}
 		
-		# Owns all of the regions in Lamedon except the Ringló Vale
+		# Owns all of the regions in Lamedon except the RinglÃ³ Vale
 		GON_81 = { owned_by = THIS }
 		GON_89 = { owned_by = THIS }
 		
@@ -1059,7 +1059,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LAngbor, §MLord of Lamedon§!"
+			name = "Â§LAngbor, Â§MLord of LamedonÂ§!"
 			background = lord_of_lamedon
 			personality = fearless
 		}
@@ -1088,10 +1088,10 @@ country_event = {
 	}
 }
 
-# The Death of Borhador and new Lord of the Ringló Vale
+# The Death of Borhador and new Lord of the RinglÃ³ Vale
 country_event = {
 	id = 50028
-	title = "The New Lord of the Ringló Vale"
+	title = "The New Lord of the RinglÃ³ Vale"
 	desc = "EVTDESC50028"
 	picture = "gondor/leader_death"
 	
@@ -1109,7 +1109,7 @@ country_event = {
 			}
 		}
 		
-		# Owns the Ringló Vale
+		# Owns the RinglÃ³ Vale
 		GON_92 = { owned_by = THIS }
 		
 		NOT = { has_global_flag = dervorin_lord_of_the_ringlo_vale }
@@ -1125,11 +1125,11 @@ country_event = {
 	}
 	
 	option = {
-		name = "Long live Dervorin, Lord of the Ringló Vale!"
+		name = "Long live Dervorin, Lord of the RinglÃ³ Vale!"
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LDervorin, §MLord of the Ringló Vale§!"
+			name = "Â§LDervorin, Â§MLord of the RinglÃ³ ValeÂ§!"
 			background = lord_of_ringlo_vale
 			personality = stalwart
 		}
@@ -1144,17 +1144,17 @@ country_event = {
 	}
 }
 
-# Informing Overlord that Dervorin is now the Lord of the Ringló Vale
+# Informing Overlord that Dervorin is now the Lord of the RinglÃ³ Vale
 country_event = {
 	id = 50029
-	title = "The New Lord of the Ringló Vale"
+	title = "The New Lord of the RinglÃ³ Vale"
 	desc = "EVTDESC50028"
 	picture = "gondor/leader_death"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "Long live Dervorin, Lord of the Ringló Vale!"
+		name = "Long live Dervorin, Lord of the RinglÃ³ Vale!"
 	}
 }
 
@@ -1203,11 +1203,11 @@ country_event = {
 	}
 	
 	option = {
-		name = "Long live Duinhir, Lord of the Ringló Vale!"
+		name = "Long live Duinhir, Lord of the RinglÃ³ Vale!"
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LDuinhir, §MLord of the Ringló Vale§!"
+			name = "Â§LDuinhir, Â§MLord of the RinglÃ³ ValeÂ§!"
 			background = lord_of_ringlo_vale
 			personality = stalwart
 		}
@@ -1223,17 +1223,17 @@ country_event = {
 	}
 }
 
-# Informing Overlord that Duinhir is now the Lord of the Ringló Vale
+# Informing Overlord that Duinhir is now the Lord of the RinglÃ³ Vale
 country_event = {
 	id = 50031
-	title = "The New Lord of the Ringló Vale"
+	title = "The New Lord of the RinglÃ³ Vale"
 	desc = "EVTDESC50030"
 	picture = "gondor/leader_death"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "Long live Duinhir, Lord of the Ringló Vale!"
+		name = "Long live Duinhir, Lord of the RinglÃ³ Vale!"
 	}
 }
 
@@ -1281,7 +1281,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LHirluin, §MLord of Pinnath Gelin§!"
+			name = "Â§LHirluin, Â§MLord of Pinnath GelinÂ§!"
 			background = lord_of_pinnath_gelin
 			personality = persistent
 		}
@@ -1355,7 +1355,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LGolasgil, §MLord of Anfalas§!"
+			name = "Â§LGolasgil, Â§MLord of AnfalasÂ§!"
 			background = lord_of_anfalas
 			personality = stout
 		}
@@ -1409,7 +1409,7 @@ province_event = {
 	mean_time_to_happen = { months = 4800 }
 	
 	option = {
-		name = "We agree with §B$PROVINCENAME$"
+		name = "We agree with Â§B$PROVINCENAME$"
 		
 		random_neighbor_province = {
 			limit = {
@@ -1421,7 +1421,7 @@ province_event = {
 	}
 	
 	option = {
-		name = "We do not agree with §B$PROVINCENAME$"
+		name = "We do not agree with Â§B$PROVINCENAME$"
 		
 		aristocrats = { militancy = 5 }
 	}
@@ -1581,7 +1581,7 @@ country_event = {
 			add_province_modifier = { name = the_mesta duration = -1 }
 		}
 		
-		# Add the Mesta to any horse or woll province in Anfalas any puppet owns
+		# Add the Mesta to any horse or wool province in Anfalas any puppet owns
 		any_country = {
 			limit = {
 				vassal_of = THIS
@@ -1602,7 +1602,7 @@ country_event = {
 						trade_goods = horses
 						trade_goods = wool
 					}
-				}			
+				}
 				add_province_modifier = { name = the_mesta duration = -1 }
 			}
 		}
@@ -1649,7 +1649,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "§LAndrast is a separate province!§!"
+		name = "Â§LAndrast is a separate province!Â§!"
 		
 		ADR = {
 			all_core = {
@@ -1723,10 +1723,10 @@ country_event = {
 	}
 }
 
-# Eärcaraxë
+# EÃ¤rcaraxÃ«
 province_event = {
 	id = 50042
-	title = "A Sighting of Eärcaraxë"
+	title = "A Sighting of EÃ¤rcaraxÃ«"
 	desc = "EVTDESC50042"
 	
 	fire_only_once = yes
@@ -1750,7 +1750,7 @@ province_event = {
 # The Andrast-Druwaith Iaur Border
 country_event = {
 	id = 50043
-	title = "The Andrast - Drúwaith Iaur Border"
+	title = "The Andrast - DrÃºwaith Iaur Border"
 	desc = "EVTDESC50043"
 	picture = "gondor/andrast_map"
 	
@@ -1844,7 +1844,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "The Ahasirith is the border, but Haerawreigion is in Drúwaith Iaur"
+		name = "The Ahasirith is the border, but Haerawreigion is in DrÃºwaith Iaur"
 		
 		GON_183 = { add_core = PUK }
 		
@@ -1895,7 +1895,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "The Lûrolló is the border"
+		name = "The LÃ»rollÃ³ is the border"
 		
 		GON_183 = { add_core = PUK }
 		GON_160 = { add_core = PUK }
@@ -2356,7 +2356,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LBoromir, §MWarden of the White Tower§!"
+			name = "Â§LBoromir, Â§MWarden of the White TowerÂ§!"
 			background = warden_of_white_tower
 			personality = heroic
 		}
@@ -2383,7 +2383,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LFaramir, §MCaptain of Gondor§!"
+			name = "Â§LFaramir, Â§MCaptain of GondorÂ§!"
 			background = captain_of_gondor
 			personality = heroic
 		}
@@ -2407,7 +2407,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LImrahil, §MPrince of Belfalas§!"
+			name = "Â§LImrahil, Â§MPrince of BelfalasÂ§!"
 			background = prince_of_belfalas
 			personality = tactical
 		}
@@ -2439,7 +2439,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LMadril, §MRanger of Ithilien§!"
+			name = "Â§LMadril, Â§MRanger of IthilienÂ§!"
 			background = ranger_of_ithilien
 			personality = persistent
 		}
@@ -2470,7 +2470,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_general = {
-			name = "§LBeregond, §MCitadel Guard§!"
+			name = "Â§LBeregond, Â§MCitadel GuardÂ§!"
 			background = citadel_guard
 			personality = resolute
 		}
@@ -2505,7 +2505,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_admiral = {
-			name = "§LBaranor, §MCaptain of Ships§!"
+			name = "Â§LBaranor, Â§MCaptain of ShipsÂ§!"
 			background = captain_of_ships
 			personality = tactical
 		}
@@ -2516,7 +2516,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_admiral = {
-			name = "§LFingon, §MCaptain of Ships§!"
+			name = "Â§LFingon, Â§MCaptain of ShipsÂ§!"
 			background = captain_of_ships
 			personality = stalwart
 		}
@@ -2527,7 +2527,7 @@ country_event = {
 		
 		# Audax Validator "." Ignore_1007
 		define_admiral = {
-			name = "§LMalvegil, §MCaptain of Ships§!"
+			name = "Â§LMalvegil, Â§MCaptain of ShipsÂ§!"
 			background = captain_of_ships
 			personality = heroic
 		}

@@ -2,17 +2,16 @@ political_decisions = {
 	form_misty_mountains = {
 		picture = "mtn_decision"
 		potential = {
-			is_independant = yes
 			is_culture_group = northern_goblins
+			is_independant = yes
 			NOT = { exists = MTN }
 		}
 		allow = {
+			owns = 995		# Parth Gurthil
 			war = no
 			GUN = { all_core = { owned_by = THIS } }
 			GMO = { all_core = { owned_by = THIS } }
 			GGT = { all_core = { owned_by = THIS } }
-			# Angirith Province
-			995 = { owned_by = THIS }
 		}
 		effect = {
 			prestige = 20
@@ -20,12 +19,9 @@ political_decisions = {
 			GUN = { all_core = { add_core = MTN } }
 			GMO = { all_core = { add_core = MTN } }
 			GGT = { all_core = { add_core = MTN } }
-			# Angirith Province
-			995 = { add_core = MTN }
-			# Foryagsh Province
-			994 = { add_core = MTN }
-			# Mount Gram Province
-			999 = { add_core = MTN }
+			995 = { add_core = MTN }		# Parth Gurthil
+			994 = { add_core = MTN }		# Malenhad
+			999 = { add_core = MTN }		# Mount Gram
 			
 			add_accepted_culture = morian
 			add_accepted_culture = goblin_towner
@@ -101,8 +97,7 @@ political_decisions = {
 			NOT = { has_country_modifier = saruman_engineers }
 		}
 		allow = {
-			# Isengard Province
-			811 = { owned_by = THIS }
+			owns = 811		# Isengard
 		}
 		effect = {
 			811 = { add_core = MTN }

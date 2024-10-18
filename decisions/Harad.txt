@@ -192,9 +192,9 @@ political_decisions = {
 		}
 		
 		allow = {
+			is_greater_power = yes
 			# If the owner is one of the tribes, it has to be itself, a vassal or a sphereling
 			# Otherwise, it isn't counted
-			is_greater_power = yes
 		}
 		
 		effect = {
@@ -370,9 +370,9 @@ political_decisions = {
 	form_harad_GP = {
 		picture = "form_harad"
 		potential = {
+			is_greater_power = yes
 			NOT = { is_culture_group = haradrim }
 			NOT = { is_culture_group = khandish }
-			is_greater_power = yes
 			NOT = { exists = HAR }
 			OR = {
 				HRN = {
@@ -1181,6 +1181,7 @@ political_decisions = {
 political_decisions = {
 	HAR_core_removal = {
 		potential = {
+			tag = HAR
 			OR = {
 				HRN = { all_core = { owned_by = HAR is_core = HAR } }
 				HRU = { all_core = { owned_by = HAR is_core = HAR } }
@@ -1188,7 +1189,6 @@ political_decisions = {
 				LUR = { all_core = { owned_by = HAR is_core = HAR } }
 				ARY = { all_core = { owned_by = HAR is_core = HAR } }
 			}
-			tag = HAR
 		}
 		
 		allow = {
