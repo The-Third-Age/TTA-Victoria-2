@@ -21010,7 +21010,74 @@ country_event = {
 			owner = { country_event = 110176 }
 		}
 		
-		# TODO: Core Dispute
+		# Resolve Conflicting Cores
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_global_flag = alliance_dwarves_men_ai_make_voting_selection } # To prevent the ai choosing to vote on multiple things during the same tick
+					NOT = { FOR = { has_country_modifier = alliance_of_dwarves_and_men_recently_voted } } # Only want to have the potential for one voting resolution at once
+				}
+				is_core = THIS
+				any_core = {
+					NOT = { tag = THIS }
+					has_country_modifier = alliance_of_dwarves_and_men
+				}
+			}
+			owner = {
+				set_country_flag = alliance_dwarves_men_voting_initiator
+				set_global_flag = alliance_dwarves_men_ai_make_voting_selection
+				random_owned = {
+					limit = {
+						is_core = THIS
+						any_core = {
+							NOT = { tag = THIS }
+							has_country_modifier = alliance_of_dwarves_and_men
+						}
+					}
+					add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 }
+				}
+				random_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						any_core = { has_province_modifier = alliance_dwarves_men_selected_region }
+					}
+					set_country_flag = alliance_dwarves_men_selected_country
+				}
+				FOR = {
+					set_global_flag = alliance_of_dwarves_and_men_voting_on_resolving_conflicting_cores
+					country_event = 110150 # Voting Handler
+				}
+			}
+		}
+		
+		# Request Return of Cores will be handled by Return Cores -- no need to have the AI fire it. There will be the scenario where the player will own ai land, but it will likely be more annoying to the player than immersive
+		
+		# Return Cores
+		random_owned = {
+			limit = {
+				NOT = { is_core = THIS }
+				NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+				any_core = {
+					exists = yes
+					has_country_modifier = alliance_of_dwarves_and_men
+				}
+				any_neighbor_province = {
+					empty = no
+					owner = { has_country_modifier = alliance_of_dwarves_and_men }
+				}
+			}
+			add_province_modifier = { name = ai_return_cores_alliance_men_dwarves duration = 1 }
+			owner = {
+				random_country = {
+					limit = {
+						has_country_modifier = alliance_of_dwarves_and_men
+						exists = yes
+						any_core = { has_province_modifier = ai_return_cores_alliance_men_dwarves }
+					}
+					country_event = 110178
+				}
+			}
+		}
 		
 		# Invite Realm
 		random_owned = {
@@ -21194,7 +21261,59 @@ country_event = {
 			}
 		}
 		
-		# TODO: Specific Flavor
+		# Settle the Cores of Dádhrik's Gap
+		random_owned = {
+			limit = {
+				owner = {
+					# No checks about ensuring only one vote at a time. The AI will only select a non-voting option
+					OR = {
+						tag = DAL
+						tag = RHO
+					}
+					ERE = { has_country_modifier = alliance_of_dwarves_and_men }
+					OR = {
+						primary_culture = adhalling
+						accepted_culture = adhalling
+					}
+					ERE_657 = { # Dádhrik's Gap
+						owned_by = ERE
+						NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+					}
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_settled_dadhriks_gap }
+				}
+			}
+			owner = {
+				ERE_657 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Dádhrik's Gap
+				country_event = 110042
+			}
+		}
+		
+		# Settle the Cores of Mountainlands
+		random_owned = {
+			limit = {
+				owner = {
+					# No checks about ensuring only one vote at a time. The AI will only select a non-voting option
+					OR = {
+						tag = DAL
+						tag = RHO
+					}
+					ERE = { has_country_modifier = alliance_of_dwarves_and_men }
+					OR = {
+						primary_culture = grammas
+						accepted_culture = grammas
+					}
+					ERE_660 = { # Mountainlands
+						owned_by = ERE
+						NOT = { has_province_modifier = alliance_dwarves_men_diplomacy_stalled }
+					}
+					NOT = { has_global_flag = alliance_of_dwarves_and_men_settled_mountainlands }
+				}
+			}
+			owner = {
+				ERE_660 = { add_province_modifier = { name = alliance_dwarves_men_selected_region duration = -1 } } # Mountainlands
+				country_event = 110042
+			}
+		}
 		
 		# Economic Union
 		random_owned = {
@@ -21251,6 +21370,32 @@ country_event = {
 				ai = yes
 			}
 			country_event = 110177
+		}
+	}
+}
+
+# Core Returned
+country_event = {
+	id = 110178
+	title = "  Alliance of Dwarves and Men Returned Cores"
+	desc = "EVTDESC110178"
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "A Toast to Friends!"
+		
+		FROM = {
+			random_owned = {
+				limit = { has_province_modifier = ai_return_cores_alliance_men_dwarves }
+				state_scope = {
+					any_owned = {
+						limit = { is_core = THIS }
+						secede_province = THIS
+					}
+				}
+			}
 		}
 	}
 }
