@@ -16875,7 +16875,7 @@ country_event = {
 		}
 		# }
 		
-		# Calculate the number of options that should be shown
+		# Calculate the number of options that should be shown {
 		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button. For some reason I decided to not update this to handle "Leave Alliance", so all of the background images are 1 higher than one might expect (given the corresponding value of menu_option_number)
 		
 		set_variable = { which = alliance_dwarves_men_call_to_arms_location value = 0 }
@@ -16886,7 +16886,7 @@ country_event = {
 		set_variable = { which = alliance_dwarves_men_economic_union_location value = 0 }
 		set_variable = { which = alliance_dwarves_men_political_union_location value = 0 }
 		
-		# Call to Arms {
+		# Call to Arms
 		random_owned = {
 			limit = {
 				FROM = { war = yes }
@@ -17349,14 +17349,14 @@ country_event = {
 		}
 		# }
 		
-		# Calculate the number of options that should be shown
+		# Calculate the number of options that should be shown {
 		set_variable = { which = menu_option_number value = 1 } # Defaulting to 1 to handle the Exit button
 		
 		set_variable = { which = alliance_dwarves_men_resolve_conflicting_cores_location value = 0 }
 		set_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0 }
 		set_variable = { which = alliance_dwarves_men_return_cores_location value = 0 }
 		
-		# Resolve Conflicting Cores {
+		# Resolve Conflicting Cores
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected } }
 			owner = {
