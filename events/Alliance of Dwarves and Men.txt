@@ -16857,7 +16857,7 @@ country_event = {
 		
 		# Setup Request Return of Cores {
 		FROM = {
-			all_core = { 
+			all_core = {
 				limit = {
 					NOT = { owned_by = FROM }
 					owner = { has_country_modifier = alliance_of_dwarves_and_men }
@@ -16886,7 +16886,7 @@ country_event = {
 		set_variable = { which = alliance_dwarves_men_economic_union_location value = 0 }
 		set_variable = { which = alliance_dwarves_men_political_union_location value = 0 }
 		
-		# Call to Arms
+		# Call to Arms {
 		random_owned = {
 			limit = {
 				FROM = { war = yes }
@@ -17331,7 +17331,7 @@ country_event = {
 		
 		# Setup Request Return of Cores {
 		FROM = {
-			all_core = { 
+			all_core = {
 				limit = {
 					NOT = { owned_by = FROM }
 					owner = { has_country_modifier = alliance_of_dwarves_and_men }
@@ -17356,7 +17356,7 @@ country_event = {
 		set_variable = { which = alliance_dwarves_men_request_return_of_cores_location value = 0 }
 		set_variable = { which = alliance_dwarves_men_return_cores_location value = 0 }
 		
-		# Resolve Conflicting Cores
+		# Resolve Conflicting Cores {
 		random_owned = {
 			limit = { owner = { has_global_flag = alliance_of_dwarves_and_men_conflicting_cores_detected } }
 			owner = {
