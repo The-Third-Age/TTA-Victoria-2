@@ -8,11 +8,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 643
+					owns = 644
 					owns = 349
 					owns = 446
 					owns = 478
-					owns = 643
-					owns = 644
 					OR = {
 						# [northmen] - Nether Marches
 						AND = {
@@ -49,11 +49,11 @@ political_decisions = {
 					}
 				}
 				AND = {
+					owns = 642
 					owns = 635
 					owns = 637
 					owns = 638
 					owns = 639
-					owns = 642
 					OR = {
 						# [northmen] - Salenin Vale
 						AND = {
@@ -102,10 +102,10 @@ political_decisions = {
 					}
 				}
 				AND = {
-					owns = 442
 					owns = 645
 					owns = 646
 					owns = 647
+					owns = 442
 					OR = {
 						# [northmen] - Nan Celduin
 						AND = {
@@ -200,10 +200,42 @@ political_decisions = {
 					}
 				}
 				AND = {
-					owns = 140
+					owns = 1377
+					owns = 355
+					owns = 661
+					owns = 651
+					OR = {
+						# [northmen, anduinrim, rohirrim] - Medes
+						AND = {
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = anduinrim
+								is_culture_group = rohirrim
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = medes_name value = -0.1 } } }
+								FOR = { check_variable = { which = medes_name value = 0.1 } }
+							}
+						}
+						# [teleri, dunedain, eldar] - Medes
+						AND = {
+							OR = {
+								is_culture_group = teleri
+								is_culture_group = dunedain
+								is_culture_group = eldar
+							}
+							OR = {
+								FOR = { NOT = { check_variable = { which = medes_name value = 0.9 } } }
+								FOR = { check_variable = { which = medes_name value = 1.1 } }
+							}
+						}
+					}
+				}
+				AND = {
 					owns = 451
 					owns = 648
 					owns = 649
+					owns = 140
 					owns = 653
 					owns = 654
 					OR = {
@@ -538,6 +570,44 @@ political_decisions = {
 				640 = { change_province_name = "Grasgard" }
 				owner = { FOR = { set_variable = { which = upper_marches_name value = 3 } } }
 			}
+			# [northmen, anduinrim, rohirrim] - Medes
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = anduinrim
+							is_culture_group = rohirrim
+						}
+					}
+					province_id = 355
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = medes_name value = -0.1 } } } }
+						owner = { FOR = { check_variable = { which = medes_name value = 0.1 } } }
+					}
+				}
+				1377 = { state_scope = { change_region_name = "Medes" } }
+				owner = { FOR = { set_variable = { which = medes_name value = 0 } } }
+			}
+			# [teleri, dunedain, eldar] - Medes
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							is_culture_group = teleri
+							is_culture_group = dunedain
+							is_culture_group = eldar
+						}
+					}
+					province_id = 355
+					OR = {
+						owner = { FOR = { NOT = { check_variable = { which = medes_name value = 0.9 } } } }
+						owner = { FOR = { check_variable = { which = medes_name value = 1.1 } } }
+					}
+				}
+				1377 = { state_scope = { change_region_name = "Medvos" } }
+				owner = { FOR = { set_variable = { which = medes_name value = 1 } } }
+			}
 			# [northmen] - Nan Annen
 			random_owned = {
 				limit = {
@@ -707,9 +777,9 @@ political_decisions = {
 					}
 				}
 				AND = {
+					owns = 553
 					owns = 541
 					owns = 542
-					owns = 553
 					OR = {
 						# [northmen] - Uldona Vale
 						AND = {
@@ -789,10 +859,10 @@ political_decisions = {
 					}
 				}
 				AND = {
+					owns = 552
 					owns = 538
 					owns = 539
 					owns = 540
-					owns = 552
 					OR = {
 						# [northmen] - Folyavuld
 						AND = {
@@ -825,12 +895,12 @@ political_decisions = {
 					}
 				}
 				AND = {
-					owns = 543
 					owns = 544
 					owns = 545
 					owns = 546
 					owns = 547
 					owns = 554
+					owns = 543
 					OR = {
 						# [northmen] - Dobok Rhín
 						AND = {
@@ -1240,6 +1310,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 842
+					owns = 843
+					owns = 844
+					owns = 845
 					OR = {
 						# [northern_goblins, uruk_hai, mordorian, angmarrim] - Dark of Moria
 						AND = {
@@ -1290,12 +1364,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 842
-					owns = 843
-					owns = 844
-					owns = 845
 				}
 				AND = {
+					owns = 848
+					owns = 849
+					owns = 851
+					owns = 847
 					OR = {
 						# [northern_goblins, uruk_hai, mordorian, angmarrim] - High Pass
 						AND = {
@@ -1335,10 +1409,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 848
-					owns = 849
-					owns = 851
-					owns = 847
 				}
 			}
 		}
@@ -1499,6 +1569,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 1426
+					owns = 1427
+					owns = 695
+					owns = 696
 					OR = {
 						# [northmen, anduinrim, rohirrim] - Foreryn Galen
 						AND = {
@@ -1536,12 +1610,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1426
-					owns = 1427
-					owns = 695
-					owns = 696
 				}
 				AND = {
+					owns = 1428
+					owns = 1429
+					owns = 697
+					owns = 698
 					OR = {
 						# [northmen, anduinrim, rohirrim] - Annûneryn Galen
 						AND = {
@@ -1579,12 +1653,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1428
-					owns = 1429
-					owns = 697
-					owns = 698
 				}
 				AND = {
+					owns = 704
+					owns = 1431
+					owns = 699
+					owns = 701
+					owns = 702
+					owns = 703
 					OR = {
 						# [northmen, anduinrim, rohirrim] - Taur-nu-Fuin
 						AND = {
@@ -1619,14 +1695,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 704
-					owns = 1431
-					owns = 699
-					owns = 701
-					owns = 702
-					owns = 703
 				}
 				AND = {
+					owns = 690
+					owns = 691
+					owns = 692
+					owns = 693
+					owns = 694
+					owns = 700
 					OR = {
 						# [northmen] - Woodland Realm
 						AND = {
@@ -1665,14 +1741,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 690
-					owns = 691
-					owns = 692
-					owns = 693
-					owns = 694
-					owns = 700
 				}
 				AND = {
+					owns = 720
+					owns = 721
+					owns = 723
+					owns = 725
+					owns = 1435
+					owns = 1436
 					OR = {
 						# [northmen, anduinrim, rohirrim] - Southern Mirkwood
 						AND = {
@@ -1710,14 +1786,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 720
-					owns = 721
-					owns = 723
-					owns = 725
-					owns = 1435
-					owns = 1436
 				}
 				AND = {
+					owns = 708
+					owns = 709
+					owns = 710
+					owns = 715
+					owns = 716
 					OR = {
 						# [northmen] - Woodman's Realm
 						AND = {
@@ -1756,13 +1831,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 708
-					owns = 709
-					owns = 710
-					owns = 715
-					owns = 716
 				}
 				AND = {
+					owns = 722
+					owns = 724
+					owns = 726
+					owns = 727
+					owns = 1433
+					owns = 1434
 					OR = {
 						# [northmen, anduinrim, rohirrim] - Necromancer's Realm
 						AND = {
@@ -1811,14 +1887,10 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 722
-					owns = 724
-					owns = 726
-					owns = 727
-					owns = 1433
-					owns = 1434
 				}
 				AND = {
+					owns = 1432
+					owns = 718
 					OR = {
 						# [northmen, anduinrim, rohirrim] - Mirkwood Narrows
 						AND = {
@@ -1856,8 +1928,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1432
-					owns = 718
 				}
 			}
 		}
@@ -2354,6 +2424,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 1378
+					owns = 470
+					owns = 471
+					owns = 472
+					owns = 269
 					OR = {
 						# [northmen] - Brown Lands
 						AND = {
@@ -2400,13 +2475,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1378
-					owns = 470
-					owns = 471
-					owns = 472
-					owns = 269
 				}
 				AND = {
+					owns = 480
+					owns = 475
+					owns = 476
+					owns = 477
 					OR = {
 						# [northmen] - Talath Harroch
 						AND = {
@@ -2453,12 +2527,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 480
-					owns = 475
-					owns = 476
-					owns = 477
 				}
 				AND = {
+					owns = 467
+					owns = 459
+					owns = 460
+					owns = 461
 					OR = {
 						# [northmen, anduinrim, rohirrim] - The Desolation
 						AND = {
@@ -2493,10 +2567,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 467
-					owns = 459
-					owns = 460
-					owns = 461
 				}
 			}
 		}
@@ -2712,6 +2782,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 1380
+					owns = 490
+					owns = 491
+					owns = 492
+					owns = 494
 					OR = {
 						# [northmen] - Sagathavuld
 						AND = {
@@ -2746,13 +2821,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1380
-					owns = 490
-					owns = 491
-					owns = 492
-					owns = 494
 				}
 				AND = {
+					owns = 481
+					owns = 482
+					owns = 483
+					owns = 484
+					owns = 485
 					OR = {
 						# [easterlings, mordorian] - Upper Othnen Vale
 						AND = {
@@ -2778,13 +2853,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 481
-					owns = 482
-					owns = 483
-					owns = 484
-					owns = 485
 				}
 				AND = {
+					owns = 577
+					owns = 486
+					owns = 487
+					owns = 488
+					owns = 489
 					OR = {
 						# [northmen] - Lower Othnen Vale
 						AND = {
@@ -2819,13 +2894,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 577
-					owns = 486
-					owns = 487
-					owns = 488
-					owns = 489
 				}
 				AND = {
+					owns = 496
+					owns = 497
+					owns = 498
+					owns = 1379
+					owns = 495
 					OR = {
 						# [northmen] - Taj-Urés
 						AND = {
@@ -2860,11 +2935,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 496
-					owns = 497
-					owns = 498
-					owns = 1379
-					owns = 495
 				}
 			}
 		}
@@ -3072,6 +3142,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 740
+					owns = 741
+					owns = 742
+					owns = 685
 					OR = {
 						# [northmen, anduinrim, rohirrim] - Greylin Vale
 						AND = {
@@ -3097,12 +3171,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 740
-					owns = 741
-					owns = 742
-					owns = 685
 				}
 				AND = {
+					owns = 737
+					owns = 738
+					owns = 739
+					owns = 735
 					OR = {
 						# [breelander, hobbits] - Upper Carrock
 						AND = {
@@ -3140,12 +3214,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 737
-					owns = 738
-					owns = 739
-					owns = 735
 				}
 				AND = {
+					owns = 736
+					owns = 1441
+					owns = 733
+					owns = 734
 					OR = {
 						# [northmen] - Lower Carrock
 						AND = {
@@ -3195,12 +3269,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 736
-					owns = 1441
-					owns = 733
-					owns = 734
 				}
 				AND = {
+					owns = 752
+					owns = 1440
+					owns = 753
+					owns = 754
+					owns = 750
+					owns = 751
 					OR = {
 						# [breelander, hobbits] - Middle Vales
 						AND = {
@@ -3245,14 +3321,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 752
-					owns = 1440
-					owns = 753
-					owns = 754
-					owns = 750
-					owns = 751
 				}
 				AND = {
+					owns = 755
+					owns = 756
+					owns = 757
+					owns = 758
+					owns = 759
+					owns = 760
 					OR = {
 						# [northmen] - Gladden Fields
 						AND = {
@@ -3302,14 +3378,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 755
-					owns = 756
-					owns = 757
-					owns = 758
-					owns = 759
-					owns = 760
 				}
 				AND = {
+					owns = 746
+					owns = 747
+					owns = 748
+					owns = 749
+					owns = 1439
 					OR = {
 						# [northmen] - Langflood
 						AND = {
@@ -3359,13 +3434,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 746
-					owns = 747
-					owns = 748
-					owns = 749
-					owns = 1439
 				}
 				AND = {
+					owns = 743
+					owns = 744
+					owns = 745
+					owns = 1437
+					owns = 1438
 					OR = {
 						# [northmen] - Rónen-in-Anduin
 						AND = {
@@ -3426,11 +3501,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 743
-					owns = 744
-					owns = 745
-					owns = 1437
-					owns = 1438
 				}
 			}
 		}
@@ -3985,6 +4055,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 499
+					owns = 500
+					owns = 501
+					owns = 502
+					owns = 493
 					OR = {
 						# [northmen] - Dor Rewinion
 						AND = {
@@ -4019,13 +4094,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 499
-					owns = 500
-					owns = 501
-					owns = 502
-					owns = 493
 				}
 				AND = {
+					owns = 503
+					owns = 505
+					owns = 506
+					owns = 507
 					OR = {
 						# [northmen] - Dor Rhûnen
 						AND = {
@@ -4072,12 +4146,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 503
-					owns = 505
-					owns = 506
-					owns = 507
 				}
 				AND = {
+					owns = 519
+					owns = 520
+					owns = 521
+					owns = 522
 					OR = {
 						# [northmen] - Austrabuht
 						AND = {
@@ -4112,12 +4186,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 519
-					owns = 520
-					owns = 521
-					owns = 522
 				}
 				AND = {
+					owns = 531
+					owns = 532
+					owns = 537
+					owns = 524
 					OR = {
 						# [northmen] - Arkran
 						AND = {
@@ -4152,12 +4226,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 531
-					owns = 532
-					owns = 537
-					owns = 524
 				}
 				AND = {
+					owns = 517
+					owns = 1381
+					owns = 518
+					owns = 504
+					owns = 523
 					OR = {
 						# [northmen] - High Hand
 						AND = {
@@ -4192,13 +4267,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 517
-					owns = 1381
-					owns = 518
-					owns = 504
-					owns = 523
 				}
 				AND = {
+					owns = 525
+					owns = 526
+					owns = 527
 					OR = {
 						# [northmen] - West Dunheath
 						AND = {
@@ -4245,11 +4318,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 525
-					owns = 526
-					owns = 527
 				}
 				AND = {
+					owns = 528
+					owns = 529
+					owns = 530
 					OR = {
 						# [northmen] - East Dunheath
 						AND = {
@@ -4296,9 +4369,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 528
-					owns = 529
-					owns = 530
 				}
 			}
 		}
@@ -4792,6 +4862,12 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 512
+					owns = 513
+					owns = 508
+					owns = 509
+					owns = 510
+					owns = 511
 					OR = {
 						# [northmen] - Lower Sekelavuld
 						AND = {
@@ -4826,12 +4902,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 512
-					owns = 513
-					owns = 508
-					owns = 509
-					owns = 510
-					owns = 511
 				}
 			}
 		}
@@ -4902,6 +4972,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 761
+					owns = 763
+					owns = 764
+					owns = 765
+					owns = 766
 					OR = {
 						# [northmen, anduinrim, rohirrim] - Lothlórien
 						AND = {
@@ -4928,13 +5003,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 761
-					owns = 763
-					owns = 764
-					owns = 765
-					owns = 766
 				}
 				AND = {
+					owns = 768
+					owns = 769
+					owns = 1442
+					owns = 762
+					owns = 767
 					OR = {
 						# [northmen] - Parth Celebrant
 						AND = {
@@ -4986,11 +5061,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 768
-					owns = 769
-					owns = 1442
-					owns = 762
-					owns = 767
 				}
 			}
 		}
@@ -5135,6 +5205,9 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 452
+					owns = 454
+					owns = 455
 					OR = {
 						# [mordorian] - Udûn
 						AND = {
@@ -5157,11 +5230,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 452
-					owns = 454
-					owns = 455
 				}
 				AND = {
+					owns = 439
+					owns = 428
+					owns = 429
+					owns = 430
 					OR = {
 						# [mordorian] - Thark Kûfnaz
 						AND = {
@@ -5184,12 +5258,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 439
-					owns = 428
-					owns = 429
-					owns = 430
 				}
 				AND = {
+					owns = 422
+					owns = 423
+					owns = 424
+					owns = 426
+					owns = 427
 					OR = {
 						# [mordorian] - Lithlad
 						AND = {
@@ -5212,13 +5287,10 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 422
-					owns = 423
-					owns = 424
-					owns = 426
-					owns = 427
 				}
 				AND = {
+					owns = 421
+					owns = 431
 					OR = {
 						# [khandish] - Gap of Nurza-Shûk
 						AND = {
@@ -5249,10 +5321,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 421
-					owns = 431
 				}
 				AND = {
+					owns = 448
+					owns = 449
+					owns = 441
+					owns = 444
+					owns = 447
 					OR = {
 						# [mordorian] - Bauglith-en-Sauron
 						AND = {
@@ -5275,13 +5350,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 448
-					owns = 449
-					owns = 441
-					owns = 444
-					owns = 447
 				}
 				AND = {
+					owns = 436
+					owns = 438
+					owns = 440
 					OR = {
 						# [mordorian] - Morgai
 						AND = {
@@ -5304,11 +5377,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 436
-					owns = 438
-					owns = 440
 				}
 				AND = {
+					owns = 433
+					owns = 434
+					owns = 435
+					owns = 443
 					OR = {
 						# [mordorian] - Imlad Morgûl
 						AND = {
@@ -5331,10 +5405,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 433
-					owns = 434
-					owns = 435
-					owns = 443
 				}
 			}
 		}
@@ -5592,6 +5662,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 417
+					owns = 418
+					owns = 419
+					owns = 420
 					OR = {
 						# [khandish] - Northern Nurza-Shukh
 						AND = {
@@ -5622,12 +5696,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 417
-					owns = 418
-					owns = 419
-					owns = 420
 				}
 				AND = {
+					owns = 401
+					owns = 402
+					owns = 404
+					owns = 405
+					owns = 406
+					owns = 382
 					OR = {
 						# [kingsmen, haradrim] - Southern Nurza-Shukh
 						AND = {
@@ -5669,12 +5745,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 401
-					owns = 402
-					owns = 404
-					owns = 405
-					owns = 406
-					owns = 382
 				}
 			}
 		}
@@ -5805,6 +5875,12 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 176
+					owns = 184
+					owns = 172
+					owns = 173
+					owns = 174
+					owns = 175
 					OR = {
 						# [teleri, dunedain, eldar] - Perth Iaur
 						AND = {
@@ -5827,14 +5903,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 176
-					owns = 184
-					owns = 172
-					owns = 173
-					owns = 174
-					owns = 175
 				}
 				AND = {
+					owns = 194
+					owns = 195
+					owns = 196
+					owns = 197
 					OR = {
 						# [rohirrim] - Rhûndrúwaith Iaur
 						AND = {
@@ -5857,12 +5931,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 194
-					owns = 195
-					owns = 196
-					owns = 197
 				}
 				AND = {
+					owns = 178
+					owns = 179
+					owns = 180
+					owns = 181
+					owns = 182
+					owns = 183
 					OR = {
 						# [teleri, dunedain, eldar] - Haerawreigion
 						AND = {
@@ -5885,14 +5961,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 178
-					owns = 179
-					owns = 180
-					owns = 181
-					owns = 182
-					owns = 183
 				}
 				AND = {
+					owns = 192
+					owns = 38
+					owns = 186
+					owns = 187
+					owns = 190
 					OR = {
 						# [rohirrim] - Annûndrúwaith Iaur
 						AND = {
@@ -5915,13 +5990,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 192
-					owns = 38
-					owns = 186
-					owns = 187
-					owns = 190
 				}
 				AND = {
+					owns = 99
+					owns = 188
+					owns = 189
 					OR = {
 						# [rohirrim] - Central Drúwaith Iaur
 						AND = {
@@ -5952,9 +6025,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 99
-					owns = 188
-					owns = 189
 				}
 			}
 		}
@@ -6157,6 +6227,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 160
+					owns = 177
+					owns = 158
+					owns = 159
 					OR = {
 						# [teleri, dunedain, eldar, wildmen] - Nan Lefnui
 						AND = {
@@ -6172,12 +6246,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 160
-					owns = 177
-					owns = 158
-					owns = 159
 				}
 				AND = {
+					owns = 162
+					owns = 163
+					owns = 20
+					owns = 164
+					owns = 165
+					owns = 166
 					OR = {
 						# [teleri, dunedain, eldar] - Angast
 						AND = {
@@ -6200,14 +6276,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 162
-					owns = 163
-					owns = 20
-					owns = 164
-					owns = 165
-					owns = 166
 				}
 				AND = {
+					owns = 167
+					owns = 168
+					owns = 169
+					owns = 170
+					owns = 171
 					OR = {
 						# [teleri, dunedain, eldar] - Ras Morthil
 						AND = {
@@ -6230,11 +6305,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 167
-					owns = 168
-					owns = 169
-					owns = 170
-					owns = 171
 				}
 			}
 		}
@@ -6337,6 +6407,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 2
+					owns = 3
+					owns = 4
+					owns = 7
 					OR = {
 						# [rohirrim] - Far Anórien
 						AND = {
@@ -6359,12 +6433,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 2
-					owns = 3
-					owns = 4
-					owns = 7
 				}
 				AND = {
+					owns = 16
+					owns = 17
+					owns = 19
 					OR = {
 						# [kingsmen] - Old Anórien
 						AND = {
@@ -6395,11 +6468,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 16
-					owns = 17
-					owns = 19
 				}
 				AND = {
+					owns = 8
+					owns = 9
+					owns = 10
+					owns = 11
+					owns = 13
+					owns = 14
 					OR = {
 						# [rohirrim] - Talath Anór
 						AND = {
@@ -6430,12 +6506,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 8
-					owns = 9
-					owns = 10
-					owns = 11
-					owns = 13
-					owns = 14
 				}
 			}
 		}
@@ -6584,6 +6654,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 198
+					owns = 199
+					owns = 200
+					owns = 201
+					owns = 204
 					OR = {
 						# [mordorian] - Forithilien
 						AND = {
@@ -6614,13 +6689,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 198
-					owns = 199
-					owns = 200
-					owns = 201
-					owns = 204
 				}
 				AND = {
+					owns = 210
+					owns = 211
+					owns = 212
+					owns = 213
+					owns = 214
 					OR = {
 						# [teleri, dunedain, eldar] - Harithilien
 						AND = {
@@ -6643,13 +6718,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 210
-					owns = 211
-					owns = 212
-					owns = 213
-					owns = 214
 				}
 				AND = {
+					owns = 208
+					owns = 209
+					owns = 205
+					owns = 206
+					owns = 207
 					OR = {
 						# [teleri, dunedain, eldar] - Emyn Arnen
 						AND = {
@@ -6672,11 +6747,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 208
-					owns = 209
-					owns = 205
-					owns = 206
-					owns = 207
 				}
 			}
 		}
@@ -6804,6 +6874,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 49
+					owns = 50
+					owns = 51
+					owns = 52
+					owns = 53
 					OR = {
 						# [teleri, dunedain, eldar] - Methed Lebennin
 						AND = {
@@ -6826,13 +6901,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 49
-					owns = 50
-					owns = 51
-					owns = 52
-					owns = 53
 				}
 				AND = {
+					owns = 48
+					owns = 45
+					owns = 46
+					owns = 47
 					OR = {
 						# [teleri, dunedain, eldar] - Lower Lebennin
 						AND = {
@@ -6855,10 +6929,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 48
-					owns = 45
-					owns = 46
-					owns = 47
 				}
 			}
 		}
@@ -6939,6 +7009,9 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 69
+					owns = 70
+					owns = 71
 					OR = {
 						# [teleri, eldar] - Dor-en-Ernil
 						AND = {
@@ -6960,9 +7033,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 69
-					owns = 70
-					owns = 71
 				}
 			}
 		}
@@ -7008,6 +7078,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 26
+					owns = 27
+					owns = 28
+					owns = 29
 					OR = {
 						# [teleri, dunedain, eldar] - Lossarnach
 						AND = {
@@ -7030,10 +7104,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 26
-					owns = 27
-					owns = 28
-					owns = 29
 				}
 			}
 		}
@@ -7080,6 +7150,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 193
+					owns = 116
+					owns = 796
+					owns = 191
 					OR = {
 						# [wicked_dwarves, dwarves] - White Mountains
 						AND = {
@@ -7112,10 +7186,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 193
-					owns = 116
-					owns = 796
-					owns = 191
 				}
 			}
 		}
@@ -7179,6 +7249,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 215
+					owns = 216
+					owns = 218
+					owns = 219
 					OR = {
 						# [kingsmen, haradrim] - Eredtir
 						AND = {
@@ -7204,12 +7278,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 215
-					owns = 216
-					owns = 218
-					owns = 219
 				}
 				AND = {
+					owns = 232
+					owns = 233
+					owns = 234
+					owns = 235
+					owns = 236
 					OR = {
 						# [kingsmen] - Forethir
 						AND = {
@@ -7240,13 +7315,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 232
-					owns = 233
-					owns = 234
-					owns = 235
-					owns = 236
 				}
 				AND = {
+					owns = 240
+					owns = 241
+					owns = 242
+					owns = 238
+					owns = 239
 					OR = {
 						# [kingsmen, haradrim] - Rhuntir
 						AND = {
@@ -7272,13 +7347,15 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 240
-					owns = 241
-					owns = 242
-					owns = 238
-					owns = 239
 				}
 				AND = {
+					owns = 225
+					owns = 226
+					owns = 220
+					owns = 221
+					owns = 222
+					owns = 15
+					owns = 223
 					OR = {
 						# [kingsmen] - Laergaladrín
 						AND = {
@@ -7317,15 +7394,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 225
-					owns = 226
-					owns = 220
-					owns = 221
-					owns = 222
-					owns = 15
-					owns = 223
 				}
 				AND = {
+					owns = 227
+					owns = 228
+					owns = 229
+					owns = 230
+					owns = 231
 					OR = {
 						# [kingsmen] - Harfalas
 						AND = {
@@ -7356,13 +7431,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 227
-					owns = 228
-					owns = 229
-					owns = 230
-					owns = 231
 				}
 				AND = {
+					owns = 243
+					owns = 244
+					owns = 250
+					owns = 251
+					owns = 253
+					owns = 255
 					OR = {
 						# [kingsmen, haradrim] - Carnentir
 						AND = {
@@ -7388,14 +7464,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 243
-					owns = 244
-					owns = 250
-					owns = 251
-					owns = 253
-					owns = 255
 				}
 				AND = {
+					owns = 246
+					owns = 247
+					owns = 248
+					owns = 249
 					OR = {
 						# [kingsmen, haradrim] - Eraguk
 						AND = {
@@ -7421,10 +7495,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 246
-					owns = 247
-					owns = 248
-					owns = 249
 				}
 			}
 		}
@@ -7742,6 +7812,9 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 112
+					owns = 113
+					owns = 114
 					OR = {
 						# [wicked_dwarves, dwarves] - Upper Morthond Vale
 						AND = {
@@ -7767,11 +7840,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 112
-					owns = 113
-					owns = 114
 				}
 				AND = {
+					owns = 96
+					owns = 104
+					owns = 105
+					owns = 107
 					OR = {
 						# [teleri, dunedain, eldar] - Lower Morthond Vale
 						AND = {
@@ -7797,10 +7871,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 96
-					owns = 104
-					owns = 105
-					owns = 107
 				}
 			}
 		}
@@ -7889,6 +7959,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 115
+					owns = 117
+					owns = 118
+					owns = 119
+					owns = 122
 					OR = {
 						# [wicked_dwarves, dwarves] - Taerdôrath Rhúnen
 						AND = {
@@ -7922,13 +7997,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 115
-					owns = 117
-					owns = 118
-					owns = 119
-					owns = 122
 				}
 				AND = {
+					owns = 130
+					owns = 132
+					owns = 133
 					OR = {
 						# [teleri, dunedain, eldar] - Anfalas
 						AND = {
@@ -7951,9 +8024,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 130
-					owns = 132
-					owns = 133
 				}
 			}
 		}
@@ -8055,6 +8125,12 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 374
+					owns = 375
+					owns = 376
+					owns = 377
+					owns = 378
+					owns = 379
 					OR = {
 						# [kingsmen, haradrim] - Khandu Khûr
 						AND = {
@@ -8076,14 +8152,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 374
-					owns = 375
-					owns = 376
-					owns = 377
-					owns = 378
-					owns = 379
 				}
 				AND = {
+					owns = 340
+					owns = 341
+					owns = 342
+					owns = 343
+					owns = 345
+					owns = 254
 					OR = {
 						# [kingsmen, haradrim] - Muzeida Vale
 						AND = {
@@ -8125,14 +8201,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 340
-					owns = 341
-					owns = 342
-					owns = 343
-					owns = 345
-					owns = 254
 				}
 				AND = {
+					owns = 337
+					owns = 353
+					owns = 373
+					owns = 346
+					owns = 347
+					owns = 348
 					OR = {
 						# [teleri, kingsmen, dunedain, khandish, eldar, haradrim] - Kajbah
 						AND = {
@@ -8150,12 +8226,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 337
-					owns = 353
-					owns = 373
-					owns = 346
-					owns = 347
-					owns = 348
 				}
 			}
 		}
@@ -8295,6 +8365,14 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 336
+					owns = 321
+					owns = 292
+					owns = 293
+					owns = 294
+					owns = 295
+					owns = 350
+					owns = 351
 					OR = {
 						# [kingsmen, khandish, haradrim] - Pezarsan
 						AND = {
@@ -8321,16 +8399,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 336
-					owns = 321
-					owns = 292
-					owns = 293
-					owns = 294
-					owns = 295
-					owns = 350
-					owns = 351
 				}
 				AND = {
+					owns = 304
+					owns = 305
+					owns = 308
+					owns = 312
+					owns = 313
+					owns = 303
 					OR = {
 						# [kingsmen, haradrim] - Velarith
 						AND = {
@@ -8352,14 +8428,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 304
-					owns = 305
-					owns = 308
-					owns = 312
-					owns = 313
-					owns = 303
 				}
 				AND = {
+					owns = 309
+					owns = 310
+					owns = 311
+					owns = 315
 					OR = {
 						# [kingsmen, haradrim] - Siakan
 						AND = {
@@ -8381,12 +8455,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 309
-					owns = 310
-					owns = 311
-					owns = 315
 				}
 				AND = {
+					owns = 338
+					owns = 339
+					owns = 334
+					owns = 335
 					OR = {
 						# [kingsmen, haradrim] - Harûzan
 						AND = {
@@ -8420,12 +8494,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 338
-					owns = 339
-					owns = 334
-					owns = 335
 				}
 				AND = {
+					owns = 284
+					owns = 285
+					owns = 286
+					owns = 287
 					OR = {
 						# [khandish, haradrim] - Nînzayan
 						AND = {
@@ -8459,12 +8533,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 284
-					owns = 285
-					owns = 286
-					owns = 287
 				}
 				AND = {
+					owns = 288
+					owns = 320
+					owns = 289
+					owns = 290
+					owns = 317
 					OR = {
 						# [kingsmen, khandish, haradrim] - Harwan
 						AND = {
@@ -8491,11 +8566,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 288
-					owns = 320
-					owns = 289
-					owns = 290
-					owns = 317
 				}
 			}
 		}
@@ -8765,6 +8835,12 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 256
+					owns = 257
+					owns = 258
+					owns = 259
+					owns = 260
+					owns = 282
 					OR = {
 						# [kingsmen] - Sakal an-Khar
 						AND = {
@@ -8795,14 +8871,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 256
-					owns = 257
-					owns = 258
-					owns = 259
-					owns = 260
-					owns = 282
 				}
 				AND = {
+					owns = 272
+					owns = 273
+					owns = 274
+					owns = 275
+					owns = 271
 					OR = {
 						# [kingsmen] - Sakal-Pharaz
 						AND = {
@@ -8833,13 +8908,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 272
-					owns = 273
-					owns = 274
-					owns = 275
-					owns = 271
 				}
 				AND = {
+					owns = 261
+					owns = 262
+					owns = 264
+					owns = 265
+					owns = 266
 					OR = {
 						# [kingsmen, haradrim] - Glínfalas
 						AND = {
@@ -8853,11 +8928,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 261
-					owns = 262
-					owns = 264
-					owns = 265
-					owns = 266
 				}
 			}
 		}
@@ -8996,6 +9066,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 864
+					owns = 1249
+					owns = 1250
+					owns = 861
+					owns = 862
 					OR = {
 						# [northmen] - Nan Brethil
 						AND = {
@@ -9043,13 +9118,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 864
-					owns = 1249
-					owns = 1250
-					owns = 861
-					owns = 862
 				}
 				AND = {
+					owns = 1254
+					owns = 1255
+					owns = 859
 					OR = {
 						# [breelander, hobbits] - Rann Gasta
 						AND = {
@@ -9115,11 +9188,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1254
-					owns = 1255
-					owns = 859
 				}
 				AND = {
+					owns = 853
+					owns = 854
+					owns = 855
+					owns = 1262
+					owns = 1263
 					OR = {
 						# [breelander, hobbits] - Muir Cairn
 						AND = {
@@ -9158,13 +9233,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 853
-					owns = 854
-					owns = 855
-					owns = 1262
-					owns = 1263
 				}
 				AND = {
+					owns = 1248
+					owns = 863
+					owns = 1247
 					OR = {
 						# [teleri, dunedain, eldar] - Dor-en-Egladil
 						AND = {
@@ -9192,11 +9265,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1248
-					owns = 863
-					owns = 1247
 				}
 				AND = {
+					owns = 1264
+					owns = 1265
+					owns = 1266
+					owns = 852
 					OR = {
 						# [breelander, hobbits] - Coiced Caradaingen
 						AND = {
@@ -9244,12 +9318,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1264
-					owns = 1265
-					owns = 1266
-					owns = 852
 				}
 				AND = {
+					owns = 856
+					owns = 857
+					owns = 858
+					owns = 1260
+					owns = 1261
 					OR = {
 						# [breelander, hobbits] - Coiced Cíall
 						AND = {
@@ -9297,13 +9372,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 856
-					owns = 857
-					owns = 858
-					owns = 1260
-					owns = 1261
 				}
 				AND = {
+					owns = 1256
+					owns = 1257
+					owns = 1258
+					owns = 1259
 					OR = {
 						# [breelander, hobbits] - Glenn Crec
 						AND = {
@@ -9342,12 +9416,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1256
-					owns = 1257
-					owns = 1258
-					owns = 1259
 				}
 				AND = {
+					owns = 1251
+					owns = 1252
+					owns = 1253
+					owns = 860
 					OR = {
 						# [breelander, hobbits] - Caill na Trowe
 						AND = {
@@ -9386,10 +9460,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1251
-					owns = 1252
-					owns = 1253
-					owns = 860
 				}
 			}
 		}
@@ -10009,6 +10079,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 946
+					owns = 972
+					owns = 941
+					owns = 973
+					owns = 974
 					OR = {
 						# [breelander, hobbits] - Númeriador
 						AND = {
@@ -10022,13 +10097,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 946
-					owns = 972
-					owns = 941
-					owns = 973
-					owns = 974
 				}
 				AND = {
+					owns = 245
+					owns = 938
+					owns = 939
+					owns = 1163
+					owns = 940
 					OR = {
 						# [breelander, hobbits] - Dor Lelvin
 						AND = {
@@ -10078,11 +10153,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 245
-					owns = 938
-					owns = 939
-					owns = 1163
-					owns = 940
 				}
 			}
 		}
@@ -10193,6 +10263,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 944
+					owns = 945
+					owns = 975
+					owns = 943
 					OR = {
 						# [lossoth] - Lódalf
 						AND = {
@@ -10226,12 +10300,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 944
-					owns = 945
-					owns = 975
-					owns = 943
 				}
 				AND = {
+					owns = 67
+					owns = 921
+					owns = 185
+					owns = 922
+					owns = 924
 					OR = {
 						# [teleri, eldar] - Dânwaith
 						AND = {
@@ -10253,13 +10328,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 67
-					owns = 921
-					owns = 185
-					owns = 922
-					owns = 924
 				}
 				AND = {
+					owns = 928
+					owns = 929
+					owns = 131
+					owns = 61
+					owns = 927
 					OR = {
 						# [teleri] - Harlindon
 						AND = {
@@ -10281,13 +10356,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 928
-					owns = 929
-					owns = 131
-					owns = 61
-					owns = 927
 				}
 				AND = {
+					owns = 224
+					owns = 950
+					owns = 951
+					owns = 952
+					owns = 237
+					owns = 111
 					OR = {
 						# [spiders] - Forlindon
 						AND = {
@@ -10298,14 +10374,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 224
-					owns = 950
-					owns = 951
-					owns = 952
-					owns = 237
-					owns = 111
 				}
 				AND = {
+					owns = 961
+					owns = 962
+					owns = 963
 					OR = {
 						# [teleri, dunedain, eldar] - Western Islands
 						AND = {
@@ -10320,11 +10393,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 961
-					owns = 962
-					owns = 963
 				}
 				AND = {
+					owns = 1157
+					owns = 1158
+					owns = 966
+					owns = 967
 					OR = {
 						# [lossoth] - Talvi-mûri
 						AND = {
@@ -10358,12 +10432,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1157
-					owns = 1158
-					owns = 966
-					owns = 967
 				}
 				AND = {
+					owns = 920
+					owns = 137
+					owns = 923
 					OR = {
 						# [northmen, breelander, anduinrim, hobbits, dunedain, rohirrim, wildmen] - Dor Leithan
 						AND = {
@@ -10393,11 +10466,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 920
-					owns = 137
-					owns = 923
 				}
 				AND = {
+					owns = 932
+					owns = 933
+					owns = 934
 					OR = {
 						# [hobbits] - Emyn Beraid
 						AND = {
@@ -10434,11 +10507,15 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 932
-					owns = 933
-					owns = 934
 				}
 				AND = {
+					owns = 930
+					owns = 948
+					owns = 935
+					owns = 936
+					owns = 937
+					owns = 106
+					owns = 95
 					OR = {
 						# [breelander, hobbits] - Rhûlindon
 						AND = {
@@ -10483,13 +10560,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 930
-					owns = 948
-					owns = 935
-					owns = 936
-					owns = 937
-					owns = 106
-					owns = 95
 				}
 			}
 		}
@@ -10877,6 +10947,9 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 897
+					owns = 1207
+					owns = 888
 					OR = {
 						# [breelander, hobbits] - Sarnladen
 						AND = {
@@ -10902,11 +10975,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 897
-					owns = 1207
-					owns = 888
 				}
 				AND = {
+					owns = 898
+					owns = 899
+					owns = 1204
+					owns = 1205
+					owns = 1206
 					OR = {
 						# [breelander, teleri, dunedain, eldar] - Girithlin
 						AND = {
@@ -10942,13 +11017,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 898
-					owns = 899
-					owns = 1204
-					owns = 1205
-					owns = 1206
 				}
 				AND = {
+					owns = 1208
+					owns = 1209
+					owns = 1210
+					owns = 1211
+					owns = 1212
 					OR = {
 						# [teleri, dunedain, eldar] - Dol Tinereb
 						AND = {
@@ -10971,13 +11046,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1208
-					owns = 1209
-					owns = 1210
-					owns = 1211
-					owns = 1212
 				}
 				AND = {
+					owns = 1224
+					owns = 1225
+					owns = 1226
+					owns = 1227
+					owns = 877
 					OR = {
 						# [breelander, hobbits] - Gwathló Marches
 						AND = {
@@ -11023,13 +11098,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1224
-					owns = 1225
-					owns = 1226
-					owns = 1227
-					owns = 877
 				}
 				AND = {
+					owns = 912
+					owns = 1178
+					owns = 909
+					owns = 910
+					owns = 911
 					OR = {
 						# [breelander, hobbits] - Rast Vorn
 						AND = {
@@ -11063,13 +11138,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 912
-					owns = 1178
-					owns = 909
-					owns = 910
-					owns = 911
 				}
 				AND = {
+					owns = 1179
+					owns = 908
+					owns = 1180
+					owns = 1181
 					OR = {
 						# [teleri, dunedain, eldar] - Henlan
 						AND = {
@@ -11092,12 +11166,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1179
-					owns = 908
-					owns = 1180
-					owns = 1181
 				}
 				AND = {
+					owns = 1184
+					owns = 1185
+					owns = 904
+					owns = 907
+					owns = 1182
+					owns = 1183
 					OR = {
 						# [teleri, dunedain, eldar] - Fonntir
 						AND = {
@@ -11120,14 +11196,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1184
-					owns = 1185
-					owns = 904
-					owns = 907
-					owns = 1182
-					owns = 1183
 				}
 				AND = {
+					owns = 1188
+					owns = 1189
+					owns = 902
+					owns = 1190
+					owns = 903
+					owns = 1191
 					OR = {
 						# [teleri, dunedain, eldar] - Upper Saerlann
 						AND = {
@@ -11150,14 +11226,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1188
-					owns = 1189
-					owns = 902
-					owns = 1190
-					owns = 903
-					owns = 1191
 				}
 				AND = {
+					owns = 1186
+					owns = 1187
+					owns = 905
+					owns = 906
 					OR = {
 						# [teleri, dunedain, eldar] - Lower Saerlann
 						AND = {
@@ -11180,12 +11254,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1186
-					owns = 1187
-					owns = 905
-					owns = 906
 				}
 				AND = {
+					owns = 896
+					owns = 900
+					owns = 1197
+					owns = 1198
+					owns = 1199
 					OR = {
 						# [teleri, dunedain, eldar] - Enedbund
 						AND = {
@@ -11208,13 +11283,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 896
-					owns = 900
-					owns = 1197
-					owns = 1198
-					owns = 1199
 				}
 				AND = {
+					owns = 901
+					owns = 1192
+					owns = 1193
+					owns = 1194
+					owns = 894
 					OR = {
 						# [teleri, dunedain, eldar] - Dol Caledir
 						AND = {
@@ -11237,13 +11312,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 901
-					owns = 1192
-					owns = 1193
-					owns = 1194
-					owns = 894
 				}
 				AND = {
+					owns = 889
+					owns = 890
+					owns = 1213
+					owns = 1214
 					OR = {
 						# [teleri, dunedain, eldar] - Rohwaen
 						AND = {
@@ -11266,12 +11340,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 889
-					owns = 890
-					owns = 1213
-					owns = 1214
 				}
 				AND = {
+					owns = 882
+					owns = 1222
+					owns = 887
+					owns = 1223
 					OR = {
 						# [breelander, hobbits] - Tyrn Harn
 						AND = {
@@ -11297,10 +11371,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 882
-					owns = 1222
-					owns = 887
-					owns = 1223
 				}
 			}
 		}
@@ -11842,6 +11912,12 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 1330
+					owns = 1283
+					owns = 1284
+					owns = 1285
+					owns = 1289
+					owns = 1006
 					OR = {
 						# [breelander, hobbits] - Uimirrildor
 						AND = {
@@ -11876,14 +11952,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1330
-					owns = 1283
-					owns = 1284
-					owns = 1285
-					owns = 1289
-					owns = 1006
 				}
 				AND = {
+					owns = 1280
+					owns = 1010
+					owns = 1011
+					owns = 1013
+					owns = 126
 					OR = {
 						# [breelander, hobbits] - Bree-land
 						AND = {
@@ -11929,13 +12004,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1280
-					owns = 1010
-					owns = 1011
-					owns = 1013
-					owns = 126
 				}
 				AND = {
+					owns = 145
+					owns = 1281
+					owns = 1282
+					owns = 148
 					OR = {
 						# [breelander, hobbits] - Bree-land Wilds
 						AND = {
@@ -11981,10 +12055,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 145
-					owns = 1281
-					owns = 1282
-					owns = 148
 				}
 			}
 		}
@@ -12205,6 +12275,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 969
+					owns = 970
+					owns = 971
+					owns = 942
 					OR = {
 						# [wicked_dwarves, dwarves] - Khazadbizar
 						AND = {
@@ -12230,12 +12304,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 969
-					owns = 970
-					owns = 971
-					owns = 942
 				}
 				AND = {
+					owns = 947
+					owns = 1160
+					owns = 1161
+					owns = 1162
 					OR = {
 						# [breelander, hobbits] - Vale of Thrain
 						AND = {
@@ -12272,12 +12346,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 947
-					owns = 1160
-					owns = 1161
-					owns = 1162
 				}
 				AND = {
+					owns = 915
+					owns = 916
+					owns = 1177
+					owns = 314
 					OR = {
 						# [breelander, hobbits] - Old Sylvana
 						AND = {
@@ -12329,12 +12403,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 915
-					owns = 916
-					owns = 1177
-					owns = 314
 				}
 				AND = {
+					owns = 914
+					owns = 136
+					owns = 316
+					owns = 445
 					OR = {
 						# [breelander, hobbits] - Harvaneth
 						AND = {
@@ -12368,12 +12442,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 914
-					owns = 136
-					owns = 316
-					owns = 445
 				}
 				AND = {
+					owns = 913
+					owns = 931
+					owns = 917
+					owns = 918
+					owns = 919
+					owns = 296
 					OR = {
 						# [wicked_dwarves, dwarves] - Southern Ered Luin
 						AND = {
@@ -12399,12 +12475,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 913
-					owns = 931
-					owns = 917
-					owns = 918
-					owns = 919
-					owns = 296
 				}
 			}
 		}
@@ -12696,6 +12766,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 867
+					owns = 868
+					owns = 869
+					owns = 1241
+					owns = 1242
 					OR = {
 						# [breelander, northern_goblins, hobbits, trolls, angmarrim, wildmen] - Foreregion
 						AND = {
@@ -12725,13 +12800,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 867
-					owns = 868
-					owns = 869
-					owns = 1241
-					owns = 1242
 				}
 				AND = {
+					owns = 865
+					owns = 866
+					owns = 1243
+					owns = 1244
+					owns = 1245
+					owns = 1246
 					OR = {
 						# [breelander, hobbits] - Elven Fells
 						AND = {
@@ -12770,14 +12846,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 865
-					owns = 866
-					owns = 1243
-					owns = 1244
-					owns = 1245
-					owns = 1246
 				}
 				AND = {
+					owns = 1232
+					owns = 1233
+					owns = 875
+					owns = 1231
 					OR = {
 						# [breelander, hobbits] - Sruth Líath Marches
 						AND = {
@@ -12816,12 +12890,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1232
-					owns = 1233
-					owns = 875
-					owns = 1231
 				}
 				AND = {
+					owns = 1234
+					owns = 872
+					owns = 873
+					owns = 874
 					OR = {
 						# [breelander, northern_goblins, hobbits, trolls, angmarrim, wildmen] - South Hollin
 						AND = {
@@ -12851,12 +12925,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1234
-					owns = 872
-					owns = 873
-					owns = 874
 				}
 				AND = {
+					owns = 870
+					owns = 1238
+					owns = 1239
+					owns = 1240
 					OR = {
 						# [breelander, hobbits] - Cirith Narugorch
 						AND = {
@@ -12904,10 +12978,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 870
-					owns = 1238
-					owns = 1239
-					owns = 1240
 				}
 			}
 		}
@@ -13206,6 +13276,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 307
+					owns = 147
+					owns = 1278
+					owns = 1279
 					OR = {
 						# [breelander, hobbits] - Emyn Sûl
 						AND = {
@@ -13231,12 +13305,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 307
-					owns = 147
-					owns = 1278
-					owns = 1279
 				}
 				AND = {
+					owns = 1339
+					owns = 1340
+					owns = 1341
+					owns = 1021
 					OR = {
 						# [lossoth] - Northern March
 						AND = {
@@ -13259,12 +13333,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1339
-					owns = 1340
-					owns = 1341
-					owns = 1021
 				}
 				AND = {
+					owns = 1353
+					owns = 1354
+					owns = 1355
+					owns = 1019
 					OR = {
 						# [lossoth] - Rammas Forod
 						AND = {
@@ -13300,12 +13374,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1353
-					owns = 1354
-					owns = 1355
-					owns = 1019
 				}
 				AND = {
+					owns = 1002
+					owns = 1003
+					owns = 1357
+					owns = 1358
+					owns = 1359
 					OR = {
 						# [dunedain] - Cilab
 						AND = {
@@ -13329,13 +13404,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1002
-					owns = 1003
-					owns = 1357
-					owns = 1358
-					owns = 1359
 				}
 				AND = {
+					owns = 1269
+					owns = 1270
+					owns = 1271
+					owns = 1272
 					OR = {
 						# [breelander, hobbits] - En Eredoriath
 						AND = {
@@ -13374,12 +13448,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1269
-					owns = 1270
-					owns = 1271
-					owns = 1272
 				}
 				AND = {
+					owns = 1276
+					owns = 1005
+					owns = 1277
 					OR = {
 						# [breelander, hobbits, teleri, dunedain, eldar] - Uilad
 						AND = {
@@ -13409,11 +13482,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1276
-					owns = 1005
-					owns = 1277
 				}
 				AND = {
+					owns = 1273
+					owns = 1274
+					owns = 1275
+					owns = 1007
 					OR = {
 						# [breelander, hobbits, teleri, dunedain, eldar] - Tír Or
 						AND = {
@@ -13443,12 +13517,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1273
-					owns = 1274
-					owns = 1275
-					owns = 1007
 				}
 				AND = {
+					owns = 1008
+					owns = 1009
+					owns = 1267
+					owns = 1268
 					OR = {
 						# [teleri, dunedain, eldar] - Férroen
 						AND = {
@@ -13476,10 +13550,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1008
-					owns = 1009
-					owns = 1267
-					owns = 1268
 				}
 			}
 		}
@@ -13851,6 +13921,9 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 979
+					owns = 1351
+					owns = 1352
 					OR = {
 						# [lossoth] - Talath Uichel
 						AND = {
@@ -13880,11 +13953,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 979
-					owns = 1351
-					owns = 1352
 				}
 				AND = {
+					owns = 1346
+					owns = 978
+					owns = 1349
+					owns = 1350
 					OR = {
 						# [lossoth] - Hyvämetsästyksen Maa
 						AND = {
@@ -13907,10 +13981,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1346
-					owns = 978
-					owns = 1349
-					owns = 1350
 				}
 			}
 		}
@@ -14004,6 +14074,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 1361
+					owns = 994
+					owns = 998
+					owns = 999
+					owns = 1000
 					OR = {
 						# [wicked_dwarves, dwarves] - Dur-Lûgata
 						AND = {
@@ -14051,13 +14126,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1361
-					owns = 994
-					owns = 998
-					owns = 999
-					owns = 1000
 				}
 				AND = {
+					owns = 1371
+					owns = 1372
+					owns = 1373
 					OR = {
 						# [teleri, dunedain, eldar] - Dur-Kosha
 						AND = {
@@ -14085,11 +14158,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1371
-					owns = 1372
-					owns = 1373
 				}
 				AND = {
+					owns = 982
+					owns = 1366
+					owns = 1367
+					owns = 1368
+					owns = 987
+					owns = 1356
 					OR = {
 						# [wicked_dwarves, dwarves] - Kanclemas
 						AND = {
@@ -14128,12 +14204,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 982
-					owns = 1366
-					owns = 1367
-					owns = 1368
-					owns = 987
-					owns = 1356
 				}
 			}
 		}
@@ -14327,6 +14397,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 614
+					owns = 619
+					owns = 1421
+					owns = 1422
+					owns = 1423
 					OR = {
 						# [northmen] - Northern Gazar Utal
 						AND = {
@@ -14357,13 +14432,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 614
-					owns = 619
-					owns = 1421
-					owns = 1422
-					owns = 1423
 				}
 				AND = {
+					owns = 1424
+					owns = 1425
+					owns = 615
+					owns = 616
+					owns = 617
 					OR = {
 						# [easterlings] - Barren Wastes
 						AND = {
@@ -14386,13 +14461,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1424
-					owns = 1425
-					owns = 615
-					owns = 616
-					owns = 617
 				}
 				AND = {
+					owns = 620
+					owns = 606
+					owns = 607
 					OR = {
 						# [northmen] - Southern Gazar Utal
 						AND = {
@@ -14439,11 +14512,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 620
-					owns = 606
-					owns = 607
 				}
 				AND = {
+					owns = 632
+					owns = 633
+					owns = 621
 					OR = {
 						# [northmen] - Southern Gazar Gord
 						AND = {
@@ -14474,11 +14547,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 632
-					owns = 633
-					owns = 621
 				}
 				AND = {
+					owns = 1411
+					owns = 1413
+					owns = 1414
+					owns = 1415
+					owns = 634
 					OR = {
 						# [northmen] - Northern Gazar Narkad
 						AND = {
@@ -14509,13 +14584,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1411
-					owns = 1413
-					owns = 1414
-					owns = 1415
-					owns = 634
 				}
 				AND = {
+					owns = 1412
+					owns = 629
+					owns = 630
+					owns = 631
+					owns = 636
 					OR = {
 						# [northmen] - Southern Gazar Narkad
 						AND = {
@@ -14546,13 +14621,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1412
-					owns = 629
-					owns = 630
-					owns = 631
-					owns = 636
 				}
 				AND = {
+					owns = 1408
+					owns = 1409
+					owns = 1410
+					owns = 628
+					owns = 1405
+					owns = 1406
 					OR = {
 						# [northmen] - Western Gazar Barak
 						AND = {
@@ -14599,14 +14675,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1408
-					owns = 1409
-					owns = 1410
-					owns = 628
-					owns = 1405
-					owns = 1406
 				}
 				AND = {
+					owns = 625
+					owns = 626
+					owns = 627
+					owns = 1407
 					OR = {
 						# [northmen] - Eastern Gazar Barak
 						AND = {
@@ -14653,12 +14727,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 625
-					owns = 626
-					owns = 627
-					owns = 1407
 				}
 				AND = {
+					owns = 1416
+					owns = 1417
+					owns = 1418
+					owns = 1419
+					owns = 1420
 					OR = {
 						# [northmen] - Northern Gazar Gord
 						AND = {
@@ -14705,11 +14780,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1416
-					owns = 1417
-					owns = 1418
-					owns = 1419
-					owns = 1420
 				}
 			}
 		}
@@ -15236,6 +15306,7 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 601
 					OR = {
 						# [northmen] - Mayzri
 						AND = {
@@ -15274,9 +15345,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 601
 				}
 				AND = {
+					owns = 593
+					owns = 1395
+					owns = 596
+					owns = 1396
+					owns = 600
 					OR = {
 						# [northmen] - Northern Telaith Lyst
 						AND = {
@@ -15323,13 +15398,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 593
-					owns = 1395
-					owns = 596
-					owns = 1396
-					owns = 600
 				}
 				AND = {
+					owns = 579
+					owns = 571
+					owns = 572
+					owns = 573
 					OR = {
 						# [easterlings] - Western Gathod
 						AND = {
@@ -15352,12 +15426,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 579
-					owns = 571
-					owns = 572
-					owns = 573
 				}
 				AND = {
+					owns = 566
+					owns = 567
+					owns = 599
+					owns = 569
 					OR = {
 						# [northmen] - Ethir Sûrûbeki
 						AND = {
@@ -15392,12 +15466,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 566
-					owns = 567
-					owns = 599
-					owns = 569
 				}
 				AND = {
+					owns = 597
+					owns = 583
+					owns = 568
+					owns = 585
 					OR = {
 						# [northmen] - Sûrûbeki Vale
 						AND = {
@@ -15444,12 +15518,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 597
-					owns = 583
-					owns = 568
-					owns = 585
 				}
 				AND = {
+					owns = 1392
+					owns = 1393
+					owns = 1394
+					owns = 598
+					owns = 1391
 					OR = {
 						# [northmen] - Southern Telaith Lyst
 						AND = {
@@ -15496,13 +15571,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1392
-					owns = 1393
-					owns = 1394
-					owns = 598
-					owns = 1391
 				}
 				AND = {
+					owns = 592
+					owns = 594
+					owns = 595
+					owns = 590
+					owns = 591
 					OR = {
 						# [northmen] - Menelothriand
 						AND = {
@@ -15537,13 +15612,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 592
-					owns = 594
-					owns = 595
-					owns = 590
-					owns = 591
 				}
 				AND = {
+					owns = 586
+					owns = 587
+					owns = 588
+					owns = 589
+					owns = 1389
+					owns = 1390
 					OR = {
 						# [easterlings] - Morad
 						AND = {
@@ -15562,14 +15638,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 586
-					owns = 587
-					owns = 588
-					owns = 589
-					owns = 1389
-					owns = 1390
 				}
 				AND = {
+					owns = 580
+					owns = 581
+					owns = 582
+					owns = 584
+					owns = 1388
 					OR = {
 						# [easterlings] - Eastern Gathod
 						AND = {
@@ -15608,11 +15683,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 580
-					owns = 581
-					owns = 582
-					owns = 584
-					owns = 1388
 				}
 			}
 		}
@@ -16145,6 +16215,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 608
+					owns = 609
+					owns = 1397
+					owns = 1398
+					owns = 603
 					OR = {
 						# [easterlings] - Kug Valley
 						AND = {
@@ -16167,13 +16242,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 608
-					owns = 609
-					owns = 1397
-					owns = 1398
-					owns = 603
 				}
 				AND = {
+					owns = 1399
+					owns = 1400
+					owns = 602
 					OR = {
 						# [northmen] - Leshen
 						AND = {
@@ -16208,11 +16281,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1399
-					owns = 1400
-					owns = 602
 				}
 				AND = {
+					owns = 1401
+					owns = 1402
+					owns = 1403
+					owns = 604
+					owns = 605
 					OR = {
 						# [northmen] - Agasha Dag
 						AND = {
@@ -16267,13 +16342,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1401
-					owns = 1402
-					owns = 1403
-					owns = 604
-					owns = 605
 				}
 				AND = {
+					owns = 624
+					owns = 1404
+					owns = 622
+					owns = 623
 					OR = {
 						# [northmen] - Gazar Ibar
 						AND = {
@@ -16320,10 +16394,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 624
-					owns = 1404
-					owns = 622
-					owns = 623
 				}
 			}
 		}
@@ -16595,6 +16665,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 667
+					owns = 669
+					owns = 1165
+					owns = 670
 					OR = {
 						# [northmen] - Iron Hills
 						AND = {
@@ -16636,12 +16710,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 667
-					owns = 669
-					owns = 1165
-					owns = 670
 				}
 				AND = {
+					owns = 662
+					owns = 663
+					owns = 668
 					OR = {
 						# [northmen, wicked_dwarves, dwarves] - Nan Morsereg
 						AND = {
@@ -16679,11 +16752,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 662
-					owns = 663
-					owns = 668
 				}
 				AND = {
+					owns = 1168
+					owns = 659
+					owns = 660
+					owns = 664
+					owns = 396
 					OR = {
 						# [easterlings] - Mountainlands
 						AND = {
@@ -16705,13 +16780,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1168
-					owns = 659
-					owns = 660
-					owns = 664
-					owns = 396
 				}
 				AND = {
+					owns = 657
+					owns = 689
+					owns = 1169
+					owns = 658
+					owns = 1170
 					OR = {
 						# [easterlings] - Dádhrik's Gap
 						AND = {
@@ -16733,11 +16808,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 657
-					owns = 689
-					owns = 1169
-					owns = 658
-					owns = 1170
 				}
 			}
 		}
@@ -16938,6 +17008,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 672
+					owns = 291
+					owns = 676
+					owns = 678
+					owns = 671
 					OR = {
 						# [northern_goblins] - Withered Heath
 						AND = {
@@ -16996,13 +17071,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 672
-					owns = 291
-					owns = 676
-					owns = 678
-					owns = 671
 				}
 				AND = {
+					owns = 279
+					owns = 682
+					owns = 684
 					OR = {
 						# [northmen] - Cirith Himninond
 						AND = {
@@ -17024,11 +17097,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 279
-					owns = 682
-					owns = 684
 				}
 				AND = {
+					owns = 688
+					owns = 686
+					owns = 687
 					OR = {
 						# [northmen] - The Narrows
 						AND = {
@@ -17055,9 +17128,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 688
-					owns = 686
-					owns = 687
 				}
 			}
 		}
@@ -17245,6 +17315,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 1446
+					owns = 1447
+					owns = 811
+					owns = 812
 					OR = {
 						# [uruk_hai] - Nan Curunír
 						AND = {
@@ -17279,10 +17353,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1446
-					owns = 1447
-					owns = 811
-					owns = 812
 				}
 			}
 		}
@@ -17351,6 +17421,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 1457
+					owns = 825
+					owns = 281
+					owns = 826
+					owns = 828
 					OR = {
 						# [teleri, dunedain, eldar] - Magur
 						AND = {
@@ -17373,13 +17448,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1457
-					owns = 825
-					owns = 281
-					owns = 826
-					owns = 828
 				}
 				AND = {
+					owns = 1458
+					owns = 836
+					owns = 827
+					owns = 125
+					owns = 829
 					OR = {
 						# [teleri, dunedain, eldar] - Reedwater Vale
 						AND = {
@@ -17402,13 +17477,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1458
-					owns = 836
-					owns = 827
-					owns = 125
-					owns = 829
 				}
 				AND = {
+					owns = 1460
+					owns = 837
+					owns = 1461
 					OR = {
 						# [teleri, dunedain, eldar] - Greyflood Vale
 						AND = {
@@ -17431,9 +17504,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1460
-					owns = 837
-					owns = 1461
 				}
 			}
 		}
@@ -17548,6 +17618,9 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 1450
+					owns = 1451
+					owns = 124
 					OR = {
 						# [teleri, dunedain, eldar] - Gravenwood
 						AND = {
@@ -17570,11 +17643,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1450
-					owns = 1451
-					owns = 124
 				}
 				AND = {
+					owns = 835
+					owns = 1464
+					owns = 1465
+					owns = 1466
 					OR = {
 						# [teleri, dunedain, eldar] - Trum Dreng
 						AND = {
@@ -17597,12 +17671,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 835
-					owns = 1464
-					owns = 1465
-					owns = 1466
 				}
 				AND = {
+					owns = 839
+					owns = 1467
+					owns = 1468
+					owns = 1469
 					OR = {
 						# [teleri, dunedain, eldar] - Mournshaws
 						AND = {
@@ -17625,12 +17699,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 839
-					owns = 1467
-					owns = 1468
-					owns = 1469
 				}
 				AND = {
+					owns = 832
+					owns = 833
+					owns = 817
+					owns = 818
+					owns = 831
 					OR = {
 						# [teleri, dunedain, eldar] - Carreglyn
 						AND = {
@@ -17653,13 +17728,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 832
-					owns = 833
-					owns = 817
-					owns = 818
-					owns = 831
 				}
 				AND = {
+					owns = 834
+					owns = 1452
+					owns = 1453
+					owns = 1454
 					OR = {
 						# [teleri, dunedain, eldar] - Dunfearn
 						AND = {
@@ -17682,12 +17756,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 834
-					owns = 1452
-					owns = 1453
-					owns = 1454
 				}
 				AND = {
+					owns = 816
+					owns = 1448
+					owns = 1449
+					owns = 814
+					owns = 815
 					OR = {
 						# [rohirrim] - Isendale
 						AND = {
@@ -17718,13 +17793,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 816
-					owns = 1448
-					owns = 1449
-					owns = 814
-					owns = 815
 				}
 				AND = {
+					owns = 1472
+					owns = 840
+					owns = 1470
+					owns = 1471
 					OR = {
 						# [teleri, dunedain, eldar] - Fordirith
 						AND = {
@@ -17747,10 +17821,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1472
-					owns = 840
-					owns = 1470
-					owns = 1471
 				}
 			}
 		}
@@ -18026,6 +18096,10 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 1
+					owns = 791
+					owns = 792
+					owns = 793
 					OR = {
 						# [rohirrim] - Upper Eastfold
 						AND = {
@@ -18048,12 +18122,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1
-					owns = 791
-					owns = 792
-					owns = 793
 				}
 				AND = {
+					owns = 5
+					owns = 6
+					owns = 794
+					owns = 795
+					owns = 12
 					OR = {
 						# [teleri, eldar] - Folde
 						AND = {
@@ -18091,13 +18166,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 5
-					owns = 6
-					owns = 794
-					owns = 795
-					owns = 12
 				}
 				AND = {
+					owns = 785
+					owns = 1175
+					owns = 1176
 					OR = {
 						# [northmen] - Mouths of the Entwash
 						AND = {
@@ -18136,11 +18209,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 785
-					owns = 1175
-					owns = 1176
 				}
 				AND = {
+					owns = 786
+					owns = 787
+					owns = 788
+					owns = 789
+					owns = 790
 					OR = {
 						# [rohirrim] - Lower Eastfold
 						AND = {
@@ -18163,13 +18238,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 786
-					owns = 787
-					owns = 788
-					owns = 789
-					owns = 790
 				}
 				AND = {
+					owns = 1174
+					owns = 780
+					owns = 781
+					owns = 782
 					OR = {
 						# [uruk_hai] - Lower East Emnet
 						AND = {
@@ -18200,12 +18274,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1174
-					owns = 780
-					owns = 781
-					owns = 782
 				}
 				AND = {
+					owns = 674
+					owns = 675
+					owns = 677
+					owns = 774
+					owns = 778
 					OR = {
 						# [uruk_hai] - Upper East Emnet
 						AND = {
@@ -18236,13 +18311,11 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 674
-					owns = 675
-					owns = 677
-					owns = 774
-					owns = 778
 				}
 				AND = {
+					owns = 775
+					owns = 776
+					owns = 777
 					OR = {
 						# [uruk_hai] - Wold
 						AND = {
@@ -18280,11 +18353,12 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 775
-					owns = 776
-					owns = 777
 				}
 				AND = {
+					owns = 1171
+					owns = 1172
+					owns = 1173
+					owns = 779
 					OR = {
 						# [uruk_hai] - Central East Emnet
 						AND = {
@@ -18315,12 +18389,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 1171
-					owns = 1172
-					owns = 1173
-					owns = 779
 				}
 				AND = {
+					owns = 802
+					owns = 18
+					owns = 87
+					owns = 91
+					owns = 109
 					OR = {
 						# [teleri, dunedain, eldar] - Upper West Emnet
 						AND = {
@@ -18343,13 +18418,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 802
-					owns = 18
-					owns = 87
-					owns = 91
-					owns = 109
 				}
 				AND = {
+					owns = 800
+					owns = 803
+					owns = 804
+					owns = 805
+					owns = 806
 					OR = {
 						# [rohirrim] - Gap of Rohan
 						AND = {
@@ -18372,13 +18447,14 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 800
-					owns = 803
-					owns = 804
-					owns = 805
-					owns = 806
 				}
 				AND = {
+					owns = 372
+					owns = 807
+					owns = 808
+					owns = 809
+					owns = 810
+					owns = 683
 					OR = {
 						# [rohirrim] - West-march
 						AND = {
@@ -18409,14 +18485,13 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 372
-					owns = 807
-					owns = 808
-					owns = 809
-					owns = 810
-					owns = 683
 				}
 				AND = {
+					owns = 22
+					owns = 797
+					owns = 798
+					owns = 30
+					owns = 799
 					OR = {
 						# [rohirrim] - Westfold
 						AND = {
@@ -18447,11 +18522,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 22
-					owns = 797
-					owns = 798
-					owns = 30
-					owns = 799
 				}
 			}
 		}
@@ -19046,6 +19116,11 @@ political_decisions = {
 		potential = {
 			OR = {
 				AND = {
+					owns = 673
+					owns = 770
+					owns = 771
+					owns = 772
+					owns = 773
 					OR = {
 						# [uruk_hai] - Fangorn
 						AND = {
@@ -19070,11 +19145,6 @@ political_decisions = {
 							}
 						}
 					}
-					owns = 673
-					owns = 770
-					owns = 771
-					owns = 772
-					owns = 773
 				}
 			}
 		}
