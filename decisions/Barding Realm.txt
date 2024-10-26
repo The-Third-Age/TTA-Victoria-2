@@ -18,13 +18,16 @@ political_decisions = {
 	# Audax Validator "." Ignore_1004
 	DAL_start_decision = {
 		potential = {
-			tag = DAL
 			always = no
+			has_country_flag = DAL_content
 		}
 		
 		allow = {}
 		
 		effect = {
+			# Allowing access to DAL flavor -- given that DAL should pretty easily become Rhovanion or the Free Folk of the North, it's easier (from a dev standpoint) and more efficient on the actual engine to do a country flag check instead of an OR block checkign the 3 potential tags
+			set_country_flag = DAL_content
+			
 			# Setting up Gramavuld Expansion
 			add_country_modifier = {
 				name = king_of_lakemen
@@ -103,7 +106,7 @@ political_decisions = {
 		alert = no
 		picture = "kingdom_of_dale"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			ai = no
 			NOT = { has_global_flag = fluff_disabled }
 		}
@@ -400,7 +403,7 @@ political_decisions = {
 	invite_the_grammas = {
 		picture = "Barding Realm/DAL_map_of_gramavuld_grammas"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			NOT = { has_global_flag = DAL_invited_the_grammas }
 		}
 		
@@ -428,7 +431,7 @@ political_decisions = {
 		picture = "Barding Realm/DAL_barding_diplomats_grammas"
 		
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			has_global_flag = DAL_invited_the_grammas
 			NOT = { has_global_flag = DAL_proclaimed_lordship_over_the_gramas }
 		}
@@ -474,7 +477,7 @@ political_decisions = {
 		picture = "Barding Realm/DAL_map_of_gramavuld_rivermen"
 		
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			NOT = { has_global_flag = invited_the_rivermen }
 			OR = {
 				exists = DA1
@@ -568,7 +571,7 @@ political_decisions = {
 		picture = "Barding Realm/DAL_barding_diplomats_rivermen"
 		
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			RIV = {
 				any_core = {
 					NOT = {
@@ -634,7 +637,7 @@ political_decisions = {
 		picture = "Barding Realm/DAL_barding_diplomats_rivermen"
 		
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			OR = {
 				has_global_flag = invited_the_rivermen
 				has_global_flag = protect_the_rivermen
@@ -804,7 +807,7 @@ political_decisions = {
 	DAL_break_treaty_with_erebor = {
 		picture = "Barding Realm/DAL_reconquer_north"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			has_global_flag = railroading_disabled
 			NOT = { has_global_flag = DAL_reclaimed_northern_lands }
 			OR = {
@@ -966,7 +969,7 @@ political_decisions = {
 		alert = no
 		picture = "Barding Realm/DAL_line_of_bard"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			ai = no
 			NOT = { has_global_flag = fluff_disabled }
 		}
@@ -984,7 +987,7 @@ political_decisions = {
 	appoint_lifstan_the_chancellor = {
 		picture = "Barding Realm/DAL_minor_barding_diplomats"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			NOT = { has_global_flag = DAL_appointed_lifstan }
 			nationalvalue = bard_i
 		}
@@ -1006,7 +1009,7 @@ political_decisions = {
 	appoint_erland_of_esgaroth = {
 		picture = "Barding Realm/DAL_minor_barding_diplomats"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			NOT = { has_global_flag = DAL_appointed_erland }
 			nationalvalue = bard_i
 		}
@@ -1028,7 +1031,7 @@ political_decisions = {
 	appoint_tilda_to_erebor = {
 		picture = "Barding Realm/DAL_minor_barding_diplomats"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			NOT = { has_global_flag = DAL_appointed_tilda }
 			nationalvalue = bard_i
 			exists = ERE
@@ -1070,7 +1073,7 @@ political_decisions = {
 	reforms_of_bard_i = {
 		picture = "Barding Realm/DAL_reforms_bard_i"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			nationalvalue = bard_i
 			NOT = { has_global_flag = DAL_reforms_bard_i }
 		}
@@ -1174,7 +1177,7 @@ political_decisions = {
 	send_girion_bainson_to_austriborg = {
 		picture = "Barding Realm/DAL_girion_bainson"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			has_global_flag = DAL_girion_bainson_born
 			NOT = { has_global_flag = DAL_girion_bainson_sent_to_austriborg }
 			nationalvalue = bain_i
@@ -1201,7 +1204,7 @@ political_decisions = {
 	DAL_support_merchants = {
 		picture = "Barding Realm/merchants"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 			NOT = { has_country_flag = DAL_guild_supported_by_realm }
 		}
@@ -1312,7 +1315,7 @@ political_decisions = {
 	DAL_support_fishers_guild = {
 		picture = "Barding Realm/fishers_guild"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			NOT = { has_country_flag = DAL_merchant_supported_by_realm }
 			NOT = { has_country_flag = DAL_guild_supported_by_realm }
 		}
@@ -1426,7 +1429,7 @@ political_decisions = {
 	propose_trade_with_realm = {
 		picture = "Barding Realm/DAL_money"
 		potential = {
-			tag = DAL
+			has_country_flag = DAL_content
 			owns = 654
 		}
 		

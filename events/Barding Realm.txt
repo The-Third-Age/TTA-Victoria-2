@@ -17,7 +17,7 @@ province_event = {
 	
 	trigger = {
 		province_id = 652 # Dale
-		owner = { tag = DAL }
+		owner = { has_country_flag = DAL_content }
 		650 = { empty = yes } # Odriksdun
 	}
 	
@@ -171,7 +171,7 @@ province_event = {
 	trigger = {
 		province_id = 652 # Dale
 		owner = {
-			tag = DAL
+			has_country_flag = DAL_content
 			has_global_flag = DAL_invited_the_grammas
 			
 			# Grammas has core provinces that are uncolonized
@@ -418,7 +418,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		accepted_culture = grammas
 	}
 	
@@ -446,7 +446,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		accepted_culture = grammas
 		year = 2970
 		owns = 640 # Grasgarda
@@ -476,7 +476,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		accepted_culture = grammas
 		year = 2990
 		owns = 446 # Erland's Ferry
@@ -507,7 +507,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		owns = 652 # Dale
 		year = 3005
 	}
@@ -675,7 +675,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		has_global_flag = RIV_break_DAL_hegemony
 		war = no
 		NOT = { vassal_of = RIV }
@@ -1359,7 +1359,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		nationalvalue = regency
 		FOR = { check_variable = { which = bain_i_age value = 15.9 } }
 	}
@@ -1504,7 +1504,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		nationalvalue = regency
 		FOR = { check_variable = { which = brand_i_age value = 15.9 } }
 	}
@@ -1636,7 +1636,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		nationalvalue = regency
 		FOR = { check_variable = { which = bard_ii_age value = 15.9 } }
 	}
@@ -1711,7 +1711,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		FOR = { check_variable = { which = bain_i_age value = 15.9 } } # Making sure Bain is of age
 		NOT = { has_global_flag = DAL_bain_i_married }
 	}
@@ -1747,7 +1747,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		FOR = { check_variable = { which = bain_i_age value = 15.9 } } # Making sure Bain is still alive
 		has_global_flag = DAL_bain_i_married
 	}
@@ -1797,7 +1797,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		FOR = { check_variable = { which = bain_i_age value = 15.9 } } # Making sure Bain is still alive
 		FOR = { check_variable = { which = brand_i_age value = 0.9 } } # Making sure Brand has been born
 		has_global_flag = DAL_bain_i_married
@@ -1825,7 +1825,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		FOR = { check_variable = { which = brand_i_age value = 15.9 } } # Making sure Brand is of age
 		NOT = { has_global_flag = DAL_brand_i_married }
 		year = 2979
@@ -1862,7 +1862,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		FOR = { check_variable = { which = brand_i_age value = 15.9 } } # Making sure Brand is still alive
 		has_global_flag = DAL_brand_i_married
 		year = 2982
@@ -1913,7 +1913,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		FOR = { check_variable = { which = brand_i_age value = 15.9 } } # Making sure Brand is still alive
 		FOR = { check_variable = { which = bard_ii_age value = 0.9 } } # Making sure Bard II has been born
 		has_global_flag = DAL_brand_i_married
@@ -1941,7 +1941,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		FOR = { check_variable = { which = bard_ii_age value = 15.9 } } # Making sure Bard II is of age
 		NOT = { has_global_flag = DAL_bard_ii_married }
 		year = 3010
@@ -1978,7 +1978,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		FOR = { check_variable = { which = bard_ii_age value = 15.9 } } # Making sure Bard is still alive
 		has_global_flag = DAL_bard_ii_married
 		year = 3020
@@ -2026,7 +2026,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		FOR = { check_variable = { which = bard_ii_age value = 15.9 } } # Making sure Bard is still alive
 		has_global_flag = DAL_bard_ii_married
 		has_global_flag = DAL_girion_ii_born
@@ -2076,7 +2076,7 @@ country_event = {
 	mean_time_to_happen = { months = 6 }
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		year = 3005
 		has_global_flag = DAL_bryn_brandson_born
 	}
@@ -2123,7 +2123,7 @@ country_event = {
 	mean_time_to_happen = { months = 6 }
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		year = 3045
 		has_global_flag = DAL_girloth_bard2son_born
 	}
@@ -2168,7 +2168,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = DAL
+		has_country_flag = DAL_content
 		owns = 660 # Erebor
 	}
 	
