@@ -2603,3 +2603,39 @@ province_event = {
 		}
 	}
 }
+
+# An Influx of Tribesmen
+province_event = {
+	id = 50951
+	title = "An Influx of Tribesmen"
+	desc = "EVTDESC50951"
+	
+	trigger = {
+		owner = { tag = AMO }
+		has_province_modifier = easterling_war_camp
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	option = {
+		name = "A new group of migrants"
+		
+		any_pop = {
+			limit = {
+				has_pop_culture = logath
+				NOT = { pop_type = soldiers }
+			}
+			reduce_pop = 1.05
+		}
+		
+		any_pop = {
+			limit = {
+				has_pop_culture = logath
+				pop_type = soldiers
+			}
+			reduce_pop = 1.1
+		}
+	}
+}
