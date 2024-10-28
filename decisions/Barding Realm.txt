@@ -338,6 +338,20 @@ political_decisions = {
 			treasury = -20000
 			set_country_flag = supported_amov_clan
 			AMO = { country_event = 50952 }
+			
+			any_country = {
+				limit = {
+					OR = {
+						primary_culture = barding
+						primary_culture = adhalling
+						primary_culture = grammas
+						primary_culture = rivermen
+					}
+				}
+				relation = { who = THIS value = -50 }
+			}
+			
+			relation = { who = AMO value = 50 }
 		}
 		ai_will_do = {
 			factor = 1
