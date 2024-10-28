@@ -2639,3 +2639,145 @@ province_event = {
 		}
 	}
 }
+
+# Support from $FROMCOUNTRY$
+country_event = {
+	id = 50952
+	title = "Support from the $FROMCOUNTRY$"
+	desc = "EVTDESC50952"
+	picture = "rhun/easterlings_marching"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = hidden_effects
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = easterling_war_camp
+				owner = { has_global_flag = hidden_effects }
+			}
+			add_province_modifier = { name = province_target_generic duration = 1 }
+		}
+		
+		clr_global_flag = hidden_effects
+	}
+	
+	option = {
+		name = "We will remember their support"
+		
+		treasury = 50000
+		
+		set_global_flag = hidden_effects
+		
+		# To prevent pops merging incorrectly
+		random_owned = {
+			limit = {
+				has_province_modifier = province_target_generic
+				owner = { has_global_flag = hidden_effects }
+			}
+			any_pop = {
+				limit = {
+					pop_type = soldiers
+					NOT = { has_pop_culture = logath }
+				}
+				pop_type = bankers
+			}
+		}
+		
+		# One for each potential province that it could be
+		random_owned = {
+			limit = {
+				has_province_modifier = province_target_generic
+				province_id = 638 # Northwatch
+			}
+			owner = {
+				1067 = {
+					random_pop = {
+						limit = {
+							# has_pop_culture functions differently in random_pop when compared to any_pop
+							is_culture_group = THIS
+							pop_type = soldiers
+						}
+						move_pop = 638
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				has_province_modifier = province_target_generic
+				province_id = 639 # Lar Huil
+			}
+			owner = {
+				1067 = {
+					random_pop = {
+						limit = {
+							# has_pop_culture functions differently in random_pop when compared to any_pop
+							is_culture_group = THIS
+							pop_type = soldiers
+						}
+						move_pop = 639
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				has_province_modifier = province_target_generic
+				province_id = 642 # Burh Austris
+			}
+			owner = {
+				1067 = {
+					random_pop = {
+						limit = {
+							# has_pop_culture functions differently in random_pop when compared to any_pop
+							is_culture_group = THIS
+							pop_type = soldiers
+						}
+						move_pop = 642
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				has_province_modifier = province_target_generic
+				province_id = 1475 # Ironhold
+			}
+			owner = {
+				1067 = {
+					random_pop = {
+						limit = {
+							# has_pop_culture functions differently in random_pop when compared to any_pop
+							is_culture_group = THIS
+							pop_type = soldiers
+						}
+						move_pop = 1475
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = province_target_generic
+				owner = { has_global_flag = hidden_effects }
+			}
+			any_pop = {
+				limit = { pop_type = bankers }
+				pop_type = soldiers
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				has_province_modifier = province_target_generic
+				owner = { has_global_flag = hidden_effects }
+			}
+			remove_province_modifier = province_target_generic
+		}
+		
+		clr_global_flag = hidden_effects
+	}
+}

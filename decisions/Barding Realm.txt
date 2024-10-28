@@ -4,6 +4,7 @@
 # Barding Realm Decisions: {
 #	Starting Decision (Unseen) + Country Info (Seen)
 #	Rivermen Minors
+#	Amov Clan
 #	Marsh Wights
 #	Gramavuld Consolidation
 #	Province Flavor
@@ -99,6 +100,9 @@ political_decisions = {
 			
 			# Start Flavor Cleanup event loop -- not starting it immediately to time reform flags correctly
 			FOR = { country_event = { id = 99001 days = 3 } }
+			
+			# Setting up AMO
+			AMO = { all_core = { add_province_modifier = { name = easterling_war_camp duration = 3650 } } }
 		}
 	}
 	
@@ -313,6 +317,34 @@ political_decisions = {
 			set_country_flag = RIV_attempt_to_break_DAL_hegemony
 			
 			RIV_break_dal_hegemony_loc = {}
+		}
+	}
+}
+
+# Amov Clan
+political_decisions = {
+	support_amov_clan = {
+		picture = "Rhun/easterlings_marching"
+		potential = {
+			primary_culture = logath
+			NOT = { has_country_flag = supported_amov_clan }
+			exists = AMO
+			NOT = { tag = AMO }
+		}
+		allow = {
+			money = 20000
+		}
+		effect = {
+			treasury = -20000
+			set_country_flag = supported_amov_clan
+			AMO = { country_event = 50952 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { alliance_with = AMO }
+			}
 		}
 	}
 }
