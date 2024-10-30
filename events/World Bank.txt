@@ -4760,6 +4760,14 @@ country_event = {
 			}
 			
 			random_owned = {
+				limit = { owner = { has_country_modifier = AMO_established_clan_guard } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
 				limit = { owner = { has_country_modifier = breeding_uruk_hai } }
 				owner = {
 					change_variable = { which = modifier_count value = 1 }

@@ -1,6 +1,8 @@
 # Remove this line to have the claim get that interior arguments are correct
 # Audax Validator "!" Ignore_1009
 
+# Has flavor related to tag in Gramavuld -- Barding Realm, the Rivermen minors and the Amov Clan
+
 # Barding Realm Decisions: {
 #	Starting Decision (Unseen) + Country Info (Seen)
 #	Rivermen Minors
@@ -102,7 +104,7 @@ political_decisions = {
 			FOR = { country_event = { id = 99001 days = 3 } }
 			
 			# Setting up AMO
-			AMO = { all_core = { add_province_modifier = { name = easterling_war_camp duration = 3650 } } }
+			AMO = { all_core = { add_province_modifier = { name = AMO_easterling_war_camp duration = 3650 } } }
 		}
 	}
 	
@@ -188,6 +190,10 @@ political_decisions = {
 			OR = {
 				vassal_of = DAL
 				in_sphere = DAL
+				AND = {
+					has_country_modifier = alliance_of_dwarves_and_men
+					DAL = { has_country_modifier = alliance_of_dwarves_and_men }
+				}
 			}
 			NOT = { has_country_flag = DAL_accepted_bard_ultimatum }
 		}
@@ -324,7 +330,7 @@ political_decisions = {
 # Amov Clan
 political_decisions = {
 	support_amov_clan = {
-		picture = "Rhun/easterlings_marching"
+		picture = "Rhun/logath_easterlings_marching"
 		potential = {
 			primary_culture = logath
 			NOT = { has_country_flag = supported_amov_clan }
@@ -359,6 +365,90 @@ political_decisions = {
 				factor = 0
 				NOT = { alliance_with = AMO }
 			}
+		}
+	}
+	
+	AMO_claim_burh_austris = {
+		picture = "Rhun/AMO_burh_austris"
+		potential = {
+			tag = AMO
+			642 = { empty = yes } # Burh Austris
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					ai = yes
+					total_amount_of_divisions = 1
+				}
+				642 = {
+					country_units_in_province = THIS
+					empty = yes
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 5
+			
+			# TODO: Likely need to do something with tribals when they're fleshed out
+			642 = {
+				secede_province = THIS
+				add_core = THIS
+				add_province_modifier = { name = AMO_easterling_war_camp duration = 1825 }
+				random_pop = {
+					limit = {
+						# has_pop_culture functions differently in random_pop when compared to any_pop
+						is_culture_group = THIS
+						pop_type = soldiers
+					}
+					reduce_pop = 0.90
+				}
+				random_pop = {
+					limit = {
+						# has_pop_culture functions differently in random_pop when compared to any_pop
+						NOT = { is_culture_group = THIS }
+						pop_type = soldiers
+					}
+					reduce_pop = 0.75
+				}
+			}
+			
+			# The above block for some reason breaks the rgo. Fixing it silently
+			random_owned = {
+				limit = { province_id = 642 }
+				trade_goods = wool
+			}
+			
+			any_country = {
+				limit = {
+					OR = {
+						primary_culture = barding
+						primary_culture = adhalling
+						primary_culture = grammas
+						primary_culture = rivermen
+					}
+				}
+				relation = { who = THIS value = -50 }
+				capital_scope = { province_event = { id = 50953 days = 0 } }
+			}
+		}
+	}
+	
+	AMO_establish_clan_guard = {
+		picture = "Rhun/AMO_clan_guard"
+		potential = {
+			tag = AMO
+			NOT = { has_country_modifier = AMO_established_clan_guard }
+			civilized = no
+		}
+		
+		allow = {
+			all_core = { NOT = { has_province_modifier = AMO_easterling_war_camp } }
+		}
+		
+		effect = {
+			add_country_modifier = { name = AMO_established_clan_guard duration = -1 }
 		}
 	}
 }

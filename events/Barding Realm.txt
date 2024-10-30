@@ -4,6 +4,8 @@
 # Remove this line to have the validator check this file
 # Audax Validator "!" Ignore_NEXT
 
+# Has flavor related to tag in Gramavuld -- Barding Realm, the Rivermen minors and the Amov Clan
+
 # Barding Realm Events
 # 50900 - 50999
 
@@ -2612,30 +2614,19 @@ province_event = {
 	
 	trigger = {
 		owner = { tag = AMO }
-		has_province_modifier = easterling_war_camp
+		has_province_modifier = AMO_easterling_war_camp
 	}
 	
 	mean_time_to_happen = {
-		months = 4
+		months = 11
 	}
 	
 	option = {
 		name = "A new group of migrants"
 		
 		any_pop = {
-			limit = {
-				has_pop_culture = logath
-				NOT = { pop_type = soldiers }
-			}
-			reduce_pop = 1.05
-		}
-		
-		any_pop = {
-			limit = {
-				has_pop_culture = logath
-				pop_type = soldiers
-			}
-			reduce_pop = 1.1
+			limit = { has_pop_culture = logath }
+			reduce_pop = 1.2
 		}
 	}
 }
@@ -2654,7 +2645,7 @@ country_event = {
 		
 		random_owned = {
 			limit = {
-				has_province_modifier = easterling_war_camp
+				has_province_modifier = AMO_easterling_war_camp
 				owner = { has_global_flag = hidden_effects }
 			}
 			add_province_modifier = { name = province_target_generic duration = 1 }
@@ -2779,5 +2770,31 @@ country_event = {
 		}
 		
 		clr_global_flag = hidden_effects
+	}
+}
+
+# The Occupation of Burh Austris
+province_event = {
+	id = 50953
+	title = "The Occupation of Burh Austris"
+	desc = "EVTDESC50953"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "A grave message"
+		
+		owner = {
+			plurality = 0.5
+			any_pop = {
+				limit = {
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				consciousness = 1
+			}
+		}
 	}
 }
