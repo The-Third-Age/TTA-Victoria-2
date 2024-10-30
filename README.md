@@ -28,6 +28,7 @@ Loremasters (researchers and contributers):
  - MoskauMaster
  - Jman
  - Wyrms (joelAVS)
+ - Bob Bobington
  - IsaacHhyphenR [mod leader of Ride for Ruin: A Lord of the Rings mod for HOI4](https://steamcommunity.com/sharedfiles/filedetails/?id=2853663729)
  - Dean200027, Equan [modders of Chronicles of the Third Age](TBD) a submod to [Lord of the Rings mod for HOI4](https://steamcommunity.com/sharedfiles/filedetails/?id=1314446921)
 
