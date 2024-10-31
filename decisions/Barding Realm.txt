@@ -452,6 +452,42 @@ political_decisions = {
 			add_country_modifier = { name = AMO_established_clan_guard duration = -1 }
 		}
 	}
+	
+	AMO_send_out_raiding_parties = {
+		picture = "Rhun/AMO_raiders"
+		potential = {
+			tag = AMO
+			NOT = { has_country_flag = AMO_sent_out_raiders }
+		}
+		
+		allow = {
+			OR = {
+				total_amount_of_divisions = 2 # At least 4 units
+				AND = {
+					ai = yes
+					year = 2960
+				}
+			}
+		}
+		
+		effect = {
+			set_country_flag = AMO_sent_out_raiders
+			
+			define_general = { name = "§LAnddreki the Wolf, §MAmov Raider§!" personality = relentless background = AMO_easterling_raider_trait }
+			
+			GRA = {
+				all_core = {
+					limit = {
+						NOT = { region = ERE_660 } # Mountainlands
+						NOT = { owned_by = THIS }
+					}
+					add_province_modifier = { name = AMO_easterling_raiders duration = -1 }
+				}
+			}
+			
+			AMO_sent_out_raiders_loc = {}
+		}
+	}
 }
 
 # Marsh Wights

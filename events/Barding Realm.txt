@@ -2798,3 +2798,453 @@ province_event = {
 		}
 	}
 }
+
+# Amov Raid!
+province_event = {
+	id = 50954
+	title = "Amov Raid"
+	desc = "EVTDESC50954"
+	
+	trigger = {
+		has_province_modifier = AMO_easterling_raiders
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	immediate = {
+		add_province_modifier = { name = province_target_generic duration = 1 }
+		NOT = { owner = { tag = AMO } }
+	}
+	
+	option = {
+		name = "Damn those curs!"
+		
+		owner = { set_global_flag = hidden_effects }
+		
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = hidden_effects }
+				has_province_modifier = province_target_generic
+			}
+			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+			remove_province_modifier = province_target_generic
+		}
+		
+		any_pop = {
+			limit = { pop_type = soldiers }
+			reduce_pop = 0.95
+		}
+		
+		any_pop = {
+			limit = { NOT = { pop_type = soldiers } }
+			reduce_pop = 0.98
+		}
+		
+		AMO = {
+			set_global_flag = finding_target # To make sure that only one province event call shows up in the interface
+			
+			# First attempt to give to any province that doesn't have max wealth
+			random_owned = {
+				limit = { NOT = { has_crime = province_wealth_5 } }
+				province_event = { id = 50955 days = 0 }
+				owner = { clr_global_flag = finding_target }
+			}
+			
+			# If all owned provinces have max wealth, than just throw it to the capital
+			random_owned = {
+				limit = { owner = { has_global_flag = finding_target } }
+				owner = { capital_scope = { province_event = { id = 50955 days = 0 } } }
+			}
+			
+			clr_global_flag = finding_target
+		}
+		
+		province_wealth_decrease_1_loc = {}
+		
+		owner = { clr_global_flag = hidden_effects }
+	}
+}
+
+# Raid Loot
+province_event = {
+	id = 50955
+	title = "Raid Loot"
+	desc = "EVTDESC50955"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_province_modifier = { name = province_target_generic duration = 1 }
+	}
+	
+	option = {
+		name = "Enrich the clan"
+		
+		# TODO: Rework effects with unciv [reform] rework
+		owner = {
+			random_owned = {
+				limit = {
+					owner = {
+						expansion = old_expansion
+						training = old_training
+						military_constructions = old_constructions
+						tactics = old_tactics
+					}
+				}
+				owner = { treasury = 50000 }
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								expansion = new_expansion
+								training = old_training
+								military_constructions = old_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = new_training
+								military_constructions = old_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = old_training
+								military_constructions = new_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = old_training
+								military_constructions = old_constructions
+								tactics = new_tactics
+							}
+						}
+					}
+				}
+				owner = {
+					treasury = 50000
+					years_of_research = 0.125
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								expansion = new_expansion
+								training = new_training
+								military_constructions = old_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = old_training
+								military_constructions = new_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = old_training
+								military_constructions = old_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = new_training
+								military_constructions = new_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = new_training
+								military_constructions = old_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = old_training
+								military_constructions = new_constructions
+								tactics = new_tactics
+							}
+						}
+					}
+				}
+				owner = {
+					treasury = 50000
+					years_of_research = 0.25
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								expansion = old_expansion
+								training = new_training
+								military_constructions = new_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = old_training
+								military_constructions = new_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = new_training
+								military_constructions = old_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = new_training
+								military_constructions = new_constructions
+								tactics = old_tactics
+							}
+						}
+					}
+				}
+				owner = {
+					treasury = 50000
+					years_of_research = 0.375
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						expansion = new_expansion
+						training = new_training
+						military_constructions = new_constructions
+						tactics = new_tactics
+					}
+				}
+				owner = {
+					treasury = 50000
+					years_of_research = 0.5
+				}
+			}
+		}
+		
+		owner = { set_global_flag = hidden_effects }
+		
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = hidden_effects }
+				has_province_modifier = province_target_generic
+			}
+			remove_province_modifier = province_target_generic
+		}
+		
+		owner = { clr_global_flag = hidden_effects }
+	}
+	
+	option = {
+		name = "Invest in our territory"
+		
+		owner = { set_global_flag = hidden_effects }
+		
+		# TODO: Rework effects with unciv [reform] rework
+		owner = {
+			random_owned = {
+				limit = {
+					owner = {
+						expansion = old_expansion
+						training = old_training
+						military_constructions = old_constructions
+						tactics = old_tactics
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = { has_global_flag = hidden_effects }
+						has_province_modifier = province_target_generic
+					}
+					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+					remove_province_modifier = province_target_generic
+				}
+				
+				province_wealth_increase_1_loc = {}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								expansion = new_expansion
+								training = old_training
+								military_constructions = old_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = new_training
+								military_constructions = old_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = old_training
+								military_constructions = new_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = old_training
+								military_constructions = old_constructions
+								tactics = new_tactics
+							}
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = { has_global_flag = hidden_effects }
+						has_province_modifier = province_target_generic
+					}
+					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+					remove_province_modifier = province_target_generic
+				}
+				
+				owner = { treasury = 15000 }
+				province_wealth_increase_1_loc = {}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								expansion = new_expansion
+								training = new_training
+								military_constructions = old_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = old_training
+								military_constructions = new_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = old_training
+								military_constructions = old_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = new_training
+								military_constructions = new_constructions
+								tactics = old_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = new_training
+								military_constructions = old_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = old_expansion
+								training = old_training
+								military_constructions = new_constructions
+								tactics = new_tactics
+							}
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = { has_global_flag = hidden_effects }
+						has_province_modifier = province_target_generic
+					}
+					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+					remove_province_modifier = province_target_generic
+				}
+				
+				owner = { treasury = 30000 }
+				province_wealth_increase_1_loc = {}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							AND = {
+								expansion = old_expansion
+								training = new_training
+								military_constructions = new_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = old_training
+								military_constructions = new_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = new_training
+								military_constructions = old_constructions
+								tactics = new_tactics
+							}
+							AND = {
+								expansion = new_expansion
+								training = new_training
+								military_constructions = new_constructions
+								tactics = old_tactics
+							}
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = { has_global_flag = hidden_effects }
+						has_province_modifier = province_target_generic
+					}
+					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+					remove_province_modifier = province_target_generic
+				}
+				
+				owner = { treasury = 50000 }
+				province_wealth_increase_1_loc = {}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						expansion = new_expansion
+						training = new_training
+						military_constructions = new_constructions
+						tactics = new_tactics
+					}
+				}
+				random_owned = {
+					limit = {
+						owner = { has_global_flag = hidden_effects }
+						has_province_modifier = province_target_generic
+					}
+					add_province_modifier = { name = province_wealth_increase_2_target_modifier duration = -1 }
+					remove_province_modifier = province_target_generic
+				}
+				
+				owner = { treasury = 50000 }
+				province_wealth_increase_2_loc = {}
+			}
+		}
+		
+		owner = { set_global_flag = hidden_effects }
+		
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = hidden_effects }
+				has_province_modifier = province_target_generic
+			}
+			remove_province_modifier = province_target_generic
+		}
+		
+		owner = { clr_global_flag = hidden_effects }
+	}
+}
