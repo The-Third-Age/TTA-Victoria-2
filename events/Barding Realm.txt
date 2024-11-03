@@ -2821,15 +2821,17 @@ province_event = {
 	option = {
 		name = "Damn those curs!"
 		
-		owner = { set_global_flag = hidden_effects }
+		owner = {
+			set_global_flag = hidden_effects
 		
-		random_owned = {
-			limit = {
-				owner = { has_global_flag = hidden_effects }
-				has_province_modifier = province_target_generic
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_generic
+				}
+				add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+				remove_province_modifier = province_target_generic
 			}
-			add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
-			remove_province_modifier = province_target_generic
 		}
 		
 		any_pop = {
@@ -3047,32 +3049,29 @@ province_event = {
 	option = {
 		name = "Invest in our territory"
 		
-		owner = { set_global_flag = hidden_effects }
-		
 		# TODO: Rework effects with unciv [reform] rework
 		owner = {
+			set_global_flag = hidden_effects
+			
 			random_owned = {
 				limit = {
+					has_province_modifier = province_target_generic
 					owner = {
 						expansion = old_expansion
 						training = old_training
 						military_constructions = old_constructions
 						tactics = old_tactics
+						has_global_flag = hidden_effects
 					}
 				}
-				random_owned = {
-					limit = {
-						owner = { has_global_flag = hidden_effects }
-						has_province_modifier = province_target_generic
-					}
-					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
-					remove_province_modifier = province_target_generic
-				}
+				add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+				remove_province_modifier = province_target_generic
 				
 				province_wealth_increase_1_loc = {}
 			}
 			random_owned = {
 				limit = {
+					has_province_modifier = province_target_generic
 					owner = {
 						OR = {
 							AND = {
@@ -3100,22 +3099,18 @@ province_event = {
 								tactics = new_tactics
 							}
 						}
+						has_global_flag = hidden_effects
 					}
 				}
-				random_owned = {
-					limit = {
-						owner = { has_global_flag = hidden_effects }
-						has_province_modifier = province_target_generic
-					}
-					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
-					remove_province_modifier = province_target_generic
-				}
+				add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+				remove_province_modifier = province_target_generic
 				
 				owner = { treasury = 15000 }
 				province_wealth_increase_1_loc = {}
 			}
 			random_owned = {
 				limit = {
+					has_province_modifier = province_target_generic
 					owner = {
 						OR = {
 							AND = {
@@ -3155,22 +3150,18 @@ province_event = {
 								tactics = new_tactics
 							}
 						}
+						has_global_flag = hidden_effects
 					}
 				}
-				random_owned = {
-					limit = {
-						owner = { has_global_flag = hidden_effects }
-						has_province_modifier = province_target_generic
-					}
-					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
-					remove_province_modifier = province_target_generic
-				}
+				add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+				remove_province_modifier = province_target_generic
 				
 				owner = { treasury = 30000 }
 				province_wealth_increase_1_loc = {}
 			}
 			random_owned = {
 				limit = {
+					has_province_modifier = province_target_generic
 					owner = {
 						OR = {
 							AND = {
@@ -3198,53 +3189,42 @@ province_event = {
 								tactics = old_tactics
 							}
 						}
+						has_global_flag = hidden_effects
 					}
 				}
-				random_owned = {
-					limit = {
-						owner = { has_global_flag = hidden_effects }
-						has_province_modifier = province_target_generic
-					}
-					add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
-					remove_province_modifier = province_target_generic
-				}
+				add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+				remove_province_modifier = province_target_generic
 				
 				owner = { treasury = 50000 }
 				province_wealth_increase_1_loc = {}
 			}
 			random_owned = {
 				limit = {
+					has_province_modifier = province_target_generic
 					owner = {
 						expansion = new_expansion
 						training = new_training
 						military_constructions = new_constructions
 						tactics = new_tactics
+						has_global_flag = hidden_effects
 					}
 				}
-				random_owned = {
-					limit = {
-						owner = { has_global_flag = hidden_effects }
-						has_province_modifier = province_target_generic
-					}
-					add_province_modifier = { name = province_wealth_increase_2_target_modifier duration = -1 }
-					remove_province_modifier = province_target_generic
-				}
+				add_province_modifier = { name = province_wealth_increase_2_target_modifier duration = -1 }
+				remove_province_modifier = province_target_generic
 				
 				owner = { treasury = 50000 }
 				province_wealth_increase_2_loc = {}
 			}
-		}
-		
-		owner = { set_global_flag = hidden_effects }
-		
-		random_owned = {
-			limit = {
-				owner = { has_global_flag = hidden_effects }
-				has_province_modifier = province_target_generic
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_generic
+				}
+				remove_province_modifier = province_target_generic
 			}
-			remove_province_modifier = province_target_generic
+			
+			clr_global_flag = hidden_effects
 		}
-		
-		owner = { clr_global_flag = hidden_effects }
 	}
 }
