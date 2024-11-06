@@ -3228,3 +3228,21 @@ province_event = {
 		}
 	}
 }
+
+# The End of the Amov Raids
+province_event = {
+	id = 50956
+	title = "The End of the Amov Raids"
+	desc = "EVTDESC50956"
+	
+	trigger = {
+		has_province_modifier = AMO_easterling_raiders
+		NOT = { exists = AMO }
+	}
+	
+	option = {
+		name = "Hail the Victorious Dead!"
+		
+		owner = { any_owned = { remove_province_modifier = AMO_easterling_raiders } }
+	}
+}

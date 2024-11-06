@@ -56,6 +56,7 @@ demand_concession_capital
 civil_war
 acquire_core_state
 annex_core_country
+acquire_claimed_state
 acquire_state
 acquire_substate_region
 acquire_substate_core_state
@@ -706,6 +707,1313 @@ civil_war = {
 	po_annex = yes
 	
 	war_name = CIVIL_WAR_NAME
+	
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.25
+		}
+	}
+}
+
+acquire_claimed_state = {
+	sprite_index = 5
+	is_triggered_only = yes
+	months = 12
+	
+	badboy_factor = 0
+	prestige_factor = 3
+	peace_cost_factor = 0.75
+	penalty_factor = 1
+	always = yes
+	
+	constructing_cb = no
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	# THIS = country applying the cb
+	allowed_states = {
+		any_owned_province = {
+			OR = {
+				AND = {
+					region = GON_4
+					THIS = { has_country_flag = claimed_GON_4 }
+				}
+				AND = {
+					region = GON_14
+					THIS = { has_country_flag = claimed_GON_14 }
+				}
+				AND = {
+					region = GON_16
+					THIS = { has_country_flag = claimed_GON_16 }
+				}
+				AND = {
+					region = GON_23
+					THIS = { has_country_flag = claimed_GON_23 }
+				}
+				AND = {
+					region = GON_27
+					THIS = { has_country_flag = claimed_GON_27 }
+				}
+				AND = {
+					region = GON_37
+					THIS = { has_country_flag = claimed_GON_37 }
+				}
+				AND = {
+					region = GON_44
+					THIS = { has_country_flag = claimed_GON_44 }
+				}
+				AND = {
+					region = GON_46
+					THIS = { has_country_flag = claimed_GON_46 }
+				}
+				AND = {
+					region = GON_51
+					THIS = { has_country_flag = claimed_GON_51 }
+				}
+				AND = {
+					region = GON_56
+					THIS = { has_country_flag = claimed_GON_56 }
+				}
+				AND = {
+					region = GON_57
+					THIS = { has_country_flag = claimed_GON_57 }
+				}
+				AND = {
+					region = GON_63
+					THIS = { has_country_flag = claimed_GON_63 }
+				}
+				AND = {
+					region = GON_71
+					THIS = { has_country_flag = claimed_GON_71 }
+				}
+				AND = {
+					region = GON_72
+					THIS = { has_country_flag = claimed_GON_72 }
+				}
+				AND = {
+					region = GON_77
+					THIS = { has_country_flag = claimed_GON_77 }
+				}
+				AND = {
+					region = GON_78
+					THIS = { has_country_flag = claimed_GON_78 }
+				}
+				AND = {
+					region = GON_81
+					THIS = { has_country_flag = claimed_GON_81 }
+				}
+				AND = {
+					region = GON_89
+					THIS = { has_country_flag = claimed_GON_89 }
+				}
+				AND = {
+					region = GON_92
+					THIS = { has_country_flag = claimed_GON_92 }
+				}
+				AND = {
+					region = GON_98
+					THIS = { has_country_flag = claimed_GON_98 }
+				}
+				AND = {
+					region = GON_102
+					THIS = { has_country_flag = claimed_GON_102 }
+				}
+				AND = {
+					region = GON_105
+					THIS = { has_country_flag = claimed_GON_105 }
+				}
+				AND = {
+					region = GON_110
+					THIS = { has_country_flag = claimed_GON_110 }
+				}
+				AND = {
+					region = LIN_111
+					THIS = { has_country_flag = claimed_LIN_111 }
+				}
+				AND = {
+					region = GON_114
+					THIS = { has_country_flag = claimed_GON_114 }
+				}
+				AND = {
+					region = GON_118
+					THIS = { has_country_flag = claimed_GON_118 }
+				}
+				AND = {
+					region = GON_123
+					THIS = { has_country_flag = claimed_GON_123 }
+				}
+				AND = {
+					region = GON_133
+					THIS = { has_country_flag = claimed_GON_133 }
+				}
+				AND = {
+					region = GON_134
+					THIS = { has_country_flag = claimed_GON_134 }
+				}
+				AND = {
+					region = LIN_137
+					THIS = { has_country_flag = claimed_LIN_137 }
+				}
+				AND = {
+					region = GON_146
+					THIS = { has_country_flag = claimed_GON_146 }
+				}
+				AND = {
+					region = BRE_148
+					THIS = { has_country_flag = claimed_BRE_148 }
+				}
+				AND = {
+					region = ERE_151
+					THIS = { has_country_flag = claimed_ERE_151 }
+				}
+				AND = {
+					region = GON_154
+					THIS = { has_country_flag = claimed_GON_154 }
+				}
+				AND = {
+					region = GON_160
+					THIS = { has_country_flag = claimed_GON_160 }
+				}
+				AND = {
+					region = GON_165
+					THIS = { has_country_flag = claimed_GON_165 }
+				}
+				AND = {
+					region = GON_169
+					THIS = { has_country_flag = claimed_GON_169 }
+				}
+				AND = {
+					region = GON_175
+					THIS = { has_country_flag = claimed_GON_175 }
+				}
+				AND = {
+					region = GON_183
+					THIS = { has_country_flag = claimed_GON_183 }
+				}
+				AND = {
+					region = GON_186
+					THIS = { has_country_flag = claimed_GON_186 }
+				}
+				AND = {
+					region = GON_188
+					THIS = { has_country_flag = claimed_GON_188 }
+				}
+				AND = {
+					region = GON_194
+					THIS = { has_country_flag = claimed_GON_194 }
+				}
+				AND = {
+					region = GON_198
+					THIS = { has_country_flag = claimed_GON_198 }
+				}
+				AND = {
+					region = GON_205
+					THIS = { has_country_flag = claimed_GON_205 }
+				}
+				AND = {
+					region = GON_212
+					THIS = { has_country_flag = claimed_GON_212 }
+				}
+				AND = {
+					region = GON_216
+					THIS = { has_country_flag = claimed_GON_216 }
+				}
+				AND = {
+					region = GON_226
+					THIS = { has_country_flag = claimed_GON_226 }
+				}
+				AND = {
+					region = GON_228
+					THIS = { has_country_flag = claimed_GON_228 }
+				}
+				AND = {
+					region = GON_232
+					THIS = { has_country_flag = claimed_GON_232 }
+				}
+				AND = {
+					region = GON_238
+					THIS = { has_country_flag = claimed_GON_238 }
+				}
+				AND = {
+					region = GON_249
+					THIS = { has_country_flag = claimed_GON_249 }
+				}
+				AND = {
+					region = GON_253
+					THIS = { has_country_flag = claimed_GON_253 }
+				}
+				AND = {
+					region = UMB_256
+					THIS = { has_country_flag = claimed_UMB_256 }
+				}
+				AND = {
+					region = UMB_260
+					THIS = { has_country_flag = claimed_UMB_260 }
+				}
+				AND = {
+					region = UMB_263
+					THIS = { has_country_flag = claimed_UMB_263 }
+				}
+				AND = {
+					region = UMB_270
+					THIS = { has_country_flag = claimed_UMB_270 }
+				}
+				AND = {
+					region = UMB_273
+					THIS = { has_country_flag = claimed_UMB_273 }
+				}
+				AND = {
+					region = HAR_277
+					THIS = { has_country_flag = claimed_HAR_277 }
+				}
+				AND = {
+					region = HAR_286
+					THIS = { has_country_flag = claimed_HAR_286 }
+				}
+				AND = {
+					region = HAR_288
+					THIS = { has_country_flag = claimed_HAR_288 }
+				}
+				AND = {
+					region = ERE_291
+					THIS = { has_country_flag = claimed_ERE_291 }
+				}
+				AND = {
+					region = HAR_293
+					THIS = { has_country_flag = claimed_HAR_293 }
+				}
+				AND = {
+					region = DND_307
+					THIS = { has_country_flag = claimed_DND_307 }
+				}
+				AND = {
+					region = HAR_310
+					THIS = { has_country_flag = claimed_HAR_310 }
+				}
+				AND = {
+					region = HAR_312
+					THIS = { has_country_flag = claimed_HAR_312 }
+				}
+				AND = {
+					region = HAR_322
+					THIS = { has_country_flag = claimed_HAR_322 }
+				}
+				AND = {
+					region = HAR_334
+					THIS = { has_country_flag = claimed_HAR_334 }
+				}
+				AND = {
+					region = KHA_342
+					THIS = { has_country_flag = claimed_KHA_342 }
+				}
+				AND = {
+					region = KHA_344
+					THIS = { has_country_flag = claimed_KHA_344 }
+				}
+				AND = {
+					region = KHA_348
+					THIS = { has_country_flag = claimed_KHA_348 }
+				}
+				AND = {
+					region = HAR_356
+					THIS = { has_country_flag = claimed_HAR_356 }
+				}
+				AND = {
+					region = KHA_357
+					THIS = { has_country_flag = claimed_KHA_357 }
+				}
+				AND = {
+					region = KHA_361
+					THIS = { has_country_flag = claimed_KHA_361 }
+				}
+				AND = {
+					region = KHA_362
+					THIS = { has_country_flag = claimed_KHA_362 }
+				}
+				AND = {
+					region = KHA_364
+					THIS = { has_country_flag = claimed_KHA_364 }
+				}
+				AND = {
+					region = CAR_365
+					THIS = { has_country_flag = claimed_CAR_365 }
+				}
+				AND = {
+					region = KHA_366
+					THIS = { has_country_flag = claimed_KHA_366 }
+				}
+				AND = {
+					region = KHA_376
+					THIS = { has_country_flag = claimed_KHA_376 }
+				}
+				AND = {
+					region = KHA_380
+					THIS = { has_country_flag = claimed_KHA_380 }
+				}
+				AND = {
+					region = KHA_387
+					THIS = { has_country_flag = claimed_KHA_387 }
+				}
+				AND = {
+					region = KHA_391
+					THIS = { has_country_flag = claimed_KHA_391 }
+				}
+				AND = {
+					region = MOR_396
+					THIS = { has_country_flag = claimed_MOR_396 }
+				}
+				AND = {
+					region = MOR_397
+					THIS = { has_country_flag = claimed_MOR_397 }
+				}
+				AND = {
+					region = MOR_399
+					THIS = { has_country_flag = claimed_MOR_399 }
+				}
+				AND = {
+					region = MOR_404
+					THIS = { has_country_flag = claimed_MOR_404 }
+				}
+				AND = {
+					region = MOR_408
+					THIS = { has_country_flag = claimed_MOR_408 }
+				}
+				AND = {
+					region = MOR_411
+					THIS = { has_country_flag = claimed_MOR_411 }
+				}
+				AND = {
+					region = MOR_412
+					THIS = { has_country_flag = claimed_MOR_412 }
+				}
+				AND = {
+					region = MOR_418
+					THIS = { has_country_flag = claimed_MOR_418 }
+				}
+				AND = {
+					region = MOR_421
+					THIS = { has_country_flag = claimed_MOR_421 }
+				}
+				AND = {
+					region = MOR_423
+					THIS = { has_country_flag = claimed_MOR_423 }
+				}
+				AND = {
+					region = MOR_429
+					THIS = { has_country_flag = claimed_MOR_429 }
+				}
+				AND = {
+					region = MOR_433
+					THIS = { has_country_flag = claimed_MOR_433 }
+				}
+				AND = {
+					region = MOR_440
+					THIS = { has_country_flag = claimed_MOR_440 }
+				}
+				AND = {
+					region = MOR_449
+					THIS = { has_country_flag = claimed_MOR_449 }
+				}
+				AND = {
+					region = MOR_455
+					THIS = { has_country_flag = claimed_MOR_455 }
+				}
+				AND = {
+					region = RHO_458
+					THIS = { has_country_flag = claimed_RHO_458 }
+				}
+				AND = {
+					region = RHO_461
+					THIS = { has_country_flag = claimed_RHO_461 }
+				}
+				AND = {
+					region = RHO_462
+					THIS = { has_country_flag = claimed_RHO_462 }
+				}
+				AND = {
+					region = RHO_465
+					THIS = { has_country_flag = claimed_RHO_465 }
+				}
+				AND = {
+					region = RHO_472
+					THIS = { has_country_flag = claimed_RHO_472 }
+				}
+				AND = {
+					region = RHO_474
+					THIS = { has_country_flag = claimed_RHO_474 }
+				}
+				AND = {
+					region = RHO_476
+					THIS = { has_country_flag = claimed_RHO_476 }
+				}
+				AND = {
+					region = RHO_484
+					THIS = { has_country_flag = claimed_RHO_484 }
+				}
+				AND = {
+					region = RHO_489
+					THIS = { has_country_flag = claimed_RHO_489 }
+				}
+				AND = {
+					region = RHO_491
+					THIS = { has_country_flag = claimed_RHO_491 }
+				}
+				AND = {
+					region = RHO_500
+					THIS = { has_country_flag = claimed_RHO_500 }
+				}
+				AND = {
+					region = RHO_507
+					THIS = { has_country_flag = claimed_RHO_507 }
+				}
+				AND = {
+					region = RHO_508
+					THIS = { has_country_flag = claimed_RHO_508 }
+				}
+				AND = {
+					region = RHO_515
+					THIS = { has_country_flag = claimed_RHO_515 }
+				}
+				AND = {
+					region = RHO_520
+					THIS = { has_country_flag = claimed_RHO_520 }
+				}
+				AND = {
+					region = RHO_523
+					THIS = { has_country_flag = claimed_RHO_523 }
+				}
+				AND = {
+					region = RHO_524
+					THIS = { has_country_flag = claimed_RHO_524 }
+				}
+				AND = {
+					region = RHO_525
+					THIS = { has_country_flag = claimed_RHO_525 }
+				}
+				AND = {
+					region = RHO_528
+					THIS = { has_country_flag = claimed_RHO_528 }
+				}
+				AND = {
+					region = RHO_535
+					THIS = { has_country_flag = claimed_RHO_535 }
+				}
+				AND = {
+					region = DOR_539
+					THIS = { has_country_flag = claimed_DOR_539 }
+				}
+				AND = {
+					region = DOR_545
+					THIS = { has_country_flag = claimed_DOR_545 }
+				}
+				AND = {
+					region = DOR_550
+					THIS = { has_country_flag = claimed_DOR_550 }
+				}
+				AND = {
+					region = DOR_551
+					THIS = { has_country_flag = claimed_DOR_551 }
+				}
+				AND = {
+					region = DOR_553
+					THIS = { has_country_flag = claimed_DOR_553 }
+				}
+				AND = {
+					region = DOR_555
+					THIS = { has_country_flag = claimed_DOR_555 }
+				}
+				AND = {
+					region = DOR_558
+					THIS = { has_country_flag = claimed_DOR_558 }
+				}
+				AND = {
+					region = RHU_560
+					THIS = { has_country_flag = claimed_RHU_560 }
+				}
+				AND = {
+					region = RHU_564
+					THIS = { has_country_flag = claimed_RHU_564 }
+				}
+				AND = {
+					region = RHU_566
+					THIS = { has_country_flag = claimed_RHU_566 }
+				}
+				AND = {
+					region = RHU_568
+					THIS = { has_country_flag = claimed_RHU_568 }
+				}
+				AND = {
+					region = RHU_571
+					THIS = { has_country_flag = claimed_RHU_571 }
+				}
+				AND = {
+					region = RHU_578
+					THIS = { has_country_flag = claimed_RHU_578 }
+				}
+				AND = {
+					region = RHU_580
+					THIS = { has_country_flag = claimed_RHU_580 }
+				}
+				AND = {
+					region = RHU_587
+					THIS = { has_country_flag = claimed_RHU_587 }
+				}
+				AND = {
+					region = RHU_590
+					THIS = { has_country_flag = claimed_RHU_590 }
+				}
+				AND = {
+					region = RHU_598
+					THIS = { has_country_flag = claimed_RHU_598 }
+				}
+				AND = {
+					region = RHU_600
+					THIS = { has_country_flag = claimed_RHU_600 }
+				}
+				AND = {
+					region = RHU_601
+					THIS = { has_country_flag = claimed_RHU_601 }
+				}
+				AND = {
+					region = RHU_602
+					THIS = { has_country_flag = claimed_RHU_602 }
+				}
+				AND = {
+					region = RHU_603
+					THIS = { has_country_flag = claimed_RHU_603 }
+				}
+				AND = {
+					region = RHU_604
+					THIS = { has_country_flag = claimed_RHU_604 }
+				}
+				AND = {
+					region = RHU_606
+					THIS = { has_country_flag = claimed_RHU_606 }
+				}
+				AND = {
+					region = RHU_611
+					THIS = { has_country_flag = claimed_RHU_611 }
+				}
+				AND = {
+					region = RHU_616
+					THIS = { has_country_flag = claimed_RHU_616 }
+				}
+				AND = {
+					region = RHU_619
+					THIS = { has_country_flag = claimed_RHU_619 }
+				}
+				AND = {
+					region = RHU_622
+					THIS = { has_country_flag = claimed_RHU_622 }
+				}
+				AND = {
+					region = RHU_625
+					THIS = { has_country_flag = claimed_RHU_625 }
+				}
+				AND = {
+					region = RHU_628
+					THIS = { has_country_flag = claimed_RHU_628 }
+				}
+				AND = {
+					region = RHU_629
+					THIS = { has_country_flag = claimed_RHU_629 }
+				}
+				AND = {
+					region = RHU_632
+					THIS = { has_country_flag = claimed_RHU_632 }
+				}
+				AND = {
+					region = RHU_634
+					THIS = { has_country_flag = claimed_RHU_634 }
+				}
+				AND = {
+					region = DAL_640
+					THIS = { has_country_flag = claimed_DAL_640 }
+				}
+				AND = {
+					region = DAL_642
+					THIS = { has_country_flag = claimed_DAL_642 }
+				}
+				AND = {
+					region = DAL_643
+					THIS = { has_country_flag = claimed_DAL_643 }
+				}
+				AND = {
+					region = DAL_645
+					THIS = { has_country_flag = claimed_DAL_645 }
+				}
+				AND = {
+					region = DAL_652
+					THIS = { has_country_flag = claimed_DAL_652 }
+				}
+				AND = {
+					region = DAL_654
+					THIS = { has_country_flag = claimed_DAL_654 }
+				}
+				AND = {
+					region = ERE_657
+					THIS = { has_country_flag = claimed_ERE_657 }
+				}
+				AND = {
+					region = ERE_660
+					THIS = { has_country_flag = claimed_ERE_660 }
+				}
+				AND = {
+					region = ERE_665
+					THIS = { has_country_flag = claimed_ERE_665 }
+				}
+				AND = {
+					region = ERE_668
+					THIS = { has_country_flag = claimed_ERE_668 }
+				}
+				AND = {
+					region = ERE_669
+					THIS = { has_country_flag = claimed_ERE_669 }
+				}
+				AND = {
+					region = ERE_681
+					THIS = { has_country_flag = claimed_ERE_681 }
+				}
+				AND = {
+					region = ERE_682
+					THIS = { has_country_flag = claimed_ERE_682 }
+				}
+				AND = {
+					region = ERE_686
+					THIS = { has_country_flag = claimed_ERE_686 }
+				}
+				AND = {
+					region = WRM_692
+					THIS = { has_country_flag = claimed_WRM_692 }
+				}
+				AND = {
+					region = WRM_696
+					THIS = { has_country_flag = claimed_WRM_696 }
+				}
+				AND = {
+					region = WRM_697
+					THIS = { has_country_flag = claimed_WRM_697 }
+				}
+				AND = {
+					region = MIR_704
+					THIS = { has_country_flag = claimed_MIR_704 }
+				}
+				AND = {
+					region = MIR_706
+					THIS = { has_country_flag = claimed_MIR_706 }
+				}
+				AND = {
+					region = WOO_709
+					THIS = { has_country_flag = claimed_WOO_709 }
+				}
+				AND = {
+					region = MIR_717
+					THIS = { has_country_flag = claimed_MIR_717 }
+				}
+				AND = {
+					region = MIR_718
+					THIS = { has_country_flag = claimed_MIR_718 }
+				}
+				AND = {
+					region = GUL_727
+					THIS = { has_country_flag = claimed_GUL_727 }
+				}
+				AND = {
+					region = AND_732
+					THIS = { has_country_flag = claimed_AND_732 }
+				}
+				AND = {
+					region = BEO_733
+					THIS = { has_country_flag = claimed_BEO_733 }
+				}
+				AND = {
+					region = BEO_737
+					THIS = { has_country_flag = claimed_BEO_737 }
+				}
+				AND = {
+					region = ANV_740
+					THIS = { has_country_flag = claimed_ANV_740 }
+				}
+				AND = {
+					region = ANV_745
+					THIS = { has_country_flag = claimed_ANV_745 }
+				}
+				AND = {
+					region = ANV_748
+					THIS = { has_country_flag = claimed_ANV_748 }
+				}
+				AND = {
+					region = BEO_751
+					THIS = { has_country_flag = claimed_BEO_751 }
+				}
+				AND = {
+					region = STO_757
+					THIS = { has_country_flag = claimed_STO_757 }
+				}
+				AND = {
+					region = LOR_765
+					THIS = { has_country_flag = claimed_LOR_765 }
+				}
+				AND = {
+					region = LOR_769
+					THIS = { has_country_flag = claimed_LOR_769 }
+				}
+				AND = {
+					region = FAN_773
+					THIS = { has_country_flag = claimed_FAN_773 }
+				}
+				AND = {
+					region = ROH_774
+					THIS = { has_country_flag = claimed_ROH_774 }
+				}
+				AND = {
+					region = ROH_775
+					THIS = { has_country_flag = claimed_ROH_775 }
+				}
+				AND = {
+					region = ROH_779
+					THIS = { has_country_flag = claimed_ROH_779 }
+				}
+				AND = {
+					region = ROH_780
+					THIS = { has_country_flag = claimed_ROH_780 }
+				}
+				AND = {
+					region = ROH_785
+					THIS = { has_country_flag = claimed_ROH_785 }
+				}
+				AND = {
+					region = ROH_786
+					THIS = { has_country_flag = claimed_ROH_786 }
+				}
+				AND = {
+					region = ROH_791
+					THIS = { has_country_flag = claimed_ROH_791 }
+				}
+				AND = {
+					region = ROH_794
+					THIS = { has_country_flag = claimed_ROH_794 }
+				}
+				AND = {
+					region = GON_796
+					THIS = { has_country_flag = claimed_GON_796 }
+				}
+				AND = {
+					region = ROH_798
+					THIS = { has_country_flag = claimed_ROH_798 }
+				}
+				AND = {
+					region = ROH_801
+					THIS = { has_country_flag = claimed_ROH_801 }
+				}
+				AND = {
+					region = ROH_802
+					THIS = { has_country_flag = claimed_ROH_802 }
+				}
+				AND = {
+					region = ROH_805
+					THIS = { has_country_flag = claimed_ROH_805 }
+				}
+				AND = {
+					region = ROH_808
+					THIS = { has_country_flag = claimed_ROH_808 }
+				}
+				AND = {
+					region = ISE_811
+					THIS = { has_country_flag = claimed_ISE_811 }
+				}
+				AND = {
+					region = ENE_822
+					THIS = { has_country_flag = claimed_ENE_822 }
+				}
+				AND = {
+					region = ENE_825
+					THIS = { has_country_flag = claimed_ENE_825 }
+				}
+				AND = {
+					region = ENE_830
+					THIS = { has_country_flag = claimed_ENE_830 }
+				}
+				AND = {
+					region = DUN_833
+					THIS = { has_country_flag = claimed_DUN_833 }
+				}
+				AND = {
+					region = DUN_834
+					THIS = { has_country_flag = claimed_DUN_834 }
+				}
+				AND = {
+					region = DUN_835
+					THIS = { has_country_flag = claimed_DUN_835 }
+				}
+				AND = {
+					region = ENE_836
+					THIS = { has_country_flag = claimed_ENE_836 }
+				}
+				AND = {
+					region = ENE_837
+					THIS = { has_country_flag = claimed_ENE_837 }
+				}
+				AND = {
+					region = ENE_838
+					THIS = { has_country_flag = claimed_ENE_838 }
+				}
+				AND = {
+					region = DUN_839
+					THIS = { has_country_flag = claimed_DUN_839 }
+				}
+				AND = {
+					region = DUN_840
+					THIS = { has_country_flag = claimed_DUN_840 }
+				}
+				AND = {
+					region = GMO_843
+					THIS = { has_country_flag = claimed_GMO_843 }
+				}
+				AND = {
+					region = GOB_847
+					THIS = { has_country_flag = claimed_GOB_847 }
+				}
+				AND = {
+					region = GGT_849
+					THIS = { has_country_flag = claimed_GGT_849 }
+				}
+				AND = {
+					region = RHU_855
+					THIS = { has_country_flag = claimed_RHU_855 }
+				}
+				AND = {
+					region = RHU_859
+					THIS = { has_country_flag = claimed_RHU_859 }
+				}
+				AND = {
+					region = DND_862
+					THIS = { has_country_flag = claimed_DND_862 }
+				}
+				AND = {
+					region = DND_863
+					THIS = { has_country_flag = claimed_DND_863 }
+				}
+				AND = {
+					region = IML_865
+					THIS = { has_country_flag = claimed_IML_865 }
+				}
+				AND = {
+					region = IML_868
+					THIS = { has_country_flag = claimed_IML_868 }
+				}
+				AND = {
+					region = IML_871
+					THIS = { has_country_flag = claimed_IML_871 }
+				}
+				AND = {
+					region = IML_874
+					THIS = { has_country_flag = claimed_IML_874 }
+				}
+				AND = {
+					region = IML_875
+					THIS = { has_country_flag = claimed_IML_875 }
+				}
+				AND = {
+					region = CAR_878
+					THIS = { has_country_flag = claimed_CAR_878 }
+				}
+				AND = {
+					region = CAR_882
+					THIS = { has_country_flag = claimed_CAR_882 }
+				}
+				AND = {
+					region = CAR_883
+					THIS = { has_country_flag = claimed_CAR_883 }
+				}
+				AND = {
+					region = CAR_886
+					THIS = { has_country_flag = claimed_CAR_886 }
+				}
+				AND = {
+					region = CAR_890
+					THIS = { has_country_flag = claimed_CAR_890 }
+				}
+				AND = {
+					region = CAR_891
+					THIS = { has_country_flag = claimed_CAR_891 }
+				}
+				AND = {
+					region = CAR_893
+					THIS = { has_country_flag = claimed_CAR_893 }
+				}
+				AND = {
+					region = CAR_894
+					THIS = { has_country_flag = claimed_CAR_894 }
+				}
+				AND = {
+					region = CAR_900
+					THIS = { has_country_flag = claimed_CAR_900 }
+				}
+				AND = {
+					region = CAR_902
+					THIS = { has_country_flag = claimed_CAR_902 }
+				}
+				AND = {
+					region = CAR_905
+					THIS = { has_country_flag = claimed_CAR_905 }
+				}
+				AND = {
+					region = CAR_907
+					THIS = { has_country_flag = claimed_CAR_907 }
+				}
+				AND = {
+					region = CAR_912
+					THIS = { has_country_flag = claimed_CAR_912 }
+				}
+				AND = {
+					region = BLU_914
+					THIS = { has_country_flag = claimed_BLU_914 }
+				}
+				AND = {
+					region = BLU_915
+					THIS = { has_country_flag = claimed_BLU_915 }
+				}
+				AND = {
+					region = BLU_917
+					THIS = { has_country_flag = claimed_BLU_917 }
+				}
+				AND = {
+					region = LIN_921
+					THIS = { has_country_flag = claimed_LIN_921 }
+				}
+				AND = {
+					region = LIN_926
+					THIS = { has_country_flag = claimed_LIN_926 }
+				}
+				AND = {
+					region = LIN_929
+					THIS = { has_country_flag = claimed_LIN_929 }
+				}
+				AND = {
+					region = LIN_933
+					THIS = { has_country_flag = claimed_LIN_933 }
+				}
+				AND = {
+					region = LIN_936
+					THIS = { has_country_flag = claimed_LIN_936 }
+				}
+				AND = {
+					region = BLU_940
+					THIS = { has_country_flag = claimed_BLU_940 }
+				}
+				AND = {
+					region = BLU_942
+					THIS = { has_country_flag = claimed_BLU_942 }
+				}
+				AND = {
+					region = BLU_947
+					THIS = { has_country_flag = claimed_BLU_947 }
+				}
+				AND = {
+					region = LIN_953
+					THIS = { has_country_flag = claimed_LIN_953 }
+				}
+				AND = {
+					region = LIN_955
+					THIS = { has_country_flag = claimed_LIN_955 }
+				}
+				AND = {
+					region = LIN_957
+					THIS = { has_country_flag = claimed_LIN_957 }
+				}
+				AND = {
+					region = NUM_960
+					THIS = { has_country_flag = claimed_NUM_960 }
+				}
+				AND = {
+					region = LIN_962
+					THIS = { has_country_flag = claimed_LIN_962 }
+				}
+				AND = {
+					region = LIN_964
+					THIS = { has_country_flag = claimed_LIN_964 }
+				}
+				AND = {
+					region = BLU_968
+					THIS = { has_country_flag = claimed_BLU_968 }
+				}
+				AND = {
+					region = BLU_972
+					THIS = { has_country_flag = claimed_BLU_972 }
+				}
+				AND = {
+					region = BLU_975
+					THIS = { has_country_flag = claimed_BLU_975 }
+				}
+				AND = {
+					region = LOS_977
+					THIS = { has_country_flag = claimed_LOS_977 }
+				}
+				AND = {
+					region = LOS_979
+					THIS = { has_country_flag = claimed_LOS_979 }
+				}
+				AND = {
+					region = LOS_980
+					THIS = { has_country_flag = claimed_LOS_980 }
+				}
+				AND = {
+					region = ANG_985
+					THIS = { has_country_flag = claimed_ANG_985 }
+				}
+				AND = {
+					region = ANG_987
+					THIS = { has_country_flag = claimed_ANG_987 }
+				}
+				AND = {
+					region = ANG_988
+					THIS = { has_country_flag = claimed_ANG_988 }
+				}
+				AND = {
+					region = GUN_993
+					THIS = { has_country_flag = claimed_GUN_993 }
+				}
+				AND = {
+					region = ANG_996
+					THIS = { has_country_flag = claimed_ANG_996 }
+				}
+				AND = {
+					region = ANG_999
+					THIS = { has_country_flag = claimed_ANG_999 }
+				}
+				AND = {
+					region = ANG_1004
+					THIS = { has_country_flag = claimed_ANG_1004 }
+				}
+				AND = {
+					region = DND_1005
+					THIS = { has_country_flag = claimed_DND_1005 }
+				}
+				AND = {
+					region = DND_1007
+					THIS = { has_country_flag = claimed_DND_1007 }
+				}
+				AND = {
+					region = DND_1009
+					THIS = { has_country_flag = claimed_DND_1009 }
+				}
+				AND = {
+					region = BRE_1013
+					THIS = { has_country_flag = claimed_BRE_1013 }
+				}
+				AND = {
+					region = BRE_1014
+					THIS = { has_country_flag = claimed_BRE_1014 }
+				}
+				AND = {
+					region = DND_1015
+					THIS = { has_country_flag = claimed_DND_1015 }
+				}
+				AND = {
+					region = DND_1022
+					THIS = { has_country_flag = claimed_DND_1022 }
+				}
+				AND = {
+					region = DND_1023
+					THIS = { has_country_flag = claimed_DND_1023 }
+				}
+				AND = {
+					region = DND_1025
+					THIS = { has_country_flag = claimed_DND_1025 }
+				}
+				AND = {
+					region = DND_1026
+					THIS = { has_country_flag = claimed_DND_1026 }
+				}
+				AND = {
+					region = DND_1028
+					THIS = { has_country_flag = claimed_DND_1028 }
+				}
+				AND = {
+					region = SHI_1030
+					THIS = { has_country_flag = claimed_SHI_1030 }
+				}
+				AND = {
+					region = SHI_1031
+					THIS = { has_country_flag = claimed_SHI_1031 }
+				}
+				AND = {
+					region = SHI_1034
+					THIS = { has_country_flag = claimed_SHI_1034 }
+				}
+				AND = {
+					region = SHI_1036
+					THIS = { has_country_flag = claimed_SHI_1036 }
+				}
+				AND = {
+					region = SHI_1040
+					THIS = { has_country_flag = claimed_SHI_1040 }
+				}
+				AND = {
+					region = SHI_1041
+					THIS = { has_country_flag = claimed_SHI_1041 }
+				}
+				AND = {
+					region = FOR_1042
+					THIS = { has_country_flag = claimed_FOR_1042 }
+				}
+				AND = {
+					region = LIN_1153
+					THIS = { has_country_flag = claimed_LIN_1153 }
+				}
+				AND = {
+					region = LOS_1158
+					THIS = { has_country_flag = claimed_LOS_1158 }
+				}
+				AND = {
+					region = ERE_1166
+					THIS = { has_country_flag = claimed_ERE_1166 }
+				}
+				AND = {
+					region = CAR_1179
+					THIS = { has_country_flag = claimed_CAR_1179 }
+				}
+				AND = {
+					region = CAR_1202
+					THIS = { has_country_flag = claimed_CAR_1202 }
+				}
+				AND = {
+					region = CAR_1204
+					THIS = { has_country_flag = claimed_CAR_1204 }
+				}
+				AND = {
+					region = CAR_1207
+					THIS = { has_country_flag = claimed_CAR_1207 }
+				}
+				AND = {
+					region = CAR_1208
+					THIS = { has_country_flag = claimed_CAR_1208 }
+				}
+				AND = {
+					region = CAR_1224
+					THIS = { has_country_flag = claimed_CAR_1224 }
+				}
+				AND = {
+					region = IML_1239
+					THIS = { has_country_flag = claimed_IML_1239 }
+				}
+				AND = {
+					region = RHU_1253
+					THIS = { has_country_flag = claimed_RHU_1253 }
+				}
+				AND = {
+					region = RHU_1257
+					THIS = { has_country_flag = claimed_RHU_1257 }
+				}
+				AND = {
+					region = RHU_1260
+					THIS = { has_country_flag = claimed_RHU_1260 }
+				}
+				AND = {
+					region = RHU_1264
+					THIS = { has_country_flag = claimed_RHU_1264 }
+				}
+				AND = {
+					region = DND_1269
+					THIS = { has_country_flag = claimed_DND_1269 }
+				}
+				AND = {
+					region = BRE_1284
+					THIS = { has_country_flag = claimed_BRE_1284 }
+				}
+				AND = {
+					region = DND_1309
+					THIS = { has_country_flag = claimed_DND_1309 }
+				}
+				AND = {
+					region = DND_1323
+					THIS = { has_country_flag = claimed_DND_1323 }
+				}
+				AND = {
+					region = DND_1328
+					THIS = { has_country_flag = claimed_DND_1328 }
+				}
+				AND = {
+					region = DND_1335
+					THIS = { has_country_flag = claimed_DND_1335 }
+				}
+				AND = {
+					region = DND_1341
+					THIS = { has_country_flag = claimed_DND_1341 }
+				}
+				AND = {
+					region = LOS_1343
+					THIS = { has_country_flag = claimed_LOS_1343 }
+				}
+				AND = {
+					region = LOS_1346
+					THIS = { has_country_flag = claimed_LOS_1346 }
+				}
+				AND = {
+					region = DND_1355
+					THIS = { has_country_flag = claimed_DND_1355 }
+				}
+				AND = {
+					region = DND_1358
+					THIS = { has_country_flag = claimed_DND_1358 }
+				}
+				AND = {
+					region = ANG_1371
+					THIS = { has_country_flag = claimed_ANG_1371 }
+				}
+				AND = {
+					region = ANG_1374
+					THIS = { has_country_flag = claimed_ANG_1374 }
+				}
+				AND = {
+					region = DAL_1377
+					THIS = { has_country_flag = claimed_DAL_1377 }
+				}
+				AND = {
+					region = RHO_1379
+					THIS = { has_country_flag = claimed_RHO_1379 }
+				}
+				AND = {
+					region = RHO_1382
+					THIS = { has_country_flag = claimed_RHO_1382 }
+				}
+				AND = {
+					region = RHU_1416
+					THIS = { has_country_flag = claimed_RHU_1416 }
+				}
+				AND = {
+					region = GUL_1436
+					THIS = { has_country_flag = claimed_GUL_1436 }
+				}
+				AND = {
+					region = GMO_1443
+					THIS = { has_country_flag = claimed_GMO_1443 }
+				}
+				AND = {
+					region = DUN_1448
+					THIS = { has_country_flag = claimed_DUN_1448 }
+				}
+				AND = {
+					region = DUN_1450
+					THIS = { has_country_flag = claimed_DUN_1450 }
+				}
+			}
+		}
+	}
+
+	po_demand_state = yes
+	
+	war_name = WAR_TAKE_NAME
 	
 	on_add = {
 		move_issue_percentage = {

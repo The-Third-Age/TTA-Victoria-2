@@ -488,6 +488,44 @@ political_decisions = {
 			AMO_sent_out_raiders_loc = {}
 		}
 	}
+	
+	AMO_claim_gramavuld = {
+		picture = "Rhun/AMO_claim_gramavuld"
+		potential = {
+			tag = AMO
+			has_country_flag = AMO_sent_out_raiders
+			NOT = { has_country_flag = AMO_claimed_gramavuld }
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			set_country_flag = AMO_claimed_gramavuld
+			random_owned = {
+				limit = { owner = { 642 = { NOT = { is_core = THIS } } } }
+				owner = { 642 = { add_core = THIS } } # Burh Austris
+			}
+			set_country_flag = claimed_DAL_640
+			set_country_flag = claimed_DAL_643
+			set_country_flag = claimed_DAL_645
+			set_country_flag = claimed_DAL_1377
+			set_country_flag = claimed_DAL_652
+			set_country_flag = claimed_DAL_654
+			
+			add_claim_DAL_640_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_DAL_643_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_DAL_645_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_DAL_652_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_DAL_654_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_DAL_1377_loc = {}
+		}
+	}
 }
 
 # Marsh Wights
