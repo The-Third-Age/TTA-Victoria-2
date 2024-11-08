@@ -1147,6 +1147,15 @@ country_event = {
 		}
 		# }
 		
+		# Apply Acquire Claim CB
+		any_country = {
+			limit = {
+				has_country_flag = should_apply_acquire_claim_cb
+				ai = yes
+			}
+			country_event = 2900
+		}
+		
 		# Refire the cleanup event next month {
 		random_owned = {
 			limit = {

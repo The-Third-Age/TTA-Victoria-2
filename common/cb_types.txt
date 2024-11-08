@@ -717,6 +717,8 @@ civil_war = {
 	}
 }
 
+# TODO: Need to display claims to player (thinking decision listing out unclaimed claims)
+# TODO: Figure out how to remove cb if all claimed land is conquered from tag
 acquire_claimed_state = {
 	sprite_index = 5
 	is_triggered_only = yes
@@ -726,7 +728,7 @@ acquire_claimed_state = {
 	prestige_factor = 3
 	peace_cost_factor = 0.75
 	penalty_factor = 1
-	always = yes
+	always = no
 	
 	constructing_cb = no
 
@@ -2015,12 +2017,16 @@ acquire_claimed_state = {
 	
 	war_name = WAR_TAKE_NAME
 	
+	# current scope = THIS = country applying the cb
+	# FROM = country being targetted
 	on_add = {
 		move_issue_percentage = {
 			from = jingoism
 			to = pro_military
 			value = 0.25
 		}
+		
+		country_event = 2900
 	}
 }
 
