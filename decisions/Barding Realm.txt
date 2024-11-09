@@ -498,6 +498,7 @@ political_decisions = {
 		}
 		
 		allow = {
+			all_core = { NOT = { has_province_modifier = AMO_easterling_war_camp } }
 		}
 		
 		effect = {
@@ -506,6 +507,8 @@ political_decisions = {
 				limit = { owner = { 642 = { NOT = { is_core = THIS } } } }
 				owner = { 642 = { add_core = THIS } } # Burh Austris
 			}
+			country_event = 2900 # CB giving event
+			
 			set_country_flag = claimed_DAL_640
 			set_country_flag = claimed_DAL_643
 			set_country_flag = claimed_DAL_645
@@ -526,7 +529,6 @@ political_decisions = {
 			add_claim_DAL_1377_loc = {}
 			
 			set_country_flag = should_apply_acquire_claim_cb
-			country_event = 2900 # CB giving event
 		}
 	}
 }

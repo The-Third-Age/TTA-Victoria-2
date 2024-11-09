@@ -9692,3 +9692,5174 @@ country_event = {
 		}
 	}
 }
+
+# Unowned Claims
+country_event = {
+	id = 2901
+	picture = "production"
+	title = "Unowned Claims"
+	desc = "EVTDESC2901"
+	is_triggered_only = yes
+	option = {
+		name = "Clear unneeded CBs"
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 2
+					province_id = 3
+					province_id = 4
+					province_id = 7
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_4 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 8
+					province_id = 9
+					province_id = 10
+					province_id = 11
+					province_id = 13
+					province_id = 14
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_14 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 16
+					province_id = 17
+					province_id = 19
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_16 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 21
+					province_id = 23
+					province_id = 24
+					province_id = 25
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_23 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 26
+					province_id = 27
+					province_id = 28
+					province_id = 29
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_27 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 32
+					province_id = 33
+					province_id = 35
+					province_id = 36
+					province_id = 37
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_37 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 39
+					province_id = 41
+					province_id = 42
+					province_id = 43
+					province_id = 44
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_44 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 48
+					province_id = 45
+					province_id = 46
+					province_id = 47
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_46 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 49
+					province_id = 50
+					province_id = 51
+					province_id = 52
+					province_id = 53
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_51 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 54
+					province_id = 55
+					province_id = 56
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_56 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 57
+					province_id = 58
+					province_id = 60
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_57 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 65
+					province_id = 66
+					province_id = 62
+					province_id = 63
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_63 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 69
+					province_id = 70
+					province_id = 71
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_71 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 72
+					province_id = 73
+					province_id = 74
+					province_id = 75
+					province_id = 76
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_72 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 80
+					province_id = 77
+					province_id = 79
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_77 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 128
+					province_id = 129
+					province_id = 120
+					province_id = 121
+					province_id = 78
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_78 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 81
+					province_id = 82
+					province_id = 83
+					province_id = 84
+					province_id = 85
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_81 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 86
+					province_id = 88
+					province_id = 89
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_89 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 92
+					province_id = 93
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_92 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 97
+					province_id = 98
+					province_id = 100
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_98 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 101
+					province_id = 102
+					province_id = 103
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_102 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 96
+					province_id = 104
+					province_id = 105
+					province_id = 107
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_105 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = { OR = { province_id = 110 } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_110 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 224
+					province_id = 950
+					province_id = 951
+					province_id = 952
+					province_id = 237
+					province_id = 111
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_111 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 112
+					province_id = 113
+					province_id = 114
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_114 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 115
+					province_id = 117
+					province_id = 118
+					province_id = 119
+					province_id = 122
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_118 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 150
+					province_id = 135
+					province_id = 152
+					province_id = 153
+					province_id = 123
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_123 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 130
+					province_id = 132
+					province_id = 133
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_133 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 134
+					province_id = 138
+					province_id = 139
+					province_id = 142
+					province_id = 143
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_134 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 920
+					province_id = 137
+					province_id = 923
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_137 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 144
+					province_id = 146
+					province_id = 149
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_146 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 145
+					province_id = 1281
+					province_id = 1282
+					province_id = 148
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BRE_148 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = { OR = { province_id = 151 } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_151 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 154
+					province_id = 155
+					province_id = 156
+					province_id = 157
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_154 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 160
+					province_id = 177
+					province_id = 158
+					province_id = 159
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_160 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 162
+					province_id = 163
+					province_id = 20
+					province_id = 164
+					province_id = 165
+					province_id = 166
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_165 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 167
+					province_id = 168
+					province_id = 169
+					province_id = 170
+					province_id = 171
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_169 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 176
+					province_id = 184
+					province_id = 172
+					province_id = 173
+					province_id = 174
+					province_id = 175
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_175 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 178
+					province_id = 179
+					province_id = 180
+					province_id = 181
+					province_id = 182
+					province_id = 183
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_183 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 192
+					province_id = 38
+					province_id = 186
+					province_id = 187
+					province_id = 190
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_186 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 99
+					province_id = 188
+					province_id = 189
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_188 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 194
+					province_id = 195
+					province_id = 196
+					province_id = 197
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_194 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 198
+					province_id = 199
+					province_id = 200
+					province_id = 201
+					province_id = 204
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_198 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 208
+					province_id = 209
+					province_id = 205
+					province_id = 206
+					province_id = 207
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_205 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 210
+					province_id = 211
+					province_id = 212
+					province_id = 213
+					province_id = 214
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_212 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 215
+					province_id = 216
+					province_id = 218
+					province_id = 219
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_216 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 225
+					province_id = 226
+					province_id = 220
+					province_id = 221
+					province_id = 222
+					province_id = 15
+					province_id = 223
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_226 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 227
+					province_id = 228
+					province_id = 229
+					province_id = 230
+					province_id = 231
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_228 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 232
+					province_id = 233
+					province_id = 234
+					province_id = 235
+					province_id = 236
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_232 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 240
+					province_id = 241
+					province_id = 242
+					province_id = 238
+					province_id = 239
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_238 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 246
+					province_id = 247
+					province_id = 248
+					province_id = 249
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_249 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 243
+					province_id = 244
+					province_id = 250
+					province_id = 251
+					province_id = 253
+					province_id = 255
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_253 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 256
+					province_id = 257
+					province_id = 258
+					province_id = 259
+					province_id = 260
+					province_id = 282
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_UMB_256 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 261
+					province_id = 262
+					province_id = 264
+					province_id = 265
+					province_id = 266
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_UMB_260 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = { OR = { province_id = 263 } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_UMB_263 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 267
+					province_id = 268
+					province_id = 270
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_UMB_270 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 272
+					province_id = 273
+					province_id = 274
+					province_id = 275
+					province_id = 271
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_UMB_273 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 276
+					province_id = 278
+					province_id = 280
+					province_id = 283
+					province_id = 318
+					province_id = 319
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_HAR_277 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 284
+					province_id = 285
+					province_id = 286
+					province_id = 287
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_HAR_286 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 288
+					province_id = 320
+					province_id = 289
+					province_id = 290
+					province_id = 317
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_HAR_288 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 672
+					province_id = 291
+					province_id = 676
+					province_id = 678
+					province_id = 671
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_291 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 336
+					province_id = 321
+					province_id = 292
+					province_id = 293
+					province_id = 294
+					province_id = 295
+					province_id = 350
+					province_id = 351
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_HAR_293 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 307
+					province_id = 147
+					province_id = 1278
+					province_id = 1279
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_307 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 309
+					province_id = 310
+					province_id = 311
+					province_id = 315
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_HAR_310 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 304
+					province_id = 305
+					province_id = 308
+					province_id = 312
+					province_id = 313
+					province_id = 303
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_HAR_312 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 322
+					province_id = 323
+					province_id = 324
+					province_id = 325
+					province_id = 326
+					province_id = 327
+					province_id = 328
+					province_id = 329
+					province_id = 330
+					province_id = 331
+					province_id = 332
+					province_id = 333
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_HAR_322 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 338
+					province_id = 339
+					province_id = 334
+					province_id = 335
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_HAR_334 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 340
+					province_id = 341
+					province_id = 342
+					province_id = 343
+					province_id = 345
+					province_id = 254
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_342 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 384
+					province_id = 306
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_344 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 337
+					province_id = 353
+					province_id = 373
+					province_id = 346
+					province_id = 347
+					province_id = 348
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_348 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 352
+					province_id = 354
+					province_id = 356
+					province_id = 297
+					province_id = 298
+					province_id = 299
+					province_id = 301
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_HAR_356 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 357
+					province_id = 359
+					province_id = 300
+					province_id = 302
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_357 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 369
+					province_id = 370
+					province_id = 371
+					province_id = 361
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_361 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 360
+					province_id = 362
+					province_id = 363
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_362 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 344
+					province_id = 392
+					province_id = 364
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_364 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 884
+					province_id = 885
+					province_id = 365
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_365 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 368
+					province_id = 358
+					province_id = 366
+					province_id = 367
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_366 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 374
+					province_id = 375
+					province_id = 376
+					province_id = 377
+					province_id = 378
+					province_id = 379
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_376 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 385
+					province_id = 386
+					province_id = 380
+					province_id = 383
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_380 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 387
+					province_id = 388
+					province_id = 390
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_387 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 389
+					province_id = 391
+					province_id = 393
+					province_id = 394
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_KHA_391 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 437
+					province_id = 425
+					province_id = 202
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_396 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 395
+					province_id = 397
+					province_id = 381
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_397 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 400
+					province_id = 398
+					province_id = 399
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_399 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 401
+					province_id = 402
+					province_id = 404
+					province_id = 405
+					province_id = 406
+					province_id = 382
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_404 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 432
+					province_id = 453
+					province_id = 407
+					province_id = 203
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_408 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 403
+					province_id = 408
+					province_id = 409
+					province_id = 410
+					province_id = 411
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_411 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 416
+					province_id = 412
+					province_id = 413
+					province_id = 414
+					province_id = 415
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_412 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 417
+					province_id = 418
+					province_id = 419
+					province_id = 420
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_418 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 421
+					province_id = 431
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_421 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 422
+					province_id = 423
+					province_id = 424
+					province_id = 426
+					province_id = 427
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_423 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 439
+					province_id = 428
+					province_id = 429
+					province_id = 430
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_429 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 433
+					province_id = 434
+					province_id = 435
+					province_id = 443
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_433 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 436
+					province_id = 438
+					province_id = 440
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_440 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 448
+					province_id = 449
+					province_id = 441
+					province_id = 444
+					province_id = 447
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_449 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 452
+					province_id = 454
+					province_id = 455
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MOR_455 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 456
+					province_id = 457
+					province_id = 458
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_458 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 467
+					province_id = 459
+					province_id = 460
+					province_id = 461
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_461 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 464
+					province_id = 462
+					province_id = 463
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_462 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 784
+					province_id = 465
+					province_id = 466
+					province_id = 468
+					province_id = 473
+					province_id = 783
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_465 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1378
+					province_id = 470
+					province_id = 471
+					province_id = 472
+					province_id = 269
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_472 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 277
+					province_id = 469
+					province_id = 474
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_474 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 480
+					province_id = 475
+					province_id = 476
+					province_id = 477
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_476 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 481
+					province_id = 482
+					province_id = 483
+					province_id = 484
+					province_id = 485
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_484 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 577
+					province_id = 486
+					province_id = 487
+					province_id = 488
+					province_id = 489
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_489 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1380
+					province_id = 490
+					province_id = 491
+					province_id = 492
+					province_id = 494
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_491 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 499
+					province_id = 500
+					province_id = 501
+					province_id = 502
+					province_id = 493
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_500 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 503
+					province_id = 505
+					province_id = 506
+					province_id = 507
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_507 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 512
+					province_id = 513
+					province_id = 508
+					province_id = 509
+					province_id = 510
+					province_id = 511
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_508 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 514
+					province_id = 515
+					province_id = 516
+					province_id = 1385
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_515 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 519
+					province_id = 520
+					province_id = 521
+					province_id = 522
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_520 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 517
+					province_id = 1381
+					province_id = 518
+					province_id = 504
+					province_id = 523
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_523 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 531
+					province_id = 532
+					province_id = 537
+					province_id = 524
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_524 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 525
+					province_id = 526
+					province_id = 527
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_525 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 528
+					province_id = 529
+					province_id = 530
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_528 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 533
+					province_id = 534
+					province_id = 535
+					province_id = 536
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_535 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 552
+					province_id = 538
+					province_id = 539
+					province_id = 540
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DOR_539 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 544
+					province_id = 545
+					province_id = 546
+					province_id = 547
+					province_id = 554
+					province_id = 543
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DOR_545 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 548
+					province_id = 549
+					province_id = 550
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DOR_550 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = { OR = { province_id = 551 } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DOR_551 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 553
+					province_id = 541
+					province_id = 542
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DOR_553 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 555
+					province_id = 556
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DOR_555 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 557
+					province_id = 558
+					province_id = 559
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DOR_558 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 560
+					province_id = 561
+					province_id = 570
+					province_id = 1386
+					province_id = 1387
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_560 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 562
+					province_id = 563
+					province_id = 564
+					province_id = 565
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_564 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 566
+					province_id = 567
+					province_id = 599
+					province_id = 569
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_566 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 597
+					province_id = 583
+					province_id = 568
+					province_id = 585
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_568 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 579
+					province_id = 571
+					province_id = 572
+					province_id = 573
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_571 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 576
+					province_id = 578
+					province_id = 574
+					province_id = 575
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_578 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 580
+					province_id = 581
+					province_id = 582
+					province_id = 584
+					province_id = 1388
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_580 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 586
+					province_id = 587
+					province_id = 588
+					province_id = 589
+					province_id = 1389
+					province_id = 1390
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_587 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 592
+					province_id = 594
+					province_id = 595
+					province_id = 590
+					province_id = 591
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_590 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1392
+					province_id = 1393
+					province_id = 1394
+					province_id = 598
+					province_id = 1391
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_598 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 593
+					province_id = 1395
+					province_id = 596
+					province_id = 1396
+					province_id = 600
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_600 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = { OR = { province_id = 601 } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_601 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1399
+					province_id = 1400
+					province_id = 602
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_602 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 608
+					province_id = 609
+					province_id = 1397
+					province_id = 1398
+					province_id = 603
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_603 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1401
+					province_id = 1402
+					province_id = 1403
+					province_id = 604
+					province_id = 605
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_604 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 620
+					province_id = 606
+					province_id = 607
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_606 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 610
+					province_id = 611
+					province_id = 612
+					province_id = 613
+					province_id = 618
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_611 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1424
+					province_id = 1425
+					province_id = 615
+					province_id = 616
+					province_id = 617
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_616 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 614
+					province_id = 619
+					province_id = 1421
+					province_id = 1422
+					province_id = 1423
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_619 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 624
+					province_id = 1404
+					province_id = 622
+					province_id = 623
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_622 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 625
+					province_id = 626
+					province_id = 627
+					province_id = 1407
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_625 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1408
+					province_id = 1409
+					province_id = 1410
+					province_id = 628
+					province_id = 1405
+					province_id = 1406
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_628 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1412
+					province_id = 629
+					province_id = 630
+					province_id = 631
+					province_id = 636
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_629 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 632
+					province_id = 633
+					province_id = 621
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_632 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1411
+					province_id = 1413
+					province_id = 1414
+					province_id = 1415
+					province_id = 634
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_634 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 640
+					province_id = 641
+					province_id = 650
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DAL_640 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 642
+					province_id = 1475
+					province_id = 635
+					province_id = 637
+					province_id = 638
+					province_id = 639
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DAL_642 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 643
+					province_id = 644
+					province_id = 349
+					province_id = 446
+					province_id = 478
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DAL_643 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1474
+					province_id = 645
+					province_id = 646
+					province_id = 647
+					province_id = 442
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DAL_645 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 656
+					province_id = 652
+					province_id = 141
+					province_id = 655
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DAL_652 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1473
+					province_id = 451
+					province_id = 648
+					province_id = 649
+					province_id = 140
+					province_id = 653
+					province_id = 654
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DAL_654 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 657
+					province_id = 689
+					province_id = 1169
+					province_id = 658
+					province_id = 1170
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_657 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1168
+					province_id = 659
+					province_id = 660
+					province_id = 664
+					province_id = 396
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_660 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 665
+					province_id = 666
+					province_id = 1167
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_665 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 662
+					province_id = 663
+					province_id = 668
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_668 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 667
+					province_id = 669
+					province_id = 1165
+					province_id = 670
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_669 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 679
+					province_id = 680
+					province_id = 681
+					province_id = 252
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_681 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 279
+					province_id = 682
+					province_id = 684
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_682 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 688
+					province_id = 686
+					province_id = 687
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_686 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 690
+					province_id = 691
+					province_id = 692
+					province_id = 693
+					province_id = 694
+					province_id = 700
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_WRM_692 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1426
+					province_id = 1427
+					province_id = 695
+					province_id = 696
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_WRM_696 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1428
+					province_id = 1429
+					province_id = 697
+					province_id = 698
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_WRM_697 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 704
+					province_id = 1431
+					province_id = 699
+					province_id = 701
+					province_id = 702
+					province_id = 703
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MIR_704 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 705
+					province_id = 706
+					province_id = 707
+					province_id = 1430
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MIR_706 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 708
+					province_id = 709
+					province_id = 710
+					province_id = 715
+					province_id = 716
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_WOO_709 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 711
+					province_id = 712
+					province_id = 713
+					province_id = 714
+					province_id = 717
+					province_id = 719
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MIR_717 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1432
+					province_id = 718
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_MIR_718 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 722
+					province_id = 724
+					province_id = 726
+					province_id = 727
+					province_id = 1433
+					province_id = 1434
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GUL_727 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 728
+					province_id = 729
+					province_id = 730
+					province_id = 731
+					province_id = 732
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_AND_732 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 736
+					province_id = 1441
+					province_id = 733
+					province_id = 734
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BEO_733 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 737
+					province_id = 738
+					province_id = 739
+					province_id = 735
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BEO_737 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 740
+					province_id = 741
+					province_id = 742
+					province_id = 685
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANV_740 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 743
+					province_id = 744
+					province_id = 745
+					province_id = 1437
+					province_id = 1438
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANV_745 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 746
+					province_id = 747
+					province_id = 748
+					province_id = 749
+					province_id = 1439
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANV_748 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 752
+					province_id = 1440
+					province_id = 753
+					province_id = 754
+					province_id = 750
+					province_id = 751
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BEO_751 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 755
+					province_id = 756
+					province_id = 757
+					province_id = 758
+					province_id = 759
+					province_id = 760
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_STO_757 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 761
+					province_id = 763
+					province_id = 764
+					province_id = 765
+					province_id = 766
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LOR_765 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 768
+					province_id = 769
+					province_id = 1442
+					province_id = 762
+					province_id = 767
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LOR_769 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 673
+					province_id = 770
+					province_id = 771
+					province_id = 772
+					province_id = 773
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_FAN_773 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 674
+					province_id = 675
+					province_id = 677
+					province_id = 774
+					province_id = 778
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_774 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 775
+					province_id = 776
+					province_id = 777
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_775 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1171
+					province_id = 1172
+					province_id = 1173
+					province_id = 779
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_779 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1174
+					province_id = 780
+					province_id = 781
+					province_id = 782
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_780 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 785
+					province_id = 1175
+					province_id = 1176
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_785 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 786
+					province_id = 787
+					province_id = 788
+					province_id = 789
+					province_id = 790
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_786 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1
+					province_id = 791
+					province_id = 792
+					province_id = 793
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_791 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 5
+					province_id = 6
+					province_id = 794
+					province_id = 795
+					province_id = 12
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_794 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 193
+					province_id = 116
+					province_id = 796
+					province_id = 191
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GON_796 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 22
+					province_id = 797
+					province_id = 798
+					province_id = 30
+					province_id = 799
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_798 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 801
+					province_id = 94
+					province_id = 31
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_801 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 802
+					province_id = 18
+					province_id = 87
+					province_id = 91
+					province_id = 109
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_802 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 800
+					province_id = 803
+					province_id = 804
+					province_id = 805
+					province_id = 806
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_805 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 372
+					province_id = 807
+					province_id = 808
+					province_id = 809
+					province_id = 810
+					province_id = 683
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ROH_808 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1446
+					province_id = 1447
+					province_id = 811
+					province_id = 812
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ISE_811 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 820
+					province_id = 821
+					province_id = 822
+					province_id = 823
+					province_id = 824
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ENE_822 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1457
+					province_id = 825
+					province_id = 281
+					province_id = 826
+					province_id = 828
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ENE_825 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1456
+					province_id = 819
+					province_id = 1459
+					province_id = 830
+					province_id = 1455
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ENE_830 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 832
+					province_id = 833
+					province_id = 817
+					province_id = 818
+					province_id = 831
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DUN_833 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 834
+					province_id = 1452
+					province_id = 1453
+					province_id = 1454
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DUN_834 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 835
+					province_id = 1464
+					province_id = 1465
+					province_id = 1466
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DUN_835 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1458
+					province_id = 836
+					province_id = 827
+					province_id = 125
+					province_id = 829
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ENE_836 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1460
+					province_id = 837
+					province_id = 1461
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ENE_837 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 450
+					province_id = 838
+					province_id = 1462
+					province_id = 1463
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ENE_838 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 839
+					province_id = 1467
+					province_id = 1468
+					province_id = 1469
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DUN_839 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1472
+					province_id = 840
+					province_id = 1470
+					province_id = 1471
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DUN_840 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 842
+					province_id = 843
+					province_id = 844
+					province_id = 845
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GMO_843 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 850
+					province_id = 841
+					province_id = 813
+					province_id = 846
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GOB_847 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 848
+					province_id = 849
+					province_id = 851
+					province_id = 847
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GGT_849 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 853
+					province_id = 854
+					province_id = 855
+					province_id = 1262
+					province_id = 1263
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_855 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1254
+					province_id = 1255
+					province_id = 859
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_859 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 864
+					province_id = 1249
+					province_id = 1250
+					province_id = 861
+					province_id = 862
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_862 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1248
+					province_id = 863
+					province_id = 1247
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_863 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 865
+					province_id = 866
+					province_id = 1243
+					province_id = 1244
+					province_id = 1245
+					province_id = 1246
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_IML_865 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 867
+					province_id = 868
+					province_id = 869
+					province_id = 1241
+					province_id = 1242
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_IML_868 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1235
+					province_id = 1236
+					province_id = 1237
+					province_id = 871
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_IML_871 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1234
+					province_id = 872
+					province_id = 873
+					province_id = 874
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_IML_874 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1232
+					province_id = 1233
+					province_id = 875
+					province_id = 1231
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_IML_875 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1228
+					province_id = 1229
+					province_id = 878
+					province_id = 1230
+					province_id = 879
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_878 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 882
+					province_id = 1222
+					province_id = 887
+					province_id = 1223
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_882 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 880
+					province_id = 881
+					province_id = 883
+					province_id = 1221
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_883 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1218
+					province_id = 1219
+					province_id = 1220
+					province_id = 886
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_886 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 889
+					province_id = 890
+					province_id = 1213
+					province_id = 1214
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_890 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1216
+					province_id = 1217
+					province_id = 891
+					province_id = 876
+					province_id = 892
+					province_id = 1215
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_891 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1195
+					province_id = 1196
+					province_id = 893
+					province_id = 895
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_893 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 901
+					province_id = 1192
+					province_id = 1193
+					province_id = 1194
+					province_id = 894
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_894 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 896
+					province_id = 900
+					province_id = 1197
+					province_id = 1198
+					province_id = 1199
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_900 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1188
+					province_id = 1189
+					province_id = 902
+					province_id = 1190
+					province_id = 903
+					province_id = 1191
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_902 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1186
+					province_id = 1187
+					province_id = 905
+					province_id = 906
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_905 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1184
+					province_id = 1185
+					province_id = 904
+					province_id = 907
+					province_id = 1182
+					province_id = 1183
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_907 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 912
+					province_id = 1178
+					province_id = 909
+					province_id = 910
+					province_id = 911
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_912 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 914
+					province_id = 136
+					province_id = 316
+					province_id = 445
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BLU_914 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 915
+					province_id = 916
+					province_id = 1177
+					province_id = 314
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BLU_915 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 913
+					province_id = 931
+					province_id = 917
+					province_id = 918
+					province_id = 919
+					province_id = 296
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BLU_917 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 67
+					province_id = 921
+					province_id = 185
+					province_id = 922
+					province_id = 924
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_921 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 161
+					province_id = 59
+					province_id = 925
+					province_id = 926
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_926 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 928
+					province_id = 929
+					province_id = 131
+					province_id = 61
+					province_id = 927
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_929 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 932
+					province_id = 933
+					province_id = 934
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_933 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 930
+					province_id = 948
+					province_id = 935
+					province_id = 936
+					province_id = 937
+					province_id = 106
+					province_id = 95
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_936 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 245
+					province_id = 938
+					province_id = 939
+					province_id = 1163
+					province_id = 940
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BLU_940 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 969
+					province_id = 970
+					province_id = 971
+					province_id = 942
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BLU_942 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 947
+					province_id = 1160
+					province_id = 1161
+					province_id = 1162
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BLU_947 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 68
+					province_id = 949
+					province_id = 953
+					province_id = 90
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_953 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 40
+					province_id = 217
+					province_id = 954
+					province_id = 955
+					province_id = 108
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_955 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 956
+					province_id = 957
+					province_id = 1149
+					province_id = 1150
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_957 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = { OR = { province_id = 960 } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_NUM_960 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 961
+					province_id = 962
+					province_id = 963
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_962 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1154
+					province_id = 1155
+					province_id = 964
+					province_id = 1156
+					province_id = 965
+					province_id = 1159
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_964 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = { OR = { province_id = 968 } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BLU_968 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 946
+					province_id = 972
+					province_id = 941
+					province_id = 973
+					province_id = 974
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BLU_972 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 944
+					province_id = 945
+					province_id = 975
+					province_id = 943
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BLU_975 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 977
+					province_id = 1347
+					province_id = 1348
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LOS_977 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 979
+					province_id = 1351
+					province_id = 1352
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LOS_979 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 980
+					province_id = 981
+					province_id = 1020
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LOS_980 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1362
+					province_id = 997
+					province_id = 984
+					province_id = 985
+					province_id = 986
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANG_985 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 982
+					province_id = 1366
+					province_id = 1367
+					province_id = 1368
+					province_id = 987
+					province_id = 1356
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANG_987 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1369
+					province_id = 1370
+					province_id = 988
+					province_id = 989
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANG_988 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 992
+					province_id = 993
+					province_id = 990
+					province_id = 991
+					province_id = 479
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GUN_993 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 995
+					province_id = 1363
+					province_id = 996
+					province_id = 1364
+					province_id = 1365
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANG_996 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1361
+					province_id = 994
+					province_id = 998
+					province_id = 999
+					province_id = 1000
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANG_999 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1360
+					province_id = 983
+					province_id = 1001
+					province_id = 1004
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANG_1004 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1276
+					province_id = 1005
+					province_id = 1277
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1005 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1273
+					province_id = 1274
+					province_id = 1275
+					province_id = 1007
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1007 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1008
+					province_id = 1009
+					province_id = 1267
+					province_id = 1268
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1009 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1280
+					province_id = 1010
+					province_id = 1011
+					province_id = 1013
+					province_id = 126
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BRE_1013 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1012
+					province_id = 1014
+					province_id = 1286
+					province_id = 1287
+					province_id = 1288
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BRE_1014 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1015
+					province_id = 1016
+					province_id = 1017
+					province_id = 1337
+					province_id = 1338
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1015 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1313
+					province_id = 1314
+					province_id = 1315
+					province_id = 1316
+					province_id = 1022
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1022 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1317
+					province_id = 1319
+					province_id = 1320
+					province_id = 1023
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1023 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1025
+					province_id = 1331
+					province_id = 1332
+					province_id = 1333
+					province_id = 1334
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1025 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1026
+					province_id = 1324
+					province_id = 1325
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1026 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1312
+					province_id = 1028
+					province_id = 1310
+					province_id = 1311
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1028 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 64
+					province_id = 1298
+					province_id = 1299
+					province_id = 1300
+					province_id = 1030
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_SHI_1030 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1296
+					province_id = 1297
+					province_id = 1029
+					province_id = 1031
+					province_id = 1037
+					province_id = 1295
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_SHI_1031 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1032
+					province_id = 1033
+					province_id = 1034
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_SHI_1034 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1290
+					province_id = 1035
+					province_id = 1291
+					province_id = 1036
+					province_id = 1292
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_SHI_1036 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1040
+					province_id = 1293
+					province_id = 1038
+					province_id = 1294
+					province_id = 1039
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_SHI_1040 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1041
+					province_id = 1301
+					province_id = 1302
+					province_id = 1303
+					province_id = 1304
+					province_id = 127
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_SHI_1041 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1056
+					province_id = 1057
+					province_id = 1058
+					province_id = 1059
+					province_id = 1060
+					province_id = 1061
+					province_id = 1062
+					province_id = 1063
+					province_id = 1064
+					province_id = 1065
+					province_id = 1042
+					province_id = 1043
+					province_id = 1044
+					province_id = 1045
+					province_id = 1046
+					province_id = 1047
+					province_id = 1048
+					province_id = 1049
+					province_id = 1050
+					province_id = 1051
+					province_id = 1052
+					province_id = 1053
+					province_id = 1054
+					province_id = 1055
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_FOR_1042 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1152
+					province_id = 1153
+					province_id = 34
+					province_id = 958
+					province_id = 959
+					province_id = 1151
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LIN_1153 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1157
+					province_id = 1158
+					province_id = 966
+					province_id = 967
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LOS_1158 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = { OR = { province_id = 1166 } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ERE_1166 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1179
+					province_id = 908
+					province_id = 1180
+					province_id = 1181
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_1179 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1200
+					province_id = 1201
+					province_id = 1202
+					province_id = 1203
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_1202 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 898
+					province_id = 899
+					province_id = 1204
+					province_id = 1205
+					province_id = 1206
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_1204 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 897
+					province_id = 1207
+					province_id = 888
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_1207 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1208
+					province_id = 1209
+					province_id = 1210
+					province_id = 1211
+					province_id = 1212
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_1208 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1224
+					province_id = 1225
+					province_id = 1226
+					province_id = 1227
+					province_id = 877
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_CAR_1224 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 870
+					province_id = 1238
+					province_id = 1239
+					province_id = 1240
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_IML_1239 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1251
+					province_id = 1252
+					province_id = 1253
+					province_id = 860
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_1253 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1256
+					province_id = 1257
+					province_id = 1258
+					province_id = 1259
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_1257 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 856
+					province_id = 857
+					province_id = 858
+					province_id = 1260
+					province_id = 1261
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_1260 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1264
+					province_id = 1265
+					province_id = 1266
+					province_id = 852
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_1264 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1269
+					province_id = 1270
+					province_id = 1271
+					province_id = 1272
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1269 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1330
+					province_id = 1283
+					province_id = 1284
+					province_id = 1285
+					province_id = 1289
+					province_id = 1006
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_BRE_1284 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1305
+					province_id = 1306
+					province_id = 1307
+					province_id = 1308
+					province_id = 1309
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1309 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1024
+					province_id = 1027
+					province_id = 1321
+					province_id = 1322
+					province_id = 1323
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1323 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1328
+					province_id = 1329
+					province_id = 1326
+					province_id = 1327
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1328 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1318
+					province_id = 1335
+					province_id = 1336
+					province_id = 1018
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1335 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1339
+					province_id = 1340
+					province_id = 1341
+					province_id = 1021
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1341 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 976
+					province_id = 1344
+					province_id = 1345
+					province_id = 1342
+					province_id = 1343
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LOS_1343 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1346
+					province_id = 978
+					province_id = 1349
+					province_id = 1350
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_LOS_1346 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1353
+					province_id = 1354
+					province_id = 1355
+					province_id = 1019
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1355 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1002
+					province_id = 1003
+					province_id = 1357
+					province_id = 1358
+					province_id = 1359
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DND_1358 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1371
+					province_id = 1372
+					province_id = 1373
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANG_1371 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = { OR = { province_id = 1374 } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_ANG_1374 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1377
+					province_id = 355
+					province_id = 661
+					province_id = 651
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DAL_1377 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 496
+					province_id = 497
+					province_id = 498
+					province_id = 1379
+					province_id = 495
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_1379 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1382
+					province_id = 1383
+					province_id = 1384
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHO_1382 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1416
+					province_id = 1417
+					province_id = 1418
+					province_id = 1419
+					province_id = 1420
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_RHU_1416 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 720
+					province_id = 721
+					province_id = 723
+					province_id = 725
+					province_id = 1435
+					province_id = 1436
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GUL_1436 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1443
+					province_id = 1444
+					province_id = 1445
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_GMO_1443 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 816
+					province_id = 1448
+					province_id = 1449
+					province_id = 814
+					province_id = 815
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DUN_1448 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					province_id = 1450
+					province_id = 1451
+					province_id = 124
+				}
+			}
+			owner = {
+				any_country = {
+					limit = { has_country_flag = claimed_DUN_1450 }
+					set_country_flag = can_keep_cbs
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				casus_belli = THIS
+				NOT = { has_country_flag = can_keep_cbs }
+			}
+			remove_casus_belli = {
+				target = THIS
+				type = acquire_claimed_state
+			}
+		}
+		any_country = {
+			limit = { has_country_flag = can_keep_cbs }
+			clr_country_flag = can_keep_cbs
+		}
+	}
+}
