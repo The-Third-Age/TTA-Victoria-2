@@ -991,7 +991,7 @@ country_event = {
 # Open Trade with the Barding Realm?
 country_event = {
 	id = 50925
-	title = "Trade With the $FROMCOUNTRY$?"
+	title = "Trade With the $FROMCOUNTRY$"
 	desc = "EVTDESC50925"
 	picture = "gramavuld/market"
 	
@@ -1001,7 +1001,6 @@ country_event = {
 		name = "An offer graciously accepted"
 		
 		add_country_modifier = { name = trading_with_DAL duration = -1 }
-		FROM = { country_event = 50926 }
 		
 		ai_chance = {
 			factor = 80
@@ -1022,63 +1021,9 @@ country_event = {
 			}
 		}
 	}
-	
-	option = {
-		name = "An offer graciously rejected"
-		
-		set_country_flag = rejected_trade_with_DAL
-		FROM = { country_event = 50927 }
-		
-		ai_chance = {
-			factor = 20
-			
-			modifier = {
-				factor = 0
-				OR = {
-					in_sphere = FROM
-					AND = {
-						has_global_flag = railroading_enabled
-						tag = DA1
-					}
-				}
-			}
-		}
-	}
 }
 
-# Accepted
-country_event = {
-	id = 50926
-	title = "Trade with the $FROMCOUNTRY$ Accepted"
-	desc = "EVTDESC50926"
-	picture = "gramavuld/market"
-	
-	is_triggered_only = yes
-	allow_multiple_instances = yes
-	
-	option = {
-		name = "Good"
-		
-		prestige = 5
-	}
-}
-
-# Rejected
-country_event = {
-	id = 50927
-	title = "Trade with the $FROMCOUNTRY$ Rejected"
-	desc = "EVTDESC50927"
-	picture = "gramavuld/market"
-	
-	is_triggered_only = yes
-	allow_multiple_instances = yes
-	
-	option = {
-		name = "No"
-		
-		prestige = -5
-	}
-}
+# Event 50926 and 50927 removed
 
 # Esgaroth Trade Level Update
 province_event = {

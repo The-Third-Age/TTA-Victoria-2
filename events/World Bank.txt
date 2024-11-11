@@ -1388,35 +1388,63 @@ country_event = {
 		# }
 		
 		# Trading Mechanic Modifier Changes {
-		# Remove trading modifiers and flags if DAL doesn't exist or it doesn't own Esgaroth
+		# Remove trading modifiers and flags if DAL doesn't exist or it doesn't own Esgaroth. Handles DAL, DAL-formed RHO and DAL-formed FFN
 		random_owned = {
 			limit = {
 				owner = {
 					OR = {
-						NOT = { exists = DAL }
-						NOT = { DAL = { owns = 654 } }
+						AND = {
+							NOT = { exists = DAL }
+							OR = {
+								NOT = { exists = RHO }
+								NOT = { RHO = { has_country_flag = DAL_content } }
+							}
+							OR = {
+								NOT = { exists = FFN }
+								NOT = { FFN = { has_country_flag = DAL_content } }
+							}
+						}
+						AND = {
+							NOT = { DAL = { owns = 654 } }
+							OR = {
+								NOT = { RHO = { owns = 654 } }
+								NOT = { RHO = { has_country_flag = DAL_content } }
+							}
+							OR = {
+								NOT = { FFN = { owns = 654 } }
+								NOT = { FFN = { has_country_flag = DAL_content } }
+							}
+						}
 					}
 				}
 			}
-			owner = {
-				any_country = {
-					remove_country_modifier = trading_with_DAL
-					clr_country_flag = rejected_trade_with_DAL
-				}
-			}
+			owner = { any_country = { remove_country_modifier = trading_with_DAL } }
 		}
 		
-		# Remove trading modifiers and flags from nonexistant countries
+		# Remove trading modifiers and flags from nonexistant countries or countries that are no longer allied/spheres by Dale. Handles DAL, DAL-formed RHO and DAL-formed FFN
 		any_country = {
 			limit = {
-				exists = no
+				has_country_modifier = trading_with_DAL
 				OR = {
-					has_country_modifier = trading_with_DAL
-					has_country_flag = rejected_trade_with_DAL
+					exists = no
+					AND = {
+						exists = DAL
+						NOT = { alliance_with = DAL }
+						NOT = { in_sphere = DAL }
+					}
+					AND = {
+						RHO = { has_country_flag = DAL_content }
+						NOT = { alliance_with = RHO }
+						NOT = { in_sphere = RHO }
+					}
+					AND = {
+						FFN = { has_country_flag = DAL_content }
+						NOT = { alliance_with = FFN }
+						NOT = { in_sphere = FFN }
+					}
 				}
 			}
 			remove_country_modifier = trading_with_DAL
-			clr_country_flag = rejected_trade_with_DAL
 		}
 		
 		# Remove trading modifiers and flags from existing realms that no longer fit the requirements
