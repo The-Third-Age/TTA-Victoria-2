@@ -2065,7 +2065,241 @@ country_event = {
 					}
 				}
 			}
-			country_event = 50949
+			remove_country_modifier = DAL_merchant_power_10
+			remove_country_modifier = DAL_merchant_power_9
+			remove_country_modifier = DAL_merchant_power_8
+			remove_country_modifier = DAL_merchant_power_7
+			remove_country_modifier = DAL_merchant_power_6
+			remove_country_modifier = DAL_merchant_power_5
+			remove_country_modifier = DAL_merchant_power_4
+			remove_country_modifier = DAL_merchant_power_3
+			remove_country_modifier = DAL_merchant_power_2
+			remove_country_modifier = DAL_merchant_power_1
+			remove_country_modifier = DAL_merchant_guild_balanced
+			remove_country_modifier = DAL_guild_power_1
+			remove_country_modifier = DAL_guild_power_2
+			remove_country_modifier = DAL_guild_power_3
+			remove_country_modifier = DAL_guild_power_4
+			remove_country_modifier = DAL_guild_power_5
+			remove_country_modifier = DAL_guild_power_6
+			remove_country_modifier = DAL_guild_power_7
+			remove_country_modifier = DAL_guild_power_8
+			remove_country_modifier = DAL_guild_power_9
+			remove_country_modifier = DAL_guild_power_10
+			
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							has_country_flag = DAL_merchant_supported_by_realm
+							NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -9.9 } }
+						}
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_10 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -9.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -8.9 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_9 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -8.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -7.9 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_8 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -7.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -6.9 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_7 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -6.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -5.9 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_6 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -5.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -4.9 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_5 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -4.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -3.9 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_4 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -3.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -2.9 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_3 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -2.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -1.9 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_2 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -1.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = -0.9 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_power_1 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = -0.1 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 0.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_merchant_guild_balanced duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 0.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 1.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_1 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 1.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 2.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_2 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 2.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 3.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_3 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 3.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 4.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_4 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 4.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 5.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_5 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 5.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 6.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_6 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 6.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 7.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_7 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 7.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 8.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_8 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						check_variable = { which = DAL_merchants_fishers_bop value = 8.9 }
+						NOT = { check_variable = { which = DAL_merchants_fishers_bop value = 9.1 } }
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_9 duration = -1 } }
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							check_variable = { which = DAL_merchants_fishers_bop value = 9.9 }
+							has_country_flag = DAL_guild_supported_by_realm
+						}
+					}
+				}
+				owner = { add_country_modifier = { name = DAL_guild_power_10 duration = -1 } }
+			}
 		}
 		# }
 		
@@ -2089,8 +2323,69 @@ country_event = {
 		}
 		# }
 		
-		# Refire the cleanup event next month
-		country_event = { id = 99001 days = 30 }
+		# Refire the cleanup event next month {
+		random_owned = {
+			limit = {
+				OR = {
+					# January
+					NOT = { month = 1 }
+					AND = { # March
+						month = 2
+						NOT = { month = 3 }
+					}
+					AND = { # May
+						month = 4
+						NOT = { month = 5 }
+					}
+					AND = { # July
+						month = 6
+						NOT = { month = 7 }
+					}
+					AND = { # August
+						month = 7
+						NOT = { month = 8 }
+					}
+					AND = { # October
+						month = 9
+						NOT = { month = 10 }
+					}
+					# December
+					month = 11
+				}
+			}
+			owner = { country_event = { id = 99001 days = 31 } }
+		}
+		random_owned = {
+			limit = { # February
+				month = 1
+				NOT = { month = 2 }
+			}
+			owner = { country_event = { id = 99001 days = 28 } }
+		}
+		random_owned = {
+			limit = {
+				OR = {
+					AND = { # April
+						month = 3
+						NOT = { month = 4 }
+					}
+					AND = { # June
+						month = 5
+						NOT = { month = 6 }
+					}
+					AND = { # September
+						month = 8
+						NOT = { month = 9 }
+					}
+					AND = { # November
+						month = 10
+						NOT = { month = 11 }
+					}
+				}
+			}
+			owner = { country_event = { id = 99001 days = 30 } }
+		}
+		# }
 	}
 }
 
