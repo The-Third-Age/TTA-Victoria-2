@@ -275,8 +275,14 @@ political_decisions = {
 		allow = { }
 		
 		effect = {
-			DAL_643 = { add_core = THIS }
 			badboy = 3
+			
+			country_event = 2900 # CB giving event
+			
+			set_country_flag = claimed_DAL_643
+			add_claim_DAL_643_loc = {}
+			
+			set_country_flag = should_apply_acquire_claim_cb
 			set_global_flag = DAL_rivermen_claimed_nether_marches
 		}
 	}
@@ -291,7 +297,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			has_unclaimed_cores = no
+			NOT  = { DAL_643 = { NOT = { owned_by = THIS } } } # Owns the whole region, not just one province
 			war = no
 			NOT = { truce_with = DAL }
 		}
@@ -1042,8 +1048,6 @@ political_decisions = {
 		}
 		
 		effect = {
-			ERE_657 = { add_core = THIS }
-			ERE_660 = { add_core = THIS }
 			
 			any_country = {
 				limit = {
@@ -1060,6 +1064,16 @@ political_decisions = {
 			
 			badboy = 8
 			
+			country_event = 2900 # CB giving event
+			
+			set_country_flag = claimed_ERE_657
+			set_country_flag = claimed_ERE_660
+			
+			add_claim_ERE_657_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_ERE_660_loc = {}
+			
+			set_country_flag = should_apply_acquire_claim_cb
 			set_global_flag = DAL_reclaimed_northern_lands
 		}
 		
