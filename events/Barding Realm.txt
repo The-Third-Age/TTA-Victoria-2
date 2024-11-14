@@ -2504,6 +2504,7 @@ province_event = {
 	
 	trigger = {
 		has_province_modifier = AMO_easterling_raiders
+		AMO = { war = no }
 	}
 	
 	mean_time_to_happen = {
@@ -2941,5 +2942,74 @@ province_event = {
 		name = "Hail the Victorious Dead!"
 		
 		owner = { any_owned = { remove_province_modifier = AMO_easterling_raiders } }
+	}
+}
+
+# Declaration of the Conquest of Gramavuld (not Amov Clan)
+country_event = {
+	id = 50957
+	title = "The Invasion of the $FROMCOUNTRY$"
+	desc = "EVTDESC50957"
+	picture = "gramavuld/amov_invasion"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "They have incurred our wrath"
+		
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquer_gramavuld_cb }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+			
+		}
+	}
+}
+
+# Declaration of the Conquest of Gramavuld (Amov Clan)
+country_event = {
+	id = 50958
+	title = "The Conquest of Gramavuld"
+	desc = "EVTDESC50958"
+	picture = "gramavuld/amov_invasion"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "For the glory of the $COUNTRY$"
+		
+		plurality = -10
+		
+		capital_scope = {
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = swordsmen value = current }
+			sub_unit = { type = swordsmen value = current }
+			sub_unit = { type = swordsmen value = current }
+			sub_unit = { type = swordsmen value = current }
+			sub_unit = { type = scouts value = current }
+			sub_unit = { type = artillery value = current }
+		}
+		
+		any_country = {
+			limit = {
+				any_owned_province = {
+					OR = {
+						region = DAL_640
+						region = DAL_643
+						region = DAL_645
+						region = DAL_1377
+						region = DAL_652
+						region = DAL_654
+					}
+				}
+			}
+			country_event = 50957
+		}
 	}
 }

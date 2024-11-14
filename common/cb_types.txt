@@ -43,6 +43,7 @@ take_one_ring
 war_of_the_ring_cb
 andrast_war_cb # Specific to Gondor's Flavor
 druwaith_iaur_war_cb # Specific to Gondor's Flavor
+conquer_gramavuld_cb # Specific to Amov Clan's Flavor
 add_to_sphere
 take_from_sphere
 change_alignment
@@ -2896,113 +2897,6 @@ liberate_and_puppet_country = {
 	}
 }
 
-# Specific to Gondor's flavor
-andrast_war_cb = {
-	sprite_index = 15
-	is_triggered_only = yes
-	constructing_cb = no
-	months = 1
-	crisis = no
-	
-	badboy_factor = 0
-	prestige_factor = 1
-	peace_cost_factor = 50
-	penalty_factor = 1
-
-	break_truce_prestige_factor = 1
-	break_truce_infamy_factor = 1
-	break_truce_militancy_factor = 1
-	truce_months = 0
-	
-	good_relation_prestige_factor = 1
-	good_relation_infamy_factor = 1
-	good_relation_militancy_factor = 1
-	
-	can_use = {
-		always = yes
-		NOT = { has_country_modifier = political_neutrality }
-		THIS = { NOT = { has_country_modifier = political_neutrality } }
-	}
-
-	war_name = WAR_LIBERATE_NAME
-	
-	po_remove_prestige = yes
-	
-	# scope = THIS = country applying wargoal
-	# FROM = country that currently owns the provinces
-	on_add = {
-		move_issue_percentage = {
-			from = jingoism
-			to = pro_military
-			value = 0.25
-		}
-	}
-	
-	# scope = country that had owned the provinces
-	# THIS = country that applied wargoal
-	on_po_accepted = {
-		release = ADR
-		
-		random_country = {
-			limit = {
-				tag = ADR
-				is_vassal = no
-			}
-			country_event = 2509
-			country_event = 2510
-		}
-	}
-}
-
-# Specific to Gondor's flavor
-druwaith_iaur_war_cb = {
-	sprite_index = 15
-	is_triggered_only = yes
-	constructing_cb = no
-	months = 1
-	crisis = no
-	
-	badboy_factor = 0
-	prestige_factor = 1
-	peace_cost_factor = 50
-	penalty_factor = 1
-
-	break_truce_prestige_factor = 1
-	break_truce_infamy_factor = 1
-	break_truce_militancy_factor = 1
-	truce_months = 0
-	
-	good_relation_prestige_factor = 1
-	good_relation_infamy_factor = 1
-	good_relation_militancy_factor = 1
-	
-	po_remove_prestige = yes
-	
-	can_use = {
-		always = yes
-		NOT = { has_country_modifier = political_neutrality }
-		THIS = { NOT = { has_country_modifier = political_neutrality } }
-	}
-
-	war_name = WAR_LIBERATE_NAME
-	
-	# scope = THIS = country applying wargoal
-	# FROM = country that currently owns the provinces
-	on_add = {
-		move_issue_percentage = {
-			from = jingoism
-			to = pro_military
-			value = 0.25
-		}
-	}
-	
-	# scope = country that had owned the provinces
-	# THIS = country that applied wargoal
-	on_po_accepted = {
-		release = PUK
-	}
-}
-
 free_allied_cores = {
 	sprite_index = 15
 	is_triggered_only = yes
@@ -3885,5 +3779,171 @@ call_allies_cb = {
 	war_name = WAR_NAME
 
 	on_add = {
+	}
+}
+
+##### CBs Related to Flavor #####
+
+
+
+# Specific to Gondor's flavor
+andrast_war_cb = {
+	sprite_index = 15
+	is_triggered_only = yes
+	constructing_cb = no
+	months = 1
+	crisis = no
+	
+	badboy_factor = 0
+	prestige_factor = 1
+	peace_cost_factor = 50
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	can_use = {
+		always = yes
+	}
+
+	war_name = WAR_LIBERATE_NAME
+	
+	po_remove_prestige = yes
+	
+	# scope = THIS = country applying wargoal
+	# FROM = country that currently owns the provinces
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	# scope = country that had owned the provinces
+	# THIS = country that applied wargoal
+	on_po_accepted = {
+		release = ADR
+		
+		random_country = {
+			limit = {
+				tag = ADR
+				is_vassal = no
+			}
+			country_event = 2509
+			country_event = 2510
+		}
+	}
+}
+
+# Specific to Gondor's flavor
+druwaith_iaur_war_cb = {
+	sprite_index = 15
+	is_triggered_only = yes
+	constructing_cb = no
+	months = 1
+	crisis = no
+	
+	badboy_factor = 0
+	prestige_factor = 1
+	peace_cost_factor = 50
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	po_remove_prestige = yes
+	
+	can_use = {
+		always = yes
+	}
+
+	war_name = WAR_LIBERATE_NAME
+	
+	# scope = THIS = country applying wargoal
+	# FROM = country that currently owns the provinces
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	# scope = country that had owned the provinces
+	# THIS = country that applied wargoal
+	on_po_accepted = {
+		release = PUK
+	}
+}
+
+# Specific to Gondor's flavor
+conquer_gramavuld_cb = {
+	sprite_index = 19
+	is_triggered_only = yes
+	constructing_cb = no
+	months = 1
+	crisis = no
+	
+	badboy_factor = 0
+	prestige_factor = 1
+	peace_cost_factor = 85
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 0
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	po_status_quo = yes
+	
+	can_use = {
+		always = yes
+	}
+
+	war_name = WAR_GRAMAVULD_NAME
+	
+	# scope = THIS = country applying wargoal
+	# FROM = country that currently owns the provinces
+	on_add = {
+		move_issue_percentage = {
+			from = jingoism
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	# scope = country that had owned the provinces
+	# THIS = country that applied wargoal
+	on_po_accepted = {
+		any_owned_province = {
+			limit = {
+				OR = {
+					region = DAL_640
+					region = DAL_643
+					region = DAL_645
+					region = DAL_1377
+					region = DAL_652
+					region = DAL_654
+				}
+			}
+			secede_province = THIS
+		}
 	}
 }
