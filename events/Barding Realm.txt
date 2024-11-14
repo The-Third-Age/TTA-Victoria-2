@@ -2505,6 +2505,7 @@ province_event = {
 	trigger = {
 		has_province_modifier = AMO_easterling_raiders
 		AMO = { war = no }
+		NOT = { owner = { tag = AMO } }
 	}
 	
 	mean_time_to_happen = {
@@ -2513,7 +2514,6 @@ province_event = {
 	
 	immediate = {
 		add_province_modifier = { name = province_target_generic duration = 1 }
-		NOT = { owner = { tag = AMO } }
 	}
 	
 	option = {
