@@ -2331,7 +2331,7 @@ country_event = {
 		}
 		# }
 		
-		# Smaug's Desolation (Country Modifier)
+		# Smaug's Desolation (Country Modifier) {
 		# Removing Smaug's Desolation
 		any_neighbor_country = {
 			limit = {
@@ -2350,6 +2350,12 @@ country_event = {
 			country_event = 50905
 		}
 		# }
+		
+		# Applying Upcoming Conquest
+		any_country = {
+			limit = { has_country_modifier = AMO_upcoming_conquest }
+			plurality = 0.5
+		}
 		
 		# Refire the cleanup event next month {
 		random_owned = {
@@ -5102,6 +5108,14 @@ country_event = {
 			
 			random_owned = {
 				limit = { owner = { has_country_modifier = AMO_established_clan_guard } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_modifier = AMO_upcoming_conquest } }
 				owner = {
 					change_variable = { which = modifier_count value = 1 }
 					change_variable = { which = total_modifier_count value = 1 }

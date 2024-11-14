@@ -104,7 +104,10 @@ political_decisions = {
 			FOR = { country_event = { id = 99001 days = 3 } }
 			
 			# Setting up AMO
-			AMO = { all_core = { add_province_modifier = { name = AMO_easterling_war_camp duration = 3650 } } }
+			AMO = {
+				all_core = { add_province_modifier = { name = AMO_easterling_war_camp duration = 3650 } }
+				add_country_modifier = { name = AMO_upcoming_conquest duration = -1 }
+			}
 		}
 	}
 	
@@ -389,7 +392,7 @@ political_decisions = {
 				}
 				642 = {
 					country_units_in_province = THIS
-					empty = yes
+					empty = yes # Repeated for the sake of the player
 				}
 			}
 		}
@@ -447,7 +450,6 @@ political_decisions = {
 		potential = {
 			tag = AMO
 			NOT = { has_country_modifier = AMO_established_clan_guard }
-			civilized = no
 		}
 		
 		allow = {
