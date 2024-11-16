@@ -326,6 +326,30 @@ province_event = {
 			factor = 0.9
 			NOT = { average_consciousness = 4 }
 		}
+		modifier = {
+			factor = 0.9
+			bureaucrats = 0.005
+		}
+		modifier = {
+			factor = 0.9
+			bureaucrats = 0.006
+		}
+		modifier = {
+			factor = 0.9
+			bureaucrats = 0.007
+		}
+		modifier = {
+			factor = 0.9
+			bureaucrats = 0.008
+		}
+		modifier = {
+			factor = 0.9
+			bureaucrats = 0.009
+		}
+		modifier = {
+			factor = 0.9
+			bureaucrats = 0.01
+		}
 	}
 	
 	option = {
@@ -655,5 +679,38 @@ country_event = {
 	option = {
 		name = "We will keep everything we've gained."
 		ai_chance = { factor = 0 }
+	}
+}
+
+# Clearing Coring Modifiers on Cored Provinces
+province_event = {
+	id = 2513
+	title = "The Integration of $PROVINCENAME$"
+	desc = "EVTDESC2513"
+	
+	trigger = {
+		is_core = THIS
+		OR = {
+			has_province_modifier = cultural_core_integration
+			has_province_modifier = core_integration
+		}
+	}
+	
+	option = {
+		name = "For the glory of the $COUNTRY$"
+		
+		owner = {
+			all_core = {
+				limit = {
+					owned_by = THIS
+					OR = {
+						has_province_modifier = cultural_core_integration
+						has_province_modifier = core_integration
+					}
+				}
+				remove_province_modifier = cultural_core_integration
+				remove_province_modifier = core_integration
+			}
+		}
 	}
 }
