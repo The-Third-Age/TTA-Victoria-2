@@ -723,7 +723,12 @@ assimilation_chance = {
 	modifier = {
 		factor = -10
 		location = {
-			any_core = { is_primary_culture = THIS }
+			any_core = {
+				OR = {
+					is_primary_culture = THIS
+					is_accepted_culture = THIS
+				}
+			}
 		}
 	}
 	modifier = {
@@ -762,6 +767,7 @@ assimilation_chance = {
 			}
 		}
 	}
+	
 	# These last group modifiers handle both the massive debuff for pops that don't match the realm's race, and the removal of that debuff if there is an accepted culture of that race present in the province. Hopefully, since these are grouped together by race, it won't have too large of a performance impact.
 	# NOTE: This does not guarantee that assimilation will not happen between races. However, it severely decreases the chance of it happening.
 	group = {
@@ -828,7 +834,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = men
+					religion = men
 				}
 			}
 		}
@@ -854,7 +860,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = elven
+					religion = elven
 				}
 			}
 		}
@@ -881,7 +887,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = dwarven
+					religion = dwarven
 				}
 			}
 		}
@@ -914,7 +920,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = orc
+					religion = orc
 				}
 			}
 		}
@@ -938,7 +944,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = hobbit
+					religion = hobbit
 				}
 			}
 		}
@@ -962,7 +968,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = ent
+					religion = ent
 				}
 			}
 		}
@@ -989,7 +995,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = troll
+					religion = troll
 				}
 			}
 		}
@@ -1012,7 +1018,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = eagle
+					religion = eagle
 				}
 			}
 		}
@@ -1036,7 +1042,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = spider
+					religion = spider
 				}
 			}
 		}
@@ -1059,7 +1065,7 @@ assimilation_chance = {
 			location = {
 				any_pop = {
 					is_accepted_culture = yes
-					has_pop_religion = undead
+					religion = undead
 				}
 			}
 		}
