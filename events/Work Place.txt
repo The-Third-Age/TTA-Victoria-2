@@ -3746,6 +3746,15 @@ province_event = {
 				}
 				add_province_modifier = { name = province_wealth_decrease_2_target_modifier duration = -1 }
 				remove_province_modifier = province_target_rgo_change_modifier
+				remove_province_modifier = awaiting_economic_direction
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { ai = no }
+					has_province_modifier = awaiting_economic_direction
+				}
+				province_event = { id = 12057 days = 1 }
 			}
 			
 			clr_global_flag = hidden_effects
@@ -3766,6 +3775,15 @@ province_event = {
 					has_province_modifier = province_target_rgo_change_modifier
 				}
 				remove_province_modifier = province_target_rgo_change_modifier
+				remove_province_modifier = awaiting_economic_direction
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { ai = no }
+					has_province_modifier = awaiting_economic_direction
+				}
+				province_event = { id = 12057 days = 1 }
 			}
 			
 			clr_global_flag = hidden_effects
@@ -3786,6 +3804,15 @@ province_event = {
 					has_province_modifier = province_target_rgo_change_modifier
 				}
 				remove_province_modifier = province_target_rgo_change_modifier
+				remove_province_modifier = awaiting_economic_direction
+			}
+			
+			random_owned = {
+				limit = {
+					owner = { ai = no }
+					has_province_modifier = awaiting_economic_direction
+				}
+				province_event = { id = 12057 days = 1 }
 			}
 			
 			clr_global_flag = hidden_effects

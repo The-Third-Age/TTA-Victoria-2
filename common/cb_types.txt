@@ -3932,7 +3932,7 @@ conquer_gramavuld_cb = {
 	# scope = country that had owned the provinces
 	# THIS = country that applied wargoal
 	on_po_accepted = {
-		any_owned_province = {
+		any_owned = {
 			limit = {
 				OR = {
 					region = DAL_640
@@ -3941,6 +3941,10 @@ conquer_gramavuld_cb = {
 					region = DAL_1377
 					region = DAL_652
 					region = DAL_654
+					province_id = 642
+					province_id = 638
+					province_id = 639
+					province_id = 1475
 				}
 			}
 			secede_province = THIS

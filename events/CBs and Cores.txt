@@ -359,6 +359,81 @@ province_event = {
 		remove_province_modifier = core_integration
 		remove_province_modifier = cultural_core_integration
 		add_core = THIS
+		
+		# Detecting if the owned owns and cores all of Gramavuld. Needed for gramavuld_united decision (Barding Realm.txt)
+		owner = {
+			random_owned = {
+				limit = {
+					owner = {
+						638 = {
+							owned_by = THIS
+							is_core = THIS
+						}
+						639 = {
+							owned_by = THIS
+							is_core = THIS
+						}
+						642 = {
+							owned_by = THIS
+							is_core = THIS
+						}
+						1475 = {
+							owned_by = THIS
+							is_core = THIS
+						}
+						NOT = {
+							DAL_640 = {
+								OR = {
+									NOT = { owned_by = THIS }
+									NOT = { is_core = THIS }
+								}
+							}
+						}
+						NOT = {
+							DAL_643 = {
+								OR = {
+									NOT = { owned_by = THIS }
+									NOT = { is_core = THIS }
+								}
+							}
+						}
+						NOT = {
+							DAL_645 = {
+								OR = {
+									NOT = { owned_by = THIS }
+									NOT = { is_core = THIS }
+								}
+							}
+						}
+						NOT = {
+							DAL_1377 = {
+								OR = {
+									NOT = { owned_by = THIS }
+									NOT = { is_core = THIS }
+								}
+							}
+						}
+						NOT = {
+							DAL_652 = {
+								OR = {
+									NOT = { owned_by = THIS }
+									NOT = { is_core = THIS }
+								}
+							}
+						}
+						NOT = {
+							DAL_654 = {
+								OR = {
+									NOT = { owned_by = THIS }
+									NOT = { is_core = THIS }
+								}
+							}
+						}
+					}
+				}
+				owner = { set_country_flag = cored_all_gramavuld }
+			}
+		}
 	}
 }
 

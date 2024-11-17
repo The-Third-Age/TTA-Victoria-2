@@ -2961,7 +2961,7 @@ country_event = {
 			war = {
 				target = THIS
 				attacker_goal = { casus_belli = conquer_gramavuld_cb }
-				defender_goal = { casus_belli = status_quo }
+				defender_goal = { casus_belli = conquer_gramavuld_cb }
 				call_ally = yes
 			}
 			
@@ -3010,6 +3010,43 @@ country_event = {
 				}
 			}
 			country_event = 50957
+		}
+	}
+}
+
+# Declaration of the Conquest of Gramavuld (Barding Realm)
+country_event = {
+	id = 50959
+	title = "The Attack of the $FROMCOUNTRY$"
+	desc = "EVTDESC50959"
+	picture = "gramavuld/amov_invasion"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "For the glory of the $COUNTRY$"
+		
+		capital_scope = {
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = archers value = current }
+			sub_unit = { type = swordsmen value = current }
+			sub_unit = { type = swordsmen value = current }
+			sub_unit = { type = swordsmen value = current }
+			sub_unit = { type = swordsmen value = current }
+			sub_unit = { type = scouts value = current }
+			sub_unit = { type = artillery value = current }
+		}
+		
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = conquer_gramavuld_cb }
+				defender_goal = { casus_belli = conquer_gramavuld_cb }
+				call_ally = yes
+			}
+			
 		}
 	}
 }

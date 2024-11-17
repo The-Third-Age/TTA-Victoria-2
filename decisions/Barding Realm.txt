@@ -547,14 +547,94 @@ political_decisions = {
 			tag = AMO
 			has_country_flag = AMO_claimed_gramavuld
 			NOT = { has_country_flag = AMO_taking_gramavuld }
+			NOT = { DAL = { has_country_flag = DAL_annex_AMO } }
 		}
 		allow = {
 			war = no
 		}
 		effect = {
 			set_country_flag = AMO_taking_gramavuld
+			DAL = { set_country_flag = DAL_annex_AMO }
 			remove_country_modifier = AMO_upcoming_conquest
 			country_event = 50958
+		}
+	}
+	
+	DAL_conquer_AMO = {
+		picture = "Barding Realm/DAL_barding_diplomats_AMO"
+		potential = {
+			has_country_flag = DAL_content
+			NOT = { has_country_flag = DAL_annex_AMO }
+			exists = AMO
+			NOT = { AMO = { has_country_flag = AMO_taking_gramavuld } }
+			AMO = {
+				OR = {
+					owns = 1475 # Ironhold
+					owns = 639 # Lar-Huil
+					owns = 638 # Northwatch
+					owns = 642 # Burh Austris
+				}
+			}
+		}
+		
+		allow = {
+			accepted_culture = grammas
+			accepted_culture = rivermen
+		}
+		
+		effect = {
+			badboy = 5
+			
+			1475 = { add_core = THIS }
+			639 = { add_core = THIS }
+			638 = { add_core = THIS }
+			
+			random_owned = {
+				limit = { owner = { 642 = { NOT = { owned_by = THIS } } } }
+				owner = { 642 = { add_core = THIS } }
+			}
+			
+			AMO = { country_event = 50959 }
+			AMO = { set_country_flag = AMO_taking_gramavuld }
+			set_country_flag = DAL_annex_AMO
+		}
+	}
+	
+	DAL_dissolution_amov_clan = {
+		picture = "Barding Realm/DAL_end_AMO"
+		potential = {
+			has_country_flag = DAL_content
+			AMO = { any_core = { owned_by = THIS } }
+		}
+		
+		allow = {
+			AMO = {
+				all_core = {
+					owned_by = THIS
+					is_core = THIS
+					province_control_days = 3650
+					OR = {
+						culture = barding
+						culture = adhalling
+						culture = grammas
+						culture = rivermen
+					}
+				}
+			}
+		}
+		
+		effect = {
+			badboy = 3
+			prestige = 10
+			
+			any_owned = {
+				limit = { is_core = AMO }
+				remove_core = AMO
+				any_pop = {
+					limit = { is_culture_group = easterlings }
+					militancy = 5
+				}
+			}
 		}
 	}
 }
@@ -1045,6 +1125,94 @@ political_decisions = {
 			
 			empty_line_decisions_loc = {}
 			DAL_proclaim_lord_of_rivermen_loc = {}
+		}
+	}
+	
+	gramavuld_united = {
+		picture = "Barding Realm/DAL_map_of_gramavuld"
+		potential = {
+			has_country_flag = DAL_content
+			NOT = { has_country_flag = DAL_united_gramavuld }
+			OR = {
+				accepted_culture = grammas
+				accepted_culture = rivermen
+			}
+		}
+		
+		allow = {
+			has_country_flag = cored_all_gramavuld
+			war = no
+		}
+		
+		effect = {
+			prestige = 20
+			
+			any_owned = {
+				limit = { is_core = ADH is_core = THIS }
+				remove_core = ADH
+			}
+			any_owned = {
+				limit = { is_core = GRA is_core = THIS }
+				remove_core = GRA
+			}
+			any_owned = {
+				limit = { is_core = RIV is_core = THIS }
+				remove_core = RIV
+			}
+			
+			set_country_flag = DAL_united_gramavuld
+		}
+	}
+	
+	steering_gravamuld_economics = {
+		picture = "Barding Realm/DAL_economy"
+		potential = {
+			ai = no
+			has_country_flag = DAL_content
+			NOT = { has_country_flag = DAL_set_gramavuld_economics }
+			OR = {
+				accepted_culture = grammas
+				accepted_culture = rivermen
+			}
+		}
+		
+		allow = {
+			has_country_flag = cored_all_gramavuld
+			NOT = { 478 = { has_province_modifier = outlaws } }
+			NOT = { 641 = { has_province_modifier = outlaws } }
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {
+					is_core = THIS
+					OR = {
+						region = DAL_640
+						region = DAL_643
+						region = DAL_645
+						region = DAL_1377
+						region = DAL_652
+						region = DAL_654
+						province_id = 642
+						province_id = 638
+						province_id = 639
+						province_id = 1475
+					}
+					NOT = { trade_goods = precious_goods }
+					NOT = { trade_goods = precious_metal }
+					NOT = { has_province_modifier = locked_rgo }
+				}
+				add_province_modifier = { name = awaiting_economic_direction duration = -1 }
+			}
+			
+			random_owned = {
+				limit = { has_province_modifier = awaiting_economic_direction }
+				province_event = { id = 12057 days = 0 }
+			}
+			
+			DAL_economics_reform_explanation_loc = {}
+			
+			set_country_flag = DAL_set_gramavuld_economics
 		}
 	}
 }
