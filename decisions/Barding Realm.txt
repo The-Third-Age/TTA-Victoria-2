@@ -9,6 +9,7 @@
 #	Amov Clan
 #	Marsh Wights
 #	Gramavuld Consolidation
+#	Southern Rhovanion Conquests
 #	Province Flavor
 #	Royal Family
 #	Bard I Flavor
@@ -511,7 +512,7 @@ political_decisions = {
 		
 		effect = {
 			set_country_flag = AMO_claimed_gramavuld
-			badboy = 10
+			badboy = 12
 			random_owned = {
 				limit = { owner = { 642 = { NOT = { is_core = THIS } } } }
 				owner = { 642 = { add_core = THIS } } # Burh Austris
@@ -558,6 +559,21 @@ political_decisions = {
 			remove_country_modifier = AMO_upcoming_conquest
 			country_event = 50958
 		}
+		
+		# Wait for the Rivermen minors to be annexed into DAL or RIV -- will make the war substantially easier
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				OR = {
+					exists = DA1
+					exists = DA2
+					exists = DA3
+					exists = DA4
+				}
+			}
+		}
 	}
 	
 	DAL_conquer_AMO = {
@@ -580,10 +596,11 @@ political_decisions = {
 		allow = {
 			accepted_culture = grammas
 			accepted_culture = rivermen
+			expansion_3 = 1
 		}
 		
 		effect = {
-			badboy = 5
+			badboy = 3
 			
 			1475 = { add_core = THIS }
 			639 = { add_core = THIS }
@@ -740,7 +757,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			badboy = 2
+			badboy = 4
 			
 			set_global_flag = DAL_invited_the_grammas
 			
@@ -815,14 +832,14 @@ political_decisions = {
 			OR = {
 				has_country_modifier = king_of_grammas
 				diplomacy_1 = 1
-				wilderness_1 = 1
+				expansion_1 = 1
 			}
 			war = no
 			has_unclaimed_cores = no
 		}
 		
 		effect = {
-			badboy = 5
+			badboy = 4
 			
 			# United Rivermen
 			random_country = {
@@ -964,6 +981,13 @@ political_decisions = {
 			OR = {
 				has_global_flag = invited_the_rivermen
 				has_global_flag = protect_the_rivermen
+				AND = {
+					RIV = { exists = no }
+					DA1 = { exists = no }
+					DA2 = { exists = no }
+					DA3 = { exists = no }
+					DA4 = { exists = no }
+				}
 			}
 			NOT = { has_global_flag = DAL_proclaimed_lordship_over_the_rivermen }
 		}
@@ -1306,6 +1330,159 @@ political_decisions = {
 			}
 		}
 	}
+}
+
+# Southern Rhovanion Conquests
+political_decisions = {
+	DAL_southern_rivermen = {
+		picture = "Barding Realm/DAL_barding_diplomats_northern_rivermen"
+		potential = {
+			OR = {
+				tag = RIV
+				AND = {
+					has_country_flag = DAL_content
+					accepted_culture = rivermen
+				}
+			}
+			NOT = { has_country_flag = DAL_claimed_southern_rivermen }
+		}
+		allow = {
+			AMO = { exists = no }
+		}
+		
+		effect = {
+			
+			# 2 infamy per region
+			badboy = 6
+			
+			set_country_flag = claimed_RHO_524
+			set_country_flag = claimed_RHO_525
+			set_country_flag = claimed_RHO_528
+			
+			country_event = 2900 # CB giving event
+			
+			add_claim_RHO_524_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_525_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_528_loc = {}
+			
+			set_country_flag = should_apply_acquire_claim_cb
+			set_country_flag = DAL_claimed_southern_rivermen
+		}
+	}
+	
+	DAL_integrate_southern_rivermen = {
+		picture = "Barding Realm/DAL_barding_diplomats_core_northern_rivermen"
+		potential = {
+			OR = {
+				tag = RIV
+				AND = {
+					has_country_flag = DAL_content
+					accepted_culture = rivermen
+				}
+			}
+			has_country_flag = DAL_claimed_southern_rivermen
+			NOT = { has_country_flag = DAL_cored_southern_rivermen }
+		}
+		
+		allow = {
+			owns = 526
+			owns = 528
+			owns = 530
+			owns = 524
+		}
+		
+		effect = {
+			prestige = 5
+			
+			526 = { add_province_modifier = { name = cultural_core_integration duration = -1 } } # Average of 5 years to get a core per province
+			528 = { add_province_modifier = { name = cultural_core_integration duration = -1 } } # Average of 5 years to get a core per province
+			524 = { add_province_modifier = { name = cultural_core_integration duration = -1 } } # Average of 5 years to get a core per province
+			530 = { add_province_modifier = { name = cultural_core_integration duration = -1 } } # Average of 5 years to get a core per province
+			
+			set_country_flag = DAL_cored_southern_rivermen
+		}
+	}
+	
+	DAL_claim_successor_to_vidugavia = {
+		picture = "Barding Realm/DAL_barding_claim_rhovanion"
+		potential = {
+			has_country_flag = DAL_content
+			has_country_flag = DAL_claimed_southern_rivermen
+			NOT = { has_country_flag = DAL_claimed_successor_vidugavia }
+			NOT = { exists = RHO }
+		}
+		
+		allow = {
+			owns = 527
+			owns = 529
+			owns = 531
+			expansion_4 = 1
+		}
+		
+		effect = {
+			badboy = 25 # technically should be 26, but given that breaking 25 gives containment....
+			
+			set_country_flag = claimed_RHO_500
+			set_country_flag = claimed_RHO_507
+			set_country_flag = claimed_RHO_523
+			set_country_flag = claimed_RHO_520
+			set_country_flag = claimed_RHO_535
+			set_country_flag = claimed_RHO_1382
+			set_country_flag = claimed_RHO_515
+			set_country_flag = claimed_RHO_508
+			set_country_flag = claimed_RHO_1379
+			set_country_flag = claimed_RHO_491
+			set_country_flag = claimed_RHO_474
+			set_country_flag = claimed_RHO_472
+			set_country_flag = claimed_RHO_476
+			
+			country_event = 2900 # CB giving event
+			add_country_modifier = { name = unfinished_vidugavia_successorship duration = -1 }
+			
+			add_claim_RHO_500_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_507_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_523_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_520_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_535_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_1382_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_515_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_508_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_1379_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_491_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_474_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_472_loc = {}
+			empty_line_decisions_loc = {}
+			add_claim_RHO_476_loc = {}
+			
+			set_country_flag = should_apply_acquire_claim_cb
+			set_country_flag = DAL_claimed_successor_vidugavia
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				
+				badboy = 0.01 # AI won't take the decision if it has any infamy
+			}
+		}
+	}
+	
+	# TODO: Flavor to add cores to the newly conquered lands and add accepted cultures, Rhovanion formation decision update (remove vidugavia_successorship)
 }
 
 # Province Flavor

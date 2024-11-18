@@ -2357,6 +2357,18 @@ country_event = {
 			plurality = 0.5
 		}
 		
+		# Applying Unfinished Vidugavia Successorship
+		any_country = {
+			limit = { has_country_modifier = unfinished_vidugavia_successorship }
+			plurality = 0.25
+		}
+		
+		# Applying Vidugavia Successorship
+		any_country = {
+			limit = { has_country_modifier = vidugavia_successorship }
+			plurality = -0.1
+		}
+		
 		# Refire the cleanup event next month {
 		random_owned = {
 			limit = {
@@ -5380,6 +5392,22 @@ country_event = {
 			
 			random_owned = {
 				limit = { owner = { has_country_modifier = smaugs_desolation_country } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_modifier = unfinished_vidugavia_successorship } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_modifier = vidugavia_successorship } }
 				owner = {
 					change_variable = { which = modifier_count value = 1 }
 					change_variable = { which = total_modifier_count value = 1 }
