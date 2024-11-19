@@ -11,6 +11,7 @@ All notable changes will be documented in this file.
  - Dynamic Localisation for select events
  - Province Wealth mechanic
  - Seasons and Weather mechanics
+ - The ability to claim regions (through flavor), yielding reduced warscore cost, but no other benefits related to cores
 
 ### New Tags
  - In Eriador: House of the Wind, Windan Elves, Dourhands of Ered Luin, Emyn Beriad, Eagles of the Eerie, Girithlin, Henlan, Fonntir, Saerlann, Caladir, Enedbund, Dol Tinereb, Mirobel, Mount Gram, Skuthruga Clan, Kosh Clan, Snow Orcs of Angmar
