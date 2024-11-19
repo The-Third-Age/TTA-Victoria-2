@@ -2369,6 +2369,57 @@ country_event = {
 			plurality = -0.1
 		}
 		
+		# Getting Monarchy Name Right {
+		random_country = {
+			limit = {
+				tag = DAL
+				government = monarchy_2
+				OR = {
+					nationalvalue = bard_i
+					nationalvalue = bain_1
+					nationalvalue = brand_i
+					nationalvalue = bard_ii
+				}
+			}
+			government = monarchy
+		}
+		random_country = {
+			limit = {
+				tag = DAL
+				government = monarchy
+				NOT = { nationalvalue = bard_i }
+				NOT = { nationalvalue = bain_i }
+				NOT = { nationalvalue = brand_i }
+				NOT = { nationalvalue = bard_ii }
+			}
+			government = monarchy_2
+		}
+		random_country = {
+			limit = {
+				tag = RHO
+				government = monarchy
+				OR = {
+					nationalvalue = bard_i
+					nationalvalue = bain_1
+					nationalvalue = brand_i
+					nationalvalue = bard_ii
+				}
+			}
+			government = monarchy_2
+		}
+		random_country = {
+			limit = {
+				tag = RHO
+				government = monarchy_2
+				NOT = { nationalvalue = bard_i }
+				NOT = { nationalvalue = bain_i }
+				NOT = { nationalvalue = brand_i }
+				NOT = { nationalvalue = bard_ii }
+			}
+			government = monarchy
+		}
+		# }
+		
 		# Refire the cleanup event next month {
 		random_owned = {
 			limit = {
