@@ -446,44 +446,6 @@ guiTypes = {
 				quadTextureSprite ="GFX_frontend_tutorial_tab"
 			}
 			
-			iconType = {
-				name ="clergy_icon1"
-				spriteType = "GFX_frontend_clergy_icon"
-				position = { x= -189 y =-109 }
-				Orientation = "UPPER_LEFT"
-			}
-			iconType = {
-				name ="clergy_icon2"
-				spriteType = "GFX_frontend_clergy_icon"
-				position = { x= 126 y =-109 }
-				Orientation = "UPPER_LEFT"
-			}
-			iconType = {
-				name ="clergy_icon3"
-				spriteType = "GFX_frontend_clergy_icon"
-				position = { x= 441 y =-109 }
-				Orientation = "UPPER_LEFT"
-			}
-			
-			iconType = {
-				name ="basic_icon"
-				spriteType = "GFX_frontend_tutorial_basic_icon"
-				position = { x= -167 y =-91 }
-				Orientation = "UPPER_LEFT"
-			}
-			iconType = {
-				name ="medium_icon"
-				spriteType = "GFX_frontend_tutorial_medium_icon"
-				position = { x= 148 y =-91 }
-				Orientation = "UPPER_LEFT"
-			}
-			iconType = {
-				name ="advanced_icon"
-				spriteType = "GFX_frontend_tutorial_advanced_icon"
-				position = { x= 463 y =-91 }
-				Orientation = "UPPER_LEFT"
-			}
-			
 			instantTextBoxType = {
 				name ="basic_text"
 				position = { x = -199 y = -87 }
@@ -532,392 +494,60 @@ guiTypes = {
 				fullscreen=no
 				Orientation = "CENTER"
 				
-				###
+				iconType = {
+					name ="basic_textbox_1"
+					spriteType = "GFX_frontend_tutorial_text_box_316_144"
+					position = { x= -204 y = -20 }
+					Orientation = "UPPER_LEFT"
+				}
+				
+				# Useless crap {
 				guiButtonType = {
 					name = "tutorial_button_9"
 					position = { x = -204 y = -20 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="basic_icon_9"
-					spriteType = "GFX_frontend_tutorial_basic_icon"
-					position = { x= -187 y =-8 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="basic_image_9"
-					spriteType = "GFX_frontend_tutorial_image_1"
-					position = { x= -185 y =35 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_9_label"
-					position = { x = -189 y = -4 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_0"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_9_text"
-					position = { x = -89 y = 36 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_0_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_1"
 					position = { x = 118 y = -20 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="basic_icon_1"
-					spriteType = "GFX_frontend_tutorial_basic_icon"
-					position = { x= 135 y =-8 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="basic_image_1"
-					spriteType = "GFX_frontend_tutorial_image_2"
-					position = { x= 137 y =35 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_1_label"
-					position = { x = 133 y = -4 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_1"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_1_text"
-					position = { x = 233 y = 36 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_1_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_2"
 					position = { x = 440 y = -20 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="basic_icon_2"
-					spriteType = "GFX_frontend_tutorial_basic_icon"
-					position = { x= 457 y =-8 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="basic_image_2"
-					spriteType = "GFX_frontend_tutorial_image_3"
-					position = { x= 459 y =35 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_2_label"
-					position = { x = 455 y = -4 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_2"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_2_text"
-					position = { x = 555 y = 36 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_2_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_3"
 					position = { x = -204 y = 134 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="basic_icon_3"
-					spriteType = "GFX_frontend_tutorial_basic_icon"
-					position = { x= -187 y =146 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="basic_image_3"
-					spriteType = "GFX_frontend_tutorial_image_4"
-					position = { x= -185 y =189 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_3_label"
-					position = { x = -189 y = 150 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_3"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_3_text"
-					position = { x = -89 y = 190 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_3_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_4"
 					position = { x = 118 y = 134 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="basic_icon_4"
-					spriteType = "GFX_frontend_tutorial_basic_icon"
-					position = { x= 135 y =146 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="basic_image_4"
-					spriteType = "GFX_frontend_tutorial_image_5"
-					position = { x= 137 y =189 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_4_label"
-					position = { x = 133 y = 150 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_4"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_4_text"
-					position = { x = 233 y = 190 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_4_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_5"
 					position = { x = 440 y = 134 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="basic_icon_5"
-					spriteType = "GFX_frontend_tutorial_basic_icon"
-					position = { x= 457 y =146 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="basic_image_5"
-					spriteType = "GFX_frontend_tutorial_image_6"
-					position = { x= 459 y =189 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_5_label"
-					position = { x = 455 y = 150 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_5"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_5_text"
-					position = { x = 555 y = 190 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_5_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_6"
 					position = { x = -204 y = 288 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="basic_icon_6"
-					spriteType = "GFX_frontend_tutorial_basic_icon"
-					position = { x= -187 y =300 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="basic_image_6"
-					spriteType = "GFX_frontend_tutorial_image_7"
-					position = { x= -185 y =343 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_6_label"
-					position = { x = -189 y = 304 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_6"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_6_text"
-					position = { x = -89 y = 344 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_6_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_7"
 					position = { x = 118 y = 288 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="basic_icon_7"
-					spriteType = "GFX_frontend_tutorial_basic_icon"
-					position = { x= 135 y =300 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="basic_image_7"
-					spriteType = "GFX_frontend_tutorial_image_8"
-					position = { x= 137 y =343 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_7_label"
-					position = { x = 133 y = 304 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_7"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_7_text"
-					position = { x = 233 y = 344 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_7_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_8"
 					position = { x = 440 y = 288 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="basic_icon_8"
-					spriteType = "GFX_frontend_tutorial_basic_icon"
-					position = { x= 457 y =300 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="basic_image_8"
-					spriteType = "GFX_frontend_tutorial_image_9"
-					position = { x= 459 y =343 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_8_label"
-					position = { x = 455 y = 304 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_8"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_8_text"
-					position = { x = 555 y = 344 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_8_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
+				# }
 			}
 			
 			##### CHAPTERS window. MEDIUM #####
@@ -935,349 +565,48 @@ guiTypes = {
 				fullscreen=no
 				Orientation = "CENTER"
 				
-				###
+				# Useless crap {
 				guiButtonType = {
 					name = "tutorial_button_1"
 					position = { x = -204 y = -20 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="medium_icon_1"
-					spriteType = "GFX_frontend_tutorial_medium_icon"
-					position = { x= -187 y =-8 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="medium_image_1"
-					spriteType = "GFX_frontend_tutorial_image_2"
-					position = { x= -185 y =35 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_1_label"
-					position = { x = -189 y = -4 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_1"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_1_text"
-					position = { x = -89 y = 36 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_1_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_2"
 					position = { x = 118 y = -20 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="medium_icon_2"
-					spriteType = "GFX_frontend_tutorial_medium_icon"
-					position = { x= 135 y =-8 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="medium_image_2"
-					spriteType = "GFX_frontend_tutorial_image_3"
-					position = { x=137 y =35 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_2_label"
-					position = { x = 133 y = -4 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_2"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_2_text"
-					position = { x = 233 y = 36 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_2_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_3"
 					position = { x = 440 y = -20 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="medium_icon_3"
-					spriteType = "GFX_frontend_tutorial_medium_icon"
-					position = { x= 457 y =-8 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="medium_image_3"
-					spriteType = "GFX_frontend_tutorial_image_4"
-					position = { x= 459 y =35 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_3_label"
-					position = { x = 455 y = -4 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_3"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_3_text"
-					position = { x = 555 y = 36 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_3_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_4"
 					position = { x = -204 y = 134 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="medium_icon_4"
-					spriteType = "GFX_frontend_tutorial_medium_icon"
-					position = { x= -187 y =146 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="medium_image_4"
-					spriteType = "GFX_frontend_tutorial_image_5"
-					position = { x= -185 y =189 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_4_label"
-					position = { x = -189 y = 150 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_4"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_4_text"
-					position = { x = -89 y = 190 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_4_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_5"
 					position = { x = 118 y = 134 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="medium_icon_5"
-					spriteType = "GFX_frontend_tutorial_medium_icon"
-					position = { x= 135 y =146 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="medium_image_5"
-					spriteType = "GFX_frontend_tutorial_image_6"
-					position = { x= 137 y =189 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_5_label"
-					position = { x = 133 y = 150 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_5"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_5_text"
-					position = { x = 233 y = 190 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_5_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_6"
 					position = { x = 440 y = 134 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="medium_icon_6"
-					spriteType = "GFX_frontend_tutorial_medium_icon"
-					position = { x= 457 y =146 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="medium_image_6"
-					spriteType = "GFX_frontend_tutorial_image_7"
-					position = { x= 459 y =189 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_6_label"
-					position = { x = 455 y = 150 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_6"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_6_text"
-					position = { x = 555 y = 190 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_6_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_7"
 					position = { x = -204 y = 288 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="medium_icon_7"
-					spriteType = "GFX_frontend_tutorial_medium_icon"
-					position = { x= -187 y =300 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="medium_image_7"
-					spriteType = "GFX_frontend_tutorial_image_8"
-					position = { x= -185 y =343 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_7_label"
-					position = { x = -189 y = 304 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_7"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_7_text"
-					position = { x = -89 y = 344 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_7_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_8"
 					position = { x = 118 y = 288 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="medium_icon_8"
-					spriteType = "GFX_frontend_tutorial_medium_icon"
-					position = { x= 135 y =300 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="medium_image_8"
-					spriteType = "GFX_frontend_tutorial_image_9"
-					position = { x= 137 y =343 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_8_label"
-					position = { x = 133 y = 304 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_8"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_8_text"
-					position = { x = 233 y = 344 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_8_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
+				# }
 			}
 			
 			##### CHAPTERS window. ADVANCED #####
@@ -1295,355 +624,64 @@ guiTypes = {
 				fullscreen=no
 				Orientation = "CENTER"
 				
-				###
+				# Useless Crap {
 				guiButtonType = {
 					name = "tutorial_button_1"
 					position = { x = -204 y = -20 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="advanced_icon_1"
-					spriteType = "GFX_frontend_tutorial_advanced_icon"
-					position = { x= -187 y =-8 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="advanced_image_1"
-					spriteType = "GFX_frontend_tutorial_image_2"
-					position = { x= -185 y =35 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_1_label"
-					position = { x = -189 y = -4 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_1"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_1_text"
-					position = { x = -89 y = 36 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_1_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_2"
 					position = { x = 118 y = -20 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="advanced_icon_2"
-					spriteType = "GFX_frontend_tutorial_advanced_icon"
-					position = { x= 135 y =-8 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="advanced_image_2"
-					spriteType = "GFX_frontend_tutorial_image_3"
-					position = { x= 137 y =35 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_2_label"
-					position = { x = 133 y = -4 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_2"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_2_text"
-					position = { x = 233 y = 36 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_2_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_3"
 					position = { x = 440 y = -20 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="advanced_icon_3"
-					spriteType = "GFX_frontend_tutorial_advanced_icon"
-					position = { x= 457 y =-8 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="advanced_image_3"
-					spriteType = "GFX_frontend_tutorial_image_4"
-					position = { x= 459 y =35 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_3_label"
-					position = { x = 455 y = -4 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_3"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_3_text"
-					position = { x = 555 y = 36 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_3_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_4"
 					position = { x = -204 y = 134 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="advanced_icon_4"
-					spriteType = "GFX_frontend_tutorial_advanced_icon"
-					position = { x= -187 y =146 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="advanced_image_4"
-					spriteType = "GFX_frontend_tutorial_image_5"
-					position = { x= -185 y =189 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_4_label"
-					position = { x = -189 y = 150 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_4"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_4_text"
-					position = { x = -89 y = 190 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_4_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_5"
 					position = { x = 118 y = 134 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="advanced_icon_5"
-					spriteType = "GFX_frontend_tutorial_advanced_icon"
-					position = { x= 135 y =146 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="advanced_image_5"
-					spriteType = "GFX_frontend_tutorial_image_6"
-					position = { x= 137 y =189 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_5_label"
-					position = { x = 133 y = 150 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_5"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_5_text"
-					position = { x = 233 y = 190 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_5_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_6"
 					position = { x = 440 y = 134 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="advanced_icon_6"
-					spriteType = "GFX_frontend_tutorial_advanced_icon"
-					position = { x= 457 y =146 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="advanced_image_6"
-					spriteType = "GFX_frontend_tutorial_image_7"
-					position = { x= 459 y =189 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_6_label"
-					position = { x = 455 y = 150 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_6"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_6_text"
-					position = { x = 555 y = 190 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_6_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_7"
 					position = { x = -204 y = 288 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="advanced_icon_7"
-					spriteType = "GFX_frontend_tutorial_advanced_icon"
-					position = { x= -187 y =300 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="advanced_image_7"
-					spriteType = "GFX_frontend_tutorial_image_8"
-					position = { x= -185 y =343 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_7_label"
-					position = { x = -189 y = 304 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_7"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_7_text"
-					position = { x = -89 y = 344 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_7_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
-				
-				###
 				guiButtonType = {
 					name = "tutorial_button_8"
 					position = { x = 118 y = 288 }
-					quadTextureSprite ="GFX_frontend_tutorial_military"
+					quadTextureSprite ="GFX_frontend_EMPTY"
 				}
-				
-				iconType = {
-					name ="advanced_icon_8"
-					spriteType = "GFX_frontend_tutorial_advanced_icon"
-					position = { x= 135 y =300 }
-					Orientation = "UPPER_LEFT"
-				}
-				iconType = {
-					name ="advanced_image_8"
-					spriteType = "GFX_frontend_tutorial_image_9"
-					position = { x= 137 y =343 }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name ="tutorial_button_8_label"
-					position = { x = 133 y = 304 }
-					textureFile = ""
-					font = "vic_22_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_8"
-					format = centre
-					maxWidth = 300
-					maxHeight = 50
-				}
-				instantTextBoxType = {
-					name ="tutorial_button_8_text"
-					position = { x = 233 y = 344 }
-					textureFile = ""
-					font = "vic_18_black"
-					borderSize = {x = 0 y = 0}
-					text = "tut_menu_8_description"
-					format = left
-					maxWidth = 180
-					maxHeight = 100
-				}
+				# }
 			}
 			
 			###
+			instantTextBoxType = {
+				name ="tta_version_text"
+				position = { x = -192 y = 480 }
+				font = "vic_32_black"
+				borderSize = {x = 0 y = 0}
+				text = "FE_TTA_VERSION"
+				format = centre
+				maxWidth = 747
+				maxHeight = 50
+			}
 			guiButtonType = {
 				name = "back_button"
-				position = { x = -74 y = 476 }
+				position = { x = 533 y = 476 }
 				quadTextureSprite ="GFX_frontend_button_236"
 				buttonText = "FE_BACK"
 				buttonFont = "vic_22_black"
@@ -1652,7 +690,7 @@ guiTypes = {
 			guiButtonType = {
 				name = "start_button"
 				position = { x = 390 y = 476 }
-				quadTextureSprite ="GFX_frontend_button_236"
+				quadTextureSprite ="GFX_frontend_EMPTY"
 				buttonText = "FE_START_ALL_CHAPTERS"
 				buttonFont = "vic_22_black"
 			}
