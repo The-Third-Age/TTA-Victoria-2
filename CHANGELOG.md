@@ -33,6 +33,7 @@ All notable changes will be documented in this file.
  - Railroading is starting to be fleshed out
  - Scripted Harondor colonization for Umbar, Haruzan, Chelkar and Mordor
  - Barding Realm flavor
+ - Amov Clan and Rivermen minor flavor
  - Dynamic Localisation
  - Popular Anxiety (replacing Plurality)
  - Province Wealth (replacing Crime)
