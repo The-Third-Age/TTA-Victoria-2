@@ -265,6 +265,18 @@ country_event = {
 	option = {
 		name = "Thanks"
 		
-		country_event = 91000
+		set_global_flag = hidden_effects
+		
+		random_country = {
+			limit = {
+				tag = FOR
+				has_global_flag = hidden_effects
+			}
+			country_event = 91005
+		}
+		
+		triggered_event_railroading = {}
+		
+		clr_global_flag = hidden_effects
 	}
 }
