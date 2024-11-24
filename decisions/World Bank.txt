@@ -48,6 +48,7 @@ political_decisions = {
 						is_culture_group = teleri
 						is_culture_group = avari
 						is_culture_group = northmen
+						is_culture_group = gramavuld_northmen
 						is_culture_group = anduinrim
 						is_culture_group = ents
 						is_culture_group = eagles
@@ -152,6 +153,7 @@ political_decisions = {
 						is_culture_group = teleri
 						is_culture_group = avari
 						is_culture_group = northmen
+						is_culture_group = gramavuld_northmen
 						AND = {
 							is_culture_group = wildmen
 							NOT = { tag = DUN }
@@ -289,30 +291,31 @@ political_decisions = {
 			dynamic_loc_slots = { secede_province = --- }
 			
 			# Province/State Renaming variables
-			set_variable = { which = iron_hills_name value = 2 }
+			set_variable = { which = iron_hills_name value = 1 }
 			set_variable = { which = nan_brethil_name value = 2 }
 			set_variable = { which = lodalf_name value = 1 }
 			set_variable = { which = khandu_khur_name value = 1 }
-			set_variable = { which = nether_marches_name value = 0 }
+			set_variable = { which = nether_marches_name value = 2 }
 			set_variable = { which = danwaith_name value = 0 }
-			set_variable = { which = salenin_vale_name value = 2 }
+			set_variable = { which = salenin_vale_name value = 1 }
 			set_variable = { which = rann_gasta_name value = 5 }
-			set_variable = { which = nan_celduin_name value = 0 }
-			set_variable = { which = northern_gazar_utal_name value = 1 }
+			set_variable = { which = nan_celduin_name value = 2 }
+			set_variable = { which = northern_gazar_utal_name value = 0 }
 			set_variable = { which = muir_cairn_name value = 2 }
 			set_variable = { which = barren_wastes_name value = 0 }
-			set_variable = { which = upper_marches_name value = 0 }
+			set_variable = { which = upper_marches_name value = 1 }
 			set_variable = { which = harlindon_name value = 0 }
-			set_variable = { which = mountainlands_name value = 1 }
+			set_variable = { which = medes_name value = 0 }
+			set_variable = { which = mountainlands_name value = 0 }
 			set_variable = { which = dor-en-egladil_name value = 0 }
-			set_variable = { which = dadhrik's_gap_name value = 1 }
-			set_variable = { which = mayzri_name value = 1 }
-			set_variable = { which = northern_telaith_lyst_name value = 2 }
-			set_variable = { which = cairn_angle_name value = 0 }
-			set_variable = { which = southern_gazar_utal_name value = 2 }
+			set_variable = { which = dadhrik's_gap_name value = 0 }
+			set_variable = { which = mayzri_name value = 0 }
+			set_variable = { which = northern_telaith_lyst_name value = 1 }
+			set_variable = { which = cairn_angle_name value = 2 }
+			set_variable = { which = southern_gazar_utal_name value = 1 }
 			set_variable = { which = kug_valley_name value = 0 }
-			set_variable = { which = leshen_name value = 2 }
-			set_variable = { which = agasha_dag_name value = 2 }
+			set_variable = { which = leshen_name value = 1 }
+			set_variable = { which = agasha_dag_name value = 1 }
 			set_variable = { which = sarnladen_name value = 1 }
 			set_variable = { which = girithlin_name value = 0 }
 			set_variable = { which = dol_tinereb_name value = 1 }
@@ -343,8 +346,8 @@ political_decisions = {
 			set_variable = { which = ras_morthil_name value = 1 }
 			set_variable = { which = foreregion_name value = 1 }
 			set_variable = { which = elven_fells_name value = 1 }
-			set_variable = { which = brown_lands_name value = 0 }
-			set_variable = { which = talath_harroch_name value = 2 }
+			set_variable = { which = brown_lands_name value = 1 }
+			set_variable = { which = talath_harroch_name value = 1 }
 			set_variable = { which = velarith_name value = 0 }
 			set_variable = { which = far_anorien_name value = 1 }
 			set_variable = { which = forithilien_name value = 1 }
@@ -353,7 +356,7 @@ political_decisions = {
 			set_variable = { which = south_hollin_name value = 0 }
 			set_variable = { which = sakal_an-khar_name value = 0 }
 			set_variable = { which = emyn_sul_name value = 1 }
-			set_variable = { which = southern_mirkwood_name value = 1 }
+			set_variable = { which = southern_mirkwood_name value = 0 }
 			set_variable = { which = the_desolation_name value = 0 }
 			set_variable = { which = talath_uichel_name value = 0 }
 			set_variable = { which = talvi-muri_name value = 0 }
@@ -364,38 +367,38 @@ political_decisions = {
 			set_variable = { which = central_druwaith_iaur_name value = 2 }
 			set_variable = { which = udun_name value = 0 }
 			set_variable = { which = high_pass_name value = 0 }
-			set_variable = { which = southern_gazar_gord_name value = 1 }
+			set_variable = { which = southern_gazar_gord_name value = 0 }
 			set_variable = { which = coiced_caradaingen_name value = 3 }
-			set_variable = { which = northern_gazar_narkad_name value = 1 }
+			set_variable = { which = northern_gazar_narkad_name value = 0 }
 			set_variable = { which = coiced_ciall_name value = 3 }
-			set_variable = { which = sagathavuld_name value = 2 }
+			set_variable = { which = sagathavuld_name value = 1 }
 			set_variable = { which = old_sylvana_name value = 0 }
 			set_variable = { which = harvaneth_name value = 0 }
 			set_variable = { which = southern_ered_luin_name value = 0 }
 			set_variable = { which = rast_vorn_name value = 1 }
-			set_variable = { which = austronei_hallus_name value = 2 }
+			set_variable = { which = austronei_hallus_name value = 1 }
 			set_variable = { which = sakal-pharaz_name value = 0 }
 			set_variable = { which = glenn_crec_name value = 2 }
-			set_variable = { which = uldona_vale_name value = 0 }
+			set_variable = { which = uldona_vale_name value = 2 }
 			set_variable = { which = parta_rokantha_name value = 0 }
 			set_variable = { which = caill_na_trowe_name value = 2 }
-			set_variable = { which = gazar_ibar_name value = 2 }
+			set_variable = { which = gazar_ibar_name value = 1 }
 			set_variable = { which = dor_leithan_name value = 1 }
-			set_variable = { which = folyavuld_name value = 0 }
-			set_variable = { which = nan_annen_name value = 0 }
-			set_variable = { which = southern_gazar_narkad_name value = 1 }
+			set_variable = { which = folyavuld_name value = 1 }
+			set_variable = { which = nan_annen_name value = 2 }
+			set_variable = { which = southern_gazar_narkad_name value = 0 }
 			set_variable = { which = emyn_beraid_name value = 2 }
-			set_variable = { which = western_gazar_barak_name value = 2 }
+			set_variable = { which = western_gazar_barak_name value = 1 }
 			set_variable = { which = upper_othnen_vale_name value = 0 }
 			set_variable = { which = rhulindon_name value = 3 }
-			set_variable = { which = eastern_gazar_barak_name value = 2 }
-			set_variable = { which = lower_othnen_vale_name value = 2 }
+			set_variable = { which = eastern_gazar_barak_name value = 1 }
+			set_variable = { which = lower_othnen_vale_name value = 1 }
 			set_variable = { which = glinfalas_name value = 0 }
 			set_variable = { which = dor-en-ernil_name value = 1 }
-			set_variable = { which = dobok_rhin_name value = 0 }
+			set_variable = { which = dobok_rhin_name value = 2 }
 			set_variable = { which = cirith_narugorch_name value = 2 }
 			set_variable = { which = hyvametsastyksen_maa_name value = 0 }
-			set_variable = { which = greylin_vale_name value = 1 }
+			set_variable = { which = greylin_vale_name value = 0 }
 			set_variable = { which = henlan_name value = 1 }
 			set_variable = { which = thark_kufnaz_name value = 0 }
 			set_variable = { which = northern_march_name value = 1 }
@@ -405,14 +408,14 @@ political_decisions = {
 			set_variable = { which = gap_of_rohan_name value = 0 }
 			set_variable = { which = gap_of_nurza-shuk_name value = 1 }
 			set_variable = { which = western_gathod_name value = 0 }
-			set_variable = { which = lower_carrock_name value = 1 }
+			set_variable = { which = lower_carrock_name value = 0 }
 			set_variable = { which = white_mountains_name value = 2 }
 			set_variable = { which = west-march_name value = 0 }
-			set_variable = { which = ethir_surubeki_name value = 2 }
-			set_variable = { which = surubeki_vale_name value = 2 }
+			set_variable = { which = ethir_surubeki_name value = 1 }
+			set_variable = { which = surubeki_vale_name value = 1 }
 			set_variable = { which = fonntir_name value = 1 }
-			set_variable = { which = woodman's_realm_name value = 1 }
-			set_variable = { which = taj-ures_name value = 2 }
+			set_variable = { which = woodman's_realm_name value = 0 }
+			set_variable = { which = taj-ures_name value = 1 }
 			set_variable = { which = upper_saerlann_name value = 1 }
 			set_variable = { which = dur-kosha_name value = 1 }
 			set_variable = { which = lower_saerlann_name value = 1 }
@@ -428,7 +431,7 @@ political_decisions = {
 			set_variable = { which = haruzan_name value = 0 }
 			set_variable = { which = magur_name value = 1 }
 			set_variable = { which = harithilien_name value = 0 }
-			set_variable = { which = necromancer's_realm_name value = 2 }
+			set_variable = { which = necromancer's_realm_name value = 1 }
 			set_variable = { which = lower_lebennin_name value = 0 }
 			set_variable = { which = eredtir_name value = 0 }
 			set_variable = { which = middle_vales_name value = 1 }
@@ -438,7 +441,7 @@ political_decisions = {
 			set_variable = { which = gravenwood_name value = 1 }
 			set_variable = { which = trum_dreng_name value = 1 }
 			set_variable = { which = dol_caledir_name value = 0 }
-			set_variable = { which = mirkwood_narrows_name value = 1 }
+			set_variable = { which = mirkwood_narrows_name value = 0 }
 			set_variable = { which = mournshaws_name value = 1 }
 			set_variable = { which = forethir_name value = 2 }
 			set_variable = { which = rohwaen_name value = 0 }
@@ -451,36 +454,36 @@ political_decisions = {
 			set_variable = { which = isendale_name value = 2 }
 			set_variable = { which = muzeida_vale_name value = 1 }
 			set_variable = { which = kajbah_name value = 0 }
-			set_variable = { which = dor_rewinion_name value = 0 }
+			set_variable = { which = dor_rewinion_name value = 2 }
 			set_variable = { which = ninzayan_name value = 0 }
 			set_variable = { which = westfold_name value = 0 }
-			set_variable = { which = lower_sekelavuld_name value = 2 }
+			set_variable = { which = lower_sekelavuld_name value = 1 }
 			set_variable = { which = harwan_name value = 0 }
-			set_variable = { which = dor_rhunen_name value = 0 }
+			set_variable = { which = dor_rhunen_name value = 2 }
 			set_variable = { which = reedwater_vale_name value = 1 }
 			set_variable = { which = greyflood_vale_name value = 1 }
 			set_variable = { which = lower_morthond_vale_name value = 0 }
 			set_variable = { which = laergaladrin_name value = 2 }
 			set_variable = { which = harfalas_name value = 2 }
-			set_variable = { which = southern_telaith_lyst_name value = 2 }
-			set_variable = { which = northern_gazar_gord_name value = 2 }
+			set_variable = { which = southern_telaith_lyst_name value = 1 }
+			set_variable = { which = northern_gazar_gord_name value = 1 }
 			set_variable = { which = carnentir_name value = 0 }
 			set_variable = { which = southern_nurza-shukh_name value = 1 }
 			set_variable = { which = anfalas_name value = 0 }
 			set_variable = { which = uilad_name value = 1 }
-			set_variable = { which = menelothriand_name value = 2 }
+			set_variable = { which = menelothriand_name value = 1 }
 			set_variable = { which = tir_or_name value = 1 }
 			set_variable = { which = ferroen_name value = 0 }
 			set_variable = { which = the_narrows_name value = 2 }
 			set_variable = { which = morad_name value = 0 }
-			set_variable = { which = gladden_fields_name value = 2 }
-			set_variable = { which = austrabuht_name value = 0 }
-			set_variable = { which = arkran_name value = 0 }
-			set_variable = { which = high_hand_name value = 0 }
+			set_variable = { which = gladden_fields_name value = 1 }
+			set_variable = { which = austrabuht_name value = 2 }
+			set_variable = { which = arkran_name value = 2 }
+			set_variable = { which = high_hand_name value = 2 }
 			set_variable = { which = lothlorien_name value = 1 }
-			set_variable = { which = west_dunheath_name value = 0 }
-			set_variable = { which = langflood_name value = 1 }
-			set_variable = { which = east_dunheath_name value = 0 }
+			set_variable = { which = west_dunheath_name value = 2 }
+			set_variable = { which = langflood_name value = 0 }
+			set_variable = { which = east_dunheath_name value = 2 }
 			set_variable = { which = ronen-in-anduin_name value = 4 }
 			set_variable = { which = eastern_gathod_name value = 0 }
 			set_variable = { which = fordirith_name value = 1 }
@@ -735,12 +738,16 @@ political_decisions = {
 						}
 						AND = {
 							NOT = { government = northmen_democracy }
-							is_culture_group = northmen
+							OR = {
+								is_culture_group = northmen
+								is_culture_group = gramavuld_northmen
+							}
 						}
 						AND = {
 							NOT = { government = democracy }
 							NOT = { is_culture_group = hobbits }
 							NOT = { is_culture_group = northmen }
+							NOT = { is_culture_group = gramavuld_northmen }
 						}
 					}
 				}
@@ -795,7 +802,10 @@ political_decisions = {
 				limit = {
 					has_country_flag = attempting_to_democratic
 					vote_franschise = landed_voting
-					is_culture_group = northmen
+					OR = {
+						is_culture_group = northmen
+						is_culture_group = gramavuld_northmen
+					}
 					NOT = { government = northmen_democracy }
 				}
 				clr_country_flag = attempting_to_democratic
@@ -809,6 +819,7 @@ political_decisions = {
 					vote_franschise = landed_voting
 					NOT = { is_culture_group = hobbits }
 					NOT = { is_culture_group = northmen }
+					NOT = { is_culture_group = gramavuld_northmen }
 					NOT = { government = democracy }
 				}
 				clr_country_flag = attempting_to_democratic

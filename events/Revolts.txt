@@ -88,7 +88,10 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					is_culture_group = northmen
+					OR = {
+						is_culture_group = northmen
+						is_culture_group = gramavuld_northmen
+					}
 					NOT = { government = northmen_democracy }
 				}
 			}
@@ -105,6 +108,7 @@ country_event = {
 				owner = {
 					NOT = { is_culture_group = hobbits }
 					NOT = { is_culture_group = northmen }
+					NOT = { is_culture_group = gramavuld_northmen }
 					NOT = { government = democracy }
 				}
 			}

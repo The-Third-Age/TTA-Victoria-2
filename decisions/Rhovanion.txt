@@ -28,7 +28,10 @@ political_decisions = {
 political_decisions = {
 	form_rhovanion = {
 		potential = {
-			is_culture_group = northmen
+			OR = {
+				is_culture_group = northmen
+				is_culture_group = northmen
+			}
 			NOT = { exists = RHO }
 		}
 		
@@ -54,7 +57,10 @@ political_decisions = {
 			
 			any_country = {
 				limit = {
-					is_culture_group = northmen
+					OR = {
+						is_culture_group = northmen
+						is_culture_group = gramavuld_northmen
+					}
 				}
 				country_event = 100003
 				
@@ -164,6 +170,7 @@ political_decisions = {
 		potential = {
 			is_greater_power = yes
 			NOT = { is_culture_group = northmen }
+			NOT = { is_culture_group = gramavuld_northmen }
 			NOT = { exists = RHO }
 			RHO = {
 				any_core = {
@@ -228,7 +235,10 @@ political_decisions = {
 						vassal_of = THIS
 						in_sphere = THIS
 					}
-					is_culture_group = northmen
+					OR = {
+						is_culture_group = northmen
+						is_culture_group = gramavuld_northmen
+					}
 				}
 				annex_to = RHO
 				

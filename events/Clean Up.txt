@@ -529,6 +529,7 @@ country_event = {
 					}
 					AND = {
 						is_culture_group = northmen
+						is_culture_group = gramavuld_northmen
 						OR = {
 							government = democracy
 							government = hobbit_realm
@@ -537,6 +538,7 @@ country_event = {
 					AND = {
 						NOT = { is_culture_group = hobbits }
 						NOT = { is_culture_group = northmen }
+						NOT = { is_culture_group = gramavuld_northmen }
 						OR = {
 							government = hobbit_realm
 							government = northmen_democracy
@@ -672,7 +674,10 @@ country_event = {
 						}
 					}
 					AND = {
-						is_culture_group = northmen
+						OR = {
+							is_culture_group = northmen
+							is_culture_group = gramavuld_northmen
+						}
 						OR = {
 							government = goblin_tribe
 							government = man_tribe
@@ -682,6 +687,7 @@ country_event = {
 						NOT = { accepted_culture = orc_culture }
 						NOT = { accepted_culture = troll_culture }
 						NOT = { is_culture_group = northmen }
+						NOT = { is_culture_group = gramavuld_northmen }
 						OR = {
 							government = goblin_tribe
 							government = northmen_tribe
@@ -724,7 +730,10 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					is_culture_group = northmen
+					OR = {
+						is_culture_group = northmen
+						is_culture_group = gramavuld_northmen
+					}
 					OR = {
 						government = democracy
 						government = hobbit_realm
@@ -740,6 +749,7 @@ country_event = {
 				owner = {
 					NOT = { is_culture_group = hobbits }
 					NOT = { is_culture_group = northmen }
+					NOT = { is_culture_group = gramavuld_northmen }
 					OR = {
 						government = hobbit_realm
 						government = northmen_democracy
@@ -985,7 +995,10 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					is_culture_group = northmen
+					OR = {
+						is_culture_group = northmen
+						is_culture_group = gramavuld_northmen
+					}
 					OR = {
 						government = goblin_tribe
 						government = man_tribe
@@ -1002,6 +1015,7 @@ country_event = {
 					NOT = { accepted_culture = orc_culture }
 					NOT = { accepted_culture = troll_culture }
 					NOT = { is_culture_group = northmen }
+					NOT = { is_culture_group = gramavuld_northmen }
 					OR = {
 						government = goblin_tribe
 						government = northmen_tribe
