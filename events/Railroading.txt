@@ -245,8 +245,59 @@ country_event = {
 		}
 		
 		random_country = {
-			limit = { ai = no }
+			limit = {
+				ai = no
+				NOT = { has_global_flag = railroading_enabled }
+				NOT = { has_global_flag = railroading_disabled }
+			}
 			country_event = 91000
 		}
+		
+		random_country = {
+			limit = {
+				ai = no
+				has_global_flag = railroading_enabled
+			}
+			country_event = 91006
+		}
+		
+		# If we somehow are firing this event when railroading has been disabled, we don't have an event that can handle it
+	}
+}
+
+# Railroading (Already chosen)
+country_event = {
+	id = 91006
+	title = "Railroading"
+	desc = "EVTDESC91006"
+	picture = "railroading"
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		dynamic_loc_slot_10 = {}
+		empty_line_loc = {}
+		dynamic_loc_slot_11 = {}
+		empty_line_loc = {}
+		dynamic_loc_slot_12 = {}
+		empty_line_loc = {}
+		dynamic_loc_slot_13 = {}
+		empty_line_loc = {}
+		dynamic_loc_slot_14 = {}
+		empty_line_loc = {}
+		dynamic_loc_slot_15 = {}
+		empty_line_loc = {}
+		dynamic_loc_slot_16 = {}
+		empty_line_loc = {}
+		dynamic_loc_slot_17= {}
+		empty_line_loc = {}
+		dynamic_loc_slot_18 = {}
+		empty_line_loc = {}
+		dynamic_loc_slot_19 = {}
+	}
+
+	option = {
+		name = "Understood"
 	}
 }
