@@ -1164,8 +1164,35 @@ political_decisions = {
 		}
 		
 		allow = {
-			has_country_flag = cored_all_gramavuld
 			war = no
+			ADH = {
+				all_core = {
+					OR = {
+						region = ERE_657
+						AND = {
+							is_core = THIS
+							owned_by = THIS
+						}
+					}
+				}
+			}
+			GRA = {
+				all_core = {
+					OR = {
+						region = ERE_660
+						AND = {
+							is_core = THIS
+							owned_by = THIS
+						}
+					}
+				}
+			}
+			RIV = {
+				all_core = {
+					is_core = THIS
+					owned_by = THIS
+				}
+			}
 		}
 		
 		effect = {
@@ -1182,6 +1209,54 @@ political_decisions = {
 			any_owned = {
 				limit = { is_core = RIV is_core = THIS }
 				remove_core = RIV
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_flag = claimed_DAL_640 } }
+				owner = {
+					clr_country_flag = claimed_DAL_640
+					remove_claim_DAL_640_loc = {}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_flag = claimed_DAL_643 } }
+				owner = {
+					clr_country_flag = claimed_DAL_643
+					remove_claim_DAL_643_loc = {}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_flag = claimed_DAL_645 } }
+				owner = {
+					clr_country_flag = claimed_DAL_645
+					remove_claim_DAL_645_loc = {}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_flag = claimed_DAL_1377 } }
+				owner = {
+					clr_country_flag = claimed_DAL_1377
+					remove_claim_DAL_1377_loc = {}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_flag = claimed_DAL_652 } }
+				owner = {
+					clr_country_flag = claimed_DAL_652
+					remove_claim_DAL_652_loc = {}
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_flag = claimed_DAL_654 } }
+				owner = {
+					clr_country_flag = claimed_DAL_654
+					remove_claim_DAL_654_loc = {}
+				}
 			}
 			
 			set_country_flag = DAL_united_gramavuld
@@ -1201,7 +1276,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			has_country_flag = cored_all_gramavuld
+			has_country_flag = DAL_united_gramavuld
 			NOT = { 478 = { has_province_modifier = outlaws } }
 			NOT = { 641 = { has_province_modifier = outlaws } }
 		}

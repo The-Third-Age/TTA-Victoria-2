@@ -90,9 +90,12 @@ country_event = {
 	option = {
 		name = "We will join them!"
 		
-		all_core = { remove_core = THIS }
-		
 		annex_to = FROM
+		
+		all_core = {
+			limit = { owned_by = FROM }
+			add_province_modifier = { name = cultural_core_integration duration = -1 }
+		}
 		
 		ai_chance = {
 			factor = 90
