@@ -5,7 +5,7 @@ All notable changes will be documented in this file.
 
 
 ### Highlights
- - Barding Realm flavor complete (In development)
+ - Historical Barding Realm flavor
  - Map rework completed -- over 300 new provinces and many unique terrains (split between v0.4 and v0.5)
  - Plurality reworked into Popular Anxiety
  - Dynamic Localisation for select events
