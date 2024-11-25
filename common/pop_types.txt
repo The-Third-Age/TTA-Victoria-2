@@ -118,10 +118,29 @@ promotion_chance = {
 		location = { NOT = { controlled_by = owner } }
 	}
 	modifier = {
+		factor = 0.5
+		pop_majority_ideology = tribal_ideology
+		country = { good_evil_alignment = good_alignment }
+		pop_majority_issue = good_alignment_fake
+	}
+	modifier = {
+		factor = 0.5
+		pop_majority_ideology = tribal_ideology
+		country = { good_evil_alignment = neutral_alignment }
+		pop_majority_issue = neutral_alignment_fake
+	}
+	modifier = {
+		factor = 0.5
+		pop_majority_ideology = tribal_ideology
+		country = { good_evil_alignment = evil_alignment }
+		pop_majority_issue = evil_alignment_fake
+	}
+	modifier = { # Angry unaccepted tribals won't promote out of tribals
 		factor = -100
 		pop_majority_ideology = tribal_ideology
 		is_accepted_culture = no
 		is_primary_culture = no
+		militancy = 4
 	}
 }
 
@@ -290,11 +309,12 @@ demotion_chance = {
 		factor = -100
 		location = { NOT = { controlled_by = owner } }
 	}
-	modifier = {
+	modifier = { # Angry unaccepted tribals won't demote out of tribals
 		factor = -100
 		pop_majority_ideology = tribal_ideology
 		is_accepted_culture = no
 		is_primary_culture = no
+		militancy = 4
 	}
 }
 

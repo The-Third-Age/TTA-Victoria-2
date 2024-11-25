@@ -396,13 +396,13 @@ political_decisions = {
 					empty = yes # Repeated for the sake of the player
 				}
 			}
+			war = no
 		}
 		
 		effect = {
 			badboy = 1
 			prestige = 5
 			
-			# TODO: Likely need to do something with tribals when they're fleshed out
 			642 = {
 				secede_province = THIS
 				add_core = THIS
@@ -422,6 +422,14 @@ political_decisions = {
 						pop_type = soldiers
 					}
 					reduce_pop = 0.75
+				}
+				any_pop = {
+					limit = {
+						pop_type = soldiers
+						is_primary_culture = no
+						is_accepted_culture = no
+					}
+					pop_type = tribals
 				}
 			}
 			

@@ -13,6 +13,7 @@ life_needs = {
 }
 
 everyday_needs = {
+	food = 1
 }
 
 luxury_needs = {
@@ -21,13 +22,7 @@ luxury_needs = {
 
 promote_to = {
 	labourers = {
-		factor = 0.1
-
-		modifier = {
-			factor = 1
-			location = { work_available = { worker = labourers } }
-			country = { civilized = yes }
-		}
+		factor = 1
 	}
 }
 
@@ -41,5 +36,213 @@ ideologies = {
 	}
 }
 
-issues = { # TODO determine what tribals care about
+issues = {
+	#####################
+	##### ALIGNMENT #####
+	#####################
+	good_alignment_fake = {
+		factor = 1
+		modifier = {
+			factor = 1.1
+			location = { is_core = THIS }
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 0.25
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 0.5
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 0.75
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 1
+			country = { good_evil_alignment = good_alignment }
+		}
+		modifier = {
+			factor = 1.25
+			country = { any_neighbor_country = { good_evil_alignment = good_alignment } }
+		}
+		modifier = {
+			factor = 25
+			country = { has_country_flag = attempting_to_good }
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				country = { has_country_flag = attempting_to_neutral }
+				country = { has_country_flag = attempting_to_evil }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			has_pop_religion = elven
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = remembered_sacrifice
+		}
+	}
+	neutral_alignment_fake = {
+		factor = 1
+		modifier = {
+			factor = 1.1
+			location = { is_core = THIS }
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 0.25
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 0.5
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 0.75
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 1
+			country = { good_evil_alignment = neutral_alignment }
+		}
+		modifier = {
+			factor = 1.25
+			country = { any_neighbor_country = { good_evil_alignment = neutral_alignment } }
+		}
+		modifier = {
+			factor = 25
+			country = { has_country_flag = attempting_to_neutral }
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				country = { has_country_flag = attempting_to_good }
+				country = { has_country_flag = attempting_to_evil }
+			}
+		}
+	}
+	evil_alignment_fake = {
+		factor = 1
+		modifier = {
+			factor = 1.1
+			location = { is_core = THIS }
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.25
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.5
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 0.75
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			everyday_needs = 1
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 0.25
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 0.5
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 0.75
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.1
+			luxury_needs = 1
+			country = { good_evil_alignment = evil_alignment }
+		}
+		modifier = {
+			factor = 1.25
+			country = { any_neighbor_country = { good_evil_alignment = evil_alignment } }
+		}
+		modifier = {
+			factor = 25
+			country = { has_country_flag = attempting_to_evil }
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				country = { has_country_flag = attempting_to_good }
+				country = { has_country_flag = attempting_to_neutral }
+			}
+		}
+		modifier = {
+			factor = 1.1
+			has_pop_religion = orc
+		}
+		modifier = {
+			factor = 1.25
+			has_country_flag = has_one_ring
+		}
+	}
 }

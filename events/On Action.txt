@@ -15,7 +15,12 @@ country_event = {
 	allow_multiple_instances = yes
 	
 	trigger = {
-		country = { slavery = yes_slavery }
+		country = {
+			OR = {
+				civilized = no
+				slavery = yes_slavery
+			}
+		}
 	}
 	
 	option = {
@@ -34,6 +39,14 @@ country_event = {
 				}
 				any_pop = { consciousness = -0.5 }
 			}
+		}
+		any_pop = {
+			limit = {
+				type = soldiers
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			pop_type = tribals
 		}
 	}
 }
@@ -165,6 +178,14 @@ country_event = {
 				}
 			}
 		}
+		any_pop = {
+			limit = {
+				type = soldiers
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			pop_type = tribals
+		}
 	}
 }
 
@@ -271,45 +292,52 @@ country_event = {
 	}
 }
 
+# The Conquest of $STATE$
 country_event = {
 	id = 70007
-	title = "Freeing Our Brethren"
+	title = "The Conquest of $STATE$"
 	desc = "EVTDESC70000"
 	picture = "administration"
 	
 	is_triggered_only = yes
 	allow_multiple_instances = yes
 	
-	trigger = {
-		country = { slavery = non_accepted_slavery }
-	}
-	
 	option = {
-		name = "Extend slavery"
-		is_slave = yes
-		country = {
-			any_state = {
-				limit = {
-					is_slave = no
+		name = "Another state for the realm!"
+		random_owned = {
+			limit = { owner = { slavery = non_accepted_slavery } }
+			owner = {
+				any_pop = {
+					limit = {
+						type = slaves
+						OR = {
+							is_primary_culture = yes
+							is_accepted_culture = yes
+						}
+					}
+					pop_type = labourers
 				}
-				any_pop = { consciousness = 1 }
 			}
-			any_state = {
-				limit = {
-					is_slave = yes
-				}
-				any_pop = { consciousness = -0.5 }
-			}
-			any_pop = {
-				limit = {
-					type = slaves
+		}
+		random_owned = {
+			limit = {
+				owner = {
 					OR = {
-						is_primary_culture = yes
-						is_accepted_culture = yes
+						slavery = yes_slavery
+						slavery = non_accepted_slavery
 					}
 				}
-				pop_type = labourers
 			}
+			state_scope = { is_slave = yes }
+		}
+		
+		any_pop = {
+			limit = {
+				type = soldiers
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			pop_type = tribals
 		}
 	}
 }

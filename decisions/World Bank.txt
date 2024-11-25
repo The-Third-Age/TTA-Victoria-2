@@ -7,7 +7,6 @@
 #	Leave FOR Alone
 #	Government Flags Clean Up
 #	Realm Leaders
-#	Tribals
 #	Debug
 #	Tech Clean Up }
 
@@ -1073,76 +1072,6 @@ political_decisions = {
 					NOT = { has_country_flag = existing_country }
 				}
 				set_country_flag = existing_country
-			}
-		}
-	}
-}
-
-# Tribals
-political_decisions = {
-	update_tribals_modifiers = {
-		potential = {
-			tag = FOR
-			any_owned_province = {
-				any_neighbor_province = {
-					OR = {
-						# Has tribals, but doesn't have tribal_outpost
-						AND = {
-							any_pop = {
-								type = tribals
-								is_accepted_culture = no
-								is_primary_culture = no
-							}
-							NOT = { has_province_modifier = tribal_outpost }
-						}
-						# Doesn't have any tribals, but has a modifier
-						AND = {
-							NOT = {
-								any_pop = {
-									type = tribals
-									is_accepted_culture = no
-									is_primary_culture = no
-								}
-							}
-							has_province_modifier = tribal_outpost
-						}
-					}
-				}
-			}
-		}
-		
-		allow = {}
-		
-		effect = {
-			# Setting up Tribal Outpost
-			random_owned = {
-				any_neighbor_province = {
-					limit = {
-						any_pop = {
-							type = tribals
-							is_accepted_culture = no
-							is_primary_culture = no
-						}
-					}
-					add_province_modifier = { name = tribal_outpost duration = -1 }
-				}
-			}
-			
-			# Removing modifiers from provinces without Wild Goblins
-			random_owned = {
-				any_neighbor_province = {
-					limit = {
-						NOT = {
-							any_pop = {
-								type = tribals
-								is_accepted_culture = no
-								is_primary_culture = no
-							}
-						}
-						has_province_modifier = tribal_outpost
-					}
-					remove_province_modifier = tribal_outpost
-				}
 			}
 		}
 	}

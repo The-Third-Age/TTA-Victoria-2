@@ -4,213 +4,48 @@
 # Small Mechanics Events {
 #	5000 - 5999 }
 
-# Tribals (formerly Wild Goblins) {
-# Events 5000 - 5003
-# Tribal Raid
+# Conflict with Local Tribals
 province_event = {
 	id = 5000
-	title = "Tribal Raid"
+	title = "Conflict with Local Tribals!"
 	desc = "EVTDESC5000"
 	
 	trigger = {
-		NOT = { owner = { has_country_modifier = observer_mode } }
-		has_province_modifier = tribal_outpost
-		any_neighbor_province = {
-			owner = { tag = THIS }
-		}
-	}
-	
-	mean_time_to_happen = { months = 60 }
-	
-	option = {
-		name = "Drat."
-		
-		# Tribals killed in the raid
 		any_pop = {
-			limit = {
-				type = tribals
-			}
-			reduce_pop = 0.95
+			militancy = 6
+			type = tribals
 		}
-		
-		# Raid on an owned neighbor province
-		random_neighbor_province = {
-			limit = {
-				owner = { tag = THIS }
-			}
-			any_pop = {
-				limit = {
-					NOT = { type = soldiers }
-					NOT = { type = tribals }
-				}
-				militancy = 2
-				reduce_pop = 0.98
-			}
-			
-			any_pop = {
-				limit = {
-					type = soldiers
-					NOT = { type = tribals }
-				}
-				militancy = 2
-				reduce_pop = 0.9
-			}
-			
-			remove_province_modifier = recent_raid # Reset the timer
-			add_province_modifier = { name = recent_raid duration = 365 }
-		}
-	}
-}
-
-# Tribal Settlement Found and Eliminated
-province_event = {
-	id = 5001
-	title = "Tribal Settlement Found"
-	desc = "EVTDESC5001"
-	
-	trigger = {
-		has_province_modifier = military_hunting_tribals
 	}
 	
 	mean_time_to_happen = {
-		months = 6
-		
-		modifier = {
-			factor = 0.5
-			units_in_province = 1
-		}
+		months = 1
 	}
 	
 	option = {
-		name = "Good"
+		name = "A message needs to be sent"
 		
-		# Kill all of the tribals
 		any_pop = {
 			limit = {
-				type = tribals
-			}
-			reduce_pop = 0
-		}
-		
-		soldiers = {
-			reduce_pop = 0.98
-		}
-		
-		any_pop = {
-			militancy = -1
-		}
-		
-		remove_province_modifier = tribal_outpost
-		remove_province_modifier = military_hunting_tribals
-		
-		owner = {
-			random_list = {
-				5 = { treasury = 5000 }
-				10 = { treasury = 10000 }
-				4 = { treasury = 15000 }
-				1 = { years_of_research = 0.10 }
-			}
-		}
-	}
-}
-
-# Abandoned Tribal Settlement Found
-province_event = {
-	id = 5002
-	title = "Abandoned Settlement Found"
-	desc = "EVTDESC5002"
-	
-	trigger = {
-		has_province_modifier = military_hunting_tribals
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-		
-		modifier = {
-			factor = 0.5
-			units_in_province = 1
-		}
-	}
-	
-	option = {
-		name = "How are they one step ahead of us?"
-		
-		owner = {
-			random_list = {
-				5 = { treasury = 2500 }
-				10 = { treasury = 5000 }
-				4 = { treasury = 7500 }
-				1 = { years_of_research = 0.05 }
-			}
-		}
-		remove_province_modifier = military_hunting_tribals
-	}
-}
-
-# Tribal Settlement Found and Enslaved
-province_event = {
-	id = 5003
-	title = "Tribal Settlement Found"
-	desc = "EVTDESC5003"
-	
-	trigger = {
-		has_province_modifier = military_hunting_tribals_slavery
-	}
-	
-	mean_time_to_happen = {
-		months = 6
-		
-		modifier = {
-			factor = 0.5
-			units_in_province = 1
-		}
-	}
-	
-	option = {
-		name = "Good"
-		
-		# Kill those who resist
-		any_pop = {
-			limit = {
+				militancy = 6
 				type = tribals
 			}
 			reduce_pop = 0.9
 		}
 		
-		# Enslave the remaining tribals
 		any_pop = {
-			limit = {
-				type = tribals
-			}
-			pop_type = slaves
-		}
-		
-		# Some of the militia died
-		any_pop = {
-			limit = {
-				type = soldiers
-			}
-			reduce_pop = 0.98
+			limit = { type = soldiers }
+			reduce_pop = 0.99
 		}
 		
 		any_pop = {
-			militancy = -1
-		}
-		
-		remove_province_modifier = tribal_outpost
-		remove_province_modifier = military_hunting_tribals_slavery
-		
-		owner = {
-			random_list = {
-				5 = { treasury = 5000 }
-				10 = { treasury = 10000 }
-				4 = { treasury = 15000 }
-				1 = { years_of_research = 0.10 }
-			}
+			limit = { type = tribals }
+			militancy = -10
 		}
 	}
 }
+
+# Old Tribals Removed (formerly Wild Goblins) {
+# Events 5001 - 5003 unused
 # }
 
 # Great People {
