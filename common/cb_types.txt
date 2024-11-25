@@ -2279,12 +2279,7 @@ acquire_state = {
 					civilized = yes
 				}
 			}
-			AND = {
-				civilized = no
-				THIS = {
-					civilized = no
-				}
-			}
+			THIS = { civilized = no }
 		}
 		is_independant = yes
 		NOT = { has_country_modifier = political_neutrality }
@@ -3489,10 +3484,7 @@ take_capital = {
 				civilized = yes
 				THIS = { civilized = yes }
 			}
-			AND = {
-				civilized = no
-				THIS = { civilized = no }
-			}
+			THIS = { civilized = no }
 		}
 		OR = {
 			war_with = THIS
