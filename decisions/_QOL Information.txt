@@ -3,9 +3,9 @@
 # Audax Validator "!" Ignore_1009
 
 # Quality of Life Information: {
-#	QOL }
+#	Claims }
 
-# QOL
+# Claims
 political_decisions = {
 	# View Claimed Regions
 	view_claimed_regions = {
@@ -9097,30 +9097,6 @@ political_decisions = {
 				empty_line_decisions_loc = { }
 				claim_status_doesnt_own_DUN_1450_loc = { }
 			}
-		}
-	}
-	
-	railroading_information = {
-		potential = {
-			ai = no
-			has_global_flag = railroading_enabled
-		}
-		allow = {
-		}
-		effect = {
-			set_global_flag = hidden_effects
-			
-			random_country = {
-				limit = {
-					tag = FOR
-					has_global_flag = hidden_effects
-				}
-				country_event = 91005
-			}
-			
-			triggered_event_railroading = {}
-			
-			clr_global_flag = hidden_effects
 		}
 	}
 }

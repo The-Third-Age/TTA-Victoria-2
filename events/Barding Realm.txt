@@ -3050,3 +3050,54 @@ country_event = {
 		}
 	}
 }
+
+# Gifts to Erebor
+country_event = {
+	id = 50960
+	title = "Gifts to Erebor?"
+	desc = "EVTDESC50960"
+	picture = "gramavuld/market"
+	
+	trigger = {
+		has_country_flag = DAL_content
+		alliance_with = ERE
+		has_country_modifier = erebor_relations_modifier
+		money = 500000
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = "To friendship!"
+		
+		treasury = -50000
+		ERE = { country_event = 50961 }
+		
+		change_variable = { name = erebor_relations value = 2 }
+		
+		DAL_increase_erebor_relations_2_loc = {}
+		
+	}
+	
+	option = {
+		name = "Our gold is ours"
+	}
+}
+
+# Gifts from DAL
+country_event = {
+	id = 50961
+	title = "Gifts From $FROMCOUNTRY$"
+	desc = "EVTDESC50961"
+	picture = "gramavuld/market"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "To good friends!"
+		
+		treasury = 50000
+	}
+}

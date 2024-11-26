@@ -14,6 +14,7 @@
 #	Royal Family
 #	Bard I Flavor
 #	Bain I Flavor
+#	Bard II Flavor
 #	Fishers Guild vs Merchants
 #	Esgaroth Trade }
 
@@ -87,6 +88,10 @@ political_decisions = {
 			# Setting up Merchants vs Guild
 			add_country_modifier = { name = DAL_merchant_power_4 duration = -1 }
 			set_variable = { which = DAL_merchants_fishers_bop value = -4 } # 4 in favor of the Merchants
+			
+			# Setting up Erebor relations tracker
+			add_country_modifier = { name = erebor_relations_modifier duration = -1 }
+			set_variable = { which = erebor_relations value = 10 } # Allied for 10 years
 			
 			# Setting up Leaders (-1 = unborn)
 			FOR = { set_variable = { which = bard_i_age value = 55 } }
@@ -1373,6 +1378,10 @@ political_decisions = {
 			empty_line_decisions_loc = {}
 			add_claim_ERE_660_loc = {}
 			
+			# Turning off the Erebor relations tracker
+			remove_country_modifier = erebor_relations_modifier
+			set_variable = { which = erebor_relations value = 0 }
+			
 			set_country_flag = should_apply_acquire_claim_cb
 			set_global_flag = DAL_reclaimed_northern_lands
 		}
@@ -1707,6 +1716,11 @@ political_decisions = {
 			
 			DAL_bard_i_only_loc = {}
 			
+			change_variable = { name = erebor_relations value = 5 }
+			
+			empty_line_decisions_loc = {}
+			DAL_increase_erebor_relations_5_loc = {}
+			
 			set_global_flag = DAL_appointed_erland
 		}
 	}
@@ -1878,6 +1892,27 @@ political_decisions = {
 			DAL_bain_i_only_loc = { }
 			
 			set_global_flag = DAL_girion_bainson_sent_to_austriborg
+		}
+	}
+}
+
+# Bard II Flavor
+political_decisions = {
+	DAL_everlasting_friendship_with_erebor = {
+		picture = "Barding Realm/DAL_dwarves"
+		potential = {
+			has_country_flag = DAL_content
+			nationalvalue = bard_ii
+			NOT = { accepted_culture = longbeard }
+			check_variable = { which = erebor_relations value = 99.99 }
+		}
+		
+		allow = {
+			alliance_with = ERE
+		}
+		
+		effect = {
+			add_accepted_culture = longbeard
 		}
 	}
 }

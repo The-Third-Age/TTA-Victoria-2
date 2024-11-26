@@ -4527,6 +4527,32 @@ country_event = {
 	}
 }
 
+# Generic Yearly Cleanup 
+country_event = {
+	id = 99004
+	title = "Generic Cleanup - Yearly"
+	desc = "EVTDESC99004"
+	picture = "production"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fix it please"
+		
+		# Increase DAL-ERE Alliance points by 1 every year they are allied
+		random_country = {
+			limit = {
+				has_country_flag = DAL_content
+				has_country_modifier = erebor_relations_modifier
+				alliance_with = ERE
+			}
+			change_variable = { name = erebor_relations value = 1 }
+		
+		# Refire the cleanup event next year
+		country_event = { id = 99004 days = 365 }
+	}
+}
+
 # Generic Daily Cleanup
 country_event = {
 	id = 99250
@@ -5459,6 +5485,14 @@ country_event = {
 			
 			random_owned = {
 				limit = { owner = { has_country_modifier = vidugavia_successorship } }
+				owner = {
+					change_variable = { which = modifier_count value = 1 }
+					change_variable = { which = total_modifier_count value = 1 }
+				}
+			}
+			
+			random_owned = {
+				limit = { owner = { has_country_modifier = erebor_relations_modifier } }
 				owner = {
 					change_variable = { which = modifier_count value = 1 }
 					change_variable = { which = total_modifier_count value = 1 }
