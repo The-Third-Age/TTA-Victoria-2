@@ -4378,7 +4378,7 @@ country_event = {
 			set_global_flag = alliance_of_dwarves_and_men_gp_detected
 		}
 		
-		random_country = {
+		any_country = {
 			limit = {
 				has_country_modifier = alliance_of_dwarves_and_men
 				has_global_flag = alliance_of_dwarves_and_men_economic_union_enacted
@@ -4402,6 +4402,7 @@ country_event = {
 				OR = {
 					is_vassal = yes
 					good_evil_alignment = evil_alignment
+					exists = no
 				}
 			}
 			country_event = 110170 # Leaving the Alliance
