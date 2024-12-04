@@ -20499,6 +20499,7 @@ country_event = {
 		}
 		
 		change_tag = FFN
+		remove_country_modifier = alliance_of_dwarves_and_men
 		
 		# Northmen and Dwarves are accepted by the alliance by default
 		
@@ -20854,6 +20855,14 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_country_flag = alliance_dwarves_men_abstained } }
 			owner = { set_country_flag = abstained_FFN_formation }
+		}
+		
+		random_owned = {
+			limit = { owner = { sphere_owner = { tag = FFN } } }
+			owner = {
+				sphere_owner = { diplomatic_influence = { who = THIS value = -400 } }
+				leave_alliance = THIS
+			}
 		}
 	}
 }
@@ -21452,6 +21461,185 @@ country_event = {
 					}
 				}
 			}
+		}
+	}
+}
+
+# Join the FFN
+country_event = {
+	id = 110179
+	title = "The Petition of the $FROMCOUNTRY$"
+	desc = "EVTDESC110179"
+	picture = "organizations/alliance_dwarves_men_1"
+	
+	is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	option = {
+		name = "For the glory of $COUNTRY$!"
+		
+		inherit = FROM
+		
+		FROM = { all_core = { add_core = THIS } }
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = silvan }
+					NOT = { accepted_culture = silvan }
+					FROM = {
+						OR = {
+							primary_culture = silvan
+							accepted_culture = silvan
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = silvan }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = galadhrim }
+					NOT = { accepted_culture = galadhrim }
+					FROM = {
+						OR = {
+							primary_culture = galadhrim
+							accepted_culture = galadhrim
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = galadhrim }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = avari }
+					NOT = { accepted_culture = avari }
+					FROM = {
+						OR = {
+							primary_culture = avari
+							accepted_culture = avari
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = avari }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = stoor }
+					NOT = { accepted_culture = stoor }
+					FROM = {
+						OR = {
+							primary_culture = stoor
+							accepted_culture = stoor
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = stoor }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = woodsmen }
+					NOT = { accepted_culture = woodsmen }
+					FROM = {
+						OR = {
+							primary_culture = woodsmen
+							accepted_culture = woodsmen
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = woodsmen }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = beorning }
+					NOT = { accepted_culture = beorning }
+					FROM = {
+						OR = {
+							primary_culture = beorning
+							accepted_culture = beorning
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = beorning }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = beiabarnae }
+					NOT = { accepted_culture = beiabarnae }
+					FROM = {
+						OR = {
+							primary_culture = beiabarnae
+							accepted_culture = beiabarnae
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = beiabarnae }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = melburgi }
+					NOT = { accepted_culture = melburgi }
+					FROM = {
+						OR = {
+							primary_culture = melburgi
+							accepted_culture = melburgi
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = melburgi }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = herimundi }
+					NOT = { accepted_culture = herimundi }
+					FROM = {
+						OR = {
+							primary_culture = herimundi
+							accepted_culture = herimundi
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = herimundi }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { primary_culture = anduinmen }
+					NOT = { accepted_culture = anduinmen }
+					FROM = {
+						OR = {
+							primary_culture = anduinmen
+							accepted_culture = anduinmen
+						}
+					}
+				}
+			}
+			owner = { add_accepted_culture = anduinmen }
 		}
 	}
 }

@@ -2,7 +2,8 @@
 # Audax Validator "!" Ignore_1009
 
 # Organization and Alliances Decisions: {
-#	Menu/Info }
+#	Menu/Info
+#	FFN QOL }
 
 # Menu/Info
 political_decisions = {
@@ -47,6 +48,8 @@ political_decisions = {
 		picture = "Organizations/alliance_of_dwarves_and_men"
 		potential = {
 			ai = no
+			NOT = { exists = FFN }
+			NOT = { has_global_flag = end_of_the_alliance_of_dwarves_and_men }
 			NOT = { has_country_modifier = alliance_of_dwarves_and_men }
 			capital_scope = { continent = europe } # Rhovanion
 			OR = {
@@ -89,6 +92,118 @@ political_decisions = {
 		
 		effect = {
 			FFN_join_alliance_dwarves_men_loc = {}
+		}
+	}
+}
+
+# FFN QOL
+political_decisions = {
+	FFN_claim_refused_countries = {
+		picture = "Organizations/alliance_of_dwarves_and_men"
+		potential = {
+			tag = FFN
+			NOT = { has_global_flag = FFN_claimed_refused_countries }
+			FOR = {
+				any_neighbor_country = {
+					OR = {
+						has_country_flag = voted_against_FFN_formation
+						has_country_flag = abstained_FFN_formation
+					}
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				rank = 1
+				military_score = 500
+			}
+		}
+		
+		effect = {
+			badboy = 25
+			
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = { owner = { has_global_flag = hidden_effects } }
+				owner = {
+					any_country = {
+						limit = {
+							OR = {
+								has_country_flag = voted_against_FFN_formation
+								has_country_flag = abstained_FFN_formation
+							}
+						}
+						all_core = { add_core = THIS }
+					}
+				}
+			}
+			
+			clr_global_flag = hidden_effects
+			
+			FFN_core_refusers_loc = { }
+			
+			set_global_flag = FFN_claimed_refused_countries
+		}
+		
+		# AI is stupid and doesn't check the effects to see if it would break the infamy limit
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				badboy = 0.01
+			}
+		}
+	}
+	
+	# No picture needed as AI only
+	rhovanion_minor_join_FFN = {
+		potential = {
+			capital_scope = { continent = europe } # Rhovanion
+			NOT = { has_country_flag = voted_against_FFN_formation }
+			NOT = { has_country_flag = abstained_FFN_formation }
+			OR = {
+				is_culture_group = dwarves
+				is_culture_group = northmen
+				is_culture_group = gramavuld_northmen
+				is_culture_group = teleri
+				is_culture_group = avari
+				is_culture_group = anduinrim
+				is_culture_group = rohirrim
+				is_culture_group = hobbits
+			}
+			OR = {
+				good_evil_alignment = good_alignment
+				good_evil_alignment = neutral_alignment
+			}
+			exists = FFN
+			sphere_owner = { tag = FFN }
+			ai = yes
+			is_vassal = no
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			FFN = { country_event = 110179 }
+		}
+	}
+	
+	rhovanion_minor_join_FFN_player = {
+		picture = "Organizations/alliance_of_dwarves_and_men"
+		potential = {
+			ai = no
+			tag = FFN
+		}
+		
+		allow = { always = no }
+		
+		effect = {
+			FFN_sphere_annex_description_loc = { }
 		}
 	}
 }
