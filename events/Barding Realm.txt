@@ -554,7 +554,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 75
+		months = 150
 		
 		modifier = {
 			factor = 0.25
@@ -587,7 +587,7 @@ province_event = {
 			
 			random_country = {
 				limit = { has_country_modifier = funding_celduin_pirates }
-				country_event = 50917
+				capital_scope = { province_event = { id = 50917 days = 0 } }
 				relation = { who = THIS value = -50 }
 			}
 		}
@@ -600,7 +600,7 @@ province_event = {
 }
 
 # Celduin Pirate Raid, Raid Support
-country_event = {
+province_event = {
 	id = 50917
 	title = "Successful raid in $FROMPROVINCE$"
 	desc = "EVTDESC50917"
@@ -611,7 +611,7 @@ country_event = {
 	option = {
 		name = "A toast to the victors!"
 		
-		treasury = 2500
+		owner = { treasury = 2500 }
 	}
 }
 
