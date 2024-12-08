@@ -1165,6 +1165,15 @@ country_event = {
 			country_event = 2901
 		}
 		
+		any_country = {
+			limit = {
+				exists = no
+				war = yes
+				NOT = { tag = REB }
+			}
+			country_event = 99005
+		}
+		
 		# Refire the cleanup event next month {
 		random_owned = {
 			limit = {
@@ -4552,6 +4561,25 @@ country_event = {
 		
 		# Refire the cleanup event next year
 		country_event = { id = 99004 days = 365 }
+	}
+}
+
+# End Wars for Nonexistant Realms
+country_event = {
+	id = 99005
+	title = "Generic Cleanup -- Monthly Nonexistant Realms End Wars"
+	desc = "EVTDESC99000"
+	picture = "production"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fix it please"
+		
+		any_country = {
+			limit = { war_with = THIS }
+			end_war = THIS
+		}
 	}
 }
 
