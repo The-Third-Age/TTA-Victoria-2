@@ -431,8 +431,8 @@ float4 GenerateTiles( TILE_STRUCT v )
 	return y1;
 }
 
-const float vXStretch = 32; //higher gives textures more stretch change both values
-const float vYStretch = 32;
+const float vXStretch = 16; //higher gives textures more stretch change both values
+const float vYStretch = 16;
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // Map vertex shaders
@@ -451,7 +451,7 @@ VS_MAP_OUTPUT VertexShader_Map_General(const VS_INPUT v )
 
 	float4 WorldPosition = mul( vPosition, AbsoluteWorldMatrix );
 
-	///////New Stufff
+	///////New Stuff
 
 	float WorldX = WorldPosition.x;
 	float WorldY = WorldPosition.z;
@@ -500,7 +500,7 @@ VS_MAP_OUTPUT VertexShader_Map_General_Low(const VS_INPUT v )
 	float WorldX = WorldPosition.x;
 	float WorldY = WorldPosition.z;
 	
-	Out.vColorTexCoord.xy = float2( WorldX/vXStretch, WorldY/vYStretch );
+	Out.vColorTexCoord.xy = float2( WorldX/512.0, WorldY/512.0 );
 	Out.vTexCoord0.xy = float2( WorldX, WorldY );
 	//Out.vColorTexCoord.xy = float2( WorldX, WorldY );
 	
@@ -529,24 +529,22 @@ VS_MAP_OUTPUT VertexShader_Map_General_Low(const VS_INPUT v )
 VS_MAP_OUTPUT VertexShader_Map(const VS_INPUT v )
 {
 	VS_MAP_OUTPUT Out = (VS_MAP_OUTPUT)0;
-
+	
 	float4 vPosition = float4( v.vPosition.x, LAND_ALT, v.vPosition.y, 1 );
 	
 	float4x4 WorldView = mul(WorldMatrix, ViewMatrix);
 	float3 P = mul(vPosition, (float4x3)WorldView);
 	Out.vPosition  = mul(float4(P, 1), ProjectionMatrix);
 
+	Out.vProvinceId = v.vProvinceId;
 
 	float4 WorldPosition = mul( vPosition, AbsoluteWorldMatrix );
-
-	///////New Stuff
-
+	
 	float WorldX = WorldPosition.x;
 	float WorldY = WorldPosition.z;
 	
-	Out.vColorTexCoord.xy = float2( WorldX/vXStretch, WorldY/vYStretch );
+	Out.vColorTexCoord.xy = float2( WorldX/16.0, WorldY/16.0 );
 	Out.vTexCoord0.xy = float2( WorldX, WorldY );
-	//Out.vColorTexCoord.xy = float2( WorldX, WorldY );
 	
 	WorldX = (ColorMapWidth * WorldPosition.x) / MapWidth;
 	WorldY = (ColorMapHeight * WorldPosition.z) / MapHeight;
@@ -556,17 +554,6 @@ VS_MAP_OUTPUT VertexShader_Map(const VS_INPUT v )
 	Out.vTerrainIndexColor.y = ((WorldPosition.z - TerrainIndexOffsetY) + Y_MAGIC ) / TerrainIndexSizeY;
 	
 	Out.vTerrainIndexColor = clamp(Out.vTerrainIndexColor,0.0,1.0);
-	
-	//// End new stuff
-
-
-	float2 TerrainCoord = WorldPosition.xz;
-	TerrainCoord += 0.5;
-	TerrainCoord /= 8.0;
-	Out.vTerrainTexCoord  = TerrainCoord;
-
-	Out.vProvinceId = v.vProvinceId;
-	
 	return Out;
 }
 
@@ -1026,8 +1013,8 @@ technique TerrainShader_Graphical
 {
 	pass p0
 	{
-		VertexShader = compile vs_3_0 VertexShader_Map();
-		PixelShader = compile ps_3_0 PixelShader_Map2_0();
+		VertexShader = compile vs_1_1 VertexShader_Map();
+		PixelShader = compile ps_2_0 PixelShader_Map2_0();
 	}
 }
 
@@ -1035,8 +1022,8 @@ technique TerrainShader_General
 {
 	pass p0
 	{
-		VertexShader = compile vs_3_0 VertexShader_Map_General();
-		PixelShader = compile ps_3_0 PixelShader_Map2_0_General();
+		VertexShader = compile vs_1_1 VertexShader_Map_General();
+		PixelShader = compile ps_2_0 PixelShader_Map2_0_General();
 	}
 }
 
@@ -1044,8 +1031,8 @@ technique TerrainShader_General_Low
 {
 	pass p0
 	{
-		VertexShader = compile vs_3_0 VertexShader_Map_General_Low();
-		PixelShader = compile ps_3_0 PixelShader_Map2_0_General_Low();
+		VertexShader = compile vs_1_1 VertexShader_Map_General_Low();
+		PixelShader = compile ps_2_0 PixelShader_Map2_0_General_Low();
 	}
 }
 
@@ -1057,8 +1044,8 @@ technique TerrainShader_Border
 		SrcBlend = SRCALPHA;
 		DestBlend = INVSRCALPHA;
 		
-		VertexShader = compile vs_3_0 VertexShader_Map_Border();
-		PixelShader = compile ps_3_0 PixelShader_Map2_0_Border();
+		VertexShader = compile vs_1_1 VertexShader_Map_Border();
+		PixelShader = compile ps_2_0 PixelShader_Map2_0_Border();
 	}
 }
 
@@ -1073,8 +1060,8 @@ technique BeachShader_Graphical
 		SrcBlend = SRCALPHA;
 		DestBlend = INVSRCALPHA;
 			
-		VertexShader = compile vs_3_0 VertexShader_Beach();
-		PixelShader = compile ps_3_0 PixelShader_Beach();
+		VertexShader = compile vs_1_1 VertexShader_Beach();
+		PixelShader = compile ps_2_0 PixelShader_Beach();
 	}
 }
 
@@ -1082,15 +1069,14 @@ technique BeachShader_Graphical
 technique BeachShader_General
 {
 	pass p0
-	{		
-		
+	{
 		//ALPHATESTENABLE = True;
 		//ALPHABLENDENABLE = True;
 		//SrcBlend = SRCALPHA;
 		//§DestBlend = INVSRCALPHA;
-				
-		VertexShader = compile vs_3_0 VertexShader_Beach_General();
-		PixelShader = compile ps_3_0 PixelShader_Beach_General();
+		
+		VertexShader = compile vs_1_1 VertexShader_Beach_General();
+		PixelShader = compile ps_2_0 PixelShader_Beach_General();
 	}
 }
 
@@ -1098,8 +1084,8 @@ technique BeachShader_General_Low
 {
 	pass p0
 	{
-		VertexShader = compile vs_3_0 VertexShader_Beach_General();
-		PixelShader = compile ps_3_0 PixelShader_Beach_General_Low();
+		VertexShader = compile vs_1_1 VertexShader_Beach_General();
+		PixelShader = compile ps_2_0 PixelShader_Beach_General_Low();
 	}
 }
 
@@ -1117,12 +1103,12 @@ technique PTIShader
 		ColorOp[0] = Modulate;
 		ColorArg1[0] = Texture;
 		ColorArg2[0] = current;
-  
+
 		ColorOp[1] = Disable;
 		AlphaOp[1] = Disable;
 
-		VertexShader = compile vs_3_0 VertexShader_PTI();
-		PixelShader = compile ps_3_0 PixelShader_PTI();
+		VertexShader = compile vs_1_1 VertexShader_PTI();
+		PixelShader = compile ps_2_0 PixelShader_PTI();
 	}
 }
 
@@ -1133,7 +1119,7 @@ technique TreeShader
 		ALPHABLENDENABLE = True;
 		ALPHATESTENABLE = True;
 
-		VertexShader = compile vs_3_0 VertexShader_TREE();
-		PixelShader = compile ps_3_0 PixelShader_TREE();
+		VertexShader = compile vs_1_1 VertexShader_TREE();
+		PixelShader = compile ps_2_0 PixelShader_TREE();
 	}
 }
