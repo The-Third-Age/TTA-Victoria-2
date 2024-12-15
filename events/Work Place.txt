@@ -4804,3 +4804,55 @@ province_event = {
 		}
 	}
 }
+
+# Capital in Disrepair
+province_event = {
+	id = 12067
+	title = "Capital in Disrepair"
+	desc = "EVTDESC12067"
+	
+	trigger = {
+		is_capital = yes
+		has_crime = province_devastation_5
+		controlled_by = THIS
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "How did we come to this?"
+		
+		owner = {
+			prestige = -5
+			plurality = 3
+		}
+	}
+}
+
+# The Shining Capital
+province_event = {
+	id = 12068
+	title = "The Shining Capital"
+	desc = "EVTDESC12068"
+	
+	trigger = {
+		is_capital = yes
+		has_crime = province_wealth_5
+		controlled_by = THIS
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "$PROVINCENAME$ is the greatest of all capitals"
+		
+		owner = {
+			prestige = 10
+			plurality = -3
+		}
+	}
+}
