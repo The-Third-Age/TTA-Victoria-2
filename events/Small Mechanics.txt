@@ -633,3 +633,224 @@ province_event = {
 	}
 }
 # }
+
+# (Generic) Raids {
+# Events 5056 - 5058
+# Raid on province
+province_event = {
+	id = 5056
+	title = "Raiders attack $PROVINCENAME$!"
+	desc = "EVTDESC5056"
+	
+	trigger = {
+		OR = {
+			has_province_modifier = celduin_pirates
+			has_province_modifier = AMO_easterling_raiders
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		add_province_modifier = { name = province_target_looted_province_modifier duration = -1 } 
+	}
+	
+	option = {
+		name = "Damn those curs!"
+		
+		any_pop = {
+			militancy = 4
+			consciousness = 2
+		}
+		
+		owner = {
+			random_owned = {
+				limit = { has_province_modifier = province_target_looted_province_modifier }
+				province_wealth_decrease_1_loc = {}
+			}
+			
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_looted_province_modifier
+				}
+				add_province_modifier = { name = province_wealth_decrease_1_target_modifier duration = -1 }
+				remove_province_modifier = province_target_looted_province_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+		
+		# Diplomatic Effects
+		owner = {
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_looted_province_modifier
+					has_province_modifier = celduin_pirates
+				}
+				owner = {
+					random_country = {
+						limit = { has_country_modifier = funding_celduin_pirates }
+						relation = { who = THIS value = -50 }
+					}
+				}
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = province_target_looted_province_modifier
+					has_province_modifier = AMO_easterling_raiders
+				}
+				owner = {
+					random_country = {
+						limit = { has_country_modifier = AMO_sent_out_raiders }
+						relation = { who = THIS value = -50 }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Successful raid (investment variant) -- notably, this is not triggered by the raid on province
+province_event = {
+	id = 5057
+	title = "A Successful Raid!"
+	desc = "EVTDESC5057"
+	
+	trigger = {
+		is_capital = yes
+		owner = {
+			OR = {
+				has_country_modifier = funding_celduin_pirates
+				has_country_flag = AMO_sent_out_raiders
+			}
+			any_owned_province = { NOT = { has_crime = province_wealth_5 } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		owner = {
+			random_owned = {
+				limit = { NOT = { has_crime = province_wealth_5 } }
+				add_province_modifier = { name = province_target_raid_loot_modifier duration = 1 }
+			}
+		}
+	}
+	
+	option = {
+		name = "To the treasury!"
+		
+		owner = {
+			treasury = 15000
+			
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_raid_loot_modifier
+				}
+				remove_province_modifier = province_target_raid_loot_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+	
+	option = {
+		name = "To the people!"
+		
+		owner = {
+			any_pop = {
+				militancy = -4
+				consciousness = -4
+			}
+			plurality = -1
+			
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_raid_loot_modifier
+				}
+				remove_province_modifier = province_target_raid_loot_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+	
+	option = {
+		name = "Invest in a province"
+		
+		owner = {
+			random_owned = {
+				limit = { has_province_modifier = province_target_raid_loot_modifier }
+				province_wealth_increase_1_loc = {}
+			}
+			
+			set_global_flag = hidden_effects
+			
+			random_owned = {
+				limit = {
+					owner = { has_global_flag = hidden_effects }
+					has_province_modifier = province_target_raid_loot_modifier
+				}
+				add_province_modifier = { name = province_wealth_increase_1_target_modifier duration = -1 }
+				remove_province_modifier = province_target_raid_loot_modifier
+			}
+			
+			clr_global_flag = hidden_effects
+		}
+	}
+}
+
+# Successful raid (investment variant) -- notably, this is not triggered by the raid on province
+province_event = {
+	id = 5058
+	title = "A Successful Raid!"
+	desc = "EVTDESC5057"
+	
+	trigger = {
+		is_capital = yes
+		owner = {
+			OR = {
+				has_country_modifier = funding_celduin_pirates
+				has_country_flag = AMO_sent_out_raiders
+			}
+			NOT = { any_owned_province = { NOT = { has_crime = province_wealth_5 } } } # NOT = { any owned provinces is not province wealth 5 } --> all owned provinces are province wealth 5
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "To the treasury!"
+		
+		owner = { treasury = 15000 }
+	}
+	
+	option = {
+		name = "To the people!"
+		
+		owner = {
+			any_pop = {
+				militancy = -4
+				consciousness = -4
+			}
+			plurality = -1
+		}
+	}
+}
+# }

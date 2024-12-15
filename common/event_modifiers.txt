@@ -4,6 +4,8 @@
 # When adding new modifiers, don't forget to mark them as a country or province modifier
 # When adding new country modifiers, update the daily update event accordingly (99250 in World Bank.txt)
 
+# When adding new types of raiders, update the (Generic) Raid events in events/Small Mechanics.txt
+
 # Icon						Country Icon Number		Province Icon Number	Notes
 # Green Gavel				-1						1
 # Red Gavel					0						2
@@ -528,6 +530,14 @@ province_target_great_haul_modifier = {
 }
 # Province Modifier
 province_target_rgo_change_modifier = {
+	icon = 36
+}
+# Province Modifier
+province_target_looted_province_modifier = {
+	icon = 36
+}
+# Province Modifier
+province_target_raid_loot_modifier = {
 	icon = 36
 }
 
@@ -1606,6 +1616,13 @@ AMO_established_clan_guard = {
 
 # Province Modifier
 AMO_easterling_raiders = {
+	local_RGO_output = -0.1
+	local_artisan_throughput = -0.1
+	local_factory_throughput = -0.1
+	pop_militancy_modifier = 0.01
+	pop_consciousness_modifier = 0.01
+	population_growth = -0.001
+	
 	icon = 56
 }
 
@@ -2034,6 +2051,12 @@ hunting_marsh_wights = {
 
 # Province Modifier
 celduin_pirates = {
+	local_RGO_output = -0.1
+	local_artisan_throughput = -0.1
+	local_factory_throughput = -0.1
+	pop_militancy_modifier = 0.01
+	pop_consciousness_modifier = 0.01
+	
 	icon = 18
 }
 
