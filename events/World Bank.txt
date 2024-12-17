@@ -1174,6 +1174,15 @@ country_event = {
 			country_event = 99005
 		}
 		
+		any_country = {
+			limit = {
+				exists = yes
+				is_vassal = yes
+				overlord = { exists = no }
+			}
+			country_event = 99006
+		}
+		
 		# Refire the cleanup event next month {
 		random_owned = {
 			limit = {
@@ -4580,6 +4589,22 @@ country_event = {
 			limit = { war_with = THIS }
 			end_war = THIS
 		}
+	}
+}
+
+# Clean up overlords that no longer exist
+country_event = {
+	id = 99006
+	title = "Generic Cleanup -- Clean up Nonexistant Overlords"
+	desc = "EVTDESC99006"
+	picture = "production"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Let us be rid of it!"
+		
+		overlord = { release_vassal = THIS }
 	}
 }
 
