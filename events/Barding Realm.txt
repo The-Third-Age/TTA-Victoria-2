@@ -191,7 +191,14 @@ province_event = {
 		}
 	}
 	
-	mean_time_to_happen = { months = 12 }
+	mean_time_to_happen = {
+		months = 12
+		
+		modifier = {
+			factor = 0.5
+			642 = { owned_by = AMO }
+		}
+	}
 	
 	option = {
 		name = "We welcome our brothers"
@@ -2456,6 +2463,36 @@ country_event = {
 	
 	option = {
 		name = "They have incurred our wrath"
+		
+		random_owned = {
+			limit = {
+				owner = {
+					tag = DAL
+					NOT = { is_core = 638 }
+				}
+			}
+			owner = { 638 = { add_core = THIS } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					tag = DAL
+					NOT = { is_core = 639 }
+				}
+			}
+			owner = { 639 = { add_core = THIS } }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					tag = DAL
+					NOT = { is_core = 1475 }
+				}
+			}
+			owner = { 1475 = { add_core = THIS } }
+		}
 		
 		FROM = {
 			war = {
