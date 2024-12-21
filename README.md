@@ -205,6 +205,7 @@ Loremasters (researchers and contributers):
 	- [Belegost](https://www.deviantart.com/hurin63/art/Banner-of-Belegost-820455390)
 	- [Windan Elves](https://www.deviantart.com/ivanalekseich/art/flags-houses-of-Gondolin-1-517397790)
 	- Many Fiefdom flags + Dark Realm Umbar -- Dean200027, Lord Saruman of Many Colors, Dawnless Day [submod to one of the HOI4 LOTR mods](https://steamcommunity.com/sharedfiles/filedetails/?id=1314446921)
+	- [Shire-Bree Union](https://discord.com/channels/800774114494644246/1318649097002946560/1318649097002946560)
 
 ### Music & Sound Assets
 - Main Theme: [Middle Earth Project for CK2](https://forum.paradoxplaza.com/forum/threads/mod-middle-earth-project.665444/)
